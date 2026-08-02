@@ -1,6 +1,8 @@
 # Thinking in Systems — source design
 
-Status: design input; no skill has been implemented.
+Status: compact orientation; no skill has been implemented.
+
+The complete approved method is in [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md). The cross-conversation coverage ledger is [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). This file must not be used as a substitute for either.
 
 ## Purpose
 

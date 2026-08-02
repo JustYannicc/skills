@@ -1,0 +1,5 @@
+- [x] Read complete Focus System Synthesis with line numbers.
+- [x] Read canonical system-design context and relevant contracts.
+- [x] Separate transferable principles from excluded historical implementation proposals.
+- [x] Capture latest the task system-versus-the knowledge system correction as a required canonical update.
+- [x] Write and verify cited the standard research report.

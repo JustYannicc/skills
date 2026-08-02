@@ -1,6 +1,6 @@
 # Public skills repository
 
-This repository publishes universal agent skills. Read `CONTEXT.md`, `docs/DECISIONS.md`, `docs/ARCHITECTURE.md`, `docs/ROADMAP.md`, and the newest file under `docs/handoffs/` before changing a skill.
+This repository publishes universal agent skills. Before changing a skill, read `CONTEXT.md`, `docs/source/README.md`, `docs/requirements/REQUIREMENTS_LEDGER.md`, `docs/source/THINKING_IN_SYSTEMS_STANDARD.md`, `docs/DECISIONS.md`, `docs/ARCHITECTURE.md`, `docs/ROADMAP.md`, and the newest file under `docs/handoffs/`.
 
 ## Skill work
 
@@ -13,6 +13,7 @@ This repository publishes universal agent skills. Read `CONTEXT.md`, `docs/DECIS
 ## Public boundary
 
 - Universalize examples and rules. Exclude named personal assistants, personal task or knowledge platforms, private agent configuration, employer material, credentials, local paths, and personal operating policy from published skills.
+- Preserve complete universalized sources and public-safe evidence. Keep exact private originals outside the public repository and retain their fingerprints for provenance. Do not add credentials, private keys, access tokens, employer-confidential material, private configuration, or local paths.
 - Record upstream source, inspected revision, license, and adapted behavior. Preserve useful behavior where compatible, but do not retain an engineering assumption merely by renaming it.
 - Do not modify private agent configuration or global instructions from this repository. Those changes require a separate governed task after public-skill proof.
 

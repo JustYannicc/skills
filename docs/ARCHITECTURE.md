@@ -6,6 +6,8 @@ Build a public suite of predictable, universal agent skills. Each skill owns one
 
 The current repository is scaffolding only. No skill is implemented or publishable yet.
 
+The complete universal method is owned by [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md). [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation, not a substitute. Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). The complete public-safe skill design and evidence used to produce the method are retained in the [`source` archive](source/README.md); private originals are represented by fingerprints and do not override the universalized public authority.
+
 ## Skill-suite model
 
 ```mermaid
@@ -91,6 +93,7 @@ The Vercel `skills init` command currently generates only `SKILL.md`; authors mu
 ## Public/private authority
 
 - This repository owns universal skill behavior, public examples, evaluations, setup guidance, and attribution.
+- The private design workspace owns exact historical preservation. This public repository retains fingerprints, complete universalized authorities, and public-safe evidence.
 - Private agent configuration owns personal defaults, model routing, global standing triggers, local paths, employer policy, and private tool configuration.
 - The maintainer's private governance record owns personal operating policy until a separately reviewed migration pins the public method and retains only private overrides.
 - No private authority changes until the replacement skill suite is installed and behaviorally proven.

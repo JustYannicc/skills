@@ -20,7 +20,7 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 
 Thinking in Systems is the anchor, not a container for every workflow. The current design backlog includes universal versions of Wayfinder, Research, Prototype, Handoff, and Batch Grilling. Domain Modeling may remain an external companion if a focused audit finds no meaningful gap. Software-specific TDD remains useful for software; Thinking in Systems will own only the cross-domain proof principles.
 
-The suite is still being designed. See [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-02-bootstrap.md).
+The suite is still being designed. Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-02-bootstrap.md).
 
 ## Distribution
 

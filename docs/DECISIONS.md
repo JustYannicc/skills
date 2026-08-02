@@ -34,6 +34,10 @@
 
 ### Public content
 
+- Preserve complete universalized authorities, the full public-safe skill-design record, relevant public-safe research, and private-source fingerprints in the repository. Prefer retaining source material now; trim only through a later explicit editorial decision.
+- Exact historical sources remain in the authorized private design workspace because they contain personal and tool-specific context. Their fingerprints preserve provenance without publishing private configuration, local paths, or context-specific policy.
+- The repository carries the complete universalized S01 v1.0 standard and reusable System-Design Template. Compact orientation documents cannot replace them.
+- A requirements ledger maps every operative public-skill and skill-suite requirement from the design conversation to its durable owner.
 - The README describes Thinking in Systems as the maintainer's secret sauce and the way of thinking the maintainer credits for rapid progress.
 - The skill must remain useful without users outsourcing their own understanding and judgment.
 - Include empathy, blameless failure analysis, incentives, friction, intentionality, assumptions, transparent sources, graceful degradation, low-capacity operation, quantitative evidence where possible, recovery, decay reset, change rationale, and legacy propagation.

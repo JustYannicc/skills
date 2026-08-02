@@ -4,18 +4,24 @@ Date: 2026-08-02.
 
 ## Current state
 
-The public repository foundation exists. No skill has been implemented, no `SKILL.md` placeholder exists, and no private/global agent configuration has been changed.
+The public repository foundation exists. The complete universalized S01 standard, reusable template, full skill-design record, public-safe supporting research, private-source fingerprints, and cross-conversation requirements ledger are included. Exact private inputs remain outside the public repository. No skill has been implemented, no `SKILL.md` placeholder exists, and no private/global agent configuration has been changed.
 
 Read in this order:
 
 1. [`AGENTS.md`](../../AGENTS.md)
 2. [`CONTEXT.md`](../../CONTEXT.md)
-3. [`DECISIONS.md`](../DECISIONS.md)
-4. [`ARCHITECTURE.md`](../ARCHITECTURE.md)
-5. [`THINKING_IN_SYSTEMS.md`](../THINKING_IN_SYSTEMS.md)
-6. [`UPSTREAM_SKILLS.md`](../research/UPSTREAM_SKILLS.md)
-7. [`DEVELOPMENT.md`](../DEVELOPMENT.md)
-8. [`ROADMAP.md`](../ROADMAP.md)
+3. [`source/README.md`](../source/README.md)
+4. [`REQUIREMENTS_LEDGER.md`](../requirements/REQUIREMENTS_LEDGER.md)
+5. [`THINKING_IN_SYSTEMS_STANDARD.md`](../source/THINKING_IN_SYSTEMS_STANDARD.md)
+6. [`SYSTEM_DESIGN_TEMPLATE.md`](../source/SYSTEM_DESIGN_TEMPLATE.md)
+7. [`THINKING_IN_SYSTEMS_SKILL_DESIGN.md`](../source/THINKING_IN_SYSTEMS_SKILL_DESIGN.md)
+8. [`DECISIONS.md`](../DECISIONS.md)
+9. [`ARCHITECTURE.md`](../ARCHITECTURE.md)
+10. [`UPSTREAM_SKILLS.md`](../research/UPSTREAM_SKILLS.md)
+11. [`DEVELOPMENT.md`](../DEVELOPMENT.md)
+12. [`ROADMAP.md`](../ROADMAP.md)
+
+Consult the supporting research when authoring would otherwise lose nuance, provenance, rejected alternatives, or examples. Prefer retaining public-safe evidence now and trimming later. When an exact private source is genuinely needed, verify it against the fingerprint in [`source/README.md`](../source/README.md) through an authorized private copy; never move it into the public repository by default.
 
 ## User intent
 
