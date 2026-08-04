@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "inputRevision": "a2c3882ed59dd5304d14f8583af4c6a36778a5c6",
+  "model": "gpt-5.6-luna",
+  "reasoningEffort": "max",
+  "contextId": "fresh-issue-35-llm-round-trip-resolution-1",
+  "recordedAt": "2026-08-04T18:44:08Z",
+  "instructionSummary": "Apply exactly: (1) change only owner.label from `System owner` to `Recovery owner`; (2) add exactly `Recovery preserves the canonical source and blocks effects until validation passes.` as a new paragraph immediately after the existing Rationale paragraph; (3) preserve every other identity, version/revision, design/operational/eligibility/mode state, exact Authority revision and every allowed-effect kind/action/boundary/contract, the Section 2 table rows/identity/version/boundary/link, provenance, approval validity/revocation fields, all links/comments, syntax, and whitespace as much as edit permits.",
+  "candidates": [
+    {
+      "inputPath": "prototypes/system-record-representation/fixtures/markdown-yaml.md",
+      "outputPath": "prototypes/system-record-representation/llm-round-trip/markdown-yaml.md",
+      "inputSha256": "86af436fafda56e9a94b19a1c78fd84b787dd1ea946ca8ec07122414d6b20634",
+      "outputSha256": "fc26349a91a506242f12c8730a3e138858c9a3f44a359f739a75bccfb006f5a9"
+    },
+    {
+      "inputPath": "prototypes/system-record-representation/fixtures/markdown-toml.md",
+      "outputPath": "prototypes/system-record-representation/llm-round-trip/markdown-toml.md",
+      "inputSha256": "4e3f1ea659ad7429e0b792bbf96f67f06db188e8e9849362c727a63e42bdbce7",
+      "outputSha256": "41d8992bc70c5d5f327e802f6d3a2a9696c42d2b10246eb73c1fb32ed2a73244"
+    },
+    {
+      "inputPath": "prototypes/system-record-representation/fixtures/toml-only.toml",
+      "outputPath": "prototypes/system-record-representation/llm-round-trip/toml-only.toml",
+      "inputSha256": "575c4fc57b3887de95f0a78d318e8b7f9d324e1fa2856490b22c10019536f540",
+      "outputSha256": "1f24437c1d899fda3a452c590178f563201c6b24cedce53db35f23af0707d021"
+    },
+    {
+      "inputPath": "prototypes/system-record-representation/fixtures/projection-canonical.md",
+      "outputPath": "prototypes/system-record-representation/llm-round-trip/projection-canonical.md",
+      "inputSha256": "86af436fafda56e9a94b19a1c78fd84b787dd1ea946ca8ec07122414d6b20634",
+      "outputSha256": "fc26349a91a506242f12c8730a3e138858c9a3f44a359f739a75bccfb006f5a9"
+    }
+  ]
+}
