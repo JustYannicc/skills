@@ -1,8 +1,8 @@
 # Skill packages
 
-`thinking-in-systems` is approved. Suite publication remains gated by the
-composed-suite and clean-install proof in #31 and the immutable-release review
-in #32.
+`thinking-in-systems` is approved and `prototype` is implemented. Suite
+publication remains gated by the composed-suite and clean-install proof in #31
+and the immutable-release review in #32.
 
 Each package uses `skills/<skill-name>/SKILL.md` with supporting `references/`, `assets/`, `scripts/`, and `agents/openai.yaml` only where they serve that skill's single job.
 

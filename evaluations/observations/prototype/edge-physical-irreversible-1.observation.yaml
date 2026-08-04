@@ -21,7 +21,7 @@ observed:
       evidence: The result states that destruction has no rollback and requests containment or recovery planning from Workflow.
       observed: false
   invoked: [workflow, prototype]
-  notInvoked: [destruction, live physical action, implementation]
+  notInvoked: [destruction, live physical action, Specification, implementation]
   proof: [simulation or rehearsal evidence is revision-bound and shows no live effect]
   responsibility: [Workflow retains safety authority and parent completion]
   route: [prototype-safety-boundary-to-workflow]

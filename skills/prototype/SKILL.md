@@ -63,7 +63,9 @@ the parent Outcome.
    active `'Workflow'` skill or caller decides whether its Adapter must persist
    that primary source at a persistence boundary. Keep bounded inline work in
    the conversation. Git, a tracker, and a particular host are optional. Keep
-   external effects disabled or inside the explicitly bounded pilot. If a required
+   external effects disabled. A pilot must be non-production or an explicitly
+   accepted isolated boundary with its own effect gate; never use live
+   production execution to learn. If a required
    capability, authority, fact, or safe reset is missing, enter visible
    Degraded mode: preserve the setup and evidence, stop the experiment, and
    return the gap to the active `'Workflow'` skill or caller rather than

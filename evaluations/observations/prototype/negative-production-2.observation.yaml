@@ -24,7 +24,7 @@ observed:
       evidence: The result is blocked and returned to Workflow for authority.
       observed: false
   invoked: [workflow, prototype]
-  notInvoked: [live policy change, send effect, implementation]
+  notInvoked: [live policy change, send effect, Specification, implementation]
   proof: [no production mutation and any simulation evidence is revision-bound]
   responsibility: [Workflow retains effect authority and parent completion]
   route: [prototype-to-workflow-effect-gate]

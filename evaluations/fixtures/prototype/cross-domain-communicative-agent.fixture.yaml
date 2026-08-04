@@ -21,7 +21,7 @@ expected:
   artifacts: [cross-domain prototype result contract]
   effects: []
   invoked: [prototype]
-  notInvoked: [send message, production agent call, implementation]
+  notInvoked: [send message, production agent call, Specification, implementation]
   proof: [rehearsal transcript and burden observation are revision-bound with limits]
   responsibility: [Workflow retains parent coordination and any later communication authority]
   route: [workflow-to-cross-domain-prototype-to-workflow]

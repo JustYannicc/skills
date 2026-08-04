@@ -21,11 +21,11 @@ observed:
       evidence: No setup, effect, or experiment is started while the question is missing.
       observed: false
   invoked: [prototype]
-  notInvoked: [setup, implementation]
+  notInvoked: [setup, Specification, implementation]
   proof: [the missing question and exact resumption condition are visible]
   responsibility: [Workflow or the caller retains responsibility while the question is unanswered]
   route: [prototype-waiting-for-question]
   state: [waiting-for-question]
 rawEvidence:
   locator: evaluations/evidence/prototype/incomplete-1.txt
-  sha256: 0cde3a4f63df38eec1630342f55da2684450965873a39149f70ee7563912da18
+  sha256: 1197a38508b59385108e10a3ee1540dfaa10163f44affeffb14b83632a6482d3

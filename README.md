@@ -6,9 +6,9 @@ This repository is being built around a simple idea: agents become much more use
 
 ## Skills
 
-No skill has been published yet. Thinking in Systems is approved, but suite
-publication remains gated by the composed-suite and clean-install proof in #31
-and the immutable-release review in #32.
+No skill has been published yet. Thinking in Systems is approved and Prototype
+is implemented, but suite publication remains gated by the composed-suite and
+clean-install proof in #31 and the immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved
 
@@ -20,6 +20,16 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
+
+### [Prototype](skills/prototype) — implemented
+
+Prototype answers one material design question through a reversible experiment.
+Use it when a technical, personal, organizational, physical, communicative, or
+agent design needs evidence before commitment. Each run names its question,
+reversible setup, observation seam, evidence, stopping rule, verdict, and
+disposition, then returns that bounded result to Workflow. Production effects,
+unsafe or irreversible actions, Specification, and implementation remain with
+their owning phases.
 
 ## Planned suite
 

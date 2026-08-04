@@ -24,16 +24,17 @@ forms, not extra phases or permission to widen the question.
 
 ## Personal
 
-Use a voluntary, bounded pilot for one person or a clearly consented small
-scope. Keep commitments reversible, measure both the intended Outcome and
-burden, and name a reset that restores the prior routine or environment.
+Use a voluntary, bounded non-production pilot for one person or a clearly
+consented small scope. Keep commitments reversible, measure both the intended
+Outcome and burden, and name a reset that restores the prior routine or
+environment.
 
 ## Organizational
 
-Use a simulation, role-play, or low-stakes pilot with named Actors and stop
-authority. Do not silently enact a policy, assign a new obligation, or export
-burden to another team; observe incentives, friction, and handoffs at the
-chosen seam.
+Use a simulation, role-play, or low-stakes non-production pilot with named
+Actors and stop authority. Do not silently enact a policy, assign a new
+obligation, or export burden to another team; observe incentives, friction, and
+handoffs at the chosen seam.
 
 ## Physical
 
