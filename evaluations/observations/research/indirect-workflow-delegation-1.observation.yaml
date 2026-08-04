@@ -1,0 +1,42 @@
+schemaVersion: 1
+fixtureId: research-indirect-workflow-delegation
+attempt: 1
+contextId: fresh-research-indirect-final-1
+suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:18:44.300Z
+environment:
+  id: workflow-research-with-delegation
+  capabilities:
+    workflow: true
+    research: true
+    delegation: true
+    persistence: false
+    selectedAdapter: false
+  tools: [primary-source lookup, delegation]
+observed:
+  actions:
+    - accept the bounded research request from Workflow
+    - delegate the bounded primary-source lookup with an explicit return contract
+    - integrate the delegated result
+    - return cited findings and uncertainty
+  artifacts: [bounded research result]
+  effects: []
+  forbiddenChecks:
+    - criterion: delegate without a return contract
+      evidence: The child contract explicitly required official source locator, fact, scope or plan caveat, and uncertainty before delegation.
+      observed: false
+    - criterion: treat child research completion as parent completion
+      evidence: The integrated result explicitly returns to Workflow, which retains parent responsibility; no parent completion is claimed.
+      observed: false
+  invoked: [research]
+  notInvoked: [Specification, execution]
+  proof:
+    - the delegated route and return contract are explicit
+    - delegated work is integrated before return
+  responsibility: [Workflow retains parent responsibility]
+  route: [workflow-to-research, delegated-research]
+  state: [ready-for-workflow]
+rawEvidence:
+  locator: evaluations/evidence/research/indirect-workflow-delegation-1.txt
+  sha256: c9208d7e3c436f69b088b2b9b1b8bfcd9d52f02bb455c80ded145a2f332b172a

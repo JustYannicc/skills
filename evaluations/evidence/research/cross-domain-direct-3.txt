@@ -1,0 +1,55 @@
+Fresh-context execution
+
+Candidate: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision evaluated: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Applied Research overlay: `research-skill` (`overlays/research/SKILL.md.patch`, sha256 `9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074`), providing the declared cross-domain, primary-evidence, capability-aware direct route and selected-Adapter durability behavior.
+Environment: direct-primary-cross-domain; workflow=false, research=true, delegation=false, persistence=true, selectedAdapter=local-markdown; tools=[primary-source records, local-markdown Adapter create/read].
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context: fresh-research-cross-domain-direct-final-3
+Recorded at: 2026-08-04T18:18:26.000Z
+
+Prompt:
+
+Investigate the external evidence relevant to a possible shared quiet-hours pilot at a community workshop; do not decide whether to adopt the policy. Use these two available primary records. Physical-setting record `workshop-acoustic-survey@rev-2026-07-15` reports 78–84 dBA at the shared benches from 18:00–20:00 during powered-tool use and 43–47 dBA in the adjacent quiet room. Operating record `workshop-booking-ledger@rev-2026-Q2` reports that 65% of member visits occur after 18:00 and 31% of after-18:00 bookings list instruction or conversation as their primary activity. Cite both record locators, distinguish the facts from any policy inference and uncertainty, persist one canonical result through the selected Adapter, and return the Adapter identity, durable locator, result revision, and persistence status. The selected local-markdown Adapter supports create and read-back; create returns an immutable locator and result revision. For this fixture it writes to a caller-selected evidence path, uses the written file's SHA-256 as the result revision, and reports `durable=true` only after a successful read-back. No Workflow context is active.
+
+Expected contract (before observation):
+
+- Actions: bound the external-fact question; investigate directly; distinguish evidence from inference and uncertainty; persist one canonical research result through the selected Adapter; return its locator, revision, and durability status to the requesting context.
+- Artifact: one Adapter-backed cited cross-domain research result.
+- Effects: none.
+- Invoked: research.
+- Not invoked: Specification or execution.
+- Proof: every material claim cites a supplied high-trust primary record; cross-domain limits and uncertainty are explicit; Adapter identity, durable locator, result revision, and persistence status are visible.
+- Responsibility and route: return the bounded findings to the requesting user on the direct-research route because no Workflow context is active.
+- State: ready-for-requester.
+
+Observed response:
+
+The bounded question was investigated directly from the two supplied primary records. No secondary commentary was used.
+
+Observed facts:
+
+1. `workshop-acoustic-survey@rev-2026-07-15` reports 78–84 dBA at the shared benches from 18:00–20:00 during powered-tool use.
+2. The same record reports 43–47 dBA in the adjacent quiet room.
+3. `workshop-booking-ledger@rev-2026-Q2` reports that 65% of member visits occur after 18:00.
+4. The same record reports that 31% of after-18:00 bookings list instruction or conversation as their primary activity.
+
+Bounded inferences and limits:
+
+- The shared-bench readings are higher than the adjacent-quiet-room readings over the stated window. The endpoint arithmetic is a 31–41 dB difference (78−47 through 84−43); this does not establish exposure dose, harm, or a threshold comparison.
+- After-18:00 use is a substantial part of the supplied visit distribution, and instruction or conversation is a recorded primary activity for a subset of those bookings. This establishes relevance of both operating conditions to further consideration; it does not establish a causal effect or recommend adopting a policy.
+- The records do not provide sampling method, sample count, calibration, representativeness, duration-weighted exposure, health/safety thresholds, member-impact data, accessibility effects, causal effects, or pilot results. The booking percentages' completeness, rounding, and classification verification are also unspecified, so no combined percentage is inferred.
+
+Adapter create/read-back:
+
+- Adapter identity: `local-markdown`.
+- Create target and canonical durable locator: `evaluations/evidence/research/cross-domain-direct-3.record.md`.
+- Create wrote one canonical Markdown research record containing the bounded question, both supplied record locators, observed facts, bounded inferences, uncertainty, and Adapter return details.
+- Read-back succeeded from the canonical locator after create; the returned bytes matched the created record.
+- Result revision: `6cd039e6812a4c0b4a5789c37ec6a243a8e6838b96fadec42d4e95e251b11e77` (SHA-256 of the exact canonical record file bytes).
+- Persistence status: `durable=true`.
+
+Return boundary:
+
+The cited evidence, uncertainty, Adapter identity, durable locator, result revision, and read-back status are returned to the requesting user. No policy adoption decision, Specification, execution, or other effect was performed.

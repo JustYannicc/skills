@@ -1,0 +1,97 @@
+# Evaluation transcript — research/cross-domain-direct, attempt 2
+
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Fresh context: `fresh-research-cross-domain-direct-final-2`
+Candidate commit: `f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d`
+Suite revision: `git:d6536d81e10ca550b7483aa4a21d319c7cbf7688`
+Pinned Research source: `mattpocock/skills` git:
+`2ab958093e83e0ec752e6c1c5932da465bf23e0c`
+Applied Research overlay: `research-skill` (`overlays/research/SKILL.md.patch`,
+sha256 `9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074`).
+Recorded at (UTC): `2026-08-04T18:18:16.000Z`
+
+## Prompt
+
+Investigate the external evidence relevant to a possible shared quiet-hours
+pilot at a community workshop; do not decide whether to adopt the policy. Use
+these two available primary records. Physical-setting record
+`workshop-acoustic-survey@rev-2026-07-15` reports 78–84 dBA at the shared
+benches from 18:00–20:00 during powered-tool use and 43–47 dBA in the adjacent
+quiet room. Operating record `workshop-booking-ledger@rev-2026-Q2` reports that
+65% of member visits occur after 18:00 and 31% of after-18:00 bookings list
+instruction or conversation as their primary activity. Cite both record
+locators, distinguish the facts from any policy inference and uncertainty,
+persist one canonical result through the selected Adapter, and return the
+Adapter identity, durable locator, result revision, and persistence status. The
+selected local-markdown Adapter supports create and read-back; create returns
+an immutable locator and result revision. For this fixture it writes to a
+caller-selected evidence path, uses the written file's SHA-256 as the result
+revision, and reports `durable=true` only after a successful read-back. No
+Workflow context is active.
+
+## Expected
+
+- Actions: bound the external-fact question; investigate directly; distinguish
+  evidence from inference and uncertainty; persist one canonical research
+  result through the selected Adapter; return its locator revision and
+  durability status to the requesting context.
+- Artifacts: Adapter-backed cited cross-domain research result.
+- Effects: none.
+- Invoked: `research`.
+- Not invoked: `Specification`, `execution`.
+- Proof: each material claim cites a high-trust primary source; cross-domain
+  limits and uncertainty are recorded; the selected Adapter identity, durable
+  locator, result revision, and persistence status are visible.
+- Responsibility: return the bounded findings to the requesting user because
+  no Workflow skill context is active.
+- Route: `direct-research`.
+- State: `ready-for-requester`.
+- Forbidden: treat secondary commentary as primary evidence; pretend the
+  Workflow skill is active; return only Inline findings despite the Persistence
+  boundary; claim durability without an Adapter record; continue into
+  Specification or execution.
+
+## Evaluator result
+
+The question was bounded to the external evidence relevant to the possible
+quiet-hours pilot. The supplied physical-setting and operating records were
+used directly as primary evidence, and no secondary commentary was treated as
+primary.
+
+The canonical result records these facts:
+
+- `workshop-acoustic-survey@rev-2026-07-15`: 78–84 dBA at shared benches from
+  18:00–20:00 during powered-tool use; 43–47 dBA in the adjacent quiet room.
+- `workshop-booking-ledger@rev-2026-Q2`: 65% of member visits occur after
+  18:00; 31% of after-18:00 bookings list instruction or conversation as the
+  primary activity.
+
+The result labels the overlap between after-18:00 use and elevated tool sound
+as an observation, not a policy conclusion. It records that the records do not
+establish causation, a required or preferred policy, feasibility, an acceptable
+threshold, authority, member preferences, or the effects of an intervention.
+Measurement, sampling, occupancy, classification, and denominator limits are
+also recorded.
+
+## Adapter create/read-back
+
+1. Create wrote the one canonical Adapter record at
+   `evaluations/evidence/research/cross-domain-direct-2.record.md`.
+2. Read-back succeeded from that immutable locator; the bytes were available
+   for verification.
+3. The SHA-256 of the exact read-back bytes is
+   `11499084403834f337cee4ae180031240bc05edfff88828a68cfc1a23e7ac2bb`.
+   This is the result revision.
+4. Adapter identity is `local-markdown`; persistence is `durable=true` only
+   after the successful read-back.
+
+## Boundary validation
+
+- Both supplied record locators are cited in the canonical result.
+- Facts, bounded cross-domain observation, and uncertainty are separated.
+- The canonical record was written and read back before durability was
+  reported.
+- No policy adoption decision was made.
+- No Workflow context was claimed; the bounded result returns to the
+  requesting context.
+- No Specification or execution was started.

@@ -1,0 +1,23 @@
+Overlay tranche existing-observation rebind attestation
+Full candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Runtime suite identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Previous candidate: git:03340f9b772e9475bd6924f8de97d98790861408
+
+This is a revision-binding update for the already accepted foundation and
+Thinking in Systems observations, not a claim that those behavioral runs were
+repeated. Their prompts, observed evidence, recorded timestamps, context ids,
+raw evidence, and raw hashes remain unchanged.
+
+The repository intentionally excludes evaluations/ from runtime candidate
+identity. Commits a17f74b and f9cdc8f only repair fixture executability and
+falsifiability, so they create the final reviewed full candidate while leaving
+the runtime suite identity at d6536d8.
+
+Runtime-source equivalence proof for the rebound observations:
+
+  git diff --quiet 03340f9b772e9475bd6924f8de97d98790861408..d6536d81e10ca550b7483aa4a21d319c7cbf7688 -- skills/thinking-in-systems
+
+Result: exit 0. The runtime candidate adds direct-upstream overlays, their fixtures,
+and overlay validation infrastructure without changing the installed Thinking
+in Systems runtime. Every new overlay fixture receives its own fresh-context
+observation; this attestation applies only to the pre-existing observations.

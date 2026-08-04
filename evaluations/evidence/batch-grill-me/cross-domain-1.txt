@@ -1,0 +1,51 @@
+Fresh-context execution
+
+Candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision (repository content identity; evaluation artifacts excluded): git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Context ID: fresh-batch-grill-me-cross-domain-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-04T18:16:17Z
+Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Overlay: upstream Batch Grill Me with model invocation enabled and fact-finding changed to direct lookup when capable or bounded delegation when available; the companion metadata permits implicit invocation. Overlay hashes: SKILL.md.patch=8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87; agents-openai.yaml.patch=b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746.
+Effects: disabled; no physical intervention, safety approval, configuration change, or other external effect was performed.
+Environment: id=cross-domain-safety-decision; capabilities={directFactLookup: true, delegation: true, persistence: false}; tools=[filesystem, inspection].
+
+Prompt (exact fixture text):
+A volunteer group is deciding how to make a shared workshop safer. Its accepted decision tree has exactly three currently unblocked decisions: safety scope, decision authority, and acceptable trade-offs. The intervention class and its exact layout, equipment, PPE, training, staffing, and schedule all depend on those three answers. Ask the complete current frontier together with one recommendation per decision, and keep every intervention and implementation question for a later round.
+
+Observed response (verbatim):
+
+Round 1 — complete current frontier
+
+The accepted decision tree has exactly three decisions whose prerequisites are settled, so I am asking all three together in this round. They remain your decisions; the recommendations are starting points, not approvals.
+
+## Decision tree
+
+```text
+Shared-workshop safety
+├── Safety scope (unblocked now)
+├── Decision authority (unblocked now)
+├── Acceptable trade-offs (unblocked now)
+└── Intervention and implementation (later; depends on all three answers)
+    ├── intervention class
+    ├── exact layout, equipment, and PPE
+    └── training, staffing, and schedule
+```
+
+## Questions
+
+1. **Safety scope:** What places, activities, people, hazards, and time horizon should this workshop-safety decision cover, and what does “safer” need to mean? What is explicitly out of scope?
+
+   **Recommendation:** Start with one bounded workshop area or activity and its relevant handoffs, include both physical hazards and organizational controls that can create or prevent harm, and define success as fewer credible serious-harm pathways without silently worsening access, accountability, or maintainability.
+
+2. **Decision authority:** Who owns the safety decision, who can approve a rule change, expenditure, restricted access, or temporary closure, and who must be represented or consulted? What is the escalation path if authorities disagree?
+
+   **Recommendation:** Name one accountable decision owner, one safety or operations approver for consequential effects, and a visible route for affected volunteers and members to be heard. Keep coordination, approval, and execution distinct.
+
+3. **Acceptable trade-offs:** What safety floor is non-negotiable, and which trade-offs among access, cost, delay, training, volunteer workload, convenience, privacy, and disruption are acceptable? Which burdens or risks must not be shifted to less powerful users?
+
+   **Recommendation:** Make prevention of serious or irreversible harm and fair access non-negotiable; allow only bounded, visible, reversible increases in cost, delay, training, or volunteer effort; reject a change that merely exports risk, exclusion, or maintenance burden.
+
+These are the complete three currently unblocked decisions, and each has one recommendation. I am deliberately not asking which intervention class to choose or how to specify its layout, equipment, PPE, training, staffing, or schedule. Those questions depend on the answers to this round and belong to a later round. Please answer Questions 1–3; I will recompute the frontier after your decisions. No intervention or safety approval will be performed during this round.
+
+Integration state: the user retains decision authority while Batch Grill Me returns this bounded frontier to Workflow for continued coordination. State: awaiting-user-decisions.

@@ -1,0 +1,129 @@
+Fresh-context execution — direct fixture attempt 3
+
+Candidate: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Evaluator: gpt-5.6-luna-max-fresh-context
+Fresh context: fresh-questionnaire-direct-final-3
+Recorded at (UTC): 2026-08-04T18:25:00.000Z
+
+Pinned source and overlays reconstructed before execution:
+
+- Upstream source: `matt-pocock/skills`, revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`.
+- Upstream target: `skills/in-progress/to-questionnaire/SKILL.md`.
+- Upstream agent metadata target: `skills/in-progress/to-questionnaire/agents/openai.yaml`.
+- Applied overlay `to-questionnaire-skill`: `overlays/to-questionnaire/SKILL.md.patch`, SHA-256 `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`; it changes `disable-model-invocation: true` to `false`.
+- Applied overlay `to-questionnaire-openai`: `overlays/to-questionnaire/agents-openai.yaml.patch`, SHA-256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`; it changes `allow_implicit_invocation: false` to `true`.
+
+Reconstructed upstream procedure:
+
+1. Grill the send, not the subject: establish the recipient's role, expertise, and relationship.
+2. Establish the concrete facts or decisions the user needs back from that recipient.
+3. Write `to-questionnaire-<slug>.md` and report its path once every named gap is represented.
+4. Frame it as a discovery questionnaire; order important questions first, group more-than-a-handful under `##` themes, include the title/purpose/from/to/answer-use metadata, concise context, deadline and rough effort, partial/uncertain-answer guidance, one-idea questions with answer stubs and only needed rationales, and a closing catch-all.
+
+The prompt already supplies the complete send contract, so no follow-up grilling, research, or decision work is needed.
+
+Fixture prompt:
+
+> Create an asynchronous questionnaire for my colleague, the operations lead who owns our approval handoff and knows where and why it stalls. I need observed causes, affected stages, decision owners, exception paths, timing and frequency, and downstream impacts so I can choose a fix. It is due Friday and should take about 15 minutes. Make the completed questionnaire ready to send.
+
+Environment:
+
+- id: `questionnaire-direct-with-file-write`
+- capabilities: `modelInvocation=true`, `fileWrite=true`, `fileRead=true`, `recipientContext=true`
+- tools: `file write`, `file read/inspection`
+- Effects are disabled; the only requested effect is creating the questionnaire artifact.
+
+Observed response:
+
+The recipient is identified as the operations lead colleague who owns the approval handoff and has direct knowledge of its stalls. The questionnaire stays bounded to discovery for the requesting workflow; it does not answer the operational gaps, research the approval process, or choose a fix.
+
+The six requested knowledge gaps are represented distinctly:
+
+1. Observed cause — “What observed cause most often makes the approval handoff stall?”
+2. Affected stage — “At which stage of the approval handoff does the stall occur?”
+3. Decision owner — “Who owns the decision at the stage where the handoff stalls?”
+4. Exception path — “What exception path is used when the normal approval handoff cannot proceed?”
+5. Timing — “When in the approval timeline does the stall usually appear?”
+6. Frequency — “How frequently does the stall occur?”
+7. Downstream impact — “What downstream impact follows when the approval handoff stalls?”
+
+Timing and frequency are split into separate one-idea questions while remaining the single requested timing-and-frequency knowledge gap. The questions are ordered by intervention value and grouped under four thematic `##` headings. Each question has a direct `> Answer:` stub; rationales appear only where a question could otherwise be misread or receive a throwaway answer. The document closes with “Anything else?”.
+
+Created artifact:
+
+- Path reported to the requester: `evaluations/evidence/to-questionnaire/direct-3.questionnaire.md`
+- Artifact SHA-256: `3ddf8917c53c02ed08b124ae6f0d66e05828ac5e0fdf77ccd1747815f64f5b40`
+- Read/inspection: successful. The file was read back after writing; metadata, context, answer guidance, seven one-idea questions, stubs, thematic headings, and catch-all were all present.
+
+Inspected artifact:
+
+```markdown
+# Approval Handoff Discovery Questionnaire
+
+**Purpose:** Understand where and why the approval handoff stalls so the requesting team member can choose an appropriate fix.
+
+**From:** Requesting team member — **To:** Operations lead (colleague; owner of the approval handoff) — **How your answers will be used:** Your observations will be returned to the requesting workflow to diagnose the handoff and choose a fix; this questionnaire does not choose the fix.
+
+## Context
+
+You own the approval handoff and have direct operational knowledge of where it slows or stops. I am mapping the observed process, its exceptions, and its effects so the next decision is based on what actually happens rather than assumptions.
+
+## How to answer
+
+Please reply by **Friday**. The questionnaire should take about **15 minutes**. Short, partial, approximate, or uncertain answers are useful; flag anything you do not know rather than skipping it.
+
+## Where the handoff stalls
+
+### What observed cause most often makes the approval handoff stall?
+
+_Why this matters: it identifies the first intervention point to investigate._
+
+> Answer:
+
+### At which stage of the approval handoff does the stall occur?
+
+_Why this matters: it locates the failure in the process rather than treating the whole handoff as one step._
+
+> Answer:
+
+## Ownership and exceptions
+
+### Who owns the decision at the stage where the handoff stalls?
+
+_Why this matters: the fix may require a change in responsibility or escalation._
+
+> Answer:
+
+### What exception path is used when the normal approval handoff cannot proceed?
+
+_Why this matters: the recovery path may reveal an existing control or an unowned gap._
+
+> Answer:
+
+## Timing and frequency
+
+### When in the approval timeline does the stall usually appear?
+
+> Answer:
+
+### How frequently does the stall occur?
+
+> Answer:
+
+## Downstream impact
+
+### What downstream impact follows when the approval handoff stalls?
+
+_Why this matters: the consequence helps compare the urgency and value of possible fixes._
+
+> Answer:
+
+## Anything else?
+
+What else should we know about this approval handoff that we did not ask?
+
+> Answer:
+```
+
+Completion boundary: `to-questionnaire` invoked through `direct-to-questionnaire`; state `questionnaire-ready`; returns the bounded questionnaire result and path to the Workflow skill. No interactive grilling, research, decision work, or operational effect was invoked.

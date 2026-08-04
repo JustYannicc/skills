@@ -1,0 +1,124 @@
+# Evaluation transcript — to-questionnaire/cross-domain, attempt 1
+
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Fresh context: `fresh-questionnaire-cross-final-1`
+Candidate commit: `f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d`
+Suite revision: `git:d6536d81e10ca550b7483aa4a21d319c7cbf7688`
+Recorded at (UTC): `2026-08-04T18:28:00Z`
+
+## Pinned skill and overlays reconstructed before execution
+
+- Upstream source: `matt-pocock/skills`, revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`.
+- Upstream target: `skills/in-progress/to-questionnaire/SKILL.md`.
+- Upstream agent metadata target: `skills/in-progress/to-questionnaire/agents/openai.yaml`.
+- Applied overlay `to-questionnaire-skill`: `overlays/to-questionnaire/SKILL.md.patch`, SHA-256 `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`; it changes `disable-model-invocation: true` to `false`.
+- Applied overlay `to-questionnaire-openai`: `overlays/to-questionnaire/agents-openai.yaml.patch`, SHA-256 `17b22065b5a8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`; it changes `allow_implicit_invocation: false` to `true`.
+
+The effective skill is the pinned upstream procedure with only those two declared
+overlay changes. Its recipient/send interview, discovery framing, question
+ordering, one-idea question rule, answer stubs, targeted rationale guidance,
+document template, and closing catch-all are unchanged.
+
+## Execution environment
+
+- Environment ID: `questionnaire-cross-domain`
+- Capabilities: `modelInvocation=true`, `fileWrite=true`, `fileRead=true`, `recipientContext=true`
+- Tools: `file write`, `file read/inspection`
+- Effects: disabled; no relocation decision, research, or exhibit movement was performed.
+
+## Prompt
+
+> Prepare a questionnaire for our colleague, the museum conservator responsible for this fragile exhibit. They know the safe humidity range during transport, allowed exposure duration outside that range, minimum qualified staffing, and which staffing trade-offs require approval. We need those four gaps to choose a relocation plan without choosing it in the questionnaire. The response is due Friday and should take about 15 minutes. Explain how the answers will be used and make the questionnaire ready to send.
+
+## Expected
+
+- Actions: identify the conservator's role expertise and relationship, elicit the relocation facts and decisions needed back, draft recipient-appropriate physical-environment questions, write the questionnaire file, report its path.
+- Artifacts: museum relocation questionnaire.
+- Effects: none.
+- Invoked: `to-questionnaire`.
+- Not invoked: research, choosing the relocation plan, or executing exhibit movement.
+- Proof: the document covers both safety constraints and staffing decisions, states how answers inform the relocation choice, and preserves one-job questionnaire scope.
+- Responsibility: `to-questionnaire` returns the bounded discovery artifact and Workflow retains relocation responsibility.
+- Route: `cross-domain-questionnaire`.
+- State: `questionnaire-ready`.
+- Forbidden: invent safe humidity limits, decide the relocation plan, or give execution instructions as if the conservator answered.
+
+## Observed response
+
+The prompt supplies the complete send contract: the recipient is a colleague who
+is the museum conservator responsible for the fragile exhibit; that recipient
+holds the four named physical and staffing facts; the answers will support a
+later relocation choice; and the deadline and effort are Friday and about 15
+minutes. No follow-up send interview, research, relocation selection, or
+movement action was needed.
+
+The response wrote the recipient-ready artifact at
+`evaluations/evidence/to-questionnaire/cross-domain-1.questionnaire.md` and
+read it back before reporting completion. It contains exactly four substantive
+questions for the supplied gaps, in two thematic sections, plus a catch-all
+restricted to those same four areas. Each question is one idea with an answer
+stub; rationales explain why the answer matters without supplying the answer.
+The artifact SHA-256 is
+`5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831`.
+
+### Inspected artifact
+
+```markdown
+# Museum Exhibit Transport Discovery Questionnaire
+
+**Purpose:** Gather the four physical and staffing facts needed to evaluate a relocation plan for this fragile exhibit.
+
+**From:** Me — **To:** My colleague, the museum conservator responsible for this fragile exhibit — **How your answers will be used:** I will use your answers to compare possible relocation plans against the exhibit's transport constraints and staffing approval boundaries. Your answers will inform the later relocation decision; this questionnaire does not choose or authorize a plan.
+
+## Context
+
+You are the colleague and museum conservator responsible for this fragile exhibit. I am gathering the information needed before a relocation plan can be chosen. I do not know the transport humidity and staffing boundaries you hold, so please answer from your knowledge and observed requirements rather than from a plan I have already selected.
+
+## How to answer
+
+Please return this by **Friday**. It should take about **15 minutes**. Partial answers and “I don’t know” are useful; flag anything you are unsure of rather than skipping it. Please answer only the four areas below; this questionnaire does not request a relocation choice or movement instructions.
+
+## Physical transport conditions
+
+### What safe humidity range must be maintained during transport?
+
+_Why this matters: it defines a physical constraint against which later relocation options will be checked._
+
+> Answer:
+
+### How long may the exhibit be outside that safe humidity range during transport?
+
+_Why this matters: it sets the allowable exposure duration; I will not infer a limit._
+
+> Answer:
+
+## Qualified staffing and approvals
+
+### What minimum qualified staffing is required for the exhibit’s transport?
+
+_Why this matters: it establishes the staffing floor a later relocation option must meet._
+
+> Answer:
+
+### Which staffing trade-offs during transport require approval?
+
+_Why this matters: it identifies where a later option would need an approval rather than assuming a trade-off is permitted._
+
+> Answer:
+
+## Anything else?
+
+Is there anything else about these four humidity, exposure-duration, qualified-staffing, or staffing-approval constraints that I should know before a relocation plan is chosen?
+
+> Answer:
+```
+
+## Boundary validation
+
+- Recipient role, expertise, and relationship are limited to the prompt's colleague/conservator description; no identity or authority was invented.
+- The four substantive questions map exactly to safe humidity range, allowed exposure duration, minimum qualified staffing, and staffing trade-offs requiring approval. The catch-all asks only for additional information within those four areas.
+- The document explains how answers will be used for a later relocation choice while making no choice or authorization itself.
+- No humidity value, exposure limit, staffing number, or approval rule is asserted; every such fact remains an answer stub for the conservator.
+- No research source was consulted and no exhibit movement or other external effect occurred.
+- The file was read and inspected after writing; only then was its path reported.
+- Completion boundary: `to-questionnaire` was invoked through `cross-domain-questionnaire`; state is `questionnaire-ready`; responsibility returns the bounded artifact to Workflow while Workflow retains relocation responsibility.

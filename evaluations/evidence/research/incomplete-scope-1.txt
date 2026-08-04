@@ -1,0 +1,86 @@
+Research incomplete-scope evaluation, attempt 1
+
+Candidate: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-research-incomplete-final-1
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Recorded at: 2026-08-04T18:18:18.000Z
+Effects: none; the supplied primary-source lookup was not used, and no persistence, delegation, or other effect occurred.
+
+Prompt
+
+“Research published external evidence about whether a new scheduling practice works; this is an evidence review, not a request to design an experiment. No population, comparison, time window, or decision use is supplied.”
+
+Environment
+
+```yaml
+id: research-without-bounded-scope
+capabilities:
+  workflow: true
+  research: true
+  persistence: false
+tools: [primary-source lookup]
+```
+
+Pinned source and exact overlay reconstruction
+
+The source is `matt-pocock/skills` at revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`. The applied Research overlay is `research-skill` (`overlays/research/SKILL.md.patch`, SHA-256 `9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074`). Applying that patch at the candidate suite revision yields this effective runtime skill:
+
+```markdown
+---
+name: research
+description: "Investigate a bounded external-fact question across technical, personal, organizational, physical, or agent domains using high-trust primary sources. Use when the user or the active 'Workflow' skill needs cited findings, source verification, or uncertainty reduced."
+---
+
+Research one bounded external-fact question and return evidence to the requesting context. When an active `'Workflow'` skill context exists, return the bounded result there. Choose the smallest truthful route:
+
+1. Investigate directly with available primary-source tools, or delegate bounded legwork when an approved delegation capability is available and useful. Delegation is optional; keep the question, source standard, and return route explicit. When `'Workflow'` is active, its parent owner integrates the result.
+2. Use high-trust primary evidence appropriate to the domain: official documentation, source code, specifications, first-party APIs, standards, direct records, or authoritative datasets. Follow every material claim to the source that owns it. Separate observed facts, inferences, conflicts, and uncertainty; if primary evidence is missing or weak, state that gap instead of presenting a confident conclusion.
+3. In Inline mode, return the bounded findings in the conversation. When a Persistence boundary or explicit request requires durability, write one canonical research result through the selected Adapter, including the question, claims, citations, uncertainty, and result revision or locator. Do not assume a repository, Git, Markdown path, or any particular host. If no conforming baseline Adapter or research capability is available, enter visible Degraded mode and return the findings or preserved question plus the exact capability gap to the requesting context; do not claim durable persistence or fabricated evidence.
+4. Return cited findings, uncertainty, source locators, and durability status to the active `'Workflow'` skill when present; otherwise return them to the requesting user or context. Stop at that result boundary: do not continue into Specification, decomposition, execution, or parent completion.
+```
+
+Expected contract
+
+The request is an incomplete routing case. Research must identify the missing scope and ask the blocking question before collecting evidence. No research artifact or effect is expected. Workflow retains responsibility while waiting for the scope answer; the route is `clarify-before-research` and the state is `waiting-for-scope`.
+
+Fresh response
+
+This evidence review is blocked because “whether it works” is not a bounded external-fact question yet. Before I collect or look up any sources, please provide the missing scope:
+
+1. **Population:** Which people, organizations, or setting does the scheduling practice concern?
+2. **Comparison:** What existing practice or alternative should it be compared with?
+3. **Time window:** What dates or observation period should the evidence cover?
+4. **Decision use:** What decision will the review inform, and what outcome or threshold would make the evidence useful?
+
+Until those answers are supplied, I will not choose a population, comparison, time window, or decision, perform a primary-source lookup, infer whether the practice works, or claim that the question has been answered. Research remains waiting for scope, and Workflow retains responsibility for the blocked request.
+
+Observed evidence arrays
+
+```yaml
+actions:
+  - identify the missing population, comparison, time window, and decision use
+  - ask the blocking scope question before any source collection or lookup
+artifacts: []
+effects: []
+invoked:
+  - research
+notInvoked:
+  - unsupported conclusion
+proof:
+  - the four missing scope dimensions and the required answers are explicit
+  - no source lookup or evidence collection occurs before scope is supplied
+responsibility:
+  - Workflow retains responsibility while Research is blocked on scope
+route:
+  - clarify-before-research
+state:
+  - waiting-for-scope
+forbiddenChecks:
+  - criterion: invent scope
+    evidence: The response leaves population, comparison, time window, and decision use unanswered and does not select values for them.
+    observed: false
+  - criterion: claim the question is answered
+    evidence: The response says the review is blocked, asks for scope, and explicitly withholds lookup and any conclusion.
+    observed: false
+```

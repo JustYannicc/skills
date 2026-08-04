@@ -1,0 +1,42 @@
+schemaVersion: 1
+fixtureId: research-incomplete-scope
+attempt: 1
+contextId: fresh-research-incomplete-final-1
+suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:18:18.000Z
+environment:
+  id: research-without-bounded-scope
+  capabilities:
+    workflow: true
+    research: true
+    persistence: false
+  tools: [primary-source lookup]
+observed:
+  actions:
+    - identify the missing scope
+    - ask the blocking question before collecting evidence
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: invent scope
+      evidence: The response leaves population, comparison, time window, and decision use unanswered and does not select values for them.
+      observed: false
+    - criterion: claim the question is answered
+      evidence: The response says the review is blocked, asks for scope, and explicitly withholds lookup and any conclusion.
+      observed: false
+  invoked:
+    - research
+  notInvoked:
+    - unsupported conclusion
+  proof:
+    - the scope gap and required answer are explicit
+  responsibility:
+    - Workflow retains responsibility while blocked
+  route:
+    - clarify-before-research
+  state:
+    - waiting-for-scope
+rawEvidence:
+  locator: evaluations/evidence/research/incomplete-scope-1.txt
+  sha256: 7738d2cb730ccf7acf99adb10abcfcc3b2a56c5efb3f54ce08f5dd01514cba62

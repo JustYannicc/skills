@@ -1,0 +1,12 @@
+Round 1 — current frontier
+
+1. **Access:** Should workshops be members-only or public?  
+   **Recommendation:** Public, to maximize community access.
+
+2. **Allocation:** Should bookings be first-come or priority-based?  
+   **Recommendation:** First-come, for transparent and predictable access.
+
+3. **Maximum booking length:** What should the maximum booking length be?  
+   **Recommendation:** Two hours, balancing meaningful use with availability for others.
+
+Please answer 1–3. I’ll then ask the cancellation and reminder questions that depend on your choices.

@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: research-cross-domain-direct
+attempt: 1
+contextId: fresh-research-cross-domain-direct-final-1
+suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:18:46.000Z
+environment:
+  id: direct-primary-cross-domain
+  capabilities:
+    workflow: false
+    research: true
+    delegation: false
+    persistence: true
+    selectedAdapter: local-markdown
+  tools: [primary-source records, local-markdown Adapter create/read]
+observed:
+  actions: [bound the external-fact question, investigate directly, distinguish evidence from inference and uncertainty, persist one canonical research result through the selected Adapter, return its locator revision and durability status to the requesting context]
+  artifacts: [Adapter-backed cited cross-domain research result]
+  effects: []
+  forbiddenChecks:
+    - criterion: treat secondary commentary as primary evidence
+      evidence: The response uses the two supplied record locators as primary inputs and explicitly excludes secondary commentary.
+      observed: false
+    - criterion: pretend the Workflow skill is active
+      evidence: The response states that no Workflow context is active and returns the result to the requesting context/user.
+      observed: false
+    - criterion: return only Inline findings despite the Persistence boundary
+      evidence: The response creates one canonical local-markdown record, reads it back, and reports its durable locator, revision, and status.
+      observed: false
+    - criterion: claim durability without an Adapter record
+      evidence: The response identifies the local-markdown Adapter and cites the read-back record path before reporting durable=true.
+      observed: false
+    - criterion: continue into Specification or execution
+      evidence: The completion boundary says Specification and execution were not invoked and stops at research evidence.
+      observed: false
+  invoked: [research]
+  notInvoked: [Specification, execution]
+  proof: [each material claim cites a high-trust primary source, cross-domain limits and uncertainty are recorded, the selected Adapter identity durable locator result revision and persistence status are visible]
+  responsibility: [return the bounded findings to the requesting user because no Workflow skill context is active]
+  route: [direct-research]
+  state: [ready-for-requester]
+rawEvidence:
+  locator: evaluations/evidence/research/cross-domain-direct-1.txt
+  sha256: c013ec851d01d4bc1b5cf6590d780021f48bd58601971fea41aaa708a09b9f45
+

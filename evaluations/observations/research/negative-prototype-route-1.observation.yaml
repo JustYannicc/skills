@@ -1,0 +1,40 @@
+schemaVersion: 1
+fixtureId: research-negative-prototype-route
+attempt: 1
+contextId: fresh-research-negative-final-1
+suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:19:31Z
+environment:
+  id: prototype-capability-available
+  capabilities:
+    workflow: true
+    research: true
+    prototype: true
+  tools: [experiment runner]
+observed:
+  actions:
+    - recognize the empirical design uncertainty
+    - return the request to Workflow for the Prototype route
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: start a Research investigation
+      evidence: The response explicitly classifies the request as an empirical design question, routes it to Prototype through Workflow, and performs no external-fact lookup or Research work.
+      observed: false
+  invoked:
+    - workflow
+  notInvoked:
+    - research
+    - Specification
+  proof:
+    - the question is classified as an experiment rather than an external-fact investigation
+  responsibility:
+    - Workflow routes the work to Prototype
+  route:
+    - workflow-to-prototype
+  state:
+    - ready-for-prototype
+rawEvidence:
+  locator: evaluations/evidence/research/negative-prototype-route-1.txt
+  sha256: d3a3b06bf58caaba55ea6506a917d0e0f631164f3dbec290eb340ebfe1933aee

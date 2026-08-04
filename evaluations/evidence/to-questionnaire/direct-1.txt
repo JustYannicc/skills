@@ -1,0 +1,37 @@
+Fresh-context execution — direct questionnaire, attempt 1
+
+Candidate commit: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Context ID: fresh-questionnaire-direct-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-04T18:24:33.300Z
+Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c; target `skills/in-progress/to-questionnaire/SKILL.md` and `skills/in-progress/to-questionnaire/agents/openai.yaml`.
+Applied overlays: `overlays/to-questionnaire/SKILL.md.patch` sha256 `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`; `overlays/to-questionnaire/agents-openai.yaml.patch` sha256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`. Both patches applied cleanly to the pinned targets; the effective skill permits model invocation and the effective agent policy permits implicit invocation.
+Environment: id=questionnaire-direct-with-file-write; modelInvocation=true, fileWrite=true, fileRead=true, recipientContext=true; tools=[file write, file read/inspection]. Effects disabled.
+
+Prompt before expected result (exact fixture text):
+
+Create an asynchronous questionnaire for my colleague, the operations lead who owns our approval handoff and knows where and why it stalls. I need observed causes, affected stages, decision owners, exception paths, timing and frequency, and downstream impacts so I can choose a fix. It is due Friday and should take about 15 minutes. Make the completed questionnaire ready to send.
+
+Expected boundary:
+
+- Identify the recipient's role, expertise, and relationship.
+- Cover the six concrete knowledge gaps: observed causes, affected stages, decision owners, exception paths, timing and frequency, and downstream impacts.
+- Order questions most-important-first and group them under thematic headings.
+- Include title, purpose, sender, recipient, answer use, concise context, deadline, effort, partial/uncertain-answer guidance, one-idea questions with answer stubs, and rationale only where needed.
+- Close with an anything-else question.
+- Write the recipient-ready questionnaire file and report its path.
+- Return the bounded questionnaire result through `direct-to-questionnaire` to Workflow; do not answer the missing operational facts, research the approval process, or make the decision.
+
+Observed response:
+
+1. The recipient is identified as the operations lead who owns the approval handoff; the context states that this person knows where and why it stalls. The sender is represented as “Me,” and the relationship and expertise are explicit without inventing an identity or operational fact.
+2. The six requested gap categories are represented distinctly by seven one-idea questions: observed causes; affected stages; decision owners; exception paths; timing; frequency; and downstream impacts. Timing and frequency are split into separate questions while remaining one requested timing-and-frequency category.
+3. The questions are grouped under `Causes and stages`, `Authority and exceptions`, `Timing and frequency`, and `Downstream impact`, in most-important-first order.
+4. The questionnaire includes the title `Approval Handoff Discovery Questionnaire`; purpose; From/To fields; how answers will be used; a concise context paragraph; and `How to answer` guidance stating the Friday deadline, approximately 15-minute effort, and that short, partial, uncertain, or not-applicable answers are useful.
+5. Every question asks for one knowledge item and has a directly-following `> Answer:` stub. Rationale is included only where a question could be misread or invite a throwaway answer. The closing `Anything else?` section is present.
+6. I wrote the complete questionnaire to `evaluations/evidence/to-questionnaire/direct-1.questionnaire.md`, then read and inspected the exact file contents. The inspected file is 2,107 bytes with SHA-256 `2014f49d27790ef5b68968c66c827fa04087712787b23f5a6e8a6829f565de2a`. I reported that path as the recipient-ready artifact.
+
+The questionnaire asks the recipient to supply every operational fact; it does not state causes, stages, owners, exception paths, timing, frequency, or impacts itself. No research, decision, or external effect occurred.
+
+Result state: `questionnaire-ready`; route: `direct-to-questionnaire`; responsibility returns to Workflow.

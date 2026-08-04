@@ -1,0 +1,26 @@
+Issue #20 — To Questionnaire acceptance proof
+
+Full candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Runtime suite identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Evidence commit: the Git commit containing this record
+Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
+
+Overlay records:
+- skills/in-progress/to-questionnaire/SKILL.md
+  patch sha256 77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160
+- skills/in-progress/to-questionnaire/agents/openai.yaml
+  patch sha256 17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1
+
+Acceptance:
+- Clean pinned-source reapplication is enforced by repository validation.
+- Direct Critical invocation passed three unique Luna Max fresh contexts.
+- Indirect Workflow invocation passed three unique Luna Max fresh contexts.
+- Cross-domain, incomplete, missing-file-capability, and negative fixtures passed.
+- Every ready artifact was written and read back. The evidence checks the complete
+  upstream questionnaire structure, distinct gaps, one-idea questions, answer
+  stubs, deadline/effort/partial-answer guidance, thematic ordering, and catch-all.
+- Only the two invocation booleans change; the universal procedure is preserved.
+- No full upstream copy is retained.
+
+Gate: pnpm validate passed with 6 test files / 27 tests, 262 validated files,
+1 installed skill, and 36 evaluation fixtures.

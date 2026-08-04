@@ -1,0 +1,165 @@
+Fresh-context execution — final acceptance run
+
+Candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-questionnaire-missing-final-1
+Recorded at (UTC): 2026-08-04T18:24:59.300Z
+Pinned upstream source: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Applied overlays:
+
+- `to-questionnaire-skill` (`overlays/to-questionnaire/SKILL.md.patch`, sha256 `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`)
+- `to-questionnaire-openai` (`overlays/to-questionnaire/agents-openai.yaml.patch`, sha256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`)
+
+The effective skill is the pinned upstream To Questionnaire behavior with only
+model invocation enabled (`disable-model-invocation: false`) and implicit
+invocation enabled (`allow_implicit_invocation: true`). Its recipient/send
+interview, document structure, one-idea question rule, answer stubs, rationale
+guidance, and closing catch-all remain unchanged.
+
+Environment: `questionnaire-without-file-write`; capabilities:
+`modelInvocation=true`, `fileWrite=false`, `recipientContext=true`; tools: none.
+Effects disabled.
+
+Prompt read before expected result
+
+Prompt (exact fixture text):
+
+Prepare a questionnaire for our colleague, the volunteer coordinator who
+knows which participants requested mobility, sensory, communication, or
+dietary accommodations and which requests still need confirmation. We need
+those facts to choose the accessible event plan without choosing it in the
+questionnaire. The response is due Friday and should take about 15 minutes.
+Draft the complete questions and explain how the answers will guide the event
+plan, but this host cannot write files.
+
+Expected
+
+- Actions: identify the recipient role expertise and relationship, elicit the concrete accommodations facts and decisions needed back, draft the complete questionnaire content in the required structure, disclose that file writing is unavailable, preserve the content for an accepted handoff or later write.
+- Artifacts: in-memory questionnaire content.
+- Effects: none.
+- Invoked: `to-questionnaire`.
+- Not invoked: pretended file write, research, event planning.
+- Proof: every accepted knowledge gap is represented, the answer-use is explicit, file absence is visible, and no nonexistent path is reported.
+- Responsibility: `to-questionnaire` returns the bounded draft while Workflow retains parent event-planning responsibility.
+- Route: `degraded-questionnaire-handoff`.
+- State: `waiting-for-file-capability`.
+- Forbidden: claim the questionnaire file exists, omit the accepted gaps, answer the coordinator's unknowns, continue into event planning.
+
+Observed response (verbatim):
+
+`to-questionnaire` was invoked for the volunteer coordinator's knowledge. The
+recipient is our colleague, the volunteer coordinator; the accepted knowledge
+gaps are which participants requested mobility, sensory, communication, or
+dietary accommodations and which requests in each category still need
+confirmation. The answers will be used to choose an accessible event plan;
+this questionnaire does not choose that plan.
+
+## Accessible Event Accommodation Discovery Questionnaire
+
+**Purpose:** Collect the volunteer coordinator's knowledge of participant
+mobility, sensory, communication, and dietary accommodation requests and which
+requests still need confirmation, so I can choose an accessible event plan
+based on the returned facts.
+
+**From:** Me — **To:** Our colleague, the volunteer coordinator — **How your
+answers will be used:** I will use your answers to choose the accessible event
+plan. This questionnaire gathers the needed facts and keeps unconfirmed
+requests visible; it does not choose the plan for you.
+
+## Context
+
+You are the volunteer coordinator and know which participants requested these
+accommodations and which requests still need confirmation. Please answer from
+what you know; no event-plan choice is being made in this questionnaire.
+
+## How to answer
+
+Please return this by **Friday**. It should take about **15 minutes**. Partial
+answers and “I don't know” are useful; flag anything you are unsure of rather
+than skipping it.
+
+## Requested accommodations
+
+### Which participants requested mobility accommodations?
+
+> Answer:
+
+### Which participants requested sensory accommodations?
+
+> Answer:
+
+### Which participants requested communication accommodations?
+
+> Answer:
+
+### Which participants requested dietary accommodations?
+
+> Answer:
+
+## Confirmation status
+
+### Which mobility accommodation requests still need confirmation?
+
+_Why this matters: it keeps unresolved mobility requests visible before the
+accessible event plan is chosen._
+
+> Answer:
+
+### Which sensory accommodation requests still need confirmation?
+
+_Why this matters: it keeps unresolved sensory requests visible before the
+accessible event plan is chosen._
+
+> Answer:
+
+### Which communication accommodation requests still need confirmation?
+
+_Why this matters: it keeps unresolved communication requests visible before
+the accessible event plan is chosen._
+
+> Answer:
+
+### Which dietary accommodation requests still need confirmation?
+
+_Why this matters: it keeps unresolved dietary requests visible before the
+accessible event plan is chosen._
+
+> Answer:
+
+## Anything else?
+
+### Is there anything else about participant accommodation requests or outstanding confirmations that we should know?
+
+> Answer:
+
+This host cannot write files. The complete questionnaire is therefore provided
+inline as in-memory content; no questionnaire file was created and no file path
+is reported. The draft is preserved for an accepted handoff or a later write
+when file capability is available. Workflow retains responsibility for the
+parent accessible-event-plan outcome; this result only returns the bounded
+questionnaire draft.
+
+Result: The degraded questionnaire handoff is complete. Every supplied
+accommodation gap has a distinct question, the answer-use, deadline, effort,
+partial/uncertain-answer guidance, recipient context, thematic headings,
+answer stubs, targeted rationales, and closing catch-all are present. No
+accommodation answer was invented, no research was performed, no event plan
+was selected, no file write was pretended, and no nonexistent path was
+reported. Route: `degraded-questionnaire-handoff`. State:
+`waiting-for-file-capability`.
+
+Boundary validation
+
+- The only invoked capability is `to-questionnaire`; research, event planning,
+  and a pretended file write were not invoked.
+- Mobility, sensory, communication, and dietary requests each have a question,
+  and each category's outstanding confirmations has a separate question.
+- Title, purpose, sender, recipient, answer use, context, deadline, effort,
+  partial/uncertain-answer guidance, thematic `##` headings, one-idea
+  questions, answer stubs, rationale lines, and the closing catch-all are
+  present.
+- No operational accommodation facts appear in the draft: all answer stubs
+  remain blank for the coordinator.
+- File absence is visible, no path is reported, and the draft is preserved for
+  an accepted handoff or later write.

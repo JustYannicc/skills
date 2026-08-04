@@ -1,7 +1,149 @@
 {
-  "evaluatedAt": "2026-08-04T16:10:54.000Z",
-  "fixtureSetRevision": "e0b8d14b007f00a4eee9c99d58c7db9e574be4456f6c94d75514675ffe79caac",
+  "evaluatedAt": "2026-08-04T18:28:00Z",
+  "fixtureSetRevision": "5a4e3dfbd550db891702bbf393ccc4b3e257117743fa719b54dfe0e0fa560292",
   "fixtures": [
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-cross-domain-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-cross-domain-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/cross-domain-1.txt",
+          "sha256": "e44a758ee7077b5cd78c99d4e3be588515dacc52c8aad2d96329e8a29928a718"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-cross-domain",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "a480edabc57806f48930e482f5c5e9fe3cbf6e783aa7698825c94cd48ba7733c"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-direct-1",
+        "fresh-batch-grill-me-direct-2",
+        "fresh-batch-grill-me-direct-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-direct-1",
+          "locator": "evaluations/evidence/batch-grill-me/direct-1.txt",
+          "sha256": "d6f027a4b716a51ba7e08c572a09e7631c1ba2995a9862b52cfbc4d6f06772ed"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-batch-grill-me-direct-2",
+          "locator": "evaluations/evidence/batch-grill-me/direct-2.txt",
+          "sha256": "34ffdec64f8332ac434150302b402e9aff7133f51571ba20709ca98db3e4596b"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-batch-grill-me-direct-3",
+          "locator": "evaluations/evidence/batch-grill-me/direct-3.txt",
+          "sha256": "1697621543bdbc8fea3b803950621307170922e0dca4336d0a26d7daf51876a2"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-direct",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "2be29cf4f053dd59929e747ce027fe5b79e6a8a8c2bad8a8c459a227c428b78b"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-incomplete-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-incomplete-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/incomplete-1.txt",
+          "sha256": "222a43470b2b48cc851b26a856ce9df000b5164027801bec8771f798990bb07f"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-incomplete",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "f42c4701c1f2319318bee0251b6b9c27defdd652b410a13438a2136664d5f455"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-indirect-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-indirect-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/indirect-1.txt",
+          "sha256": "ffbe19f0e3e14b429d38f8f58f299b542a3212627051ee5a07685a206be97664"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-indirect",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "91cf162f9d3bac302d73b68275db4e0c837302e6fe41776951bb63ad25550f20"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-missing-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-missing-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/missing-capability-1.txt",
+          "sha256": "36cc6740d613e6dbb9dddc113518b530735f1246d0457df84f5a4054c2e7a8b2"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "c2f0061a1dc688c4287ccd6e7af8cf36f6b53c2c9381b2b6680b2b204ed8f801"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-negative-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-negative-1",
+          "locator": "evaluations/evidence/batch-grill-me/negative-1.txt",
+          "sha256": "50d0cb294ddc71c898bd6e05da18cae4c36f1a016720e83712bb389f0fc9c15e"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-negative",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "91b3b043a35faae7ad8a2cbb1475b55f53925a17385cb26ba291e7c524d1025e"
+    },
     {
       "attempts": [
         1,
@@ -36,7 +178,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -73,7 +215,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -94,7 +236,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -115,7 +257,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -136,8 +278,166 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-research-cross-domain-direct-final-1",
+        "fresh-research-cross-domain-direct-final-2",
+        "fresh-research-cross-domain-direct-final-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-cross-domain-direct-final-1",
+          "locator": "evaluations/evidence/research/cross-domain-direct-1.txt",
+          "sha256": "c013ec851d01d4bc1b5cf6590d780021f48bd58601971fea41aaa708a09b9f45"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-research-cross-domain-direct-final-2",
+          "locator": "evaluations/evidence/research/cross-domain-direct-2.txt",
+          "sha256": "60d70ddbc77c0049b41e41f81f719e2cd817cfb8a2a4d0a0ac7b1e986698d925"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-research-cross-domain-direct-final-3",
+          "locator": "evaluations/evidence/research/cross-domain-direct-3.txt",
+          "sha256": "ae5f720e509e4bb36ab8641841a2aa76a82b28f718ec1976c23d10dfb36dfdf2"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-cross-domain-direct",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "32162af6e6142728141fe6cf2acf30c94b0be5fe29a9db8aad916acf708d3fed"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-incomplete-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-incomplete-final-1",
+          "locator": "evaluations/evidence/research/incomplete-scope-1.txt",
+          "sha256": "7738d2cb730ccf7acf99adb10abcfcc3b2a56c5efb3f54ce08f5dd01514cba62"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-incomplete-scope",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "dd34c41c6cf54e720944df890c714e4d6fceb0aacab7a89dab5a902c4c63372c"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-research-indirect-final-1",
+        "fresh-research-indirect-final-2",
+        "fresh-research-indirect-final-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-indirect-final-1",
+          "locator": "evaluations/evidence/research/indirect-workflow-delegation-1.txt",
+          "sha256": "c9208d7e3c436f69b088b2b9b1b8bfcd9d52f02bb455c80ded145a2f332b172a"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-research-indirect-final-2",
+          "locator": "evaluations/evidence/research/indirect-workflow-delegation-2.txt",
+          "sha256": "600fb1431a27c4d44794057b74a15bbab96f2efbf08012c38eb2842e2bc1fb84"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-research-indirect-final-3",
+          "locator": "evaluations/evidence/research/indirect-workflow-delegation-3.txt",
+          "sha256": "b08a0b03bc8856ccb8313bb39acd655da3d545a50469e249b77d4840ee26faea"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-indirect-workflow-delegation",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "f3d3cb7e5f0738c6d5c09ff4c118e77e0fce9f9771015556c29d0a1cb5acb3b4"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-missing-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-missing-final-1",
+          "locator": "evaluations/evidence/research/missing-capability-1.txt",
+          "sha256": "ad57066909b436e546d3131f13cc2f3d3cf5066561c9846ccee250285f1c0d55"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "a7d37a7fc50e38501aa520e92db7f56188458c0f06bb5a2d6a50cbe9aa1bba32"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-negative-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-negative-final-1",
+          "locator": "evaluations/evidence/research/negative-prototype-route-1.txt",
+          "sha256": "d3a3b06bf58caaba55ea6506a917d0e0f631164f3dbec290eb340ebfe1933aee"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-negative-prototype-route",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "f1d557adaa48ec8348d6db010b00d05ba072bd6edbbbfa1a4ddd427d944cd67f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-no-repo-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-no-repo-final-1",
+          "locator": "evaluations/evidence/research/no-repository-adapter-1.txt",
+          "sha256": "bf135bdccb8bf5db2f59a49dba4478b08235c13fb500c7682f938199d6b42d9e"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-no-repository-adapter",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "ad6accb9df792e4123e9c002c0ba95a123314dbaebe0af5d45d1fe9fc8a1a566"
     },
     {
       "attempts": [
@@ -157,7 +457,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -178,7 +478,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -215,7 +515,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -252,7 +552,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -273,7 +573,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -294,7 +594,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -315,7 +615,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -336,7 +636,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -357,7 +657,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -378,7 +678,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -399,7 +699,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -420,7 +720,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -441,12 +741,170 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-questionnaire-cross-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-cross-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.txt",
+          "sha256": "567a98187783b5b0c6c52a8b70b190247bc555155465a24a24022b9ded12dac6"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-cross-domain",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-questionnaire-direct-final-1",
+        "fresh-questionnaire-direct-final-2",
+        "fresh-questionnaire-direct-final-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-direct-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/direct-1.txt",
+          "sha256": "7bb83d97f042d680acd6232585d7bec4fde6aff14ebb846f58b25757324b4816"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-questionnaire-direct-final-2",
+          "locator": "evaluations/evidence/to-questionnaire/direct-2.txt",
+          "sha256": "9c14940b173385bd9103b7858d9f506474162fb95d21f6b606a4f2859302755c"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-questionnaire-direct-final-3",
+          "locator": "evaluations/evidence/to-questionnaire/direct-3.txt",
+          "sha256": "ae63351f6c216917bf10634bb85d552d3dc234bb94bc2b22d95a39e6abc548de"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-direct",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "8648c4e09094d91e5e00a5e5a81450acb3c06695dce9ae15bd1596cc318f624b"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-questionnaire-incomplete-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-incomplete-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/incomplete-1.txt",
+          "sha256": "66fb3a61468d2f8730f653c087ab398eea7aebc9d664494bcb1313ca543928a3"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-incomplete",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "67ad8e377e31ccbd5ae91ae759b033bbc2e48c0b2fd7dc96bfa4329824348028"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-questionnaire-indirect-final-1",
+        "fresh-questionnaire-indirect-final-2",
+        "fresh-questionnaire-indirect-final-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-indirect-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/indirect-1.txt",
+          "sha256": "bdb1e94d69ed41747cf74460a0d70b30eeb2c01628c1d268398dbd938a76b4de"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-questionnaire-indirect-final-2",
+          "locator": "evaluations/evidence/to-questionnaire/indirect-2.txt",
+          "sha256": "4bd617674cf5c269997c6d5e0699e87d18f34b6017e5c6cc1b46be9e1c9620b1"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-questionnaire-indirect-final-3",
+          "locator": "evaluations/evidence/to-questionnaire/indirect-3.txt",
+          "sha256": "68f5b0f6a4132153cd0001526156e6c0c8da0baebc68478ae987a997dec6298d"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-indirect",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "c1ab1c0ad65e5021f0c6fd826870db73ecc4d0a45d3446f937c320a581ea0b89"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-questionnaire-missing-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-missing-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/missing-capability-1.txt",
+          "sha256": "7fe7f13872051db479018bbe7a4a2dff5dd4bab7fe8d823d0fd8f181e9d133fa"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "3677af27f161d55b1b6783ee25b05b457e79dee5821e1e5a2158ee50ef4d9466"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-questionnaire-negative-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-negative-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/negative-1.txt",
+          "sha256": "74a964ed0d727c5362d495e2ca5d466970a56fc66bbed1e61afb534b3540f789"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-negative",
+      "status": "passed",
+      "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
+      "fixtureRevision": "ead7c724eba0812b80580200b3064116db5566ba6367eddd0bd5a37c5e2adc9c"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+  "suiteRevision": "git:d6536d81e10ca550b7483aa4a21d319c7cbf7688",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -455,7 +913,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 18,
-    "passed": 18
+    "fixtures": 36,
+    "passed": 36
   }
 }

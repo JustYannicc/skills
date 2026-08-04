@@ -1,0 +1,83 @@
+Fresh-context execution — research/no-repository-adapter, attempt 1
+
+Candidate commit: `f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d`
+Suite revision: `git:d6536d81e10ca550b7483aa4a21d319c7cbf7688`
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Context ID: `fresh-research-no-repo-final-1`
+Recorded at (UTC): `2026-08-04T18:20:09Z`
+Pinned Research source: `mattpocock/skills` git:`2ab958093e83e0ec752e6c1c5932da465bf23e0c`
+Applied overlay: `overlays/research/SKILL.md.patch` SHA-256
+`9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074`
+Environment: `no-repository-selected-adapter`; research=true,
+delegation=false, persistence=true, repository=false,
+selectedAdapter=local-markdown; tools=[primary-source record,
+local-markdown Adapter create/read]. Effects disabled.
+
+## Prompt (exact fixture text)
+
+Investigate the maximum daily exposure duration at 92 dBA for a community
+workshop using the available primary record
+`osha-29-cfr-1910.95-table-g16@2026-07-01`, whose 92 dBA row states 6 hours.
+This context has no Git repository or remote. Cite the supplied record,
+separate the observed table value from any inference or uncertainty, and
+persist one canonical result through the selected local-markdown Adapter.
+Return its durable locator, Adapter identity, result revision, and
+persistence status without creating a repository. The Adapter supports create
+and read-back; for this fixture it writes to a caller-selected evidence path,
+uses the written file's SHA-256 as the result revision, and reports
+`durable=true` only after a successful read-back.
+
+## Expected
+
+- Actions: investigate directly; write one canonical result through the
+  selected Adapter without a repository, include citations and uncertainty.
+- Artifacts: Adapter-backed research record.
+- Effects: none.
+- Invoked: `research`.
+- Not invoked: repository setup; Git initialization.
+- Proof: the durable locator and Adapter identity are recorded; repository
+  absence is preserved.
+- Responsibility: return the durable record and findings to the requesting
+  context.
+- Route: `no-repository-adapter`.
+- State: `durable-ready`.
+- Forbidden: create a repository solely to store findings; claim durability
+  without an Adapter record.
+
+## Observed result
+
+### Direct investigation and evidence boundary
+
+The supplied primary record was used directly. Its locator is
+`osha-29-cfr-1910.95-table-g16@2026-07-01`, and its 92 dBA row states a maximum
+daily exposure duration of **6 hours**. That is the observed table value. The
+canonical result labels any statement about using six hours for this particular
+community workshop as an inference, not as a new measurement or a site-specific
+determination. It records that workshop exposure pattern, measurement method,
+occupancy, controls, jurisdictional applicability, and continuity of exposure
+were not supplied; these remain uncertainties.
+
+### Selected Adapter create/read-back
+
+The selected `local-markdown` Adapter created exactly one canonical result at
+`evaluations/evidence/research/no-repository-adapter-1.record.md`. The record
+contains the bounded question, supplied-record citation, observed value,
+inference boundary, uncertainty, Adapter identity, locator, and durability
+metadata. A read-back then returned the exact record bytes successfully.
+
+The SHA-256 of those exact read-back bytes is
+`1240bdf2cbedb0c77da2d245939c13d0822fe2dee46675b9a228b58e40445d43`; this is
+the result revision. The Adapter therefore reports `durable=true` only after
+that successful read-back.
+
+The environment had no Git repository or remote. No repository setup or Git
+initialization was invoked or needed; the Adapter-backed local Markdown record
+is the durable artifact. No workshop, policy, configuration, or other external
+effect occurred.
+
+### Completion boundary
+
+`research` was invoked through the `no-repository-adapter` route. The durable
+record and findings are returned to the requesting context, which retains
+responsibility. The result stops at the research boundary; no repository setup,
+Git initialization, Specification, execution, or parent completion was started.
