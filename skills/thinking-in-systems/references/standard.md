@@ -42,6 +42,7 @@ Read and apply every section before returning a systems judgment. Scale the dept
 - **Strategy:** a rule for making decisions as conditions and information change. A **Plan** is a proposed sequence under current assumptions.
 - **Fog of war:** material uncertainty that limits what can currently be known.
 - **Proof seam:** the human-visible boundary where intended behavior and effects can be evaluated independently of internal implementation.
+- **Assurance cadence:** the scheduled and event-triggered pattern of verification, validation, burden-and-harm review, and sustainment checks across activation and steady operation. It is denser while evidence is immature, tapers only after stable evidence, and may remain continuous where signals are cheap and actionable.
 - **Informed exception:** an authorized choice to bypass a safeguard after the skipped protection, plausible consequence, affected scope, and recovery trigger are visible.
 - **Design Complete:** another competent person or agent can implement and simulate one System version without inventing a material rule.
 
@@ -422,6 +423,10 @@ Decision rule: [retain, revise, expand, pause, repeat, or retire].
 
 Choose the observation window from the mechanism's expected delay and the decision the evidence must inform. Do not reuse a fixed duration from another domain.
 
+Activation is not a one-time proof event. Define an **Assurance cadence** with an initial effect check, one or more post-activation verification and validation points after the relevant evidence delays, and event-triggered rechecks for material incidents, assumption changes, drift, boundary changes, or governing-source revisions. Include Outcome, operation, burden and harm, and sustainment evidence at the cadence each claim needs; one signal does not stand in for the others.
+
+Move to steady operation only after the accepted evidence shows stable behavior across the supported conditions. Taper periodic review when another check is unlikely to change a decision enough to justify its burden. Keep continuous or event-driven monitoring when the signal is cheap, proportionate, decision-relevant, and connected to a named threshold, response owner, next action, and retirement condition. Continuous operational monitoring does not replace later validation of Outcome, meaning, burden, or harm.
+
 Prefer quantitative operational evidence when it can validly answer the question without disproportionate collection burden. Show denominators, distributions, and trends where they matter. Use qualitative evidence for meaning, harm, exceptions, and changing conditions that counts cannot represent, and name its comparison or rubric. Do not invent precision or infer causality or mental state from sparse telemetry.
 
 When evidence uses sensitive or passively collected personal data, name its purpose, Authority or consent, minimization rule, retention, access and deletion rules, and interpretation limits.
@@ -434,7 +439,7 @@ Every metric names its decision, underlying Outcome, gaming route, counter-signa
 
 When attention is a material burden, measure the checks, reminders, searches, decisions, corrections, or interventions demanded per meaningful Outcome, and interpret that burden beside Outcome, autonomy, trust, and correction signals. Zero attention is not automatically better.
 
-A recurring monitor names the decision it serves, cadence, threshold, owner, next action, and retirement condition. Do not monitor merely because data exists.
+A recurring monitor is one mechanism inside the Assurance cadence. Monitor only when the evidence can change a named decision; record its cadence or trigger, threshold, owner, next action, collection burden, and taper or retirement condition.
 
 ### Review and completion gates
 
@@ -479,7 +484,8 @@ stateDiagram-v2
   Implementing --> SimulationReady: accepted seams pass
   SimulationReady --> SimulationApproved: exact proposals accepted
   SimulationApproved --> LivePilot: named effectors enabled
-  LivePilot --> Live: validation gate passes
+  LivePilot --> Live: initial validation gate passes
+  Live --> Live: assurance cadence passes
   Live --> Degraded: health or dependency failure
   Degraded --> Recovery: recovery starts
   Recovery --> Live: baseline restored and verified
@@ -557,7 +563,7 @@ One canonical System Record governs each Durable system version. It contains onl
 
 - credible acceptance scenarios and exact visible results;
 - simulation fixtures and the effector boundary;
-- baseline, Outcome, operation, burden, and sustainment evidence;
+- baseline, Outcome, operation, burden, sustainment evidence, and Assurance cadence;
 - decay signals, healthy baseline, reset and recovery proof, and owner;
 - material review findings and resolution-check evidence; and
 - change, legacy, migration, rollback, and retirement disposition.

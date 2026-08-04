@@ -49,6 +49,7 @@ This ledger records the maintainer's operative requirements from the complete de
 | Quantitative, low-burden evidence is preferred where possible because human vibes are vulnerable to recency and state bias. | Measurement plan |
 | Before/after behavior must be measurable and tied to the actual outcome, with process and burden/harm counter-signals. | Measurement plan |
 | Choose every observation window from the mechanism's expected evidence delay and the decision it must inform; no fixed duration transfers across Systems by default. | Measurement reference |
+| Activation begins an Assurance cadence rather than ending verification. Recheck operation, Outcome, burden/harm, and sustainment after their relevant evidence delays and on material events; taper only after stable evidence and when another check cannot justify its burden. Continuous monitoring is reserved for cheap actionable signals and never substitutes for later validation. | Standard §6, System Record template, and measurement sources |
 
 ## Contracts, judgment, and representation
 

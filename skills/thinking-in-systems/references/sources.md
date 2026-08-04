@@ -123,6 +123,8 @@ Used by simulation, public proof seams, Outcome-versus-operation evidence, burde
 
 The standard treats installation, availability, correct operation, adoption, Outcome improvement, burden, and sustainment as distinct evidence claims.
 
+The **Assurance cadence** is a System-design inference from lifecycle verification, validation, monitoring, and learning disciplines. Initial or pilot success does not prove sustained operation or Outcome. Recheck each evidence claim after its expected delay and when material events or assumptions change; taper only when another check is unlikely to change a decision enough to justify its burden. Continuous low-cost operational signals may remain when they are actionable, but they do not replace later validation of Outcome, meaning, burden, or harm.
+
 ## Change, legacy, and retirement
 
 Used by scope reopening, affected-state discovery, migration, rollback, correction propagation, and predecessor retirement.

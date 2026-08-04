@@ -185,7 +185,7 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 - **Sensitive or passive data contract, when used:** purpose, Authority or consent, minimization, retention, access, deletion, and interpretation limits.
 - **Observation window, expected delay, and confounders:**
 - **Decision rule:** retain, revise, expand, pause, repeat, or retire.
-- **Recurring monitor, when used:** decision, cadence, threshold, owner, next action, and retirement condition.
+- **Assurance cadence:** initial effect check; post-activation verification and validation after relevant evidence delays; stable-evidence transition to steady operation; incident, drift, assumption, boundary, and source-change triggers; continuous or periodic signals with decision, threshold, owner, next action, collection burden, taper, and retirement condition.
 - **Adversarial review:** reviewer who did not author the exact revision, credible-risk scope, and findings.
 - **Resolution:** resolver and evidence for each material finding.
 - **Resolution check:** checker who neither authored the reviewed revision nor made the fix, and result.

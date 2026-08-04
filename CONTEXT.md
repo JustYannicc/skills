@@ -4,7 +4,7 @@ The shared vocabulary for this repository. The installed [Thinking in Systems st
 
 ## Language
 
-Terms including Thinking in Systems, System, System of interest, Containing System, Subsystem, Upstream System, Dependent System, Peer System, System interaction, Durable system, Actor, Ownership, Responsibility, Intent, Outcome, Material, Authority, LLM, Deterministic mechanism, System representation, System Record, Change and Legacy Record, Opportunity cost, Constraint, Feasible set, Preference, Decision frame, Framing effect, Satisficing, Pareto principle, Pareto improvement, Marginal analysis, Cost structure, Substitution effect, Externality, Mise en place, Strategy, Plan, Fog of war, Proof seam, Informed exception, and Design Complete are defined there and are not redefined here.
+Terms including Thinking in Systems, System, System of interest, Containing System, Subsystem, Upstream System, Dependent System, Peer System, System interaction, Durable system, Actor, Ownership, Responsibility, Intent, Outcome, Material, Authority, LLM, Deterministic mechanism, System representation, System Record, Change and Legacy Record, Opportunity cost, Constraint, Feasible set, Preference, Decision frame, Framing effect, Satisficing, Pareto principle, Pareto improvement, Marginal analysis, Cost structure, Substitution effect, Externality, Mise en place, Strategy, Plan, Fog of war, Proof seam, Assurance cadence, Informed exception, and Design Complete are defined there and are not redefined here.
 
 **Decision frontier**:
 The currently unblocked set of decisions whose answers materially sharpen the next work.
