@@ -1,0 +1,18 @@
+Issue: #22 — To Spec review resolution check
+Status: HUMAN REVIEW REQUIRED
+Fixed point: git:455541e255b5482235faa65a82bffc2b21415b94
+Final candidate implementation: git:dbf15995b62f963c4524c664136bf2bf40282658
+Final evidence/report commit: git:14e3e3e82be25cf6d87cb5a89dc2a54be5584e04
+Evaluator: gpt-5.6-luna (independent resolution check)
+
+Verdict: PASS. The README candidate section and the bounded direct Inline
+exception resolve the independent Standards findings. The rule is identical
+in the skill and governing Workflow documents; Durable/effect/approval,
+assignment, waiting, multi-phase, meaningful-risk, and parent-completion paths
+still require Workflow. The workflow=false Inline fixture exercises the safe
+exception, and the evaluation report contains 26 passed fixtures with zero
+findings. `pnpm validate` and `git diff --check` pass; the worktree was clean.
+
+Scope check: no #1 mutation, no #35 System Record representation decision, no
+private or sensitive material. This check confirms technical resolution only;
+human review remains required and issue #22 remains open.
