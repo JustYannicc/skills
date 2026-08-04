@@ -22,5 +22,5 @@ Acceptance:
   it returns to Workflow only when active and stops before Specification/execution.
 - agents/openai.yaml is unchanged and no full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 28 tests, 271 validated files,
+Gate: pnpm validate passed with 6 test files / 28 tests, 272 validated files,
 1 installed skill, and 38 evaluation fixtures.

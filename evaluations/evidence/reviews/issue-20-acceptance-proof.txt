@@ -23,5 +23,5 @@ Acceptance:
 - Only the two invocation booleans change; the universal procedure is preserved.
 - No full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 28 tests, 271 validated files,
+Gate: pnpm validate passed with 6 test files / 28 tests, 272 validated files,
 1 installed skill, and 38 evaluation fixtures.
