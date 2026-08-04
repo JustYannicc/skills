@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "record_id": "SYS-024",
+  "record_version": "0.3.0-draft",
+  "state": "designing",
+  "owner": {
+    "id": "actor:system-owner",
+    "label": "System owner"
+  },
+  "authority": {
+    "decision_owner": "actor:system-owner",
+    "allowed_effects": ["compose_without_effect"]
+  },
+  "relationships": [
+    {
+      "kind": "upstream",
+      "record_id": "SYS-005",
+      "contract": "../../docs/UNIVERSAL_WORK_CONTRACT.md"
+    },
+    {
+      "kind": "dependent",
+      "record_id": "SYS-013",
+      "contract": "https://github.com/JustYannicc/skills/issues/13"
+    }
+  ],
+  "provenance": {
+    "source": "https://github.com/JustYannicc/skills/issues/35",
+    "revision": "455541e255b5482235faa65a82bffc2b21415b94",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "approval": {
+    "required": true,
+    "status": "pending",
+    "result_revision": "fixture-revision-1"
+  },
+  "narrative": "# System Record fixture\n\nThe decision owner must review the [adapter-neutral contract](../../docs/UNIVERSAL_WORK_CONTRACT.md) before any external effect.\n\n<!-- rationale-comment: preserve this human note -->\n\n## Rationale\n\nKeep narrative meaning, trade-offs, and recovery guidance readable without Git, a parser, or an LLM. A malformed action envelope blocks effects while this rationale remains recoverable.\n"
+}
