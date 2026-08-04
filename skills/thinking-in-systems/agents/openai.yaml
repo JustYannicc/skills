@@ -1,6 +1,5 @@
 interface:
   display_name: "Thinking in Systems"
   short_description: "Apply governing systems principles at judgment seams"
-  default_prompt: "Apply Thinking in Systems proportionately and return the governing constraints without taking over Workflow."
 policy:
   allow_implicit_invocation: true

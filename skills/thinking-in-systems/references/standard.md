@@ -1,7 +1,7 @@
 ---
 title: Thinking in Systems — Complete System-Design Governance Standard
-revision: 2026-08-01 v1.0
-status: Design Complete — approved by the operator on 2026-08-01
+revision: 2026-08-04 issue-12-review-candidate
+status: Human review required
 owner: JustYannicc
 governs: every agent system interaction, durable system, and material system change
 origin: Universalized from the approved S01 v1.0 governance document
@@ -9,7 +9,7 @@ origin: Universalized from the approved S01 v1.0 governance document
 
 # Thinking in Systems — Complete System-Design Governance Standard
 
-This is the complete governing reference shipped with the installed skill. It preserves the approved public-safe v1.0 standard; invocation and source lineage are recorded in [Sources and provenance](sources.md).
+This is the complete governing reference shipped with the installed skill. It preserves the approved public-safe v1.0 method and applies the later suite ownership boundary; invocation and source lineage are recorded in [Sources and provenance](sources.md). The candidate is not final until the maintainer explicitly approves issue #12.
 
 ## 0. Provenance and universalization boundary
 
@@ -364,7 +364,7 @@ The exact knowledge structure, source direction, schema tooling, runtime ledger,
 
 ### System catalog, discovery, and reusable template
 
-The canonical reusable record is the [System-Design Template](../templates/system-record.md). Its mandatory core is the System Record defined above; conditional fields expand only when a consumer or material risk requires them.
+The canonical reusable record is the [System-Design Template](system-record-template.md). Its mandatory core is the System Record defined above; conditional fields expand only when a consumer or material risk requires them.
 
 Every accepted system publishes a catalog entry with:
 

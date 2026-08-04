@@ -14,11 +14,11 @@ This skill owns governing knowledge. Workflow owns phase selection, coordination
 
 ## Apply the governing lens
 
-1. Classify the interaction as a bounded direct operation, an instance of an accepted contract, a new durable system, a material change, or recovery/remediation. The branch and persistence need are explicit.
-2. Establish the door: preserve the original request, identify intent and accepted outcome, set the good-enough threshold and boundary, separate facts from assumptions and unknowns, and expose authority and proof. Ask only the smallest question that distinguishes materially different interpretations.
-3. Inspect the seams relevant to the branch: actors, authoritative state, inputs and outputs, handoffs, incentives, friction, environment, permissions, effects, evidence, degraded behavior, recovery, and affected legacy state.
-4. Apply the relevant standard clauses at every material judgment. Record which clause changed or constrained the result; do not reproduce the standard as a new local authority.
-5. Return the governing result: accepted interpretation, applicable invariants, unresolved gaps, permitted authority, proof obligations, and change/legacy consequences. The result is complete when the caller can proceed or pause without inventing a material rule and this skill owns no phase result.
+1. Classify the interaction as a bounded direct operation, an instance of an accepted contract, a new durable system, a material change, or recovery/remediation. This is complete when the branch and persistence need are explicit.
+2. Establish the door: preserve the original request, identify intent and accepted outcome, set the good-enough threshold and boundary, separate facts from assumptions and unknowns, and expose authority and proof. This is complete when materially different interpretations cannot change the authorized result; otherwise return the smallest discriminating question as a gap.
+3. Inspect the seams relevant to the branch: actors, authoritative state, inputs and outputs, handoffs, incentives, friction, environment, permissions, effects, evidence, degraded behavior, recovery, and affected legacy state. This is complete when every material seam has a governing rule or a visible unresolved gap.
+4. Apply the relevant standard clauses at every material judgment. This is complete when each governing constraint names the clause and evidence that supports it without creating a second authority.
+5. Return the governing result: accepted interpretation, applicable invariants, unresolved gaps, permitted authority, proof obligations, and change/legacy consequences. This is complete when the caller can proceed or pause without inventing a material rule.
 
 ## Scale the branch
 
@@ -26,7 +26,7 @@ For a bounded, reversible operation with obvious proof, keep the execution contr
 
 For an accepted-contract instance, bind the governing contract and version, surface material assumptions and authority, apply the relevant clauses, and return evidence to the caller.
 
-For a new durable system, material change, or recovery/remediation case, read the applicable standard sections below before returning the governance assessment. Read the [complete approved standard](references/standard.md) only for whole-design conformance, Design Complete judgment, or a cross-cutting risk that cannot be evaluated from the narrower sections. Use the [System Record template](templates/system-record.md) only when the caller is creating or changing a durable contract; conditional fields earn inclusion through a named consumer or material risk.
+For a new durable system, material change, or recovery/remediation case, read the applicable standard sections below before returning the governance assessment. Read the [complete approved standard](references/standard.md) only for whole-design conformance, Design Complete judgment, or a cross-cutting risk that cannot be evaluated from the narrower sections. Use the [System Record template](references/system-record-template.md) only when the caller is creating or changing a durable contract; conditional fields earn inclusion through a named consumer or material risk.
 
 When a needed companion capability is unavailable, apply this method directly where its governing contract remains satisfiable. Otherwise identify the missing capability, preserved state, allowed safe work, and exact resumption condition. Never imply that a companion ran.
 
@@ -51,18 +51,7 @@ When a needed companion capability is unavailable, apply this method directly wh
 - For local source-of-truth policy and standard-level acceptance cases, read [sections 13–14](references/standard.md#13-local-source-of-truth-policy-boundary).
 - For evidence classes, provenance, and accepted decisions, read [sections 15–16](references/standard.md#15-evidence-used) and [source provenance](references/sources.md).
 
-The reference is complete and authoritative inside the installed skill. Read only the applicable sections for a lightweight branch; read it completely before judging a durable design as materially specified.
-
-## Governing invariants
-
-- Treat the requested tool or artifact as a proposed means until intent, outcome, scope, and a good-enough threshold support it. Compare doing nothing, waiting, environment or process change, configuration, maintained solutions, and custom work proportionately.
-- Treat people, agents, tools, information, rules, state, and environment as system material. Make each handoff's input, output, authority, timing, failure behavior, and proof unambiguous.
-- Align incentives and low-energy friction with the outcome. Replace avoidable repeated remembering, noticing, checking, caring, or willpower with visible defaults, deterministic triggers, preserved state, bounded automation, and exception-based attention.
-- Keep model judgment bounded to interpretation, synthesis, classification, and composition. Put clocks, durable state, schemas, approvals, retries, invariants, reconciliation, and effects behind deterministic mechanisms where available.
-- Design Normal, Degraded, Paused, and Recovery behavior where applicable. Preserve originals and inspectable state, prevent cascades, support a month without attention, and restore a verified healthy baseline without backlog punishment.
-- Prove the outcome at a human-visible seam. Measure outcome, operation, and burden or harm separately; prefer low-burden quantitative evidence when valid and retain qualitative evidence for meaning and exceptions.
-- Treat failure empathetically as evidence about fit, incentives, information, environment, capability, interfaces, or authority before blame. Correct the governing cause and replay the affected failure class.
-- Treat every material rule, interface, schema, scope, or expectation change as legacy work: discover affected state, classify coverage and conflicts, simulate adaptation, preserve history, and define rollback and retirement.
+The installed reference is the complete current authority. A lightweight branch loads only the sections named by its material judgment.
 
 ## Informed exceptions
 

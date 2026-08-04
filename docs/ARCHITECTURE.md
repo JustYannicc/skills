@@ -4,11 +4,12 @@
 
 Build a public suite of predictable, universal agent skills. Each skill owns one job; Thinking in Systems supplies the shared systems thesis without absorbing every planning, research, clarification, prototyping, or handoff workflow.
 
-No skill is implemented or publishable yet. The validation foundation is
-implemented so each skill can be added against the same deterministic and
-behavioral proof boundary.
+Thinking in Systems is implemented as a human-review-required candidate and is
+not final or publishable until the maintainer explicitly approves issue #12.
+The validation foundation checks it against the same deterministic and
+behavioral proof boundary required for every later skill.
 
-The complete universal method is owned by [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md). [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation, not a substitute. The accepted jobs and source strategy are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md). Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). The complete public-safe skill design and evidence used to produce the method are retained in the [`source` archive](source/README.md); private originals are represented by fingerprints and do not override the universalized public authority.
+The complete current method is owned by the Thinking in Systems [governing standard](../skills/thinking-in-systems/references/standard.md). [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md) is its stable source-archive pointer, and [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation; neither substitutes for the complete reference. The accepted jobs and source strategy are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md). Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). The complete public-safe skill design and evidence used to produce the method are retained in the [`source` archive](source/README.md); private originals are represented by fingerprints and do not override the universalized public authority.
 
 Automatic entry, proportional phase selection, migration, resumption, effects,
 and completion are owned by the [`Workflow routing contract`](WORKFLOW_ROUTING.md).

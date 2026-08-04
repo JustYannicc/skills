@@ -4,8 +4,8 @@ This directory preserves the public-safe material needed to author and audit the
 
 ## Read order
 
-1. [`THINKING_IN_SYSTEMS_STANDARD.md`](THINKING_IN_SYSTEMS_STANDARD.md) — complete universalized method and current public authority.
-2. [`SYSTEM_DESIGN_TEMPLATE.md`](SYSTEM_DESIGN_TEMPLATE.md) — reusable universal design template.
+1. [`THINKING_IN_SYSTEMS_STANDARD.md`](THINKING_IN_SYSTEMS_STANDARD.md) — stable pointer to the complete installed review candidate and its approved historical baseline.
+2. [`SYSTEM_DESIGN_TEMPLATE.md`](SYSTEM_DESIGN_TEMPLATE.md) — stable pointer to the reusable universal design template.
 3. [`THINKING_IN_SYSTEMS_SKILL_DESIGN.md`](THINKING_IN_SYSTEMS_SKILL_DESIGN.md) — full repository, distribution, suite, setup, and authoring design.
 4. [`../requirements/REQUIREMENTS_LEDGER.md`](../requirements/REQUIREMENTS_LEDGER.md) — every operative skill-suite requirement and its durable owner.
 5. [`research/`](research/) — public-safe evidence reports supporting the method and distribution design.

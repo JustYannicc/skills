@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: thinking-in-systems-negative
-title: Nearby systems concept stays a lightweight explanation
+title: Nearby request applies the lens without coordination takeover
 shape: negative
 kind: invocation
 skill: thinking-in-systems
@@ -15,14 +15,13 @@ environment:
     persistence: false
   tools: []
 expected:
-  actions: [apply the proportional entry check, explain the concept in one paragraph]
+  actions: [apply systems thinking proportionately, explain the concept in one paragraph]
   artifacts: []
   effects: [answer returned]
   invoked: [thinking-in-systems]
-  notInvoked: [durable system design, migration, specialist phase]
+  notInvoked: [workflow coordination, durable system design, migration]
   proof: [answer checked against the requested explanation]
-  responsibility: [Workflow retains answer quality]
+  responsibility: [no parent coordination created]
   route: [lightweight-governance]
   state: [complete]
-  forbidden: [turn the explanation into coordination or durable paperwork]
-
+  forbidden: [take over Workflow or add durable ceremony or an extra operation]
