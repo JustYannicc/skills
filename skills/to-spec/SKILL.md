@@ -90,8 +90,9 @@ Use the uncertainty, not the topic, to select the next discovery capability:
 | An empirical design question | `'prototype'` skill |
 
 Use the contract's **Discovery return contract** for every gap: preserve the
-missing fact or decision, impact, selected capability, smallest question or
-evidence request, responsible owner and Approver, and exact resumption action.
+missing fact or decision, impact and whether it blocks acceptance, selected
+capability, smallest question or evidence request, responsible owner and
+Approver, and exact resumption action.
 Return the route to the active `'Workflow'` context or direct caller. `'Workflow'`
 may invoke a companion only when that host confirms the capability. Otherwise
 enter visible Degraded mode and
