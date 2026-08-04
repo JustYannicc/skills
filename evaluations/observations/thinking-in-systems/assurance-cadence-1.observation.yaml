@@ -1,0 +1,40 @@
+schemaVersion: 1
+fixtureId: thinking-in-systems-assurance-cadence
+attempt: 1
+contextId: fresh-thinking-in-systems-assurance-cadence-1
+suiteRevision: git:8aa0935bc9649d3a59f17496d902af5c95f5104e
+evaluator: gpt-5.6-terra-fresh-context-full-standard
+recordedAt: 2026-08-04T16:10:54.000Z
+environment:
+  id: active-workflow-after-live-pilot
+  capabilities: { workflow: true, persistence: true }
+  tools: []
+observed:
+  actions: [reject one successful verification as final assurance, define an Assurance cadence with initial and repeated post-activation verification validation burden-harm and sustainment checks after their relevant evidence delays, define material event triggers for recheck, state what stable evidence permits transition to steady operation, keep continuous monitoring only for cheap actionable signals with threshold owner next action and retirement condition, taper higher-burden review when another check is unlikely to change the decision enough to justify its burden, return ongoing coordination to the Workflow skill]
+  artifacts: [post-activation assurance assessment]
+  effects: []
+  forbiddenChecks:
+    - criterion: declare the System settled from one successful check
+      evidence: The assessment rejects one verification as final assurance and requires repeated evidence across distinct claims.
+      observed: false
+    - criterion: impose a fixed universal time interval
+      evidence: The cadence follows each mechanism's relevant evidence delay and material event triggers.
+      observed: false
+    - criterion: monitor merely because data exists
+      evidence: Continuous signals require a named decision threshold owner next action and retirement condition.
+      observed: false
+    - criterion: let continuous telemetry substitute for Outcome or harm validation
+      evidence: The assessment explicitly separates operational monitoring from later Outcome burden harm meaning and sustainment validation.
+      observed: false
+    - criterion: take over Workflow coordination
+      evidence: The assessment returns coordination to the Workflow skill and sustainment responsibility to the System owner.
+      observed: false
+  invoked: [thinking-in-systems]
+  notInvoked: [Workflow phase execution, ownerless monitoring]
+  proof: [the assessment distinguishes immediate operation evidence from later Outcome burden harm and sustainment evidence and gives explicit taper continuous-monitoring and recheck rules]
+  responsibility: [the System owner retains sustainment responsibility, the Workflow skill retains coordination]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+rawEvidence:
+  locator: evaluations/evidence/thinking-in-systems/assurance-cadence-1.txt
+  sha256: b0a8f72be789aee0da98532644e1f69bc6540e8c5ef5b41ddb71a3c852280ece

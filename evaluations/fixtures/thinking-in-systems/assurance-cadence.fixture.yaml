@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-assurance-cadence
+title: Post-activation assurance tapers only after stable evidence
+shape: direct
+kind: invocation
+skill: thinking-in-systems
+domains: [organizational, technical]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow has activated a new maintained System after a bounded live pilot and one successful verification. Operational health signals are cheap and available continuously, meaningful Outcome evidence arrives later, and collecting burden or harm evidence requires occasional human effort. The owner asks whether the System can now be treated as settled. Apply Thinking in Systems before the same agent coordinates ongoing operation.
+environment:
+  id: active-workflow-after-live-pilot
+  capabilities:
+    workflow: true
+    persistence: true
+  tools: []
+expected:
+  actions: [reject one successful verification as final assurance, define an Assurance cadence with initial and repeated post-activation verification validation burden-harm and sustainment checks after their relevant evidence delays, define material event triggers for recheck, state what stable evidence permits transition to steady operation, keep continuous monitoring only for cheap actionable signals with threshold owner next action and retirement condition, taper higher-burden review when another check is unlikely to change the decision enough to justify its burden, return ongoing coordination to the Workflow skill]
+  artifacts: [post-activation assurance assessment]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [Workflow phase execution, ownerless monitoring]
+  proof: [the assessment distinguishes immediate operation evidence from later Outcome burden harm and sustainment evidence and gives explicit taper continuous-monitoring and recheck rules]
+  responsibility: [the System owner retains sustainment responsibility, the Workflow skill retains coordination]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+  forbidden: [declare the System settled from one successful check, impose a fixed universal time interval, monitor merely because data exists, let continuous telemetry substitute for Outcome or harm validation, take over Workflow coordination]
