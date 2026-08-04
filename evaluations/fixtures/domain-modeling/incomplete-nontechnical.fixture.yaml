@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: domain-modeling-incomplete-nontechnical
+title: Incomplete nontechnical terminology request asks one discriminating question
+shape: incomplete
+kind: invocation
+domains: [nontechnical]
+severity: Major
+requiredAttempts: 1
+prompt: Clarify what urgent means for a team policy, but no owner, deadline, affected group, or examples are supplied.
+environment:
+  id: adapter-missing-source
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+  tools: [selected Adapter]
+expected:
+  actions: [preserve the terminology request, identify the missing scope or source, ask one discriminating question]
+  artifacts: [visible unresolved terminology entry]
+  effects: []
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [policy decision, scheduling, execution]
+  proof: [missing source recorded, exact next question returned]
+  responsibility: [workflow retains responsibility while terminology is unresolved]
+  route: [ask-one-discriminating-question]
+  state: [terminology-unresolved]
+  forbidden: [invent an urgent threshold or policy]

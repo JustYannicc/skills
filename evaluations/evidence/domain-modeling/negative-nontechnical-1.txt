@@ -1,0 +1,5 @@
+fixture: domain-modeling-negative-nontechnical
+attempt: 1
+context: fresh-domain-negative-nontechnical-1
+result: Workflow drafted the clear dinner-invitation decline inline and did not invoke Domain Modeling.
+boundary: No terminology conflict, glossary update, or send effect was invented.

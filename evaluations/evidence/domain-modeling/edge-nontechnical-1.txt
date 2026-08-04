@@ -1,0 +1,5 @@
+fixture: domain-modeling-edge-nontechnical
+attempt: 1
+context: fresh-domain-edge-nontechnical-1
+result: Physical safety and guardian authorization remained separate meanings of safe. The selected Adapter was unavailable, so the result was explicitly non-durable and returned the authority question.
+boundary: No policy approval, pickup action, or canonical write was claimed.

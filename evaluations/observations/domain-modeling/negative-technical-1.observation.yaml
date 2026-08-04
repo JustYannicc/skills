@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-negative-technical
+attempt: 1
+contextId: fresh-domain-negative-technical-1
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: conversation-with-implementation
+  capabilities: { persistence: false, implementation: true }
+  tools: [code editor, test runner]
+observed:
+  actions: [classify the request as implementation, route to the execution capability]
+  artifacts: [implementation result for Review]
+  effects: []
+  forbiddenChecks:
+    - criterion: create a glossary or architectural decision for a null-pointer fix
+      evidence: Existing terminology remained unchanged.
+      observed: false
+  invoked: [thinking-in-systems, workflow, implement]
+  notInvoked: [domain-modeling, glossary update]
+  proof: [terms remain unchanged, implementation result submitted]
+  responsibility: [workflow retains parent responsibility, implement owns the bounded result]
+  route: [workflow-to-implement]
+  state: [ready-for-review]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/negative-technical-1.txt
+  sha256: f36d246d58bb4b82dc62b59117d9b062048e288a4fd51a9a31d40f731a135358

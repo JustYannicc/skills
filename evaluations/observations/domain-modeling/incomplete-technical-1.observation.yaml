@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-incomplete-technical
+attempt: 1
+contextId: fresh-domain-incomplete-technical-1
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: adapter-missing-source
+  capabilities: { persistence: true, conditionalWrite: true }
+  tools: [selected Adapter]
+observed:
+  actions: [preserve the terminology request, identify the missing scope or source, ask one discriminating question]
+  artifacts: [visible unresolved terminology entry]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent an active-session definition
+      evidence: The entry stayed unresolved pending a source and lifecycle boundary.
+      observed: false
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [architecture decision, code change, research]
+  proof: [missing source recorded, exact next question returned]
+  responsibility: [workflow retains responsibility while terminology is unresolved]
+  route: [ask-one-discriminating-question]
+  state: [terminology-unresolved]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/incomplete-technical-1.txt
+  sha256: f73e3d1c381755a0c1e5b4aa2d7e529b1a825a72f449b645d51d96ee2565e0ae

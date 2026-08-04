@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-edge-technical
+attempt: 3
+contextId: fresh-domain-edge-technical-3
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: adapter-stale-revision
+  capabilities: { persistence: true, conditionalWrite: true, batchWrite: false }
+  tools: [selected Adapter, API and process artifacts]
+observed:
+  actions: [surface the conflicting meanings, preserve both contexts, report stale revision, ask the authority question]
+  artifacts: [conflict and recovery evidence]
+  effects: []
+  forbiddenChecks:
+    - criterion: overwrite the canonical language record after a stale revision
+      evidence: The Adapter rejected the stale write and retained both candidates.
+      observed: false
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [code edit, architecture decision, forced overwrite]
+  proof: [stale revision bound, both meanings retained, recovery next check]
+  responsibility: [workflow retains parent responsibility]
+  route: [terminology-conflict-recovery]
+  state: [terminology-conflicted]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/edge-technical-3.txt
+  sha256: ca97bd77ea710477dd0711e14adf53ad49f38764c178435c7fa73775dc76d820

@@ -1,0 +1,5 @@
+fixture: domain-modeling-edge-technical
+attempt: 2
+context: fresh-domain-edge-technical-2
+result: Whole-purchase Order and partial-cancellation Order meanings, plus the two Account meanings, were retained as separate conflicts. The selected Adapter rejected the stale revision and returned recovery evidence.
+boundary: No code edit, architecture decision, or overwrite occurred.

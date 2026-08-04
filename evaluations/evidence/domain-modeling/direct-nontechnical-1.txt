@@ -1,0 +1,5 @@
+fixture: domain-modeling-direct-nontechnical
+attempt: 1
+context: fresh-domain-direct-nontechnical-1
+result: Appointment is a scheduled commitment with a time; Event is a calendar occurrence; Commitment is a promise that may have no calendar slot. Alias and near-miss boundaries were recorded through the selected Adapter.
+boundary: an unscheduled promise is not automatically an Appointment; no schedule or policy action was taken.

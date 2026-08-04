@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: domain-modeling-indirect-nontechnical
+title: Workflow routes a nontechnical terminology blocker
+shape: indirect
+kind: routing
+domains: [nontechnical]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is preparing a volunteer meal service, but organizers use shift, slot, and availability inconsistently. Resolve terminology before assignment.
+environment:
+  id: adapter-baseline
+  capabilities:
+    persistence: true
+    conditionalWrite: false
+    delegation: true
+  tools: [selected Adapter, volunteer notes and forms]
+expected:
+  actions: [classify the blocker as terminology, route to domain-modeling, return bounded terminology evidence]
+  artifacts: [language result for Workflow]
+  effects: []
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [schedule assignment, policy decision, execution]
+  proof: [terminology result returned before assignment]
+  responsibility: [workflow integrates the result, domain-modeling owns the bounded language result]
+  route: [workflow-to-domain-modeling]
+  state: [ready-for-assignment-or-discovery]
+  forbidden: [assign volunteers while the terminology blocker remains]

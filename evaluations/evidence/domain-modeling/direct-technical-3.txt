@@ -1,0 +1,5 @@
+fixture: domain-modeling-direct-technical
+attempt: 3
+context: fresh-domain-direct-technical-3
+result: Account is the billing relationship; User is an authenticated actor; Customer is the paying party. Existing aliases and conflicts were recorded through the selected Adapter with the read revision.
+boundary: partial cancellation and an unauthenticated User remain near-miss scenarios; no architecture or implementation decision was made.

@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-edge-nontechnical
+attempt: 3
+contextId: fresh-domain-edge-nontechnical-3
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: adapter-unavailable
+  capabilities: { persistence: false, conditionalWrite: false, handoff: true }
+  tools: [conversation]
+observed:
+  actions: [preserve both meanings, report the Adapter capability gap, ask the authority question]
+  artifacts: [non-durable conflict result and capability gap]
+  effects: []
+  forbiddenChecks:
+    - criterion: claim the canonical language record was updated
+      evidence: The result explicitly stated that it was non-durable.
+      observed: false
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [policy approval, pickup action, canonical Adapter write]
+  proof: [both meanings retained, missing capability recorded, exact next question]
+  responsibility: [workflow retains parent responsibility]
+  route: [degraded-terminology-conflict]
+  state: [terminology-conflicted-and-non-durable]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/edge-nontechnical-3.txt
+  sha256: ff7c2158753b82bbb4df3d5b7b641eb893d85154920aa45bc88e040092fe4d93

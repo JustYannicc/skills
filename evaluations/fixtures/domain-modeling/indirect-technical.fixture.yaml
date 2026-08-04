@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: domain-modeling-indirect-technical
+title: Workflow routes a technical terminology blocker
+shape: indirect
+kind: routing
+domains: [technical]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is specifying service notifications, but recipient, subscriber, and contact are used inconsistently. Resolve terminology before Specification.
+environment:
+  id: adapter-baseline
+  capabilities:
+    persistence: true
+    conditionalWrite: false
+    delegation: true
+  tools: [selected Adapter, notification artifacts]
+expected:
+  actions: [classify the blocker as terminology, route to domain-modeling, return bounded terminology evidence]
+  artifacts: [language result for Workflow]
+  effects: []
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [to-spec, to-tickets, implement]
+  proof: [terminology result returned before Specification]
+  responsibility: [workflow integrates the result, domain-modeling owns the bounded language result]
+  route: [workflow-to-domain-modeling]
+  state: [ready-for-specification-or-discovery]
+  forbidden: [start Specification while the terminology blocker remains]

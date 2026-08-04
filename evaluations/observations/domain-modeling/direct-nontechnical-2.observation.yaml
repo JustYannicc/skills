@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-direct-nontechnical
+attempt: 2
+contextId: fresh-domain-direct-nontechnical-2
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: adapter-with-conditional-write
+  capabilities: { persistence: true, conditionalWrite: true, batchWrite: true }
+  tools: [selected Adapter, calendar notes and conversations]
+observed:
+  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
+  artifacts: [language entry with aliases or conflicts]
+  effects: [shared nontechnical language available to Workflow]
+  forbiddenChecks:
+    - criterion: silently treat appointment, event, and commitment as identical
+      evidence: The near-miss and exclusions were recorded.
+      observed: false
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [schedule change, policy decision, execution]
+  proof: [source revision guard, near-miss scenario, Adapter result revision]
+  responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
+  route: [workflow-to-domain-modeling]
+  state: [terminology-resolved-or-conflict-visible]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/direct-nontechnical-2.txt
+  sha256: 55ca6c53a20c7379e7e8966f6bb323dd9cd40e7ab106ddfe1d676fa91d405c8d

@@ -1,0 +1,5 @@
+fixture: domain-modeling-negative-technical
+attempt: 1
+context: fresh-domain-negative-technical-1
+result: Workflow routed the null-pointer fix to implementation; existing terminology remained untouched and the result was submitted for Review.
+boundary: Domain Modeling was not invoked and no glossary or architecture decision was created.

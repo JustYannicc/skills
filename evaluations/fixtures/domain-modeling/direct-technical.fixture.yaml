@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: domain-modeling-direct-technical
+title: Direct technical terminology request records a shared language
+shape: direct
+kind: invocation
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: Service docs, an API schema, and a data model use Account, User, and Customer interchangeably. Establish the operative labels, aliases, and conflicts before the next change.
+environment:
+  id: adapter-with-conditional-write
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    batchWrite: true
+  tools: [selected Adapter, authoritative service artifacts]
+expected:
+  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
+  artifacts: [language entry with aliases or conflicts]
+  effects: [shared technical language available to Workflow]
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [architecture decision, research, implementation]
+  proof: [source revision guard, scenario distinction, Adapter result revision]
+  responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
+  route: [workflow-to-domain-modeling]
+  state: [terminology-resolved-or-conflict-visible]
+  forbidden: ["silently collapse Account, User, and Customer"]

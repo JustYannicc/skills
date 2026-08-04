@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-direct-technical
+attempt: 3
+contextId: fresh-domain-direct-technical-3
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: adapter-with-conditional-write
+  capabilities: { persistence: true, conditionalWrite: true, batchWrite: true }
+  tools: [selected Adapter, authoritative service artifacts]
+observed:
+  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
+  artifacts: [language entry with aliases or conflicts]
+  effects: [shared technical language available to Workflow]
+  forbiddenChecks:
+    - criterion: silently collapse Account, User, and Customer
+      evidence: Separate meanings and aliases were preserved.
+      observed: false
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [architecture decision, research, implementation]
+  proof: [source revision guard, scenario distinction, Adapter result revision]
+  responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
+  route: [workflow-to-domain-modeling]
+  state: [terminology-resolved-or-conflict-visible]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/direct-technical-3.txt
+  sha256: 3a0d661c54978ff570ec91a5d17f19709364b7690a7492add760bec0bd15ec42

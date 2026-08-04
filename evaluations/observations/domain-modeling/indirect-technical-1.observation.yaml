@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-indirect-technical
+attempt: 1
+contextId: fresh-domain-indirect-technical-1
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: adapter-baseline
+  capabilities: { persistence: true, conditionalWrite: false, delegation: true }
+  tools: [selected Adapter, notification artifacts]
+observed:
+  actions: [classify the blocker as terminology, route to domain-modeling, return bounded terminology evidence]
+  artifacts: [language result for Workflow]
+  effects: []
+  forbiddenChecks:
+    - criterion: start Specification while the terminology blocker remains
+      evidence: Specification waited for the terminology result.
+      observed: false
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [to-spec, to-tickets, implement]
+  proof: [terminology result returned before Specification]
+  responsibility: [workflow integrates the result, domain-modeling owns the bounded language result]
+  route: [workflow-to-domain-modeling]
+  state: [ready-for-specification-or-discovery]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/indirect-technical-1.txt
+  sha256: 38defc889dbce71b48c97ad29ebc22ee29dc509f4067046ab4340d3e55acb756

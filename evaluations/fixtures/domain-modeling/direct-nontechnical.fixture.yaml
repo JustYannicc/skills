@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: domain-modeling-direct-nontechnical
+title: Direct nontechnical terminology request records a shared language
+shape: direct
+kind: invocation
+domains: [nontechnical]
+severity: Critical
+requiredAttempts: 3
+prompt: A household calendar uses appointment, event, and commitment interchangeably. Establish canonical labels, aliases, exclusions, and one near-miss without changing the schedule.
+environment:
+  id: adapter-with-conditional-write
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    batchWrite: true
+  tools: [selected Adapter, calendar notes and conversations]
+expected:
+  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
+  artifacts: [language entry with aliases or conflicts]
+  effects: [shared nontechnical language available to Workflow]
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [schedule change, policy decision, execution]
+  proof: [source revision guard, near-miss scenario, Adapter result revision]
+  responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
+  route: [workflow-to-domain-modeling]
+  state: [terminology-resolved-or-conflict-visible]
+  forbidden: ["silently treat appointment, event, and commitment as identical"]

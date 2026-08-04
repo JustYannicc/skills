@@ -1,0 +1,5 @@
+fixture: domain-modeling-indirect-nontechnical
+attempt: 1
+context: fresh-domain-indirect-nontechnical-1
+result: Workflow classified shift, slot, and availability as a terminology blocker and received the bounded language result before assignment.
+boundary: no schedule assignment or policy decision was made.

@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: domain-modeling-negative-nontechnical
+title: Clear nontechnical communication work does not invoke terminology modeling
+shape: negative
+kind: invocation
+domains: [nontechnical]
+severity: Major
+requiredAttempts: 1
+prompt: Draft a kind decline to a dinner invitation; the language and intent are clear.
+environment:
+  id: conversation-only
+  capabilities:
+    persistence: false
+    communication: true
+  tools: []
+expected:
+  actions: [classify the request as communication, draft the requested response]
+  artifacts: [draft response]
+  effects: [draft returned without sending]
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [domain-modeling, glossary update]
+  proof: [draft checked against the clear request]
+  responsibility: [workflow owns the bounded response]
+  route: [inline-communication]
+  state: [complete]
+  forbidden: [invent a terminology conflict]

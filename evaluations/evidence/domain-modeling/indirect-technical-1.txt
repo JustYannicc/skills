@@ -1,0 +1,5 @@
+fixture: domain-modeling-indirect-technical
+attempt: 1
+context: fresh-domain-indirect-technical-1
+result: Workflow classified recipient, subscriber, and contact as a terminology blocker and received the bounded language result before Specification.
+boundary: no Specification, Ticket, or implementation was started.

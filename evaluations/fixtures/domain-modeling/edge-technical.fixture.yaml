@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: domain-modeling-edge-technical
+title: Conflicting technical contexts and stale Adapter revision remain visible
+shape: edge
+kind: routing
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: The glossary says Order means a whole purchase, but an API and process support partial cancellation; two contexts also use Account differently. The selected Adapter reports a stale language-record revision.
+environment:
+  id: adapter-stale-revision
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    batchWrite: false
+  tools: [selected Adapter, API and process artifacts]
+expected:
+  actions: [surface the conflicting meanings, preserve both contexts, report stale revision, ask the authority question]
+  artifacts: [conflict and recovery evidence]
+  effects: []
+  invoked: [thinking-in-systems, workflow, domain-modeling]
+  notInvoked: [code edit, architecture decision, forced overwrite]
+  proof: [stale revision bound, both meanings retained, recovery next check]
+  responsibility: [workflow retains parent responsibility]
+  route: [terminology-conflict-recovery]
+  state: [terminology-conflicted]
+  forbidden: [overwrite the canonical language record after a stale revision]

@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: domain-modeling-negative-technical
+title: Technical implementation work does not invoke terminology modeling
+shape: negative
+kind: invocation
+domains: [technical]
+severity: Major
+requiredAttempts: 1
+prompt: Fix a null-pointer in the authentication endpoint; the terms are already defined.
+environment:
+  id: conversation-with-implementation
+  capabilities:
+    persistence: false
+    implementation: true
+  tools: [code editor, test runner]
+expected:
+  actions: [classify the request as implementation, route to the execution capability]
+  artifacts: [implementation result for Review]
+  effects: []
+  invoked: [thinking-in-systems, workflow, implement]
+  notInvoked: [domain-modeling, glossary update]
+  proof: [terms remain unchanged, implementation result submitted]
+  responsibility: [workflow retains parent responsibility, implement owns the bounded result]
+  route: [workflow-to-implement]
+  state: [ready-for-review]
+  forbidden: [create a glossary or architectural decision for a null-pointer fix]

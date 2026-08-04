@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: domain-modeling-negative-nontechnical
+attempt: 1
+contextId: fresh-domain-negative-nontechnical-1
+suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+evaluator: issue-16-fresh-context
+recordedAt: 2026-08-04T20:35:00.000Z
+environment:
+  id: conversation-only
+  capabilities: { persistence: false, communication: true }
+  tools: []
+observed:
+  actions: [classify the request as communication, draft the requested response]
+  artifacts: [draft response]
+  effects: [draft returned without sending]
+  forbiddenChecks:
+    - criterion: invent a terminology conflict
+      evidence: The clear language was used without a glossary update.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [domain-modeling, glossary update]
+  proof: [draft checked against the clear request]
+  responsibility: [workflow owns the bounded response]
+  route: [inline-communication]
+  state: [complete]
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/negative-nontechnical-1.txt
+  sha256: 2ebba4b831b99490dd33923237475533cb4dc284ef7635e04e2380225810d54b

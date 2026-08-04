@@ -1,7 +1,281 @@
 {
-  "evaluatedAt": "2026-08-04T16:10:54.000Z",
-  "fixtureSetRevision": "e0b8d14b007f00a4eee9c99d58c7db9e574be4456f6c94d75514675ffe79caac",
+  "evaluatedAt": "2026-08-04T20:35:00.000Z",
+  "fixtureSetRevision": "0b6ce7ac0da8e7e77043794ea9dbae09a13d2a253e49b8a212409f01e89a357c",
   "fixtures": [
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-domain-direct-nontechnical-1",
+        "fresh-domain-direct-nontechnical-2",
+        "fresh-domain-direct-nontechnical-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-direct-nontechnical-1",
+          "locator": "evaluations/evidence/domain-modeling/direct-nontechnical-1.txt",
+          "sha256": "cdaad4a24e4a47026640649265ce07028dbb44c87f0df266b9934e5627d0ab78"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-domain-direct-nontechnical-2",
+          "locator": "evaluations/evidence/domain-modeling/direct-nontechnical-2.txt",
+          "sha256": "55ca6c53a20c7379e7e8966f6bb323dd9cd40e7ab106ddfe1d676fa91d405c8d"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-domain-direct-nontechnical-3",
+          "locator": "evaluations/evidence/domain-modeling/direct-nontechnical-3.txt",
+          "sha256": "fdcad466595c9aab145651811698ea90f3ef72d36ae8e34fad1cf0ef00beb0c7"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-direct-nontechnical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "3c1f1d8eb00f48007bcb67379fff47c4e32df71a800013b00809508a6bebfe2d"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-domain-direct-technical-1",
+        "fresh-domain-direct-technical-2",
+        "fresh-domain-direct-technical-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-direct-technical-1",
+          "locator": "evaluations/evidence/domain-modeling/direct-technical-1.txt",
+          "sha256": "142e9849b29164002b9e0e81e7773aa5f7cd700f1c346eba2bfdb6571b072e1f"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-domain-direct-technical-2",
+          "locator": "evaluations/evidence/domain-modeling/direct-technical-2.txt",
+          "sha256": "e788814466e6b9c468f04c9b4ec5d1afeaf524d2315df0bc1492f8604deee3de"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-domain-direct-technical-3",
+          "locator": "evaluations/evidence/domain-modeling/direct-technical-3.txt",
+          "sha256": "3a0d661c54978ff570ec91a5d17f19709364b7690a7492add760bec0bd15ec42"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-direct-technical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "3b53041aa2305283299e7833c4984faee82ae81fe1732fe25a46eeb75d55985a"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-domain-edge-nontechnical-1",
+        "fresh-domain-edge-nontechnical-2",
+        "fresh-domain-edge-nontechnical-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-edge-nontechnical-1",
+          "locator": "evaluations/evidence/domain-modeling/edge-nontechnical-1.txt",
+          "sha256": "a6a6e81eeb6a19d13c49e6d69489547bd169f8f46d88e871ba70aa006b31b3f2"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-domain-edge-nontechnical-2",
+          "locator": "evaluations/evidence/domain-modeling/edge-nontechnical-2.txt",
+          "sha256": "7e8c09d878c1071858d4435802b81af08ef7ded69e88b1684aa1868a69be7bc8"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-domain-edge-nontechnical-3",
+          "locator": "evaluations/evidence/domain-modeling/edge-nontechnical-3.txt",
+          "sha256": "ff7c2158753b82bbb4df3d5b7b641eb893d85154920aa45bc88e040092fe4d93"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-edge-nontechnical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "3ec81f6faf9ec3b322d1ab64e5702f7412e4e97994619391159b405fd71b27d4"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-domain-edge-technical-1",
+        "fresh-domain-edge-technical-2",
+        "fresh-domain-edge-technical-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-edge-technical-1",
+          "locator": "evaluations/evidence/domain-modeling/edge-technical-1.txt",
+          "sha256": "0feb7d860713281274ececfb7e84100cf3d3f3ec1688fb2ae4604f72d898ed20"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-domain-edge-technical-2",
+          "locator": "evaluations/evidence/domain-modeling/edge-technical-2.txt",
+          "sha256": "e50425599b1ca9575d08c56bcbbce1a62f4552ae21c7014d4f1ca13fcfc78757"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-domain-edge-technical-3",
+          "locator": "evaluations/evidence/domain-modeling/edge-technical-3.txt",
+          "sha256": "ca97bd77ea710477dd0711e14adf53ad49f38764c178435c7fa73775dc76d820"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-edge-technical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "91650bc532b1435acd716d077831c9991832524ad37b664b4d058953d3902848"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-domain-incomplete-nontechnical-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-incomplete-nontechnical-1",
+          "locator": "evaluations/evidence/domain-modeling/incomplete-nontechnical-1.txt",
+          "sha256": "5dfb9df6b31e2ace258d543cce43ca8f756458b3b7d38f059daa376f2aa394ac"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-incomplete-nontechnical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "9871ba89b7890cb6cf6cd0194660ed71919ed0094e29d7938e092024384e0ac4"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-domain-incomplete-technical-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-incomplete-technical-1",
+          "locator": "evaluations/evidence/domain-modeling/incomplete-technical-1.txt",
+          "sha256": "f73e3d1c381755a0c1e5b4aa2d7e529b1a825a72f449b645d51d96ee2565e0ae"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-incomplete-technical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "7d4d0cfc1491957025be41ba5c71d9af787751f38e6cb7320985dcde747090c8"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-domain-indirect-nontechnical-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-indirect-nontechnical-1",
+          "locator": "evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt",
+          "sha256": "3f4ac2a6cef358e67500e41fe5c21186e9f9f68730bbc32aba1ae15fac085f12"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-indirect-nontechnical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "082103b9b05242706ebe50728ea656e56e9b59828e422b50626147b15af65cb7"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-domain-indirect-technical-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-indirect-technical-1",
+          "locator": "evaluations/evidence/domain-modeling/indirect-technical-1.txt",
+          "sha256": "38defc889dbce71b48c97ad29ebc22ee29dc509f4067046ab4340d3e55acb756"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-indirect-technical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "8f713e4565ba1792aa2737431974d57371ad70fb43696bf0651da460ee894040"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-domain-negative-nontechnical-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-negative-nontechnical-1",
+          "locator": "evaluations/evidence/domain-modeling/negative-nontechnical-1.txt",
+          "sha256": "2ebba4b831b99490dd33923237475533cb4dc284ef7635e04e2380225810d54b"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-negative-nontechnical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "ad4e4b59b699dbccfc13daa807f0f11bf25e10555322c5020aa1a87562ee9064"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-domain-negative-technical-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-domain-negative-technical-1",
+          "locator": "evaluations/evidence/domain-modeling/negative-technical-1.txt",
+          "sha256": "f36d246d58bb4b82dc62b59117d9b062048e288a4fd51a9a31d40f731a135358"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "domain-modeling-negative-technical",
+      "status": "passed",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
+      "fixtureRevision": "df1a541abc475e409cdefe8bd164050ef3aac6b5a48353b2de8f115ba25d9fbb"
+    },
     {
       "attempts": [
         1,
@@ -36,7 +310,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -73,7 +347,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -94,7 +368,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -115,7 +389,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -136,7 +410,7 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
     },
     {
@@ -157,7 +431,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -178,7 +452,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -215,7 +489,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -252,7 +526,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -273,7 +547,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -294,7 +568,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -315,7 +589,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -336,7 +610,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -357,7 +631,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -378,7 +652,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -399,7 +673,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -420,7 +694,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -441,12 +715,12 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+  "suiteRevision": "git:8d04a35fa74ffaf91baa6c265560550e911dcd3a",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -455,7 +729,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 18,
-    "passed": 18
+    "fixtures": 28,
+    "passed": 28
   }
 }
