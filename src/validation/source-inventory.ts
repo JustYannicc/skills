@@ -47,10 +47,10 @@ export const sourceInventorySchema = z
 export type SourceInventory = z.infer<typeof sourceInventorySchema>;
 export type SourceRecord = SourceInventory["sources"][number];
 export type SourceVerifier = (source: SourceRecord) => Promise<boolean>;
-export type SourceTargetVerifier = (
+export type SourceTargetLoader = (
   source: SourceRecord,
   target: string
-) => Promise<boolean>;
+) => Promise<Buffer | null>;
 
 export const loadSourceInventory = async (
   root: string
@@ -74,34 +74,40 @@ export const verifyPinnedSource: SourceVerifier = async (source) => {
   }
 };
 
-export const verifyPinnedTarget: SourceTargetVerifier = async (
-  source,
-  target
-) => {
+const pinnedTargetUrl = (
+  source: SourceRecord,
+  target: string
+): string | null => {
+  const repository = new URL(source.url);
+  if (repository.hostname !== "github.com") {
+    return null;
+  }
+  const [owner, rawName, ...remainder] = repository.pathname
+    .split("/")
+    .filter(Boolean);
+  if (!(owner && rawName) || remainder.length > 0) {
+    return null;
+  }
+  const name = rawName.replace(/\.git$/u, "");
+  const encodedTarget = target
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+  return `https://raw.githubusercontent.com/${encodeURIComponent(owner)}/${encodeURIComponent(name)}/${source.revision}/${encodedTarget}`;
+};
+
+export const loadPinnedTarget: SourceTargetLoader = async (source, target) => {
   try {
-    const repository = new URL(source.url);
-    if (repository.hostname !== "github.com") {
-      return false;
+    const targetUrl = pinnedTargetUrl(source, target);
+    if (!targetUrl) {
+      return null;
     }
-    const [owner, rawName, ...remainder] = repository.pathname
-      .split("/")
-      .filter(Boolean);
-    if (!(owner && rawName) || remainder.length > 0) {
-      return false;
-    }
-    const name = rawName.replace(/\.git$/u, "");
-    const encodedTarget = target
-      .split("/")
-      .map((segment) => encodeURIComponent(segment))
-      .join("/");
-    const targetUrl = `https://raw.githubusercontent.com/${encodeURIComponent(owner)}/${encodeURIComponent(name)}/${source.revision}/${encodedTarget}`;
     const response = await fetch(targetUrl, {
-      method: "HEAD",
       redirect: "follow",
       signal: AbortSignal.timeout(10_000),
     });
-    return response.ok;
+    return response.ok ? Buffer.from(await response.arrayBuffer()) : null;
   } catch {
-    return false;
+    return null;
   }
 };

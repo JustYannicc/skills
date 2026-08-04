@@ -39,6 +39,34 @@ sources:
   );
 };
 
+interface OverlayFixtureOptions {
+  patch: string;
+  sha256?: string;
+  target?: string;
+}
+
+const writeOverlayFixture = async (
+  root: string,
+  options: OverlayFixtureOptions
+): Promise<void> => {
+  await mkdir(path.join(root, "overlays"), { recursive: true });
+  await writeFile(path.join(root, "overlays", "upstream.patch"), options.patch);
+  const hash =
+    options.sha256 ?? createHash("sha256").update(options.patch).digest("hex");
+  await writeFile(
+    path.join(root, "validation", "overlays.yaml"),
+    `schemaVersion: 1
+overlays:
+  - id: upstream-overlay
+    skill: adapted-skill
+    sourceId: upstream
+    target: ${options.target ?? "SKILL.md"}
+    patchFile: overlays/upstream.patch
+    sha256: ${hash}
+`
+  );
+};
+
 describe("repository validator", () => {
   it("excludes ignored pnpm store content from repository validation", async () => {
     const root = await createRepository();
@@ -81,6 +109,27 @@ describe("repository validator", () => {
           severity: "Critical",
         }),
       ])
+    );
+  });
+
+  it("scans overlay patch files for public-boundary violations", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    await writeOverlayFixture(root, {
+      patch: `diff --git a/SKILL.md b/SKILL.md\n--- a/SKILL.md\n+++ b/SKILL.md\n@@ -1 +1 @@\n-public\n+/${"Users"}/private/.agents\n`,
+    });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () => Promise.resolve(Buffer.from("public\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        check: "public-boundary",
+        file: "overlays/upstream.patch",
+        severity: "Critical",
+      })
     );
   });
 
@@ -194,7 +243,6 @@ describe("repository validator", () => {
     );
 
     const result = await validateRepository(root, {
-      sourceTargetVerifier: () => Promise.resolve(true),
       sourceVerifier: () => Promise.resolve(true),
     });
 
@@ -210,20 +258,10 @@ describe("repository validator", () => {
   it("rejects an overlay whose declared hash does not match its patch", async () => {
     const root = await createRepository();
     await writeValidationFiles(root);
-    await mkdir(path.join(root, "overlays"), { recursive: true });
-    await writeFile(path.join(root, "overlays", "upstream.patch"), "patch\n");
-    await writeFile(
-      path.join(root, "validation", "overlays.yaml"),
-      `schemaVersion: 1
-overlays:
-  - id: upstream-overlay
-    skill: adapted-skill
-    sourceId: upstream
-    target: SKILL.md
-    patchFile: overlays/upstream.patch
-    sha256: ${"b".repeat(64)}
-`
-    );
+    await writeOverlayFixture(root, {
+      patch: "patch\n",
+      sha256: "b".repeat(64),
+    });
 
     const result = await validateRepository(root, {
       sourceVerifier: () => Promise.resolve(true),
@@ -241,24 +279,11 @@ overlays:
   it("rejects an overlay target absent from its pinned source", async () => {
     const root = await createRepository();
     await writeValidationFiles(root);
-    await mkdir(path.join(root, "overlays"), { recursive: true });
     const patch = "patch\n";
-    await writeFile(path.join(root, "overlays", "upstream.patch"), patch);
-    await writeFile(
-      path.join(root, "validation", "overlays.yaml"),
-      `schemaVersion: 1
-overlays:
-  - id: upstream-overlay
-    skill: adapted-skill
-    sourceId: upstream
-    target: missing/SKILL.md
-    patchFile: overlays/upstream.patch
-    sha256: ${createHash("sha256").update(patch).digest("hex")}
-`
-    );
+    await writeOverlayFixture(root, { patch, target: "missing/SKILL.md" });
 
     const result = await validateRepository(root, {
-      sourceTargetVerifier: () => Promise.resolve(false),
+      sourceTargetLoader: () => Promise.resolve(null),
       sourceVerifier: () => Promise.resolve(true),
     });
 
@@ -268,6 +293,121 @@ overlays:
         message: expect.stringContaining(
           "does not exist at the pinned source revision"
         ),
+        severity: "Major",
+      })
+    );
+  });
+
+  it("rejects a hash-valid overlay that does not reapply to its pinned target", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    const patch = [
+      "diff --git a/SKILL.md b/SKILL.md",
+      "--- a/SKILL.md",
+      "+++ b/SKILL.md",
+      "@@ -1 +1 @@",
+      "-stale upstream content",
+      "+adapted content",
+      "",
+    ].join("\n");
+    await writeOverlayFixture(root, { patch });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () =>
+        Promise.resolve(Buffer.from("pinned content\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        check: "overlay-reapplication",
+        message: expect.stringContaining(
+          "does not apply cleanly to its pinned target"
+        ),
+        severity: "Major",
+      })
+    );
+  });
+
+  it("accepts a hash-valid overlay that reapplies to exactly its pinned target", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    const patch = [
+      "diff --git a/SKILL.md b/SKILL.md",
+      "--- a/SKILL.md",
+      "+++ b/SKILL.md",
+      "@@ -1 +1 @@",
+      "-pinned content",
+      "+adapted content",
+      "",
+    ].join("\n");
+    await writeOverlayFixture(root, { patch });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () =>
+        Promise.resolve(Buffer.from("pinned content\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(
+      result.findings.filter(
+        (finding) => finding.check === "overlay-reapplication"
+      )
+    ).toStrictEqual([]);
+  });
+
+  it("rejects a patch that changes more than its declared target", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    const patch = [
+      "diff --git a/SKILL.md b/SKILL.md",
+      "--- a/SKILL.md",
+      "+++ b/SKILL.md",
+      "@@ -1 +1 @@",
+      "-pinned content",
+      "+adapted content",
+      "diff --git a/extra.md b/extra.md",
+      "new file mode 100644",
+      "--- /dev/null",
+      "+++ b/extra.md",
+      "@@ -0,0 +1 @@",
+      "+unexpected",
+      "",
+    ].join("\n");
+    await writeOverlayFixture(root, { patch });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () =>
+        Promise.resolve(Buffer.from("pinned content\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        check: "overlay-reapplication",
+        severity: "Major",
+      })
+    );
+  });
+
+  it("rejects an overlay target that traverses with a Windows separator", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    await writeOverlayFixture(root, {
+      patch: "patch\n",
+      target: String.raw`..\outside`,
+    });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () =>
+        Promise.resolve(Buffer.from("pinned content\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        check: "overlay-integrity",
+        message: expect.stringContaining("Path must stay relative"),
         severity: "Major",
       })
     );

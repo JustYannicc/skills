@@ -1,0 +1,38 @@
+schemaVersion: 1
+id: to-questionnaire-indirect
+title: Workflow invokes the questionnaire capability for another person's knowledge
+shape: indirect
+kind: routing
+skill: to-questionnaire
+domains: [organizational-work]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Workflow is coordinating a community clinic scheduling change. Prepare one
+  asynchronous questionnaire for my colleague, our clinic coordinator and operational owner
+  who knows minimum staff coverage by slot, walk-in demand by hour, clinician
+  room limits, the approval owner, and exception paths. We need those five
+  knowledge gaps to choose a schedule without choosing it in the questionnaire.
+  The response is due Friday and should take about 15 minutes. Write the
+  recipient-ready questionnaire, explain how the answers will be used, and
+  return its path and bounded result for Workflow to integrate.
+environment:
+  id: workflow-to-questionnaire
+  capabilities:
+    modelInvocation: true
+    fileWrite: true
+    fileRead: true
+    recipientContext: true
+    workflow: true
+  tools: [file write, file read/inspection]
+expected:
+  actions: [keep Workflow's parent outcome and responsibility, use only the supplied recipient role expertise relationship and knowledge gaps, draft the questionnaire using the required structure, write and inspect the questionnaire file, return the path and bounded evidence to Workflow]
+  artifacts: [questionnaire request for clinic coordinator]
+  effects: []
+  invoked: [to-questionnaire]
+  notInvoked: [research, interactive grilling, scheduling change, parent completion]
+  proof: [the request has one recipient, names how answers will be used, covers each accepted knowledge gap, and returns without deciding the scheduling change]
+  responsibility: [Workflow retains parent responsibility and integrates the questionnaire result]
+  route: [workflow-to-questionnaire-to-workflow]
+  state: [ready-for-recipient]
+  forbidden: [invent the coordinator's constraints, perform the scheduling change, transfer parent ownership, claim the parent outcome complete]

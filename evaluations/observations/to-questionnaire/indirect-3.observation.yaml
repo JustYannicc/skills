@@ -1,0 +1,57 @@
+schemaVersion: 1
+fixtureId: to-questionnaire-indirect
+attempt: 3
+contextId: fresh-questionnaire-indirect-final-3
+suiteRevision: git:535374486a2521e49b758023b96e9d8724eb5ccb
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:26:12Z
+environment:
+  id: workflow-to-questionnaire
+  capabilities:
+    modelInvocation: true
+    fileWrite: true
+    fileRead: true
+    recipientContext: true
+    workflow: true
+  tools: [file write, file read/inspection]
+observed:
+  actions:
+    - keep Workflow's parent outcome and responsibility
+    - use only the supplied recipient role expertise relationship and knowledge gaps
+    - draft the questionnaire using the required structure
+    - write and inspect the questionnaire file
+    - return the path and bounded evidence to Workflow
+    - preserve the five accepted gaps as distinct one-idea questions
+  artifacts:
+    - questionnaire request for clinic coordinator
+  effects: []
+  forbiddenChecks:
+    - criterion: invent the coordinator's constraints
+      evidence: The questionnaire asks the coordinator for the supplied operational facts and does not answer or invent any clinic constraint.
+      observed: false
+    - criterion: perform the scheduling change
+      evidence: The response returns a recipient-ready questionnaire only; no schedule is selected or changed.
+      observed: false
+    - criterion: transfer parent ownership
+      evidence: The result explicitly returns to Workflow and states that Workflow retains parent ownership and responsibility.
+      observed: false
+    - criterion: claim the parent outcome complete
+      evidence: The result state is ready-for-recipient and says Workflow must integrate the answers and choose the schedule; parent completion is not claimed.
+      observed: false
+  invoked: [to-questionnaire]
+  notInvoked: [research, interactive grilling, scheduling change, parent completion]
+  proof:
+    - the request has one recipient
+    - names how answers will be used
+    - covers each accepted knowledge gap
+    - and returns without deciding the scheduling change
+  responsibility:
+    - Workflow retains parent responsibility and integrates the questionnaire result
+  route: [workflow-to-questionnaire-to-workflow]
+  state: [ready-for-recipient]
+rawEvidence:
+  artifacts:
+    - locator: evaluations/evidence/to-questionnaire/indirect-3.questionnaire.md
+      sha256: c813ee9db3eec91b707b069e5ba108149f7c11da830aba1011c4fbcf7332cd87
+  locator: evaluations/evidence/to-questionnaire/indirect-3.txt
+  sha256: e6f57163c7bb46e012d751c10ecbd64e4fd18780a852306c4437ce396d6cbe93

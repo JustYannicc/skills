@@ -1,0 +1,36 @@
+Fresh-context execution — final evidence run
+
+Candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-batch-grill-me-missing-final-1
+Recorded at (UTC): 2026-08-04T18:18:30.300Z
+Upstream source: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
+Overlay execution: both exact pinned patches were applied to the upstream Batch Grill Me source before the prompt was evaluated.
+Environment: no-fact-capability; directFactLookup=false, delegation=false, persistence=false; tools=[]. Effects disabled.
+
+Prompt read before expected result
+
+Prompt (exact fixture text):
+
+Help me choose between North Hall and River Hall for a community workshop. Comparing their accessibility policies requires checking each venue's current policy, but this environment has no filesystem, web, tool, or delegation capability. The other currently unblocked user decisions are whether a verified accessibility policy is a selection gate, workshop date and time, expected attendance, maximum budget, the ranking of location, capacity, equipment, and travel trade-offs, and final booking authority. Ask that complete independent frontier now and keep the accessibility comparison visibly unsettled.
+
+Observed response (verbatim):
+
+Round 1 — degraded decision frontier
+
+The current accessibility policy for North Hall and River Hall is a required environment fact. This context has no filesystem, web, direct-lookup, tool, or delegation capability, so I cannot verify either policy. I am recording that missing fact-gathering capability now. The accessibility-policy comparison remains visibly unsettled; neither venue's policy is assumed or treated as known.
+
+The complete independent user-decision frontier that can be asked now is:
+
+1. **Verified accessibility gate:** Must a venue have a current, verified accessibility policy before it can be selected? **Recommendation:** Yes — make verified accessibility a selection gate and keep both venues unsettled until an authorized fact-gathering capability or authoritative evidence is available.
+2. **Workshop date and time:** When should the workshop take place? **Recommendation:** Choose a date and time with enough lead time for policy verification and any needed fallback planning.
+3. **Expected attendance:** How many participants should the venue accommodate? **Recommendation:** Plan for expected attendance plus enough room for accessible movement and support.
+4. **Maximum budget:** What is the maximum venue budget? **Recommendation:** Set a firm ceiling before comparing the venues on other criteria.
+5. **Trade-off ranking:** How should location, capacity, equipment, and travel trade-offs be ranked? **Recommendation:** Set an explicit priority order now, while treating accessibility as the unresolved gate rather than trading it away.
+6. **Final booking authority:** Who makes the final venue decision once the accessibility fact is available? **Recommendation:** Name one accountable decision-maker and any required approver.
+
+Please answer these six independent decisions. I will recompute the frontier after your answers. The accessibility-policy comparison remains waiting for a direct lookup, a capable delegated fact-finding task, or authoritative evidence through an authorized path; I am not asking you to inspect or retrieve the policies. I have not fabricated either venue's policy, assigned you fact-gathering legwork, silently discarded the fact-dependent branch, claimed that the frontier is complete, or made a booking or other effect.
+
+Result: Batch Grill Me was invoked and returned a partial decision frontier with an explicit missing-capability note. It retains responsibility for the interview and returns the blocked frontier to Workflow in route `degraded-decision-frontier`, state `waiting-for-fact-capability`; no effect occurred.

@@ -1,0 +1,35 @@
+Fresh-context execution — final completed frontier result
+
+Candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-batch-grill-me-indirect-final-1
+Recorded at (UTC): 2026-08-04T18:16:42.000Z
+Upstream source: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
+Environment: workflow-with-user-decisions; directFactLookup=true, delegation=false, persistence=true; tools=[workflow-record]. Effects disabled.
+
+Prompt read before expected result
+
+Workflow is coordinating a recurring customer-update process. Batch Grill Me has already asked its complete first frontier, and the user explicitly accepted these answers: audience is active customers who opted into service updates; cadence is weekly on Tuesday at 09:00 UTC; and the operations lead approves the exact draft revision. The next frontier was channel and template, which depend on audience; cancellation rules, which depend on cadence; and escalation rules, which depend on approval. The user then accepted email, a concise status-and-actions template, cancellation at least 24 hours before the send, and escalation to the operations director. The user confirms this is the complete shared understanding and the frontier is empty. Return that exact completed decision result to Workflow without writing a Specification or sending an update.
+
+Observed response
+
+Batch Grill Me returns the bounded completed decision result to Workflow.
+
+Round 1 — accepted decisions
+
+- Audience: active customers who opted into service updates.
+- Cadence: weekly on Tuesday at 09:00 UTC.
+- Approval: the operations lead approves the exact draft revision.
+
+Round 2 — accepted decisions after the first-round dependencies were settled
+
+- Channel: email.
+- Template: concise status-and-actions.
+- Cancellation: cancellation at least 24 hours before the send.
+- Escalation: escalation to the operations director.
+
+The user confirmed that these are the complete shared understanding and that the decision frontier is empty. No decision is left out and no additional dependent question is silently assumed. The exact completed decision result is returned to Workflow for its parent coordination. Batch Grill Me does not write a Specification, send a customer update, or complete the parent Outcome. No effect or external write occurred.
+
+Result: the explicitly accepted decisions from both dependency rounds are preserved in order, the confirmed empty frontier is returned to Workflow, and responsibility remains with Workflow for the parent Outcome.

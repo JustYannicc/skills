@@ -51,7 +51,8 @@ expected:
 
 const observationYaml = (
   shape: string,
-  evidenceHash: string
+  evidenceHash: string,
+  artifactHash?: string
 ): string => `schemaVersion: 1
 fixtureId: foundation-${shape}
 attempt: 1
@@ -81,6 +82,7 @@ observed:
 rawEvidence:
   locator: evaluations/evidence/direct.txt
   sha256: ${evidenceHash}
+${artifactHash ? `  artifacts:\n    - locator: evaluations/evidence/artifact.md\n      sha256: ${artifactHash}\n` : ""}
 `;
 
 describe("evaluation suite", () => {
@@ -93,14 +95,16 @@ describe("evaluation suite", () => {
     await mkdir(observationDirectory, { recursive: true });
     await mkdir(evidenceDirectory, { recursive: true });
     const evidence = "route=inline\nproof=result inspected\n";
+    const artifact = "# Inspected artifact\n";
     await writeFile(path.join(evidenceDirectory, "direct.txt"), evidence);
+    await writeFile(path.join(evidenceDirectory, "artifact.md"), artifact);
     await writeFile(
       path.join(fixtureDirectory, "direct.fixture.yaml"),
       fixtureYaml("direct", "Major", 1)
     );
     await writeFile(
       path.join(observationDirectory, "direct.observation.yaml"),
-      observationYaml("direct", sha256(evidence))
+      observationYaml("direct", sha256(evidence), sha256(artifact))
     );
 
     const first = await validateEvaluations(root, {
@@ -115,6 +119,12 @@ describe("evaluation suite", () => {
       version: first.report.suiteVersion,
     }).toStrictEqual({
       evidence: {
+        artifacts: [
+          {
+            locator: "evaluations/evidence/artifact.md",
+            sha256: sha256(artifact),
+          },
+        ],
         attempt: 1,
         contextId: "fresh-direct-1",
         locator: "evaluations/evidence/direct.txt",
@@ -130,6 +140,25 @@ describe("evaluation suite", () => {
       requireShapeCoverage: false,
     });
     expect(recorded.findings).toStrictEqual([]);
+
+    await writeFile(
+      path.join(evidenceDirectory, "artifact.md"),
+      "# Mutated artifact\n"
+    );
+    const mutated = await validateEvaluations(root, {
+      candidateIdentity,
+      requireShapeCoverage: false,
+    });
+    expect(mutated.findings).toContainEqual(
+      expect.objectContaining({
+        check: "raw-evidence",
+        file: "evaluations/evidence/artifact.md",
+        message: expect.stringContaining(
+          "Evidence artifact hash does not match"
+        ),
+        severity: "Major",
+      })
+    );
   });
 
   it("reports stale raw evidence and missing foundation shapes", async () => {
