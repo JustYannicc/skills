@@ -12,6 +12,7 @@ import {
   parseTomlOnly,
   projectionIsFresh,
   semanticRecord,
+  sha256,
   serializeMarkdownToml,
   serializeMarkdownYaml,
   serializeTomlOnly,
@@ -28,6 +29,12 @@ const tomlOnlySource = await load("fixtures/toml-only.toml");
 const projectionSource = await load("fixtures/projection-canonical.md");
 
 const options = [
+  {
+    id: "markdown-generated-projections",
+    parse: parseMarkdownYaml,
+    serialize: serializeMarkdownYaml,
+    source: projectionSource,
+  },
   {
     id: "markdown-yaml",
     parse: parseMarkdownYaml,
@@ -65,9 +72,7 @@ const results = options.map((option) => {
     bounded_human_edit_parses:
       humanParsed.envelope.owner.label === "Recovery owner" &&
       humanParsed.narrative.includes("linked trade-offs"),
-    comments_preserved_after_parser_round_trip: Object.fromEntries(
-      commentMarkers.map((marker) => [marker, serialized.includes(marker)])
-    ),
+    normalized_semantic_sha256: sha256(JSON.stringify(semanticRecord(parsed))),
     option: option.id,
     parse_serialize_parse_semantics_preserved: isDeepStrictEqual(
       semanticRecord(parsed),
@@ -77,12 +82,20 @@ const results = options.map((option) => {
       option.id === "toml-only"
         ? "embedded TOML multiline string"
         : "ordinary Markdown body",
+    parserless_recovery_markers_present:
+      option.source.includes("# System Record fixture") &&
+      option.source.includes("## Rationale") &&
+      option.source.includes("../../docs/UNIVERSAL_WORK_CONTRACT.md") &&
+      option.source.includes("rationale-comment"),
     parses_to_shared_fixture: isDeepStrictEqual(
       semanticRecord(parsed),
       expected
     ),
     serialized_bytes: Buffer.byteLength(serialized),
     source_bytes: Buffer.byteLength(option.source),
+    source_comments_preserved_after_parser_round_trip: Object.fromEntries(
+      commentMarkers.map((marker) => [marker, serialized.includes(marker)])
+    ),
   };
 });
 
@@ -103,12 +116,23 @@ const malformed = {
   ...canonical.envelope,
   authority: undefined,
 };
+const malformedSource = projectionSource.replace(
+  "record_id: SYS-024",
+  "record_id: SYS-024\nrecord_id: SYS-999"
+);
 
 let malformedBlocked = false;
 try {
   canPerformExternalEffect(malformed);
 } catch {
   malformedBlocked = true;
+}
+
+let malformedSourceBlocked = false;
+try {
+  canPerformExternalEffect(parseMarkdownYaml(malformedSource).envelope);
+} catch {
+  malformedSourceBlocked = true;
 }
 
 let projectionWriteBlocked = false;
@@ -120,9 +144,11 @@ try {
 
 const report = {
   fail_closed_action_boundary: {
-    human_narrative_survives_malformed_envelope:
-      canonical.narrative.includes("## Rationale"),
     malformed_record_blocked: malformedBlocked,
+    malformed_source_blocked: malformedSourceBlocked,
+    malformed_source_remains_parserless_readable:
+      malformedSource.includes("## Rationale") &&
+      malformedSource.includes("adapter-neutral contract"),
     valid_pending_record_cannot_authorize_effect:
       canPerformExternalEffect(canonical.envelope) === false,
   },
