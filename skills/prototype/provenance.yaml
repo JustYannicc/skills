@@ -2,11 +2,6 @@ schemaVersion: 1
 strategy: adapted
 sources:
   - id: matt-pocock-skills
-upstream:
-  sourceId: matt-pocock-skills
-  revision: 2ab958093e83e0ec752e6c1c5932da465bf23e0c
-  license: MIT
-  inspectedAt: 2026-08-04
 retainedBehavior:
   - "Question-first branch selection and one-job, throwaway prototype boundary."
   - "Small runnable technical logic and UI patterns: in-memory state, visible state, one command or route, and disposable variants."
