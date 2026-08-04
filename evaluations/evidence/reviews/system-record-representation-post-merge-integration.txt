@@ -1,0 +1,22 @@
+System Record representation post-merge integration attestation
+
+Origin main revision: 87792533689dba90a7a605e91194b553618d72be
+Merge candidate: 2b0a462ebb29cf0935d33da4b9462c11f8679c6b
+Reviewed System Record candidate before integration: bdf22799af7edfc1bc2e37f3ca0860f6760ac2af
+Reviewed System Record evidence before integration: 4fb515709145033fadca603025af32c965f4f071
+Disposable proof: dabfca4956e6d07a0cea18d278e75d8726b07ff1
+Fixed point recorded by the decision package: 455541e255b5482235faa65a82bffc2b21415b94
+
+This is a truthful integration rebind, not a claim that the recorded model
+round trips were repeated. The normal merge retains origin/main's overlay
+skills, fixtures, evidence, validator, tests, and source-inventory changes and
+retains the reviewed System Record decision package, template, fixture, raw
+evidence, and disposable-proof reference. Current observations are rebound to
+the exact non-evaluation merge candidate; the combined deterministic report is
+regenerated from the merged fixture and observation set.
+
+The integration check must show that the reviewed System Record surfaces and
+proof remain equivalent, that origin/main's overlay state is present, and that
+the PR diff against origin/main contains no overlay, validator, test, or
+delete/rename collateral. Any later non-evaluation change invalidates this
+attestation and requires another truthful rebind or fresh behavioral proof.
