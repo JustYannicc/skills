@@ -20,15 +20,20 @@ Use this template only for a Durable system or material System change. Complete 
 - **Original request or problem:**
 - **Intent:**
 - **Accepted Outcome:**
-- **Good-enough threshold:**
+- **Satisficing / good-enough threshold and trigger for further search:**
 - **Non-Outcomes:**
-- **Owner and decision Authority:**
+- **Owner, bounded Responsibilities, and decision Authority:**
 - **Material domain terms:**
 - **Intentionality and progress classification, when relevant:** intended productive use, rest or leisure, intentional or incidental progress, or unresolved Intent; never a moral score.
 
 ## 2. Boundary and support
 
 - **Owned responsibilities:**
+- **Containing System and this System's role within it:**
+- **Internal Subsystems and bounded contributory Outcomes:**
+- **Upstream Systems this System relies on:**
+- **Dependent Systems that rely on this System:**
+- **Relationship interfaces, failure propagation, and change-notification obligations:**
 - **Affected but not controlled:**
 - **Included and excluded:**
 - **Supported Actors, cases, operating conditions, interfaces, states, and scale:**
@@ -46,29 +51,37 @@ Use this template only for a Durable system or material System change. Complete 
 - **Unknown-case behavior:**
 - **Capability or dependency gap:** original request, blocked condition, preserved state, allowed safe work, proof needed, and resumption condition.
 
-## 4. Intervention and Opportunity cost
+## 4. Intervention, satisficing, Pareto, and Opportunity cost
 
 - **Feasible alternatives:** do nothing; wait with a recheck trigger; change process or operating conditions; configure an existing System; adopt a maintained solution; build a custom solution.
 - **Selected intervention and threshold evidence:**
+- **Materially distinct alternatives, known trade-offs, and condition for further search:**
+- **Pareto / 80-20 concentration hypothesis, evidence, and protected useful-many obligations:**
+- **Possible Pareto improvement and per-Actor/System impact:**
+- **If trade-offs create losers:** Authority, mitigation, compensation, reversal, or informed exception.
 - **Best feasible alternative forgone:**
 - **Displaced resources, transition cost, maintenance cost, and cost of delay:**
 - **Reversibility, option value, and sunk investment excluded from prospective value:**
 - **Reference class and material differences:**
 
-## 5. Preparation and stopping rule
+## 5. Mise en place and stopping rule
 
-- **Required inputs, context, capabilities, permissions, and operating conditions:**
+- **Required inputs, context, materials, capabilities, permissions, and operating conditions:**
 - **Required versus optional readiness conditions and clearing evidence:**
 - **Proof seam, fallback, and resumption state:**
 - **Preparation stopping rule:**
 - **Disposition:** smallest safe execution or experiment; gap and pause; reduced scope; named deferral trigger; or cancellation.
 
-## 6. Actors, Authority, state, and handoffs
+## 6. Actors, Ownership, Responsibility, Authority, state, and handoffs
 
 | Producer | Consumer | Input and precondition | Output | Authority and effect boundary | Timing | Failure or degraded behavior | Completion evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |
 
+- **Integrated Outcome owner and terminal proof duty:**
+- **Bounded Responsibilities and accepting Actors:**
+- **Nested Responsibility and retained parent Ownership:**
+- **Explicit Ownership transfers and accepted continuation state:**
 - **Writable authority per information type:**
 - **Derived System representations, source revision, and freshness rule:**
 - **Stable identities and version binding:**
@@ -89,10 +102,13 @@ Use this template only for a Durable system or material System change. Complete 
 
 ## 8. Incentives, friction, and operating conditions
 
-- **Desired and actual incentives:**
+- **Accepted Outcome and desired incentives:**
+- **Actual incentive structure—rewards, costs, constraints, defaults, information, consequences, and alternatives:**
+- **Indirect or unintended incentives and who receives each benefit or bears each cost:**
+- **Observed behavior that the incentive structure explains or fails to explain:**
 - **Helpful and harmful friction:**
 - **Repeated-compliance dependencies and how they are removed:**
-- **Relevant access, availability, timing, visibility, resources, organizational conditions, competing paths, and transition cost:**
+- **Relevant routines, access, availability, timing, visibility, resources, organizational conditions, competing paths, and transition cost:**
 - **Proxy-gaming routes and counter-signals:**
 - **Voluntary exit and correction path:**
 
@@ -157,7 +173,7 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 
 - **Stable identity and canonical record:**
 - **Applicability and supported operations:**
-- **Dependencies, conflicts, and precedence:**
+- **Upstream and Dependent Systems, Subsystems, conflicts, and precedence:**
 - **Design status, operational status, eligibility, version, and freshness:**
 - **Human-readable status and control surface:**
 - **Current state, last and next action, owner, and authoritative links:**
@@ -169,6 +185,7 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 - **Decision rationale and review conditions:**
 - **Successor System Record:**
 - **Affected population and truthful unknown coverage:**
+- **Impact on containing, Subsystem, Upstream, and Dependent System contracts:**
 - **Legacy classification:** `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`.
 - **Exact transformation or re-evaluation per cohort:**
 - **Bounded resumable application and coverage counts:**

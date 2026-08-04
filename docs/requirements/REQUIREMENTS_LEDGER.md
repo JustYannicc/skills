@@ -19,11 +19,11 @@ This ledger records the maintainer's operative requirements from the complete de
 
 | Requirement | Durable owner |
 | --- | --- |
-| Design systems rather than one-off solutions; every non-trivial agent interpretation, decision, preparation, or action is a proportionate system interaction. | Complete standard §§2–4 |
+| Apply systems thinking to every interpretation, decision, preparation, or action. A one-time handoff or bounded operation may be a System; recurrence changes persistence and lifecycle obligations, not applicability. | Complete standard §§1–4 |
 | Discover intent and root cause before accepting the requested role, tool, or artifact. Treat the request as a proposed means. | Universal entry check |
 | Outcome before tool: compare doing nothing, waiting, environment/process change, configuration, maintained solutions, and custom work. | Economic guardrails |
-| Use 80/20, satisficing, opportunity cost, option value, sunk-cost separation, loss aversion, and reference classes without turning them into slogans or rigid laws. | Decision patterns and sources |
-| Incentives are a primary design material. Align low-energy incentives and friction with the accepted outcome; expose rather than exploit loss aversion. | Constitutional rules and examples |
+| Use the Pareto principle / 80–20, Pareto improvements, satisficing, Opportunity cost, option value, sunk-cost separation, loss aversion, and reference classes without conflating them or turning them into slogans or rigid laws. | Decision patterns and sources |
+| Incentive structures are a primary design material and first-line failure diagnostic. When behavior diverges from intent, inspect actual rewards, costs, constraints, defaults, information, consequences, and alternatives before blaming an Actor. Omitting a material incentive is a System-design failure; expose rather than exploit loss aversion. | Standard §4 and concept sources |
 | “Everyone will not just”: repeated remembering, noticing, caring, checking, or willpower is a compliance dependency to remove where possible. | Constitutional rule 22 |
 | The best systems allow ambient progress: tiny and sometimes incidental actions move the line forward while material authority and state remain inspectable. | Intentionality/ambient-progress sections |
 | Intentional productivity is intentional use toward an accepted end, including rest or leisure. Incidental progress remains useful but is not retroactively relabeled as intentional. | Complete standard §1 |
@@ -34,7 +34,7 @@ This ledger records the maintainer's operative requirements from the complete de
 
 | Requirement | Durable owner |
 | --- | --- |
-| Design for the lowest common denominator, including low energy, reduced initiation, interruption, missing services, ambiguity, and a month without response. The minimum path is a floor, not a ceiling. | Constitutional rule 2 and mode contract |
+| Design for the weakest realistic condition supported by the System's context, including reduced human or machine capacity, interruption, missing services, ambiguity, or delayed response when relevant. The minimum path is a floor, not a ceiling. | Mode contract |
 | Graceful degradation is normal operation. Define Normal, Degraded, Paused, and Recovery where applicable; preserve state and prevent cascades. | Standard §§6 and 9 |
 | Systems must be recoverable after prolonged non-use without reconstructing context or punishing the user with an unbounded backlog. | Recovery proof cases |
 | Systems decay immediately. Define healthy baseline, decay signals, meaningful reset, reset proof, replacement, and retirement. | Anti-decay lifecycle |
@@ -43,17 +43,17 @@ This ledger records the maintainer's operative requirements from the complete de
 | One-off outliers matter less than trend and direction of travel, except catastrophic, safety-critical, rights-violating, or irreversible outliers. | Measurement reference and evaluations |
 | Quantitative, low-burden evidence is preferred where possible because human vibes are vulnerable to recency and state bias. | Measurement plan |
 | Before/after behavior must be measurable and tied to the actual outcome, with process and burden/harm counter-signals. | Measurement plan |
-| A roughly three-week check may be an early feasibility observation only when evidence can exist; it is not a universal habit rule. | Measurement reference |
+| Choose every observation window from the mechanism's expected evidence delay and the decision it must inform; no fixed duration transfers across Systems by default. | Measurement reference |
 
 ## Contracts, judgment, and representation
 
 | Requirement | Durable owner |
 | --- | --- |
-| Every handoff should behave like a clear API contract: input, output, owner, authority, state, timing, failure behavior, and proof. | Standard and Handoff skill |
+| Every handoff should behave like a clear interface contract: input, output, Ownership, bounded Responsibility, Authority, state, timing, failure behavior, and proof. Parent Ownership survives delegation unless explicitly transferred and accepted. | Standard and Handoff skill |
 | If two competent readers derive different operative meanings, the contract is still ambiguous. | Ambiguity rule and completion gate |
 | Detect implied systems, sources, actors, constraints, and assumptions—not only explicit ambiguity. Ask the smallest discriminating question and improve the durable source after correction. | Universal entry check and evaluations |
 | Assumptions are visible with provenance. When wrong, trace the failed inference to its source, rule, interface, or missing fact and repair the governing cause. | Execution contract and correction loop |
-| Use models for bounded interpretation, synthesis, classification, and composition; deterministic mechanisms own clocks, state, schemas, approvals, retries, invariants, reconciliation, and effects. | Constitutional rule 8 |
+| Use LLMs for bounded interpretation, synthesis, classification, and composition; deterministic mechanisms own clocks, state, schemas, approvals, retries, invariants, reconciliation, and effects. | Standard LLM and deterministic boundary |
 | Human-readable Markdown owns intent, meaning, rationale, and examples. Schemas, decision tables, pseudocode, or TypeScript-like forms express states, transitions, permissions, invariants, and effect gates where useful. | Human/machine contract layers |
 | Every judgment boundary identifies inputs, governing sources, rubric/evidence, output, uncertainty behavior, correction path, and effect authority. | Formalization reference |
 | Every material state must be human-readable without asking a model; dashboards and activity views remain projections linked to canonical evidence. | Constitutional rule 15 |
@@ -100,6 +100,7 @@ This ledger records the maintainer's operative requirements from the complete de
 | `ask-yannic` version one explains routes only. A future coworker-facing representation of Yannic's judgment is separately designed with source, authority, uncertainty, privacy, update, and correction boundaries. | Ask Yannic task brief and deferred roadmap |
 | Setup writes the standing entry to each selected harness's effective instruction file at the chosen scope: for example `AGENTS.md` for Codex-style targets or `CLAUDE.md` for Claude-style targets. It verifies precedence, edits the narrowest active source, and never mutates another scope implicitly. | Setup task brief and managed-block contract |
 | Every request loads `thinking-in-systems` before `workflow`; skill-description matching is discovery support rather than the activation guarantee. | Managed instruction entry and routing evaluations |
+| Thinking in Systems and `'Workflow'` are capability instructions the same agent may apply together. Their result boundary does not imply separate agents or transfer parent responsibility. | Thinking in Systems and Workflow runtime instructions |
 | Runtime phase skills are model-invoked; `ask-yannic` and `setup-system-thinking` are user-invoked. | Per-skill frontmatter and `agents/openai.yaml` |
 | Inline and Durable modes use the same method, responsibility, and Review. Persistence changes representation rather than whether the workflow applies. | Workflow routing contract |
 | Workflow owns the canonical route model; Ask Yannic explains it without executing it. | Workflow route reference and Ask Yannic context pointer |
@@ -166,6 +167,7 @@ This ledger records the maintainer's operative requirements from the complete de
 | The complete approved S01 method and reusable template must live in the repository. A compressed summary or external chat context is insufficient for authoring the skills. | `docs/source/` and mandatory read order |
 | Prefer preserving more public-safe source material in the repository and trimming later. Retain the complete universalized authorities, full skill design, relevant supporting research, and source fingerprints. | `docs/source/` archive and preservation rule |
 | Exact historical material remains private when it contains personal policy, local paths, or private configuration. Preserve fingerprints and transferable meaning without leaking personal defaults, credentials, or employer-confidential material. | Public boundary and publication verification |
+| The installed Thinking in Systems source guide maps professional concepts to public links for optional deeper reading. The full standard remains governing; private provenance, maintainer history, and evidence debates stay in repository governance records. | `skills/thinking-in-systems/references/sources.md` and source archive |
 | Every operative correction and skill-suite requirement from the design conversation must be mapped to a durable owner before a handoff can claim completeness. | This ledger and handoff verification |
 | README contains a section for every implemented skill and explains what it does and when to use it. | README and contribution checks |
 | Matt Pocock's skills are a major inspiration. Record inspected revision, license, retained behavior, and whether each successor is a close adaptation or independently written. | Upstream assessment and per-skill sources |

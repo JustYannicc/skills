@@ -3,10 +3,18 @@ Read and apply every section before returning a systems judgment. Scale the dept
 ## Use these terms consistently
 
 - **Thinking in Systems:** the method in this standard for governing arrangements so they advance an intended Outcome under real operating conditions.
-- **System:** a repeatable arrangement of Actors, information, rules, state, mechanisms, and operating conditions that produces or protects an Outcome over time.
+- **System:** a bounded arrangement of interdependent Actors, information, rules, state, mechanisms, and operating conditions that produces or protects an Outcome across one or more interactions. It may be one-time, recurring, or continuous; recurrence is not the admission test. [Sources](sources.md#system-boundaries-subsystems-and-dependent-systems)
+- **System of interest:** the System currently being governed at the selected level of analysis. Its boundary separates what it owns or controls from the wider context that affects it.
+- **Containing System:** the larger System whose boundary includes the System of interest.
+- **Subsystem:** a System inside another System's boundary that has its own internal arrangement and bounded contributory Outcome. Its local success does not prove the containing System's Outcome.
+- **Upstream System:** an external System whose output, availability, interface, or policy the System of interest materially relies on.
+- **Dependent System:** an external System that materially relies on the System of interest. Upstream and dependent relationships create interface and change obligations without creating Authority across the boundary.
 - **System interaction:** a request, event, or observation interpreted or acted on through a System. Every agent request is one System interaction, even when it needs only an inline result.
 - **Durable system:** a System whose rules, state, Authority, or effects must persist beyond the current interaction.
 - **Actor:** a person, agent, team, service, or other party that performs, decides, approves, supplies, or receives something within a System.
+- **Incentive structure:** the material arrangement of rewards, costs, constraints, defaults, information, consequences, and available alternatives that makes an Actor's choices more or less attractive. Inspect actual incentives, including indirect and unintended ones, rather than relying on stated intentions. [Sources](sources.md#incentives-friction-routines-and-operating-conditions)
+- **Ownership:** continuing Responsibility for integrating and sustaining a whole System or Outcome through operation, recovery, change, and terminal proof. Delegation does not transfer Ownership unless a successor explicitly accepts it.
+- **Responsibility:** an Actor's accepted or assigned duty to perform, decide, approve, verify, or recover a bounded part through its completion within that Actor's Authority. [Sources](sources.md#actors-ownership-responsibility-authority-and-handoffs)
 - **Intent:** the problem, opportunity, value, or avoided loss that gives direction to an Outcome and constrains acceptable means.
 - **Outcome:** the externally meaningful condition that the work is responsible for producing or preserving.
 - **Material:** capable of changing the accepted Outcome, scope, Authority, external effect, risk, burden, proof, or treatment of existing state.
@@ -17,6 +25,10 @@ Read and apply every section before returning a systems judgment. Scale the dept
 - **System Record:** the canonical human-readable contract for one version of a Durable system, including its Outcome, boundary, Authority, behavior, proof, operation, and retirement conditions.
 - **Change and Legacy Record:** the versioned contract for moving from one Durable system version to another, including affected existing state, compatibility, rollout, rollback, verification, and predecessor retirement.
 - **Opportunity cost:** the value of the best feasible alternative forgone by a decision, considered with displaced resources, delay, transition, maintenance, and reversibility.
+- **Satisficing (good enough):** selecting an option that clears an explicit Outcome threshold after a bounded search makes the materially distinct alternatives, known trade-offs, and condition for further search visible.
+- **Pareto principle (80/20 rule):** a hypothesis that a minority of causes or actions may produce most relevant value. It focuses investigation; it is not a universal ratio or permission to discard requirements, safety, rights, trust, accessibility, recovery, counter-signals, or rare catastrophic cases.
+- **Pareto improvement:** a change that makes at least one affected Actor better off on an explicit accepted criterion without making any affected Actor worse off on a material criterion. Claim it only when affected parties and impacts are known; it does not by itself prove fairness or a good starting distribution.
+- **Mise en place:** proportional preparation of the context, materials, capabilities, permissions, operating conditions, proof seam, fallback, and resumption state required by the next action. It is paired with a stopping rule. [Sources](sources.md#intervention-opportunity-cost-pareto-and-preparation)
 - **Strategy:** a rule for making decisions as conditions and information change. A **Plan** is a proposed sequence under current assumptions.
 - **Fog of war:** material uncertainty that limits what can currently be known.
 - **Proof seam:** the human-visible boundary where intended behavior and effects can be evaluated independently of internal implementation.
@@ -40,6 +52,8 @@ The whole method applies to every branch. The branch controls persistence and de
 - A new Durable system needs a visible draft System Record.
 - A material change needs a proposed successor System Record and a linked Change and Legacy Record.
 - An unknown case preserves the request and exposes the smallest gap that blocks a safe interpretation.
+
+A System need not recur to deserve governance. A one-time handoff to another person, agent, service, or context is still a System interaction and may itself be a bounded System when its Actors, boundary, information, Authority, Responsibility, commitment, risk, proof, or recovery are material. Recurrence changes lifecycle and persistence obligations; it does not decide whether Thinking in Systems applies.
 
 A request has durable or change consequences when it can recur; creates or changes lasting state, rules, structure, or Authority; crosses a handoff; produces an external effect or meaningful commitment; creates continuing ownership or recovery work; or changes how existing items must be handled.
 
@@ -66,11 +80,13 @@ For a spelling correction, preserve the source, make only the correction, and sh
 
 Start from the original request. Preserve its exact wording or source whenever later interpretation, correction, audit, or migration may depend on it.
 
+Concept sources: [Intent, Outcome, and bounded Authority](sources.md#intent-outcome-and-bounded-authority) and [satisficing and good enough](sources.md#satisficing-and-good-enough).
+
 Resolve these questions proportionately:
 
 1. **Requested operation:** What was literally requested, and what role is the agent being asked to perform?
 2. **Intent:** What problem, opportunity, value, or avoided loss motivates the request? Is the requested operation the Outcome or one proposed means?
-3. **Outcome and good-enough threshold:** What should become true, under which conditions, and what observable result is sufficient now?
+3. **Outcome and satisficing threshold:** What should become true, under which conditions, and what observable result is good enough now? What would justify further search or a higher threshold?
 4. **Boundary:** What is included, excluded, supported, affected, and explicitly not owned?
 5. **Actors and Authority:** Who or what may interpret, decide, prepare, approve, and perform each effect?
 6. **Facts, assumptions, and unknowns:** Which sources support the interpretation? Which propositions remain unconfirmed, including material privacy, retention, safety, or legal conditions?
@@ -101,7 +117,9 @@ Every accepted action moves the line forward by delivering part of the Outcome, 
 
 ## 3. Choose an intervention
 
-Choose the least costly reversible intervention that credibly clears the good-enough threshold. For a material decision, compare the feasible classes that could satisfy the Outcome:
+Use **satisficing** to choose the least costly reversible intervention that credibly clears the explicit good-enough threshold. A bounded search stops only after the materially distinct alternatives, known trade-offs, and condition for further search are visible. For a material decision, compare the feasible classes that could satisfy the Outcome:
+
+Concept sources: [intervention, Opportunity cost, Pareto, and preparation](sources.md#intervention-opportunity-cost-pareto-and-preparation).
 
 - do nothing;
 - wait for named information or conditions, with a recheck trigger;
@@ -125,15 +143,17 @@ Evaluate the alternatives together, once:
 
 Show a credible downside of delay beside the expected benefit and uncertainty. Do not manufacture fear, shame, artificial loss or scarcity, streak penalties, or irreversible commitment merely to push a decision.
 
-A leverage claim is a hypothesis that a small set of causes or actions produces most of the relevant value. Test it, but keep the remaining work when it protects safety, trust, accessibility, recovery, legal duties, rare catastrophic cases, or an explicit requirement.
+Use the **Pareto principle (80/20 rule)** as a local concentration hypothesis: test whether a small set of causes or actions produces most of the relevant value. Preserve the useful many, and keep any remaining work that protects safety, rights, trust, accessibility, recovery, legal duties, counter-signals, rare catastrophic cases, or an explicit requirement. Do not assume the numerical ratio.
+
+Prefer a **Pareto improvement** when one is feasible. Evaluate effects separately for each affected Actor, Subsystem, Upstream System, and Dependent System; an aggregate gain is not enough. When a proposal creates a loser or transfers burden, state the distributional trade-off, whose Authority can accept it, and the mitigation, compensation, reversal, or informed exception. Do not relabel a trade-off as Pareto-improving.
 
 Waiting is an explicit alternative within this comparison. It preserves option value only when it names what may change, what evidence is expected, what happens meanwhile, and the trigger for deciding again. It is not an unowned pause.
 
 Avoid false numerical precision. Use an outside view when comparable work exists: compare the current case with actual prior outcomes and explain the differences in actors, conditions, interfaces, responsibility, and evidence. When material architecture or operating assumptions remain unresolved, estimate a bounded evidence-producing experiment rather than delivery.
 
-### Preparation and stopping rule
+### Mise en place and stopping rule
 
-Prepare the inputs, context, capabilities, permissions, operating conditions, proof seam, fallback, and resumption state that the next action actually requires. Classify each readiness condition as required or optional.
+Use proportional **mise en place**: prepare the inputs, context, materials, capabilities, permissions, operating conditions, proof seam, fallback, and resumption state that the next action actually requires. Classify each readiness condition as required or optional.
 
 Continue preparation while a required condition is missing, an irreversible or high-consequence assumption is untested, or another information step is likely to change the decision more than it costs. Stop preparing when required readiness passes and execution or a bounded experiment now has greater expected Outcome or information value.
 
@@ -149,7 +169,33 @@ Exploration reduces uncertainty; exploitation uses an established path to produc
 
 Inspect each material seam. A seam has a governing rule or remains a visible gap.
 
-### Actors, responsibility, Authority, and handoffs
+### System structure and relationships
+
+Select the System of interest explicitly. Identify its containing System when one exists, its internal Subsystems, its Upstream Systems, its Dependent Systems, and the operating environment. For every material relationship, name the boundary crossed, exchanged input or output, interface contract, assumptions, Ownership, Responsibility, Authority, failure propagation, proof, and change-notification obligation.
+
+Concept sources: [System boundaries, Subsystems, and Dependent Systems](sources.md#system-boundaries-subsystems-and-dependent-systems).
+
+Subsystem work has nested Responsibility: the Subsystem owner is responsible for its bounded contract, while the containing System owner remains responsible for integration and the containing Outcome. A dependent relationship never silently transfers Ownership or Authority. When a System changes, recovers, degrades, or retires, assess both what it relies on and what relies on it.
+
+```mermaid
+flowchart LR
+  C["Containing System"]
+  S["System of interest"]
+  SS1["Subsystem A"]
+  SS2["Subsystem B"]
+  U["Upstream System"]
+  D["Dependent System"]
+  E["Operating environment"]
+
+  C --> S
+  S --> SS1
+  S --> SS2
+  U -->|"contracted input or capability"| S
+  S -->|"contracted output or capability"| D
+  E <-->|"conditions and effects"| S
+```
+
+### Actors, Ownership, Responsibility, Authority, and handoffs
 
 Identify every Actor that supplies, decides, approves, performs, receives, operates, supports, or recovers something. For each handoff, define:
 
@@ -160,9 +206,13 @@ Identify every Actor that supplies, decides, approves, performs, receives, opera
 - Authority and effect boundary; and
 - failure, degraded, retry, and resumption behavior.
 
+Name one owner for each integrated Outcome or Durable system and a responsible Actor for each bounded duty. Delegation creates nested Responsibility: the delegator retains parent Ownership, integration, and terminal proof while the recipient accepts Responsibility for the bounded child contract. Submission, waiting, failure, or a completed child result does not end parent Ownership. Transfer requires an explicit successor, accepted state, Authority, and continuation contract.
+
 Capability, confidence, and ownership do not create Authority. Authority is explicitly granted for a named effect and boundary. An agent or LLM may propose a wider action but cannot authorize it.
 
 Keep every handoff contract human-readable. When a material handoff rule is formalizable, bind it to a named deterministic validator or effect guard. The validator implements the accepted rule; it does not become a competing policy authority.
+
+Concept sources: [Actors, Ownership, Responsibility, Authority, and handoffs](sources.md#actors-ownership-responsibility-authority-and-handoffs).
 
 ### State, identity, and representations
 
@@ -175,6 +225,8 @@ Material state, assumptions, gaps, proposed or actual effects, health signals, c
 Every durable System publishes enough identity and applicability information to determine whether it may govern an interaction: stable identity, purpose, supported operations and conditions, version, design and operational state, dependencies, Authority, precedence, owner, and canonical record. An ineligible, unbuilt, superseded, retired, or incompatible contract cannot govern execution.
 
 Bind an interaction only to an eligible contract whose applicability, version, and precedence match visible evidence. An LLM or semantic retrieval may find and interpret candidates, but it cannot create eligibility or Authority. No match enters the unknown-case path; conflicting matches enter the ambiguity path.
+
+Concept sources: [Representations, LLM judgment, and deterministic mechanisms](sources.md#representations-llm-judgment-and-deterministic-mechanisms).
 
 ```mermaid
 flowchart LR
@@ -200,13 +252,29 @@ Simulation and live operation share the same retrieval, interpretation, decision
 
 ### Incentives, friction, and operating conditions
 
-Inspect what the arrangement makes easy, rewarding, costly, avoidable, gameable, or invisible for every Actor. The intended path should be easier than harmful or irrelevant alternatives without using shame, hidden manipulation, artificial scarcity, proxy rewards, or coercion.
+Treat incentive structure as a primary design material and a first-line diagnostic. Inspect what the arrangement makes easy, rewarding, costly, avoidable, gameable, or invisible for every Actor, including indirect incentives created by metrics, defaults, access, status, delay, risk transfer, and who bears each cost or receives each benefit. Compare those actual incentives with the accepted Outcome; do not assume that stated goals, instructions, or goodwill override them.
+
+When behavior diverges from intent, first inspect incentives and constraints, information, capability, Authority, friction, interfaces, and operating conditions before blaming an Actor. Failure to identify and account for a material incentive is itself a System-design failure. The intended path should be easier and more rewarding than harmful or irrelevant alternatives without using shame, hidden manipulation, artificial scarcity, proxy rewards, or coercion.
 
 Repeated remembering, checking, searching, noticing, understanding, or exerting willpower is a real System dependency. Remove avoidable compliance dependencies with clear defaults, deterministic triggers, preserved state, prepared choices, and exception-based attention. Keep irreducible human judgment explicit.
 
 The operating environment is part of the System when it changes behavior. Inspect relevant access, availability, timing, location, visibility, resources, social or organizational conditions, competing paths, and transition cost before blaming an Actor or building software. Treat an environmental or process change as a testable intervention with a mechanism, proof, abort rule, and reversal path.
 
 Metrics change incentives. For each material metric, name the Outcome it represents, how it could improve while the Outcome worsens, and a counter-signal. A proxy may inform a decision but cannot replace the Outcome or authorize promotion by itself.
+
+```mermaid
+flowchart LR
+  R["Rules, constraints, information, and alternatives"] --> I["Actual incentive structure"]
+  I --> A["Actor choices and actions"]
+  A --> O["Outcomes and side effects"]
+  O --> M["Evidence and counter-signals"]
+  M --> D{"Incentives aligned with the accepted Outcome?"}
+  D -->|"Yes"| K["Retain and monitor proportionately"]
+  D -->|"No"| C["Change the arrangement, not merely the instruction"]
+  C --> R
+```
+
+Concept sources: [Incentives, friction, routines, and operating conditions](sources.md#incentives-friction-routines-and-operating-conditions).
 
 ### Ambient progress and attention
 
@@ -216,7 +284,9 @@ Healthy routine behavior may recede from attention; exceptions, stale assumption
 
 ## 5. Operate under real conditions
 
-Design for the weakest realistic condition in which the essential Outcome, state, or future option must survive. Relevant conditions can include interruption, reduced human or machine capacity, missing input or approval, unavailable dependency, stale information, delayed response, overload, or partial connectivity. Use only the conditions credible for the System; do not import a personal routine or arbitrary elapsed-time assumption.
+Design for the weakest realistic condition in which the essential Outcome, state, or future option must survive. Relevant conditions can include interruption, reduced human or machine capacity, missing input or approval, unavailable dependency, stale information, delayed response, overload, or partial connectivity. Select conditions from evidence about this System, including routines when they are part of it; do not assume a context-specific routine, cadence, or elapsed-time threshold whose mechanism and relevance are unestablished.
+
+Concept sources: [Resilience, monitoring, decay, and recovery](sources.md#resilience-monitoring-decay-and-recovery).
 
 Every applicable Durable system defines these modes:
 
@@ -261,6 +331,8 @@ When a failure recurs, trace the contributing conditions until reaching a contro
 ## 6. Prove and learn
 
 Treat every material System change as a hypothesis. Distinguish:
+
+Concept sources: [Verification, validation, measurement, and learning](sources.md#verification-validation-measurement-and-learning).
 
 - **verification:** the System behaves according to its accepted contract;
 - **validation:** the System improves the intended real Outcome;
@@ -368,6 +440,8 @@ stateDiagram-v2
 
 A change is not complete because a rule, instruction, integration, or program was installed. It must address affected existing state and prove the transition.
 
+Concept sources: [Change, legacy, and retirement](sources.md#change-legacy-and-retirement).
+
 Reopen the boundary when a change adds or alters an Actor, user group, environment, dependency, permission, interface, state transition, exception, irreversible effect, scale class, support duty, or recovery obligation. Prior estimates, evidence, Authority, and approval do not carry forward automatically.
 
 Evaluate three independent axes:
@@ -400,19 +474,21 @@ An agent may detect, research, draft, simulate, and review a governance change. 
 
 Create durable records when state, responsibility, evidence, Authority, waiting, approval, effects, or recovery must survive the interaction. Do not create a System Record for a bounded reversible result whose source, interpretation, action, and proof fit in the response.
 
+Concept sources: [System boundaries](sources.md#system-boundaries-subsystems-and-dependent-systems), [Ownership and handoffs](sources.md#actors-ownership-responsibility-authority-and-handoffs), and [representations](sources.md#representations-llm-judgment-and-deterministic-mechanisms).
+
 One canonical System Record governs each Durable system version. It contains only fields required by a named consumer or material risk. Its non-optional meaning is:
 
 ### Frame
 
-- original request or problem, Intent, accepted Outcome, good-enough threshold, and non-Outcomes;
-- System boundary, supported conditions, affected Actors, constraints, and explicit non-ownership;
-- owner, decision Authority, and material domain vocabulary;
+- original request or problem, Intent, accepted Outcome, satisficing threshold, and non-Outcomes;
+- System of interest, containing System, Subsystems, Upstream Systems, Dependent Systems, supported conditions, affected Actors, constraints, and explicit non-ownership;
+- owner, nested Responsibilities, decision Authority, and material domain vocabulary;
 - authoritative facts, decisions, assumptions, unknowns, and ambiguity behavior; and
 - selected intervention, Opportunity cost, rationale, and review conditions.
 
 ### Contract
 
-- Actor responsibilities and handoff contracts;
+- Ownership, Actor Responsibilities, nested Responsibility, and handoff contracts;
 - writable authority for each information type and any derived representations;
 - inputs, preconditions, outputs, stable identities, timing, transitions, and completion evidence;
 - approval and external-effect boundaries;
@@ -435,6 +511,8 @@ Use the [System Record template](system-record-template.md) to instantiate this 
 The method does not prescribe a task manager, database, document system, schema language, or storage layout. Each implementation defines which information types it owns, which representations are writable, how projections expose freshness, and how reconciliation detects drift.
 
 ## 9. Apply informed exceptions
+
+Concept source: [Intent, Outcome, and bounded Authority](sources.md#intent-outcome-and-bounded-authority). The informed-exception contract itself is a normative safeguard defined by this standard.
 
 A person with the relevant Authority may choose to bypass a safeguard after seeing:
 

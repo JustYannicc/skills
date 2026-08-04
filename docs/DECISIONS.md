@@ -44,6 +44,8 @@
 
 - Setup manages the standing entry in each selected harness's effective instruction file at the chosen Installation scope. Codex-style targets may use `AGENTS.md`; Claude-style targets may use `CLAUDE.md`. Setup discovers verified precedence, edits the narrowest active source, previews every target, and does not mutate another scope implicitly.
 - Every request loads `thinking-in-systems` before `workflow`. Description matching supports discovery but is not the activation guarantee.
+- Thinking in Systems and the `'Workflow'` skill are capability instructions the same agent follows. Their result boundary separates governing judgment from coordination; it does not imply separate agents or a hidden delegation.
+- System admission does not require recurrence. A one-time handoff or operation with material boundaries, Authority, Responsibility, state, commitment, proof, or recovery is governed proportionately; recurrence changes persistence and lifecycle obligations.
 - Runtime phase skills are model-invoked; `ask-yannic` and `setup-system-thinking` are user-invoked.
 - Bounded synchronous work uses Inline mode; a Persistence boundary switches to Durable mode. The method, responsibility, and Review remain active in both.
 - Workflow owns the canonical routing model. `ask-yannic` explains that model and Yannic-specific rationale without executing the route.
@@ -145,6 +147,7 @@
 - The repository carries the complete universalized S01 v1.0 standard and reusable System-Design Template. Compact orientation documents cannot replace them.
 - The installed Thinking in Systems skill always reads the complete runtime standard before applying its proportional lens. Section pointers provide traceability and fast rereading; they are not conditional permission to skip the rest of the method.
 - The installed standard contains only guidance needed to apply systems thinking. Provenance, evidence inventories, publication state, accepted/open design history, and maintainer notes remain in repository governance records outside agent-facing references.
+- The installed `references/sources.md` maps professional runtime concepts to public evidence and optional further reading. It is not governing guidance; maintainer lineage, private-source records, and evidence debates remain in repository governance records.
 - References to another installed skill use a quoted proper name such as `'Workflow'` and explicitly identify it as a skill, so the agent can distinguish a skill capability from an ordinary process term.
 - Thinking in Systems uses `LLM` only for the probabilistic language component, `System representation` for descriptions and views, and `deterministic mechanism` for enforceable runtime behavior. The bare word `model` is avoided where those meanings could be confused.
 - The complete runtime standard owns Thinking in Systems vocabulary so an independently installed skill carries the meanings it applies. `CONTEXT.md` points to that authority and owns only surrounding repository and `'Workflow'` terms.

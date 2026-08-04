@@ -1,6 +1,6 @@
 # Thinking in Systems source record
 
-This repository-facing record preserves provenance, evidence classification, and source links used to maintain the public Thinking in Systems skill. It is intentionally outside the installed skill's agent-facing references because none of this material is required to apply the method.
+This repository-facing record preserves provenance and evidence classification for the public Thinking in Systems skill. The installed [Sources and further reading](../../skills/thinking-in-systems/references/sources.md) file maps professional concepts to public links for optional deeper reading. This record retains maintainer-facing lineage that is not required to apply the method.
 
 ## Governing history
 
@@ -17,7 +17,7 @@ The private originals remain outside this public repository. Their fingerprints 
 
 ## Source inventory
 
-The maintained public sources live in [`docs/SOURCES.md`](../SOURCES.md). Pinned repository and upstream revisions used by deterministic provenance validation live in [`validation/sources.yaml`](../../validation/sources.yaml), and the installed package's machine-readable adaptation record lives in [`skills/thinking-in-systems/provenance.yaml`](../../skills/thinking-in-systems/provenance.yaml).
+The authoritative public concept-to-source map lives in the installed [source guide](../../skills/thinking-in-systems/references/sources.md). The repository-wide [source inventory](../SOURCES.md) routes to it and separately records skill-design and distribution sources. Pinned repository and upstream revisions used by deterministic provenance validation live in [`validation/sources.yaml`](../../validation/sources.yaml), and the installed package's machine-readable adaptation record lives in [`skills/thinking-in-systems/provenance.yaml`](../../skills/thinking-in-systems/provenance.yaml).
 
 Matt Pocock's [`skills` repository at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c) informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
 
