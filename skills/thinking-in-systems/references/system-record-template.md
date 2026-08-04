@@ -25,7 +25,7 @@ Use this template only for a Durable system or material System change. Complete 
 - **Hard and soft Constraints:**
 - **Feasible set under current Authority, resources, capabilities, and operating conditions:**
 - **Affected Actor Preferences, conflicts, evidence, and conditions under which they may change:**
-- **Matched truthful Decision frames:** reference points, gain/loss and absolute/relative formulations, probability formats, denominators, time horizons, stable judgment, and any frame-sensitive reversal; keep alternatives, outcomes, Constraints, and material omissions constant.
+- **Matched truthful Decision frames, when the decision is materially frame-sensitive:** reference points, gain/loss and absolute/relative formulations, probability formats, denominators, time horizons, stable judgment, and any frame-sensitive reversal; keep alternatives, outcomes, Constraints, and material omissions constant.
 - **Owner, bounded Responsibilities, and decision Authority:**
 - **Material domain terms:**
 - **Intentionality and progress classification, when relevant:** intended productive use, rest or leisure, intentional or incidental progress, or unresolved Intent; never a moral score.
