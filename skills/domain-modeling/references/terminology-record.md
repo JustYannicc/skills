@@ -29,13 +29,15 @@ Add these conditionally:
   mapped Containing, Subsystem, Upstream, Dependent, or Peer relationship.
   Link to the authoritative contract instead of copying it.
 
-Identity, owner, canonical locator, Authority, transition history, provenance,
-and exact result revision remain the Adapter's ordinary conditional metadata.
-When the Adapter supports a conditional write, carry the source revision. If an
-existing authority has neither an exact revision nor equivalent stale detection,
-report a capability gap instead of overwriting it; Workflow governs any
-serialization or recovery. Preserve change rationale in the Adapter's history
-rather than inventing a second history field.
+Every Durable canonical record carries the Adapter's baseline metadata:
+immutable identity, one owner, canonical locator, and transition history.
+Mutable terminology results also carry exact source and result revisions in
+their evidence. Authority and conditional-write guards follow the Adapter's
+declared capability, but a missing exact revision, stale detection, or accepted
+write Authority is a capability gap—not permission to overwrite. Report the gap
+to Workflow and preserve change rationale in the Adapter's history rather than
+inventing a second history field. Inline transient results may omit Durable
+metadata only when they are explicitly marked non-durable.
 
 ## Scenario probes
 
