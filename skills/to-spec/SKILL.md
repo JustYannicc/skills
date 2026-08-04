@@ -83,7 +83,8 @@ Use the uncertainty, not the topic, to select the next discovery capability:
 | --- | --- |
 | Conflicting or undefined terminology | `'domain-modeling'` skill |
 | A decision held by the current user | `'batch-grill-me'` skill |
-| Knowledge or authority held by another actor | `'to-questionnaire'` skill |
+| Knowledge held by another person | `'to-questionnaire'` skill |
+| Missing approval or effect authority | active `'Workflow'` approval/waiting route |
 | Persistent, multi-session, or irreducible fog | `'wayfinder'` skill |
 | An external fact or source | `'research'` skill |
 | An empirical design question | `'prototype'` skill |

@@ -13,9 +13,9 @@ This repository-wide inventory routes each source class to its authority. Inclus
 - [Matt Pocock's skills, inspected revision](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c)
 
 The universal `to-spec` successor is an adapted public skill based on Matt
-Pocock's `skills/engineering/to-spec` at the pinned revision above. It retains
-conversation synthesis, domain vocabulary, and high proof-seam selection while
-removing repository, issue-tracker, and software-PRD assumptions. Its
+Pocock's `skills/engineering/to-spec` at the pinned revision above. Its
+complete retained-behavior and changed-assumption record is
+[`skills/to-spec/provenance.yaml`](../skills/to-spec/provenance.yaml);
 representation remains governed by the separate System Record design and the
 selected Adapter.
 
