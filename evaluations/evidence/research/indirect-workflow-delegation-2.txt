@@ -1,0 +1,35 @@
+Fresh-context execution — completed research-indirect-workflow-delegation fixture attempt 2
+
+Candidate commit: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-research-indirect-final-2
+Recorded at (UTC): 2026-08-04T18:18:13.000Z
+Upstream source: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c; target `skills/engineering/research/SKILL.md`.
+Applied overlay: `overlays/research/SKILL.md.patch`; sha256 `1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a`; applied to the pinned `research` source target `skills/engineering/research/SKILL.md`.
+Environment: `workflow-research-with-delegation`; workflow=true, research=true, delegation=true, persistence=false, selectedAdapter=false; tools=[primary-source lookup, delegation].
+Effects: none; no policy decision, Specification, execution, or external write was authorized or performed.
+
+Prompt read before expected result
+
+Workflow needs one external fact before it can decide an agent policy: according to the current official GitHub Actions documentation, what is the maximum execution time for a GitHub-hosted job? Delegate that bounded lookup, require the official GitHub source locator and any scope or plan caveat in the return contract, integrate the delegated result, and return the cited fact and uncertainty to Workflow without making the policy decision.
+
+Expected result
+
+Research accepts the bounded request from Workflow, delegates the bounded primary-source lookup with an explicit return contract, integrates the delegated result, and returns cited findings and uncertainty. The result is a bounded research artifact; no Specification or execution is invoked, no effects occur, the delegated route and return contract are explicit, delegated work is integrated before return, and Workflow retains parent responsibility.
+
+Delegated child return
+
+The child was assigned only the bounded primary-source lookup and was required to return the exact official source locator, the fact, a scope or plan caveat, and uncertainty to the parent. It did not make an agent-policy decision, write a Specification, decompose work, execute work, or perform an effect.
+
+- **Official source locator:** GitHub Docs, “Actions limits,” https://docs.github.com/en/actions/reference/limits, section “Existing system limits,” row “All GitHub-hosted runners → Job execution time.”
+- **Fact:** a GitHub-hosted Actions job may run for up to 6 hours of execution time; at the limit, the job is terminated and fails.
+- **Scope caveat:** the row gives the general limit for GitHub-hosted runners. The official GitHub-hosted runners reference separately states that the single-CPU `ubuntu-slim` GitHub-hosted runner has a narrower 15-minute job timeout. The same Actions limits table gives self-hosted runners a separate maximum of 5 days, so the 6-hour value must not be generalized to those scopes.
+- **Plan caveat:** larger GitHub-hosted runners are available only to organizations or enterprises on GitHub Team or GitHub Enterprise Cloud plans; the cited larger-runner reference does not state a separate execution-time cap. The workflow `jobs.<job_id>.timeout-minutes` default is 360 minutes, but a configured timeout cannot extend the runner execution limit. GitHub notes that limits are subject to change.
+- **Uncertainty:** the page was accessible on 2026-08-04; this is a current documentation lookup, not a guarantee that GitHub will not revise the limit. An official secondary corroboration is the “About the GITHUB_TOKEN” page at https://docs.github.com/en/actions/concepts/security/github_token, which also states the 6-hour GitHub-hosted and 5-day self-hosted limits.
+
+Integrated response to Workflow
+
+Research returned the child’s cited result and uncertainty to Workflow through the explicit `workflow-to-research-to-delegated-research-to-workflow` route. The return preserved the official locator, 6-hour fact, runner-scope distinction, lack of a stated plan-specific exception, and subject-to-change caveat. Because persistence and a selected Adapter were unavailable, this was an inline bounded result (`durable=false`); no durable persistence was claimed. The delegated lookup is complete, but Workflow remains responsible for deciding the agent policy, any later Specification or execution, and the parent Outcome.
+
+Result: the delegated route and return contract are explicit, the child result is integrated before return, cited findings and uncertainty are ready for Workflow, and no policy/specification/execution/effect occurred.

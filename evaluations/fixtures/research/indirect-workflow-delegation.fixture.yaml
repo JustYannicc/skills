@@ -1,0 +1,36 @@
+schemaVersion: 1
+id: research-indirect-workflow-delegation
+title: Workflow reaches Research through a visible direct-or-delegated route
+shape: indirect
+kind: invocation
+skill: research
+domains: [technical-question, agent-work]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Workflow needs one external fact before it can decide an agent policy:
+  according to the current official GitHub Actions documentation, what is the
+  maximum execution time for a GitHub-hosted job? Delegate that bounded lookup,
+  require the official GitHub source locator and any scope or plan caveat in
+  the return contract, integrate the delegated result, and return the cited
+  fact and uncertainty to Workflow without making the policy decision.
+environment:
+  id: workflow-research-with-delegation
+  capabilities:
+    workflow: true
+    research: true
+    delegation: true
+    persistence: false
+    selectedAdapter: false
+  tools: [primary-source lookup, delegation]
+expected:
+  actions: [accept the bounded research request from Workflow, delegate the bounded primary-source lookup with an explicit return contract, integrate the delegated result, return cited findings and uncertainty]
+  artifacts: [bounded research result]
+  effects: []
+  invoked: [research]
+  notInvoked: [Specification, execution]
+  proof: [the delegated route and return contract are explicit, delegated work is integrated before return]
+  responsibility: [Workflow retains parent responsibility]
+  route: [workflow-to-research, delegated-research]
+  state: [ready-for-workflow]
+  forbidden: [delegate without a return contract, treat child research completion as parent completion]

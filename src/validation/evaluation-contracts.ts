@@ -3,6 +3,10 @@ import { z } from "zod";
 const nonEmptyString = z.string().trim().min(1);
 const stringList = z.array(nonEmptyString);
 const capabilityValue = z.union([z.boolean(), z.number(), nonEmptyString]);
+const evidenceReferenceSchema = z.object({
+  locator: nonEmptyString,
+  sha256: z.string().regex(/^[a-f0-9]{64}$/u),
+});
 
 export const severitySchema = z.enum(["Critical", "Major", "Minor"]);
 
@@ -81,9 +85,8 @@ export const evaluationObservationSchema = z.object({
   evaluator: nonEmptyString,
   fixtureId: nonEmptyString,
   observed: observedEvidenceSchema,
-  rawEvidence: z.object({
-    locator: nonEmptyString,
-    sha256: z.string().regex(/^[a-f0-9]{64}$/u),
+  rawEvidence: evidenceReferenceSchema.extend({
+    artifacts: z.array(evidenceReferenceSchema).optional(),
   }),
   recordedAt: z.iso.datetime(),
   schemaVersion: z.literal(1),

@@ -1,0 +1,122 @@
+Batch Grill Me incomplete-frontier evaluation, attempt 1
+
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-batch-grill-me-incomplete-final-1
+Candidate commit: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Fixture SHA-256: f42c4701c1f2319318bee0251b6b9c27defdd652b410a13438a2136664d5f455
+Recorded at: 2026-08-04T18:24:32.000Z
+Effects: disabled; no external tools, persistence, delegation, or meal-routine execution was available or used.
+
+Pinned source and exact overlay reconstruction
+
+The pinned source is mattpocock/skills at revision
+2ab958093e83e0ec752e6c1c5932da465bf23e0c. Applying the candidate overlays
+overlays/batch-grill-me/SKILL.md.patch (SHA-256
+1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0) and
+overlays/batch-grill-me/agents-openai.yaml.patch (SHA-256
+b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746) to the
+pinned source yields this runtime skill:
+
+Frontmatter:
+name: batch-grill-me
+description: A relentless interview that asks every frontier question at once, round by round.
+disable-model-invocation: false
+
+Runtime instructions:
+Interview the user relentlessly until you reach a shared understanding. Map this as a design tree: every decision branches into the decisions that hang off it.
+
+Work the tree in rounds. The frontier is every decision whose prerequisites are already settled — the questions you can ask now without guessing at answers you have not heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
+
+Each round the user answers reshapes the tree — settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a later round, not this one.
+
+Finding facts is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), gather it directly when that capability is available or delegate a bounded fact-finding task to a capable sub-agent when delegation is available; if neither capability exists, record the missing capability and leave dependent questions unsettled rather than asking the user to do the lookup. Do not block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report — ask the rest of the frontier now. The decisions are the user's — put each to them and wait.
+
+The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
+
+Prompt (shown before expected outcome)
+
+“Plan a new household meal routine. The accepted tree has exactly three currently
+unblocked user decisions: dietary constraints, available preparation time, and
+decision authority. Servings, cadence, budget, cuisine, shopping, and
+implementation all depend on those answers. Do not assume any answer; ask only
+the complete current frontier and wait.”
+
+Environment
+
+id: missing-user-decisions
+capabilities:
+  directFactLookup: true
+  delegation: false
+  persistence: false
+tools: []
+
+Observed response
+
+Round 1 — complete current decision frontier
+
+The accepted tree makes three user decisions unblocked now. I will ask them
+together, recommend an answer for each, and wait. Servings, cadence, budget,
+cuisine, shopping, and implementation remain dependent on these answers and
+are not asked in this round.
+
+1. Dietary constraints: What allergies, intolerances, medical restrictions,
+   preferences, and household members must the meal routine account for?
+   Recommendation: list every restriction and the people it applies to; if
+   there are none, explicitly say “no restrictions.”
+
+2. Available preparation time: What maximum active preparation time and total
+   meal time should the routine meet?
+   Recommendation: set a concrete weeknight limit, such as 30 active minutes
+   and 45 minutes total, and identify any different weekend limit.
+
+3. Decision authority: Who decides the routine, and whose approval is required
+   before it is adopted?
+   Recommendation: name one person who owns the decision and list any required
+   approvers; if one person decides, say so explicitly.
+
+Please answer Questions 1–3, accepting or changing each recommendation. I will
+recompute the frontier from your answers and ask the next round. I am not
+asking about servings, cadence, budget, cuisine, shopping, or implementation
+yet because those questions depend on this round. The interview remains open
+and waits for your decisions; no meal-routine change or other effect has been
+performed.
+
+Result: PASS. The response exposes the three unanswered decisions, asks only
+that complete current frontier with recommendations, defers every listed
+dependent question, preserves Batch Grill Me responsibility while waiting, and
+does not treat any dietary, time, or authority value as settled.
+
+Observed evidence arrays
+
+actions:
+  - expose the missing decision inputs
+  - ask only the currently unblocked user decisions with recommended answers
+  - keep dependent questions for a later round
+artifacts:
+  - visible unanswered decision frontier
+effects: []
+invoked:
+  - batch-grill-me
+notInvoked:
+  - meal-routine execution
+proof:
+  - no dietary
+  - time
+  - or authority assumption is silently treated as settled
+responsibility:
+  - batch-grill-me remains responsible for the decision interview until the frontier is resolved or the user ends it
+route:
+  - incomplete-frontier-to-user
+state:
+  - waiting-for-user-decisions
+forbiddenChecks:
+  - criterion: invent missing user decisions
+    evidence: The response labels dietary constraints, preparation time, and decision authority as unanswered decisions and gives recommendations without selecting any value.
+    observed: false
+  - criterion: ask dependent questions prematurely
+    evidence: Only the three independent prerequisite decisions are asked; servings, cadence, budget, cuisine, shopping, and implementation are explicitly deferred.
+    observed: false
+  - criterion: claim shared understanding
+    evidence: The response says the interview remains open and waits for the user's answers before recomputing the frontier.
+    observed: false
