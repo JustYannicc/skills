@@ -33,6 +33,15 @@ const yamlSource = await load("fixtures/markdown-yaml.md");
 const tomlMarkdownSource = await load("fixtures/markdown-toml.md");
 const tomlOnlySource = await load("fixtures/toml-only.toml");
 const projectionSource = await load("fixtures/projection-canonical.md");
+const llmTrial = JSON.parse(await load("llm-round-trip/trial.json")) as {
+  inputRevision: string;
+  candidates: {
+    inputPath: string;
+    inputSha256: string;
+    outputPath: string;
+    outputSha256: string;
+  }[];
+};
 
 const options = [
   {
@@ -203,6 +212,81 @@ const results = options.map((option) => {
   };
 });
 
+const llmOutputs = [
+  {
+    id: "markdown-generated-projections",
+    inputPath:
+      "prototypes/system-record-representation/fixtures/projection-canonical.md",
+    outputPath:
+      "prototypes/system-record-representation/llm-round-trip/projection-canonical.md",
+    parse: parseMarkdownYaml,
+    source: projectionSource,
+  },
+  {
+    id: "markdown-yaml",
+    inputPath:
+      "prototypes/system-record-representation/fixtures/markdown-yaml.md",
+    outputPath:
+      "prototypes/system-record-representation/llm-round-trip/markdown-yaml.md",
+    parse: parseMarkdownYaml,
+    source: yamlSource,
+  },
+  {
+    id: "markdown-toml",
+    inputPath:
+      "prototypes/system-record-representation/fixtures/markdown-toml.md",
+    outputPath:
+      "prototypes/system-record-representation/llm-round-trip/markdown-toml.md",
+    parse: parseMarkdownToml,
+    source: tomlMarkdownSource,
+  },
+  {
+    id: "toml-only",
+    inputPath:
+      "prototypes/system-record-representation/fixtures/toml-only.toml",
+    outputPath:
+      "prototypes/system-record-representation/llm-round-trip/toml-only.toml",
+    parse: parseTomlOnly,
+    source: tomlOnlySource,
+  },
+] as const;
+
+const llmRoundTrip = await Promise.all(
+  llmOutputs.map(async (candidate) => {
+    const output = await readFile(
+      `${root}/llm-round-trip/${candidate.outputPath.split("/").at(-1)}`,
+      "utf-8"
+    );
+    const trialCandidate = llmTrial.candidates.find(
+      (item) => item.outputPath === candidate.outputPath
+    );
+    const input = candidate.parse(candidate.source);
+    const edited = candidate.parse(output);
+    const expectedEdited = {
+      ...semanticRecord(input),
+      narrative: `${input.narrative.trimEnd()}\n\nRecovery preserves the canonical source and blocks effects until validation passes.\n`,
+      owner: { ...input.envelope.owner, label: "Recovery owner" },
+    };
+    return {
+      exact_input_revision_recorded:
+        llmTrial.inputRevision === "dbabaabd9aa59d739becc174ee44bcf73844b6a6",
+      input_sha256_matches:
+        trialCandidate?.inputPath === candidate.inputPath &&
+        trialCandidate.inputSha256 === sha256(candidate.source),
+      link_and_comments_preserved:
+        output.includes("../../../docs/UNIVERSAL_WORK_CONTRACT.md") &&
+        output.includes("envelope-comment") &&
+        output.includes("rationale-comment"),
+      no_unintended_semantic_changes: isDeepStrictEqual(
+        semanticRecord(edited),
+        expectedEdited
+      ),
+      option: candidate.id,
+      output_sha256_matches: trialCandidate?.outputSha256 === sha256(output),
+    };
+  })
+);
+
 const canonical = parseMarkdownYaml(projectionSource);
 const sourceLocator = "fixtures/projection-canonical.md";
 const sourceRevision = "prototype-source-revision-2";
@@ -317,6 +401,7 @@ const report = {
         canonical.envelope.record_revision
       ) === false,
   },
+  independent_llm_round_trip: llmRoundTrip,
   one_way_projection: {
     direct_write_blocked: isBlocked(() => acceptWritableRecord(projection)),
     fresh_before_source_edit: projectionIsFresh(
@@ -364,5 +449,30 @@ const report = {
     "Which representation preserves human meaning and deterministic action boundaries with one writable authority?",
   shared_fixture_options: results,
 };
+
+const proofFailed = [
+  ...results.flatMap((result) => [
+    result.duplicate_key_source_blocked,
+    result.manual_edit_simulation_parses,
+    result.nested_unknown_field_blocked,
+    result.parse_serialize_parse_semantics_preserved,
+    result.parserless_recovery_in_no_git_directory,
+    result.parses_to_shared_fixture,
+  ]),
+  ...llmRoundTrip.flatMap((result) => [
+    result.exact_input_revision_recorded,
+    result.input_sha256_matches,
+    result.link_and_comments_preserved,
+    result.no_unintended_semantic_changes,
+    result.output_sha256_matches,
+  ]),
+  ...Object.values(report.constrained_yaml),
+  ...Object.values(report.fail_closed_action_boundary),
+  ...Object.values(report.one_way_projection),
+].some((result) => result !== true);
+
+if (proofFailed) {
+  throw new Error("representation proof has a failing required assertion");
+}
 
 process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);

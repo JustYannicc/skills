@@ -1,34 +1,35 @@
 # Independent LLM round-trip evidence
 
-Date: 2026-08-04. Candidate: prototype commit `238f6f9` plus the parent
-runner correction that followed the independent trial.
+Date: 2026-08-04. Exact input revision:
+`dbabaabd9aa59d739becc174ee44bcf73844b6a6`.
 
-An independent fresh-context LLM received the same edit for every candidate:
+The isolated trial used `gpt-5.6-luna` with max reasoning and fresh context
+`fresh-issue-35-llm-round-trip-1`. It received the same edit for every candidate:
 
-1. change the owner label to `Recovery owner`;
+1. change only `owner.label` from `System owner` to `Recovery owner`;
 2. add `Recovery preserves the canonical source and blocks effects until
-   validation passes.` under `## Rationale`; and
-3. preserve every ID, version, state, authority field, relationship,
-   provenance value, approval, link, and comment.
+   validation passes.` as a new paragraph immediately after the existing
+   Rationale paragraph; and
+3. preserve every other identity, record version/revision, lifecycle and
+   eligibility state, Authority field, relationship identity/version/boundary,
+   provenance value, approval field, link, comment, syntax, and whitespace as
+   much as the edit permits.
 
-The LLM edited isolated copies and reparsed them through the prototype's
-candidate parsers. It did not edit tracked repository files.
+The LLM wrote isolated raw outputs under `llm-round-trip/`. `trial.json` records
+the exact input/output paths and SHA-256 values. The parent runner independently
+reparses every output and requires all of these assertions before exiting zero:
 
-| Candidate | Reparsed | Required semantics retained | Link and narrative comment retained | Accidental changes | Qualitative edit ambiguity |
-| --- | --- | --- | --- | --- | --- |
-| Markdown + YAML envelope | yes | yes | yes | none | low |
-| Markdown + TOML envelope | yes | yes | yes | none | low |
-| TOML-only | yes | yes | yes | none | high: narrative is inside a TOML multiline-string boundary |
-| Canonical Markdown + generated projections | canonical edit: yes; projections regenerated separately | yes | yes in canonical source | none | low at source; projections require read-only routing |
+| Candidate | Reparsed | Exact intended semantic delta only | Link and both source comments retained | Input/output hashes bound |
+| --- | --- | --- | --- | --- |
+| Markdown + YAML envelope | yes | yes | yes | yes |
+| Markdown + TOML envelope | yes | yes | yes | yes |
+| TOML-only | yes | yes | yes | yes |
+| Canonical Markdown + generated projections | canonical edit: yes | yes | yes | yes |
 
-The independent trial also falsified the action gate with missing or malformed
-authority and with pending, absent, or non-required approval. Every negative
-case blocked; an explicitly approved `external_effect` was the positive
-control. Generated JSON and TOML both carried `writable = false`; the writable
-ingestion seam rejected them, and a canonical narrative edit changed the source
-hash and made both projections stale.
+The generated projections are not writable LLM-edit targets; the runner
+separately regenerates/parses JSON and TOML, compares their full normalized
+semantics with the corpus, and rejects source-revision, source-hash,
+payload-hash, or writable-seam violations.
 
-This is behavioral evidence from one LLM trial, not a deterministic guarantee.
-The deterministic runner separately validates parsing, normalized semantics,
-malformed-source blocking, projection read-only routing, and source-hash
-freshness.
+This is one bounded behavioral trial, not a deterministic guarantee or a human
+readability decision. The associated ready PR remains **HUMAN REVIEW REQUIRED**.
