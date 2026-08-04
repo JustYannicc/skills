@@ -1,0 +1,29 @@
+schemaVersion: 1
+fixtureId: thinking-in-systems-negative
+attempt: 1
+contextId: fresh-thinking-in-systems-negative-1
+suiteRevision: git:469f0fbfe64aa33f3dacad9af9059851ed574d02
+evaluator: gpt-5.6-terra-fresh-context
+recordedAt: 2026-08-04T08:22:09.000Z
+environment:
+  id: conversation-only
+  capabilities: { workflow: true, persistence: false }
+  tools: []
+observed:
+  actions: [apply systems thinking proportionately, explain the concept in one paragraph]
+  artifacts: []
+  effects: [answer returned]
+  forbiddenChecks:
+    - criterion: take over Workflow or add durable ceremony or an extra operation
+      evidence: The response is exactly one explanatory paragraph and creates no coordination, record, or additional operation.
+      observed: false
+  invoked: [thinking-in-systems]
+  notInvoked: [workflow coordination, durable system design, migration]
+  proof: [answer checked against the requested explanation]
+  responsibility: [no parent coordination created]
+  route: [lightweight-governance]
+  state: [complete]
+rawEvidence:
+  locator: evaluations/evidence/thinking-in-systems/negative-1.txt
+  sha256: 23815aa3093ede72cc26aa5c411d2ee45f39c05e2e93079295a13e321bd7946c
+

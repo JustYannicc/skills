@@ -1,0 +1,29 @@
+schemaVersion: 1
+fixtureId: thinking-in-systems-direct
+attempt: 2
+contextId: fresh-thinking-in-systems-direct-2
+suiteRevision: git:469f0fbfe64aa33f3dacad9af9059851ed574d02
+evaluator: gpt-5.6-terra-fresh-context
+recordedAt: 2026-08-04T08:22:02.000Z
+environment:
+  id: workflow-without-specialists
+  capabilities: { workflow: true, persistence: true, specialistPhases: false }
+  tools: []
+observed:
+  actions: [identify intent and outcome, inspect authority incentives friction and environment, define degradation recovery and proof obligations, return governing constraints to Workflow]
+  artifacts: [governance assessment]
+  effects: []
+  forbiddenChecks:
+    - criterion: select Workflow phases or create their results
+      evidence: The response states that it supplies governance only and neither selects phases nor creates phase results.
+      observed: false
+  invoked: [thinking-in-systems]
+  notInvoked: [specialist phase execution]
+  proof: [relevant standard clauses identified, Workflow boundary stated]
+  responsibility: [Workflow retains parent responsibility]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+rawEvidence:
+  locator: evaluations/evidence/thinking-in-systems/direct-2.txt
+  sha256: f0fa58846592ada89cd0081b22d0966e4e5ba1a76c7b8ee3ca7a8e3e551b45be
+

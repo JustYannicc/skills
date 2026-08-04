@@ -1,0 +1,24 @@
+Governance assessment — ready for Workflow decision
+
+Interpretation: this is a recurring customer-update drafting process with an external-message effect. Workflow retains ownership of coordination, contract selection, and completion; this assessment supplies the governing constraints only. No message has been sent.
+
+Accepted outcome: prepare a customer-update draft that is traceable to its source context and safe for a reviewer to approve. “Done” for this stage is a reviewable, versioned draft with its assumptions and approval gate visible—not delivery to a customer.
+
+Authority and state:
+
+- The model may retrieve provided context, identify ambiguities, and compose a proposed draft.
+- Deterministic workflow state must own the draft ID/revision, source links, approval status, approver identity, and the effect gate.
+- Only the authorized approver may approve; only a successful approval bound to the exact immutable draft revision may permit the separate send effector. Any edit, regenerated draft, changed recipient, or changed material assumption invalidates that approval and requires a new one.
+- The original request, source context, draft history, approval decision, and eventual delivery receipt must be preserved in human-readable, inspectable state. No model memory or confidence is authority.
+
+Execution contract for each draft:
+
+1. Preserve the originating update request and bind the relevant customer, source facts, purpose, scope, tone, and intended next step.
+2. Mark each material proposition as source-supported, user-confirmed, or unresolved. If reasonable interpretations could change the recipient, claims, commitment, privacy, or send decision, create a clarification item and ask the smallest discriminating question; do not send.
+3. Compose a versioned proposal that exposes its sources, assumptions, and visible completion proof.
+4. Route that exact revision to approval. While approval is missing, stale, rejected, or unavailable, retain the draft and resumption pointer, allow only safe preparation, and prevent external effects.
+5. After exact-revision approval, the deterministic effector may send and record the delivery receipt; visible verification confirms the intended revision and recipient were used.
+
+Handoff contract to Workflow: Workflow should implement or select the durable governing record for this recurring process, including normal, missing-approval, stale-context, rejection, and recovery behavior. Its next decision is whether the stated outcome, customer/source-of-truth, approver role, and revision-invalidating changes are already defined. If they are not, preserve the request and open those as explicit gaps before activation.
+
+Proof obligation: demonstrate that an approval token or record references one exact draft revision and that the send boundary rejects every other revision, including a draft modified after approval.

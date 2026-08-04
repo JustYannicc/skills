@@ -1,0 +1,33 @@
+Issue #12 adversarial review and resolution evidence
+
+Fixed point: 3f44a33ebdbbf0d7a8d7fe5638283609a1dd0b72
+Reviewed candidate: 261ab41723bdf4e47c7b32c8baf4abefb94f41e7
+Resolved production candidate: 469f0fbfe64aa33f3dacad9af9059851ed574d02
+Reviewers: independent Claude Opus Standards and Spec axes
+Resolver: root task owner
+Resolution checker: independent gpt-5.6-terra checker; did not author the reviewed revision or fixes
+
+Resolved findings
+
+1. Added 11 hash-bound fresh-context observations and regenerated the 12-fixture report; rebound the accepted foundation observations to the candidate.
+2. Made the installed standard and System Record template the sole current authorities; historical source paths now point to them and retain the approved pinned baseline.
+3. Removed the lossy duplicate constitutional-rule summary from SKILL.md; precise context pointers reach the complete authority.
+4. Updated ARCHITECTURE.md to identify the human-review-required candidate truthfully.
+5. Corrected provenance to disclose the later suite-boundary adaptation and retained source lineage.
+6. Rejected the proposed true non-invocation fixture. The accepted requirements say Thinking in Systems applies to every request, including trivial and conversational work; triviality changes scale, not applicability. The negative and trivial fixtures therefore invoke Thinking in Systems and instead forbid Workflow takeover, durable ceremony, migration, specialist work, extra prose, or another operation.
+7. Added a checkable completion criterion to every governing-lens step.
+8. Removed the duplicate default prompt and pruned repeated boundary language.
+9. Moved the System Record template into the accepted references package shape.
+10. Unified full-standard disclosure behind one threshold: whole-design conformance, Design Complete judgment, or unresolved cross-cutting risk.
+11. Renamed the extra category fixtures to match their direct and edge shapes.
+
+Resolution check
+
+PASS — no unresolved Critical or Major item.
+
+- pnpm validate: passed formatting, typecheck, 21 tests, repository validation, official skill validation, and 12 evaluation fixtures across 129 files.
+- Critical direct fixture: three unique fresh contexts passed.
+- Critical consequential fixture: three unique fresh contexts passed.
+- Negative and trivial evidence: Thinking in Systems applied proportionately; no Workflow takeover, durable record, extra operation, or false completion.
+- Standard/template authority: singular current source; approved historical baseline remains pinned and public-safe.
+- HUMAN REVIEW REQUIRED remains explicit. Issue #12 must stay open and the skill must not be marked final until the maintainer approves it.
