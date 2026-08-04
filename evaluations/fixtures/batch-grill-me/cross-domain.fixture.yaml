@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: batch-grill-me-cross-domain
+title: Frontier rounds preserve dependencies in a physical-world decision
+shape: edge
+kind: routing
+skill: batch-grill-me
+domains: [physical-environment, organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: A volunteer group is deciding how to make a shared workshop safer. Ask the complete unblocked decision frontier in rounds, including scope, authority, and acceptable trade-offs; keep questions about a chosen intervention's exact implementation until the earlier decisions are answered.
+environment:
+  id: cross-domain-safety-decision
+  capabilities:
+    directFactLookup: true
+    delegation: true
+    persistence: false
+  tools: [filesystem, inspection]
+expected:
+  actions: [apply the frontier-round method to a physical and organizational decision, ask independent scope authority and trade-off questions together, defer implementation questions whose prerequisites remain open]
+  artifacts: [cross-domain decision tree]
+  effects: []
+  invoked: [batch-grill-me]
+  notInvoked: [physical intervention, safety approval]
+  proof: [the round distinguishes user decisions from environment facts and records which implementation branches remain dependent]
+  responsibility: [the user retains decision authority while Batch Grill Me returns the bounded frontier to Workflow]
+  route: [cross-domain-decision-frontier]
+  state: [awaiting-user-decisions]
+  forbidden: [assume technical implementation is the only valid domain, ask dependent implementation questions in the first round, perform the safety intervention]

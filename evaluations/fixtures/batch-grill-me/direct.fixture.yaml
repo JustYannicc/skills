@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: batch-grill-me-direct
+title: Direct request asks the complete current decision frontier in rounds
+shape: direct
+kind: invocation
+skill: batch-grill-me
+domains: [organizational-work]
+severity: Critical
+requiredAttempts: 3
+prompt: Help me decide how to redesign our community workshop booking process. Ask every currently unblocked decision question in one round, give a recommended answer for each, and wait for my answers before asking dependent questions.
+environment:
+  id: user-decision-frontier
+  capabilities:
+    modelInvocation: true
+    directFactLookup: true
+    delegation: true
+    persistence: false
+  tools: [filesystem, calendar]
+expected:
+  actions: [map the request as a design tree, compute the complete currently unblocked decision frontier, ask the frontier in one numbered round with a recommendation for each, wait for the user's decisions before advancing]
+  artifacts: [frontier questions and recommendations]
+  effects: []
+  invoked: [batch-grill-me]
+  notInvoked: [execution of the booking-process change]
+  proof: [the skill is reachable through model invocation, the first round includes every independent currently answerable decision and identifies dependent questions for later rounds]
+  responsibility: [batch-grill-me retains responsibility for exhausting the decision frontier and returns the accepted understanding to Workflow]
+  route: [decision-frontier-in-rounds]
+  state: [awaiting-user-decisions]
+  forbidden: [remain unreachable unless the user names Batch Grill Me, ask only one question when independent frontier questions are available, ask a dependent question before its prerequisite is answered, act before shared-understanding confirmation]

@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: research-incomplete-scope
+title: Missing scope pauses research before source collection
+shape: incomplete
+kind: routing
+skill: research
+domains: [organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Research whether a new scheduling practice works, but no population, comparison, time window, or decision use is supplied.
+environment:
+  id: research-without-bounded-scope
+  capabilities:
+    workflow: true
+    research: true
+    persistence: false
+  tools: [primary-source lookup]
+expected:
+  actions: [identify the missing scope, ask the blocking question before collecting evidence]
+  artifacts: []
+  effects: []
+  invoked: [research]
+  notInvoked: [unsupported conclusion]
+  proof: [the scope gap and required answer are explicit]
+  responsibility: [Workflow retains responsibility while blocked]
+  route: [clarify-before-research]
+  state: [waiting-for-scope]
+  forbidden: [invent scope, claim the question is answered]

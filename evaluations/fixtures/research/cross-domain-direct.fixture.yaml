@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: research-cross-domain-direct
+title: Direct research covers multiple domains with primary evidence
+shape: direct
+kind: invocation
+skill: research
+domains: [organizational-work, physical-environment]
+severity: Critical
+requiredAttempts: 3
+prompt: Investigate whether a community workshop should adopt a shared quiet-hours policy, using primary evidence from both its physical setting and its operating records.
+environment:
+  id: direct-primary-cross-domain
+  capabilities:
+    research: true
+    delegation: false
+    persistence: true
+    selectedAdapter: true
+  tools: [primary-source lookup, selected Adapter]
+expected:
+  actions: [bound the external-fact question, investigate directly, distinguish evidence from inference and uncertainty]
+  artifacts: [cited cross-domain research result]
+  effects: []
+  invoked: [research]
+  notInvoked: [Specification, execution]
+  proof: [each material claim cites a high-trust primary source, cross-domain limits and uncertainty are recorded]
+  responsibility: [return findings to the Workflow skill]
+  route: [direct-research]
+  state: [ready-for-workflow]
+  forbidden: [treat secondary commentary as primary evidence, continue into Specification or execution]

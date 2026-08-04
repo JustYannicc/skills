@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: research-no-repository-adapter
+title: No repository still permits selected-Adapter durability
+shape: edge
+kind: invocation
+skill: research
+domains: [physical-environment]
+severity: Major
+requiredAttempts: 1
+prompt: Investigate a safety fact for a community space in a context with no Git repository or remote, and persist the result through the selected Adapter.
+environment:
+  id: no-repository-selected-adapter
+  capabilities:
+    research: true
+    delegation: false
+    persistence: true
+    repository: false
+    selectedAdapter: local-markdown
+  tools: [primary-source lookup, selected Adapter]
+expected:
+  actions: [investigate directly, write one canonical result through the selected Adapter without a repository, include citations and uncertainty]
+  artifacts: [Adapter-backed research record]
+  effects: []
+  invoked: [research]
+  notInvoked: [repository setup, Git initialization]
+  proof: [the durable locator and Adapter identity are recorded, repository absence is preserved]
+  responsibility: [return the durable record and findings to Workflow]
+  route: [no-repository-adapter]
+  state: [durable-ready]
+  forbidden: [create a repository solely to store findings, claim durability without an Adapter record]

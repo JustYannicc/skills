@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: to-questionnaire-cross-domain
+title: The questionnaire procedure transfers across physical and organizational work
+shape: edge
+kind: invocation
+skill: to-questionnaire
+domains: [physical-environment, organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Prepare a questionnaire for the museum conservator who knows the safe humidity limits and staffing trade-offs for moving a fragile exhibit. Ask only for the facts and decisions needed to choose a relocation plan, explain how answers will be used, and make it ready to send.
+environment:
+  id: questionnaire-cross-domain
+  capabilities:
+    modelInvocation: true
+    fileWrite: true
+    recipientContext: true
+  tools: []
+expected:
+  actions: [identify the conservator's role expertise and relationship, elicit the relocation facts and decisions needed back, draft recipient-appropriate physical-environment questions, write the questionnaire file, report its path]
+  artifacts: [museum relocation questionnaire]
+  effects: []
+  invoked: [to-questionnaire]
+  notInvoked: [research, choose the relocation plan, execute exhibit movement]
+  proof: [the document covers both safety constraints and staffing decisions, states how answers inform the relocation choice, and preserves one-job questionnaire scope]
+  responsibility: [to-questionnaire returns the bounded discovery artifact and Workflow retains relocation responsibility]
+  route: [cross-domain-questionnaire]
+  state: [questionnaire-ready]
+  forbidden: [invent safe humidity limits, decide the relocation plan, give execution instructions as if the conservator answered]

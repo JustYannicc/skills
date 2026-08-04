@@ -1,2 +1,32 @@
 schemaVersion: 1
-overlays: []
+overlays:
+  - id: batch-grill-me-skill
+    skill: batch-grill-me
+    sourceId: matt-pocock-skills
+    target: skills/in-progress/batch-grill-me/SKILL.md
+    patchFile: overlays/batch-grill-me/SKILL.md.patch
+    sha256: 8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87
+  - id: batch-grill-me-openai
+    skill: batch-grill-me
+    sourceId: matt-pocock-skills
+    target: skills/in-progress/batch-grill-me/agents/openai.yaml
+    patchFile: overlays/batch-grill-me/agents-openai.yaml.patch
+    sha256: b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746
+  - id: research-skill
+    skill: research
+    sourceId: matt-pocock-skills
+    target: skills/engineering/research/SKILL.md
+    patchFile: overlays/research/SKILL.md.patch
+    sha256: 994f09ad10fb7df90fb04bb534fe05f024a92cfc866ce5283cb0ab82f77159ca
+  - id: to-questionnaire-skill
+    skill: to-questionnaire
+    sourceId: matt-pocock-skills
+    target: skills/in-progress/to-questionnaire/SKILL.md
+    patchFile: overlays/to-questionnaire/SKILL.md.patch
+    sha256: 77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160
+  - id: to-questionnaire-openai
+    skill: to-questionnaire
+    sourceId: matt-pocock-skills
+    target: skills/in-progress/to-questionnaire/agents/openai.yaml
+    patchFile: overlays/to-questionnaire/agents-openai.yaml.patch
+    sha256: 17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1

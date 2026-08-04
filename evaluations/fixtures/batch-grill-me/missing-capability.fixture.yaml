@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: batch-grill-me-missing-capability
+title: Missing fact capability is exposed without offloading lookup to the user
+shape: edge
+kind: invocation
+skill: batch-grill-me
+domains: [physical-environment, organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Help me choose between two venues for a community workshop. One frontier question requires checking each venue's current accessibility policy, but this environment has no filesystem, web, tool, or delegation capability. Ask the remaining user decisions now and keep the fact-dependent branch visibly unsettled.
+environment:
+  id: no-fact-capability
+  capabilities:
+    directFactLookup: false
+    delegation: false
+    persistence: false
+  tools: []
+expected:
+  actions: [record the missing fact-gathering capability, ask independent user decisions that do not depend on the missing fact, leave the accessibility-policy branch unsettled]
+  artifacts: [missing-capability note, partial decision frontier]
+  effects: []
+  invoked: [batch-grill-me]
+  notInvoked: [fabricated venue lookup, user-assigned fact-gathering task]
+  proof: [the skill states exactly which branch waits for capability or evidence and does not claim the venue policy is known]
+  responsibility: [batch-grill-me retains the interview responsibility and returns a truthful blocked frontier to Workflow]
+  route: [degraded-decision-frontier]
+  state: [waiting-for-fact-capability]
+  forbidden: [ask the user to perform available legwork, fabricate facts, silently discard the fact-dependent branch, claim the frontier is complete]

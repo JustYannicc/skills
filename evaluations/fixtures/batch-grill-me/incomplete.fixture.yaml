@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: batch-grill-me-incomplete
+title: Missing user decisions leave the frontier waiting without invented answers
+shape: incomplete
+kind: invocation
+skill: batch-grill-me
+domains: [personal, organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Plan a new household meal routine, but do not assume the household's dietary constraints, available preparation time, or decision authority. Ask the currently unblocked questions and wait for answers.
+environment:
+  id: missing-user-decisions
+  capabilities:
+    directFactLookup: true
+    delegation: false
+    persistence: false
+  tools: []
+expected:
+  actions: [expose the missing decision inputs, ask only the currently unblocked user decisions with recommended answers, keep dependent questions for a later round]
+  artifacts: [visible unanswered decision frontier]
+  effects: []
+  invoked: [batch-grill-me]
+  notInvoked: [meal-routine execution]
+  proof: [no dietary, time, or authority assumption is silently treated as settled]
+  responsibility: [batch-grill-me remains responsible for the decision interview until the frontier is resolved or the user ends it]
+  route: [incomplete-frontier-to-user]
+  state: [waiting-for-user-decisions]
+  forbidden: [invent missing user decisions, ask dependent questions prematurely, claim shared understanding]

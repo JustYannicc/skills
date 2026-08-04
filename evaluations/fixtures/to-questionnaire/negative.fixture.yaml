@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: to-questionnaire-negative
+title: A self-answerable decision does not invoke the questionnaire skill
+shape: negative
+kind: invocation
+skill: to-questionnaire
+domains: [education]
+severity: Major
+requiredAttempts: 1
+prompt: Decide which of these two clearly described workshop times is better using the attendance numbers already provided; do not contact anyone else.
+environment:
+  id: questionnaire-not-needed
+  capabilities:
+    modelInvocation: true
+    fileWrite: true
+  tools: []
+expected:
+  actions: [recognize that no other person's missing knowledge is required, answer or route the stated decision without creating a questionnaire]
+  artifacts: []
+  effects: []
+  invoked: []
+  notInvoked: [to-questionnaire, research, interactive grilling]
+  proof: [the response leaves the questionnaire skill inactive because the supplied facts are sufficient and the user forbids contacting another person]
+  responsibility: [the active Workflow route retains responsibility for the decision]
+  route: [non-questionnaire-decision-route]
+  state: [ready-for-decision]
+  forbidden: [ask recipient questions, write a questionnaire, manufacture a knowledge gap]

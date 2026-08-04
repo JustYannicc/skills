@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: to-questionnaire-indirect
+title: Workflow invokes the questionnaire capability for another person's knowledge
+shape: indirect
+kind: routing
+skill: to-questionnaire
+domains: [organizational-work]
+severity: Critical
+requiredAttempts: 3
+prompt: Workflow is coordinating a community clinic scheduling change. A clinic coordinator holds the missing constraints and decisions; invoke the questionnaire capability to prepare one bounded request and return it for Workflow to integrate.
+environment:
+  id: workflow-to-questionnaire
+  capabilities:
+    modelInvocation: true
+    fileWrite: true
+    recipientContext: true
+    workflow: true
+  tools: []
+expected:
+  actions: [keep Workflow's parent outcome and responsibility, ask only for the recipient role expertise relationship and the facts or decisions needed back, draft the questionnaire using the required structure, write the questionnaire file, return the path and bounded evidence to Workflow]
+  artifacts: [questionnaire request for clinic coordinator]
+  effects: []
+  invoked: [to-questionnaire]
+  notInvoked: [research, interactive grilling, scheduling change, parent completion]
+  proof: [the request has one recipient, names how answers will be used, covers each accepted knowledge gap, and returns without deciding the scheduling change]
+  responsibility: [Workflow retains parent responsibility and integrates the questionnaire result]
+  route: [workflow-to-questionnaire-to-workflow]
+  state: [ready-for-recipient]
+  forbidden: [invent the coordinator's constraints, perform the scheduling change, transfer parent ownership, claim the parent outcome complete]

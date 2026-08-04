@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: batch-grill-me-indirect
+title: Workflow reaches Batch Grill Me without transferring parent responsibility
+shape: indirect
+kind: invocation
+skill: batch-grill-me
+domains: [agent-work, communication]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is coordinating a recurring customer-update process and needs the user's decisions about audience, cadence, and approval before it can write a Specification. Use Batch Grill Me to resolve the currently unblocked user-held decision frontier, then return the accepted understanding to Workflow.
+environment:
+  id: workflow-with-user-decisions
+  capabilities:
+    directFactLookup: true
+    delegation: false
+    persistence: true
+  tools: [workflow-record]
+expected:
+  actions: [identify decisions held by the user, ask all independent decisions in the current frontier together, keep dependent decisions for later rounds, return the user's accepted answers and remaining frontier to Workflow]
+  artifacts: [decision-frontier result]
+  effects: []
+  invoked: [batch-grill-me]
+  notInvoked: [Specification creation, message sending]
+  proof: [Workflow receives the exact answered decisions and unresolved dependencies]
+  responsibility: [Workflow retains parent responsibility while Batch Grill Me owns only the bounded decision-frontier result]
+  route: [workflow-to-batch-grill-me-to-workflow]
+  state: [ready-for-workflow]
+  forbidden: [complete the parent Outcome, create the Specification, send customer updates]
