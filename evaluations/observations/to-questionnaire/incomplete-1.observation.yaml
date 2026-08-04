@@ -1,0 +1,53 @@
+schemaVersion: 1
+fixtureId: to-questionnaire-incomplete
+attempt: 1
+contextId: fresh-questionnaire-incomplete-final-1
+suiteRevision: git:535374486a2521e49b758023b96e9d8724eb5ccb
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:25:39.300Z
+environment:
+  id: questionnaire-missing-send-contract
+  capabilities:
+    modelInvocation: true
+    fileWrite: true
+  tools: []
+observed:
+  actions:
+    - ask for the recipient role expertise and relationship
+    - ask for the concrete facts or decisions needed back
+    - preserve the unanswered gap
+    - do not draft questions from invented context
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: choose a recipient
+      evidence: The response requests the recipient's role, expertise, and relationship and selects no person or role.
+      observed: false
+    - criterion: infer the needed facts
+      evidence: The response asks the requester to name the concrete facts or decisions and does not supply any.
+      observed: false
+    - criterion: invent questionnaire questions
+      evidence: No questionnaire questions or document content are drafted before the send contract is supplied.
+      observed: false
+    - criterion: claim a file exists
+      evidence: The response explicitly says it will not write or claim a questionnaire file, and no runtime artifact is produced.
+      observed: false
+  invoked:
+    - to-questionnaire
+  notInvoked:
+    - research
+    - decision work
+    - file-writing
+  proof:
+    - the missing recipient and return-use details are explicit and no questionnaire claims to cover unspecified gaps
+    - the missing recipient role expertise relationship and return-use details are explicit
+    - no questionnaire claims to cover unspecified gaps
+  responsibility:
+    - to-questionnaire remains responsible for obtaining the minimum send contract and Workflow remains responsible for the parent outcome
+  route:
+    - questionnaire-awaiting-send-details
+  state:
+    - waiting-for-input
+rawEvidence:
+  locator: evaluations/evidence/to-questionnaire/incomplete-1.txt
+  sha256: 5e9ece8f27c36e5555a6f13743936b338bc9476e726cf55e00ae94586b58418a

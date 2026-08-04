@@ -1,7 +1,191 @@
 {
-  "evaluatedAt": "2026-08-04T18:24:35.300Z",
-  "fixtureSetRevision": "1138949e3ef29f64ef6bc2f9bca0570d4058affdbc43dc026b29cba9983414a1",
+  "evaluatedAt": "2026-08-04T18:54:47.466Z",
+  "fixtureSetRevision": "93a89d72b5926e714f364668fc888ddb8c5c35c4214239d09ea4037a37789d34",
   "fixtures": [
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-cross-domain-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-cross-domain-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/cross-domain-1.txt",
+          "sha256": "1fa6faca4ddbb66b1b391313714ea14fcc26da711e7c8695657fdf64f5405656"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-cross-domain",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "a480edabc57806f48930e482f5c5e9fe3cbf6e783aa7698825c94cd48ba7733c"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-delegated-fact-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-delegated-fact-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/delegated-fact-path-1.txt",
+          "sha256": "71239bfef7e0fe20fe881e1c17f186fb52e0a0a72bf3a1925d1da7f12a133002"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-delegated-fact-path",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "0869bd1f7a7687255a6931deb72c00f2d8963de70b1eaaa11c355894b0e816cc"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-direct-1",
+        "fresh-batch-grill-me-direct-2",
+        "fresh-batch-grill-me-direct-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-direct-1",
+          "locator": "evaluations/evidence/batch-grill-me/direct-1.txt",
+          "sha256": "d2e065fe3155180596e98d7697862b4594cd86b743826a06772bd36eb5a325e6"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-batch-grill-me-direct-2",
+          "locator": "evaluations/evidence/batch-grill-me/direct-2.txt",
+          "sha256": "34ffdec64f8332ac434150302b402e9aff7133f51571ba20709ca98db3e4596b"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-batch-grill-me-direct-3",
+          "locator": "evaluations/evidence/batch-grill-me/direct-3.txt",
+          "sha256": "1697621543bdbc8fea3b803950621307170922e0dca4336d0a26d7daf51876a2"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-direct",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "2be29cf4f053dd59929e747ce027fe5b79e6a8a8c2bad8a8c459a227c428b78b"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-direct-fact-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-direct-fact-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/direct-fact-path-1.txt",
+          "sha256": "d5214b23fe1eb4265d1a108e314a0944e0acac0d4bd0519fb7339f975d78e491"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-direct-fact-path",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "b1da4d632ebbd58a09a39526d4887341fb25d7bd094febc713671b830475145c"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-incomplete-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-incomplete-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/incomplete-1.txt",
+          "sha256": "875d7c91993cf680e92d7f3b7449ec5225be7b4842212c66170ee16960102ad5"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-incomplete",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "f42c4701c1f2319318bee0251b6b9c27defdd652b410a13438a2136664d5f455"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-indirect-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-indirect-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/indirect-1.txt",
+          "sha256": "3d8552c858ad7996eea7f4c2ff1840d158e7bd47bc3f733b2700b515a4dd6403"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-indirect",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "91cf162f9d3bac302d73b68275db4e0c837302e6fe41776951bb63ad25550f20"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-missing-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-missing-final-1",
+          "locator": "evaluations/evidence/batch-grill-me/missing-capability-1.txt",
+          "sha256": "51fdf9a3a5f97a66bc5364b1efddd7d111097580c5bf338350d010a9b9ae2d21"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "c2f0061a1dc688c4287ccd6e7af8cf36f6b53c2c9381b2b6680b2b204ed8f801"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-batch-grill-me-negative-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-batch-grill-me-negative-1",
+          "locator": "evaluations/evidence/batch-grill-me/negative-1.txt",
+          "sha256": "50d0cb294ddc71c898bd6e05da18cae4c36f1a016720e83712bb389f0fc9c15e"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "batch-grill-me-negative",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "91b3b043a35faae7ad8a2cbb1475b55f53925a17385cb26ba291e7c524d1025e"
+    },
     {
       "attempts": [
         1,
@@ -36,7 +220,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -73,7 +257,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -94,7 +278,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -115,7 +299,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -136,8 +320,190 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-research-cross-domain-direct-final-1",
+        "fresh-research-cross-domain-direct-final-2",
+        "fresh-research-cross-domain-direct-final-3"
+      ],
+      "evidence": [
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/research/cross-domain-direct-1.record.md",
+              "sha256": "0c4f14dec5beb987d83c14a1442da18ccdb92a862ca2885c93229ee2401a0fa1"
+            }
+          ],
+          "attempt": 1,
+          "contextId": "fresh-research-cross-domain-direct-final-1",
+          "locator": "evaluations/evidence/research/cross-domain-direct-1.txt",
+          "sha256": "56bcce6faf4fa210318e43a4633c1cbfd4c980937bcc2db398260d16ec20302c"
+        },
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/research/cross-domain-direct-2.record.md",
+              "sha256": "1e59523f7e5ddcdac16bd81c528052d088d1de547dd24a4c3c55a716ef27973c"
+            }
+          ],
+          "attempt": 2,
+          "contextId": "fresh-research-cross-domain-direct-final-2",
+          "locator": "evaluations/evidence/research/cross-domain-direct-2.txt",
+          "sha256": "187044cfcfabbcf409449401cc94d5af369c60a8437a8542b88ae5a968f93b18"
+        },
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/research/cross-domain-direct-3.record.md",
+              "sha256": "dd838c8c28df798ad3f114626c2a7ca2039337e5e6592fff098c8e360fe7786b"
+            }
+          ],
+          "attempt": 3,
+          "contextId": "fresh-research-cross-domain-direct-final-3",
+          "locator": "evaluations/evidence/research/cross-domain-direct-3.txt",
+          "sha256": "4a94945aeb0ccf9368c338a7a21e03e83fb9cda289d59b1e47445900e2ca7446"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-cross-domain-direct",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "32162af6e6142728141fe6cf2acf30c94b0be5fe29a9db8aad916acf708d3fed"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-incomplete-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-incomplete-final-1",
+          "locator": "evaluations/evidence/research/incomplete-scope-1.txt",
+          "sha256": "10fe72ce4b2b945b1b11e5f14f0ce1ac006356afd0e9a8fb2a222960170510d1"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-incomplete-scope",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "dd34c41c6cf54e720944df890c714e4d6fceb0aacab7a89dab5a902c4c63372c"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-research-indirect-final-1",
+        "fresh-research-indirect-final-2",
+        "fresh-research-indirect-final-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-indirect-final-1",
+          "locator": "evaluations/evidence/research/indirect-workflow-delegation-1.txt",
+          "sha256": "32f960751353e49d97f6861e3722b7afc85c2ff79ff67f21fa11506e9919d109"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-research-indirect-final-2",
+          "locator": "evaluations/evidence/research/indirect-workflow-delegation-2.txt",
+          "sha256": "1f0fc88cc4f12bd3a0fa47c88535669e1b05724d50c8cb1b852d2f8a5841e14a"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-research-indirect-final-3",
+          "locator": "evaluations/evidence/research/indirect-workflow-delegation-3.txt",
+          "sha256": "9464736809d75270c910ca792bf8d9cbaa3f4b335cd6e55de3c143f1b837627b"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-indirect-workflow-delegation",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "f3d3cb7e5f0738c6d5c09ff4c118e77e0fce9f9771015556c29d0a1cb5acb3b4"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-missing-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-missing-final-1",
+          "locator": "evaluations/evidence/research/missing-capability-1.txt",
+          "sha256": "598ec1d5bf38257db0c809b683136acc3aa379e4d6193e8f1f0c47b9ec25806d"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "a7d37a7fc50e38501aa520e92db7f56188458c0f06bb5a2d6a50cbe9aa1bba32"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-negative-final-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-research-negative-final-1",
+          "locator": "evaluations/evidence/research/negative-prototype-route-1.txt",
+          "sha256": "310ff041cc6327b6459c49ba6099278f022078e990f756adb07b5180d0998bae"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-negative-prototype-route",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "f1d557adaa48ec8348d6db010b00d05ba072bd6edbbbfa1a4ddd427d944cd67f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-research-no-repo-final-1"
+      ],
+      "evidence": [
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/research/no-repository-adapter-1.record.md",
+              "sha256": "1240bdf2cbedb0c77da2d245939c13d0822fe2dee46675b9a228b58e40445d43"
+            }
+          ],
+          "attempt": 1,
+          "contextId": "fresh-research-no-repo-final-1",
+          "locator": "evaluations/evidence/research/no-repository-adapter-1.txt",
+          "sha256": "d53a805f1a72bc413aa23638da8c92295144ae5cf1b19a47bb516575087be2a6"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "research-no-repository-adapter",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "ad6accb9df792e4123e9c002c0ba95a123314dbaebe0af5d45d1fe9fc8a1a566"
     },
     {
       "attempts": [
@@ -157,7 +523,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -178,7 +544,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -215,7 +581,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -252,7 +618,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -273,7 +639,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -294,7 +660,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -315,7 +681,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -336,7 +702,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -357,7 +723,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -378,7 +744,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -399,7 +765,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -420,7 +786,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -441,45 +807,35 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     },
     {
       "attempts": [
-        1,
-        2,
-        3
+        1
       ],
       "contextIds": [
-        "fresh-workflow-approved-revision-invalidation-1",
-        "fresh-workflow-approved-revision-invalidation-2",
-        "fresh-workflow-approved-revision-invalidation-3"
+        "fresh-questionnaire-cross-final-1"
       ],
       "evidence": [
         {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.questionnaire.md",
+              "sha256": "5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831"
+            }
+          ],
           "attempt": 1,
-          "contextId": "fresh-workflow-approved-revision-invalidation-1",
-          "locator": "evaluations/evidence/workflow/approved-revision-invalidation-1.txt",
-          "sha256": "e27a53a1ab8f957a50db7abf5cdf78c3e0ddaa16a789cbd514d47c930efc2790"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-approved-revision-invalidation-2",
-          "locator": "evaluations/evidence/workflow/approved-revision-invalidation-2.txt",
-          "sha256": "efc3af7b42f8118ba35ff9169e7f050052f3e1799368e53ce44089e33dbe504a"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-approved-revision-invalidation-3",
-          "locator": "evaluations/evidence/workflow/approved-revision-invalidation-3.txt",
-          "sha256": "aa7d80efabf333e1bccbfbc74bc91b91d99a8b8788cd605fee2549ba848616d0"
+          "contextId": "fresh-questionnaire-cross-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.txt",
+          "sha256": "a9379bc1db8444ef4111631c12f3876b3acce6e36057cc9fcc73601562a11f17"
         }
       ],
       "findings": [],
-      "fixtureId": "workflow-approved-revision-invalidation",
+      "fixtureId": "to-questionnaire-cross-domain",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "0efda953e8c965e23898fb8e4b19f515a3c5bea7bbddbd3f8e39179dda4a7471"
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35"
     },
     {
       "attempts": [
@@ -488,424 +844,175 @@
         3
       ],
       "contextIds": [
-        "fresh-workflow-delegated-change-propagation-1",
-        "fresh-workflow-delegated-change-propagation-2",
-        "fresh-workflow-delegated-change-propagation-3"
+        "fresh-questionnaire-direct-final-1",
+        "fresh-questionnaire-direct-final-2",
+        "fresh-questionnaire-direct-final-3"
       ],
       "evidence": [
         {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/direct-1.questionnaire.md",
+              "sha256": "2014f49d27790ef5b68968c66c827fa04087712787b23f5a6e8a6829f565de2a"
+            }
+          ],
           "attempt": 1,
-          "contextId": "fresh-workflow-delegated-change-propagation-1",
-          "locator": "evaluations/evidence/workflow/delegated-change-propagation-1.txt",
-          "sha256": "bb5397a0fe2027e7d83504fed2460a5d944b56ce440f3616787f24af2830d2b2"
+          "contextId": "fresh-questionnaire-direct-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/direct-1.txt",
+          "sha256": "58c144d4868804d3a0df485f787ea0821428e55c8d86b0b0472013cf82851ac2"
         },
         {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/direct-2.questionnaire.md",
+              "sha256": "c86def1478311b8b35ff29929aeede448ced07a78a007eb15d8f238a58fe6e00"
+            }
+          ],
           "attempt": 2,
-          "contextId": "fresh-workflow-delegated-change-propagation-2",
-          "locator": "evaluations/evidence/workflow/delegated-change-propagation-2.txt",
-          "sha256": "68c045bedd082b054bf452750db790ad7ff003ea18fa7c8fa5c2870ecfd30433"
+          "contextId": "fresh-questionnaire-direct-final-2",
+          "locator": "evaluations/evidence/to-questionnaire/direct-2.txt",
+          "sha256": "3d9c90645892258e455b34f59c9dc4be54ef72708dd67b169ad4d72e74948554"
         },
         {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/direct-3.questionnaire.md",
+              "sha256": "3ddf8917c53c02ed08b124ae6f0d66e05828ac5e0fdf77ccd1747815f64f5b40"
+            }
+          ],
           "attempt": 3,
-          "contextId": "fresh-workflow-delegated-change-propagation-3",
-          "locator": "evaluations/evidence/workflow/delegated-change-propagation-3.txt",
-          "sha256": "53c0b685df792742a9cb54455c69eb2737e67f324afe29fccc9da1a3f0604c29"
+          "contextId": "fresh-questionnaire-direct-final-3",
+          "locator": "evaluations/evidence/to-questionnaire/direct-3.txt",
+          "sha256": "a85df4820b298d75e39c981d4da41c59766f764c85063f62bea06e2c52aca08c"
         }
       ],
       "findings": [],
-      "fixtureId": "workflow-delegated-change-propagation",
+      "fixtureId": "to-questionnaire-direct",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "215b46418ae84c109e37eeef719e55f0f384c28cf9d1bc117e39c6cdcfb5c35a"
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "8648c4e09094d91e5e00a5e5a81450acb3c06695dce9ae15bd1596cc318f624b"
     },
     {
       "attempts": [
         1
       ],
       "contextIds": [
-        "fresh-workflow-direct-inline-1"
+        "fresh-questionnaire-incomplete-final-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-workflow-direct-inline-1",
-          "locator": "evaluations/evidence/workflow/direct-inline-1.txt",
-          "sha256": "f57d8375b74fdd66817772b8ee55b8ea04b9692e0717c8fa87f2770bc20fe2ce"
+          "contextId": "fresh-questionnaire-incomplete-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/incomplete-1.txt",
+          "sha256": "5e9ece8f27c36e5555a6f13743936b338bc9476e726cf55e00ae94586b58418a"
         }
       ],
       "findings": [],
-      "fixtureId": "workflow-direct-inline",
+      "fixtureId": "to-questionnaire-incomplete",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "07aaadf175ae418170ab514ab8670cbdda10c88a338497df88c8193ec665e45b"
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "67ad8e377e31ccbd5ae91ae759b033bbc2e48c0b2fd7dc96bfa4329824348028"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-questionnaire-indirect-final-1",
+        "fresh-questionnaire-indirect-final-2",
+        "fresh-questionnaire-indirect-final-3"
+      ],
+      "evidence": [
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/indirect-1.questionnaire.md",
+              "sha256": "4ccaea2af4ca52e66f72fe2c2dae059d3fe0f86327e6e0e741fd730bc8d06a33"
+            }
+          ],
+          "attempt": 1,
+          "contextId": "fresh-questionnaire-indirect-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/indirect-1.txt",
+          "sha256": "947b8560af806a94090ece713d82ef40246b6b33736dcf313e64408ac0453b45"
+        },
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/indirect-2.questionnaire.md",
+              "sha256": "844676fdeb48616167131fc86f9cbdb9ae75f95d76f1dd6eafc6bdbf2754d567"
+            }
+          ],
+          "attempt": 2,
+          "contextId": "fresh-questionnaire-indirect-final-2",
+          "locator": "evaluations/evidence/to-questionnaire/indirect-2.txt",
+          "sha256": "49d0dc7037e9aa9d712216b260661d8cbaba7780635e58312d38cb5c9e3299dd"
+        },
+        {
+          "artifacts": [
+            {
+              "locator": "evaluations/evidence/to-questionnaire/indirect-3.questionnaire.md",
+              "sha256": "c813ee9db3eec91b707b069e5ba108149f7c11da830aba1011c4fbcf7332cd87"
+            }
+          ],
+          "attempt": 3,
+          "contextId": "fresh-questionnaire-indirect-final-3",
+          "locator": "evaluations/evidence/to-questionnaire/indirect-3.txt",
+          "sha256": "e6f57163c7bb46e012d751c10ecbd64e4fd18780a852306c4437ce396d6cbe93"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-questionnaire-indirect",
+      "status": "passed",
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "c1ab1c0ad65e5021f0c6fd826870db73ecc4d0a45d3446f937c320a581ea0b89"
     },
     {
       "attempts": [
         1
       ],
       "contextIds": [
-        "fresh-workflow-edge-degraded-persistence-1"
+        "fresh-questionnaire-missing-final-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-workflow-edge-degraded-persistence-1",
-          "locator": "evaluations/evidence/workflow/edge-degraded-persistence-1.txt",
-          "sha256": "3afb2c2b1be32a5365dae8a799b572720c0ea029d0432aa395a71bbe78648d06"
+          "contextId": "fresh-questionnaire-missing-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/missing-capability-1.txt",
+          "sha256": "917e98e4e50f6e18cf9f54a03ecd2d27d667f142b6074640f888d5440a8bd78e"
         }
       ],
       "findings": [],
-      "fixtureId": "workflow-edge-degraded-persistence",
+      "fixtureId": "to-questionnaire-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "8c1696db16be4e6951e5d17c2c558e277539559dde31a9df62fe9ef09f73eafd"
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "3677af27f161d55b1b6783ee25b05b457e79dee5821e1e5a2158ee50ef4d9466"
     },
     {
       "attempts": [
         1
       ],
       "contextIds": [
-        "fresh-workflow-incomplete-context-1"
+        "fresh-questionnaire-negative-final-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-workflow-incomplete-context-1",
-          "locator": "evaluations/evidence/workflow/incomplete-context-1.txt",
-          "sha256": "e7b3e1f280f0eaa8826df1fc6998d7e1b2109bede504fa178c6e1d7ae691eb72"
+          "contextId": "fresh-questionnaire-negative-final-1",
+          "locator": "evaluations/evidence/to-questionnaire/negative-1.txt",
+          "sha256": "f26b6fc9d75469e741b20240782e7a70253222bd18a384924e3f2261bd10b9c6"
         }
       ],
       "findings": [],
-      "fixtureId": "workflow-incomplete-context",
+      "fixtureId": "to-questionnaire-negative",
       "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "3e8a12c1187514d2cd9f87681cce3c2272701224801b1ed64f0831970f9f7362"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-workflow-indirect-phase-request-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-indirect-phase-request-1",
-          "locator": "evaluations/evidence/workflow/indirect-phase-request-1.txt",
-          "sha256": "d73ec040402aa252ac929c5b0102dd41aa33817e1412d5c660964d33e5a7f16d"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-indirect-phase-request",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "e69537b7d448ebe6b1e1b0ea91fb3409b66a8b4dbdef5ff98d8e554025c5a0e9"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-interruption-resume-1",
-        "fresh-workflow-interruption-resume-2",
-        "fresh-workflow-interruption-resume-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-interruption-resume-1",
-          "locator": "evaluations/evidence/workflow/interruption-resume-1.txt",
-          "sha256": "99730174b5eb2dc714285b50df9d30045432cbec2bb2961e050a671a6ef14545"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-interruption-resume-2",
-          "locator": "evaluations/evidence/workflow/interruption-resume-2.txt",
-          "sha256": "f5586527b78d89535ced687df858cae666cd16537fb80624cd930b610a5bc19e"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-interruption-resume-3",
-          "locator": "evaluations/evidence/workflow/interruption-resume-3.txt",
-          "sha256": "e07f2f63945c2f42d66017b0f67088ac0323baeedfe1d4e81904ebcf2b1749e5"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-interruption-resume",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "8a108b144a0134b0d4b0ea24a5a37d3e18c0ee1fa1c8221f8d955d94ba6f8d70"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-authorized-exception-1",
-        "fresh-workflow-mid-authorized-exception-2",
-        "fresh-workflow-mid-authorized-exception-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-authorized-exception-1",
-          "locator": "evaluations/evidence/workflow/mid-authorized-exception-1.txt",
-          "sha256": "4d618d788e53a752469708887beb1084011ded24206d0437a315c17c11e85184"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-mid-authorized-exception-2",
-          "locator": "evaluations/evidence/workflow/mid-authorized-exception-2.txt",
-          "sha256": "318d0ce11a46821d38070ce6e26c7961b8e7b1ed54e1faf77d16815f539eb0b0"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-mid-authorized-exception-3",
-          "locator": "evaluations/evidence/workflow/mid-authorized-exception-3.txt",
-          "sha256": "16a7e445df2b1c79a1a4354acc63bd9c74b86d180a0cb389256b507d58df9fd0"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-authorized-exception",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "3e76c29d0e189a82e5c294eb462a4400b268c2daf3942ef8d97349b2445c3c00"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-clarification-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-clarification-1",
-          "locator": "evaluations/evidence/workflow/mid-clarification-1.txt",
-          "sha256": "1e67e117a9092aea9ece34ed2396129a7d8824bb3e757fbe2a53ea543acdce45"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-clarification",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "3161b4092cae2608ede738221677f34e87e90e63ca91d090e00bd26de6e46a07"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-correction-1",
-        "fresh-workflow-mid-correction-2",
-        "fresh-workflow-mid-correction-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-correction-1",
-          "locator": "evaluations/evidence/workflow/mid-correction-1.txt",
-          "sha256": "71cf4d68cb48f407b52f7a5b39e9d0054d9dd856487fdfc87bc5c13f64ba607c"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-mid-correction-2",
-          "locator": "evaluations/evidence/workflow/mid-correction-2.txt",
-          "sha256": "c947fb587b4a73bab97bb052749a5594dc3b4ee13735c09e78d3ba23e66ac531"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-mid-correction-3",
-          "locator": "evaluations/evidence/workflow/mid-correction-3.txt",
-          "sha256": "e15d6ed0e406336a489f03b07522f7fbeca71d9b88b05a60ea2b5fdfd823e61b"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-correction",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "d1f07cc277690e5e6500c9d8601403aaa3d1d82e342591996b2a88bad7944342"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-extension-constraint-1",
-        "fresh-workflow-mid-extension-constraint-2",
-        "fresh-workflow-mid-extension-constraint-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-extension-constraint-1",
-          "locator": "evaluations/evidence/workflow/mid-extension-constraint-1.txt",
-          "sha256": "b55c4320a9f1528f54cce6d0283c780ea4b18811bf6ccd2f288e60fd95e7c5ad"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-mid-extension-constraint-2",
-          "locator": "evaluations/evidence/workflow/mid-extension-constraint-2.txt",
-          "sha256": "d4c6e3413a8f4e868cabd9487c0a3f2a573a5a0c0a8d179d6fd45d6db1ce20da"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-mid-extension-constraint-3",
-          "locator": "evaluations/evidence/workflow/mid-extension-constraint-3.txt",
-          "sha256": "fa32ce65b4df1682fdf12f4bd197a90b93ee02db2920d53af8a62cc34b6d4071"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-extension-constraint",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "0d2f1924edf8bd8350f8d727c60bd674e9ce654573f976fee2fd9d8515daf200"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-replacement-1",
-        "fresh-workflow-mid-replacement-2",
-        "fresh-workflow-mid-replacement-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-replacement-1",
-          "locator": "evaluations/evidence/workflow/mid-replacement-1.txt",
-          "sha256": "706dda3ab585ef8b50bd3af0df9b7b39f8fdfc4cec0779288e2af3a085ae5053"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-mid-replacement-2",
-          "locator": "evaluations/evidence/workflow/mid-replacement-2.txt",
-          "sha256": "4c80861daa49f33c2e88a48097a5192416b424d5ab63cd7cc1e73bbe1b12ae8c"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-mid-replacement-3",
-          "locator": "evaluations/evidence/workflow/mid-replacement-3.txt",
-          "sha256": "bede4aa9c954033ca231de5644cdfd4e2234c8cbbf75eca3eb913962939e1693"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-replacement",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "55bdcab509cbdc08c9eff5bbf3b98b4e3fbba0bc3572d4171349cf77040b7db3"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-unauthorized-override-1",
-        "fresh-workflow-mid-unauthorized-override-2",
-        "fresh-workflow-mid-unauthorized-override-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-unauthorized-override-1",
-          "locator": "evaluations/evidence/workflow/mid-unauthorized-override-1.txt",
-          "sha256": "7bd999f68465d95f20c62379c90972ba19b89029599dcd39a7b66a0a986794a5"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-mid-unauthorized-override-2",
-          "locator": "evaluations/evidence/workflow/mid-unauthorized-override-2.txt",
-          "sha256": "7fb4526b8c83babdaeb8f360a6072c2ad5061a6d491dcce13fe9f18064439295"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-mid-unauthorized-override-3",
-          "locator": "evaluations/evidence/workflow/mid-unauthorized-override-3.txt",
-          "sha256": "b2b0edd0b97ad86dd605341ef92cf932212b06f0cf771b590a9363227f21c1d2"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-unauthorized-override",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "691012a602921aa0d96b679771a50080bf669f7349163f1c7bb8981a19989b5f"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-workflow-mid-unrelated-resume-1",
-        "fresh-workflow-mid-unrelated-resume-2",
-        "fresh-workflow-mid-unrelated-resume-3-resolution"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-mid-unrelated-resume-1",
-          "locator": "evaluations/evidence/workflow/mid-unrelated-resume-1.txt",
-          "sha256": "afb4b7eb9f9112b7530a8e86d21c2f100e1a6c3ad841f51c38eb70489c61e4f0"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-workflow-mid-unrelated-resume-2",
-          "locator": "evaluations/evidence/workflow/mid-unrelated-resume-2.txt",
-          "sha256": "5ad1fd6119a5ed57a1444c3ed2c0d0638dde4952ccd4db4233b2d5e58351a0ab"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-workflow-mid-unrelated-resume-3-resolution",
-          "locator": "evaluations/evidence/workflow/mid-unrelated-resume-3.txt",
-          "sha256": "9795f729fa5ce1503255a998acafaf068d57ed38e901781a842bd718536f0417"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-mid-unrelated-resume",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "fe2c3fd74ac700729810b86041b8f07b35144ddc93cac9f530d78b762693f4fe"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-workflow-negative-recursion-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-workflow-negative-recursion-1",
-          "locator": "evaluations/evidence/workflow/negative-recursion-1.txt",
-          "sha256": "d894aee93f7dfe64b837d8a7e1e24bd5a068f68fa7e4ddb711decb2c3333adac"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "workflow-negative-recursion",
-      "status": "passed",
-      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
-      "fixtureRevision": "075e404da3c9b90a1497124431004c9641ec907de39cb4343c34fdf82823ad3d"
+      "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
+      "fixtureRevision": "ead7c724eba0812b80580200b3064116db5566ba6367eddd0bd5a37c5e2adc9c"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+  "suiteRevision": "git:535374486a2521e49b758023b96e9d8724eb5ccb",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -914,7 +1021,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 33,
-    "passed": 33
+    "fixtures": 38,
+    "passed": 38
   }
 }

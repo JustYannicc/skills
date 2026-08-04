@@ -1,0 +1,32 @@
+Overlay tranche Luna Max adversarial review record
+
+Base: 455541e255b5482235faa65a82bffc2b21415b94
+Final candidate: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Reviewed predecessor candidate: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Review model: gpt-5.6-luna, max reasoning
+
+The independent Standards+Spec review found no Critical issues and four Major
+release findings across its original and replacement passes:
+
+1. Published `.patch` files were outside the public-boundary scan.
+   Resolution: `.patch` is now a scanned text extension; a regression test
+   proves a private path inside an overlay patch produces a Critical finding.
+2. Research record and questionnaire artifacts were named only inside a
+   hash-bound transcript, so mutating the artifact itself did not fail the gate.
+   Resolution: observations can bind additional artifact locators and SHA-256
+   values; containment, symlink, public-boundary, missing-file, and hash checks
+   apply to every reference; reports retain the bindings; mutation is tested.
+3. Issue #17 required actual direct, delegated, and missing-capability factual
+   paths, but only the missing-capability path was exercised.
+   Resolution: new direct filesystem and bounded Luna Max delegated fact-path
+   fixtures have fresh passing observations alongside the existing missing path.
+4. `git diff --check` found trailing whitespace and added blank lines at EOF in
+   evidence and overlay patch records.
+   Resolution: evidence was normalized; three SKILL patch records were
+   normalized and rehashed. Applying the prior and normalized patches to the
+   same pinned targets produced byte-identical target files for Batch Grill Me,
+   Research, and To Questionnaire.
+
+No #13 Workflow behavior or #35 System Record representation changed. The
+resolution check must bind candidate ec5e478 and verify both `pnpm validate`
+and `git diff --check 455541e..HEAD` on the frozen evidence commit.
