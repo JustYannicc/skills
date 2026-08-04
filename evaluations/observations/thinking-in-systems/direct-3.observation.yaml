@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-direct
 attempt: 3
 contextId: fresh-thinking-in-systems-direct-3
-suiteRevision: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
+suiteRevision: git:2983a2e2f0a1d9dfaea247168b4a56a0c51e4b28
 evaluator: gpt-5.6-terra-fresh-context-full-standard
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:

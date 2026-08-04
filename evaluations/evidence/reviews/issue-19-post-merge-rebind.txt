@@ -1,0 +1,23 @@
+Issue #19 post-merge integration rebind attestation
+
+Attested at: 2026-08-04T19:29:29Z
+Merged base: git:87792533689dba90a7a605e91194b553618d72be
+Reviewed Prototype runtime candidate: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
+Reviewed Prototype evidence/report commit: git:60ea7031eba3fece507c771d759f6fbf8d3a5c80
+Integrated candidate: git:2983a2e2f0a1d9dfaea247168b4a56a0c51e4b28
+
+This is a revision-binding integration correction, not a claim that the
+Prototype behavioral runs were repeated. Existing Prototype prompts, context
+ids, recordedAt timestamps, raw transcripts, and raw-evidence hashes remain
+unchanged. The merged #42 overlay fixtures, evidence, observations, and
+validation implementation are retained; the combined report is regenerated
+after all observations are rebound to the integrated candidate.
+
+Prototype runtime equivalence proof:
+
+  git diff --quiet 9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c..2983a2e2f0a1d9dfaea247168b4a56a0c51e4b28 -- skills/prototype
+
+Result: exit 0; the merge adds the current main overlay tranche without
+changing the reviewed Prototype runtime. All observations are rebound to the
+integrated candidate before validation, and any later non-evaluation change
+requires a new truthful rebind or fresh behavioral proof.
