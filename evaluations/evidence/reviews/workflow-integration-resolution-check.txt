@@ -1,0 +1,133 @@
+Workflow integration resolution check
+
+Reviewer: gpt-5.6-luna, max reasoning. This is the single post-merge
+integration resolution check. The checker did not author the Workflow
+implementation, merge, rebinding, integration attestation, report, or
+observations. It assesses only regressions or integration defects against the
+stated merge requirements; it is not a new adversarial review.
+
+Scope and identities
+
+- Final checked HEAD: `04c064cd858ea16133e2a14bdf083f4c36763bc3`.
+- Non-evaluation merge candidate: `5168e5f4d168bbf0310494d0afa8ab27020d35eb`.
+- Normal merge parents (from `git rev-list --parents -n 1
+  5168e5f4d168bbf0310494d0afa8ab27020d35eb`): pre-merge Workflow/evidence
+  `36f3a06f728aebd2012128d1d8039910aaef6186`; current main
+  `87792533689dba90a7a605e91194b553618d72be`.
+- Reviewed Workflow behavior candidate: `ce44e42557c60aff88dbcfce90fce126aec6a364`.
+
+Read before checking: `evaluations/evidence/reviews/workflow-post-merge-
+integration-attestation.txt`; the three Workflow records
+(`issue-13-spec-review.txt`, `issue-13-standards-review.txt`, and
+`issue-13-resolution-check.txt`); current-main/overlay records
+(`issue-17-acceptance-proof.txt`, `issue-18-acceptance-proof.txt`,
+`issue-20-acceptance-proof.txt`, `issue-34-adversarial-review.txt`,
+`issue-34-candidate-rebind-attestation.txt`, `issue-34-resolution-check.txt`,
+`overlay-tranche-existing-observation-rebind.txt`,
+`overlay-tranche-luna-adversarial-review.txt`,
+`overlay-tranche-luna-resolution-check.txt`, and
+`overlay-tranche-post-merge-rebind.txt`); the current Workflow and universal
+contracts/docs (`README.md`, `skills/README.md`, `docs/WORKFLOW_ROUTING.md`,
+`docs/OWNERSHIP_LIFECYCLE.md`, `docs/UNIVERSAL_WORK_CONTRACT.md`,
+`docs/VALIDATION_AND_RELEASE.md`, `docs/DECISIONS.md`, `docs/ARCHITECTURE.md`,
+`docs/ROADMAP.md`, `docs/requirements/REQUIREMENTS_LEDGER.md`, and the current
+Workflow handoff); all 89 observations; all referenced raw evidence and
+artifacts; and `evaluations/reports/foundation.report.json`.
+
+1. Merge integrity and retention
+
+Commands:
+
+    git rev-list --parents -n 1 5168e5f4d168bbf0310494d0afa8ab27020d35eb
+    git ls-files -u
+    git diff --name-status --diff-filter=D 87792533689dba90a7a605e91194b553618d72be..5168e5f4d168bbf0310494d0afa8ab27020d35eb -- overlays evaluations/evidence evaluations/fixtures evaluations/inputs src/validation tests
+
+Results: the merge has exactly the two normal parents listed above;
+`git ls-files -u` printed no entries (`unmergedIndexEntries=0`); and the
+deletion check printed no paths (`deletionsOriginMainToMerge=0`). A read-only
+tree comparison found every one of the 272 paths from current main present in
+the merge (`missing=0`), including: overlays 5/5, current-main evaluation
+evidence 90/90, fixtures 38/38, inputs 2/2, `src/validation` 10/10, and tests
+6/6. Thus all origin/main overlay files/evidence, validator changes, tests,
+and review records were retained.
+
+2. Workflow runtime equivalence and post-merge scope
+
+    git diff --quiet ce44e42557c60aff88dbcfce90fce126aec6a364..5168e5f4d168bbf0310494d0afa8ab27020d35eb -- skills/workflow docs/WORKFLOW_ROUTING.md docs/OWNERSHIP_LIFECYCLE.md docs/DECISIONS.md docs/ARCHITECTURE.md docs/ROADMAP.md README.md skills/README.md validation/repository.yaml
+
+Result: exit 0. The attested Workflow runtime surfaces are byte-equivalent
+between `ce44e42557c60aff88dbcfce90fce126aec6a364` and
+`5168e5f4d168bbf0310494d0afa8ab27020d35eb`.
+
+    git diff --quiet 5168e5f4d168bbf0310494d0afa8ab27020d35eb..HEAD -- . ':(exclude)evaluations/**'
+
+Result: exit 0; `postMergeNonEvalChangedPaths=0`. HEAD adds only the
+evaluation attestation/rebinding/report changes after the merge candidate; no
+non-evaluation implementation or runtime input changed.
+
+3. Observation, raw-evidence, and combined-report binding
+
+Read-only YAML/hash/key-set verification walked every current observation and
+raw locator, recomputed SHA-256 values, and joined observation keys to report
+evidence keys. Exact output:
+
+    observations=89 suiteRevisions=git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
+    rawRefs=100 (primary=89, artifactRefs=11) hashMismatches=0
+    fixtureFiles=53 reportFixtures=53 reportEvidence=89 reportStatuses={"passed":53}
+    reportSuiteRevision=git:5168e5f4d168bbf0310494d0afa8ab27020d35eb reportSummary={"failed":0,"findings":{"Critical":0,"Major":0,"Minor":0},"fixtures":53,"passed":53} reportEvidenceHashMismatches=0
+    observationNotInReport=0 reportNotInObservations=0
+    staleIdentityMatchesInCurrentObservationReport=0
+
+Every one of the 89 observations therefore binds exactly to
+`git:5168e5f4d168bbf0310494d0afa8ab27020d35eb`; all 100 raw/artifact hashes
+match; all 53 fixtures pass; and every current observation is represented in
+the combined report. The stale-identity search covers current observation and
+report binding surfaces and finds no `ce44e425...` or `535374486...`. Prior
+candidate identities retained inside immutable historical raw transcripts or
+review records are provenance, not current suite or publication identities.
+
+4. Current validation
+
+    pnpm validate
+
+Result: exit 0. `ultracite check` passed; TypeScript typecheck passed; Vitest
+reported 6 test files and 28 tests passed; repository validation reported 364
+files, 2 skills, and 53 evaluation fixtures validated (including this
+resolution record).
+
+5. Diff/boundary checks
+
+    git diff --check origin/main..HEAD
+    git diff --name-status --diff-filter=DR origin/main..HEAD
+    git diff --name-status origin/main..HEAD -- overlays src/validation tests validation/overlays.yaml
+
+Results: `git diff --check` exited 0; the deleted/renamed-path command printed
+no paths; and the forbidden implementation/overlay path command printed no
+paths. The only validation-registry change is the required Workflow registry
+line in `validation/repository.yaml`:
+
+    -expectedSkills: [thinking-in-systems]
+    +expectedSkills: [thinking-in-systems, workflow]
+
+That line is not main collateral: it is the documented expected-skill registry
+required for the installed Workflow package. Removing `workflow` makes the
+repository validator report that the skill directory is absent from
+`validation/repository.yaml` (a Major validation finding), so removing this
+line would fail the documented validation contract. There is no change to
+`validation/overlays.yaml`.
+
+6. PR #37 state (read-only GitHub check)
+
+    gh pr view 37 --json number,state,isDraft,mergeable,mergeStateStatus,reviewDecision,labels,url,title,headRefOid,baseRefOid
+
+Result after recalculation: `state=OPEN`, `isDraft=false`,
+`mergeable=MERGEABLE`, `mergeStateStatus=CLEAN`,
+`headRefOid=04c064cd858ea16133e2a14bdf083f4c36763bc3`,
+`baseRefOid=87792533689dba90a7a605e91194b553618d72be`, URL
+`https://github.com/JustYannicc/skills/pull/37`, and the
+`human-review-required` label is present. `reviewDecision` is empty, as
+expected while explicit human review remains required; this check does not
+constitute maintainer approval, merge permission, or publication.
+
+Verdict: PASS — the merged Workflow candidate satisfies every stated
+integration requirement, with no unresolved integration defect found.
