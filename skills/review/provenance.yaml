@@ -1,13 +1,14 @@
 schemaVersion: 1
-strategy: adapted
+strategy: original
 sources:
   - id: thinking-in-systems-standard-v1
   - id: matt-pocock-skills
 retainedBehavior:
-  - Two-axis comparison of a submitted result with its governing standards and accepted Specification.
+  - Independently written two-axis comparison of a submitted result with its governing standards and accepted Specification.
   - Risk-scaled independent review and concise findings at a public proof seam.
   - Revision-pinned evidence and a separate resolution path for material findings.
 changedAssumptions:
+  - Matt Pocock's code-review skill is design inspiration only; no upstream code-review skill or runtime dependency is bundled.
   - Review is universal across code, communication, personal, organizational, physical, and agent results; code is one execution medium rather than a separate code-review workflow.
   - The accepted Specification, result, standards, effect evidence, and configured Supplemental findings are exact inputs, and one core Reviewer owns the integrated verdict.
   - Supplemental skills run only at the declared supplemental-review Extension point and strengthen rather than replace core Review.
