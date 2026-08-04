@@ -1,0 +1,5 @@
+interface:
+  display_name: "Domain Modeling"
+  short_description: "Establish shared terminology and visible conflicts"
+policy:
+  allow_implicit_invocation: true
