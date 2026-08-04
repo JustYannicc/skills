@@ -14,8 +14,9 @@ environment:
   capabilities:
     modelInvocation: true
     fileWrite: true
+    fileRead: true
     recipientContext: true
-  tools: []
+  tools: [file write, file read/inspection]
 expected:
   actions: [identify the recipient role expertise and relationship, cover all six concrete knowledge gaps, order questions most-important-first and group them under thematic headings, include title purpose sender recipient answer use and concise context, include deadline effort and guidance that partial or uncertain answers are useful, keep every question to one idea with an answer stub and add rationale only where needed, close with an anything-else question, write the questionnaire file, report its path]
   artifacts: [recipient-ready questionnaire]

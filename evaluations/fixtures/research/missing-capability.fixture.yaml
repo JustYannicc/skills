@@ -7,7 +7,10 @@ skill: research
 domains: [personal-decision]
 severity: Major
 requiredAttempts: 1
-prompt: Investigate a bounded external fact, but this context has no primary-source lookup, delegation, or other research capability.
+prompt: >-
+  Investigate whether the current accessibility policy for North Hall permits
+  service animals, but this context has no primary-source lookup, delegation,
+  supplied policy record, or other research capability.
 environment:
   id: no-research-capability
   capabilities:

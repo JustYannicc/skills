@@ -7,7 +7,14 @@ skill: to-questionnaire
 domains: [agent-work, communication]
 severity: Major
 requiredAttempts: 1
-prompt: Prepare a questionnaire for the volunteer coordinator who knows which accessibility accommodations participants need. I need the questions and how the answers will guide the event plan, but this host cannot write files.
+prompt: >-
+  Prepare a questionnaire for our colleague, the volunteer coordinator who
+  knows which participants requested mobility, sensory, communication, or
+  dietary accommodations and which requests still need confirmation. We need
+  those facts to choose the accessible event plan without choosing it in the
+  questionnaire. The response is due Friday and should take about 15 minutes.
+  Draft the complete questions and explain how the answers will guide the event
+  plan, but this host cannot write files.
 environment:
   id: questionnaire-without-file-write
   capabilities:

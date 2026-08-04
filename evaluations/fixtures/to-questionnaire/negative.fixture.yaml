@@ -7,7 +7,10 @@ skill: to-questionnaire
 domains: [education]
 severity: Major
 requiredAttempts: 1
-prompt: Decide which of these two clearly described workshop times is better using the attendance numbers already provided; do not contact anyone else.
+prompt: >-
+  Choose the workshop time with higher expected attendance: 10:00 has 14
+  confirmed attendees and 14:00 has 22 confirmed attendees. Use only those
+  supplied numbers and do not contact anyone else.
 environment:
   id: questionnaire-not-needed
   capabilities:

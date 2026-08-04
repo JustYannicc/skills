@@ -7,7 +7,12 @@ skill: batch-grill-me
 domains: [personal, organizational-work]
 severity: Major
 requiredAttempts: 1
-prompt: Plan a new household meal routine, but do not assume the household's dietary constraints, available preparation time, or decision authority. Ask the currently unblocked questions and wait for answers.
+prompt: >-
+  Plan a new household meal routine. The accepted tree has exactly three
+  currently unblocked user decisions: dietary constraints, available
+  preparation time, and decision authority. Servings, cadence, budget, cuisine,
+  shopping, and implementation all depend on those answers. Do not assume any
+  answer; ask only the complete current frontier and wait.
 environment:
   id: missing-user-decisions
   capabilities:

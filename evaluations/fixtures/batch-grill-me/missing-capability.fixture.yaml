@@ -7,7 +7,15 @@ skill: batch-grill-me
 domains: [physical-environment, organizational-work]
 severity: Major
 requiredAttempts: 1
-prompt: Help me choose between two venues for a community workshop. One frontier question requires checking each venue's current accessibility policy, but this environment has no filesystem, web, tool, or delegation capability. Ask the remaining user decisions now and keep the fact-dependent branch visibly unsettled.
+prompt: >-
+  Help me choose between North Hall and River Hall for a community workshop.
+  Comparing their accessibility policies requires checking each venue's current
+  policy, but this environment has no filesystem, web, tool, or delegation
+  capability. The other currently unblocked user decisions are workshop date
+  and time, expected attendance, maximum budget, the ranking of location,
+  capacity, equipment, and travel trade-offs, and final booking authority. Ask
+  that complete independent frontier now and keep the accessibility comparison
+  visibly unsettled.
 environment:
   id: no-fact-capability
   capabilities:

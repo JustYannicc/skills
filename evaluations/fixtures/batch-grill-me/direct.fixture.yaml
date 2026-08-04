@@ -24,7 +24,7 @@ expected:
   invoked: [batch-grill-me]
   notInvoked: [execution of the booking-process change]
   proof: [the skill is reachable through model invocation, the first round contains exactly the three supplied unblocked decisions, cancellation and reminder questions remain explicitly downstream]
-  responsibility: [batch-grill-me retains responsibility for exhausting the decision frontier and returns the accepted understanding to Workflow]
+  responsibility: [batch-grill-me retains responsibility for exhausting the decision frontier while the user's answers are pending]
   route: [decision-frontier-in-rounds]
   state: [awaiting-user-decisions]
   forbidden: [remain unreachable unless the user names Batch Grill Me, ask only one question when independent frontier questions are available, ask a dependent question before its prerequisite is answered, act before shared-understanding confirmation]
