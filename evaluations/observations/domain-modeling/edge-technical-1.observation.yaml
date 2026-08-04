@@ -2,16 +2,16 @@ schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 1
 contextId: fresh-domain-edge-technical-1
-suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+suiteRevision: git:a7fabb5adfbe59c0a7f2e1571e635d4536b94bd4
 evaluator: issue-16-fresh-context
 recordedAt: 2026-08-04T20:35:00.000Z
 environment:
   id: adapter-stale-revision
-  capabilities: { persistence: true, conditionalWrite: true, batchWrite: false }
+  capabilities: { persistence: true, conditionalWrite: true, writeAuthority: false, batchWrite: false }
   tools: [selected Adapter, API and process artifacts]
 observed:
-  actions: [surface the conflicting meanings, preserve both contexts, report stale revision, ask the authority question]
-  artifacts: [conflict and recovery evidence]
+  actions: [surface the conflicting meanings, preserve both contexts, report stale revision, report missing write Authority, ask the authority question, return exact next action to Workflow]
+  artifacts: [conflict and recovery evidence, continuation action]
   effects: []
   forbiddenChecks:
     - criterion: overwrite the canonical language record after a stale revision
@@ -19,10 +19,10 @@ observed:
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [code edit, architecture decision, forced overwrite]
-  proof: [stale revision bound, both meanings retained, recovery next check]
+  proof: [stale revision bound, authority gap recorded, both meanings retained, exact continuation action, recovery next check]
   responsibility: [workflow retains parent responsibility]
   route: [terminology-conflict-recovery]
-  state: [terminology-conflicted]
+  state: [terminology-conflicted-and-waiting-for-authority]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-1.txt
-  sha256: 0feb7d860713281274ececfb7e84100cf3d3f3ec1688fb2ae4604f72d898ed20
+  sha256: 5a778d4dd492b7c172d57c4735f2e65a3efb783ecad394f321a637af27acf50e

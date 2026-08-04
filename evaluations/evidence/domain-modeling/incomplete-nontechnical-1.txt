@@ -2,4 +2,8 @@ fixture: domain-modeling-incomplete-nontechnical
 attempt: 1
 context: fresh-domain-incomplete-nontechnical-1
 result: The owner, deadline, affected group, and examples for urgent were missing. One question asked which actor and response boundary should govern the term; the entry remained unresolved.
+canonical_locator: coordination-space/domain-modeling/team-policy-language
+source_revision: terminology-r07
+result_revision: terminology-r08
+write_authority: workflow-parent-accepted
 boundary: no policy threshold or execution was claimed.

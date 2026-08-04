@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-direct-technical
 attempt: 1
 contextId: fresh-domain-direct-technical-1
-suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+suiteRevision: git:a7fabb5adfbe59c0a7f2e1571e635d4536b94bd4
 evaluator: issue-16-fresh-context
 recordedAt: 2026-08-04T20:35:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [terminology-resolved-or-conflict-visible]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-technical-1.txt
-  sha256: 142e9849b29164002b9e0e81e7773aa5f7cd700f1c346eba2bfdb6571b072e1f
+  sha256: f10803b6812e48a654a791432e5349f2f1a16312fba6e7e8bd5818f715369320

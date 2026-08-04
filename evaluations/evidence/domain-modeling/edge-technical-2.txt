@@ -2,4 +2,11 @@ fixture: domain-modeling-edge-technical
 attempt: 2
 context: fresh-domain-edge-technical-2
 result: Whole-purchase Order and partial-cancellation Order meanings, plus the two Account meanings, were retained as separate conflicts. The selected Adapter rejected the stale revision and returned recovery evidence.
+canonical_locator: coordination-space/domain-modeling/technical-language
+source_revision: terminology-r17
+candidate_revision: terminology-r18-candidate
+result_revision: terminology-r17
+write_authority: none-accepted
+write_outcome: stale-and-authority-conflict-preserved; no durable update
+continuation: obtain accepted write Authority or an explicit transfer before retrying the guarded write
 boundary: No code edit, architecture decision, or overwrite occurred.

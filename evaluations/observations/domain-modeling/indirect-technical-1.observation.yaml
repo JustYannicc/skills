@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-indirect-technical
 attempt: 1
 contextId: fresh-domain-indirect-technical-1
-suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+suiteRevision: git:a7fabb5adfbe59c0a7f2e1571e635d4536b94bd4
 evaluator: issue-16-fresh-context
 recordedAt: 2026-08-04T20:35:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [ready-for-specification-or-discovery]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-technical-1.txt
-  sha256: 38defc889dbce71b48c97ad29ebc22ee29dc509f4067046ab4340d3e55acb756
+  sha256: f96d7a6df5a557eca063468faa31a5224075a9143975dc199cb6c8c420b9455f

@@ -2,4 +2,8 @@ fixture: domain-modeling-incomplete-technical
 attempt: 1
 context: fresh-domain-incomplete-technical-1
 result: The scope, lifecycle, actor, authority, and retention source for active session were missing. One question asked which canonical source and lifecycle boundary govern the term; the entry remained unresolved.
+canonical_locator: coordination-space/domain-modeling/session-language
+source_revision: terminology-r03
+result_revision: terminology-r04
+write_authority: workflow-parent-accepted
 boundary: no definition, architecture decision, research, or code change was claimed.

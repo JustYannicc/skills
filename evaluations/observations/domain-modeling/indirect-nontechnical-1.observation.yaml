@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-indirect-nontechnical
 attempt: 1
 contextId: fresh-domain-indirect-nontechnical-1
-suiteRevision: git:8d04a35fa74ffaf91baa6c265560550e911dcd3a
+suiteRevision: git:a7fabb5adfbe59c0a7f2e1571e635d4536b94bd4
 evaluator: issue-16-fresh-context
 recordedAt: 2026-08-04T20:35:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [ready-for-assignment-or-discovery]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt
-  sha256: 3f4ac2a6cef358e67500e41fe5c21186e9f9f68730bbc32aba1ae15fac085f12
+  sha256: 9b5a26180f7a6907cc92e251d30d0cb63c3d7f53d230768fb1f2b04f438686eb
