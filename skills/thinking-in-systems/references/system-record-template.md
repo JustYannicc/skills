@@ -1,19 +1,36 @@
 ---
-system_id: SXX
-title: "[System name]"
-version: 0.1.0-draft
-design_status: candidate
-operational_status: unbuilt
-catalog_eligibility: not_eligible
-owner: "[System owner]"
-decision_authority: "[who may accept, change, or activate it]"
-governed_by: Thinking in Systems standard
-supersedes: null
+schema_version: 1
+record_id: SYS-000
+record_version: 0.1.0-draft
+state: candidate
+owner:
+  id: "[stable Actor id or unambiguous local label]"
+  label: "[System owner]"
+authority:
+  decision_owner: "[who may accept, change, or activate it]"
+  allowed_effects:
+    - compose_without_effect
+relationships:
+  - kind: related
+    record_id: SYS-001
+    contract: "[interface or handoff contract locator]"
+provenance:
+  source: "[original request or governing source]"
+  revision: "[source revision or date]"
+  sha256: "[64 lowercase hexadecimal characters]"
+approval:
+  required: true
+  status: pending
+  result_revision: "[exact proposed result revision]"
 ---
 
-# System Record
+# [System name] — System Record
 
 Use this template only for a Durable system or material System change. Complete the mandatory meaning from the full standard; include a conditional field only for a named consumer or material risk. Link to facts owned elsewhere instead of copying them.
+
+For the Local Markdown Adapter, this Markdown file is the one writable human authority. Its constrained YAML envelope owns the formal identity, version, current state, owner, action Authority, relationship index, source provenance, and exact approval binding. The body explains their meaning and rationale by reference rather than copying those formal values. Delete the optional `approval` object when no named approval consumer or material risk requires it. Treat envelope comments, style, and key order as non-authoritative presentation.
+
+Parse and validate the complete envelope before a machine-authorized lifecycle transition, projection, or external effect. A malformed, unsupported, or unavailable envelope remains readable and editable by a human but `unverified` and blocked for machine action. JSON or TOML projections are optional generated read-only views; they identify this canonical locator, record revision, source SHA-256, generation time, and freshness, reject direct edits, and never become a second authority. Adapter-native records may map the same logical fields without requiring YAML or TOML universally. See the [HUMAN REVIEW REQUIRED representation decision](../../../docs/SYSTEM_RECORD_REPRESENTATION.md).
 
 ## 1. Frame
 
@@ -26,7 +43,7 @@ Use this template only for a Durable system or material System change. Complete 
 - **Feasible set under current Authority, resources, capabilities, and operating conditions:**
 - **Affected Actor Preferences, conflicts, evidence, and conditions under which they may change:**
 - **Matched truthful Decision frames, when the decision is materially frame-sensitive:** reference points, gain/loss and absolute/relative formulations, probability formats, denominators, time horizons, stable judgment, and any frame-sensitive reversal; keep alternatives, outcomes, Constraints, and material omissions constant.
-- **Owner, bounded Responsibilities, and decision Authority:**
+- **Rationale and constraints for the envelope owner, bounded Responsibilities, and decision Authority:**
 - **Material domain terms:**
 - **Intentionality and progress classification, when relevant:** intended productive use, rest or leisure, intentional or incidental progress, or unresolved Intent; never a moral score.
 
@@ -34,16 +51,7 @@ Use this template only for a Durable system or material System change. Complete 
 
 - **Owned responsibilities:**
 
-Add one row for each known material relationship and delete unused placeholder rows. This is a relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
-
-| Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
-| --- | --- | --- | --- |
-| Containing System |  |  |  |
-| Subsystem |  |  |  |
-| Upstream System |  |  |  |
-| Dependent System |  |  |  |
-| Peer System |  |  |  |
-| Other material relationship |  |  |  |
+The envelope's `relationships` list is the single relationship index. Add one entry for each known material relationship and delete unused placeholders. Use `unknown` only when the uncertainty is itself material. Each entry identifies the relationship kind, related System identity, and interface or handoff contract locator. Section 6 owns the detailed inputs, outputs, Authority, timing, failure behavior, and proof; link rather than copy them.
 
 - **Affected but not controlled:**
 - **Included and excluded:**
@@ -194,8 +202,8 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 
 - **Stable identity and canonical record:**
 - **Applicability and supported operations:**
-- **Relationship index, conflicts, and precedence:**
-- **Design status, operational status, eligibility, version, and freshness:**
+- **Relationship conflicts and precedence not expressed by the envelope index:**
+- **Applicability, operational eligibility, and freshness rationale beyond the envelope state and version:**
 - **Human-readable status and control surface:**
 - **Current state, last and next action, owner, and authoritative links:**
 - **Contract-selection evidence and no-match or conflict behavior:**
