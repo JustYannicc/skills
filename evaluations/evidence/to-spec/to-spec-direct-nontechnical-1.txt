@@ -1,0 +1,35 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Outcome Specification — Accessible Community Workshop Registration and Welcome
+
+Revision: v1, Proposed; the complete accepted semantic contract was supplied,
+but the exact revision still awaits Approver acceptance. Representation: Inline
+in this conversation; no durable record is created or claimed.
+
+Outcome: Named participants have an accessible registration and welcome process
+at the accepted venue by the event date.
+Scope: Named participants, accepted venue, registration/welcome process,
+responsible actors, event-date horizon, and accepted follow-up.
+Exclusions: Unrelated outreach, venue/programme changes, and other workshop
+improvements. Required accessibility remediation, propagation, and recovery
+remain in scope.
+Constraints: Accepted venue, accessibility commitments, and event date are
+hard constraints with named sources, high confidence, and stated effects on
+feasible choices; no soft preference is added.
+Responsibility: One Outcome owner, one Specification Work owner, and one
+Approver are carried from the accepted context. To-spec owns this result;
+Workflow retains parent responsibility.
+Authority: Approver accepts intent/material trade-offs. Effect authority is
+separately bounded to this process, participant set, venue, commitments, and
+date/follow-up; no effect is exercised.
+Accepted decisions: Keep the named scope, accessibility commitments,
+exclusions, venue proof observation, terminal follow-up, owner, Work owner,
+Approver, and effect authority, each with source/confidence and rationale.
+Unresolved exceptions: None supplied; no decision is invented.
+Proof seam: Highest stable seam is the registration/welcome interaction at the
+venue, observed by the named observer on or before the event date.
+Terminal condition: Proof observation confirms accessibility and the accepted
+follow-up is recorded; failures receive required remediation before closure.
+Return: v1 Inline Proposed Specification returns to Workflow/Approver. No
+scheduling, Tickets, implementation, or event effect occurs.

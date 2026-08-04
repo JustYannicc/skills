@@ -1,0 +1,36 @@
+schemaVersion: 1
+id: to-spec-revision-change
+title: Material change creates an impact-bound revision
+shape: edge
+kind: invocation
+skill: to-spec
+domains: [technical, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Specification revision v1 was accepted with its complete Outcome, scope,
+  exclusions, constraints, actors, authority, proof, and terminal condition;
+  two dependent Tickets, one approval, and evidence for the original scope
+  also exist. The accepted scope now excludes one consumer group and changes a
+  material constraint. Compare v1 and v2, perform impact analysis over affected
+  dependencies, completed work, approvals, evidence, current-state records,
+  effects, and legacy state, preserve unaffected work, and return v2 for
+  re-approval; do not execute anything.
+environment:
+  id: workflow-specification-revision
+  capabilities:
+    workflow: true
+    persistence: false
+    to-spec: true
+  tools: []
+expected:
+  actions: [compare prior and proposed Specification revisions, perform impact analysis, invalidate only affected approvals/evidence/dependencies/Tickets, completed work/current-state records, and legacy state, preserve unaffected work, issue new revision]
+  artifacts: [revised Outcome Specification, revision impact analysis]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [old/new revision and affected set are recorded]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [revision-change-to-spec]
+  state: [Proposed]
+  forbidden: [mutate prior revision in place, reuse stale approval, invalidate unrelated work, claim completion]

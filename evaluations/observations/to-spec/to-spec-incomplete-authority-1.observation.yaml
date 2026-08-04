@@ -1,0 +1,34 @@
+schemaVersion: 1
+fixtureId: to-spec-incomplete-authority
+attempt: 1
+contextId: fresh-to-spec-incomplete-authority-d4626c-1
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
+evaluator: gpt-5.6-luna-fresh-context
+recordedAt: 2026-08-04T20:48:00.000Z
+environment:
+  id: workflow-specification-gaps
+  capabilities: { workflow: true, persistence: false, to-spec: true, batch-grill-me: true, research: true, to-questionnaire: true }
+  tools: []
+observed:
+  actions: [preserve request and state, enumerate material missing decisions, route gaps to batch-grill-me, research, to-questionnaire, and Workflow approval, state exact resumption condition]
+  artifacts: [Specification gap record]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent Authority
+      evidence: Approver and contact/effect authority, limits, and validity remain unresolved and route to Workflow approval.
+      observed: false
+    - criterion: present accepted Specification
+      evidence: The result is a Waiting for discovery gap record and requires every routed return before synthesis.
+      observed: false
+    - criterion: execute effect
+      evidence: No person is contacted and no configuration, Ticket, implementation, or effect occurs.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement, effect]
+  proof: [each gap has an owner or Approver/source and resumption condition]
+  responsibility: [to-spec owns the bounded Specification result, Workflow remains responsible while blocked]
+  route: [to-spec-to-batch-grill-me, to-spec-to-research, to-spec-to-questionnaire, to-spec-to-workflow-approval]
+  state: [Waiting for discovery]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt
+  sha256: 075fb13a8944b7d9afa2aaa535a1e97d3b019b1461f70bcb35d939653726b5d0

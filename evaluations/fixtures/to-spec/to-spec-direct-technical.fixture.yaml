@@ -1,0 +1,40 @@
+schemaVersion: 1
+id: to-spec-direct-technical
+title: Technical accepted decisions become one universal Specification
+shape: direct
+kind: invocation
+skill: to-spec
+domains: [technical, software]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  The accepted Outcome is to keep the public configuration response compatible
+  for the named consumer group during the stated migration window. The scope,
+  Outcome owner, Specification Work owner, Approver, separately bounded effect authority, timeout threshold, exclusions, proof
+  observation, and terminal condition have all been accepted. Each accepted
+  fact and decision has a named source and confidence, and no unresolved
+  exceptions remain. Synthesize the
+  one Outcome Specification now. Workflow has selected Durable mode through a
+  canonical Adapter, which has accepted the write at locator
+  `outcome:consumer-compat/v1` and exact host revision `adapter-r42`; preserve
+  that mode without choosing its representation format. Do not implement the
+  Outcome.
+environment:
+  id: workflow-specification-ready
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    to-spec: true
+  tools: [selected canonical Adapter]
+expected:
+  actions: [preserve accepted intent, synthesize one Outcome Specification, honor selected Durable mode, bind exact Specification revision]
+  artifacts: [durable Outcome Specification]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [all required Specification fields are present, exact revision is identified, canonical Adapter locator is recorded]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [workflow-to-spec]
+  state: [Proposed]
+  forbidden: [invent missing decisions, absorb decomposition or implementation, claim parent completion, claim durable persistence without Adapter evidence]

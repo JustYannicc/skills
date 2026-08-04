@@ -1,0 +1,25 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Outcome Specification — Venue setup (Proposed)
+
+Outcome: venue setup reaches the settled externally observable condition for the
+named participants and purpose at the agreed proof seam.
+Scope: settled venue, people, systems/environments, horizon, and setup boundary.
+Exclusions: settled out-of-scope improvements; required remediation,
+propagation, and recovery remain governed by the supplied scope.
+Constraints: settled hard limits and soft preferences, each retaining source,
+confidence, and effect on feasible choices.
+Responsibility: named Outcome owner and Specification Work owner; any
+Executor/Reviewer remain downstream; Workflow retains parent responsibility.
+Authority: named Approver owns intent/material trade-offs; effect authority is
+separately bounded. No venue effect is authorized or executed here.
+Accepted decisions: only the decisions settled in the request.
+Unresolved exceptions: none supplied; this revision is Proposed because
+approval is not claimed.
+Proof seam: settled observable venue check with supplied observer/timing.
+Terminal condition: Approver accepts this exact Specification and Workflow later
+verifies setup at that seam.
+Boundary: this response materializes only the Specification. Requests to create
+Tickets, schedule reminders, and implement setup return to Workflow; none occurs
+in to-spec.

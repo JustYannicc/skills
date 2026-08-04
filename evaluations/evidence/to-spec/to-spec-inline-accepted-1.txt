@@ -1,0 +1,22 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Outcome Specification (Inline, Accepted)
+
+Outcome: a concise welcome note for the named recipient, serving the settled
+purpose and tone and readable by that recipient today.
+Scope: this one note, recipient, today, and the in-conversation writing boundary.
+Exclusions: durable records, sending the note, and unrelated communication.
+Constraints: settled recipient, purpose, tone, scope, exclusion, and supplied
+hard limits/preferences with source, confidence, and effect.
+Responsibility: direct caller retains parent Outcome responsibility; to-spec owns
+this bounded semantic result. No Workflow host or second workflow is created.
+Authority: caller accepts responsibility and authority for this in-conversation
+note; no external-send authority is exercised.
+Accepted decisions: all decisions stated in the request with source/confidence.
+Unresolved exceptions: none.
+Proof seam: note is represented in this conversation and can be read by the
+named recipient.
+Terminal condition: note is accepted in this conversation.
+Representation/state: one implicit Inline Specification, revision v1, Accepted.
+No file, tracker, durable Adapter, send, or downstream phase is created.

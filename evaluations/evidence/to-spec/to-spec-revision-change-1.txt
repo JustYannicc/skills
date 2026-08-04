@@ -1,0 +1,35 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Outcome Specification v2 — Proposed
+
+Revision: v2 is a new semantic revision; v1 remains immutable with its full
+accepted history. Outcome: preserve the original externally observable
+condition for remaining consumer groups; the group excluded by the accepted
+change is outside v2.
+Scope: v1 scope minus that group, carrying forward v1 actors, environments,
+horizon, proof seam, and boundaries.
+Exclusions: excluded group and unrelated improvements; required remediation,
+propagation, and recovery remain in scope.
+Constraints: carry v1 hard limits/preferences except the one accepted material
+constraint change, with source/confidence/effect preserved.
+Responsibility: v1 Outcome owner remains owner; to-spec owns this result;
+Workflow retains parent responsibility; existing Executor/Reviewer routes are
+reopened only if the impact set requires it.
+Authority: Existing Approver must accept exact v2; effect authority is
+unchanged and no effect is executed.
+Accepted decisions: group exclusion and changed constraint are accepted v2
+inputs; all other v1 decisions remain accepted at v1 revision, with rationale.
+Unresolved exceptions: None added; identities and inherited values come from
+v1 rather than invention.
+Proof seam: exact v1/v2 diff and affected/preserved record set. Terminal
+condition: exact-v2 re-approval before downstream work.
+
+Impact analysis: inspect both dependent Tickets and dependencies. Reopen only
+portions tied to the excluded group or changed constraint. Apply the same
+affected-only treatment to completed work, current-state records, legacy state,
+effects, approvals, and evidence; preserve unrelated records and evidence. No
+Ticket or implementation work occurs.
+
+Return: v2 and this impact analysis return through Workflow for re-approval;
+state remains Proposed.

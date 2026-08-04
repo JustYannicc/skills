@@ -1,0 +1,35 @@
+schemaVersion: 1
+id: to-spec-indirect
+title: Accepted discovery returns through Workflow
+shape: indirect
+kind: invocation
+skill: to-spec
+domains: [communication, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow has supplied accepted discovery for the exact approved customer
+  update process, including its Outcome, scope, exclusions, constraints,
+  recipients, owner, Specification Work owner, Approver and effect authority,
+  accepted decisions with sources and confidence, no unresolved exceptions,
+  proof, and terminal response. Synthesize the Specification from those
+  decisions and return it to Workflow; do not send the update or create Tickets.
+environment:
+  id: workflow-with-accepted-discovery
+  capabilities:
+    workflow: true
+    persistence: false
+    to-spec: true
+    research: false
+  tools: []
+expected:
+  actions: [preserve accepted intent, use only accepted discovery decisions, synthesize one Outcome Specification, return the Specification to Workflow]
+  artifacts: [Outcome Specification]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [all required Specification fields are present, exact revision is identified]
+  responsibility: [to-spec owns the bounded Specification result, Workflow integrates the Specification]
+  route: [workflow-to-spec-to-workflow]
+  state: [Proposed]
+  forbidden: [silently resolve unresolved discovery, send effect]

@@ -1,0 +1,33 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Specification Gap Record — Automatic Deadline-Miss Reminder
+Revision: automatic-reminder/spec-gap-1, Inline; persistence is unavailable.
+State: Waiting for discovery. The request is preserved, not accepted; no person
+is contacted and no configuration, Ticket, or effect is performed.
+
+Every unresolved gap blocks acceptance and has a route, owner/Approver, source
+need, smallest request, and exact resumption action:
+
+1. Outcome threshold, grace/timing, repeat and stop rule — changes Outcome,
+scope, safety, proof, and terminal condition. Route to batch-grill-me because
+the current user holds this decision. Resume when the answer is accepted.
+2. Outcome/operational owner — changes Responsibility and escalation. Route to
+to-questionnaire for the person holding this knowledge. Resume when a named
+owner is returned and accepted.
+3. Recipient and privacy scope — changes Scope, safety, authority, proof, and
+data boundaries. Route to to-questionnaire for the responsible person. Resume
+when an authoritative answer is accepted.
+4. Current-system source and deadline-state semantics — changes feasibility,
+freshness, proof, and terminal condition. Route to research for primary source
+evidence. Resume when the evidence is returned and accepted.
+5. Approver and contact/effect authority, limits, and validity — changes
+Authority and safety. Return to Workflow's approval/waiting route. Resume only
+after exact approval and authority are recorded.
+
+Continuation: Workflow remains responsible while blocked. To-spec returns the
+five routes and does not claim a companion ran. After every routed decision,
+questionnaire answer, research result, and approval/authority return is accepted,
+resume at automatic-reminder/spec-gap-1, classify each return as a fact/decision
+with source and confidence, synthesize one complete revision, and return it
+Proposed for approval. No effect may start before then.

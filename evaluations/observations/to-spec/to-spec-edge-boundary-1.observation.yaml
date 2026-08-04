@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: to-spec-edge-boundary
+attempt: 1
+contextId: fresh-to-spec-edge-boundary-d4626c-1
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
+evaluator: gpt-5.6-luna-fresh-context
+recordedAt: 2026-08-04T20:50:00.000Z
+environment:
+  id: workflow-specification-boundary
+  capabilities: { workflow: true, persistence: false, to-spec: true, to-tickets: true, implement: true, scheduler: true }
+  tools: []
+observed:
+  actions: [preserve accepted intent, synthesize one Outcome Specification, materialize only the Specification, return decomposition/execution to Workflow]
+  artifacts: [Outcome Specification]
+  effects: []
+  forbiddenChecks:
+    - criterion: create Tickets
+      evidence: No Ticket list, identifiers, or creation is present.
+      observed: false
+    - criterion: schedule an effect
+      evidence: No reminder or scheduler action is performed.
+      observed: false
+    - criterion: invent requirements
+      evidence: Only settled venue fields are carried and no requirement is added.
+      observed: false
+    - criterion: claim approval
+      evidence: State is Proposed and exact-revision approval remains with the Approver.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement, scheduler]
+  proof: [Specification boundary and next Workflow phase are explicit]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [workflow-to-spec]
+  state: [Proposed]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-edge-boundary-1.txt
+  sha256: 5b6ffa9b3fba0f470834e194c00adeec8582bbfde1b5a6bb0692231cc5dac354

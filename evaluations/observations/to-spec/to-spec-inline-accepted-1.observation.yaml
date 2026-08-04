@@ -1,0 +1,34 @@
+schemaVersion: 1
+fixtureId: to-spec-inline-accepted
+attempt: 1
+contextId: fresh-to-spec-inline-accepted-direct-d4626c-1
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
+evaluator: gpt-5.6-luna-fresh-context
+recordedAt: 2026-08-04T20:51:00.000Z
+environment:
+  id: workflow-inline-specification
+  capabilities: { workflow: false, persistence: false, to-spec: true }
+  tools: []
+observed:
+  actions: [preserve accepted request, synthesize implicit Specification]
+  artifacts: [inline Outcome Specification]
+  effects: []
+  forbiddenChecks:
+    - criterion: force durable artifact/tracker ceremony
+      evidence: The accepted Specification remains implicit in the conversation; no file, tracker, or Adapter record is created.
+      observed: false
+    - criterion: invent missing decisions
+      evidence: Every field comes from the settled request with no new decision.
+      observed: false
+    - criterion: execute extra work
+      evidence: No note send or downstream work is performed.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [durable Adapter, to-tickets, implement]
+  proof: [accepted request is represented as an implicit Specification]
+  responsibility: [direct caller retains parent responsibility]
+  route: [inline-specification]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-inline-accepted-1.txt
+  sha256: 1466379fd4171a4feb686d642101bfa222c86732784af5b5f6ae1334acca83cb

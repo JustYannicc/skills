@@ -1,0 +1,36 @@
+schemaVersion: 1
+id: to-spec-direct-nontechnical
+title: Nontechnical accepted decisions keep their domain vocabulary
+shape: direct
+kind: invocation
+skill: to-spec
+domains: [organizational, physical]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  The accepted Outcome is an accessible registration and welcome process for
+  named participants at a community workshop by the event date. Venue,
+  one Outcome owner, one Specification Work owner, one Approver, separately
+  bounded effect authority, accessibility commitments, exclusions, proof observation,
+  and terminal follow-up are accepted. Each accepted fact and decision has a
+  named source and confidence, and no unresolved exceptions remain. Synthesize one
+  complete Outcome Specification in the workshop's language; do not schedule or execute the
+  event.
+environment:
+  id: workflow-nontechnical-specification-ready
+  capabilities:
+    workflow: true
+    persistence: false
+    to-spec: true
+  tools: []
+expected:
+  actions: [preserve accepted intent, synthesize one Outcome Specification, use the workshop's vocabulary with universal semantic fields]
+  artifacts: [Outcome Specification]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [all required Specification fields are present, no software-only assumptions]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [workflow-to-spec]
+  state: [Proposed]
+  forbidden: [invent missing decisions, absorb decomposition or implementation, claim parent completion]

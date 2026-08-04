@@ -1,0 +1,4 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+The cat sat on the mat.

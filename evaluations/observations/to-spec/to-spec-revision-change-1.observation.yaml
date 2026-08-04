@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: to-spec-revision-change
+attempt: 1
+contextId: fresh-to-spec-revision-change-d4626c-1
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
+evaluator: gpt-5.6-luna-fresh-context
+recordedAt: 2026-08-04T20:49:00.000Z
+environment:
+  id: workflow-specification-revision
+  capabilities: { workflow: true, persistence: false, to-spec: true }
+  tools: []
+observed:
+  actions: [compare prior and proposed Specification revisions, perform impact analysis, invalidate only affected approvals/evidence/dependencies/Tickets, completed work/current-state records, and legacy state, preserve unaffected work, issue new revision]
+  artifacts: [revised Outcome Specification, revision impact analysis]
+  effects: []
+  forbiddenChecks:
+    - criterion: mutate prior revision in place
+      evidence: v1 remains immutable and v2 is issued as a separate revision with retained history.
+      observed: false
+    - criterion: reuse stale approval
+      evidence: v1 approval/evidence are invalidated at the affected seam and exact-v2 re-approval is required.
+      observed: false
+    - criterion: invalidate unrelated work
+      evidence: Unrelated Tickets, dependencies, completed work, records, approvals, evidence, and effects are preserved.
+      observed: false
+    - criterion: claim completion
+      evidence: v2 is Proposed and awaits re-approval; no downstream work or effect is claimed.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [old/new revision and affected set are recorded]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [revision-change-to-spec]
+  state: [Proposed]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-revision-change-1.txt
+  sha256: 28024f09f180e2a9e99996b1097a9cc46597f3a1652cc64188475da774ac91ef

@@ -1,0 +1,33 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Outcome Specification — Exact Customer Update Process
+
+Revision: customer-update-process/spec-1, Proposed, Inline. Workflow supplied
+the complete accepted Outcome, scope, exclusions, constraints, recipients,
+Outcome owner, Specification Work owner, Approver, separately bounded effect
+authority, accepted decisions with source/confidence/rationale, no unresolved
+exceptions, proof, and terminal response. No durable locator is claimed because
+persistence is unavailable.
+
+Outcome and scope: Preserve the exact approved customer-update process for the
+supplied recipients, channel/process, communication setting, and horizon.
+Exclusions: Supplied exclusions plus sending the update, Ticket decomposition,
+implementation, and parent completion in this phase.
+Constraints: Copy Workflow's hard limits and soft preferences, source,
+confidence, and effect on feasible choices without reinterpretation.
+Responsibility: Supplied Outcome owner and any Executor/Reviewer/successor
+remain authoritative; to-spec owns only this bounded result; Workflow retains
+integration and parent responsibility.
+Authority: Use the supplied intent Approver and separately identified effect
+authority, scope, limits, and validity. No send authority is exercised.
+Accepted decisions: Copy the supplied recipients, tone/process, proof,
+exclusions, and terminal response with their source/confidence/rationale.
+Unresolved exceptions: None in the supplied accepted discovery.
+Proof seam: Highest stable customer-update boundary with supplied evidence,
+observer, timing, and limits; no send is performed here.
+Terminal condition: Supplied terminal response and any supplied propagation,
+recovery, horizon, cadence, transfer, or cancellation rule.
+Return: One complete semantic Specification revision customer-update-process/
+spec-1 returns to Workflow for acceptance/integration. No send, Tickets, or
+implementation occurs.

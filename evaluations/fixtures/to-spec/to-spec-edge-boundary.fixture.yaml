@@ -1,0 +1,38 @@
+schemaVersion: 1
+id: to-spec-edge-boundary
+title: Specification returns before decomposition and execution
+shape: edge
+kind: invocation
+skill: to-spec
+domains: [physical, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Synthesize the Outcome Specification for the venue setup. Its Outcome, scope,
+  exclusions, constraints, one Outcome owner, one Specification Work owner,
+  Approver, separately bounded effect authority, accepted decisions, proof, and
+  terminal condition are settled. The request then asks to create Tickets,
+  schedule reminders, and implement the setup in the same turn. Preserve the
+  accepted scope and return the later work to Workflow; do not invent
+  requirements or claim approval.
+environment:
+  id: workflow-specification-boundary
+  capabilities:
+    workflow: true
+    persistence: false
+    to-spec: true
+    to-tickets: true
+    implement: true
+    scheduler: true
+  tools: []
+expected:
+  actions: [preserve accepted intent, synthesize one Outcome Specification, materialize only the Specification, return decomposition/execution to Workflow]
+  artifacts: [Outcome Specification]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement, scheduler]
+  proof: [Specification boundary and next Workflow phase are explicit]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [workflow-to-spec]
+  state: [Proposed]
+  forbidden: [create Tickets, schedule an effect, invent requirements, claim approval]

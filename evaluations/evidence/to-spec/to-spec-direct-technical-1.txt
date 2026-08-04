@@ -1,0 +1,41 @@
+Fresh-context to-spec run
+Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+
+Outcome Specification — exact host revision adapter-r42
+
+Representation: Durable mode selected by Workflow. The canonical Adapter
+accepted the write at opaque locator outcome:consumer-compat/v1 and exact host
+revision adapter-r42. The Adapter's representation format remains its
+authority; no serialization is selected here. State: Proposed: this exact
+revision is synthesized and recorded, but Approver acceptance and parent
+completion are not claimed.
+
+Outcome: Keep the public configuration response compatible for the named
+consumer group throughout the stated migration window.
+Scope: Named consumer group, public configuration response boundary, accepted
+actors/environments, and stated migration window.
+Exclusions: Accepted exclusions and unrelated improvements; required
+remediation, propagation, and recovery remain in scope.
+Constraints: Accepted hard group/window boundaries and timeout threshold; no
+soft preference was supplied. Each item carries its source, confidence, and
+effect on proof or recovery.
+Responsibility: Named Outcome owner and Specification Work owner from the
+accepted context; to-spec owns this bounded result; Workflow retains parent
+integration and terminal responsibility.
+Authority: Named Approver owns intent/material trade-offs. Effect authority is
+separately bounded by the supplied scope, limits, and validity. No effect is
+executed and no authority is inferred.
+Accepted decisions: Preserve public compatibility over the named window and
+retain supplied scope, owners, Approver, effect authority, timeout, exclusions,
+proof observation, and terminal condition. Each has source/confidence and
+rationale from the accepted context; no assumptions are added.
+Unresolved exceptions: None; no material unknowns or contradictions supplied.
+Proof seam: Highest stable seam is the consumer-visible public response,
+observed through the named window at the accepted timeout/terminal check, plus
+the Adapter record at outcome:consumer-compat/v1 revision adapter-r42.
+Terminal condition: Accepted compatibility remains true through the window and
+the terminal observation/recovery checks pass. No parent completion is claimed.
+Return: exact Durable Specification revision, locator, Proposed state, and all
+responsibility/authority/proof/terminal fields return to Workflow via
+workflow-to-spec; downstream Tickets, implementation, and Review remain out
+of this phase.

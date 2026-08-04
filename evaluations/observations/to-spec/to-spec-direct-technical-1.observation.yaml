@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: to-spec-direct-technical
+attempt: 1
+contextId: fresh-to-spec-direct-technical-d4626c-1
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
+evaluator: gpt-5.6-luna-fresh-context
+recordedAt: 2026-08-04T20:45:00.000Z
+environment:
+  id: workflow-specification-ready
+  capabilities: { workflow: true, persistence: true, adapter: true, to-spec: true }
+  tools: [selected canonical Adapter]
+observed:
+  actions: [preserve accepted intent, synthesize one Outcome Specification, honor selected Durable mode, bind exact Specification revision]
+  artifacts: [durable Outcome Specification]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent missing decisions
+      evidence: Accepted fields, sources, confidence, and rationale are carried without adding requirements or implementation choices.
+      observed: false
+    - criterion: absorb decomposition or implementation
+      evidence: No Tickets, implementation, tests, or effects are produced; downstream work returns to Workflow.
+      observed: false
+    - criterion: claim parent completion
+      evidence: State is Proposed and Workflow retains parent integration and terminal responsibility.
+      observed: false
+    - criterion: claim durable persistence without Adapter evidence
+      evidence: The supplied Adapter locator outcome:consumer-compat/v1 and exact host revision adapter-r42 bind the durable record.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [all required Specification fields are present, exact revision is identified, canonical Adapter locator is recorded]
+  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  route: [workflow-to-spec]
+  state: [Proposed]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-direct-technical-1.txt
+  sha256: 7864950f58e3efb155f0c903d1592cfd4e953abda6b82c77051067ca02637de3

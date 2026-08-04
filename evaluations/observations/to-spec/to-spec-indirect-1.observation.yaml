@@ -1,0 +1,31 @@
+schemaVersion: 1
+fixtureId: to-spec-indirect
+attempt: 1
+contextId: fresh-to-spec-indirect-d4626c-1
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
+evaluator: gpt-5.6-luna-fresh-context
+recordedAt: 2026-08-04T20:47:00.000Z
+environment:
+  id: workflow-with-accepted-discovery
+  capabilities: { workflow: true, persistence: false, to-spec: true, research: false }
+  tools: []
+observed:
+  actions: [preserve accepted intent, use only accepted discovery decisions, synthesize one Outcome Specification, return the Specification to Workflow]
+  artifacts: [Outcome Specification]
+  effects: []
+  forbiddenChecks:
+    - criterion: silently resolve unresolved discovery
+      evidence: All fields copy Workflow's accepted discovery with source/confidence; no value is supplemented.
+      observed: false
+    - criterion: send effect
+      evidence: The response returns one Inline Proposed Specification and performs no send, Ticket, implementation, or other effect.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [all required Specification fields are present, exact revision is identified]
+  responsibility: [to-spec owns the bounded Specification result, Workflow integrates the Specification]
+  route: [workflow-to-spec-to-workflow]
+  state: [Proposed]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-indirect-1.txt
+  sha256: 0b02918ec6b5cb99b18877b44809d05deb70db0a52bcf35c122552c92b4bdc29

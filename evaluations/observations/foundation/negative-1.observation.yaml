@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-negative
 attempt: 1
 contextId: fresh-negative-1
-suiteRevision: git:03340f9b772e9475bd6924f8de97d98790861408
+suiteRevision: git:d4626cff91d178f37332100f12a9c9942a97bee4
 evaluator: deterministic-foundation
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:

@@ -1,0 +1,35 @@
+schemaVersion: 1
+id: to-spec-inline-accepted
+title: An accepted low-risk request remains an Inline Specification
+shape: direct
+kind: invocation
+skill: to-spec
+domains: [personal, communication]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  I accept responsibility and authority to write a concise welcome note for the
+  named recipient today. The exact recipient, purpose, tone, scope, exclusion,
+  constraints, accepted decisions with source and confidence, no unresolved
+  exceptions, proof (the recipient can read the note), and terminal condition
+  (the note is accepted in this conversation) are settled. Represent this
+  accepted request as one Inline Outcome Specification; do not create durable
+  records or send it.
+environment:
+  id: workflow-inline-specification
+  capabilities:
+    workflow: false
+    persistence: false
+    to-spec: true
+  tools: []
+expected:
+  actions: [preserve accepted request, synthesize implicit Specification]
+  artifacts: [inline Outcome Specification]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [durable Adapter, to-tickets, implement]
+  proof: [accepted request is represented as an implicit Specification]
+  responsibility: [direct caller retains parent responsibility]
+  route: [inline-specification]
+  state: [Accepted]
+  forbidden: [force durable artifact/tracker ceremony, invent missing decisions, execute extra work]
