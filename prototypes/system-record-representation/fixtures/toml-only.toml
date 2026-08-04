@@ -1,11 +1,16 @@
 schema_version = 1
-record_id = "SYS-024"
+record_id = "coord:skills/system-record/024"
 record_version = "0.3.0-draft"
-state = "designing"
-# envelope-comment: preserve this operator note
+record_revision = "fixture-revision-1"
+canonical_locator = "record://system-record-fixture"
+design_status = "designing"
+operational_status = "unbuilt"
+catalog_eligibility = "not_eligible"
+governed_by = "Thinking in Systems standard"
+# envelope-comment: presentation only; parser serialization may drop it
 narrative = '''# System Record fixture
 
-The decision owner must review the [adapter-neutral contract](../../docs/UNIVERSAL_WORK_CONTRACT.md) before any external effect.
+The decision owner must review the [adapter-neutral contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md) before any external effect.
 
 <!-- rationale-comment: preserve this human note -->
 
@@ -24,12 +29,16 @@ allowed_effects = ["compose_without_effect"]
 
 [[relationships]]
 kind = "upstream"
-record_id = "SYS-005"
-contract = "../../docs/UNIVERSAL_WORK_CONTRACT.md"
+record_id = "coord:skills/system-record/005"
+record_version = "1.2.0"
+material_boundary = "Provides the adapter-neutral work contract without transferring effect authority."
+contract = "../../../docs/UNIVERSAL_WORK_CONTRACT.md"
 
 [[relationships]]
 kind = "dependent"
-record_id = "SYS-013"
+record_id = "coord:skills/system-record/013"
+record_version = "issue-13-candidate"
+material_boundary = "Consumes the representation decision while retaining Workflow behavior ownership."
 contract = "https://github.com/JustYannicc/skills/issues/13"
 
 [provenance]
@@ -40,4 +49,6 @@ sha256 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 [approval]
 required = true
 status = "pending"
+approver_id = "actor:repository-maintainer"
+authority_revision = "issue-35-human-review"
 result_revision = "fixture-revision-1"

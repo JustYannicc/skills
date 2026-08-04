@@ -1,8 +1,12 @@
 ---
 schema_version: 1
-record_id: SYS-024
+record_id: coord:skills/system-record/024
 record_version: 0.3.0-draft
-state: designing
+record_revision: fixture-revision-1
+canonical_locator: record://system-record-fixture
+design_status: designing
+operational_status: unbuilt
+catalog_eligibility: not_eligible
 owner:
   id: actor:system-owner
   label: System owner
@@ -10,12 +14,17 @@ authority:
   decision_owner: actor:system-owner
   allowed_effects:
     - compose_without_effect
+governed_by: Thinking in Systems standard
 relationships:
   - kind: upstream
-    record_id: SYS-005
-    contract: ../../docs/UNIVERSAL_WORK_CONTRACT.md
+    record_id: coord:skills/system-record/005
+    record_version: 1.2.0
+    material_boundary: Provides the adapter-neutral work contract without transferring effect authority.
+    contract: ../../../docs/UNIVERSAL_WORK_CONTRACT.md
   - kind: dependent
-    record_id: SYS-013
+    record_id: coord:skills/system-record/013
+    record_version: issue-13-candidate
+    material_boundary: Consumes the representation decision while retaining Workflow behavior ownership.
     contract: https://github.com/JustYannicc/skills/issues/13
 provenance:
   source: https://github.com/JustYannicc/skills/issues/35
@@ -24,12 +33,14 @@ provenance:
 approval:
   required: true
   status: pending
+  approver_id: actor:repository-maintainer
+  authority_revision: issue-35-human-review
   result_revision: fixture-revision-1
-# envelope-comment: preserve this operator note
+# envelope-comment: presentation only; parser serialization may drop it
 ---
 # System Record fixture
 
-The decision owner must review the [adapter-neutral contract](../../docs/UNIVERSAL_WORK_CONTRACT.md) before any external effect.
+The decision owner must review the [adapter-neutral contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md) before any external effect.
 
 <!-- rationale-comment: preserve this human note -->
 
