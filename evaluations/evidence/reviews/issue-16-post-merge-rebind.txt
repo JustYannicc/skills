@@ -1,0 +1,24 @@
+Issue #16 post-merge integration rebind attestation
+
+Attested at: 2026-08-04T19:39:02Z
+Merged base: git:87792533689dba90a7a605e91194b553618d72be
+Reviewed Domain Modeling runtime candidate: git:a7fabb5adfbe59c0a7f2e1571e635d4536b94bd4
+Reviewed Domain Modeling evidence/report commit: git:ce317cdc4fb908948295a0d190348e316623deea
+Integrated candidate: git:94bece28de55b79f5ae36802143b62c39c63c76f
+
+This is a revision-binding integration correction, not a claim that the
+Domain Modeling behavioral runs were repeated. Existing Domain Modeling
+prompts, context ids, recordedAt timestamps, raw transcripts, and
+raw-evidence hashes remain unchanged. The merged main overlay fixtures,
+evidence, observations, and validation implementation are retained; the
+combined report is regenerated after every current observation is rebound to
+the integrated candidate.
+
+Domain Modeling runtime equivalence proof:
+
+  git diff --quiet a7fabb5adfbe59c0a7f2e1571e635d4536b94bd4..94bece28de55b79f5ae36802143b62c39c63c76f -- skills/domain-modeling
+
+Result: exit 0; the merge adds the current main overlay tranche without
+changing the reviewed Domain Modeling runtime. All observations are rebound
+to the integrated candidate before validation, and any later non-evaluation
+change requires a new truthful rebind or fresh behavioral proof.
