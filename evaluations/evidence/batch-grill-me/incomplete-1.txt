@@ -13,7 +13,7 @@ Pinned source and exact overlay reconstruction
 The pinned source is mattpocock/skills at revision
 2ab958093e83e0ec752e6c1c5932da465bf23e0c. Applying the candidate overlays
 overlays/batch-grill-me/SKILL.md.patch (SHA-256
-8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87) and
+1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0) and
 overlays/batch-grill-me/agents-openai.yaml.patch (SHA-256
 b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746) to the
 pinned source yields this runtime skill:

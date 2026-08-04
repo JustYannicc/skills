@@ -22,7 +22,7 @@ The pinned upstream is `mattpocock/skills` at revision
 The candidate overlays apply cleanly to those exact targets:
 
 - `to-questionnaire-skill`: `overlays/to-questionnaire/SKILL.md.patch`, SHA-256
-  `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`, changes
+  `c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91`, changes
   `disable-model-invocation: true` to `false`.
 - `to-questionnaire-openai`: `overlays/to-questionnaire/agents-openai.yaml.patch`,
   SHA-256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`,

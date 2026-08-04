@@ -6,7 +6,7 @@ Context ID: fresh-questionnaire-direct-final-1
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-04T18:24:33.300Z
 Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c; target `skills/in-progress/to-questionnaire/SKILL.md` and `skills/in-progress/to-questionnaire/agents/openai.yaml`.
-Applied overlays: `overlays/to-questionnaire/SKILL.md.patch` sha256 `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`; `overlays/to-questionnaire/agents-openai.yaml.patch` sha256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`. Both patches applied cleanly to the pinned targets; the effective skill permits model invocation and the effective agent policy permits implicit invocation.
+Applied overlays: `overlays/to-questionnaire/SKILL.md.patch` sha256 `c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91`; `overlays/to-questionnaire/agents-openai.yaml.patch` sha256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`. Both patches applied cleanly to the pinned targets; the effective skill permits model invocation and the effective agent policy permits implicit invocation.
 Environment: id=questionnaire-direct-with-file-write; modelInvocation=true, fileWrite=true, fileRead=true, recipientContext=true; tools=[file write, file read/inspection]. Effects disabled.
 
 Prompt before expected result (exact fixture text):

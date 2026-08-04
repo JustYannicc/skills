@@ -1,13 +1,13 @@
 Issue #20 — To Questionnaire acceptance proof
 
-Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
-Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Full candidate commit: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Runtime suite identity: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 Evidence commit: the Git commit containing this record
 Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
 
 Overlay records:
 - skills/in-progress/to-questionnaire/SKILL.md
-  patch sha256 77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160
+  patch sha256 c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91
 - skills/in-progress/to-questionnaire/agents/openai.yaml
   patch sha256 17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1
 
@@ -23,5 +23,5 @@ Acceptance:
 - Only the two invocation booleans change; the universal procedure is preserved.
 - No full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 28 tests, 270 validated files,
+Gate: pnpm validate passed with 6 test files / 28 tests, 271 validated files,
 1 installed skill, and 38 evaluation fixtures.

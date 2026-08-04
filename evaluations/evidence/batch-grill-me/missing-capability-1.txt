@@ -6,7 +6,7 @@ Evaluator: gpt-5.6-luna-max-fresh-context
 Context ID: fresh-batch-grill-me-missing-final-1
 Recorded at (UTC): 2026-08-04T18:18:30.300Z
 Upstream source: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
-Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
+Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
 Overlay execution: both exact pinned patches were applied to the upstream Batch Grill Me source before the prompt was evaluated.
 Environment: no-fact-capability; directFactLookup=false, delegation=false, persistence=false; tools=[]. Effects disabled.
 

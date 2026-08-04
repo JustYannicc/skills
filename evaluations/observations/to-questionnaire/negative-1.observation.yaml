@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-questionnaire-negative
 attempt: 1
 contextId: fresh-questionnaire-negative-final-1
-suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+suiteRevision: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:24:03Z
 environment:
@@ -49,4 +49,4 @@ observed:
     - ready-for-decision
 rawEvidence:
   locator: evaluations/evidence/to-questionnaire/negative-1.txt
-  sha256: 74a964ed0d727c5362d495e2ca5d466970a56fc66bbed1e61afb534b3540f789
+  sha256: f26b6fc9d75469e741b20240782e7a70253222bd18a384924e3f2261bd10b9c6

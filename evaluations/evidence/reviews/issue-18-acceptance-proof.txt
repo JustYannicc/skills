@@ -1,13 +1,13 @@
 Issue #18 — Research acceptance proof
 
-Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
-Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Full candidate commit: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Runtime suite identity: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 Evidence commit: the Git commit containing this record
 Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
 
 Overlay record:
 - skills/engineering/research/SKILL.md
-  patch sha256 9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074
+  patch sha256 1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a
 
 Acceptance:
 - Clean pinned-source reapplication is enforced by repository validation.
@@ -22,5 +22,5 @@ Acceptance:
   it returns to Workflow only when active and stops before Specification/execution.
 - agents/openai.yaml is unchanged and no full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 28 tests, 270 validated files,
+Gate: pnpm validate passed with 6 test files / 28 tests, 271 validated files,
 1 installed skill, and 38 evaluation fixtures.

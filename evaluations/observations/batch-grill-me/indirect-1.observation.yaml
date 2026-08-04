@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: batch-grill-me-indirect
 attempt: 1
 contextId: fresh-batch-grill-me-indirect-final-1
-suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+suiteRevision: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:16:42.000Z
 environment:
@@ -40,4 +40,4 @@ observed:
   state: [ready-for-workflow]
 rawEvidence:
   locator: evaluations/evidence/batch-grill-me/indirect-1.txt
-  sha256: ffbe19f0e3e14b429d38f8f58f299b542a3212627051ee5a07685a206be97664
+  sha256: 3d8552c858ad7996eea7f4c2ff1840d158e7bd47bc3f733b2700b515a4dd6403

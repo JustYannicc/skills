@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-questionnaire-incomplete
 attempt: 1
 contextId: fresh-questionnaire-incomplete-final-1
-suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+suiteRevision: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:25:39.300Z
 environment:
@@ -50,4 +50,4 @@ observed:
     - waiting-for-input
 rawEvidence:
   locator: evaluations/evidence/to-questionnaire/incomplete-1.txt
-  sha256: 66fb3a61468d2f8730f653c087ab398eea7aebc9d664494bcb1313ca543928a3
+  sha256: 5e9ece8f27c36e5555a6f13743936b338bc9476e726cf55e00ae94586b58418a

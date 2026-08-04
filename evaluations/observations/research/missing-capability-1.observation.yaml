@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-missing-capability
 attempt: 1
 contextId: fresh-research-missing-final-1
-suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+suiteRevision: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:18:03Z
 environment:
@@ -43,4 +43,4 @@ observed:
     - waiting-for-capability
 rawEvidence:
   locator: evaluations/evidence/research/missing-capability-1.txt
-  sha256: ad57066909b436e546d3131f13cc2f3d3cf5066561c9846ccee250285f1c0d55
+  sha256: 598ec1d5bf38257db0c809b683136acc3aa379e4d6193e8f1f0c47b9ec25806d

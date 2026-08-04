@@ -7,7 +7,7 @@ Suite revision: `git:d6536d81e10ca550b7483aa4a21d319c7cbf7688`
 Pinned Research source: `mattpocock/skills` git:
 `2ab958093e83e0ec752e6c1c5932da465bf23e0c`
 Applied Research overlay: `research-skill` (`overlays/research/SKILL.md.patch`,
-sha256 `9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074`).
+sha256 `1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a`).
 Recorded at (UTC): `2026-08-04T18:18:16.000Z`
 
 ## Prompt
@@ -80,7 +80,7 @@ also recorded.
 2. Read-back succeeded from that immutable locator; the bytes were available
    for verification.
 3. The SHA-256 of the exact read-back bytes is
-   `11499084403834f337cee4ae180031240bc05edfff88828a68cfc1a23e7ac2bb`.
+   `1e59523f7e5ddcdac16bd81c528052d088d1de547dd24a4c3c55a716ef27973c`.
    This is the result revision.
 4. Adapter identity is `local-markdown`; persistence is `durable=true` only
    after the successful read-back.

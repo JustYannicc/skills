@@ -54,4 +54,3 @@ These two supplied records are treated as the primary sources for the bounded qu
 - Result revision: SHA-256 of this record's exact file bytes, returned after creation (the hash is recorded in the run transcript and observation).
 - Read-back: successful; the file was read after creation and matched the created canonical record.
 - Persistence status: `durable=true`
-

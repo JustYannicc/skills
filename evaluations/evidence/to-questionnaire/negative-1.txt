@@ -27,7 +27,7 @@ The candidate applies these declared overlays exactly:
 
 - `overlays/to-questionnaire/SKILL.md.patch`, manifest id
   `to-questionnaire-skill`, SHA-256
-  `77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160`:
+  `c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91`:
   `disable-model-invocation: true` → `disable-model-invocation: false`.
 - `overlays/to-questionnaire/agents-openai.yaml.patch`, manifest id
   `to-questionnaire-openai`, SHA-256

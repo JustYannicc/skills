@@ -51,4 +51,3 @@ the adoption of any policy.
   hash is returned with the read-back evidence in the evaluation transcript and
   observation.
 - **Return route:** the requesting context; no Workflow context is active.
-

@@ -1,28 +1,31 @@
 Overlay tranche existing-observation rebind attestation
-Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
-Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
-Previous runtime identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Full candidate commit: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Runtime suite identity: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Previous runtime identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 
-This is a revision-binding update for the 54 already accepted foundation,
+This is a revision-binding update for the 56 already accepted foundation,
 Thinking in Systems, and overlay observations, not a claim that those
 behavioral runs were repeated. Their prompts, observed behavior, recorded
-timestamps, context ids, raw evidence, and raw hashes remain unchanged.
+timestamps, and context ids remain unchanged. Evidence metadata and patch-hash
+references were updated, whitespace defects were removed, and all raw hashes
+were rederived from the resulting exact files.
 
-Candidate b6cbd03 adds validation of published patch content and evidence
-artifact bindings plus two new Batch Grill fact-path fixtures. It does not
-change any overlay patch or installed skill behavior. Artifact locator/hash
-fields were added to the relevant observations to bind the already recorded
-files; the raw files themselves are unchanged.
+Candidate ec5e478 normalizes whitespace inside three overlay patch records and
+updates their declared SHA-256 values. Applying the prior b6cbd03 patches and
+the normalized ec5e478 patches to the same pinned targets produces identical
+target files. No installed skill behavior changes.
 
 Runtime-source equivalence proof for the rebound observations:
 
-  git diff --quiet 03340f9b772e9475bd6924f8de97d98790861408..b6cbd0397b3a2565a6377dd57889361b9698ee3a -- skills/thinking-in-systems
+  git diff --quiet 03340f9b772e9475bd6924f8de97d98790861408..ec5e478f881a6d9b13c7296f8c4a23c2687a53b2 -- skills/thinking-in-systems
 
 Result: exit 0.
 
 Overlay-behavior equivalence proof:
 
-  git diff --quiet d6536d81e10ca550b7483aa4a21d319c7cbf7688..b6cbd0397b3a2565a6377dd57889361b9698ee3a -- overlays validation/overlays.yaml
+  for each normalized SKILL.md patch, apply the b6cbd03 patch and ec5e478
+  patch separately to the same pinned 2ab9580 target, then diff the outputs
 
-Result: exit 0. The two newly added fact-path fixtures receive fresh-context
-observations. This attestation applies only to the pre-existing observations.
+Results: batch-grill-me exit 0; research exit 0; to-questionnaire exit 0.
+This attestation applies to the pre-existing observations; no prompt or
+behavioral response was changed by normalization.

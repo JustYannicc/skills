@@ -3,7 +3,7 @@ Fresh-context execution
 Candidate: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
 Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
 Pinned Research source: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
-Applied Research overlay: `research-skill` (`overlays/research/SKILL.md.patch`, sha256 9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074)
+Applied Research overlay: `research-skill` (`overlays/research/SKILL.md.patch`, sha256 1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a)
 Environment: direct-primary-cross-domain; workflow=false, research=true, delegation=false, persistence=true, selectedAdapter=local-markdown; tools=[primary-source records, local-markdown Adapter create/read].
 Effects disabled.
 
@@ -32,7 +32,7 @@ I created one canonical result with the selected Adapter and caller-selected pat
 - Adapter identity: `local-markdown`
 - Durable locator: `evaluations/evidence/research/cross-domain-direct-1.record.md`
 - Read-back: successful
-- Result revision: `3143a4675a9c452220922c798869e8fc617b52dac3399127e5a6c9e7e18e3c9e` (SHA-256 of the exact bytes read back from the canonical record)
+- Result revision: `0c4f14dec5beb987d83c14a1442da18ccdb92a862ca2885c93229ee2401a0fa1` (SHA-256 of the exact bytes read back from the canonical record)
 - Persistence status: `durable=true`
 
 The canonical record contains the bounded question, both primary-record citations, facts, inference boundary, uncertainty, and the persistence metadata. No policy, configuration, or operational effect was performed.
@@ -40,4 +40,3 @@ The canonical record contains the bounded question, both primary-record citation
 ## Completion boundary
 
 Invoked: `research` via the direct-research route. Delegation was not used because the supplied primary records were available directly. No `Workflow` context was active. `Specification` and `execution` were not invoked; this result stops at the research evidence boundary and returns responsibility to the requesting context/user.
-

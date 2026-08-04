@@ -6,7 +6,7 @@ Context ID: fresh-research-negative-final-1
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-04T18:19:31Z
 Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
-Overlay: the pinned Research skill with the candidate overlay applied exactly. Overlay hash: SKILL.md.patch=9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074.
+Overlay: the pinned Research skill with the candidate overlay applied exactly. Overlay hash: SKILL.md.patch=1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a.
 Effects: disabled; no Research lookup, experiment execution, Specification, persistence, or other external effect was performed.
 
 Prompt (exact fixture text):

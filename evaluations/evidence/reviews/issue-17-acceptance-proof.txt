@@ -1,13 +1,13 @@
 Issue #17 — Batch Grill Me acceptance proof
 
-Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
-Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Full candidate commit: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Runtime suite identity: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 Evidence commit: the Git commit containing this record
 Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
 
 Overlay records:
 - skills/in-progress/batch-grill-me/SKILL.md
-  patch sha256 8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87
+  patch sha256 1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0
 - skills/in-progress/batch-grill-me/agents/openai.yaml
   patch sha256 b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746
 
@@ -22,5 +22,5 @@ Acceptance:
 - Published patch content is included in the public-boundary scan.
 - No full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 28 tests, 270 validated files,
+Gate: pnpm validate passed with 6 test files / 28 tests, 271 validated files,
 1 installed skill, and 38 evaluation fixtures.

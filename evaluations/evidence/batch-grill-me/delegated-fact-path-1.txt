@@ -1,14 +1,14 @@
 Fresh-context execution — final acceptance
 
-Candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
-Suite revision (repository content identity; evaluation artifacts excluded): git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Candidate commit: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Suite revision (repository content identity; evaluation artifacts excluded): git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
 Fixture: batch-grill-me-delegated-fact-path
 Fixture SHA-256: 0869bd1f7a7687255a6931deb72c00f2d8963de70b1eaaa11c355894b0e816cc
 Context ID: fresh-batch-grill-me-delegated-fact-final-1
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-04T18:54:35Z
 Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
-Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
+Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
 Environment: id=delegated-fact-capability; capabilities={directFactLookup: false, delegation: true, persistence: false}; tools=[delegation]. Effects disabled; no venue booking, accessibility decision, or other external effect was performed.
 
 Prompt read before expected rubric (exact fixture text)

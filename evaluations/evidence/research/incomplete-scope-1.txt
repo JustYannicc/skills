@@ -24,7 +24,7 @@ tools: [primary-source lookup]
 
 Pinned source and exact overlay reconstruction
 
-The source is `matt-pocock/skills` at revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`. The applied Research overlay is `research-skill` (`overlays/research/SKILL.md.patch`, SHA-256 `9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074`). Applying that patch at the candidate suite revision yields this effective runtime skill:
+The source is `matt-pocock/skills` at revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`. The applied Research overlay is `research-skill` (`overlays/research/SKILL.md.patch`, SHA-256 `1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a`). Applying that patch at the candidate suite revision yields this effective runtime skill:
 
 ```markdown
 ---
