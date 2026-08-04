@@ -7,15 +7,17 @@ import { z } from "zod";
 
 import type { FindingSeverity } from "./evaluation-contracts.ts";
 import { listFiles } from "./filesystem.ts";
+import { verifyOverlayReapplication } from "./overlay-reapplication.ts";
+import type { OverlayReapplicationVerifier } from "./overlay-reapplication.ts";
 import { findPublicBoundaryViolations } from "./public-boundary.ts";
 import {
+  loadPinnedTarget,
   loadSourceInventory,
   verifyPinnedSource,
-  verifyPinnedTarget,
 } from "./source-inventory.ts";
 import type {
   SourceInventory,
-  SourceTargetVerifier,
+  SourceTargetLoader,
   SourceVerifier,
 } from "./source-inventory.ts";
 
@@ -43,6 +45,7 @@ const textExtensions = new Set([
   ".jsonc",
   ".md",
   ".mts",
+  ".patch",
   ".ts",
   ".txt",
   ".yaml",
@@ -57,7 +60,10 @@ const relativePathSchema = z
   .trim()
   .min(1)
   .refine(
-    (value) => !path.isAbsolute(value) && !value.split("/").includes(".."),
+    (value) =>
+      !path.posix.isAbsolute(value) &&
+      !path.win32.isAbsolute(value) &&
+      !value.split(/[\\/]/u).includes(".."),
     "Path must stay relative to its declared root."
   );
 
@@ -444,7 +450,8 @@ const validateSourcePins = async (
 const validateOverlays = async (
   root: string,
   sourceInventory: SourceInventory,
-  verifyTarget: SourceTargetVerifier
+  loadTarget: SourceTargetLoader,
+  verifyReapplication: OverlayReapplicationVerifier
 ): Promise<RepositoryFinding[]> => {
   const inventoryPath = path.join(root, "validation", "overlays.yaml");
   try {
@@ -471,20 +478,24 @@ const validateOverlays = async (
       inventory.overlays.map(async (overlay): Promise<RepositoryFinding[]> => {
         const findings: RepositoryFinding[] = [];
         const source = sources.get(overlay.sourceId);
-        if (!source) {
+        let targetContents: Buffer | null = null;
+        if (source === undefined) {
           findings.push({
             check: "overlay-integrity",
             file: path.relative(root, inventoryPath),
             message: `Overlay "${overlay.id}" references unknown source "${overlay.sourceId}".`,
             severity: "Major",
           });
-        } else if (!(await verifyTarget(source, overlay.target))) {
-          findings.push({
-            check: "overlay-integrity",
-            file: path.relative(root, inventoryPath),
-            message: `Overlay "${overlay.id}" target "${overlay.target}" does not exist at the pinned source revision.`,
-            severity: "Major",
-          });
+        } else {
+          targetContents = await loadTarget(source, overlay.target);
+          if (targetContents === null) {
+            findings.push({
+              check: "overlay-integrity",
+              file: path.relative(root, inventoryPath),
+              message: `Overlay "${overlay.id}" target "${overlay.target}" does not exist at the pinned source revision.`,
+              severity: "Major",
+            });
+          }
         }
         const patchPath = path.resolve(root, overlay.patchFile);
         try {
@@ -502,11 +513,28 @@ const validateOverlays = async (
           const actualHash = createHash("sha256")
             .update(contents)
             .digest("hex");
-          if (actualHash !== overlay.sha256) {
+          const patchHashMatches = actualHash === overlay.sha256;
+          if (patchHashMatches === false) {
             findings.push({
               check: "overlay-integrity",
               file: overlay.patchFile,
               message: `Overlay "${overlay.id}" hash does not match its patch file.`,
+              severity: "Major",
+            });
+          }
+          if (
+            targetContents !== null &&
+            patchHashMatches &&
+            (await verifyReapplication({
+              patchFile: resolvedPatchPath,
+              target: overlay.target,
+              targetContents,
+            })) === false
+          ) {
+            findings.push({
+              check: "overlay-reapplication",
+              file: overlay.patchFile,
+              message: `Overlay "${overlay.id}" does not apply cleanly to its pinned target.`,
               severity: "Major",
             });
           }
@@ -535,7 +563,8 @@ const validateOverlays = async (
 };
 
 interface RepositoryValidationOptions {
-  sourceTargetVerifier?: SourceTargetVerifier;
+  overlayReapplicationVerifier?: OverlayReapplicationVerifier;
+  sourceTargetLoader?: SourceTargetLoader;
   sourceVerifier?: SourceVerifier;
 }
 
@@ -562,7 +591,8 @@ export const validateRepository = async (
     ...(await validateOverlays(
       root,
       sourceValidation.inventory,
-      options.sourceTargetVerifier ?? verifyPinnedTarget
+      options.sourceTargetLoader ?? loadPinnedTarget,
+      options.overlayReapplicationVerifier ?? verifyOverlayReapplication
     )),
   ];
 

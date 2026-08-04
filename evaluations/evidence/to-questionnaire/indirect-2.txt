@@ -1,0 +1,148 @@
+Fresh-context execution — to-questionnaire indirect fixture, attempt 2
+
+Candidate commit: `git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d`
+Suite revision (repository content identity; evaluation artifacts excluded): `git:d6536d81e10ca550b7483aa4a21d319c7cbf7688`
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Fresh context: `fresh-questionnaire-indirect-final-2`
+Recorded at (UTC): `2026-08-04T18:26:40.000Z`
+
+## Pinned source and overlays reconstructed before execution
+
+- Upstream source: `mattpocock/skills`, revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`.
+- Upstream skill target: `skills/in-progress/to-questionnaire/SKILL.md`.
+- Upstream agent metadata target: `skills/in-progress/to-questionnaire/agents/openai.yaml`.
+- Applied overlay `to-questionnaire-skill`: `overlays/to-questionnaire/SKILL.md.patch`, SHA-256 `c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91`; it changes `disable-model-invocation: true` to `false`.
+- Applied overlay `to-questionnaire-openai`: `overlays/to-questionnaire/agents-openai.yaml.patch`, SHA-256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`; it changes `allow_implicit_invocation: false` to `true`.
+
+The effective skill is the pinned upstream To Questionnaire procedure with
+implicit invocation enabled by those two overlays. Its governing procedure was
+reconstructed as follows: establish the recipient's role, expertise, and
+relationship; establish the concrete facts or decisions needed back; write
+`to-questionnaire-<slug>.md`; then verify that every named gap is covered. The
+document structure is a discovery questionnaire with a title, purpose,
+sender, recipient, answer use, concise context, deadline and effort, partial
+or uncertain-answer guidance, most-important-first thematic sections,
+one-idea questions, directly-following answer stubs, targeted rationales, and
+a closing catch-all. The prompt already supplies the complete send contract,
+so no follow-up grilling is needed.
+
+## Prompt (read before expected result)
+
+Workflow is coordinating a community clinic scheduling change. Prepare one
+asynchronous questionnaire for my colleague, our clinic coordinator and
+operational owner who knows minimum staff coverage by slot, walk-in demand by
+hour, clinician room limits, the approval owner, and exception paths. We need
+those five knowledge gaps to choose a schedule without choosing it in the
+questionnaire. The response is due Friday and should take about 15 minutes.
+Write the recipient-ready questionnaire, explain how the answers will be used,
+and return its path and bounded result for Workflow to integrate.
+
+## Expected boundary
+
+- Keep Workflow's parent outcome and responsibility.
+- Use only the supplied recipient role, expertise, relationship, and five knowledge gaps.
+- Draft the questionnaire with the required discovery-document structure.
+- Write and inspect the questionnaire file.
+- Return its path and bounded evidence to Workflow.
+- Invoke only `to-questionnaire`; do not invoke research, interactive grilling, or the scheduling change.
+- Do not transfer parent ownership or claim the parent Outcome complete.
+
+## Observed response
+
+1. The route keeps one recipient: the colleague who is the clinic coordinator
+   and operational owner. The questionnaire uses only the expertise and
+   relationship supplied by the prompt and does not invent staffing,
+   demand, room, approval, or exception facts.
+2. The five supplied gaps are each represented by one question: minimum staff
+   coverage by slot; walk-in demand by hour; clinician-room limits; approval
+   owner; and exception paths. The closing catch-all refers only to those five
+   areas and does not add a new operational gap.
+3. The document is ordered by the five requested areas and grouped under
+   thematic `##` headings. Every question is one idea with a directly
+   following `> Answer:` stub. Rationales appear only where they help explain
+   why the requested fact matters.
+4. The questionnaire includes the title, purpose, sender, recipient, answer
+   use, concise context, Friday deadline, approximately 15-minute effort,
+   and guidance that short, partial, approximate, and uncertain answers are
+   useful. It explicitly says that Workflow will choose the schedule and that
+   the questionnaire does not choose it.
+5. I wrote the artifact to
+   `evaluations/evidence/to-questionnaire/indirect-2.questionnaire.md`, then
+   read it back and inspected the exact bytes. The inspected artifact is
+   2,041 bytes with SHA-256
+   `844676fdeb48616167131fc86f9cbdb9ae75f95d76f1dd6eafc6bdbf2754d567`.
+   The read-back confirmed all required document fields, five one-idea gap
+   questions, answer stubs, thematic headings, and the catch-all.
+6. I reported that relative path and returned the bounded questionnaire result
+   to Workflow. No schedule was selected, no parent responsibility was
+   transferred, and no parent completion was claimed.
+
+## Inspected artifact
+
+```markdown
+# Community Clinic Scheduling Discovery Questionnaire
+
+**Purpose:** Gather the five operational facts needed to choose a schedule for the community clinic scheduling change.
+
+**From:** Workflow — **To:** My colleague, the clinic coordinator and operational owner — **How your answers will be used:** Workflow will use your answers to choose a schedule; this questionnaire does not make that choice.
+
+## Context
+
+Workflow is coordinating a community clinic scheduling change. You are the clinic coordinator and operational owner who knows the minimum staff coverage by slot, walk-in demand by hour, clinician room limits, the approval owner, and exception paths. Please answer from what you know or have observed; the answers will fill the five operational gaps Workflow must resolve before choosing a schedule.
+
+## How to answer
+
+Please return your answers by **Friday**. The questionnaire should take about **15 minutes**. Short, partial, approximate, or uncertain answers are useful; flag anything you do not know rather than skipping it.
+
+## Staffing coverage
+
+### What minimum staff coverage is required for each clinic slot?
+
+_Why this matters: it identifies the minimum coverage any schedule must provide._
+
+> Answer:
+
+## Walk-in demand
+
+### What walk-in demand should we expect by hour?
+
+_Why this matters: it shows when a schedule needs to accommodate walk-ins._
+
+> Answer:
+
+## Clinician rooms
+
+### What clinician-room limits must the schedule respect?
+
+_Why this matters: it identifies the room constraints that can rule out a schedule._
+
+> Answer:
+
+## Approval
+
+### Who is the approval owner for the schedule?
+
+_Why this matters: it identifies whose approval is needed before a schedule can be adopted._
+
+> Answer:
+
+## Exception paths
+
+### What exception paths apply when the normal schedule cannot operate?
+
+_Why this matters: it makes the response to situations outside the normal schedule explicit._
+
+> Answer:
+
+## Anything else?
+
+What else about these five areas should Workflow know before choosing a schedule?
+
+> Answer:
+```
+
+Result state: `ready-for-recipient`; route: `workflow-to-questionnaire-to-workflow`.
+Workflow retains parent responsibility and will integrate the bounded
+questionnaire result. The questionnaire is ready for the clinic coordinator;
+no scheduling decision, schedule change, research, interactive grilling, or
+other effect occurred.
