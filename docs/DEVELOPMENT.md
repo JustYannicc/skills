@@ -1,6 +1,28 @@
 # Development setup
 
-The repository has no application runtime, package manager, or build step. Skills are ordinary Agent Skills folders authored and evaluated one at a time.
+The skills are ordinary Agent Skills folders. A small TypeScript validation
+runtime checks their public repository boundary and evaluation evidence. It is
+development infrastructure, not a runtime dependency of installed skills.
+
+## Install and validate
+
+Use Node.js 22 or newer and the exact pnpm version pinned in `package.json`:
+
+```sh
+pnpm install
+pnpm validate
+```
+
+`pnpm validate` is the one repository gate. It runs Ultracite, strict
+TypeScript, the test suite, repository validation, the evaluation runner, and
+the pinned official Agent Skills reference validator for every implemented
+skill. It also verifies each upstream commit URL, so this gate requires network
+access. TypeScript 6 is pinned because Ultracite's current parser does not yet
+accept TypeScript 7.
+
+The command fails on Critical or Major findings. Minor findings remain visible
+without blocking a release unless the accepted contract they affect says
+otherwise.
 
 ## Authoring prerequisite
 
@@ -38,8 +60,36 @@ Choose the policy rather than copying the example. Use `false` for a deliberatel
 
 ## Minimum validation
 
-1. Validate frontmatter, links, and `agents/openai.yaml`.
-2. Test direct, indirect, incomplete, negative, and edge-case prompts.
-3. Verify missing companions produce honest degraded behavior.
-4. Confirm the repository contains no private material or local paths.
-5. Run one independent adversarial review and one resolution check before publication.
+Add each skill to `validation/repository.yaml`, provide valid frontmatter,
+`agents/openai.yaml`, and `provenance.yaml`, then add its behavioral fixtures
+under `evaluations/`. Fixtures and observations are YAML; raw evidence has a
+checked SHA-256 locator.
+
+After changing fixtures or observations, record the deterministic report:
+
+```sh
+pnpm evaluations:record
+pnpm validate
+```
+
+The report command cannot record schema, evidence, routing, or severity
+failures. The validation command rejects a stale report. Critical invocation
+or routing fixtures require at least three unique fresh-context attempts; one
+failed attempt fails the fixture rather than being averaged away.
+
+Every observation names the candidate identity produced by the validator. A
+dirty candidate uses `working-tree:<sha256>` over non-evaluation repository
+inputs; a clean candidate uses `git:<sha>`. Reports also record the package
+version, per-fixture hash, and every raw-evidence locator and hash. Evaluation
+artifacts are excluded from the working-tree identity so recording evidence
+does not create a self-referential hash.
+
+`validation/sources.yaml` is the only authority for upstream URLs, revisions,
+and licenses. Per-skill provenance refers to source ids from that inventory.
+`validation/overlays.yaml` binds every overlay to its source, target, patch
+file, and SHA-256. The target must exist at the pinned source revision; a
+missing, escaping, or stale target or patch blocks validation.
+
+Before publication, also prove missing companions degrade honestly, run the
+accepted capability and composition scenarios, complete one independent
+adversarial review, and run one resolution check.

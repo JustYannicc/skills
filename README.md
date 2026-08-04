@@ -18,14 +18,58 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 
 ## Planned suite
 
-Thinking in Systems is the anchor, not a container for every workflow. The current design backlog includes universal versions of Wayfinder, Research, Prototype, Handoff, and Batch Grilling. Domain Modeling may remain an external companion if a focused audit finds no meaningful gap. Software-specific TDD remains useful for software; Thinking in Systems will own only the cross-domain proof principles.
+Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 16 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied.
 
-The suite is still being designed. Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-02-bootstrap.md).
+The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-02-bootstrap.md).
+
+Publication evidence, clean-install proof, behavioral evaluation, and the
+separate private-activation gate are defined by the
+[validation and release contract](docs/VALIDATION_AND_RELEASE.md).
+
+## Workflow
+
+Setup runs once and installs the standing entry. After that, every request uses
+Thinking in Systems and the proportional Workflow automatically. The phases are
+universal: implementation may mean sending a reply, changing a routine,
+performing organizational work, modifying a physical environment, or writing
+code. Inline work compresses the artifacts; Durable work records them through
+the selected Adapter.
+
+```mermaid
+flowchart LR
+  SU["Setup System Thinking<br/>run once"] --> TS["Thinking in Systems<br/>every request"]
+  TS --> WF["Workflow<br/>own the Outcome"]
+  WF --> MG{"Existing scope<br/>currently mapped?"}
+  MG -- "no" --> MI["Migrate current state"]
+  MG -- "yes" --> DS["Discover what is missing"]
+  MI --> DS
+  DS --> SP["Specify the Outcome"]
+  SP --> TK["Decompose when useful"]
+  TK --> IM["Implement the work"]
+  IM --> RV["Review the exact result"]
+  RV --> VE["Verify effect and<br/>parent Outcome"]
+  VE --> LC["Learn and propagate change"]
+  LC -. "new evidence or work" .-> WF
+  WF <--> HO["Wait, resume, or hand off"]
+```
+
+The route is not mandatory ceremony or a software pipeline. Workflow chooses
+the smallest path that can satisfy the same responsibility and proof contract.
+The canonical rules are in the [Workflow routing contract](docs/WORKFLOW_ROUTING.md).
+Responsibility across phases, effect gates, parent Review, recovery, and
+terminal proof is defined by the
+[Ownership and completion lifecycle](docs/OWNERSHIP_LIFECYCLE.md).
+Installation, harness-specific instruction changes, Adapter selection,
+verification, rollback, and disposal are defined by the
+[Setup System Thinking contract](docs/SETUP_CONTRACT.md).
 
 ## Distribution
 
-The canonical source will live in this repository. Individual skills are intended for installation through [skills.sh](https://skills.sh/) and publication through [ClawHub](https://clawhub.com/skills) where compatible. These are separate distribution channels and neither resolves dependencies between skills.
+The canonical source lives in this repository. The suite and individual skills
+will be discovered and installed through [skills.sh](https://skills.sh/).
+Setup explicitly installs the selected suite because skills.sh does not resolve
+skill-to-skill dependencies or edit standing instructions.
 
 ## License
 
-The GitHub repository is available under the [MIT License](LICENSE). ClawHub applies MIT-0 to artifacts distributed through its registry.
+The repository is available under the [MIT License](LICENSE).

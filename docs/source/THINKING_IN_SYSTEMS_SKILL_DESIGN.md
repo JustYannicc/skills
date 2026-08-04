@@ -12,6 +12,9 @@ governed_by: the approved S01 v1.0 source
 
 # Public skills repository and Thinking in Systems skill
 
+> Historical design archive. Later accepted decisions supersede its two-channel
+> distribution proposal: the operative suite publishes through skills.sh only.
+
 ## 1. Outcome and current boundary
 
 Create a public, installable `thinking-in-systems` skill that contains the complete transferable method in the private governance profile and makes its use predictable for Codex, OpenClaw, and other compatible agents. The repository should become a durable home for additional public skills without exposing private agent configuration.

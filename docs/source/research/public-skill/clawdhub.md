@@ -1,5 +1,8 @@
 # ClawHub publication research
 
+> Retained rejected-alternative research. The operative distribution decision
+> is skills.sh only; this file is not a publication plan.
+
 **Research date:** 2026-08-02
 
 **Scope:** current, first-party ClawHub/OpenClaw documentation and the official ClawHub source repository.

@@ -48,7 +48,7 @@ Before editing:
 - `agents/openai.yaml` is optional Codex metadata but mandatory by this repository's convention; it is authored separately.
 - No supported channel resolves skill-to-skill dependencies.
 - A setup workflow may install an explicit suite but cannot call that transitive dependency resolution.
-- ClawHub MIT-0 publication is accepted; the GitHub repository remains MIT.
+- skills.sh is the sole publication and installation channel; the GitHub repository remains MIT.
 - Both earlier Thinking in Systems invocation descriptions were rejected.
 - “Subway orchestration” meant subagent orchestration.
 - Loop and graph engineering should emerge from good system design, not become mandatory named phases.

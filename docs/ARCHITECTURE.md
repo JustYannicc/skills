@@ -4,37 +4,63 @@
 
 Build a public suite of predictable, universal agent skills. Each skill owns one job; Thinking in Systems supplies the shared systems thesis without absorbing every planning, research, clarification, prototyping, or handoff workflow.
 
-The current repository is scaffolding only. No skill is implemented or publishable yet.
+No skill is implemented or publishable yet. The validation foundation is
+implemented so each skill can be added against the same deterministic and
+behavioral proof boundary.
 
-The complete universal method is owned by [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md). [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation, not a substitute. Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). The complete public-safe skill design and evidence used to produce the method are retained in the [`source` archive](source/README.md); private originals are represented by fingerprints and do not override the universalized public authority.
+The complete universal method is owned by [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md). [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation, not a substitute. The accepted jobs and source strategy are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md). Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). The complete public-safe skill design and evidence used to produce the method are retained in the [`source` archive](source/README.md); private originals are represented by fingerprints and do not override the universalized public authority.
+
+Automatic entry, proportional phase selection, migration, resumption, effects,
+and completion are owned by the [`Workflow routing contract`](WORKFLOW_ROUTING.md).
+Adapter-neutral work, state, and responsibility meanings are owned by the
+[`Universal work and coordination contract`](UNIVERSAL_WORK_CONTRACT.md).
+Installation scope, harness instruction surfaces, layered configuration,
+Adapter selection, verification, rollback, and self-removal are owned by the
+[`Setup System Thinking contract`](SETUP_CONTRACT.md).
+Role responsibility, phase returns, effect gates, parent Review, correction,
+and terminal proof are owned by the
+[`Ownership and completion lifecycle`](OWNERSHIP_LIFECYCLE.md).
+Behavioral evidence, capability environments, clean installation, publication,
+and separate private activation are owned by the
+[`Validation and release contract`](VALIDATION_AND_RELEASE.md).
 
 ## Skill-suite model
 
 ```mermaid
 flowchart TD
-  TIS["Thinking in Systems<br/>intent, seams, strategy, incentives, proof, recovery, change"]
-  WF["Wayfinder<br/>navigate persistent or irreducible fog"]
-  BG["Batch Grilling<br/>resolve the current decision frontier"]
-  RS["Research<br/>reduce uncertainty with evidence"]
-  PT["Prototype<br/>run a reversible system experiment"]
-  HO["Handoff<br/>preserve continuation state"]
-  DM["Domain Modeling<br/>establish shared language"]
-  SD["Specialized software skills<br/>TDD, code prototype, implementation, review"]
+  SU["Setup System Thinking<br/>install, configure, teach, verify"]
+  TIS["Thinking in Systems<br/>governing knowledge"]
+  W["Workflow<br/>coordinate the Outcome"]
+  AY["Ask Yannic<br/>explain the route"]
+  MS["Migrate System<br/>record existing reality"]
+  D["Discovery capabilities<br/>language, decisions, fog, facts, experiments, people"]
+  SP["To Spec<br/>accepted Outcome contract"]
+  TK["To Tickets<br/>bounded work contracts"]
+  IM["Implement<br/>execute one Ticket"]
+  RV["Review<br/>verify exact result"]
+  HO["Handoff<br/>preserve continuation"]
+  XS["Supplemental skills<br/>user-selected evidence"]
 
-  TIS --> WF
-  TIS --> BG
-  TIS --> RS
-  TIS --> PT
-  TIS --> HO
-  DM --> TIS
-  WF --> BG
-  WF --> RS
-  WF --> PT
-  WF --> HO
-  PT -. "software branch" .-> SD
+  SU --> TIS
+  SU --> W
+  AY -. "explains" .-> W
+  TIS -. "governs" .-> W
+  W --> MS
+  W --> D
+  D --> SP
+  SP --> TK
+  TK --> IM
+  IM --> RV
+  W <--> HO
+  XS -. "declared Extension points" .-> D
+  XS -. "declared Extension points" .-> SP
+  XS -. "declared Extension points" .-> IM
+  XS -. "declared Extension points" .-> RV
 ```
 
-Arrows mean “may request this capability when installed,” not “the installer resolves this dependency.”
+Arrows show lifecycle relationships, not package dependencies. Setup installs
+every selected skill explicitly because current distribution does not resolve
+transitive dependencies.
 
 ## Strategy before plan
 
@@ -64,7 +90,10 @@ It does not own the full interview, research, prototype, long-horizon navigation
 
 ## Distribution reality
 
-The Agent Skills specification, Vercel skills CLI, skills.sh, and ClawHub do not provide portable transitive skill dependencies. A repository may contain several skills and an installer may select several names explicitly, but each installed skill remains independent.
+The Agent Skills specification, Vercel skills CLI, and skills.sh do not provide
+portable transitive skill dependencies. A repository may contain several skills
+and an installer may select several names explicitly, but each installed skill
+remains independent.
 
 The setup design must therefore:
 
@@ -90,6 +119,26 @@ skills/<name>/
 
 The Vercel `skills init` command currently generates only `SKILL.md`; authors must create and validate `agents/openai.yaml` separately.
 
+## Validation foundation
+
+```text
+src/validation/             # deterministic schemas and validators
+validation/                 # expected skill set and immutable source pins
+evaluations/
+├── fixtures/               # prompts, environments, expected routes and seams
+├── observations/           # fresh-context observations
+├── evidence/               # hash-bound raw evidence
+└── reports/                # deterministic revision-bound reports
+```
+
+`pnpm validate` is the public repository gate. It composes formatting, lint,
+type, and test checks with local links, public-data boundaries, skill metadata,
+invocation-policy agreement, provenance, immutable source pins, official Agent
+Skills validation, fixture schemas, raw-evidence hashes, repetition rules, and
+recorded-report freshness. Behavioral evidence remains a separate proof layer;
+the deterministic runner records and checks it but does not manufacture model
+observations.
+
 ## Public/private authority
 
 - This repository owns universal skill behavior, public examples, evaluations, setup guidance, and attribution.
@@ -98,9 +147,8 @@ The Vercel `skills init` command currently generates only `SKILL.md`; authors mu
 - The maintainer's private governance record owns personal operating policy until a separately reviewed migration pins the public method and retains only private overrides.
 - No private authority changes until the replacement skill suite is installed and behaviorally proven.
 
-## Publication channels
+## Publication channel
 
 - GitHub is the editable source of truth under MIT.
 - skills.sh discovers skills from the public repository and installs selected skill folders.
-- ClawHub is a separate SemVer release channel and applies MIT-0 to its distributed artifact.
-- A future OpenAI plugin may bundle related skills for Codex/ChatGPT distribution, but it is not required for the initial skills.sh/OpenClaw path and is not part of this scaffold.
+- A future OpenAI plugin may bundle related skills for Codex/ChatGPT distribution, but it is not required for the skills.sh path and is not part of this release.

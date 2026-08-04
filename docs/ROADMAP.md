@@ -1,5 +1,8 @@
 # Roadmap
 
+The accepted suite Outcome is specified in the
+[Universal Thinking in Systems skill suite Specification](specs/UNIVERSAL_SKILL_SUITE.md).
+
 ## Phase 0 — repository foundation
 
 Status: complete when the bootstrap commit and public remote are verified.
@@ -9,50 +12,43 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Architecture, decisions, research, and new-session handoff.
 - No discoverable placeholder skills.
 
-## Phase 1 — universal Wayfinder
+## Phase 1 — governing and coordination skills
 
-Use a fresh task and design one skill only.
+- Implement the accepted [Workflow routing contract](WORKFLOW_ROUTING.md).
+- Author `thinking-in-systems` from the complete standard.
+- Author `workflow` against the accepted work contract.
+- Author `migrate-system` for automatic current-state adoption.
+- Evaluate each skill independently before composing them.
 
-- Start from Matt Pocock's Wayfinder at the pinned upstream revision.
-- Preserve destination-first navigation, visible blockers, the current decision frontier, durable maps, and continuation across sessions.
-- Remove repository, issue-tracker, and software-delivery assumptions.
-- Replace “fog eventually becomes tickets” with a strategy for reducible, deferred, and irreducible fog.
-- Decide the relationship with Batch Grilling, Research, Prototype, Handoff, Domain Modeling, and Thinking in Systems.
-- Test it against technical, life, organizational, physical, and agent cases.
+## Phase 2 — discovery skills
 
-## Phase 2 — Thinking in Systems
+- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors.
+- Define and verify the pinned overlays for `research`, `batch-grill-me`, and `to-questionnaire` without copying their full upstream source.
+- Test discovery across technical, personal, organizational, physical, communicative, and agent cases.
 
-- Author the universal thesis from the accepted design.
-- Keep one job: govern how systems are understood, designed, proved, operated, changed, recovered, and retired.
-- Create progressive-disclosure references, paired examples, evaluations, source annotations, and setup guidance.
-- Generate and evaluate the invocation description instead of accepting either rejected draft.
+## Phase 3 — delivery and continuity skills
 
-## Phase 3 — companion workflows
-
-Design one skill per fresh task. Tentative order:
-
-1. Universal Research.
-2. Universal/System Prototype.
-3. Universal Handoff.
-4. Systems-aligned Batch Grilling.
-5. Setup and a later maintainer-query workflow.
-
-Audit Domain Modeling before forking it. Keep software TDD and software prototypes specialized.
-
-## Phase 4 — end-to-end lifecycle
-
-Translate the useful engineering lifecycle shown in Matt's process into a cross-domain lifecycle:
+- Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
+- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors.
+- Author universal `review`, including code and configured Supplemental evidence.
+- Prove the lifecycle:
 
 ```text
 wayfind or grill → specify → decompose → execute → review → learn/change the system
 ```
 
-The public lifecycle must distinguish strategy from plan, allow irreducible uncertainty, and work for human, agent, technical, personal, organizational, and physical execution.
+## Phase 4 — setup, guidance, and composition
+
+- Author `ask-yannic` as the route guide.
+- Author `setup-system-thinking` against the accepted [Setup System Thinking contract](SETUP_CONTRACT.md).
+- Prove source pinning, overlays, standing instructions, Extension points, clean removal, and no-Git operation.
+- Verify the accepted README Mermaid workflow and complete end-to-end evaluation matrix.
 
 ## Phase 5 — publication and private migration
 
-- Validate skills.sh discovery and clean Codex/OpenClaw installation.
-- Publish the accepted skill folders to ClawHub and verify scans/releases independently.
+- Execute the accepted [validation and release contract](VALIDATION_AND_RELEASE.md).
+- Validate skills.sh discovery, clean installation, update, rollback, and removal.
+- Publish the accepted skill folders through skills.sh from the reviewed public revision.
 - Pin the tested public revision.
 - In a separate task, update private agent configuration and global standing triggers.
 - Remove the obsolete private predecessor only after equivalent behavior is proven.
