@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-edge-physical-irreversible
 attempt: 1
 contextId: fresh-prototype-edge-physical-irreversible-1
-suiteRevision: git:7a16adebd06f29d32f80ca6fa9c6c5f43a991f66
+suiteRevision: git:4cd7c849eaf2aab8a1c5d1741a36dd4e52fae1c8
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:40:00.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [blocked-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/prototype/edge-physical-irreversible-1.txt
-  sha256: 4f790becd1db1197d05b383d7c728624ac0054ecbbae8eaeffde925f002ad716
+  sha256: 4b3e369d018f0610d11cfc48dbe3df918ff3056d81574a82ecaf82931d188f0b

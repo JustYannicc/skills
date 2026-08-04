@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-cross-domain-communicative-agent
 attempt: 1
 contextId: fresh-prototype-cross-domain-communicative-agent-1
-suiteRevision: git:7a16adebd06f29d32f80ca6fa9c6c5f43a991f66
+suiteRevision: git:4cd7c849eaf2aab8a1c5d1741a36dd4e52fae1c8
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:43:00.000Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [cross-domain-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/cross-domain-communicative-agent-1.txt
-  sha256: 676d37982dbdb57d27c6d225de8600888fc021e755549f0d4214c619d523affb
+  sha256: 79ac06f8fc7772962601a6df8f6efbf4298e4fae68362745714afaac8d9bd024

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-indirect-personal-organizational
 attempt: 1
 contextId: fresh-prototype-indirect-personal-organizational-1
-suiteRevision: git:7a16adebd06f29d32f80ca6fa9c6c5f43a991f66
+suiteRevision: git:4cd7c849eaf2aab8a1c5d1741a36dd4e52fae1c8
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:34:00.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [pilot-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/indirect-personal-organizational-1.txt
-  sha256: 5a6ac3993a1d4e8c6dc045d29ad378fe7d5752c379d33948942bb5c23434a105
+  sha256: f763418cf871ef1395dedc463e358f3ecc3c9b5d0b5da8c6138f09cd7fa67218

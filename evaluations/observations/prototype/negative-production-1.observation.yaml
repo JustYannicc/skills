@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-negative-production-execution
 attempt: 1
 contextId: fresh-prototype-negative-production-1
-suiteRevision: git:7a16adebd06f29d32f80ca6fa9c6c5f43a991f66
+suiteRevision: git:4cd7c849eaf2aab8a1c5d1741a36dd4e52fae1c8
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:37:00.000Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [blocked-or-safe-simulation]
 rawEvidence:
   locator: evaluations/evidence/prototype/negative-production-1.txt
-  sha256: 9ed166c4b5420bd0c27484e91dd993ec03c7516b4c09dd9976c1625afb2f32dc
+  sha256: a1971a3b1b75bf48b2c6e2a884ce5ee68262530445805155ebf08ffcc6593a14
