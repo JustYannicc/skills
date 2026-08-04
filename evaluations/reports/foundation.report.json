@@ -36,7 +36,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -73,7 +73,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -94,7 +94,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -115,7 +115,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -136,7 +136,7 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
     },
     {
@@ -157,7 +157,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -178,7 +178,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -215,7 +215,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -252,7 +252,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -273,7 +273,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -294,7 +294,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -315,7 +315,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -336,7 +336,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -357,7 +357,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -378,7 +378,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -399,7 +399,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -420,7 +420,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -441,12 +441,12 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+      "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:06430ee64e92edbec4515f83f4925b845080d4ca",
+  "suiteRevision": "git:472effb773ca145acaf3696b840823620fbc8f07",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,

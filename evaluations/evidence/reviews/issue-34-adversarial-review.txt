@@ -1,0 +1,35 @@
+Issue #34 independent adversarial code review
+Fixed point: ec42ca6895b44a6502c69d20771110c4425c78af
+Review route: two parallel Claude Opus 5 high read-only axes
+
+Standards axis
+
+1. The rebound observations predate the corrected candidate. Resolution: kept
+   original recordedAt values and raw hashes, and added
+   issue-34-candidate-rebind-attestation.txt. It states this is a revision
+   correction rather than a fresh run and proves the installed runtime skill is
+   unchanged between the originally observed and corrected candidates.
+2. docs/source/README.md still called the installed standard a review candidate.
+   Resolution: updated the current source-archive index to approved.
+3. `.pnpm-store` exclusion was asymmetric across traversal and status parsing.
+   Resolution: added the status-path exclusion and a Git regression that is red
+   without it. The identity and repository-validator directory sets remain
+   separate because only identity excludes evaluations.
+4. `--full-history` was not needed once first-parent traversal was selected.
+   Resolution: removed it; the merge regression remains green.
+
+Spec axis
+
+1. Parent issue #1 still named #11 as the Work frontier. Resolution: updated the
+   single stale line to #34 through the GitHub issue API.
+2. A future merge commit will become a new candidate and invalidate branch-bound
+   observations. Resolution: the current handoff and PR delivery explicitly
+   require the parent owner to rebind and record evidence against the exact merge
+   revision, rerun pnpm validate, and only then close #34.
+3. `.pnpm-store` status parsing and the stale source index matched Standards
+   findings 2 and 3 and are resolved above.
+4. PR delivery remained open during review and is completed after the separate
+   resolution check.
+
+No review finding required changing Thinking in Systems governing behavior or
+issue #35's TOML representation decision.
