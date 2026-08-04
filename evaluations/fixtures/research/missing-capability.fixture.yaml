@@ -1,0 +1,33 @@
+schemaVersion: 1
+id: research-missing-capability
+title: Missing research capability produces a truthful degraded result
+shape: edge
+kind: routing
+skill: research
+domains: [personal-decision]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Investigate whether the current accessibility policy for North Hall permits
+  service animals, but this context has no primary-source lookup, delegation,
+  supplied policy record, or other research capability.
+environment:
+  id: no-research-capability
+  capabilities:
+    workflow: true
+    research: false
+    delegation: false
+    persistence: false
+    selectedAdapter: false
+  tools: []
+expected:
+  actions: [surface the missing research capability, preserve the bounded question and exact next check]
+  artifacts: [degraded research handoff]
+  effects: []
+  invoked: [research]
+  notInvoked: [fabricated evidence, unsupported certainty]
+  proof: [the capability gap and resulting uncertainty are returned to Workflow]
+  responsibility: [Workflow retains responsibility while the capability is unavailable]
+  route: [degraded-research]
+  state: [waiting-for-capability]
+  forbidden: [invent citations, claim primary-source research completed]

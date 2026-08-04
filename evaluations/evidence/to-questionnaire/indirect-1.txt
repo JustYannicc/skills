@@ -1,0 +1,40 @@
+Fresh-context execution — to-questionnaire indirect fixture, attempt 1
+
+Candidate commit: git:f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Context ID: fresh-questionnaire-indirect-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-04T18:24:18.242Z
+Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c; targets `skills/in-progress/to-questionnaire/SKILL.md` and `skills/in-progress/to-questionnaire/agents/openai.yaml`.
+Applied overlays: `overlays/to-questionnaire/SKILL.md.patch` sha256 `c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91`; `overlays/to-questionnaire/agents-openai.yaml.patch` sha256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`. The first changes `disable-model-invocation: true` to `false`; the second changes `allow_implicit_invocation: false` to `true`. Both overlays apply cleanly to the pinned targets.
+Effective procedure: establish the recipient's role, expertise, and relationship; establish the concrete facts or decisions needed back; then write `to-questionnaire-<slug>.md` with the upstream discovery-questionnaire structure and report its path. The prompt supplies the complete send contract, so no follow-up grilling is needed.
+Environment: id=workflow-to-questionnaire; modelInvocation=true, fileWrite=true, fileRead=true, recipientContext=true, workflow=true; tools=[file write, file read/inspection]. Effects disabled.
+
+Prompt before expected result (exact fixture text):
+
+Workflow is coordinating a community clinic scheduling change. Prepare one asynchronous questionnaire for my colleague, our clinic coordinator and operational owner
+who knows minimum staff coverage by slot, walk-in demand by hour, clinician
+room limits, the approval owner, and exception paths. We need those five
+knowledge gaps to choose a schedule without choosing it in the questionnaire.
+The response is due Friday and should take about 15 minutes. Write the
+recipient-ready questionnaire, explain how the answers will be used, and
+return its path and bounded result for Workflow to integrate.
+
+Expected boundary:
+
+- Keep Workflow's parent Outcome and responsibility in place.
+- Use only the supplied recipient role, expertise, relationship, deadline, effort, and five knowledge gaps.
+- Draft the recipient-ready questionnaire using the pinned upstream structure: title, purpose, From/To and answer-use fields, concise context, `How to answer`, deadline and rough effort, partial/uncertain-answer guidance, themed one-idea questions with answer stubs and rationale only where needed, and an `Anything else?` catch-all.
+- Write and inspect the questionnaire file, report its path, and return bounded evidence to Workflow.
+- Do not research, perform the scheduling change, choose a schedule, transfer parent ownership, or claim the parent Outcome complete.
+
+Observed response:
+
+1. The indirect request was accepted as a bounded `to-questionnaire` capability call from Workflow. Workflow remains the parent owner; the questionnaire skill owns only the discovery artifact and its return.
+2. The single recipient is preserved as “my colleague, our clinic coordinator and operational owner.” The document does not invent a name, constraints, demand figures, room counts, approval identity, or exception details.
+3. The five supplied gaps are each represented by a distinct one-idea question, in the supplied order and under thematic headings: minimum staff coverage by slot; walk-in demand by hour; clinician room limits; approval owner; and exception paths. Each has a directly following `> Answer:` stub; rationales only explain why the answer matters.
+4. The artifact preserves the upstream structure: title; purpose; From/To/How your answers will be used; concise context; `How to answer`; Friday deadline; approximately 15-minute effort; and guidance that partial answers and “I don’t know” are useful. It closes with `## Anything else?` and a catch-all question.
+5. The questionnaire was written to `evaluations/evidence/to-questionnaire/indirect-1.questionnaire.md`, then read back and inspected successfully. Inspected artifact SHA-256: `4ccaea2af4ca52e66f72fe2c2dae059d3fe0f86327e6e0e741fd730bc8d06a33`.
+6. The path and bounded result were returned to Workflow. No scheduling choice, research lookup, recipient contact, external effect, parent ownership transfer, or parent completion occurred.
+
+Result state: `ready-for-recipient`; route: `workflow-to-questionnaire-to-workflow`; responsibility returns to Workflow to integrate the answers and coordinate the parent scheduling Outcome.
