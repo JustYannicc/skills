@@ -112,6 +112,27 @@ describe("repository validator", () => {
     );
   });
 
+  it("scans overlay patch files for public-boundary violations", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    await writeOverlayFixture(root, {
+      patch: `diff --git a/SKILL.md b/SKILL.md\n--- a/SKILL.md\n+++ b/SKILL.md\n@@ -1 +1 @@\n-public\n+/${"Users"}/private/.agents\n`,
+    });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () => Promise.resolve(Buffer.from("public\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        check: "public-boundary",
+        file: "overlays/upstream.patch",
+        severity: "Critical",
+      })
+    );
+  });
+
   it("validates skill metadata and invocation-policy agreement", async () => {
     const root = await createRepository();
     const skill = path.join(root, "skills", "explicit-skill");

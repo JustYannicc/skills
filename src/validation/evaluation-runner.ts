@@ -22,6 +22,7 @@ export interface EvaluationReport {
   findings: EvaluationFinding[];
   evidence: {
     attempt: number;
+    artifacts?: { locator: string; sha256: string }[];
     contextId: string;
     locator: string;
     sha256: string;
@@ -176,12 +177,18 @@ export const evaluateFixture = (
   return {
     attempts,
     contextIds,
-    evidence: relevant.map((observation) => ({
-      attempt: observation.attempt,
-      contextId: observation.contextId,
-      locator: observation.rawEvidence.locator,
-      sha256: observation.rawEvidence.sha256,
-    })),
+    evidence: relevant.map((observation) => {
+      const { artifacts, locator, sha256 } = observation.rawEvidence;
+      const evidence = {
+        attempt: observation.attempt,
+        contextId: observation.contextId,
+        locator,
+        sha256,
+      };
+      return artifacts && artifacts.length > 0
+        ? { artifacts, ...evidence }
+        : evidence;
+    }),
     findings,
     fixtureId: fixture.id,
     status: findings.length === 0 ? "passed" : "failed",

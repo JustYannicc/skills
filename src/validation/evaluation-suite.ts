@@ -111,64 +111,76 @@ const verifyRawEvidence = async (
 ): Promise<SuiteFinding[]> => {
   const absoluteRoot = await realpath(root);
   const results = await Promise.all(
-    observations.map(async (observation): Promise<SuiteFinding[]> => {
-      const evidencePath = path.resolve(root, observation.rawEvidence.locator);
-      const lexicalContainment = evidencePath.startsWith(
-        `${path.resolve(root)}${path.sep}`
-      );
-      if (!lexicalContainment) {
-        return [
-          {
-            check: "raw-evidence",
-            file: observation.rawEvidence.locator,
-            message: `Evidence for ${observation.fixtureId} escapes the repository.`,
-            severity: "Critical",
-          },
-        ];
-      }
-
-      try {
-        const resolvedEvidencePath = await realpath(evidencePath);
-        if (!resolvedEvidencePath.startsWith(`${absoluteRoot}${path.sep}`)) {
+    observations.flatMap((observation) => {
+      const references = [
+        {
+          ...observation.rawEvidence,
+          kind: "Raw evidence",
+        },
+        ...(observation.rawEvidence.artifacts ?? []).map((artifact) => ({
+          ...artifact,
+          kind: "Evidence artifact",
+        })),
+      ];
+      return references.map(async (reference): Promise<SuiteFinding[]> => {
+        const evidencePath = path.resolve(root, reference.locator);
+        const lexicalContainment = evidencePath.startsWith(
+          `${path.resolve(root)}${path.sep}`
+        );
+        if (!lexicalContainment) {
           return [
             {
               check: "raw-evidence",
-              file: observation.rawEvidence.locator,
-              message: `Evidence for ${observation.fixtureId} escapes the repository through a symbolic link.`,
+              file: reference.locator,
+              message: `${reference.kind} for ${observation.fixtureId} escapes the repository.`,
               severity: "Critical",
             },
           ];
         }
-        const evidence = await readFile(evidencePath);
-        const findings = findPublicBoundaryViolations(
-          evidence.toString("utf-8")
-        ).map(
-          (violation): SuiteFinding => ({
-            check: "raw-evidence",
-            file: observation.rawEvidence.locator,
-            message: `Raw evidence contains ${violation}.`,
-            severity: "Critical",
-          })
-        );
-        if (sha256(evidence) !== observation.rawEvidence.sha256) {
-          findings.push({
-            check: "raw-evidence",
-            file: observation.rawEvidence.locator,
-            message: `Evidence hash does not match ${observation.fixtureId} attempt ${observation.attempt}.`,
-            severity: "Major",
-          });
+
+        try {
+          const resolvedEvidencePath = await realpath(evidencePath);
+          if (!resolvedEvidencePath.startsWith(`${absoluteRoot}${path.sep}`)) {
+            return [
+              {
+                check: "raw-evidence",
+                file: reference.locator,
+                message: `${reference.kind} for ${observation.fixtureId} escapes the repository through a symbolic link.`,
+                severity: "Critical",
+              },
+            ];
+          }
+          const evidence = await readFile(evidencePath);
+          const findings = findPublicBoundaryViolations(
+            evidence.toString("utf-8")
+          ).map(
+            (violation): SuiteFinding => ({
+              check: "raw-evidence",
+              file: reference.locator,
+              message: `${reference.kind} contains ${violation}.`,
+              severity: "Critical",
+            })
+          );
+          if (sha256(evidence) !== reference.sha256) {
+            findings.push({
+              check: "raw-evidence",
+              file: reference.locator,
+              message: `${reference.kind} hash does not match ${observation.fixtureId} attempt ${observation.attempt}.`,
+              severity: "Major",
+            });
+          }
+          return findings;
+        } catch {
+          return [
+            {
+              check: "raw-evidence",
+              file: reference.locator,
+              message: `${reference.kind} file is missing for ${observation.fixtureId} attempt ${observation.attempt}.`,
+              severity: "Major",
+            },
+          ];
         }
-        return findings;
-      } catch {
-        return [
-          {
-            check: "raw-evidence",
-            file: observation.rawEvidence.locator,
-            message: `Evidence file is missing for ${observation.fixtureId} attempt ${observation.attempt}.`,
-            severity: "Major",
-          },
-        ];
-      }
+      });
     })
   );
   return results.flat();

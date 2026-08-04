@@ -45,6 +45,7 @@ const textExtensions = new Set([
   ".jsonc",
   ".md",
   ".mts",
+  ".patch",
   ".ts",
   ".txt",
   ".yaml",
