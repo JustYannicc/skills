@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: review-supplemental-required-missing
+attempt: 1
+contextId: fresh-review-supplemental-required-missing-1
+suiteRevision: git:c6b823000db246b92f7faded62bb172a879c1ee1
+evaluator: gpt-5.6-luna-fresh-context-review
+recordedAt: 2026-08-04T18:48:00.000Z
+environment:
+  id: workflow-with-required-supplemental-gap
+  capabilities: { workflow: true, persistence: true, supplementalReview: false }
+  tools: []
+observed:
+  actions: [invoke configured required Supplemental at declared extension point, detect missing required capability, record dependency and unblock condition, return Inconclusive waiting]
+  artifacts: [continuation record, required Supplemental gap]
+  effects: []
+  forbiddenChecks:
+    - criterion: treat missing required Supplemental as advisory
+      evidence: The required gap moved the target to waiting and was not downgraded to an advisory limitation.
+      observed: false
+  invoked: [review, configured Supplemental reviewer]
+  notInvoked: [complete target, pretend required evidence exists]
+  proof: [required failure blocks completion and exact next check recorded]
+  responsibility: [Work owner remains responsible, Outcome owner retains parent responsibility]
+  route: [required-supplemental-to-waiting]
+  state: [in_review-to-waiting]
+rawEvidence:
+  locator: evaluations/evidence/review/supplemental-required-missing-1.txt
+  sha256: d74894833ce753eb4c20fcf161f220a162fedab9767f870c5c9b1b3d9b29389e

@@ -1,0 +1,8 @@
+fresh-context: review-supplemental-required-missing-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: safety-sensitive result
+specification: spec-safety-9
+result: result-safety-r9
+extension: supplemental-review
+supplemental: required-safety-review-unavailable
+observation: the required Supplemental capability was unavailable; Review recorded the dependency and exact next check, returned Inconclusive, moved to waiting, and preserved Work and Outcome responsibility.

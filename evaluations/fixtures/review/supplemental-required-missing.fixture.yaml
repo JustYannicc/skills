@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-supplemental-required-missing
+title: Required Supplemental failure enters owned waiting
+shape: incomplete
+kind: routing
+skill: review
+domains: [physical-environment, software]
+severity: Major
+requiredAttempts: 1
+prompt: Review an exact result with a configured required safety Supplemental reviewer, but the specialist capability is unavailable in this environment.
+environment:
+  id: workflow-with-required-supplemental-gap
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools: []
+expected:
+  actions: [invoke configured required Supplemental at declared extension point, detect missing required capability, record dependency and unblock condition, return Inconclusive waiting]
+  artifacts: [continuation record, required Supplemental gap]
+  effects: []
+  invoked: [review, configured Supplemental reviewer]
+  notInvoked: [complete target, pretend required evidence exists]
+  proof: [required failure blocks completion and exact next check recorded]
+  responsibility: [Work owner remains responsible, Outcome owner retains parent responsibility]
+  route: [required-supplemental-to-waiting]
+  state: [in_review-to-waiting]
+  forbidden: [treat missing required Supplemental as advisory]
