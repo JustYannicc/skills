@@ -20,6 +20,11 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Author `migrate-system` for automatic current-state adoption.
 - Evaluate each skill independently before composing them.
 
+Current state: `thinking-in-systems` is approved. Workflow's Inline route is an
+implemented issue #13 candidate awaiting required human review; Durable
+coordination remains in #14 and the System Record representation remains in
+#35.
+
 ## Phase 2 — discovery skills
 
 - Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors.

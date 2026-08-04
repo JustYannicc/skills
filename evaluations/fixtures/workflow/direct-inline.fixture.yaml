@@ -1,0 +1,25 @@
+schemaVersion: 1
+id: workflow-direct-inline
+title: Direct trivial work completes through the full Inline lifecycle
+shape: direct
+kind: routing
+skill: workflow
+domains: [communication]
+severity: Major
+requiredAttempts: 1
+prompt: Use Workflow to correct "The parcel arrive yesterday" and return only the corrected sentence.
+environment:
+  id: workflow-conversation-inline
+  capabilities: { persistence: false, workflow: true }
+  tools: []
+expected:
+  actions: [load Thinking in Systems before Workflow, form an implicit Outcome Specification and Ticket, correct only the requested text, run immediate Review]
+  artifacts: []
+  effects: [The parcel arrived yesterday.]
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [durable Adapter, specialist phase, recursive parent Workflow]
+  proof: [The parcel arrived yesterday. is the exact and complete response]
+  responsibility: [Workflow retains parent Outcome responsibility through verified completion]
+  route: [inline-trivial]
+  state: [verified-complete]
+  forbidden: [create durable ceremony or add unrequested prose]

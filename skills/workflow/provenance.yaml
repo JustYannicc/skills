@@ -1,0 +1,9 @@
+schemaVersion: 1
+strategy: original
+sources: []
+retainedBehavior:
+  - Accepted repository contracts for automatic routing, proportional representation, universal work, ownership, exact-revision evidence, and verified parent completion.
+changedAssumptions:
+  - The initial executable route covers complete Inline coordination and honest degradation when work crosses a Durable boundary whose Adapter or companion capability is unavailable.
+  - Mid-work messages are classified by their effect on the active contract across technical, personal, organizational, physical, communicative, and agent work.
+  - Material changes preserve parent and unaffected child ownership while invalidating and propagating only the affected contract, evidence, Review, and approval.

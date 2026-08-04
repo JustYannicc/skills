@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow"
+  short_description: "Coordinate work through verified terminal outcomes"
+policy:
+  allow_implicit_invocation: true
