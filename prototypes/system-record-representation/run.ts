@@ -116,6 +116,10 @@ const malformed = {
   ...canonical.envelope,
   authority: undefined,
 };
+const unexpectedField = {
+  ...canonical.envelope,
+  unexpected_action_boundary: true,
+};
 const malformedSource = projectionSource.replace(
   "record_id: SYS-024",
   "record_id: SYS-024\nrecord_id: SYS-999"
@@ -135,6 +139,13 @@ try {
   malformedSourceBlocked = true;
 }
 
+let unexpectedFieldBlocked = false;
+try {
+  canPerformExternalEffect(unexpectedField);
+} catch {
+  unexpectedFieldBlocked = true;
+}
+
 let projectionWriteBlocked = false;
 try {
   acceptWritableRecord(projection);
@@ -149,6 +160,7 @@ const report = {
     malformed_source_remains_parserless_readable:
       malformedSource.includes("## Rationale") &&
       malformedSource.includes("adapter-neutral contract"),
+    unexpected_action_field_blocked: unexpectedFieldBlocked,
     valid_pending_record_cannot_authorize_effect:
       canPerformExternalEffect(canonical.envelope) === false,
   },

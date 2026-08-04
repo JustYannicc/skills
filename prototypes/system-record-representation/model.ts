@@ -9,43 +9,45 @@ const actorSchema = z.object({
   label: z.string().min(1),
 });
 
-const envelopeSchema = z.object({
-  approval: z
-    .object({
-      required: z.boolean(),
-      result_revision: z.string().min(1),
-      status: z.enum(["pending", "approved", "rejected"]),
-    })
-    .optional(),
-  authority: z.object({
-    allowed_effects: z.array(z.string().min(1)),
-    decision_owner: z.string().min(1),
-  }),
-  owner: actorSchema,
-  provenance: z.object({
-    revision: z.string().min(1),
-    sha256: z.string().regex(/^[a-f0-9]{64}$/u),
-    source: z.string().min(1),
-  }),
-  record_id: z.string().regex(/^SYS-[0-9]+$/u),
-  record_version: z.string().min(1),
-  relationships: z.array(
-    z.object({
-      contract: z.string().min(1),
-      kind: z.enum([
-        "containing",
-        "subsystem",
-        "upstream",
-        "dependent",
-        "peer",
-        "related",
-      ]),
-      record_id: z.string().min(1),
-    })
-  ),
-  schema_version: z.literal(1),
-  state: z.enum(["candidate", "designing", "design_complete", "retired"]),
-});
+const envelopeSchema = z
+  .object({
+    approval: z
+      .object({
+        required: z.boolean(),
+        result_revision: z.string().min(1),
+        status: z.enum(["pending", "approved", "rejected"]),
+      })
+      .optional(),
+    authority: z.object({
+      allowed_effects: z.array(z.string().min(1)),
+      decision_owner: z.string().min(1),
+    }),
+    owner: actorSchema,
+    provenance: z.object({
+      revision: z.string().min(1),
+      sha256: z.string().regex(/^[a-f0-9]{64}$/u),
+      source: z.string().min(1),
+    }),
+    record_id: z.string().regex(/^SYS-[0-9]+$/u),
+    record_version: z.string().min(1),
+    relationships: z.array(
+      z.object({
+        contract: z.string().min(1),
+        kind: z.enum([
+          "containing",
+          "subsystem",
+          "upstream",
+          "dependent",
+          "peer",
+          "related",
+        ]),
+        record_id: z.string().min(1),
+      })
+    ),
+    schema_version: z.literal(1),
+    state: z.enum(["candidate", "designing", "design_complete", "retired"]),
+  })
+  .strict();
 
 export type Envelope = z.infer<typeof envelopeSchema>;
 
