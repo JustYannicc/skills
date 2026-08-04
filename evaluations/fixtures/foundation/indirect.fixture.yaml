@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: foundation-indirect
+title: Workflow reaches a bounded companion capability
+shape: indirect
+kind: invocation
+domains: [everyday-life]
+severity: Major
+requiredAttempts: 1
+prompt: Use the established workflow to resolve an external factual uncertainty.
+environment:
+  id: research-available
+  capabilities:
+    research: true
+    persistence: true
+  tools: [primary-source lookup]
+expected:
+  actions: [identify the external uncertainty]
+  artifacts: [bounded research result]
+  effects: []
+  invoked: [thinking-in-systems, workflow, research]
+  notInvoked: [prototype]
+  proof: [primary evidence attached]
+  responsibility: [workflow integrates the research result]
+  route: [workflow-to-research]
+  state: [ready-for-decision]
+  forbidden: [treat delegated research as parent completion]

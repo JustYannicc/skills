@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: foundation-negative
+attempt: 1
+contextId: fresh-negative-1
+suiteRevision: git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7
+evaluator: deterministic-foundation
+recordedAt: 2026-08-02T17:00:06.000Z
+environment:
+  id: conversation-only
+  capabilities: { persistence: false }
+  tools: []
+observed:
+  actions: [explain the concept]
+  artifacts: []
+  effects: [answer returned]
+  forbiddenChecks:
+    - criterion: invent a migration need
+      evidence: migration remained inactive
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [migrate-system]
+  proof: [answer checked against the request]
+  responsibility: [workflow owns answer quality]
+  route: [inline-explanation]
+  state: [complete]
+rawEvidence:
+  locator: evaluations/evidence/foundation/negative-1.txt
+  sha256: 094ba61c67756bf1725f1fb19b1fe0a36e2e604256488cb49f81aefcc9669f71

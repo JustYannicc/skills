@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: foundation-indirect
+attempt: 1
+contextId: fresh-indirect-1
+suiteRevision: git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7
+evaluator: deterministic-foundation
+recordedAt: 2026-08-02T17:00:04.000Z
+environment:
+  id: research-available
+  capabilities: { research: true, persistence: true }
+  tools: [primary-source lookup]
+observed:
+  actions: [identify the external uncertainty]
+  artifacts: [bounded research result]
+  effects: []
+  forbiddenChecks:
+    - criterion: treat delegated research as parent completion
+      evidence: workflow integrated the bounded research result
+      observed: false
+  invoked: [thinking-in-systems, workflow, research]
+  notInvoked: [prototype]
+  proof: [primary evidence attached]
+  responsibility: [workflow integrates the research result]
+  route: [workflow-to-research]
+  state: [ready-for-decision]
+rawEvidence:
+  locator: evaluations/evidence/foundation/indirect-1.txt
+  sha256: 197f2178730ac2a351fc08482b29b474b3b3cfbcde67252458ce1be83b8f38f0

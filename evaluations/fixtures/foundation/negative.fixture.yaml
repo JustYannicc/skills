@@ -1,0 +1,25 @@
+schemaVersion: 1
+id: foundation-negative
+title: Nearby specialist capability stays inactive
+shape: negative
+kind: invocation
+domains: [education]
+severity: Major
+requiredAttempts: 1
+prompt: Explain what a feedback loop is in one paragraph.
+environment:
+  id: conversation-only
+  capabilities:
+    persistence: false
+  tools: []
+expected:
+  actions: [explain the concept]
+  artifacts: []
+  effects: [answer returned]
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [migrate-system]
+  proof: [answer checked against the request]
+  responsibility: [workflow owns answer quality]
+  route: [inline-explanation]
+  state: [complete]
+  forbidden: [invent a migration need]

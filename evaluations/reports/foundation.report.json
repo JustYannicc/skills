@@ -1,0 +1,156 @@
+{
+  "evaluatedAt": "2026-08-02T17:00:09.000Z",
+  "fixtureSetRevision": "1bc16e79f71d7b5a8518d6a989e136be6c0b2e9ed5f7bc99fe147c92d6108f87",
+  "fixtures": [
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-direct-1",
+        "fresh-direct-2",
+        "fresh-direct-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-direct-1",
+          "locator": "evaluations/evidence/foundation/direct-1.txt",
+          "sha256": "f1c4a2a86218b45720815882e55d971db88b20f4948565b0c9f488183c063a64"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-direct-2",
+          "locator": "evaluations/evidence/foundation/direct-2.txt",
+          "sha256": "e23a339302a163d915450b0530c9d99ddef3b1202546154273484ec0b923f8c2"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-direct-3",
+          "locator": "evaluations/evidence/foundation/direct-3.txt",
+          "sha256": "29a7e4e3f9f651a93d256a756e10a0a8533fbfe412d214b0a7c05f998c25949e"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "foundation-direct",
+      "status": "passed",
+      "suiteRevision": "git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7",
+      "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-edge-1",
+        "fresh-edge-2",
+        "fresh-edge-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-edge-1",
+          "locator": "evaluations/evidence/foundation/edge-1.txt",
+          "sha256": "51a350c450af4968e33b45c8531fc0d91a2da35be4ffcf73f87a69d9fa4cccaa"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-edge-2",
+          "locator": "evaluations/evidence/foundation/edge-2.txt",
+          "sha256": "7b9b7ca8ea3063d892456bc179d569b4cab46e4bb87f120353b892620a3be042"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-edge-3",
+          "locator": "evaluations/evidence/foundation/edge-3.txt",
+          "sha256": "1e41173d4e9da197802bb065ee38448fc0c7abe075f39591c29c98773df645c6"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "foundation-edge",
+      "status": "passed",
+      "suiteRevision": "git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7",
+      "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-incomplete-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-incomplete-1",
+          "locator": "evaluations/evidence/foundation/incomplete-1.txt",
+          "sha256": "acfdbe7a4d663f13c965df7129b0a78a369c86d65bf9e7a8d7f2cd5addeac9bf"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "foundation-incomplete",
+      "status": "passed",
+      "suiteRevision": "git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7",
+      "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-indirect-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-indirect-1",
+          "locator": "evaluations/evidence/foundation/indirect-1.txt",
+          "sha256": "197f2178730ac2a351fc08482b29b474b3b3cfbcde67252458ce1be83b8f38f0"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "foundation-indirect",
+      "status": "passed",
+      "suiteRevision": "git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7",
+      "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-negative-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-negative-1",
+          "locator": "evaluations/evidence/foundation/negative-1.txt",
+          "sha256": "094ba61c67756bf1725f1fb19b1fe0a36e2e604256488cb49f81aefcc9669f71"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "foundation-negative",
+      "status": "passed",
+      "suiteRevision": "git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7",
+      "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
+    }
+  ],
+  "schemaVersion": 1,
+  "suiteRevision": "git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7",
+  "suiteVersion": "0.0.0",
+  "summary": {
+    "failed": 0,
+    "findings": {
+      "Critical": 0,
+      "Major": 0,
+      "Minor": 0
+    },
+    "fixtures": 5,
+    "passed": 5
+  }
+}

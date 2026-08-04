@@ -1,0 +1,4 @@
+fixture=foundation-edge
+attempt=1
+context=fresh-edge-1
+observed=unsupported monitoring became an acceptance-gated handoff

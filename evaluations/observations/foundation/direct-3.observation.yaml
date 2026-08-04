@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: foundation-direct
+attempt: 3
+contextId: fresh-direct-3
+suiteRevision: git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7
+evaluator: deterministic-foundation
+recordedAt: 2026-08-02T17:00:03.000Z
+environment:
+  id: conversation-only
+  capabilities: { persistence: false, delegation: false }
+  tools: []
+observed:
+  actions: [apply systems thinking proportionately, correct the typo]
+  artifacts: []
+  effects: [corrected text returned]
+  forbiddenChecks:
+    - criterion: claim completion before inspecting the correction
+      evidence: corrected text was inspected before completion
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [durable adapter]
+  proof: [corrected text inspected]
+  responsibility: [workflow retains parent responsibility]
+  route: [inline]
+  state: [complete]
+rawEvidence:
+  locator: evaluations/evidence/foundation/direct-3.txt
+  sha256: 29a7e4e3f9f651a93d256a756e10a0a8533fbfe412d214b0a7c05f998c25949e

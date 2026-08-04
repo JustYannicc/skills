@@ -1,0 +1,4 @@
+fixture=foundation-indirect
+attempt=1
+context=fresh-indirect-1
+observed=workflow routed to research and integrated primary evidence

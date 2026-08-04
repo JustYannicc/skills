@@ -1,0 +1,4 @@
+fixture=foundation-direct
+attempt=3
+context=fresh-direct-3
+observed=systems thinking, inline correction, inspection, completion

@@ -1,0 +1,4 @@
+fixture=foundation-incomplete
+attempt=1
+context=fresh-incomplete-1
+observed=authority gap blocked the send effect and preserved responsibility

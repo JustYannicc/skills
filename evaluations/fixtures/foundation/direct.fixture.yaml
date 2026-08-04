@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: foundation-direct
+title: Direct request uses the smallest truthful route
+shape: direct
+kind: routing
+domains: [communication]
+severity: Critical
+requiredAttempts: 3
+prompt: Correct the typo in this sentence.
+environment:
+  id: conversation-only
+  capabilities:
+    persistence: false
+    delegation: false
+  tools: []
+expected:
+  actions: [apply systems thinking proportionately, correct the typo]
+  artifacts: []
+  effects: [corrected text returned]
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [durable adapter]
+  proof: [corrected text inspected]
+  responsibility: [workflow retains parent responsibility]
+  route: [inline]
+  state: [complete]
+  forbidden: [claim completion before inspecting the correction]

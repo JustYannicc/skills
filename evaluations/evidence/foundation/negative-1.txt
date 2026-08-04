@@ -1,0 +1,4 @@
+fixture=foundation-negative
+attempt=1
+context=fresh-negative-1
+observed=inline explanation without migration
