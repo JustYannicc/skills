@@ -19,6 +19,8 @@ The private originals remain outside this public repository. Their fingerprints 
 
 The authoritative public concept-to-source map lives in the installed [source guide](../../skills/thinking-in-systems/references/sources.md). The repository-wide [source inventory](../SOURCES.md) routes to it and separately records skill-design and distribution sources. Pinned repository and upstream revisions used by deterministic provenance validation live in [`validation/sources.yaml`](../../validation/sources.yaml), and the installed package's machine-readable adaptation record lives in [`skills/thinking-in-systems/provenance.yaml`](../../skills/thinking-in-systems/provenance.yaml).
 
+The [economic design research note](../research/thinking-in-systems-economic-design-concepts.md) records the source-to-rule boundary for Marginal analysis, Constraints, Preferences, substitution effects, Cost structure, minimum efficient scale, and Externalities. It excludes universal utility maximization and economy-wide planning from the governing method.
+
 Matt Pocock's [`skills` repository at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c) informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
 
 ## License

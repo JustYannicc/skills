@@ -2,7 +2,7 @@
 
 Status: **HUMAN REVIEW REQUIRED**. This candidate is not final or approved for publication.
 
-Thinking in Systems applies governing systems judgment to every request. It preserves Intent, selects a proportionate intervention, makes material seams explicit, accounts for real operating conditions, and requires proof and legacy treatment when consequences warrant them. Applicability is universal; visible depth and durable artifacts scale with consequence and persistence.
+Thinking in Systems applies governing systems judgment to every request. It preserves Intent, selects a proportionate intervention, makes material System relationships explicit, accounts for Constraints, Preferences, incentives, Marginal value, Cost structure, Externalities, and real operating conditions, and requires proof and legacy treatment when consequences warrant them. Applicability is universal; visible depth and durable artifacts scale with consequence and persistence.
 
 The installed skill has one job: provide governing systems knowledge. Thinking in Systems and the `'Workflow'` skill are capability instructions the same agent may apply together. When an active `'Workflow'` context exists, that skill coordinates phases and completion; otherwise the caller retains that responsibility. Thinking in Systems does not absorb coordination or another specialist phase.
 
@@ -12,6 +12,7 @@ The installed skill has one job: provide governing systems knowledge. Thinking i
 - [Complete runtime standard](../skills/thinking-in-systems/references/standard.md)
 - [Runtime vocabulary](../skills/thinking-in-systems/references/standard.md#use-these-terms-consistently)
 - [Concept sources and further reading](../skills/thinking-in-systems/references/sources.md)
+- [Economic design research and inclusion boundary](research/thinking-in-systems-economic-design-concepts.md)
 - [Durable System Record template](../skills/thinking-in-systems/references/system-record-template.md)
 - [Surrounding repository vocabulary](../CONTEXT.md)
 - [Accepted repository decisions](DECISIONS.md)

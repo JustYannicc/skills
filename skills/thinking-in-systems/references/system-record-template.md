@@ -22,6 +22,9 @@ Use this template only for a Durable system or material System change. Complete 
 - **Accepted Outcome:**
 - **Satisficing / good-enough threshold and trigger for further search:**
 - **Non-Outcomes:**
+- **Hard and soft Constraints:**
+- **Feasible set under current Authority, resources, capabilities, and operating conditions:**
+- **Affected Actor Preferences, conflicts, evidence, and conditions under which they may change:**
 - **Owner, bounded Responsibilities, and decision Authority:**
 - **Material domain terms:**
 - **Intentionality and progress classification, when relevant:** intended productive use, rest or leisure, intentional or incidental progress, or unresolved Intent; never a moral score.
@@ -29,11 +32,18 @@ Use this template only for a Durable system or material System change. Complete 
 ## 2. Boundary and support
 
 - **Owned responsibilities:**
-- **Containing System and this System's role within it:**
-- **Internal Subsystems and bounded contributory Outcomes:**
-- **Upstream Systems this System relies on:**
-- **Dependent Systems that rely on this System:**
-- **Relationship interfaces, failure propagation, and change-notification obligations:**
+
+Add one row for each known material relationship and delete unused placeholder rows. This is a relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
+
+| Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
+| --- | --- | --- | --- |
+| Containing System |  |  |  |
+| Subsystem |  |  |  |
+| Upstream System |  |  |  |
+| Dependent System |  |  |  |
+| Peer System |  |  |  |
+| Other material relationship |  |  |  |
+
 - **Affected but not controlled:**
 - **Included and excluded:**
 - **Supported Actors, cases, operating conditions, interfaces, states, and scale:**
@@ -51,17 +61,25 @@ Use this template only for a Durable system or material System change. Complete 
 - **Unknown-case behavior:**
 - **Capability or dependency gap:** original request, blocked condition, preserved state, allowed safe work, proof needed, and resumption condition.
 
-## 4. Intervention, satisficing, Pareto, and Opportunity cost
+## 4. Intervention, Satisficing, Pareto, Marginal analysis, and cost
 
 - **Feasible alternatives:** do nothing; wait with a recheck trigger; change process or operating conditions; configure an existing System; adopt a maintained solution; build a custom solution.
 - **Selected intervention and threshold evidence:**
 - **Materially distinct alternatives, known trade-offs, and condition for further search:**
-- **Pareto / 80-20 concentration hypothesis, evidence, and protected useful-many obligations:**
+- **How Pareto / 80-20 concentration prioritizes the search toward likely high-value causes or actions:**
+- **Marginal increment under consideration, expected incremental Outcome or information value, and incremental total cost:**
+- **Why further work is or is not worthwhile at the margin after the Satisficing threshold and protected obligations:**
 - **Possible Pareto improvement and per-Actor/System impact:**
 - **If trade-offs create losers:** Authority, mitigation, compensation, reversal, or informed exception.
+- **Substitution effects:** how relative cost, friction, access, delay, or availability may redirect behavior.
+- **Externalities:** costs, burdens, risks, or benefits shifted outside the deciding Actor's or System owner's accountability.
 - **Best feasible alternative forgone:**
-- **Displaced resources, transition cost, maintenance cost, and cost of delay:**
+- **Cost horizon and units, including any evidence-based monetary conversions:**
+- **Fixed, variable, Marginal, and average total cost, without double counting:**
+- **Minimum efficient scale, only when comparable repeated Outcome units and a credible long-run cost relationship exist:**
+- **Displaced resources, transition cost, ownership cost, maintenance cost, and cost of delay:**
 - **Reversibility, option value, and sunk investment excluded from prospective value:**
+- **Decision-sensitive unknown values, plausible ranges, provenance, and smallest discriminating questions for the `'Workflow'` skill or caller:**
 - **Reference class and material differences:**
 
 ## 5. Mise en place and stopping rule
@@ -104,6 +122,7 @@ Use this template only for a Durable system or material System change. Complete 
 
 - **Accepted Outcome and desired incentives:**
 - **Actual incentive structure—rewards, costs, constraints, defaults, information, consequences, and alternatives:**
+- **Actor Preferences and likely substitution effects:**
 - **Indirect or unintended incentives and who receives each benefit or bears each cost:**
 - **Observed behavior that the incentive structure explains or fails to explain:**
 - **Helpful and harmful friction:**
@@ -173,7 +192,7 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 
 - **Stable identity and canonical record:**
 - **Applicability and supported operations:**
-- **Upstream and Dependent Systems, Subsystems, conflicts, and precedence:**
+- **Relationship index, conflicts, and precedence:**
 - **Design status, operational status, eligibility, version, and freshness:**
 - **Human-readable status and control surface:**
 - **Current state, last and next action, owner, and authoritative links:**
@@ -185,7 +204,7 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 - **Decision rationale and review conditions:**
 - **Successor System Record:**
 - **Affected population and truthful unknown coverage:**
-- **Impact on containing, Subsystem, Upstream, and Dependent System contracts:**
+- **Impact on Containing, Subsystem, Upstream, Dependent, and Peer System contracts:**
 - **Legacy classification:** `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`.
 - **Exact transformation or re-evaluation per cohort:**
 - **Bounded resumable application and coverage counts:**

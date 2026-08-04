@@ -5,10 +5,11 @@ Read and apply every section before returning a systems judgment. Scale the dept
 - **Thinking in Systems:** the method in this standard for governing arrangements so they advance an intended Outcome under real operating conditions.
 - **System:** a bounded arrangement of interdependent Actors, information, rules, state, mechanisms, and operating conditions that produces or protects an Outcome across one or more interactions. It may be one-time, recurring, or continuous; recurrence is not the admission test. [Sources](sources.md#system-boundaries-subsystems-and-dependent-systems)
 - **System of interest:** the System currently being governed at the selected level of analysis. Its boundary separates what it owns or controls from the wider context that affects it.
-- **Containing System:** the larger System whose boundary includes the System of interest.
-- **Subsystem:** a System inside another System's boundary that has its own internal arrangement and bounded contributory Outcome. Its local success does not prove the containing System's Outcome.
+- **Containing System:** the larger System whose boundary includes the System of interest; the canonical term for its parent System at the selected decomposition level.
+- **Subsystem:** a System inside another System's boundary that has its own internal arrangement and bounded contributory Outcome; the canonical term for a child System. Its local success does not prove the Containing System's Outcome.
 - **Upstream System:** an external System whose output, availability, interface, or policy the System of interest materially relies on.
 - **Dependent System:** an external System that materially relies on the System of interest. Upstream and dependent relationships create interface and change obligations without creating Authority across the boundary.
+- **Peer System:** a System with the same known Containing System as the System of interest at the selected decomposition level. A Peer System is sometimes called a sibling System; peerhood alone creates no dependency, interface, Ownership, or Authority.
 - **System interaction:** a request, event, or observation interpreted or acted on through a System. Every agent request is one System interaction, even when it needs only an inline result.
 - **Durable system:** a System whose rules, state, Authority, or effects must persist beyond the current interaction.
 - **Actor:** a person, agent, team, service, or other party that performs, decides, approves, supplies, or receives something within a System.
@@ -25,10 +26,17 @@ Read and apply every section before returning a systems judgment. Scale the dept
 - **System Record:** the canonical human-readable contract for one version of a Durable system, including its Outcome, boundary, Authority, behavior, proof, operation, and retirement conditions.
 - **Change and Legacy Record:** the versioned contract for moving from one Durable system version to another, including affected existing state, compatibility, rollout, rollback, verification, and predecessor retirement.
 - **Opportunity cost:** the value of the best feasible alternative forgone by a decision, considered with displaced resources, delay, transition, maintenance, and reversibility.
-- **Satisficing (good enough):** selecting an option that clears an explicit Outcome threshold after a bounded search makes the materially distinct alternatives, known trade-offs, and condition for further search visible.
+- **Constraint:** a condition that limits the feasible alternatives. A hard constraint excludes an alternative; a soft constraint changes its cost, burden, risk, or attractiveness. Budget, time, capacity, Authority, safety, rights, and operating conditions may all constrain a System.
+- **Feasible set:** the alternatives that satisfy the hard Constraints and are actually available within current Authority, capabilities, resources, and operating conditions.
+- **Preference:** an Actor's evidence-backed ordering among feasible alternatives or Outcome attributes under stated conditions. A Preference is an input to design, not a Requirement or grant of Authority; Preferences may differ among Actors and change with conditions.
+- **Satisficing (good enough):** selecting an option that clears an explicit Outcome threshold after a bounded search. The Pareto principle can prioritize the search; Marginal analysis decides whether further search or refinement is worth its incremental total cost. [Sources](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation)
 - **Pareto principle (80/20 rule):** a hypothesis that a minority of causes or actions may produce most relevant value. It focuses investigation; it is not a universal ratio or permission to discard requirements, safety, rights, trust, accessibility, recovery, counter-signals, or rare catastrophic cases.
 - **Pareto improvement:** a change that makes at least one affected Actor better off on an explicit accepted criterion without making any affected Actor worse off on a material criterion. Claim it only when affected parties and impacts are known; it does not by itself prove fairness or a good starting distribution.
-- **Mise en place:** proportional preparation of the context, materials, capabilities, permissions, operating conditions, proof seam, fallback, and resumption state required by the next action. It is paired with a stopping rule. [Sources](sources.md#intervention-opportunity-cost-pareto-and-preparation)
+- **Marginal analysis:** comparing the expected incremental Outcome or information value of the next unit of search, preparation, capacity, scope, or operation with its incremental total cost, burden, risk, and Externalities at the current state.
+- **Cost structure:** the fixed cost of establishing or retaining capacity, variable cost that changes with activity, Marginal cost of the next increment, and average total cost per comparable Outcome unit over a stated horizon. When repeated comparable units exist, **minimum efficient scale** is the smallest sustained scale at which relevant long-run average total cost per comparable Outcome unit is minimized within the supported range and assumptions. [Sources](sources.md#constraints-preferences-substitution-cost-structure-and-externalities)
+- **Substitution effect:** a change in relative cost, friction, access, delay, or availability shifts an Actor toward an alternative means even when the underlying Intent may be unchanged. Treat it as a hypothesis to test, not proof of stable or fully ordered Preferences.
+- **Externality:** a material cost, burden, risk, or benefit affecting an Actor or System that is not represented in the deciding Actor's or System owner's accountability and trade-off. Externalities can cross the selected boundary without being economy-wide.
+- **Mise en place:** proportional preparation of the context, materials, capabilities, permissions, operating conditions, proof seam, fallback, and resumption state required by the next action. It is paired with a stopping rule. [Sources](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation)
 - **Strategy:** a rule for making decisions as conditions and information change. A **Plan** is a proposed sequence under current assumptions.
 - **Fog of war:** material uncertainty that limits what can currently be known.
 - **Proof seam:** the human-visible boundary where intended behavior and effects can be evaluated independently of internal implementation.
@@ -80,17 +88,19 @@ For a spelling correction, preserve the source, make only the correction, and sh
 
 Start from the original request. Preserve its exact wording or source whenever later interpretation, correction, audit, or migration may depend on it.
 
-Concept sources: [Intent, Outcome, and bounded Authority](sources.md#intent-outcome-and-bounded-authority) and [satisficing and good enough](sources.md#satisficing-and-good-enough).
+Concept sources: [Intent, Outcome, and bounded Authority](sources.md#intent-outcome-and-bounded-authority), [satisficing and Marginal analysis](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation), and [Constraints and Preferences](sources.md#constraints-preferences-substitution-cost-structure-and-externalities).
 
 Resolve these questions proportionately:
 
 1. **Requested operation:** What was literally requested, and what role is the agent being asked to perform?
 2. **Intent:** What problem, opportunity, value, or avoided loss motivates the request? Is the requested operation the Outcome or one proposed means?
 3. **Outcome and satisficing threshold:** What should become true, under which conditions, and what observable result is good enough now? What would justify further search or a higher threshold?
-4. **Boundary:** What is included, excluded, supported, affected, and explicitly not owned?
-5. **Actors and Authority:** Who or what may interpret, decide, prepare, approve, and perform each effect?
-6. **Facts, assumptions, and unknowns:** Which sources support the interpretation? Which propositions remain unconfirmed, including material privacy, retention, safety, or legal conditions?
-7. **Proof:** What human-visible observation would show that the result is correct and useful?
+4. **Constraints and feasible set:** Which hard Constraints exclude alternatives, which soft Constraints change trade-offs, and what is actually feasible under current Authority, resources, capabilities, and operating conditions?
+5. **Preferences and substitution:** Which Actor Preferences are evidenced, where do they conflict, and how could changes in relative cost, friction, access, delay, or availability redirect behavior?
+6. **Boundary:** What is included, excluded, supported, affected, and explicitly not owned?
+7. **Actors and Authority:** Who or what may interpret, decide, prepare, approve, and perform each effect?
+8. **Facts, assumptions, and unknowns:** Which sources support the interpretation? Which propositions remain unconfirmed, including material privacy, retention, safety, or legal conditions?
+9. **Proof:** What human-visible observation would show that the result is correct and useful?
 
 When two reasonable interpretations differ materially, preserve both and ask the smallest question that distinguishes them. Safe preparatory work may continue only inside the accepted Authority boundary.
 
@@ -117,9 +127,11 @@ Every accepted action moves the line forward by delivering part of the Outcome, 
 
 ## 3. Choose an intervention
 
-Use **satisficing** to choose the least costly reversible intervention that credibly clears the explicit good-enough threshold. A bounded search stops only after the materially distinct alternatives, known trade-offs, and condition for further search are visible. For a material decision, compare the feasible classes that could satisfy the Outcome:
+Use **Satisficing** to choose a reversible intervention that clears the explicit good-enough threshold within the Constraints. Use the **Pareto principle** to test where value or failure is concentrated, then use **Marginal analysis** to decide whether the next increment of search, preparation, scope, or capacity is worth its incremental total cost. A bounded search stops only after the feasible alternatives, known trade-offs, and condition for further search are visible.
 
-Concept sources: [intervention, Opportunity cost, Pareto, and preparation](sources.md#intervention-opportunity-cost-pareto-and-preparation).
+Concept sources: [Satisficing, Pareto, Marginal analysis, Opportunity cost, and preparation](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation) and [Constraints, Preferences, substitution, cost structure, and Externalities](sources.md#constraints-preferences-substitution-cost-structure-and-externalities).
+
+For a material decision, compare the feasible classes that could satisfy the Outcome:
 
 - do nothing;
 - wait for named information or conditions, with a recheck trigger;
@@ -132,6 +144,8 @@ Concept sources: [intervention, Opportunity cost, Pareto, and preparation](sourc
 
 Evaluate the alternatives together, once:
 
+- the binding hard and soft Constraints and resulting feasible set;
+- affected Actor Preferences, conflicts, and plausible substitution effects;
 - the best feasible alternative forgone;
 - time, attention, money, capacity, or other resources displaced;
 - transition and switching cost;
@@ -139,17 +153,41 @@ Evaluate the alternatives together, once:
 - cost of delay;
 - reversibility and option value;
 - prospective benefit and remaining cost, excluding sunk investment; and
-- the evidence that the selected option clears the threshold.
+- the evidence that the selected option clears the threshold without an unaccounted Externality.
 
 Show a credible downside of delay beside the expected benefit and uncertainty. Do not manufacture fear, shame, artificial loss or scarcity, streak penalties, or irreversible commitment merely to push a decision.
 
 Use the **Pareto principle (80/20 rule)** as a local concentration hypothesis: test whether a small set of causes or actions produces most of the relevant value. Preserve the useful many, and keep any remaining work that protects safety, rights, trust, accessibility, recovery, legal duties, counter-signals, rare catastrophic cases, or an explicit requirement. Do not assume the numerical ratio.
 
+The Pareto principle, Satisficing, and Marginal analysis answer different connected questions. Concentration evidence orders the search toward likely high-value causes or actions. The Satisficing threshold defines adequate performance. Marginal analysis decides whether one more increment is worth its incremental total cost after accounting for protected obligations. When the threshold is unmet but the next increment is not worthwhile, reduce scope, change the intervention, pause, or cancel instead of relabeling the result good enough.
+
 Prefer a **Pareto improvement** when one is feasible. Evaluate effects separately for each affected Actor, Subsystem, Upstream System, and Dependent System; an aggregate gain is not enough. When a proposal creates a loser or transfers burden, state the distributional trade-off, whose Authority can accept it, and the mitigation, compensation, reversal, or informed exception. Do not relabel a trade-off as Pareto-improving.
+
+Search for **Externalities** beyond the decision boundary, including costs, burdens, risks, or benefits shifted to a Containing System, Peer System, Dependent System, support owner, future operator, or otherwise affected Actor. A local improvement that exports a material burden is not a System improvement until the effect is represented in the decision, assigned to an accountable owner, or explicitly accepted within Authority.
+
+Model the **Cost structure** when recurrence, capacity, or scale could change the decision. State the horizon and relevant units; distinguish fixed, variable, Marginal, and average total cost without double counting. Money may provide a common comparison unit when the conversion is evidence-based, but time, attention, energy, coordination, support load, risk, trust, and other burdens remain visible when monetization would hide meaning or create false precision. Use minimum efficient scale only when repeated comparable Outcome units and a credible long-run cost relationship exist.
+
+When an objective, Constraints, units, and trade-off Authority are explicit and sufficiently measurable, a bounded local analysis may maximize accepted Outcome within a fixed resource constraint or minimize total cost while clearing the Satisficing threshold. Do not invent a single utility function for multiple Actors or aggregate incompatible Preferences into one score.
+
+Ask for or measure a quantity only when a plausible range could change the decision. Record ranges, provenance, uncertainty, and the smallest discriminating value question; return unanswered material questions to the active `'Workflow'` skill or caller for coordinated evidence gathering.
 
 Waiting is an explicit alternative within this comparison. It preserves option value only when it names what may change, what evidence is expected, what happens meanwhile, and the trigger for deciding again. It is not an unowned pause.
 
 Avoid false numerical precision. Use an outside view when comparable work exists: compare the current case with actual prior outcomes and explain the differences in actors, conditions, interfaces, responsibility, and evidence. When material architecture or operating assumptions remain unresolved, estimate a bounded evidence-producing experiment rather than delivery.
+
+```mermaid
+flowchart TD
+  F["Frame Outcome, threshold, Constraints, and Preferences"] --> S["Build the feasible set"]
+  S --> P["Use Pareto concentration to test high-leverage causes or actions"]
+  P --> C{"Candidate clears the Satisficing threshold and protected obligations?"}
+  C -->|"No"| M{"Next increment has greater expected value than Marginal total cost?"}
+  M -->|"Yes"| P
+  M -->|"No"| X["Change intervention, reduce scope, pause, or cancel"]
+  C -->|"Yes"| E["Check Externalities, substitution effects, and per-Actor/System impacts"]
+  E --> N{"Another increment is justified at the margin?"}
+  N -->|"Yes"| P
+  N -->|"No"| A["Accept the good-enough intervention"]
+```
 
 ### Mise en place and stopping rule
 
@@ -171,11 +209,13 @@ Inspect each material seam. A seam has a governing rule or remains a visible gap
 
 ### System structure and relationships
 
-Select the System of interest explicitly. Identify its containing System when one exists, its internal Subsystems, its Upstream Systems, its Dependent Systems, and the operating environment. For every material relationship, name the boundary crossed, exchanged input or output, interface contract, assumptions, Ownership, Responsibility, Authority, failure propagation, proof, and change-notification obligation.
+Select the System of interest explicitly. Identify its Containing System when one exists, its internal Subsystems, its Upstream Systems, its Dependent Systems, its material Peer Systems, and the operating environment. For every material relationship, name the boundary crossed, exchanged input or output, interface contract, assumptions, Ownership, Responsibility, Authority, failure propagation, proof, and change-notification obligation.
 
 Concept sources: [System boundaries, Subsystems, and Dependent Systems](sources.md#system-boundaries-subsystems-and-dependent-systems).
 
-Subsystem work has nested Responsibility: the Subsystem owner is responsible for its bounded contract, while the containing System owner remains responsible for integration and the containing Outcome. A dependent relationship never silently transfers Ownership or Authority. When a System changes, recovers, degrades, or retires, assess both what it relies on and what relies on it.
+Record each known material relationship in the System Record's relationship index. The index identifies the relationship and material boundary and links to, rather than duplicates, its interface or handoff contract. It is not an exhaustive-discovery requirement: record an unknown only when that uncertainty can change Outcome, risk, proof, Authority, support, recovery, or change impact.
+
+Subsystem work has nested Responsibility: the Subsystem owner is responsible for its bounded contract, while the Containing System owner remains responsible for integration and the containing Outcome. A dependent relationship never silently transfers Ownership or Authority. A Peer System requires a known shared Containing System; shared technology, domain, Actor, environment, or resemblance is insufficient. One related System may have several relationship kinds—for example, a Peer may also be Upstream—and mutual reliance uses two directional dependency relationships. When a System changes, recovers, degrades, or retires, assess what it relies on, what relies on it, and which Peer contracts or shared Constraints may be affected.
 
 ```mermaid
 flowchart LR
@@ -185,13 +225,17 @@ flowchart LR
   SS2["Subsystem B"]
   U["Upstream System"]
   D["Dependent System"]
+  P["Peer System"]
   E["Operating environment"]
 
   C --> S
+  C --> P
   S --> SS1
   S --> SS2
   U -->|"contracted input or capability"| S
   S -->|"contracted output or capability"| D
+  P -.->|"material peer relationship when present"| S
+  S -.-> P
   E <-->|"conditions and effects"| S
 ```
 
@@ -480,11 +524,11 @@ One canonical System Record governs each Durable system version. It contains onl
 
 ### Frame
 
-- original request or problem, Intent, accepted Outcome, satisficing threshold, and non-Outcomes;
-- System of interest, containing System, Subsystems, Upstream Systems, Dependent Systems, supported conditions, affected Actors, constraints, and explicit non-ownership;
+- original request or problem, Intent, accepted Outcome, Satisficing threshold, and non-Outcomes;
+- System of interest, Containing System, Subsystems, Upstream Systems, Dependent Systems, Peer Systems, supported conditions, affected Actors, Constraints, feasible set, Preferences, and explicit non-ownership;
 - owner, nested Responsibilities, decision Authority, and material domain vocabulary;
 - authoritative facts, decisions, assumptions, unknowns, and ambiguity behavior; and
-- selected intervention, Opportunity cost, rationale, and review conditions.
+- selected intervention, Opportunity cost, Marginal analysis, Cost structure and scale where material, Externalities, rationale, and review conditions.
 
 ### Contract
 
@@ -492,7 +536,8 @@ One canonical System Record governs each Durable system version. It contains onl
 - writable authority for each information type and any derived representations;
 - inputs, preconditions, outputs, stable identities, timing, transitions, and completion evidence;
 - approval and external-effect boundaries;
-- incentives, friction, operating conditions, and proxy-gaming counter-signals;
+- known material System relationships and links to their interface or handoff contracts;
+- incentives, Preferences, substitution effects, friction, operating conditions, Externalities, and proxy-gaming counter-signals;
 - Normal, Degraded, Paused, Recovery, reset, and retirement behavior;
 - safe ambient operations and irreducible human judgments; and
 - applicability, dependencies, version, operational state, precedence, and discovery metadata.

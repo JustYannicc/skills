@@ -20,18 +20,12 @@ Used by the framing questions, governing-source rules, delegation boundary, and 
 - [The Mom Test](https://www.momtestbook.com/) — questions that seek concrete evidence rather than approval or speculation.
 - [Lean Enterprise Institute: Five Whys](https://www.lean.org/lexicon-terms/5-whys/) and [Card: limitations of Five Whys](https://qualitysafety.bmj.com/content/26/8/671) — causal inquiry paired with limits on single-root-cause stories.
 
-## Satisficing and good enough
+## Satisficing, Pareto, Marginal analysis, Opportunity cost, and preparation
 
-Used by the good-enough threshold, bounded option search, and condition for further search.
+Used by the good-enough threshold, search order, condition for further search, intervention selection, decision economics, value of information, and **mise en place**.
 
 - [Herbert Simon: bounded rationality and satisficing](https://doi.org/10.2307/1884852) — choosing an option that satisfies an explicit aspiration level when exhaustive optimization is costly or impossible.
-
-The standard operationalizes this as a named Outcome threshold, materially distinct alternatives, known trade-offs, and a trigger for deeper search. It does not mean accepting the first convenient answer.
-
-## Intervention, Opportunity cost, Pareto, and preparation
-
-Used by intervention selection, decision economics, reference classes, value of information, and **mise en place**.
-
+- [John McCall: Economics of Information and Job Search](https://academic.oup.com/qje/article-abstract/84/1/113/1931495) — a sequential search model in which another search step is evaluated against its expected value and cost.
 - [Donella Meadows: Leverage Points](https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/) — places where intervention may have disproportionate effect.
 - [Juran Institute: Pareto principle and 80/20 rule](https://www.juran.com/blog/a-guide-to-the-pareto-principle-80-20-rule-pareto-analysis/) — the vital few and useful many. The standard treats concentration as a local hypothesis, not a universal numerical law.
 - [Stanford Encyclopedia of Philosophy: Economics and Economic Justice](https://plato.stanford.edu/entries/economic-justice/) — a Pareto improvement makes at least one member of the affected population better off without making another worse off; the criterion is often silent when real changes create winners and losers.
@@ -44,6 +38,22 @@ Used by intervention selection, decision economics, reference classes, value of 
 **Opportunity cost** is an established economic term. In this standard it means the best feasible alternative forgone together with displaced capacity, cost of delay, transition, maintenance, and reversibility. It is a surfaced trade-off, not an automatic veto.
 
 The **Pareto principle / 80–20 rule** and a **Pareto improvement** are different concepts. The first investigates concentration; the second evaluates whether a change helps someone without harming anyone else. Neither proves fairness, identifies the right Outcome, or authorizes hidden burden transfer.
+
+The standard connects three different jobs: Pareto concentration prioritizes the search, the Satisficing threshold defines adequate performance, and Marginal analysis decides whether the next increment is worth its incremental total cost. This is a qualitative stopping discipline unless the quantities are genuinely measurable.
+
+## Constraints, Preferences, substitution, Cost structure, and Externalities
+
+Used by the feasible set, Actor choice and adoption, substitution checks, scale-sensitive decisions, and effects outside the selected decision boundary.
+
+- [OpenStax: choices under a budget constraint](https://openstax.org/books/principles-microeconomics-2e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint) — Constraints define an opportunity set and force trade-offs among feasible alternatives.
+- [OpenStax: consumption choices](https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices) and [indifference curves](https://openstax.org/books/principles-microeconomics-3e/pages/b-indifference-curves) — Preferences order alternatives under stated conditions, while relative price changes can cause substitution toward alternatives.
+- [OpenStax: costs in the short run](https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run) and [costs in the long run](https://openstax.org/books/principles-microeconomics-3e/pages/7-5-costs-in-the-long-run) — fixed, variable, Marginal, and average total cost, economies and diseconomies of scale, and the conditions needed for a meaningful scale comparison.
+- [IMF: Externalities](https://www.imf.org/external/pubs/ft/fandd/basics/38-externalities.htm) — effects omitted from private costs or benefits can make a locally attractive decision worse for others.
+- [Ronald Coase: The Problem of Social Cost](https://www.law.uchicago.edu/lawecon/coaseinmemoriam/problemofsocialcost) — reciprocal effects, transaction costs, and the importance of comparing institutional arrangements rather than treating one visible harm in isolation.
+
+The standard generalizes the reasoning rather than the economic objective. Money, time, attention, energy, coordination, support load, risk, trust, and other burdens may be decision-relevant costs, but only defined units and evidence-based conversions support arithmetic. Outcome maximization or total-cost minimization is a bounded local analysis when the objective, Constraints, units, and trade-off Authority are explicit; it is not a universal utility function.
+
+Minimum efficient scale applies only when comparable repeated Outcome units and a credible long-run cost relationship exist. An Externality can cross a technical, personal, organizational, physical, communicative, or agent System boundary; it need not be economy-wide.
 
 ## Actors, Ownership, Responsibility, Authority, and handoffs
 
