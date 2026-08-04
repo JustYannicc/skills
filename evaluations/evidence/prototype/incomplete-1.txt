@@ -1,0 +1,8 @@
+Question: Not yet named; the request only says “Prototype this for me.”
+Reversible setup: Not started. No scope, actor, reset, or stop authority is available.
+Observation seam: Not defined because no material design question was supplied.
+Evidence: The missing question is the only observed blocker; no experiment or external effect occurred.
+Stopping rule: wait until the user supplies one material question and its intended Outcome.
+Verdict: blocked, not a prototype verdict.
+Disposition: pause and ask one smallest discriminating question before choosing a setup.
+Return to Workflow: preserve the waiting state and resume only when the question, scope, and authority are supplied.

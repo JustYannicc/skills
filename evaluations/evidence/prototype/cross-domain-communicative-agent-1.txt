@@ -1,0 +1,7 @@
+Question: Can a private rehearsal with a sandboxed assistant improve explanation without increasing confusion or emotional burden?
+Reversible setup: A private script and fake agent tool; reset deletes the scratch transcript and the person can stop before any message is sent.
+Observation seam: comprehension, ambiguity, and burden after one rehearsal, compared with the person's baseline explanation.
+Evidence: fresh communicative/agent/personal rehearsal, attempt 1, transcript and burden observations bound to the result revision; no credentials or send effect.
+Stopping rule: stop after one rehearsal comparison or when confusion/burden counter-signals exceed the pause threshold.
+Verdict: one cross-domain question has a bounded rehearsal result; no communication or agent integration is approved.
+Disposition: return one retain/replace/discard/pause decision to Workflow with the transcript limits.

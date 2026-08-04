@@ -1,0 +1,20 @@
+schemaVersion: 1
+strategy: adapted
+sources:
+  - id: matt-pocock-skills
+upstream:
+  sourceId: matt-pocock-skills
+  revision: 2ab958093e83e0ec752e6c1c5932da465bf23e0c
+  license: MIT
+  inspectedAt: 2026-08-04
+retainedBehavior:
+  - "Question-first branch selection and one-job, throwaway prototype boundary."
+  - "Small runnable technical logic and UI patterns: in-memory state, visible state, one command or route, and disposable variants."
+  - "No persistence by default, stubbed effects, and capture of the verdict and validated decision."
+  - "MIT attribution and license from the pinned upstream source."
+changedAssumptions:
+  - The prototype answers one material design question in technical, personal, organizational, physical, communicative, or agent systems rather than only throwaway code questions.
+  - Reversible setup, observation seam, evidence, stopping rule, and disposition are mandatory for every run, including a blocked or inconclusive run.
+  - Production execution, public communication, policy activation, unsafe physical action, irreversible deletion, and live record mutation are outside this skill; safe simulations and rehearsals may answer the question.
+  - The verdict returns to the 'Workflow' skill or caller; Specification, decomposition, implementation, Review, effect verification, and parent completion remain with their owners.
+  - Observation windows follow expected evidence delay and preserve result revisions and evidence limits instead of using a fixed duration.

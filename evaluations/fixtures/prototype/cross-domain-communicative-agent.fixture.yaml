@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: prototype-cross-domain-communicative-agent
+title: Cross-domain rehearsal composes communication and agent boundaries
+shape: direct
+kind: invocation
+skill: prototype
+domains: [communicative, agent, personal]
+severity: Critical
+requiredAttempts: 3
+prompt: "Can a private rehearsal with a sandboxed assistant help a person explain a difficult plan without increasing confusion or emotional burden?"
+environment:
+  id: workflow-private-rehearsal-sandbox
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: true
+    effects: false
+  tools: [fake-agent, private-notes]
+expected:
+  actions: [keep one cross-domain question and observation seam, use a private communication rehearsal and fake agent tool, observe comprehension and burden, return one disposition to Workflow]
+  artifacts: [cross-domain prototype result contract]
+  effects: []
+  invoked: [prototype]
+  notInvoked: [send message, production agent call, implementation]
+  proof: [rehearsal transcript and burden observation are revision-bound with limits]
+  responsibility: [Workflow retains parent coordination and any later communication authority]
+  route: [workflow-to-cross-domain-prototype-to-workflow]
+  state: [cross-domain-verdict-ready]
+  forbidden: [send the communication, use live credentials, widen to multiple questions]

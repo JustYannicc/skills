@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: prototype-incomplete-question
+title: Incomplete request waits for one material question
+shape: incomplete
+kind: invocation
+skill: prototype
+domains: [technical, personal, organizational, physical, communicative, agent]
+severity: Major
+requiredAttempts: 1
+prompt: "Prototype this for me."
+environment:
+  id: conversation-without-question
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: false
+    effects: false
+  tools: []
+expected:
+  actions: [identify the missing material question, ask one smallest discriminating question, preserve the waiting state]
+  artifacts: [incomplete prototype result contract]
+  effects: []
+  invoked: [prototype]
+  notInvoked: [setup, implementation]
+  proof: [the missing question and exact resumption condition are visible]
+  responsibility: [Workflow or the caller retains responsibility while the question is unanswered]
+  route: [prototype-waiting-for-question]
+  state: [waiting-for-question]
+  forbidden: [invent a design question, run an unscoped experiment]

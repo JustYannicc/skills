@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: prototype-indirect-personal-organizational
+title: Indirect route sends a routine question to a bounded reversible pilot
+shape: indirect
+kind: routing
+skill: prototype
+domains: [personal, organizational]
+severity: Critical
+requiredAttempts: 3
+prompt: "Our weekly handoff feels slow. Before changing the routine, find out whether a shorter agenda and a named owner improve completion without shifting burden to the next team."
+environment:
+  id: active-workflow-with-consented-pilot
+  capabilities:
+    workflow: true
+    persistence: true
+    sandbox: true
+    effects: false
+  tools: [local-record]
+expected:
+  actions: [route one empirical question to Prototype, name the bounded personal and organizational pilot, observe completion and burden at one handoff seam, return the disposition to Workflow]
+  artifacts: [prototype result contract, pilot reset record]
+  effects: []
+  invoked: [workflow, prototype]
+  notInvoked: [to-spec, implementation]
+  proof: [baseline and pilot evidence bound to the result revision]
+  responsibility: [Workflow retains ownership while the pilot owner has bounded responsibility]
+  route: [workflow-to-prototype-to-workflow]
+  state: [pilot-verdict-ready]
+  forbidden: [activate a new policy, assign an unaccepted obligation]

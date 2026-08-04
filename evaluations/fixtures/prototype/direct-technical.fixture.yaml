@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: prototype-direct-technical-logic
+title: Direct technical prototype names a question and observes a state seam
+shape: direct
+kind: invocation
+skill: prototype
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: "Use Prototype to answer one question: does this state transition remain understandable when a user retries an interrupted action?"
+environment:
+  id: workflow-technical-scratch
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: true
+    effects: false
+  tools: [terminal]
+expected:
+  actions: [name exactly one material question, choose an in-memory state-machine setup, define the transition observation seam and stopping rule, return the verdict to Workflow]
+  artifacts: [prototype result contract]
+  effects: []
+  invoked: [prototype]
+  notInvoked: [to-spec, implementation]
+  proof: [revision-bound before-and-after state evidence at the retry seam]
+  responsibility: [Workflow retains parent coordination and completion]
+  route: [workflow-to-prototype-to-workflow]
+  state: [verdict-ready-for-workflow]
+  forbidden: [write production data, absorb implementation]
