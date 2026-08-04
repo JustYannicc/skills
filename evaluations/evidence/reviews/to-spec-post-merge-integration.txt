@@ -9,9 +9,11 @@ Runtime suite identity: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
 
 The merge retained the complete main overlay tranche, its source pins,
 patches, fixtures, observations, public evidence, validator changes, and
-tests. The PR diff against origin/main contains only the To Spec implementation
-and its documentation/evaluation evidence; no overlay, validator, test, delete,
-or rename paths are introduced by this PR diff.
+tests. The PR diff against origin/main contains only the To Spec implementation,
+documentation/evaluation evidence, and its expected `validation/repository.yaml`
+skill registration. No overlay files, validator implementation
+(`src/validation`), test files, delete paths, or rename paths are introduced by
+this PR diff.
 
 Merge conflict scope was limited to pre-existing foundation and Thinking in
 Systems observation suiteRevision fields plus the generated report. The
