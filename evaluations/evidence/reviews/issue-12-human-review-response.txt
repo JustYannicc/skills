@@ -1,0 +1,23 @@
+Issue #12 human-review response
+Status: HUMAN REVIEW REQUIRED
+Date: 2026-08-04
+Historical scope: revision 176403c7f674471e8cb9554bfc1c9bfd003c9259 only. Later human review restored an installed public `references/sources.md`; this record does not describe the current candidate.
+
+Requested changes and resolutions:
+- Other skills are now quoted and identified as skills, for example the 'Workflow' skill.
+- The installed SKILL.md requires the complete standard on every invocation. Each governing step links to its authoritative section for traceability and rereading, not conditional loading.
+- Thinking in Systems vocabulary now ships inside the always-read runtime standard. CONTEXT.md points to it instead of redefining the same meanings.
+- The installed standard begins with operative guidance. It contains no title page, provenance section, maintainer section, accepted/open decision history, evidence inventory, or inaccessible source list.
+- Provenance, source classification, and historical evidence moved to docs/source/THINKING_IN_SYSTEMS_SOURCES.md outside the installed references.
+- At this revision, the installed references/sources.md file was removed.
+- Fixed personal durations, check-in assumptions, biographical warning examples, narrow physical-environment lists, named preparation slogans, and domain-specific implementation technologies were removed or generalized.
+- References to AI judgment use LLM; System representation and deterministic mechanism have distinct meanings.
+- Opportunity cost is named and handled once with the other intervention economics instead of being scattered under unnamed variants.
+- Human-applicable rules use Actor or System language; agent-specific instructions remain agent-specific where the runtime skill requires them.
+- The 'Workflow' relationship is conditional on that skill being installed and active; otherwise the caller retains coordination.
+- Completion criteria apply to material/applicable seams and affected existing items, so universal application does not manufacture N/A ceremony for a typo correction.
+- Runtime authority duplication in the orientation and historical skill-design record was removed; they now point to current authorities.
+- Negative and trivial cases continue to invoke and apply Thinking in Systems. The rejected true-non-invocation suggestion conflicted with the accepted requirement that systems thinking applies to every request. Their forbidden boundary is no 'Workflow' takeover, no durable ceremony, and no extra operation.
+- Behavioral fixtures now assert only consequences observable at the public seam. A separate read trace records full-standard loading and section coverage.
+
+Verification evidence is revision-bound in evaluations/observations and evaluations/reports/foundation.report.json. Publication, issue closure, and final status remain blocked pending Yannic's explicit review.

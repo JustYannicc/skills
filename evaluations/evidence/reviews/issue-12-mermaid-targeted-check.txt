@@ -1,0 +1,13 @@
+Issue #12 Mermaid targeted check
+Status: HUMAN REVIEW REQUIRED
+Date: 2026-08-04
+
+Restored and adapted four visualizations from the approved source:
+- proportional request and persistence classification;
+- capability and eligible-contract selection;
+- design lifecycle through adversarial review and resolution check;
+- operational lifecycle from Unbuilt through Live, degradation, recovery, and retirement.
+
+An independent read-only reviewer checked syntax, universalization, always-read behavior, the 'Workflow' skill/caller boundary, and design-versus-operational separation. It found two issues: capability was modeled as a contract-match result rather than a prerequisite, and the design chart omitted evidence-needed and decision-blocked paths.
+
+Both were corrected. A separate targeted checker passed the result: capability now gates contract matching, evidence and material-decision blocks are visible, and phase execution remains with the owning skill or caller. No personal name, private tool, fixed duration, or domain-specific implementation detail appears in the diagrams.

@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-trivial
+title: Trivial correction keeps the systems lens lightweight
+shape: direct
+kind: routing
+skill: thinking-in-systems
+domains: [communication]
+severity: Major
+requiredAttempts: 1
+prompt: Correct "We recieved the parcel" and return only the corrected sentence.
+environment:
+  id: conversation-only-trivial
+  capabilities:
+    workflow: true
+    persistence: false
+  tools: []
+expected:
+  actions: [preserve the source and requested scope, correct the typo, inspect the exact result]
+  artifacts: []
+  effects: [corrected sentence returned]
+  invoked: [thinking-in-systems]
+  notInvoked: [durable system record, specialist phase]
+  proof: [exact corrected sentence inspected]
+  responsibility: [the Workflow skill retains answer quality]
+  route: [lightweight-governance]
+  state: [complete]
+  forbidden: [add durable ceremony or extra prose]

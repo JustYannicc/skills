@@ -1,4 +1,1 @@
-fixture=foundation-incomplete
-attempt=1
-context=fresh-incomplete-1
-observed=authority gap blocked the send effect and preserved responsibility
+The message has not been sent: the recipient and approved text are missing. Please provide the recipient and exact message you approve for sending; the workflow remains responsible and will resume once both are supplied.

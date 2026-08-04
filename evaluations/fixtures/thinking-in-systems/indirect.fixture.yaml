@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-indirect
+title: Workflow skill requests governing judgment without transferring ownership
+shape: indirect
+kind: invocation
+skill: thinking-in-systems
+domains: [communication]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow needs governing judgment on a recurring customer-update draft process whose messages require exact approval before sending.
+environment:
+  id: active-workflow
+  capabilities:
+    workflow: true
+    approval: true
+  tools: []
+expected:
+  actions: [bind intent authority assumptions and proof, separate LLM composition from deterministic approval and send effects, return constraints to the Workflow skill]
+  artifacts: [governance assessment]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [send effect, parent completion]
+  proof: [approval remains bound to the exact draft revision]
+  responsibility: [the Workflow skill integrates the governance assessment]
+  route: [workflow-to-governance]
+  state: [ready-for-workflow-decision]
+  forbidden: [take over Workflow skill coordination or send a message]

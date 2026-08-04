@@ -1,0 +1,18 @@
+## Post-activation assurance assessment
+
+No. The successful verification is initial operation evidence, not final assurance that the maintained System is settled. The System owner retains responsibility for its Outcome and sustainment.
+
+Set an Assurance cadence whose checks follow the relevant evidence delays rather than a universal interval:
+
+- Preserve the completed initial effect and verification check as operation evidence.
+- At the first point meaningful Outcome evidence can answer the decision, validate whether the System is improving the intended Outcome under supported conditions; verify the accepted contract again where operating evidence warrants it.
+- At the point burden or harm can be assessed without speculative inference, obtain proportionate human evidence of effort, confusion, pressure, displacement, privacy cost, or other material side effects.
+- Repeat verification, Outcome validation, burden-and-harm review, and sustainment checks after later relevant evidence has matured, until the accepted evidence shows stable behavior across supported conditions. Sustainment includes operability, ownership, recoverability, trust, and whether support or maintenance burden remains acceptable.
+
+Recheck outside the scheduled cadence when a material incident occurs; an operational or Outcome threshold is crossed; assumptions, governing sources, scope, boundary, actors, dependencies, interfaces, permissions, or operating conditions change; drift appears; recovery is invoked; or evidence exposes a material burden, harm, or sustainment risk.
+
+Continuous monitoring is appropriate only for cheap, actionable operational-health signals. For each such signal, record its decision, threshold, response owner, next action, and taper or retirement condition. It can surface a recheck, degradation, recovery, or pause; it does not substitute for later validation of Outcome, burden or harm, meaning, or sustainment.
+
+The System may transition to steady operation when repeated post-activation evidence, after each claim's relevant delay, shows stable accepted operation and Outcome across supported conditions, acceptable burden and harm, and sustained operability, ownership, recoverability, and trust. Taper higher-burden human review only when another check is unlikely to change the retain, revise, expand, pause, or retire decision enough to justify its collection burden; retain event-triggered checks and any continuous signals that remain proportionate and decision-relevant.
+
+Return this ready-for-decision assessment to the Workflow skill. Workflow retains ongoing phase selection and coordination; the System owner retains sustainment responsibility.

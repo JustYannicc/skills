@@ -1,0 +1,5 @@
+interface:
+  display_name: "Thinking in Systems"
+  short_description: "Apply governing systems principles at judgment seams"
+policy:
+  allow_implicit_invocation: true

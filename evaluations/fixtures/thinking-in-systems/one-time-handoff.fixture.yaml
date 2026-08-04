@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: thinking-in-systems-one-time-handoff
+title: One-time subagent handoff is governed without Workflow takeover
+shape: indirect
+kind: invocation
+skill: thinking-in-systems
+domains: [agent-work]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is about to delegate one bounded, one-time source comparison to a subagent. It will not recur. Apply Thinking in Systems to define the handoff before the same agent coordinates it.
+environment:
+  id: active-workflow-with-subagents
+  capabilities:
+    workflow: true
+    subagents: true
+    persistence: false
+  tools: []
+expected:
+  actions: [treat the one-time handoff as a System interaction despite nonrecurrence, define the System boundary input output Authority proof and failure return, distinguish parent Ownership from bounded child Responsibility, return governing constraints to the Workflow skill]
+  artifacts: [inline handoff contract]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [durable System Record, parent completion]
+  proof: [the parent owner verifies and integrates the exact child result]
+  responsibility: [the Workflow skill remains the same agent's coordinator and retains parent Ownership, the subagent accepts only bounded child Responsibility]
+  route: [workflow-to-governance-to-workflow]
+  state: [ready-for-workflow-delegation]
+  forbidden: [treat nonrecurrence as non-system, transfer parent Ownership, describe the Workflow skill as a separate agent, take over Workflow coordination]

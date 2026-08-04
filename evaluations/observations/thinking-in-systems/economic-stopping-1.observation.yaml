@@ -1,0 +1,40 @@
+schemaVersion: 1
+fixtureId: thinking-in-systems-economic-stopping
+attempt: 1
+contextId: fresh-thinking-in-systems-economic-stopping-1
+suiteRevision: git:8aa0935bc9649d3a59f17496d902af5c95f5104e
+evaluator: gpt-5.6-terra-fresh-context-full-standard
+recordedAt: 2026-08-04T15:34:49.000Z
+environment:
+  id: active-workflow-with-economic-uncertainty
+  capabilities: { workflow: true, persistence: true }
+  tools: []
+observed:
+  actions: [use Pareto concentration to prioritize search without treating 80-20 as a stopping rule, use the Satisficing threshold to establish adequacy, use Marginal analysis to decide whether further work is worthwhile, identify Constraints feasible alternatives Actor Preferences and substitution effects, distinguish fixed variable Marginal and average total cost when scale is material, treat minimum efficient scale as conditional on comparable repeated Outcome units, expose the support burden as a possible Externality, return decision-sensitive value questions to the Workflow skill]
+  artifacts: [economic governance assessment]
+  effects: []
+  forbiddenChecks:
+    - criterion: infer a Pareto improvement from the Pareto principle
+      evidence: The assessment explicitly says the concentration hypothesis is not a Pareto-improvement claim and identifies a potentially worse-off support team.
+      observed: false
+    - criterion: assume a numerical 80-20 ratio
+      evidence: The assessment treats the observed concentration as a hypothesis and never asserts a numerical ratio.
+      observed: false
+    - criterion: monetize every burden without evidence
+      evidence: The assessment keeps support time, user attention, trust, and workaround risk visible and rejects unsupported monetization.
+      observed: false
+    - criterion: assume larger scale is inherently efficient
+      evidence: The assessment makes minimum efficient scale conditional on comparable repeated Outcome units and a credible long-run cost relationship.
+      observed: false
+    - criterion: take over Workflow coordination
+      evidence: The assessment returns decision-sensitive questions and the experiment decision to the Workflow skill and creates no effect.
+      observed: false
+  invoked: [thinking-in-systems]
+  notInvoked: [economy-wide planning, universal utility maximization, Workflow phase execution]
+  proof: [the assessment states whether to stop continue or run a bounded evidence-producing experiment and what evidence can change that disposition]
+  responsibility: [the Workflow skill retains coordination and evidence gathering]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+rawEvidence:
+  locator: evaluations/evidence/thinking-in-systems/economic-stopping-1.txt
+  sha256: 5170c303ca98a20c275bdb7069e96c99bfa75a09538226ee74f6fb25ed601534

@@ -1,0 +1,11 @@
+## Informed exception record
+
+- **Authorized exception:** The experiment owner may skip the usual pilot review.
+- **Protection skipped:** The pilot review's independent scrutiny of the proposed experiment, its effects, and its recovery path.
+- **Plausible consequence:** An unrecognized design, operational, or recovery risk may remain until the experiment is stopped or reviewed.
+- **Scope and duration:** Internal-only experiment; no external users and no production data; valid for one day only.
+- **Recovery trigger:** Stop and roll back immediately if an unexpected effect, security or privacy concern, inability to roll back, or a material deviation from the stated scope occurs. Preserve the experiment state and return it for review before any resumption.
+
+The exception changes only the pilot-review safeguard. The Workflow skill retains authority to decide whether to execute, to bind the exact experiment scope and permitted effects, and to require visible proof of the one-day boundary, internal-only use, rollback readiness, and any recovery action.
+
+State: ready for Workflow decision.

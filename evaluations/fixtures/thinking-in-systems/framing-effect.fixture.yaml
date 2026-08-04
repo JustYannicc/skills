@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-framing-effect
+title: Multiple matched frames expose the stable decision core
+shape: edge
+kind: invocation
+skill: thinking-in-systems
+domains: [organizational, technical]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is comparing two System rollout options for the same 100 in-scope cases over the same period; that cohort is the shared reference point. In the success frame, option A means exactly 90 cases succeed and option B means a 90% chance all 100 succeed plus a 10% chance none succeed. In the exactly equivalent failure frame, option A means exactly 10 cases fail and option B means a 10% chance all 100 fail plus a 90% chance none fail. Reviewers prefer A in the success frame and B in the failure frame. Costs, Constraints, time horizon, Authority, and consequences are unchanged. Apply Thinking in Systems before the same agent coordinates the decision.
+environment:
+  id: active-workflow-with-frame-sensitive-choice
+  capabilities:
+    workflow: true
+    persistence: true
+  tools: []
+expected:
+  actions: [identify a possible Framing effect rather than stable Preference evidence, reconstruct the Decision frame and reference point, compare multiple matched truthful gain and loss absolute and relative frames with constant facts denominators probabilities time horizon alternatives and omissions, identify the judgment that remains stable and the frame-sensitive remainder, distinguish framing from defaults incentives friction or substitution, return unresolved trade-offs to the Workflow skill]
+  artifacts: [framing-robustness governance assessment]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [Workflow phase execution, preference manipulation]
+  proof: [the assessment names the matched frames and states what decision evidence would be frame-robust or frame-sensitive]
+  responsibility: [the Workflow skill retains coordination and the authorized decision]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+  forbidden: [treat one presentation as neutral, call the observed reversal a stable Preference, select the frame that produces a desired answer, change material facts between matched frames, take over Workflow coordination]

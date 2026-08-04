@@ -1,0 +1,74 @@
+## Governance assessment — community workshop equipment checkout
+
+**State:** ready for Workflow decision. This is a proposed governance assessment, not authorization to change the checkout process. Workflow retains parent responsibility for phase selection, coordination, decisions, and terminal proof.
+
+### 1. Frame
+
+**Request preserved:** “Use Thinking in Systems to assess a community workshop equipment-checkout process before Workflow plans any change.”
+
+**System of interest:** the process that makes workshop equipment available, records custody and condition, returns it to service, and handles exceptions.
+
+**Containing system:** the community workshop’s safe, fair, sustainable access to shared equipment. Likely subsystems are eligibility/training, inventory and condition records, checkout/return, maintenance, incident handling, and communications. Potential upstream systems include membership/identity, training authorization, asset procurement, and policy. Dependents include members’ projects, workshop scheduling, maintenance, safety, finances, and insurers where applicable. Peer systems exist only if they share an identified containing system and a material contract (for example, a room-booking system); do not infer peer status from shared software alone.
+
+**Intent and Outcome:** enable authorized people to obtain fit-for-purpose equipment when needed while preserving safety, accountability, availability, and fair access. A checkout is not itself the Outcome; it is a means. A good-enough change proposal must specify the equipment and users in scope, preserve an accountable custody/condition record, make eligibility and restrictions visible before handoff, provide a usable exception path, and show that access, safety, and return-to-service have not materially worsened.
+
+**Boundary and non-outcomes:** include the handoffs from request through return, the records and decisions that govern them, and material effects on operators, maintainers, and other users. Exclude changing membership, training, pricing, procurement, or safety policy unless the accountable owners explicitly add those boundaries. Do not treat a software tool, a sign-out sheet, or an inventory view as the system itself.
+
+**Facts, assumptions, and gaps:** no governing checkout policy, asset classes, current failure data, privacy/retention rules, site conditions, or authority map were provided. These are unresolved, not assumptions to silently fill. Workflow needs the smallest discriminating evidence: (1) the current checkout and return rule and its owner; (2) which assets have safety, certification, age, or condition restrictions; (3) the allowed decision and approval authorities; (4) current observed failure/exception patterns and volumes; and (5) the authoritative inventory and custody record. If none exists or rules conflict, preserve the request and enter the unknown/ambiguity path rather than selecting a design.
+
+### 2. Authority, actors, state, and seams
+
+Name one owner for the integrated Outcome (normally the workshop operator or a delegated equipment steward with explicit authority). Bounded responsibilities may include:
+
+- member/borrower: provides accurate identity and reports condition, damage, loss, or delay;
+- checkout operator or authorized self-service mechanism: verifies applicable eligibility, binds the approved asset identity and custody record, and exposes restrictions;
+- maintainer: determines serviceability and returns an asset to service only under the maintenance/safety contract;
+- policy/safety authority: owns eligibility, restricted-use, incident, and exception rules;
+- inventory-record owner: owns the writable source for asset identity, status, custody, condition, and history;
+- support/recovery owner: resolves stale records, overdue items, disputes, failures, and reconciliation.
+
+Capability, convenience, or possession does not grant authority. A member may request or return equipment; only the named policy or operations authority may authorize a policy exception, disposal, access expansion, or a consequential change. Any automated or LLM-assisted component may interpret a request or prepare a proposal, but deterministic checks and a human/authorized gate must bind eligibility, asset identity, custody write, approvals, and external notices.
+
+Each material handoff needs a readable contract: producer and consumer; identity/eligibility and asset-status preconditions; custody, due/return expectation, and condition output; visible completion evidence; authority boundary; and behavior for failed verification, missing return, damaged equipment, disagreement, or interruption. Preserve original request, checkout, return, inspection, approval, and incident history. Give each information type one writable authority; dashboards, labels, caches, and reports must show their source, revision, and freshness and cannot become competing editable records.
+
+### 3. Incentives, friction, and operating conditions
+
+Before proposing a new tool or rule, inspect why the current path succeeds or fails. A borrower may be rewarded for speed, privacy, or avoiding an awkward interaction; an operator may be rewarded for keeping queues short; a maintainer may inherit unreported damage; other members bear unavailability. Repeated remembering, manual searches, unclear storage locations, inaccessible check-in points, limited staff presence, ambiguous labels, after-hours use, connectivity loss, language/accessibility barriers, and fear of blame are system conditions—not evidence of bad actors.
+
+The intended path should make returning, reporting, and correctly identifying equipment easier than bypassing them. Test substitution effects: added friction or restrictions may shift use to untracked equipment, informal lending, delayed returns, or abandonment. If a metric such as “checkout time” improves while unreported damage, unmet project needs, exclusion, or maintenance backlog worsens, it is not an Outcome improvement. Pair each proxy with a counter-signal.
+
+### 4. Intervention decision and preparation gate
+
+Workflow should compare feasible classes before choosing one: retain the current process while gathering evidence; correct environmental/process friction; configure an existing inventory/checkout capability; adopt a maintained solution; or build a custom system. The default next action is **exploration**, not delivery: map the current end-to-end handoffs and sample the highest-concentration failure modes (for example, the small set of asset classes, moments, or conditions producing most unavailability, disputes, or safety risk). Pareto concentration prioritizes where to inspect; it does not waive rare catastrophic, safety, accessibility, trust, or recovery cases.
+
+For each credible option, make visible the hard constraints (safety, applicable policy/law, budget, access, privacy, available authority), soft constraints, affected preferences, switching and maintenance cost, cost of delay, reversibility, option value, and burdens exported to members, volunteers, maintainers, or the workshop. A local time saving that shifts reconciliation or repair work to others is not a system improvement unless an accountable authority accepts and mitigates it. Compare marginal information value with the cost of further investigation; stop preparation when the required readiness conditions below pass and the next bounded experiment or proposal is more valuable than more research.
+
+Required mise en place before a material proposal: an authority map; current contract/source records; representative asset and user categories; a proof seam visible to members and operators; named fallback and resumption ownership; and a reversible scope. Optional detail should not block a small safe investigation. Any bounded experiment must name its learning question, the decision its evidence changes, its no-effect/simulation boundary, abort rule, and reversal path.
+
+### 5. Operation, degradation, and recovery
+
+The future contract must define normal, degraded, paused, and recovery behavior for each material asset class and handoff.
+
+- **Normal:** verify the applicable contract, bind asset and borrower identity, record custody/condition, and give both parties visible completion evidence.
+- **Degraded:** when a noncritical dependency such as a display or network is unavailable, allow only explicitly pre-authorized, auditable temporary handling that preserves enough state for reconciliation; expose the limitation. Restricted or safety-critical equipment must not silently use a weaker path.
+- **Paused:** block checkout or return-to-service when eligibility, identity, asset safety/status, required approval, or authoritative record cannot be safely established. Preserve the request and exact known state, identify the owner, and show the unblock condition.
+- **Recovery:** reconcile preserved temporary records with the authoritative source; inspect affected equipment where required; resolve duplicates, conflicts, or incidents; verify the healthy baseline; then resume in bounded priority order. Do not make an unbounded backlog the first recovery action.
+
+Define triggers, allowed and blocked effects, preserved state, visibility, owner, retry/resumption rule, and exit proof for every mode. Monitor decay through evidence such as reconciliation discrepancies, unresolved custody age, repeat overrides, maintenance queue age, condition-report corrections, declining availability, support burden, or observed workarounds. When a failure recurs, trace the governing cause—rule, information, authority, interface, incentive, environment, or capability—then replay the failure class before restoring the same autonomy.
+
+### 6. Proof, learning, change, and legacy
+
+Any candidate change is a hypothesis: a specified intervention should improve authorized, safe, fair availability under stated conditions because it removes or controls a named failure mechanism. Establish a baseline and distinguish:
+
+- **verification:** the proposed contract correctly enforces eligibility, identity, custody, condition, and exception behavior;
+- **validation:** members can obtain suitable equipment and return it to service more reliably and fairly;
+- **burden/harm:** added time, exclusion, privacy loss, pressure, volunteer load, confusion, displaced work, or unsafe workarounds;
+- **sustainment:** named people can operate, support, reconcile, and recover the process.
+
+Before live effects, simulate the production-intended path with effectors disabled and render the exact proposed records, messages, waits, approvals, and denied/paused cases. The representative proof matrix must cover normal checkout and return; ambiguous eligibility or asset identity; the weakest realistic operating condition; unavailable/stale inventory or network; restricted/damaged/overdue equipment; delayed attention; degraded operation; recovery and reconciliation; incorrect assumptions; and affected legacy state. Approval, if required, binds the exact proposal revision and material assumptions.
+
+For a material change, create a successor System Record and linked Change and Legacy Record before adoption. Identify existing reservations, open checkouts, overdue items, maintenance holds, historical condition/custody records, and users or assets that may be incompatible. Classify discoverable cohorts as unaffected, compatible, auto-adapt, review-required, conflict, exempt, or unreachable/unknown; preserve history rather than rewriting it; simulate any transformation; use bounded resumable rollout and rollback/repair; and explicitly retire or preserve the predecessor rule and artifacts. Reopen the boundary if a change alters actors, permissions, interfaces, state transitions, exceptions, support/recovery duties, or scale.
+
+### Return to Workflow
+
+Workflow may now choose its own planning phases using this assessment. It must retain parent ownership and terminal completion, obtain or surface the unresolved authority and current-state evidence, select a bounded reversible candidate only within granted authority, and return the stated proof and legacy obligations. This assessment neither chooses those phases nor creates their results.

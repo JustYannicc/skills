@@ -1,24 +1,10 @@
 # Public skill language
 
-The shared vocabulary for this repository.
+The shared vocabulary for this repository. The installed [Thinking in Systems standard](skills/thinking-in-systems/references/standard.md#use-these-terms-consistently) is the single authority for its runtime terms; this file defines the repository and `'Workflow'` terms that surround it.
 
 ## Language
 
-**Thinking in Systems**:
-The universal method for designing arrangements of people, agents, tools, information, rules, state, and environment so they advance an intended outcome under real operating conditions.
-_Avoid_: Systems First, software architecture, planning ceremony
-
-**Strategy**:
-A rule for making decisions as conditions and information change, including when the destination cannot be fully seen.
-_Avoid_: Plan, roadmap, prediction
-
-**Plan**:
-A proposed sequence of actions under current assumptions.
-_Avoid_: Strategy, guarantee
-
-**Fog of war**:
-Material uncertainty that limits what can currently be known. It may shrink, persist, or change; a sound system defines how to operate safely within it.
-_Avoid_: Ignorance, failure, temporary inconvenience
+Terms including Thinking in Systems, System, System of interest, Containing System, Subsystem, Upstream System, Dependent System, Peer System, System interaction, Durable system, Actor, Ownership, Responsibility, Intent, Outcome, Material, Authority, LLM, Deterministic mechanism, System representation, System Record, Change and Legacy Record, Opportunity cost, Constraint, Feasible set, Preference, Decision frame, Framing effect, Satisficing, Pareto principle, Pareto improvement, Marginal analysis, Cost structure, Substitution effect, Externality, Mise en place, Strategy, Plan, Fog of war, Proof seam, Assurance cadence, Informed exception, and Design Complete are defined there and are not redefined here.
 
 **Decision frontier**:
 The currently unblocked set of decisions whose answers materially sharpen the next work.
@@ -40,21 +26,9 @@ _Avoid_: Package, transitive dependency, mega-skill
 A separately installed skill that owns a distinct capability another skill can request by name when available.
 _Avoid_: Dependency, bundled reference
 
-**System prototype**:
-A reversible experiment that answers a material design question in a technical, personal, organizational, physical, or agent system.
-_Avoid_: Production implementation, software-only prototype, mockup
-
 **Handoff contract**:
 The minimum durable state, authority, rationale, uncertainty, evidence, and next frontier needed for a human or agent to continue without inventing a material rule.
 _Avoid_: Conversation summary, duplicated source of truth
-
-**Proof seam**:
-The human-visible boundary where intended behavior and effects can be evaluated independently of internal implementation.
-_Avoid_: Activity metric, implementation detail, vibe
-
-**Informed exception**:
-An authorized choice to bypass a safeguard after the skipped protection, plausible consequence, affected scope, and recovery trigger are visible.
-_Avoid_: Rule breaking, prohibition, silent shortcut
 
 **Line forward**:
 Outcome progress, useful evidence, preserved state, or a genuinely easier next action produced by an accepted action.
@@ -67,10 +41,6 @@ _Avoid_: Search-and-replace, abstraction for its own sake, removing concrete exa
 **Workflow**:
 The universal path that carries work from understanding through specification, decomposition, implementation, review, and verified completion. Its ceremony and durable artifacts scale with the work; its governing method does not disappear for simple cases.
 _Avoid_: Software delivery pipeline, optional process for complex work
-
-**Outcome**:
-The intended externally meaningful condition that the work is responsible for producing or preserving.
-_Avoid_: Deliverable, activity, artifact
 
 **Outcome record**:
 The canonical contract and current state for one Outcome, including its owner and related Tickets. A host may store it as an issue, document, database record, or conversational state.

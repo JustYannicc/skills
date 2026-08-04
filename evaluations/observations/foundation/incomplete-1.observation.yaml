@@ -2,9 +2,9 @@ schemaVersion: 1
 fixtureId: foundation-incomplete
 attempt: 1
 contextId: fresh-incomplete-1
-suiteRevision: git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7
+suiteRevision: git:8aa0935bc9649d3a59f17496d902af5c95f5104e
 evaluator: deterministic-foundation
-recordedAt: 2026-08-02T17:00:05.000Z
+recordedAt: 2026-08-04T14:30:00.000Z
 environment:
   id: messaging-without-approval
   capabilities: { send: true, approval: false }
@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-input]
 rawEvidence:
   locator: evaluations/evidence/foundation/incomplete-1.txt
-  sha256: acfdbe7a4d663f13c965df7129b0a78a369c86d65bf9e7a8d7f2cd5addeac9bf
+  sha256: f03b477690daf303f8789733a62dc4badfe7e2a56b7832a3f19e5c54af2bbd1b

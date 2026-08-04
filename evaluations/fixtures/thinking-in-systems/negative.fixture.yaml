@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-negative
+title: Nearby request applies the lens without coordination takeover
+shape: negative
+kind: invocation
+skill: thinking-in-systems
+domains: [education]
+severity: Major
+requiredAttempts: 1
+prompt: Explain what a feedback loop is in one paragraph.
+environment:
+  id: conversation-only
+  capabilities:
+    workflow: true
+    persistence: false
+  tools: []
+expected:
+  actions: [apply systems thinking proportionately, explain the concept in one paragraph]
+  artifacts: []
+  effects: [answer returned]
+  invoked: [thinking-in-systems]
+  notInvoked: [workflow coordination, durable system design, migration]
+  proof: [answer checked against the requested explanation]
+  responsibility: [no parent coordination created]
+  route: [lightweight-governance]
+  state: [complete]
+  forbidden: [take over the Workflow skill or add durable ceremony or an extra operation]

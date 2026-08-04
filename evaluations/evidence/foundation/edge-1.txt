@@ -1,4 +1,10 @@
-fixture=foundation-edge
-attempt=1
-context=fresh-edge-1
-observed=unsupported monitoring became an acceptance-gated handoff
+I can’t actively monitor this: no monitoring or scheduling capability is available.
+
+**Continuation record — awaiting handoff acceptance**
+
+- Outcome: detect the named external approval and notify/continue when it arrives.
+- Current state: approval details and arrival have not been checked.
+- Capability gap: no persistent monitor or scheduled recheck is available.
+- Safe next action: hand this record to a successor with monitoring capability.
+- Resumption condition: successor explicitly accepts responsibility, confirms the approval source/identifier and success signal, then begins monitoring.
+- Ownership: I remain responsible for this request until that successor accepts the handoff.

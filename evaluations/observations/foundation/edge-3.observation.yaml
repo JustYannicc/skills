@@ -2,9 +2,9 @@ schemaVersion: 1
 fixtureId: foundation-edge
 attempt: 3
 contextId: fresh-edge-3
-suiteRevision: git:ffbef794b572b87a20abb9b6ff55a62a3770b9e7
+suiteRevision: git:8aa0935bc9649d3a59f17496d902af5c95f5104e
 evaluator: deterministic-foundation
-recordedAt: 2026-08-02T17:00:09.000Z
+recordedAt: 2026-08-04T14:30:00.000Z
 environment:
   id: no-continuation-capability
   capabilities: { monitoring: false, scheduling: false, handoff: true }
@@ -25,4 +25,4 @@ observed:
   state: [awaiting-handoff-acceptance]
 rawEvidence:
   locator: evaluations/evidence/foundation/edge-3.txt
-  sha256: 1e41173d4e9da197802bb065ee38448fc0c7abe075f39591c29c98773df645c6
+  sha256: 1089b0309225620c478c13a47faa50ffda3bb470ae72a7c88f0fa586c0278e87

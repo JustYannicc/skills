@@ -1,0 +1,46 @@
+## Governance assessment — proposed intake-classification change
+
+**Branch and state:** This is a material change to a Durable system, not an intake-rule operation. It changes a decision rule and state transition for all future cases and reinterprets existing cases. The system is ready for a Workflow decision; no rule has changed and no case has been reclassified.
+
+**Preserved request:** “Replace the intake classification rule next week for every new and existing case, including cases created under the old rule.”
+
+**Proposed Outcome:** An authorized successor rule classifies new cases and each eligible existing case correctly under a defined version, while preserving the original classification and history, making coverage and exceptions visible, and retaining a verified repair or rollback path. Good enough for activation is an approved successor contract and Change and Legacy Record, successful zero-effect simulation of the credible support matrix, bounded resumable rollout, and named evidence that the new rule improves the intended intake outcome without unacceptable burden or harm.
+
+### Boundary, actors, and authority
+
+Reopen the system boundary. Identify the containing intake process; the classification subsystem; upstream sources that create or enrich cases; dependent systems, queues, reports, automations, and teams that consume classifications; and material peer systems sharing rules, data, or constraints. For every relationship, record the interface, assumptions, owner, failure propagation, proof seam, and change-notification obligation.
+
+Name the accountable system owner, rule steward, data owner, approver for the successor and activation, migration/review operator, support and recovery owner, and owners of each affected dependency. Workflow retains parent ownership and phase coordination. This assessment authorizes only framing, discovery, drafting, and zero-effect simulation; it does not authorize approval, activation, or live reclassification. Missing authority for any external effect is a decision gap.
+
+Material unknowns to resolve before approval include the purpose and acceptance criteria of the replacement rule; the authoritative source and version of both rules; eligible populations and retention/legal limits; case identity and history model; all consumers of the classification; exception policy; available rollback or repair capability; and the owner and authority for each consequential trade-off.
+
+### Decision and operating conditions
+
+Compare at least: retain the old rule pending evidence; wait for the missing facts with a recheck trigger; change the surrounding intake process; configure an existing rules mechanism; and adopt the successor rule with a bounded migration. Assess opportunity cost, transition and ongoing support cost, delay, reversibility, and externalities for each affected actor and system. Do not claim a Pareto improvement until impacts on affected actors are known.
+
+Inspect actual incentives and friction: metrics or queues that reward misclassification, defaults that bypass review, incentives to minimize backlog rather than improve intake outcomes, the burden of exception handling, training/access gaps, timing around next week's deadline, and substitution toward untracked workarounds. For every material metric, state its represented outcome, gaming route, and counter-signal. Treat the new rule as a hypothesis with baseline, mechanism, observation window, outcome signal, operation signal, burden/harm signal, confounders, and retain/revise/pause/retire decision rule.
+
+### Proposed legacy disposition
+
+Create a successor System Record and linked Change and Legacy Record. Discover the affected population without altering it. Preserve original captures, old classifications, decisions, and provenance. Classify every discoverable cohort as `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`; report counts and keep unknown coverage visible. For each cohort, define the exact transformation or re-evaluation, authoritative writable state, expected dependent-system impact, proof, and whether it may be automatically applied only after approval. Do not rewrite history to imply the new rule always governed.
+
+Before any live effect, run a zero-effect simulation through the production-intended retrieval, interpretation, decision, and composition path. Render the exact proposed classifications, writes, messages, waits, dependent effects, exceptions, and rollback/repair actions while disabling production effectors and durable/user-visible writes. Cover normal cases, ambiguous cases, stale or missing source data, missing dependency or approval, incorrect assumptions, each legacy cohort including unknown coverage, degraded behavior, recovery, and predecessor retirement. Correct and replay every rejected material case. Bind approval to the exact successor revision and material assumptions.
+
+Define bounded, resumable rollout and cutover; a stop condition; reconciliation; verification at public seams; and rollback or repair that restores the accepted baseline without erasing historical facts. Preserve predecessor access and the ability to identify its governed cases until retirement criteria and required history retention are met.
+
+### Required operating contract
+
+| Mode | Trigger | Allowed work | Blocked work | Exit proof |
+| --- | --- | --- | --- | --- |
+| Normal | Approved version, dependencies healthy, and simulation evidence accepted | Apply the approved version within the bounded rollout; record versioned decisions and evidence | Unapproved scope expansion or irreversible cleanup | Reconciliation, coverage, outcome, burden, and dependent-system checks pass |
+| Degraded | Dependency, source quality, capacity, or evidence falls below the approved condition | Preserve incoming cases and perform only pre-authorized safe classification or review | Automatic migration/reclassification that could create unverified effects | Limitation is visible; required dependencies and proof seams are restored |
+| Paused | No safe useful action, authority missing, a material ambiguity exists, or rollback/recovery capability is unavailable | Preserve versioned state, queue work, expose the unblock condition | New rule effects and destructive predecessor retirement | Named authority, capability, or evidence gap is resolved and affected simulations are replayed |
+| Recovery | Incident, failed verification, rollback, or recurring error | Bounded triage, restore the accepted baseline, reconcile affected cases, and preserve incident evidence | Resuming autonomous effects before correction and replay | Baseline and affected cases are verified; governing cause is corrected; approval is renewed if stale |
+
+The contract also needs stale-assumption, retry, queue-growth, deadline, interruption, and escalation rules; deterministic controls for stable IDs, version binding, approvals, transitions, reconciliation, and effect gates; and a human-visible control surface for exceptions and recovery.
+
+### Proof, records, and next handoff
+
+Persist the successor System Record, Change and Legacy Record, simulation fixtures/results, approval revision, cohort coverage including unknowns, rollback/repair evidence, and operational health/decay signals because authority, state, recovery, and evidence must survive this interaction. A Design Complete successor must let another competent implementer simulate it without inventing a material rule; it then requires one independent adversarial review and a separate resolution check before activation.
+
+Workflow should coordinate the unresolved authority and rule-definition decisions, the relationship and legacy discovery, the proposed records, simulation, review, and activation gate. The governing constraints above are the handoff; the requested outcome remains unperformed.

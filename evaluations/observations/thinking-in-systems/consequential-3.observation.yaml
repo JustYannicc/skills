@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: thinking-in-systems-consequential
+attempt: 3
+contextId: fresh-thinking-in-systems-consequential-3
+suiteRevision: git:8aa0935bc9649d3a59f17496d902af5c95f5104e
+evaluator: gpt-5.6-terra-fresh-context-full-standard
+recordedAt: 2026-08-04T14:30:00.000Z
+environment:
+  id: durable-change
+  capabilities: { workflow: true, persistence: true, simulation: true }
+  tools: []
+observed:
+  actions: [reopen the system boundary, identify authority incentives friction operating conditions and evidence, govern Normal Degraded Paused and Recovery behavior, discover classify and simulate legacy impact, return governing constraints to the Workflow skill]
+  artifacts: [governance assessment, proposed legacy disposition]
+  effects: []
+  forbiddenChecks:
+    - criterion: apply the rule or claim the Outcome complete
+      evidence: The response requires acceptance before Workflow coordination and performs no live change or phase work.
+      observed: false
+  invoked: [thinking-in-systems]
+  notInvoked: [live rule change, Workflow skill phase execution]
+  proof: [zero-effect simulation and rollback obligations stated, unknown legacy coverage remains visible]
+  responsibility: [the Workflow skill retains parent responsibility and coordinates the change]
+  route: [consequential-governance-to-workflow]
+  state: [ready-for-workflow-decision]
+rawEvidence:
+  locator: evaluations/evidence/thinking-in-systems/consequential-3.txt
+  sha256: 852c1fe34a742dc21766390849884fc5a2c0157fb6f52c256ce9bd40b60ae2af

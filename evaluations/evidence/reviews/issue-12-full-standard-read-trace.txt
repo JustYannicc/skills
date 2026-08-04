@@ -1,0 +1,34 @@
+Issue #12 full-standard targeted trace
+Status: HUMAN REVIEW REQUIRED
+Evaluator: independent fresh-context gpt-5.6-terra read-only subagent
+Date: 2026-08-04
+Historical scope: revision 176403c7f674471e8cb9554bfc1c9bfd003c9259 only. This trace predates later vocabulary, relationship, economics, and fixture revisions and is not proof for the current candidate.
+
+Read completely:
+- skills/thinking-in-systems/SKILL.md
+- skills/thinking-in-systems/references/standard.md (opening rule, vocabulary, sections 1-9, and final section-accounting rule)
+- all seven Thinking in Systems fixtures and all eleven bound raw-evidence files present at that revision
+
+Section-to-observable-behavior mapping:
+- Vocabulary: direct evidence uses Outcome and Authority; indirect evidence separates LLM composition from deterministic effects; consequential evidence uses System and Change and Legacy Records plus Opportunity cost.
+- Section 1: negative and trivial results apply the lens proportionately while returning only the requested result; direct and consequential results classify persistence and material change.
+- Section 2: direct evidence preserves Intent, boundary, assumptions, Authority, and proof; incomplete evidence exposes the smallest material gaps.
+- Section 3: direct and consequential evidence compare materially different interventions and Opportunity cost.
+- Section 4: direct evidence covers Actors, Authority, state, representations, incentives, interfaces, and the LLM/deterministic boundary; indirect evidence binds approval to an exact draft.
+- Section 5: direct, indirect, and consequential evidence governs Normal, Degraded, Paused, and Recovery behavior and capability gaps.
+- Section 6: direct evidence defines Outcome, operation, and burden proof; indirect and consequential evidence simulate without effects and require rollback or recovery evidence.
+- Section 7: consequential evidence discovers and classifies existing items, preserves history, and governs migration, rollback, and retirement.
+- Section 8: indirect evidence requires a System Record; consequential evidence requires a successor System Record plus a Change and Legacy Record.
+- Section 9: edge evidence records the skipped safeguard, consequence, scope, and recovery trigger while respecting the authorized choice without coercion.
+
+Negative and trivial resolution:
+- Thinking in Systems remains invoked and applied in both cases.
+- The negative result contains only the requested one-paragraph explanation.
+- The trivial result contains only the corrected sentence.
+- Neither takes over the 'Workflow' skill, creates durable ceremony, or performs an extra operation.
+- A proposed true non-invocation interpretation was rejected because it conflicts with the accepted universal applicability requirement. Triviality changes scale, not applicability.
+
+Evidence limitation:
+An external observer cannot prove invisible LLM cognition from a clean user-visible result. The installed SKILL.md therefore requires the complete read unconditionally, the standard repeats the requirement at entry and final accounting, this trace verifies that the full material was available and read during targeted evaluation, and the behavioral fixtures prove the observable consequences without polluting trivial or negative responses with ceremony.
+
+Result: no behavioral-content gap found in the requested coverage. Yannic's approval is still required.

@@ -1,0 +1,24 @@
+Issue #12 vocabulary and source-fidelity adversarial review
+Status: HUMAN REVIEW REQUIRED
+Fixed point: 568e880bbdca0e4b2f38fbce74431e6860fcdfcb
+Candidate: working-tree:56e4b61af1374621f4891d9f4169ca06bf2ac87050011151e7dc607ea10cb029
+Date: 2026-08-04
+Private source fingerprint: sha256 8e3109ae94077248c6096be1c40909eb4001bf4ca4342b0f7a34a4eb26657840
+
+Pass structure:
+- Standards and source-fidelity axes ran independently in parallel as one adversarial pass.
+- Both reviewers read writing-great-skills, repository requirements, the complete installable skill and standard, the working-tree diff and untracked files, and the required evidence seams.
+- The source-fidelity reviewer also read all of the private original and compared meaning rather than wording.
+
+Finding:
+- Minor: references/standard.md duplicated the identical incentives concept-source pointer. The duplicate added recurring context without behavior. It was removed; the post-diagram pointer remains.
+- No Critical or Major finding.
+
+Original-source inventory:
+- Retained: universal entry and proportional persistence; intent, Outcome, Authority, ambiguity, and assumption contracts; intervention economics and preparation; System structure and dependencies; incentives and friction; operation under weak conditions; degradation, recovery, proof, learning, change, legacy, and retirement.
+- Changed and universalized: a System may be one-time, recurring, or continuous; life- and software-specific translations became domain-neutral System rules; personal-environment examples became evidence-based operating conditions; phase coordination belongs to the same agent's quoted 'Workflow' skill or caller while Thinking in Systems supplies governing constraints.
+- Restored as named vocabulary: System of interest, Containing System, Subsystem, Upstream System, Dependent System, Ownership, Responsibility, satisficing / good enough, Opportunity cost, Pareto principle / 80-20, Pareto improvement, and mise en place.
+- Intentionally removed from runtime: personal names and assistants; private paths and tool configuration; maintainer instructions; accepted/open design-history sections; inaccessible evidence; fixed month, three-week, and four-hour assumptions; personal email, task-manager, knowledge-tool, terminal-updater, and life-routine examples; and technology-specific prescriptions. Their transferable behavior remains in universal contracts, and public concept evidence is mapped in references/sources.md.
+- Repository-only and retained: public-safe provenance, source classification, decisions, and review evidence required to audit publication. They do not enter the installed governing standard.
+
+Result: source fidelity passed after the one Minor correction. No scope creep or transferable behavioral loss was found. Yannic's explicit review remains required.

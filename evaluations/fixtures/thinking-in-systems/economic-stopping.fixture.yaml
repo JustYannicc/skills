@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-economic-stopping
+title: Pareto concentration and Marginal analysis govern further System investment
+shape: edge
+kind: invocation
+skill: thinking-in-systems
+domains: [organizational, technical]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is deciding whether to add two more features to a maintained booking System. The current candidate clears its good-enough threshold. Evidence suggests three causes create most failures and the first fix captures most of the likely Outcome improvement. The next feature has high setup cost, uncertain low incremental value, may shift support burden to another team, and changes friction in a way that could push users toward a manual workaround. Future volume is uncertain. Apply Thinking in Systems before the same agent coordinates the decision.
+environment:
+  id: active-workflow-with-economic-uncertainty
+  capabilities:
+    workflow: true
+    persistence: true
+  tools: []
+expected:
+  actions: [use Pareto concentration to prioritize search without treating 80-20 as a stopping rule, use the Satisficing threshold to establish adequacy, use Marginal analysis to decide whether further work is worthwhile, identify Constraints feasible alternatives Actor Preferences and substitution effects, distinguish fixed variable Marginal and average total cost when scale is material, treat minimum efficient scale as conditional on comparable repeated Outcome units, expose the support burden as a possible Externality, return decision-sensitive value questions to the Workflow skill]
+  artifacts: [economic governance assessment]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [economy-wide planning, universal utility maximization, Workflow phase execution]
+  proof: [the assessment states whether to stop continue or run a bounded evidence-producing experiment and what evidence can change that disposition]
+  responsibility: [the Workflow skill retains coordination and evidence gathering]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+  forbidden: [infer a Pareto improvement from the Pareto principle, assume a numerical 80-20 ratio, monetize every burden without evidence, assume larger scale is inherently efficient, take over Workflow coordination]
