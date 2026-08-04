@@ -127,7 +127,7 @@ Every accepted action moves the line forward by delivering part of the Outcome, 
 
 ## 3. Choose an intervention
 
-Use **Satisficing** to choose a reversible intervention that clears the explicit good-enough threshold within the Constraints. Use the **Pareto principle** to test where value or failure is concentrated, then use **Marginal analysis** to decide whether the next increment of search, preparation, scope, or capacity is worth its incremental total cost. A bounded search stops only after the feasible alternatives, known trade-offs, and condition for further search are visible.
+Use **Satisficing** to choose an intervention that clears the explicit good-enough threshold within the Constraints. Prefer a reversible alternative when it can satisfy the Outcome without an unacceptable trade-off. Use the **Pareto principle** to test where value or failure is concentrated, then use **Marginal analysis** to decide whether the next increment of search, preparation, scope, or capacity is worth its incremental total cost. A bounded search stops only after the feasible alternatives, known trade-offs, and condition for further search are visible.
 
 Concept sources: [Satisficing, Pareto, Marginal analysis, Opportunity cost, and preparation](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation) and [Constraints, Preferences, substitution, cost structure, and Externalities](sources.md#constraints-preferences-substitution-cost-structure-and-externalities).
 
@@ -154,6 +154,8 @@ Evaluate the alternatives together, once:
 - reversibility and option value;
 - prospective benefit and remaining cost, excluding sunk investment; and
 - the evidence that the selected option clears the threshold without an unaccounted Externality.
+
+When the accepted Outcome requires an irreversible or costly-to-reverse effect, do not reject it merely because rollback is impossible. Require explicit Authority for the exact effect, tested material assumptions, stronger pre-effect proof, acknowledged consequences and Externalities, the least-irreversible feasible scope, and defined containment, mitigation, repair, or recovery for surrounding state. Never claim a rollback path that does not exist.
 
 Show a credible downside of delay beside the expected benefit and uncertainty. Do not manufacture fear, shame, artificial loss or scarcity, streak penalties, or irreversible commitment merely to push a decision.
 

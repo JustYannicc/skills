@@ -79,6 +79,7 @@ Add one row for each known material relationship and delete unused placeholder r
 - **Minimum efficient scale, only when comparable repeated Outcome units and a credible long-run cost relationship exist:**
 - **Displaced resources, transition cost, ownership cost, maintenance cost, and cost of delay:**
 - **Reversibility, option value, and sunk investment excluded from prospective value:**
+- **Irreversible or costly-to-reverse effect, when necessary:** exact Authority, tested assumptions, stronger pre-effect proof, acknowledged consequences and Externalities, least-irreversible feasible scope, and containment, mitigation, repair, or recovery for surrounding state; never invent rollback.
 - **Decision-sensitive unknown values, plausible ranges, provenance, and smallest discriminating questions for the `'Workflow'` skill or caller:**
 - **Reference class and material differences:**
 
