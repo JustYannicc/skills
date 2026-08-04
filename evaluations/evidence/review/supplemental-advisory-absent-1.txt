@@ -1,0 +1,9 @@
+fresh-context: review-supplemental-advisory-absent-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: volunteer announcement
+specification: spec-announcement-2
+result: result-announcement-5
+standards: communication-standard-1
+extension: supplemental-review
+supplemental: advisory-unavailable
+observation: the advisory capability gap was recorded; core comparison passed and Review returned Verified; no specialist run was implied.

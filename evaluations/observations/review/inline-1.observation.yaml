@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: review-inline
+attempt: 1
+contextId: fresh-review-inline-1
+suiteRevision: git:a63ba2fecd5f2a8b1c935cf6d05597bdaef277f6
+evaluator: gpt-5.6-luna-fresh-context-review
+recordedAt: 2026-08-04T18:47:00.000Z
+environment:
+  id: inline-review
+  capabilities: { workflow: true, persistence: false, supplementalReview: false }
+  tools: []
+observed:
+  actions: [keep contract inline, perform independent review pass, return Verified at its own seam]
+  artifacts: [inline Review evidence]
+  effects: [exact corrected result returned]
+  forbiddenChecks:
+    - criterion: create durable workflow for trivial result
+      evidence: The result and proof remained in the response without durable artifacts.
+      observed: false
+  invoked: [review]
+  notInvoked: [durable Review artifact, Supplemental reviewer]
+  proof: [exact corrected result is shown and inspected]
+  responsibility: [caller retains parent responsibility]
+  route: [inline-review]
+  state: [in_review-to-complete]
+rawEvidence:
+  locator: evaluations/evidence/review/inline-1.txt
+  sha256: f1c9dbcab0f424c798febead7388534d62ca321af2b9d6b466d7d6396ad25b3a

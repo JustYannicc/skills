@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: review-negative-no-spec
+attempt: 1
+contextId: fresh-review-negative-no-spec-1
+suiteRevision: git:a63ba2fecd5f2a8b1c935cf6d05597bdaef277f6
+evaluator: gpt-5.6-luna-fresh-context-review
+recordedAt: 2026-08-04T18:45:00.000Z
+environment:
+  id: discovery-before-review
+  capabilities: { workflow: true, persistence: false, supplementalReview: false }
+  tools: []
+observed:
+  actions: [route missing Specification to Workflow discovery, preserve request and responsibility]
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: issue review verdict without exact Specification and result
+      evidence: No Review verdict was issued; the request returned to Specification discovery.
+      observed: false
+  invoked: [workflow]
+  notInvoked: [review]
+  proof: [no verdict until exact Specification and result exist]
+  responsibility: [Outcome owner and Workflow retain responsibility]
+  route: [missing-spec-to-workflow]
+  state: [needs-specification]
+rawEvidence:
+  locator: evaluations/evidence/review/negative-no-spec-1.txt
+  sha256: ac51355d8fe4e4bac546bf704200f0af896b0cf17534c35100a4391473386487

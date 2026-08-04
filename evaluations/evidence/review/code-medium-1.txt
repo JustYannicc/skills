@@ -1,0 +1,8 @@
+fresh-context: review-code-medium-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: data-export code patch
+specification: spec-export-4
+result: result-code-r42
+standards: repository-standards-2
+proof-seam: exported data and permission behavior
+observation: code was treated as one execution medium; a standards/specification mismatch produced Changes required; no code-review companion was invoked; the Work owner retained correction responsibility.

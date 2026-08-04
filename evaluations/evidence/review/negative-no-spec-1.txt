@@ -1,0 +1,5 @@
+fresh-context: review-negative-no-spec-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: rough idea without accepted Specification or result
+route: missing-spec-to-workflow
+observation: Review was not invoked; Workflow retained responsibility and routed the request to discovery/specification without issuing a verdict.

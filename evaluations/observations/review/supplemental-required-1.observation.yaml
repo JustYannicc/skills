@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: review-supplemental-required
+attempt: 1
+contextId: fresh-review-supplemental-required-1
+suiteRevision: git:a63ba2fecd5f2a8b1c935cf6d05597bdaef277f6
+evaluator: gpt-5.6-luna-fresh-context-review
+recordedAt: 2026-08-04T18:39:00.000Z
+environment:
+  id: workflow-with-required-supplemental
+  capabilities: { workflow: true, persistence: true, supplementalReview: true }
+  tools: [supplemental-reviewer]
+observed:
+  actions: [run Supplemental at declared supplemental-review Extension point, validate Supplemental finding exact result revision, integrate finding into core verdict, return Changes required transition]
+  artifacts: [integrated Review record, Supplemental evidence reference]
+  effects: []
+  forbiddenChecks:
+    - criterion: complete when required Supplemental evidence is stale
+      evidence: Required evidence matched the exact result revision and the verdict returned Changes required.
+      observed: false
+  invoked: [workflow, review, configured Supplemental reviewer]
+  notInvoked: [Supplemental verdict replacing core]
+  proof: [Supplemental finding is bound to exact result and visible in core evidence]
+  responsibility: [Reviewer owns integrated verdict, Work owner resolves required changes, Outcome owner retains parent responsibility]
+  route: [workflow-to-review-extension]
+  state: [in_review-to-accepted]
+rawEvidence:
+  locator: evaluations/evidence/review/supplemental-required-1.txt
+  sha256: a10c56ad243903b2d47b19ae2ff796cf2ca859e9fe3b2ba3fb5688da6ace2e89

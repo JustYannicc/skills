@@ -1,0 +1,8 @@
+fresh-context: review-changed-revision-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: changed result
+specification: spec-message-3
+result: result-message-r2
+prior-result: result-message-r1
+effect-evidence: receipt-bound-to-r1
+observation: r2 was a new exact target; r1 evidence and approval were invalidated for r2; Review returned Inconclusive, moved to waiting, and recorded an exact next check.

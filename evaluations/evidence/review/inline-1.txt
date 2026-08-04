@@ -1,0 +1,7 @@
+fresh-context: review-inline-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: reversible label correction
+specification: spec-label-1
+result: result-label-2
+proof-seam: corrected sentence shown to caller
+observation: Inline Review performed an independent pass, returned the exact corrected result and Verified for its own seam, and created no durable workflow artifact.

@@ -1,0 +1,8 @@
+fresh-context: review-prepared-communication-1
+reviewer: gpt-5.6-luna-fresh-context-review
+target: customer reply draft
+specification: spec-reply-5
+result: result-reply-r6
+proof-seam: message content and recipient constraints
+effect: pending-send
+observation: the result-level seam passed and Review returned Verified for the prepared revision; the effect remained pending and no delivery claim was made.

@@ -1,0 +1,8 @@
+fresh-context: review-cross-domain-direct-2
+reviewer: gpt-5.6-luna-fresh-context-review
+target: volunteer equipment checkout rota
+specification: spec-rota-7
+result: result-rota-11
+standards: safety-standard-3
+proof-seam: visible rota assignments and checkout constraints
+observation: exact revisions matched; independent depth was proportional to material change; Review returned Verified and preserved parent responsibility.

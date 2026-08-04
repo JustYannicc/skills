@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: review-cross-domain-direct
+attempt: 3
+contextId: fresh-review-cross-domain-direct-3
+suiteRevision: git:a63ba2fecd5f2a8b1c935cf6d05597bdaef277f6
+evaluator: gpt-5.6-luna-fresh-context-review
+recordedAt: 2026-08-04T18:37:00.000Z
+environment:
+  id: durable-work-without-supplemental
+  capabilities: { workflow: true, persistence: true, supplementalReview: false }
+  tools: []
+observed:
+  actions: [accept exact Specification and result revisions, inspect proof seam and governing standards, scale independence to material change, return Verified verdict and in_review to complete transition]
+  artifacts: [revision-bound Review record]
+  effects: []
+  forbiddenChecks:
+    - criterion: complete parent Outcome without parent Review
+      evidence: The bounded result was complete while the parent remained with Workflow.
+      observed: false
+  invoked: [review]
+  notInvoked: [implementation, effect execution]
+  proof: [each requirement bound to exact evidence, effect claim separated from result verification]
+  responsibility: [Work owner retains bounded result responsibility, Outcome owner retains parent responsibility]
+  route: [workflow-to-review]
+  state: [in_review-to-complete]
+rawEvidence:
+  locator: evaluations/evidence/review/cross-domain-direct-3.txt
+  sha256: aee76d0175942223924d2c1e51e39f590588a930ddf6acc25fec413d4a19b386

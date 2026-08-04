@@ -1,0 +1,9 @@
+fresh-context: review-supplemental-required-3
+reviewer: gpt-5.6-luna-fresh-context-review
+target: safety-sensitive result
+specification: spec-safety-8
+result: result-safety-r8
+standards: safety-standard-3
+extension: supplemental-review
+supplemental: required-safety-review-r8
+observation: stale required findings would block completion; this exact finding produced Changes required and preserved Outcome ownership.
