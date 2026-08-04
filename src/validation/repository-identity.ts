@@ -11,6 +11,7 @@ import { listFiles } from "./filesystem.ts";
 const execFileAsync = promisify(execFile);
 const excludedDirectories = new Set([
   ".git",
+  ".pnpm-store",
   ".scratch",
   "evaluations",
   "node_modules",
@@ -30,6 +31,7 @@ const relevantStatusPaths = (status: string): string[] =>
     .filter(
       (filePath) =>
         filePath !== "" &&
+        !filePath.startsWith(".pnpm-store/") &&
         !filePath.startsWith(".scratch/") &&
         !filePath.startsWith("evaluations/") &&
         !filePath.startsWith("node_modules/")
@@ -61,7 +63,15 @@ export const resolveCandidateIdentity = async (
       [
         execFileAsync(
           "git",
-          ["log", "-1", "--format=%H", "--", ".", ":(exclude)evaluations/**"],
+          [
+            "log",
+            "--first-parent",
+            "-1",
+            "--format=%H",
+            "--",
+            ".",
+            ":(exclude)evaluations/**",
+          ],
           { cwd: root }
         ),
         execFileAsync(

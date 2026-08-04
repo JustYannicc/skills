@@ -32,7 +32,12 @@ export interface RepositoryValidation {
   checkedSkills: number;
 }
 
-const excludedDirectories = new Set([".git", ".scratch", "node_modules"]);
+const excludedDirectories = new Set([
+  ".git",
+  ".pnpm-store",
+  ".scratch",
+  "node_modules",
+]);
 const textExtensions = new Set([
   ".json",
   ".jsonc",

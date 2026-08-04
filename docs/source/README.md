@@ -4,7 +4,7 @@ This directory preserves the public-safe material needed to author and audit the
 
 ## Read order
 
-1. [`THINKING_IN_SYSTEMS_STANDARD.md`](THINKING_IN_SYSTEMS_STANDARD.md) — stable pointer to the complete installed review candidate and its approved historical baseline.
+1. [`THINKING_IN_SYSTEMS_STANDARD.md`](THINKING_IN_SYSTEMS_STANDARD.md) — stable pointer to the complete approved installed standard and its approved historical baseline.
 2. [`SYSTEM_DESIGN_TEMPLATE.md`](SYSTEM_DESIGN_TEMPLATE.md) — stable pointer to the reusable universal design template.
 3. [`THINKING_IN_SYSTEMS_SOURCES.md`](THINKING_IN_SYSTEMS_SOURCES.md) — repository-facing provenance and evidence classification, with routing to the installed public concept sources.
 4. [`THINKING_IN_SYSTEMS_SKILL_DESIGN.md`](THINKING_IN_SYSTEMS_SKILL_DESIGN.md) — full repository, distribution, suite, setup, and authoring design.

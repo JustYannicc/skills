@@ -1,6 +1,8 @@
 # Skill packages
 
-`thinking-in-systems` is implemented as a human-review-required candidate. It is not final or publishable until the maintainer explicitly approves it.
+`thinking-in-systems` is approved. Suite publication remains gated by the
+composed-suite and clean-install proof in #31 and the immutable-release review
+in #32.
 
 Each package uses `skills/<skill-name>/SKILL.md` with supporting `references/`, `assets/`, `scripts/`, and `agents/openai.yaml` only where they serve that skill's single job.
 

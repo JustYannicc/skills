@@ -4,10 +4,12 @@
 
 Build a public suite of predictable, universal agent skills. Each skill owns one job; Thinking in Systems supplies the shared systems thesis without absorbing every planning, research, clarification, prototyping, or handoff workflow.
 
-Thinking in Systems is implemented as a human-review-required candidate and is
-not final or publishable until the maintainer explicitly approves issue #12.
-The validation foundation checks it against the same deterministic and
-behavioral proof boundary required for every later skill.
+Thinking in Systems is implemented and approved through issue #12. This
+governing-behavior approval does not publish the suite: composed-suite and
+clean-install proof remains gated by #31, and immutable-release review and
+publication remains gated by #32. The validation foundation checks the skill
+against the same deterministic and behavioral proof boundary required for
+every later skill.
 
 The complete current runtime method and its vocabulary are owned by the Thinking in Systems [governing standard](../skills/thinking-in-systems/references/standard.md) and are read on every invocation. Section pointers in `SKILL.md` provide traceability and fast rereading rather than conditional loading. The installed [source guide](../skills/thinking-in-systems/references/sources.md) links professional concepts to public evidence for optional deeper reading without becoming a second governing authority. [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md) is its stable source-archive pointer, and [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation; neither substitutes for the complete reference. The accepted jobs and source strategy are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md). Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). Private provenance, evidence classification, and maintainer history remain in the [`source` archive](source/README.md), outside the installed agent guidance.
 
