@@ -1,0 +1,4 @@
+Source: “We recieved it”
+Correction: “We received it”
+
+Resuming Outcome O6 at ledger revision L8, from the preserved pickup point of checking the electricity entry. No effect or approval is active, so no budget change has been applied.

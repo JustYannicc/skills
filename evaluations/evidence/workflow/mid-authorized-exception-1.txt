@@ -1,0 +1,5 @@
+This is an authorized override/informed exception within the active O3 context, not a clarification, replacement, or unrelated switch. The communications owner’s policy-granted Authority covers waiving the optional second-reader safeguard for one internal draft.
+
+I will keep the exception inline and bounded: skip the second reader for this draft only, during preparation, with no distribution Authority inferred. The skipped protection is the wording-defect check; the plausible consequence is that an ambiguity could reach the draft unnoticed. Immediate Review remains required. If that Review finds ambiguity, restore the second-reader check before any distribution; otherwise retain the draft and its Review evidence. The current result revision and parent O3 remain intact because this bounded exception changes no accepted Outcome, result, or proof obligation.
+
+No distribution is performed here. The inline evidence records the owner’s Authority, the skipped safeguard, one-draft scope, preparation-only duration, wording-defect consequence, and the Review-triggered restoration path. O3 remains open until its own proof and parent terminal check.

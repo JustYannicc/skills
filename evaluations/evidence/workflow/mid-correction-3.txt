@@ -1,0 +1,3 @@
+Correction recorded: M4 reached only the internal group, not the intended customer group. The earlier “sent to customer group” claim and any Review based on it are invalidated, while the actual internal delivery and its history are preserved. O2 is reopened and remains incomplete; parent Ownership stays with the active Workflow context.
+
+The customer-communication seam is now in recovery. No customer-facing effect is performed here because no effect tool is available. The persisted continuation is to send M4 to the intended customer group under the existing Authority, then verify recipient and delivery at that seam before re-reviewing O2. Until that proof is present, O2 must not be marked complete.

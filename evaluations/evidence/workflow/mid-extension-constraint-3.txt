@@ -1,0 +1,5 @@
+This is a material extension of O1, not a replacement or correction. I will preserve O1/S3 and W1's weekday coverage as the baseline, then create the next rota revision (S4) for weekday-plus-Saturday coverage. Only the rota work in T1 is affected; its weekday evidence remains usable, while Saturday coverage needs its own execution and proof before the extended rota can be accepted. O1 remains owned and non-terminal.
+
+The contact sheet is explicitly unchanged: C4 stays exactly as approved, and Review R2 remains valid, complete, and limited to C4. T2, C4, and R2 are unaffected and will not be reopened, edited, or broadened.
+
+No external rota or contact-sheet effect is performed here because no tool or delegation capability is available. The S4 proposal, affected/unaffected dispositions, and pickup point are preserved; resume with an authorized rota capability to define Saturday staffing, verify the combined coverage, and review S4.

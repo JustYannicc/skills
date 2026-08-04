@@ -1,0 +1,1 @@
+Understood: in this rewrite, “warm” means friendly and concise. That clarifies the existing specification without changing the accepted Outcome, audience, or requested result, so I’m keeping Specification S1 and the current inline result revision. No effect has occurred yet; I’ll continue the two-sentence welcome-note rewrite under S1.

@@ -1,0 +1,9 @@
+Accepted meaning of “ready” for Outcome O-42:
+
+“Ready” means that the required conditions for the next bounded phase are present and checked at the current result revision: the terminology has one operative meaning, its evidence is attached, and no material ambiguity blocks the parent’s integration or Review. It is ready for the parent Workflow’s Review; it does not mean that Outcome O-42 is complete, that the parent has been reviewed, or that any external effect has occurred.
+
+Evidence to the parent context:
+
+- The accepted term is **ready** = required readiness conditions pass for the next bounded action or Review, with material assumptions and unresolved gaps visible.
+- The evidence is this child result and its stated proof seam: the definition is explicit, bounded to terminology, and distinguishes child readiness from parent completion.
+- Parent Ownership, integration, and terminal proof remain with the existing Workflow context; this child returns its bounded result and does not start or complete another Workflow.

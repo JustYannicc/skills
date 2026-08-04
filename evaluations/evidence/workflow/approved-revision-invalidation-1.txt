@@ -1,0 +1,1 @@
+The subject change is a material edit to the approved result. I created successor revision E8 with subject “Schedule changed” and invalidated E7’s Review and approval; E7 remains unsent. I have not sent E8: sending is an external effect and requires fresh Review and approval bound to exact revision E8. Please review and approve E8 before sending.

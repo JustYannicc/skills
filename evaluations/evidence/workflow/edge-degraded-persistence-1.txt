@@ -1,0 +1,15 @@
+I can keep the relocation plan active only in this conversation. Your request crosses a persistence boundary: it asks me to retain ownership after this conversation and resume when the landlord replies next month. No durable Adapter, scheduler, or monitoring tool is available, so I cannot truthfully promise to remember the plan, detect the reply, send a reminder, or resume automatically.
+
+The plan is therefore **Degraded/Paused**. The accepted Outcome is: continue owning the relocation plan and resume it when the landlord replies next month. The preserved trigger is the landlord's reply. No external effect has been taken, and no durable record or scheduled wake-up exists. I cannot accept durable ownership under the current capability set; the continuation stays paused until you accept a handoff or durable coordination is restored.
+
+Safe handoff to save and bring back with the landlord's reply:
+
+```text
+Outcome: Continue the relocation plan and resume when the landlord replies next month.
+Trigger: The landlord's reply.
+State: Paused; no external action, durable record, reminder, or monitoring has been created.
+Resume when: This handoff and the landlord's reply are supplied in a context with the required capability.
+Resume proof: Revalidate the plan against the reply, record the next action, and confirm the resulting revision.
+```
+
+Restore a durable Adapter and scheduler, or return with this handoff and the reply. Until then, the plan is not being monitored or advanced.

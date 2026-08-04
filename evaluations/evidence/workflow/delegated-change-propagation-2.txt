@@ -1,0 +1,7 @@
+C2 is an approved material constraint change to the access-eligibility slice of parent Outcome O7. I preserved O7 and recorded the next Specification revision, S6, rather than replacing S5.
+
+T-A is affected. Alice remains the owner of T-A, but result A2, claim C-A, and evidence EA are retained as history and are invalid for S6; any review or completion based on them is reopened. Alice must rework the access rules against C2 and return the next access result revision, with its claim and evidence, for review and parent integration.
+
+T-B is unaffected because C2 does not change terminology or help. Bao remains the owner of active T-B, and result B4, claim C-B, and evidence EB remain valid and preserved; no reroute or rework is required for Bao.
+
+Parent ownership and integration remain unchanged. O7 stays active and non-terminal until Alice's revised access result is reviewed and the S6 coverage is integrated; T-B's preserved result continues to count toward that coverage.

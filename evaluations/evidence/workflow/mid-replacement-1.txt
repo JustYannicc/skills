@@ -1,0 +1,24 @@
+I’m treating this as an explicit replacement/supersession of the active Outcome, not a clarification or an extension.
+
+Durable transition (replacement revision `O5 → O6`) recorded:
+
+- Original message: “Replace this Outcome with staying home this weekend. Stop the trip preparation and preserve what I need to handle the booking.”
+- Predecessor `O5` (“prepare for a weekend trip”) is no longer active. Its history, source message, partial effects, and child dispositions remain preserved.
+- Successor `O6` is accepted and active: stay home this weekend. Its owner remains the parent Outcome owner. Good enough for this transition is that trip preparation no longer advances and the booking obligation is visible as owned follow-up rather than silently dropped.
+- The requester is treated as authorizing the Outcome replacement within the active context. That does not grant authority to alter a transport-provider booking or to reverse a non-refundable effect.
+
+Child and legacy dispositions:
+
+- `T1` — completed transport booking with a non-refundable effect. The completed effect is an unchanged historical fact and its booking confirmation/terms must remain attached to the record. It is not rolled back, and no cancellation, refund, or change was attempted. Its execution evidence remains valid as evidence of what happened, but it no longer proves the replaced trip Outcome. A successor booking-disposition ticket is owned under `O6`; it will handle cancel/change/retain only after the exact booking details, provider terms/deadline, desired disposition, and an authorized booking-capable path are available.
+- `T2` — active packing. Stop at the current coherent checkpoint and mark it superseded/cancelled by the replacement. Preserve its current state and pickup point for history or an explicitly requested reversal; do not continue packing or claim completion.
+- `T3` — accepted restaurant research. Preserve the accepted result and provenance as predecessor evidence, mark it obsolete for `O6`, and do no further research. Its own accepted result is not erased, but the parent-level review/coverage that depended on the trip is invalidated.
+
+The old parent review and any approval or completion claim that covered trip preparation are invalidated only where affected. The `T1` effect, `T2` checkpoint, and `T3` result remain discoverable; the replacement record links them to the successor and records the transfer of the booking obligation. `O5` is superseded with those dispositions explicit; `O6` remains non-terminal until its own proof seam is reviewed.
+
+Proof and operating boundary:
+
+- Visible proof now is: `O5` is superseded; no packing or restaurant work will continue; `T1`’s non-refundable booking and terms are preserved; and the booking follow-up has an owner, next action, and resumption condition.
+- No provider-side booking effect has occurred in this interaction. With no booking tool or booking details available, safe work is limited to preserving state and composing the follow-up; the booking is paused/degraded rather than guessed at.
+- Resume the booking ticket only when the confirmation/terms and the requester’s cancel/change/retain decision are present and the exact effect is re-authorized immediately before execution. Re-check the non-refundable consequence then; do not promise a rollback that may not exist.
+
+The successor’s next action is the bounded booking-disposition follow-up. Parent ownership remains with the current Workflow owner; this replacement does not by itself claim that staying home, or the booking handling, is complete.

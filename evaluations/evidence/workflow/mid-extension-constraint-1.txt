@@ -1,0 +1,9 @@
+I classify the new message—“Extend the rota to Saturdays, but leave the contact sheet exactly as approved.”—as a material mid-work extension with an explicit preservation constraint. It is not a correction, replacement, or unrelated switch.
+
+Outcome O1 remains the single active parent outcome. Specification S3 is preserved as the baseline; the Saturday request needs a new proposed specification revision (S4) adding Saturday coverage to the rota scope. I will impact-analyze that revision before implementation and keep the exact source message, revision identity, authority, and proof obligation visible.
+
+Only the affected work is rerouted: Ticket T1 and its weekday result W1 are affected by the expanded rota scope. W1 remains the prior revision/history; Saturday work must be handled under a new result revision after the revised specification is accepted. T1 remains active and non-terminal while that work is specified, performed, reviewed, and integrated.
+
+Ticket T2, its complete contact-sheet result C4, and Review R2 are unaffected. C4 must remain exactly the approved result, and R2 remains valid for C4 only; it is not invalidated or broadened to cover the rota and cannot substitute for parent Review. No change is made to the contact sheet.
+
+The parent Outcome therefore remains active and incomplete. Next action is the bounded impact analysis and Saturday-specific specification/proof seam for T1, followed by implementation and review at the new exact revision. No effect, contact-sheet edit, or premature parent completion is claimed.

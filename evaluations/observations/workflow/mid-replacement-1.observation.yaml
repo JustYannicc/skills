@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-mid-replacement
+attempt: 1
+contextId: fresh-workflow-mid-replacement-1
+suiteRevision: git:ce44e42557c60aff88dbcfce90fce126aec6a364
+evaluator: gpt-5.6-luna-max-independent-evaluator
+recordedAt: 2026-08-04T18:02:55.000Z
+environment:
+  id: workflow-mid-replacement
+  capabilities: { activeWorkflowContext: true, persistence: true, workflow: true }
+  tools: []
+observed:
+  actions: [classify the message as explicit replacement or supersession, record the authorized predecessor disposition, dispose T1 T2 and T3 explicitly, preserve the non-refundable effect and recovery need, establish or join the replacement Outcome]
+  artifacts: [supersession record, child disposition list, booking recovery continuation]
+  effects: []
+  forbiddenChecks:
+    - criterion: erase partial effects or abandon active child work
+      evidence: The response preserves T1's non-refundable booking and evidence, records explicit T2 and T3 dispositions, assigns the booking follow-up an owner and resumption condition, and performs no provider-side effect.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [silent cancellation, recursive parent Workflow]
+  proof: [O5 and every child have an explicit disposition before replacement proceeds]
+  responsibility: [the O5 owner retains recovery responsibility until each disposition is terminal or transferred]
+  route: [midwork-explicit-replacement]
+  state: [predecessor-disposed-replacement-active]
+rawEvidence:
+  locator: evaluations/evidence/workflow/mid-replacement-1.txt
+  sha256: 706dda3ab585ef8b50bd3af0df9b7b39f8fdfc4cec0779288e2af3a085ae5053

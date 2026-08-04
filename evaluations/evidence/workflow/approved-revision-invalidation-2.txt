@@ -1,0 +1,1 @@
+The subject change is a material edit to the approved result. I created successor result E8 with subject "Schedule changed" and invalidated E7's Review and approval; E7's approval cannot authorize sending E8. E8 remains unsent pending Review and approval bound to E8, after which the exact E8 revision can be sent.

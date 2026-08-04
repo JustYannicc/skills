@@ -1,0 +1,6 @@
+The message is an unrelated switch, not a replacement or cancellation. I have paused the active work and preserved its continuation; Outcome O8 remains active and owned by its current owner.
+
+- Continuous inventory work stopped at a coherent checkpoint between items. Items through 13 remain the completed range; the pickup point is item 14. The next action is to resume inventory at item 14, with the remaining inventory proof and the O8 parent-outcome review still required.
+- The separate door-controller update is an atomic unit that is still before its effect boundary. Its exact proposal at revision D3, Review, approval, and preconditions are preserved. No door-controller effect has been performed. Before resuming, recheck that the D3 approval is still valid (including expiry, revocation, conditions, and exact revision); if it is stale or changed, invalidate it and obtain a new Review/approval before crossing the effect boundary.
+
+Please provide the different question. I will answer it first, then resume O8 from item 14 and handle the D3 effect only after its pre-effect recheck passes.

@@ -1,6 +1,6 @@
 {
-  "evaluatedAt": "2026-08-04T16:10:54.000Z",
-  "fixtureSetRevision": "e0b8d14b007f00a4eee9c99d58c7db9e574be4456f6c94d75514675ffe79caac",
+  "evaluatedAt": "2026-08-04T18:04:49.000Z",
+  "fixtureSetRevision": "1138949e3ef29f64ef6bc2f9bca0570d4058affdbc43dc026b29cba9983414a1",
   "fixtures": [
     {
       "attempts": [
@@ -36,7 +36,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -73,7 +73,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -94,7 +94,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -115,7 +115,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -136,7 +136,7 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
     },
     {
@@ -157,7 +157,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -178,7 +178,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -215,7 +215,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -252,7 +252,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -273,7 +273,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -294,7 +294,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -315,7 +315,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -336,7 +336,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -357,7 +357,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -378,7 +378,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -399,7 +399,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -420,7 +420,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -441,12 +441,471 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-approved-revision-invalidation-1",
+        "fresh-workflow-approved-revision-invalidation-2",
+        "fresh-workflow-approved-revision-invalidation-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-approved-revision-invalidation-1",
+          "locator": "evaluations/evidence/workflow/approved-revision-invalidation-1.txt",
+          "sha256": "e27a53a1ab8f957a50db7abf5cdf78c3e0ddaa16a789cbd514d47c930efc2790"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-approved-revision-invalidation-2",
+          "locator": "evaluations/evidence/workflow/approved-revision-invalidation-2.txt",
+          "sha256": "efc3af7b42f8118ba35ff9169e7f050052f3e1799368e53ce44089e33dbe504a"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-approved-revision-invalidation-3",
+          "locator": "evaluations/evidence/workflow/approved-revision-invalidation-3.txt",
+          "sha256": "aa7d80efabf333e1bccbfbc74bc91b91d99a8b8788cd605fee2549ba848616d0"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-approved-revision-invalidation",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "0efda953e8c965e23898fb8e4b19f515a3c5bea7bbddbd3f8e39179dda4a7471"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-delegated-change-propagation-1",
+        "fresh-workflow-delegated-change-propagation-2",
+        "fresh-workflow-delegated-change-propagation-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-delegated-change-propagation-1",
+          "locator": "evaluations/evidence/workflow/delegated-change-propagation-1.txt",
+          "sha256": "bb5397a0fe2027e7d83504fed2460a5d944b56ce440f3616787f24af2830d2b2"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-delegated-change-propagation-2",
+          "locator": "evaluations/evidence/workflow/delegated-change-propagation-2.txt",
+          "sha256": "68c045bedd082b054bf452750db790ad7ff003ea18fa7c8fa5c2870ecfd30433"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-delegated-change-propagation-3",
+          "locator": "evaluations/evidence/workflow/delegated-change-propagation-3.txt",
+          "sha256": "53c0b685df792742a9cb54455c69eb2737e67f324afe29fccc9da1a3f0604c29"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-delegated-change-propagation",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "215b46418ae84c109e37eeef719e55f0f384c28cf9d1bc117e39c6cdcfb5c35a"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-direct-inline-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-direct-inline-1",
+          "locator": "evaluations/evidence/workflow/direct-inline-1.txt",
+          "sha256": "f57d8375b74fdd66817772b8ee55b8ea04b9692e0717c8fa87f2770bc20fe2ce"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-direct-inline",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "07aaadf175ae418170ab514ab8670cbdda10c88a338497df88c8193ec665e45b"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-edge-degraded-persistence-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-edge-degraded-persistence-1",
+          "locator": "evaluations/evidence/workflow/edge-degraded-persistence-1.txt",
+          "sha256": "3afb2c2b1be32a5365dae8a799b572720c0ea029d0432aa395a71bbe78648d06"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-edge-degraded-persistence",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "8c1696db16be4e6951e5d17c2c558e277539559dde31a9df62fe9ef09f73eafd"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-incomplete-context-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-incomplete-context-1",
+          "locator": "evaluations/evidence/workflow/incomplete-context-1.txt",
+          "sha256": "e7b3e1f280f0eaa8826df1fc6998d7e1b2109bede504fa178c6e1d7ae691eb72"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-incomplete-context",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "3e8a12c1187514d2cd9f87681cce3c2272701224801b1ed64f0831970f9f7362"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-indirect-phase-request-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-indirect-phase-request-1",
+          "locator": "evaluations/evidence/workflow/indirect-phase-request-1.txt",
+          "sha256": "d73ec040402aa252ac929c5b0102dd41aa33817e1412d5c660964d33e5a7f16d"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-indirect-phase-request",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "e69537b7d448ebe6b1e1b0ea91fb3409b66a8b4dbdef5ff98d8e554025c5a0e9"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-interruption-resume-1",
+        "fresh-workflow-interruption-resume-2",
+        "fresh-workflow-interruption-resume-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-interruption-resume-1",
+          "locator": "evaluations/evidence/workflow/interruption-resume-1.txt",
+          "sha256": "99730174b5eb2dc714285b50df9d30045432cbec2bb2961e050a671a6ef14545"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-interruption-resume-2",
+          "locator": "evaluations/evidence/workflow/interruption-resume-2.txt",
+          "sha256": "f5586527b78d89535ced687df858cae666cd16537fb80624cd930b610a5bc19e"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-interruption-resume-3",
+          "locator": "evaluations/evidence/workflow/interruption-resume-3.txt",
+          "sha256": "e07f2f63945c2f42d66017b0f67088ac0323baeedfe1d4e81904ebcf2b1749e5"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-interruption-resume",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "8a108b144a0134b0d4b0ea24a5a37d3e18c0ee1fa1c8221f8d955d94ba6f8d70"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-authorized-exception-1",
+        "fresh-workflow-mid-authorized-exception-2",
+        "fresh-workflow-mid-authorized-exception-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-authorized-exception-1",
+          "locator": "evaluations/evidence/workflow/mid-authorized-exception-1.txt",
+          "sha256": "4d618d788e53a752469708887beb1084011ded24206d0437a315c17c11e85184"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-mid-authorized-exception-2",
+          "locator": "evaluations/evidence/workflow/mid-authorized-exception-2.txt",
+          "sha256": "318d0ce11a46821d38070ce6e26c7961b8e7b1ed54e1faf77d16815f539eb0b0"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-mid-authorized-exception-3",
+          "locator": "evaluations/evidence/workflow/mid-authorized-exception-3.txt",
+          "sha256": "16a7e445df2b1c79a1a4354acc63bd9c74b86d180a0cb389256b507d58df9fd0"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-authorized-exception",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "3e76c29d0e189a82e5c294eb462a4400b268c2daf3942ef8d97349b2445c3c00"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-clarification-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-clarification-1",
+          "locator": "evaluations/evidence/workflow/mid-clarification-1.txt",
+          "sha256": "1e67e117a9092aea9ece34ed2396129a7d8824bb3e757fbe2a53ea543acdce45"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-clarification",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "3161b4092cae2608ede738221677f34e87e90e63ca91d090e00bd26de6e46a07"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-correction-1",
+        "fresh-workflow-mid-correction-2",
+        "fresh-workflow-mid-correction-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-correction-1",
+          "locator": "evaluations/evidence/workflow/mid-correction-1.txt",
+          "sha256": "71cf4d68cb48f407b52f7a5b39e9d0054d9dd856487fdfc87bc5c13f64ba607c"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-mid-correction-2",
+          "locator": "evaluations/evidence/workflow/mid-correction-2.txt",
+          "sha256": "c947fb587b4a73bab97bb052749a5594dc3b4ee13735c09e78d3ba23e66ac531"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-mid-correction-3",
+          "locator": "evaluations/evidence/workflow/mid-correction-3.txt",
+          "sha256": "e15d6ed0e406336a489f03b07522f7fbeca71d9b88b05a60ea2b5fdfd823e61b"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-correction",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "d1f07cc277690e5e6500c9d8601403aaa3d1d82e342591996b2a88bad7944342"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-extension-constraint-1",
+        "fresh-workflow-mid-extension-constraint-2",
+        "fresh-workflow-mid-extension-constraint-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-extension-constraint-1",
+          "locator": "evaluations/evidence/workflow/mid-extension-constraint-1.txt",
+          "sha256": "b55c4320a9f1528f54cce6d0283c780ea4b18811bf6ccd2f288e60fd95e7c5ad"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-mid-extension-constraint-2",
+          "locator": "evaluations/evidence/workflow/mid-extension-constraint-2.txt",
+          "sha256": "d4c6e3413a8f4e868cabd9487c0a3f2a573a5a0c0a8d179d6fd45d6db1ce20da"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-mid-extension-constraint-3",
+          "locator": "evaluations/evidence/workflow/mid-extension-constraint-3.txt",
+          "sha256": "fa32ce65b4df1682fdf12f4bd197a90b93ee02db2920d53af8a62cc34b6d4071"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-extension-constraint",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "0d2f1924edf8bd8350f8d727c60bd674e9ce654573f976fee2fd9d8515daf200"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-replacement-1",
+        "fresh-workflow-mid-replacement-2",
+        "fresh-workflow-mid-replacement-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-replacement-1",
+          "locator": "evaluations/evidence/workflow/mid-replacement-1.txt",
+          "sha256": "706dda3ab585ef8b50bd3af0df9b7b39f8fdfc4cec0779288e2af3a085ae5053"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-mid-replacement-2",
+          "locator": "evaluations/evidence/workflow/mid-replacement-2.txt",
+          "sha256": "6e2a56646a6bdf0675b13c5ca54db2a70d3584062a9442c3fd3c33c89be713b4"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-mid-replacement-3",
+          "locator": "evaluations/evidence/workflow/mid-replacement-3.txt",
+          "sha256": "bede4aa9c954033ca231de5644cdfd4e2234c8cbbf75eca3eb913962939e1693"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-replacement",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "55bdcab509cbdc08c9eff5bbf3b98b4e3fbba0bc3572d4171349cf77040b7db3"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-unauthorized-override-1",
+        "fresh-workflow-mid-unauthorized-override-2",
+        "fresh-workflow-mid-unauthorized-override-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-unauthorized-override-1",
+          "locator": "evaluations/evidence/workflow/mid-unauthorized-override-1.txt",
+          "sha256": "7bd999f68465d95f20c62379c90972ba19b89029599dcd39a7b66a0a986794a5"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-mid-unauthorized-override-2",
+          "locator": "evaluations/evidence/workflow/mid-unauthorized-override-2.txt",
+          "sha256": "7fb4526b8c83babdaeb8f360a6072c2ad5061a6d491dcce13fe9f18064439295"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-mid-unauthorized-override-3",
+          "locator": "evaluations/evidence/workflow/mid-unauthorized-override-3.txt",
+          "sha256": "b2b0edd0b97ad86dd605341ef92cf932212b06f0cf771b590a9363227f21c1d2"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-unauthorized-override",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "691012a602921aa0d96b679771a50080bf669f7349163f1c7bb8981a19989b5f"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-mid-unrelated-resume-1",
+        "fresh-workflow-mid-unrelated-resume-2",
+        "fresh-workflow-mid-unrelated-resume-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-mid-unrelated-resume-1",
+          "locator": "evaluations/evidence/workflow/mid-unrelated-resume-1.txt",
+          "sha256": "afb4b7eb9f9112b7530a8e86d21c2f100e1a6c3ad841f51c38eb70489c61e4f0"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-mid-unrelated-resume-2",
+          "locator": "evaluations/evidence/workflow/mid-unrelated-resume-2.txt",
+          "sha256": "5ad1fd6119a5ed57a1444c3ed2c0d0638dde4952ccd4db4233b2d5e58351a0ab"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-mid-unrelated-resume-3",
+          "locator": "evaluations/evidence/workflow/mid-unrelated-resume-3.txt",
+          "sha256": "b4c755d46f13e0ec0d5b8d3b2f0d3f6e1e460ec20a7b83bceb847d8572c27bff"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-mid-unrelated-resume",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "fe2c3fd74ac700729810b86041b8f07b35144ddc93cac9f530d78b762693f4fe"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-negative-recursion-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-negative-recursion-1",
+          "locator": "evaluations/evidence/workflow/negative-recursion-1.txt",
+          "sha256": "d894aee93f7dfe64b837d8a7e1e24bd5a068f68fa7e4ddb711decb2c3333adac"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-negative-recursion",
+      "status": "passed",
+      "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
+      "fixtureRevision": "075e404da3c9b90a1497124431004c9641ec907de39cb4343c34fdf82823ad3d"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:03340f9b772e9475bd6924f8de97d98790861408",
+  "suiteRevision": "git:ce44e42557c60aff88dbcfce90fce126aec6a364",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -455,7 +914,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 18,
-    "passed": 18
+    "fixtures": 33,
+    "passed": 33
   }
 }

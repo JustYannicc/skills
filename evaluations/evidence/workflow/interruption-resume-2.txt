@@ -1,0 +1,1 @@
+O8 is paused at the exact inventory pickup point: item 14, which remains to be processed. The approved door-controller update is also paused before its effect boundary; no controller effect has occurred. Before applying it, approval must be rechecked against exact revision D3. What different question should I answer first? Afterward, O8 will resume at item 14.

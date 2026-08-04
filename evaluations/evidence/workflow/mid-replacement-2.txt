@@ -1,0 +1,9 @@
+Classified the incoming message as an explicit replacement/supersession of O5, with compatible cancellation of the trip-preparation children. It is not a clarification or an extension: the accepted parent Outcome changes from “weekend trip” to “stay home.”
+
+The active Workflow context remains the parent context and keeps the same owner. O5 is superseded/cancelled at the safe interruption boundary. I preserved its history, the source replacement message, partial effects, and the following child dispositions:
+
+- T1 (booked, non-refundable transport): the booking and its completed evidence are retained. The non-refundable booking is an already-applied external/irreversible effect; this replacement does not authorize cancellation, modification, or a claim that a refund exists. Booking handling remains a visible continuation item for the authorized booking owner, with the exact next action to verify available change/credit/refund options before any effect. No booking effect was performed here.
+- T2 (packing, active): stopped at a coherent checkpoint and cancelled as superseded. Partial packing state is retained as history; no further trip preparation runs.
+- T3 (restaurant research, accepted): cancelled/closed as superseded. Any existing research is retained only as historical evidence; no additional research or reservation work is performed.
+
+The successor Outcome is O6: stay home. It is accepted under the parent owner and remains non-terminal while the retained T1 booking-handling obligation is unresolved; the supersession does not claim that staying home or the booking disposition is already complete. The replacement proof is that O5 is no longer pursued, T2 and T3 are stopped with their history preserved, T1 remains intact with its handling owner/next action visible, and no unapproved external booking effect occurred.

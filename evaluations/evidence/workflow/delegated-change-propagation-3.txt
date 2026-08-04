@@ -1,0 +1,59 @@
+outcome: O7
+baseline_specification: S5
+approved_change: C2
+change_class: material_constraint_change
+change_scope: access_eligibility
+next_specification: S6
+parent_state: active
+parent_ownership: retained_by_workflow
+
+delegated_children:
+  - task: T-A
+    owner: Alice
+    capability: access
+    baseline_result: A2
+    result_status_at_S6: invalidated
+    next_result_revision: A3
+    claim: C-A
+    claim_status_at_S6: reopened
+    baseline_evidence: EA
+    evidence_status_at_S6: invalidated_for_S6
+    history: A2, C-A, and EA remain retained as S5 history
+    next_action: re-evaluate access eligibility and return A3 with fresh evidence bound to S6
+  - task: T-B
+    owner: Bao
+    capability: terminology/help
+    result: B4
+    claim: C-B
+    evidence: EB
+    status_at_S6: unaffected
+    next_action: continue unchanged; no reroute or invalidation
+
+propagation:
+  - to: Alice
+    task: T-A
+    specification: S6
+    required_revision: A3
+    proof_seam: access eligibility
+    return_route: active Workflow
+  - to: Bao
+    task: T-B
+    specification: S6
+    required_revision: B4
+    proof_seam: terminology/help
+    return_route: active Workflow
+
+preserved_identifiers:
+  outcome: O7
+  baseline_specification: S5
+  task: T-B
+  result: B4
+  claim: C-B
+  evidence: EB
+
+parent_review:
+  T-A: pending A3 and fresh S6-bound evidence
+  T-B: B4/C-B/EB remain valid at S6
+  terminal: not complete
+effects: none
+tools: none

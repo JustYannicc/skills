@@ -1,0 +1,5 @@
+This explicitly replaces the trip-preparation Outcome with staying home this weekend.
+
+Trip preparation is cancelled at the current revision. Stop packing (T2) and stop restaurant research (T3); preserve their current state and evidence, but do not do further preparation. The completed transport booking (T1) crossed a non-refundable external-effect boundary, so it remains in place and is not represented as cancelled or recovered.
+
+Preserve the booking confirmation, terms, payment and cancellation/change options, relevant deadlines, and contact route for follow-up. The booking is now an outstanding disposition under the stay-home Outcome: review those options and decide whether any permitted cancellation, change, credit, or other handling is worthwhile, recording the result and any loss. I retain responsibility for that disposition; staying home is not claimed complete until the booking has a verified disposition.

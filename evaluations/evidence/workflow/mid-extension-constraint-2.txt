@@ -1,0 +1,7 @@
+This is a material extension/constraint change to the active Outcome O1, not a clarification or replacement. Preserve O1 ownership and the S3 baseline, append the exact message “Extend rota to Saturdays, leave contact sheet exactly approved.” as the change source, and create the next Specification revision (S4) for Saturday support. The contact-sheet clause is an explicit unaffected-state constraint.
+
+T1 is the only affected child. Keep W1 as the preserved weekday baseline and history; do not rewrite it. Open the next rota-result revision under S4 with Saturday scope, its proof seam, Authority, and next action. Reuse weekday evidence only where it remains applicable; reopen or invalidate only evidence, Review, approval, or completion claims that covered the changed rota scope. Keep T1 with its current owner; delegation is unavailable.
+
+T2 is unaffected: leave C4 exactly as it is, complete with Review R2. Do not edit, reroute, re-review, or invalidate C4 or R2. Persist the change/legacy linkage and exact continuation in the active Workflow context, while preserving the unaffected child claim and evidence.
+
+The parent Outcome remains non-terminal until the Saturday revision is executed, reviewed at the rota proof seam, and integrated into O1 with parent coverage rechecked. No Saturday effect or completion assertion is made here; the next action is the bounded T1/S4 route, with C4/R2 retained unchanged.
