@@ -126,6 +126,11 @@ describe("candidate identity", () => {
       ["rev-parse", "HEAD"],
       { cwd: root }
     );
+    await mkdir(path.join(root, ".pnpm-store", "cache"), { recursive: true });
+    await writeFile(
+      path.join(root, ".pnpm-store", "cache", "metadata.json"),
+      "{}\n"
+    );
 
     const candidate = await resolveCandidateIdentity(root);
 

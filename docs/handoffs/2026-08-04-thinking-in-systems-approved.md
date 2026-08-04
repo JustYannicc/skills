@@ -35,5 +35,8 @@ or its TOML decision.
 ## Continuation
 
 Complete #34 through a reviewed mergeable PR and preserve the exact
-candidate/evidence commit pair in its proof. After #34 merges, refresh the
-parent map from native dependency state before claiming the next Ticket.
+candidate/evidence commit pair in its proof. Merging changes the candidate
+identity: after the merge, the parent owner must rebind the observations and
+record the report against the exact merge revision in a separate evidence
+commit, rerun `pnpm validate`, and only then close #34. Refresh the parent map
+from native dependency state before claiming the next Ticket.

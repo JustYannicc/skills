@@ -31,6 +31,7 @@ const relevantStatusPaths = (status: string): string[] =>
     .filter(
       (filePath) =>
         filePath !== "" &&
+        !filePath.startsWith(".pnpm-store/") &&
         !filePath.startsWith(".scratch/") &&
         !filePath.startsWith("evaluations/") &&
         !filePath.startsWith("node_modules/")
@@ -65,7 +66,6 @@ export const resolveCandidateIdentity = async (
           [
             "log",
             "--first-parent",
-            "--full-history",
             "-1",
             "--format=%H",
             "--",
