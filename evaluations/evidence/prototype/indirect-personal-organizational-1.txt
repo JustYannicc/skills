@@ -1,7 +1,9 @@
 Question: Does a shorter agenda with one named owner improve handoff completion without exporting burden?
-Setup: A consented low-stakes pilot for one routine handoff; reset restores the prior agenda and no policy is activated.
+Context: Handoff-completion Outcome; one personal routine and its organizational receiving team; consented Actors; no-policy-change constraint; assumption that baseline and pilot handoffs are comparable.
+Reversible setup: A consented low-stakes pilot for one routine handoff; reset restores the prior agenda and no policy is activated.
 Observation seam: completion and receiving-team burden at the handoff boundary, compared with the baseline routine.
 Evidence: fresh personal/organizational pilot run, attempt 1, baseline and pilot observations bound to the result revision; no external effect.
 Stopping rule: stop after the planned handoff comparison or when burden/safety counter-signals cross the pause threshold.
-Verdict: pilot evidence is ready for Workflow to decide whether the routine design is promising; the policy remains unchanged.
-Disposition: pause for Workflow's decision and return the baseline, pilot, and reset evidence.
+Verdict: inconclusive — pilot evidence is ready for Workflow to decide whether the routine design is promising; the policy remains unchanged.
+Disposition: pause — Workflow owns the next decision and receives the baseline, pilot, and reset evidence.
+Return route: Workflow receives the comparison, burden counter-signal, and unresolved policy decision.

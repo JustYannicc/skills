@@ -1,7 +1,9 @@
 Question: Can the reminder policy be evaluated without enabling it for every employee?
+Context: Reminder-policy Outcome; employee recipient scope; Workflow is the effect authority; live activation and messaging are constrained; assumption that fake recipients model the trigger safely.
 Reversible setup: A private simulation with fake recipients and disabled policy/messaging effects; Workflow retains effect authority and can stop it.
 Observation seam: simulated trigger, recipient selection, and burden/ambiguity signals before any live send.
 Evidence: production-execution request was stopped; only a safe simulation contract is available at the result revision.
 Stopping rule: stop before any live policy or message effect; continue only if Workflow authorizes a bounded simulation.
-Verdict: blocked for production execution; the live rollout is not a prototype.
-Disposition: pause at the Workflow effect gate and return the authority and simulation evidence.
+Verdict: blocked — production execution is outside Prototype; the live rollout is not a prototype.
+Disposition: pause — Workflow owns the effect gate and receives the authority and simulation evidence.
+Return route: Workflow receives the blocked verdict, simulation limits, and exact approval needed before any effect.

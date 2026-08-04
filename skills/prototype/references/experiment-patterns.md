@@ -12,11 +12,12 @@ forms, not extra phases or permission to widen the question.
   interactive terminal view, one command, and a full state render after each
   meaningful action. The shell is evidence collection; it is not production
   code.
-- **UI or interaction:** prefer the existing host route and data shape. Render
-  three structurally different variants (maximum five) behind a shareable
-  `?variant=` switcher, with a clearly prototype-only control that is gated out
-  of production. Use stubs for mutations and record the variant, context, and
-  observation that decides the question.
+- **UI or interaction:** use an isolated local preview that mirrors the host
+  route and data shape; do not alter the live route. Render three structurally
+  different variants (maximum five) behind a shareable `?variant=` switcher,
+  with a clearly prototype-only control that is gated out of production. Use
+  stubs for mutations and record the variant, context, and observation that
+  decides the question.
 - **Data or API:** use a scratch adapter, fixture, or local simulator with
   production effects disabled. Keep the interface small enough to lift a
   validated decision later without promoting the throwaway shell.
@@ -46,7 +47,7 @@ boundary. A physical action that cannot be safely reset is not a prototype.
 Use a private draft, rehearsal, role-play, or red-team read-through. Observe
 comprehension, ambiguity, emotional or accessibility burden, and likely
 misinterpretation. Do not send, publish, or commit another person without an
-authorized Workflow effect gate.
+authorized Workflow or caller effect gate.
 
 ## Agent
 

@@ -24,7 +24,7 @@
 
 - Wayfinder should preserve as much useful behavior as possible while removing repository/ticket assumptions and treating persistent fog as a normal operating condition.
 - Research should work across technical, personal, organizational, physical, and agent questions.
-- Prototype should support reversible system/life experiments while delegating software prototypes to the existing code-focused procedure.
+- Prototype should support one-question reversible system/life experiments across supported domains; a specialized code-focused procedure may still handle technical implementation details.
 - Handoff should cover humans, agents, sessions, and operational systems.
 - Batch Grilling is preferred over single-question Grill Me for the independent decision frontier, while later questions still wait when answers are dependent.
 - Domain Modeling preserves the useful upstream method but becomes a universal successor because the upstream storage and code-reference contract is repository-specific.

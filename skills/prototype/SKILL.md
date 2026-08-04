@@ -58,22 +58,24 @@ the parent Outcome.
 
 4. **Run only the bounded experiment.** Exercise the setup at the observation
    seam, record the relevant state before and after each meaningful action, and
-   preserve the exact result revision and evidence location. Capture the
-   disposable artifact and its verdict as a primary source in the selected
-   Coordination space when work crosses a persistence boundary; keep bounded
-   inline work in the conversation. Git, a tracker, and a particular host are
-   optional. Keep external effects disabled or inside the explicitly bounded
-   pilot. If a required
+   preserve the exact result revision and evidence location. Return the
+   disposable artifact and verdict with a pointer to the evidence channel; the
+   active `'Workflow'` skill or caller decides whether its Adapter must persist
+   that primary source at a persistence boundary. Keep bounded inline work in
+   the conversation. Git, a tracker, and a particular host are optional. Keep
+   external effects disabled or inside the explicitly bounded pilot. If a required
    capability, authority, fact, or safe reset is missing, enter visible
    Degraded mode: preserve the setup and evidence, stop the experiment, and
-   return the gap to `'Workflow'` rather than improvising an unsafe equivalent.
+   return the gap to the active `'Workflow'` skill or caller rather than
+   improvising an unsafe equivalent.
 
    An irreversible or costly-to-reverse production action is not a prototype.
    Do not delete, publish, deploy, contact, change policy, expose a person to
    material risk, or alter live records as part of this skill. If the question
    can be answered by a faithful simulation or rehearsal, use that; otherwise
    return a blocked verdict with the missing authority, stronger pre-effect
-   proof, and exact next decision needed by `'Workflow'`.
+   proof, and exact next decision needed by the active `'Workflow'` skill or
+   caller.
 
    Complete this step when the observation seam has been exercised (or the
    safe boundary has stopped it), with evidence tied to the result revision.
@@ -83,9 +85,9 @@ the parent Outcome.
    Recommend one disposition—retain the validated decision, replace it with a
    named alternative, discard the idea, pause for a named dependency, or run
    one separately authorized follow-up. Return unresolved uncertainty,
-   safety/authority gaps, and evidence limits to `'Workflow'`; do not continue
-   into Specification, decomposition, implementation, Review, or parent
-   completion.
+   safety/authority gaps, and evidence limits to the active `'Workflow'` skill
+   or caller; do not continue into Specification, decomposition,
+   implementation, Review, or parent completion.
 
    The run is complete only when every field is present, the disposition is
    explicit, the evidence is revision-bound, and the return responsibility is
@@ -95,13 +97,14 @@ the parent Outcome.
 
 ```text
 Question: one material design question.
+Context: affected Outcome, scope, Actors, constraints, and assumptions.
 Reversible setup: scope, actors, reset/disposal, and stop authority.
 Observation seam: what was observed, compared, and why it answers the question.
 Evidence: condition and method, observer/time, measurements or observations, source/location, result revision, and limits.
 Stopping rule: the threshold, event, or evidence delay that ended the run.
 Verdict: retain, reject, inconclusive, or blocked—with the answer to the question.
 Disposition: retain/replace/discard/pause/one bounded follow-up, with owner and next action.
-Return to Workflow: the exact evidence and unresolved decision the coordinator receives.
+Return route: the exact evidence and unresolved decision the active Workflow or caller receives.
 ```
 
 The result is useful even when no experiment ran: preserve the named question,

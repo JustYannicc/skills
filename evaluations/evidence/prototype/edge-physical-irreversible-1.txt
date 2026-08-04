@@ -1,7 +1,9 @@
 Question: Would disposing of the suspected unsafe batch clear storage risk?
+Context: Storage-risk Outcome; suspected batch and surrounding custody state; safety owner is the required Actor; no-destruction constraint; assumption that the simulator faithfully models risk reduction.
 Reversible setup: A safe simulator models identity, custody, and storage risk; no batch is touched and the safety owner has not authorized destruction.
 Observation seam: simulated risk reduction and surrounding-state reconciliation, with no live physical effect.
 Evidence: fresh safety-boundary run, attempt 1, simulation output bound to the result revision; authority and unsafe-condition proof remain missing.
 Stopping rule: stop before irreversible handling because exact authorization, identity, and pre-effect proof are absent.
-Verdict: blocked; production destruction cannot be called a prototype.
-Disposition: pause for Workflow to obtain safety authority and stronger pre-effect proof, or choose a reversible containment experiment.
+Verdict: blocked — production destruction cannot be called a prototype.
+Disposition: pause — Workflow's safety owner obtains authority and stronger pre-effect proof, or selects a reversible containment experiment.
+Return route: Workflow receives the simulation, missing-authority gap, and exact pre-effect decision needed.

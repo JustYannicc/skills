@@ -1,4 +1,5 @@
 Question: Not yet named; the request only says “Prototype this for me.”
+Context: Outcome, scope, Actors, constraints, and assumptions were not supplied.
 Reversible setup: Not started. No scope, actor, reset, or stop authority is available.
 Observation seam: Not defined because no material design question was supplied.
 Evidence: The missing question is the only observed blocker; no experiment or external effect occurred.

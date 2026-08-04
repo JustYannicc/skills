@@ -133,7 +133,7 @@ replacing assumptions that narrow the accepted universal job:
 
 - `wayfinder`: tracker/repository assumptions and reducible-fog-only completion;
 - `domain-modeling`: repository glossary, ADR-path, and code-only assumptions;
-- `prototype`: code-only experiments;
+- `prototype`: one-question reversible experiments across supported domains;
 - `to-spec`: engineering PRD, user-story, issue-tracker, and test-module assumptions;
 - `to-tickets`: codebase, tracer-bullet implementation, and tracker assumptions;
 - `implement`: tests, typechecking, code Review, and commit assumptions; and

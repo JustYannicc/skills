@@ -1,7 +1,9 @@
 Question: Can a private rehearsal with a sandboxed assistant improve explanation without increasing confusion or emotional burden?
+Context: Explanation Outcome; one person's private communication and agent-assistance boundary; the person is the Actor and stop authority; no-send/no-credential constraints; assumption that one rehearsal exposes burden.
 Reversible setup: A private script and fake agent tool; reset deletes the scratch transcript and the person can stop before any message is sent.
 Observation seam: comprehension, ambiguity, and burden after one rehearsal, compared with the person's baseline explanation.
 Evidence: fresh communicative/agent/personal rehearsal, attempt 3, transcript and burden observations bound to the result revision; no credentials or send effect.
 Stopping rule: stop after one rehearsal comparison or when confusion/burden counter-signals exceed the pause threshold.
-Verdict: one cross-domain question has a bounded rehearsal result; no communication or agent integration is approved.
-Disposition: return one retain/replace/discard/pause decision to Workflow with the transcript limits.
+Verdict: inconclusive — one cross-domain question has a bounded rehearsal result; no communication or agent integration is approved.
+Disposition: pause — Workflow owns the next communication decision and receives the transcript limits.
+Return route: Workflow receives the rehearsal evidence, burden limits, and unresolved communication decision.

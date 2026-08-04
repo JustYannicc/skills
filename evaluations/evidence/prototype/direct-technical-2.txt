@@ -1,7 +1,9 @@
 Question: Does retrying an interrupted action remain understandable in the state model?
-Setup: An in-memory reducer and throwaway terminal shell; reset recreates the initial state and the Workflow owner can stop it.
+Context: Retry interaction Outcome; technical state-model scope; user Actor; sandbox-only constraints; assumption that the reducer represents the proposed transition.
+Reversible setup: An in-memory reducer and throwaway terminal shell; reset recreates the initial state and the Workflow owner can stop it.
 Observation seam: before/after state at the retry transition, including the visible action and legal next state.
 Evidence: fresh technical scratch run, attempt 2, observed state transitions recorded at the result revision; no production data or effect.
 Stopping rule: stop after the retry path is exercised and the transition evidence can answer the question.
 Verdict: retain the state-model decision for Workflow review; no production implementation is claimed.
-Disposition: retain the decision and return the reducer evidence to Workflow for Specification only if it accepts the verdict.
+Disposition: retain — Workflow owns the next decision and may create a Specification only after accepting the verdict.
+Return route: Workflow receives the reducer evidence, limits, and unresolved implementation decision.
