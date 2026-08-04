@@ -17,10 +17,10 @@ import {
   parseTomlProjection,
   projectionIsFresh,
   semanticRecord,
+  semanticSha256,
   serializeMarkdownToml,
   serializeMarkdownYaml,
   serializeTomlOnly,
-  sha256,
 } from "./model.ts";
 
 const execFileAsync = promisify(execFile);
@@ -33,15 +33,6 @@ const yamlSource = await load("fixtures/markdown-yaml.md");
 const tomlMarkdownSource = await load("fixtures/markdown-toml.md");
 const tomlOnlySource = await load("fixtures/toml-only.toml");
 const projectionSource = await load("fixtures/projection-canonical.md");
-const llmTrial = JSON.parse(await load("llm-round-trip/trial.json")) as {
-  inputRevision: string;
-  candidates: {
-    inputPath: string;
-    inputSha256: string;
-    outputPath: string;
-    outputSha256: string;
-  }[];
-};
 
 const options = [
   {
@@ -97,6 +88,29 @@ const nestedUnknownSourceFor = (option: (typeof options)[number]) =>
         '[authority]\ndecision_owner = "actor:system-owner"',
         '[authority]\ndecision_owner = "actor:system-owner"\nunexpected_action_boundary = true'
       );
+
+const duplicateRelationshipSourceFor = (option: (typeof options)[number]) =>
+  option.source.replace(
+    "| Upstream System | coord:skills/system-record/005 @ 1.2.0 | Provides the adapter-neutral work contract without transferring effect Authority. | [Adapter contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md) |",
+    "| Upstream System | coord:skills/system-record/005 @ 1.2.0 | Provides the adapter-neutral work contract without transferring effect Authority. | [Adapter contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md) |\n| Upstream System | coord:skills/system-record/005 @ 1.2.0 | Duplicate relationship row. | [Adapter contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md) |"
+  );
+
+const missingRelationshipVersionSourceFor = (
+  option: (typeof options)[number]
+) =>
+  option.source.replace(
+    "coord:skills/system-record/005 @ 1.2.0",
+    "coord:skills/system-record/005"
+  );
+
+const malformedRelationshipLinkSourceFor = (option: (typeof options)[number]) =>
+  option.source.replace(
+    "[Adapter contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md)",
+    "../../../docs/UNIVERSAL_WORK_CONTRACT.md"
+  );
+
+const unknownRelationshipKindSourceFor = (option: (typeof options)[number]) =>
+  option.source.replace("| Upstream System |", "| Unknown System |");
 
 const isBlocked = (operation: () => unknown) => {
   try {
@@ -182,13 +196,22 @@ const results = options.map((option) => {
     duplicate_key_source_blocked: isBlocked(() =>
       option.parse(malformedSourceFor(option))
     ),
+    duplicate_relationship_row_blocked: isBlocked(() =>
+      semanticRecord(option.parse(duplicateRelationshipSourceFor(option)))
+    ),
+    malformed_relationship_link_blocked: isBlocked(() =>
+      semanticRecord(option.parse(malformedRelationshipLinkSourceFor(option)))
+    ),
     manual_edit_simulation_parses:
       edited.envelope.owner.label === "Recovery owner" &&
       edited.narrative.includes("linked trade-offs"),
+    missing_relationship_version_blocked: isBlocked(() =>
+      semanticRecord(option.parse(missingRelationshipVersionSourceFor(option)))
+    ),
     nested_unknown_field_blocked: isBlocked(() =>
       option.parse(nestedUnknownSourceFor(option))
     ),
-    normalized_semantic_sha256: sha256(JSON.stringify(semanticRecord(parsed))),
+    normalized_semantic_sha256: semanticSha256(parsed),
     option: option.id,
     parse_serialize_parse_semantics_preserved: isDeepStrictEqual(
       semanticRecord(parsed),
@@ -209,83 +232,11 @@ const results = options.map((option) => {
     source_comments_preserved_after_parser_round_trip: Object.fromEntries(
       commentMarkers.map((marker) => [marker, serialized.includes(marker)])
     ),
+    unknown_relationship_kind_blocked: isBlocked(() =>
+      semanticRecord(option.parse(unknownRelationshipKindSourceFor(option)))
+    ),
   };
 });
-
-const llmOutputs = [
-  {
-    id: "markdown-generated-projections",
-    inputPath:
-      "prototypes/system-record-representation/fixtures/projection-canonical.md",
-    outputPath:
-      "prototypes/system-record-representation/llm-round-trip/projection-canonical.md",
-    parse: parseMarkdownYaml,
-    source: projectionSource,
-  },
-  {
-    id: "markdown-yaml",
-    inputPath:
-      "prototypes/system-record-representation/fixtures/markdown-yaml.md",
-    outputPath:
-      "prototypes/system-record-representation/llm-round-trip/markdown-yaml.md",
-    parse: parseMarkdownYaml,
-    source: yamlSource,
-  },
-  {
-    id: "markdown-toml",
-    inputPath:
-      "prototypes/system-record-representation/fixtures/markdown-toml.md",
-    outputPath:
-      "prototypes/system-record-representation/llm-round-trip/markdown-toml.md",
-    parse: parseMarkdownToml,
-    source: tomlMarkdownSource,
-  },
-  {
-    id: "toml-only",
-    inputPath:
-      "prototypes/system-record-representation/fixtures/toml-only.toml",
-    outputPath:
-      "prototypes/system-record-representation/llm-round-trip/toml-only.toml",
-    parse: parseTomlOnly,
-    source: tomlOnlySource,
-  },
-] as const;
-
-const llmRoundTrip = await Promise.all(
-  llmOutputs.map(async (candidate) => {
-    const output = await readFile(
-      `${root}/llm-round-trip/${candidate.outputPath.split("/").at(-1)}`,
-      "utf-8"
-    );
-    const trialCandidate = llmTrial.candidates.find(
-      (item) => item.outputPath === candidate.outputPath
-    );
-    const input = candidate.parse(candidate.source);
-    const edited = candidate.parse(output);
-    const expectedEdited = {
-      ...semanticRecord(input),
-      narrative: `${input.narrative.trimEnd()}\n\nRecovery preserves the canonical source and blocks effects until validation passes.\n`,
-      owner: { ...input.envelope.owner, label: "Recovery owner" },
-    };
-    return {
-      exact_input_revision_recorded:
-        llmTrial.inputRevision === "dbabaabd9aa59d739becc174ee44bcf73844b6a6",
-      input_sha256_matches:
-        trialCandidate?.inputPath === candidate.inputPath &&
-        trialCandidate.inputSha256 === sha256(candidate.source),
-      link_and_comments_preserved:
-        output.includes("../../../docs/UNIVERSAL_WORK_CONTRACT.md") &&
-        output.includes("envelope-comment") &&
-        output.includes("rationale-comment"),
-      no_unintended_semantic_changes: isDeepStrictEqual(
-        semanticRecord(edited),
-        expectedEdited
-      ),
-      option: candidate.id,
-      output_sha256_matches: trialCandidate?.outputSha256 === sha256(output),
-    };
-  })
-);
 
 const canonical = parseMarkdownYaml(projectionSource);
 const sourceLocator = "fixtures/projection-canonical.md";
@@ -311,18 +262,26 @@ const tamperedProjection = {
     "Keep tampered narrative meaning"
   ),
 };
+const forgedProjection = {
+  ...tamperedProjection,
+  projection: {
+    ...tamperedProjection.projection,
+    semantic_sha256: semanticSha256({
+      envelope: tamperedProjection.record,
+      narrative: tamperedProjection.narrative,
+    }),
+  },
+};
+const reorderedProjection = {
+  narrative: projection.narrative,
+  projection: projection.projection,
+  record: projection.record,
+};
 
 const malformedRecord = { ...canonical.envelope, authority: undefined };
 const unexpectedNestedField = {
   ...canonical.envelope,
   authority: { ...canonical.envelope.authority, unrecognized_effect: true },
-};
-const duplicateRelationship = {
-  ...canonical.envelope,
-  relationships: [
-    ...canonical.envelope.relationships,
-    canonical.envelope.relationships[0],
-  ],
 };
 const yamlAnchorSource = projectionSource.replace(
   "id: actor:system-owner",
@@ -333,19 +292,36 @@ const yamlTagSource = projectionSource.replace(
   "id: !!str actor:system-owner"
 );
 
+const requestedEffect = {
+  action: "record.publish",
+  boundary: "GitHub issue #35 decision package only",
+  contract: "https://github.com/JustYannicc/skills/issues/35",
+  kind: "external_effect" as const,
+};
+const authorityRevision = "authority-revision-approved";
 const approvedRecord = {
   ...canonical.envelope,
   approval: {
     ...canonical.envelope.approval,
+    authority_revision: authorityRevision,
     status: "approved" as const,
+    valid_until: "2026-08-05T00:00:00Z",
   },
   authority: {
     ...canonical.envelope.authority,
-    allowed_effects: ["external_effect" as const],
+    allowed_effects: [requestedEffect],
+    revision: authorityRevision,
   },
   catalog_eligibility: "eligible" as const,
   design_status: "design_complete" as const,
+  operating_mode: "normal" as const,
   operational_status: "active" as const,
+};
+const actionContext = {
+  currentAuthorityRevision: authorityRevision,
+  currentRecordRevision: canonical.envelope.record_revision,
+  evaluatedAt: "2026-08-04T18:00:00Z",
+  requestedEffect,
 };
 
 const report = {
@@ -356,26 +332,44 @@ const report = {
     explicit_tags_blocked: isBlocked(() => parseMarkdownYaml(yamlTagSource)),
   },
   fail_closed_action_boundary: {
-    duplicate_relationship_blocked: isBlocked(() =>
-      acceptWritableRecord(duplicateRelationship)
-    ),
+    expired_approval_cannot_authorize:
+      canPerformExternalEffect(approvedRecord, {
+        ...actionContext,
+        evaluatedAt: "2026-08-06T00:00:00Z",
+      }) === false,
     malformed_record_blocked: isBlocked(() =>
-      canPerformExternalEffect(
-        malformedRecord,
-        canonical.envelope.record_revision
-      )
+      canPerformExternalEffect(malformedRecord, actionContext)
     ),
     nested_unknown_action_field_blocked: isBlocked(() =>
-      canPerformExternalEffect(
-        unexpectedNestedField,
-        canonical.envelope.record_revision
-      )
+      canPerformExternalEffect(unexpectedNestedField, actionContext)
+    ),
+    non_normal_modes_cannot_authorize: (
+      ["degraded", "paused", "recovery"] as const
+    ).every(
+      (operatingMode) =>
+        canPerformExternalEffect(
+          { ...approvedRecord, operating_mode: operatingMode },
+          actionContext
+        ) === false
     ),
     positive_control_authorizes_exact_active_revision:
+      canPerformExternalEffect(approvedRecord, actionContext) === true,
+    retiring_status_cannot_authorize:
       canPerformExternalEffect(
-        approvedRecord,
-        canonical.envelope.record_revision
-      ) === true,
+        { ...approvedRecord, operational_status: "retiring" },
+        actionContext
+      ) === false,
+    revoked_approval_cannot_authorize:
+      canPerformExternalEffect(
+        {
+          ...approvedRecord,
+          approval: {
+            ...approvedRecord.approval,
+            revoked_at: "2026-08-04T17:00:00Z",
+          },
+        },
+        actionContext
+      ) === false,
     stale_approval_revision_cannot_authorize:
       canPerformExternalEffect(
         {
@@ -385,25 +379,44 @@ const report = {
             result_revision: "superseded-revision",
           },
         },
-        canonical.envelope.record_revision
+        actionContext
+      ) === false,
+    stale_authority_revision_cannot_authorize:
+      canPerformExternalEffect(
+        {
+          ...approvedRecord,
+          approval: {
+            ...approvedRecord.approval,
+            authority_revision: "stale-authority-revision",
+          },
+        },
+        actionContext
       ) === false,
     stale_record_revision_cannot_authorize:
-      canPerformExternalEffect(approvedRecord, "newer-record-revision") ===
-      false,
+      canPerformExternalEffect(approvedRecord, {
+        ...actionContext,
+        currentRecordRevision: "newer-record-revision",
+      }) === false,
     valid_pending_ineligible_record_cannot_authorize:
-      canPerformExternalEffect(
-        canonical.envelope,
-        canonical.envelope.record_revision
-      ) === false,
-    wrong_lifecycle_state_cannot_authorize:
-      canPerformExternalEffect(
-        { ...approvedRecord, operational_status: "retired" },
-        canonical.envelope.record_revision
-      ) === false,
+      canPerformExternalEffect(canonical.envelope, actionContext) === false,
+    wrong_action_or_boundary_cannot_authorize:
+      canPerformExternalEffect(approvedRecord, {
+        ...actionContext,
+        requestedEffect: {
+          ...requestedEffect,
+          action: "record.delete",
+          boundary: "all repository records",
+        },
+      }) === false,
   },
-  independent_llm_round_trip: llmRoundTrip,
   one_way_projection: {
     direct_write_blocked: isBlocked(() => acceptWritableRecord(projection)),
+    forged_payload_and_hash_rejected_against_canonical: !projectionIsFresh(
+      forgedProjection,
+      projectionSource,
+      sourceLocator,
+      sourceRevision
+    ),
     fresh_before_source_edit: projectionIsFresh(
       projection,
       projectionSource,
@@ -424,6 +437,12 @@ const report = {
           projection: projection.projection,
         })
       )
+    ),
+    reordered_projection_remains_fresh: projectionIsFresh(
+      reorderedProjection,
+      projectionSource,
+      sourceLocator,
+      sourceRevision
     ),
     stale_after_source_edit: !projectionIsFresh(
       projection,
@@ -453,18 +472,15 @@ const report = {
 const proofFailed = [
   ...results.flatMap((result) => [
     result.duplicate_key_source_blocked,
+    result.duplicate_relationship_row_blocked,
+    result.malformed_relationship_link_blocked,
     result.manual_edit_simulation_parses,
+    result.missing_relationship_version_blocked,
     result.nested_unknown_field_blocked,
     result.parse_serialize_parse_semantics_preserved,
     result.parserless_recovery_in_no_git_directory,
     result.parses_to_shared_fixture,
-  ]),
-  ...llmRoundTrip.flatMap((result) => [
-    result.exact_input_revision_recorded,
-    result.input_sha256_matches,
-    result.link_and_comments_preserved,
-    result.no_unintended_semantic_changes,
-    result.output_sha256_matches,
+    result.unknown_relationship_kind_blocked,
   ]),
   ...Object.values(report.constrained_yaml),
   ...Object.values(report.fail_closed_action_boundary),

@@ -10,6 +10,8 @@ import {
 } from "yaml";
 import { z } from "zod";
 
+import { parseRelationshipTable } from "./relationship-table.ts";
+
 const opaqueId = z
   .string()
   .regex(/^[A-Za-z0-9][A-Za-z0-9:._/-]*$/u, "expected an opaque logical id");
@@ -24,32 +26,34 @@ const actorSchema = z
   })
   .strict();
 
-const authoritySchema = z
+const effectGrantSchema = z
   .object({
-    allowed_effects: z
-      .array(z.enum(["compose_without_effect", "external_effect"]))
-      .min(1)
-      .refine((values) => new Set(values).size === values.length, {
-        message: "allowed effects must be unique",
-      }),
-    decision_owner: opaqueId,
+    action: opaqueId,
+    boundary: z.string().min(1),
+    contract: z.string().min(1),
+    kind: z.enum(["compose_without_effect", "external_effect"]),
   })
   .strict();
 
-const relationshipSchema = z
+export type EffectGrant = z.infer<typeof effectGrantSchema>;
+
+const authoritySchema = z
   .object({
-    contract: z.string().min(1),
-    kind: z.enum([
-      "containing",
-      "subsystem",
-      "upstream",
-      "dependent",
-      "peer",
-      "related",
-    ]),
-    material_boundary: z.string().min(1),
-    record_id: opaqueId,
-    record_version: z.string().min(1),
+    allowed_effects: z
+      .array(effectGrantSchema)
+      .min(1)
+      .refine(
+        (values) =>
+          new Set(
+            values.map(
+              (value) =>
+                `${value.kind}\0${value.action}\0${value.boundary}\0${value.contract}`
+            )
+          ).size === values.length,
+        { message: "effect grants must be unique" }
+      ),
+    decision_owner: opaqueId,
+    revision: exactRevision,
   })
   .strict();
 
@@ -59,7 +63,9 @@ const approvalSchema = z
     authority_revision: exactRevision,
     required: z.boolean(),
     result_revision: exactRevision,
+    revoked_at: z.iso.datetime().optional(),
     status: z.enum(["pending", "approved", "rejected"]),
+    valid_until: z.iso.datetime(),
   })
   .strict();
 
@@ -76,11 +82,12 @@ export const envelopeSchema = z
       "superseded",
     ]),
     governed_by: z.string().min(1),
+    operating_mode: z.enum(["normal", "degraded", "paused", "recovery"]),
     operational_status: z.enum([
       "unbuilt",
       "inactive",
       "active",
-      "degraded",
+      "retiring",
       "retired",
     ]),
     owner: actorSchema,
@@ -94,18 +101,6 @@ export const envelopeSchema = z
     record_id: opaqueId,
     record_revision: exactRevision,
     record_version: z.string().min(1),
-    relationships: z
-      .array(relationshipSchema)
-      .refine(
-        (items) =>
-          new Set(
-            items.map(
-              (item) =>
-                `${item.kind}\0${item.record_id}\0${item.record_version}`
-            )
-          ).size === items.length,
-        { message: "relationships must be unique by kind, id, and version" }
-      ),
     schema_version: z.literal(1),
     supersedes: exactRevision.optional(),
   })
@@ -209,7 +204,27 @@ export const parseTomlOnly = (source: string): CandidateRecord => {
 export const semanticRecord = (record: CandidateRecord) => ({
   ...record.envelope,
   narrative: `${record.narrative.trimEnd()}\n`,
+  relationships: parseRelationshipTable(record.narrative),
 });
+
+export const sha256 = (source: string) =>
+  createHash("sha256").update(source).digest("hex");
+
+const canonicalize = (value: unknown): string => {
+  if (Array.isArray(value)) {
+    return `[${value.map(canonicalize).join(",")}]`;
+  }
+  if (value !== null && typeof value === "object") {
+    return `{${Object.entries(value)
+      .toSorted(([left], [right]) => left.localeCompare(right))
+      .map(([key, entry]) => `${JSON.stringify(key)}:${canonicalize(entry)}`)
+      .join(",")}}`;
+  }
+  return JSON.stringify(value);
+};
+
+export const semanticSha256 = (record: CandidateRecord) =>
+  sha256(canonicalize(semanticRecord(record)));
 
 export const serializeMarkdownYaml = (record: CandidateRecord) =>
   `---\n${stringifyYaml(record.envelope).trimEnd()}\n---\n${record.narrative}`;
@@ -219,9 +234,6 @@ export const serializeMarkdownToml = (record: CandidateRecord) =>
 
 export const serializeTomlOnly = (record: CandidateRecord) =>
   stringifyToml({ ...record.envelope, narrative: record.narrative });
-
-export const sha256 = (source: string) =>
-  createHash("sha256").update(source).digest("hex");
 
 export const generateProjection = (
   source: string,
@@ -233,7 +245,7 @@ export const generateProjection = (
     narrative: record.narrative,
     projection: {
       generated_at: "2026-08-04T00:00:00Z",
-      semantic_sha256: sha256(JSON.stringify(semanticRecord(record))),
+      semantic_sha256: semanticSha256(record),
       source_locator: sourceLocator,
       source_revision: sourceRevision,
       source_sha256: sha256(source),
@@ -249,23 +261,31 @@ export const parseTomlProjection = (source: string) =>
   projectionSchema.parse(parseToml(source));
 
 export const projectionIsFresh = (
-  projection: Projection,
+  input: unknown,
   source: string,
   sourceLocator: string,
   sourceRevision: string
-) =>
-  projection.projection.source_locator === sourceLocator &&
-  projection.projection.source_revision === sourceRevision &&
-  projection.projection.source_sha256 === sha256(source) &&
-  projection.projection.semantic_sha256 ===
-    sha256(
-      JSON.stringify(
-        semanticRecord({
-          envelope: projection.record,
-          narrative: projection.narrative,
-        })
-      )
+) => {
+  try {
+    const projection = projectionSchema.parse(input);
+    const canonical = parseMarkdownYaml(source);
+    const canonicalSemanticHash = semanticSha256(canonical);
+    const projectedSemanticHash = semanticSha256({
+      envelope: projection.record,
+      narrative: projection.narrative,
+    });
+    return (
+      projection.projection.writable === false &&
+      projection.projection.source_locator === sourceLocator &&
+      projection.projection.source_revision === sourceRevision &&
+      projection.projection.source_sha256 === sha256(source) &&
+      projection.projection.semantic_sha256 === canonicalSemanticHash &&
+      projectedSemanticHash === canonicalSemanticHash
     );
+  } catch {
+    return false;
+  }
+};
 
 export const acceptWritableRecord = (input: unknown): Envelope => {
   const projectionMarker = z
@@ -279,21 +299,40 @@ export const acceptWritableRecord = (input: unknown): Envelope => {
   return envelopeSchema.parse(input);
 };
 
+export interface ActionGuardContext {
+  currentAuthorityRevision: string;
+  currentRecordRevision: string;
+  evaluatedAt: string;
+  requestedEffect: EffectGrant;
+}
+
 export const canPerformExternalEffect = (
   input: unknown,
-  currentRecordRevision: string
+  context: ActionGuardContext
 ) => {
   const envelope = acceptWritableRecord(input);
+  const { approval } = envelope;
+  const matchingGrant = envelope.authority.allowed_effects.some(
+    (grant) =>
+      grant.kind === context.requestedEffect.kind &&
+      grant.action === context.requestedEffect.action &&
+      grant.boundary === context.requestedEffect.boundary &&
+      grant.contract === context.requestedEffect.contract
+  );
   return (
-    envelope.record_revision === currentRecordRevision &&
+    context.requestedEffect.kind === "external_effect" &&
+    envelope.record_revision === context.currentRecordRevision &&
+    envelope.authority.revision === context.currentAuthorityRevision &&
     envelope.design_status === "design_complete" &&
     envelope.operational_status === "active" &&
+    envelope.operating_mode === "normal" &&
     envelope.catalog_eligibility === "eligible" &&
-    envelope.authority.allowed_effects.includes("external_effect") &&
-    envelope.approval?.required === true &&
-    envelope.approval.status === "approved" &&
-    envelope.approval.result_revision === currentRecordRevision &&
-    envelope.approval.approver_id.length > 0 &&
-    envelope.approval.authority_revision.length > 0
+    matchingGrant &&
+    approval?.required === true &&
+    approval.status === "approved" &&
+    approval.result_revision === context.currentRecordRevision &&
+    approval.authority_revision === context.currentAuthorityRevision &&
+    approval.revoked_at === undefined &&
+    Date.parse(context.evaluatedAt) <= Date.parse(approval.valid_until)
   );
 };
