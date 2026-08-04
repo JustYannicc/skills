@@ -11,10 +11,11 @@ prompt: >-
   Help me choose between North Hall and River Hall for a community workshop.
   Comparing their accessibility policies requires checking each venue's current
   policy, but this environment has no filesystem, web, tool, or delegation
-  capability. The other currently unblocked user decisions are workshop date
-  and time, expected attendance, maximum budget, the ranking of location,
-  capacity, equipment, and travel trade-offs, and final booking authority. Ask
-  that complete independent frontier now and keep the accessibility comparison
+  capability. The other currently unblocked user decisions are whether a
+  verified accessibility policy is a selection gate, workshop date and time,
+  expected attendance, maximum budget, the ranking of location, capacity,
+  equipment, and travel trade-offs, and final booking authority. Ask that
+  complete independent frontier now and keep the accessibility comparison
   visibly unsettled.
 environment:
   id: no-fact-capability

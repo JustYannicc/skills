@@ -8,8 +8,9 @@ domains: [organizational-work, physical-environment]
 severity: Critical
 requiredAttempts: 3
 prompt: >-
-  Investigate whether a community workshop should pilot a shared quiet-hours
-  policy using these two available primary records. Physical-setting record
+  Investigate the external evidence relevant to a possible shared quiet-hours
+  pilot at a community workshop; do not decide whether to adopt the policy.
+  Use these two available primary records. Physical-setting record
   `workshop-acoustic-survey@rev-2026-07-15` reports 78–84 dBA at the shared
   benches from 18:00–20:00 during powered-tool use and 43–47 dBA in the
   adjacent quiet room. Operating record
