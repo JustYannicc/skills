@@ -1,11 +1,12 @@
 # HUMAN REVIEW REQUIRED — System Record representation
 
 **Status:** candidate until the repository maintainer approves the exact PR;
-approval makes this the decision record at that revision  
+approval makes this the decision record at that revision.
 **Human decision:** accept, reject, or revise the representation before issue
-#35 can close  
-**Evidence head:** `455541e255b5482235faa65a82bffc2b21415b94`  
-**Disposable proof:** [`a591a7d`](https://github.com/JustYannicc/skills/commit/a591a7d)
+#35 can close.
+**Evidence head:** `455541e255b5482235faa65a82bffc2b21415b94`.
+**Disposable proof:**
+[`375f98871a443484e15fc6062da85f9342756c3b`](https://github.com/JustYannicc/skills/commit/375f98871a443484e15fc6062da85f9342756c3b).
 
 > **HUMAN REVIEW REQUIRED:** merging the associated PR accepts the proposed
 > representation changes in this package. The proof and recommendation do not
@@ -23,20 +24,31 @@ approval makes this the decision record at that revision
 2. The Local Markdown Adapter serializes that record as CommonMark-compatible
    Markdown with a constrained YAML envelope delimited by `---`. This envelope
    is a suite convention, not part of CommonMark.
-3. Deterministic validation parses the complete envelope strictly, rejects
-   duplicate or unknown action-boundary fields, validates typed conditional
-   objects such as an approval when present, and runs before a machine-authorized
-   lifecycle transition, projection, or external effect. Syntax and schema
-   validity never assert that the narrative, evidence, ownership, or decision
-   is semantically correct.
-4. Hosted or external Adapters may map the same logical envelope and narrative
+3. The envelope owns an opaque logical record identity, human-facing version,
+   exact record revision, canonical locator, distinct design/operational/
+   eligibility states, owner, action Authority, provenance reference, and an
+   optional exact-revision approval binding. The existing Section 2 table
+   remains the single semantic relationship index; the envelope does not copy it.
+4. A production Adapter that authorizes machine lifecycle transitions,
+   projections, or effects must implement two named seams: a `System Record
+   structural validator` and a `System Record action guard`. The validator
+   parses the complete envelope strictly; rejects YAML directives, aliases,
+   anchors, explicit tags, duplicate keys, and unknown fields; validates typed
+   objects; and validates the canonical relationship table's required columns,
+   identity/version/boundary/link shapes, and uniqueness. The guard consumes
+   only validated output and binds eligible state, Authority, approval, and the
+   action to the exact record revision. Until both seams are implemented and
+   proven for an Adapter, the Adapter cannot authorize those actions. Syntax
+   and schema validity never assert that the narrative, evidence, ownership,
+   relationship classification, or decision is semantically correct.
+5. Hosted or external Adapters may map the same logical envelope and narrative
    into native fields and bodies. YAML is not a universal runtime prerequisite.
-5. JSON or TOML may be emitted only as an optional one-way generated projection
+6. JSON or TOML may be emitted only as an optional one-way generated projection
    for a declared Adapter consumer. Each projection is read-only, identifies
    its canonical source locator, source revision and SHA-256, records its
-   generation time or equivalent freshness evidence, and is rejected when
-   stale or presented to a writable ingestion seam.
-6. **TOML status: optional generated projection only; not canonical.** No core
+   generation time and normalized-payload SHA-256, and is rejected when stale,
+   mutated, or presented to a writable ingestion seam.
+7. **TOML status: optional generated projection only; not canonical.** No core
    skill or baseline Adapter requires a TOML parser.
 
 ### Human choice
@@ -84,44 +96,57 @@ options:
 3. TOML-only, with the narrative inside a multiline literal string.
 4. Canonical Markdown with one-way generated JSON and TOML projections.
 
-The corpus contains identity, record and schema versions, lifecycle state, an
-Actor reference, effect Authority, two typed relationships, provenance with a
-source revision and SHA-256, a conditional approval section, narrative
-rationale, a relative Markdown link, an HTML narrative comment, and an envelope
-comment. Variants cover a bounded owner/rationale edit, duplicate-key malformed
-source, a missing Authority object, pending approval, direct projection writes,
-and a canonical edit that makes a projection stale.
+The corpus contains an opaque logical identity, record/schema versions and exact
+revision, distinct design/operational/eligibility states, a canonical locator,
+an Actor reference, enumerated effect Authority, two typed/versioned
+relationships with material boundaries, provenance with a source revision and
+SHA-256, an approver/authority/result revision binding, narrative rationale, a
+working relative Markdown link, an HTML narrative comment, and an envelope
+comment. Relationship objects deliberately stress structured syntax across all
+four options; the proposed production envelope preserves the existing Section 2
+relationship table instead of adopting those comparison-only objects.
+
+Variants cover a deterministic owner/rationale edit simulation, duplicate-key
+and unknown-nested-field malformed YAML and TOML, restricted YAML features,
+missing Authority, pending/ineligible/retired/stale approval cases, direct and
+mutated projection writes, and a canonical edit/revision change that makes a
+projection stale. Raw fixtures are also copied outside Git and read by a Node
+process that imports no YAML or TOML parser.
 
 The prototype branch is intentionally outside the proposed production tree.
-Its [README and fixtures](https://github.com/JustYannicc/skills/tree/a591a7d/prototypes/system-record-representation)
-are the primary evidence; this file records the decision-relevant result.
+Its [README, fixtures, raw LLM outputs, and runner](https://github.com/JustYannicc/skills/tree/375f98871a443484e15fc6062da85f9342756c3b/prototypes/system-record-representation)
+are frozen at the exact revision above; this file records the decision-relevant
+result.
 
 ## Measured outcomes
 
 All four options parsed to normalized semantic SHA-256
-`99869d6c8efe9d1c49a6f8fbd615f0281fa1256dbe9351656e6acaa32207e5cf`.
+`f3b522055b8d26ddff85bf0ae6a67a7c802c0b78cbbd8feb48016f51e4912c3b`.
 
 | Measure | Markdown + YAML | Markdown + TOML | TOML-only | Canonical Markdown + generated JSON/TOML |
 | --- | --- | --- | --- | --- |
 | Parsed to the shared fixture | pass | pass | pass | pass |
 | Parse → serialize → parse semantics | pass | pass | pass | pass at canonical source; projections parse |
-| Bounded human edit reparsed | pass | pass | pass | pass at canonical source |
-| Independent LLM edit reparsed without unintended semantic changes | pass | pass | pass | pass at canonical source; regenerate projections |
+| Deterministic manual-edit simulation reparsed | pass | pass | pass | pass at canonical source |
+| Independent Luna Max edit reparsed without unintended semantic changes | recorded in exact proof revision | recorded in exact proof revision | recorded in exact proof revision | canonical edit recorded; projections remain generated/read-only |
+| Human judgment/readability round trip | **HUMAN REVIEW REQUIRED on this PR** | same required decision comparison | same required decision comparison | same required decision comparison |
 | Relative link and narrative rationale retained | pass | pass | pass inside TOML string | pass in canonical source |
 | Envelope comment retained by parser serialization | no | no | no | no; JSON has no comment syntax |
 | Narrative HTML comment retained | pass | pass | pass inside narrative string | pass in canonical source; not promised in projections |
 | Parserless narrative surface | ordinary Markdown body | ordinary Markdown body | TOML multiline string boundary | ordinary canonical Markdown body |
-| Source bytes in the fixture | 1,192 | 1,231 | 1,242 | 1,192 canonical plus generated copies |
-| Malformed action source blocks while narrative remains readable | pass | same schema/effect rule required | same schema/effect rule required | pass; stale or writable projection also blocks |
-| Projection freshness and direct-write rejection | not applicable | not applicable | not applicable | pass before edit; stale after edit; direct write rejected |
+| Source bytes in this hand-formatted fixture | 1,851 | 1,903 | 1,914 | 1,851 canonical plus generated copies |
+| Duplicate-key and nested-unknown source blocks | pass | pass | pass | pass at canonical source; missing/mutated projection also blocks |
+| Raw narrative recovery outside Git without a YAML/TOML parser | pass | pass | pass, with multiline-string boundary scan | pass at canonical source |
+| Projection semantic equivalence, freshness, and direct-write rejection | not applicable | not applicable | not applicable | JSON and TOML pass; source edit/revision change or payload mutation fails; direct write rejected |
 
-The independent LLM trial performed the same edit in isolated copies: change
-the owner label, add one recovery sentence beneath `## Rationale`, and preserve
-every identity, version, state, Authority field, relationship, provenance
-value, approval, link, and comment. All candidates passed. The qualitative
-difference was edit ambiguity: both Markdown-body options were low; TOML-only
-was high because the narrative and its terminator are TOML syntax. One LLM
-trial is behavioral evidence, not a deterministic guarantee.
+The independent Luna Max trial performed the same edit in isolated raw copies:
+change the owner label, add one recovery sentence beneath `## Rationale`, and
+preserve every identity, version/revision, lifecycle/eligibility state,
+Authority field, relationship/version/boundary, provenance value, approval,
+link, and comment. The exact input revision, model, reasoning effort, context ID,
+raw outputs, and SHA-256 values are retained in the proof branch. One LLM trial
+is behavioral evidence, not a deterministic guarantee. Human readability and
+representation judgment deliberately remain the maintainer's PR decision.
 
 Parser serialization intentionally tests normalized meaning rather than byte
 identity. YAML and TOML comments are not semantic data, so a material operator
@@ -135,28 +160,32 @@ The deterministic seam validates only formal rules needed by a named consumer:
 | Deterministic validation | Human or LLM judgment |
 | --- | --- |
 | supported schema version and complete envelope boundary | whether the original request and Intent are understood |
-| immutable record identity and record version shape | whether an owner or decision authority is legitimate |
-| enumerated lifecycle state | whether the state claim is true |
+| opaque record identity, human-facing version, exact record revision, and canonical locator shape | whether an owner or decision authority is legitimate |
+| distinct enumerated design, operational, and eligibility states | whether any state claim is true |
 | structurally complete Actor and Authority references | whether the granted Authority covers the proposed effect |
-| relationship kind, identity, and contract locator shape | whether a relationship is material or correctly classified |
-| provenance locator, revision, and hash shape | whether a source is authoritative or evidence is credible |
-| shape and exact revision binding of a typed conditional object when present | whether the conditional risk is material |
-| projection source locator, source revision/hash, read-only marker, and freshness | whether the narrative projection preserves all useful meaning |
-| action-state, exact revision, and approval invariants implemented by an effect guard | whether the effect is wise or satisfies the Outcome |
+| canonical relationship-table columns, unique kind/identity/version rows, material-boundary text, and contract-link shape | whether a relationship is material, correctly classified, or governed by the linked contract |
+| provenance locator, revision, and hash shape | whether a source is authoritative, the declared hash was verified, or evidence is credible |
+| typed conditional object shape and approver/authority/result fields with exact result-revision equality when approval is present | whether the approver legitimately holds the cited Authority, whether the condition is material, or whether another narrative conditional section applies |
+| projection source locator/revision/hash, normalized-payload hash, read-only marker, and freshness | whether the projection preserves all useful narrative meaning |
+| eligible lifecycle state, exact revision, enumerated effect, and approval equality implemented by the proposed action-guard contract | whether the effect is wise or satisfies the Outcome |
 
 An invalid or unavailable parser produces visible `unverified` or `blocked`
 machine state. The narrative remains available for human reading and editing,
 but no machine-authorized lifecycle change, generated projection, or external
 effect may proceed from an unvalidated envelope. A parser's recovery mode
-cannot authorize an action.
+cannot authorize an action. This PR specifies the `System Record structural
+validator` and `System Record action guard` contracts and prototypes their
+logical schema/action invariants; it does not add a production Adapter or a
+Markdown-table extraction implementation. An Adapter without both proven seams
+therefore has no machine-effect capability.
 
 ## Adapter capability matrix
 
 | Adapter or condition | Canonical representation | Required parser capability | Derived projection support | Degraded behavior |
 | --- | --- | --- | --- | --- |
 | Transient Conversation | conversation state; no durable file before a Persistence boundary | none | none | materialize through a Baseline Adapter before durable work |
-| Local Markdown, no Git | Markdown + constrained YAML envelope | strict YAML + schema for machine actions | optional; off by default | human reads narrative; machine actions block when parser unavailable |
-| Git-backed Local Markdown | same canonical file, with Git revision available as evidence | strict YAML + schema | optional JSON/TOML with source revision/hash | stale or conflicted source enters recovery |
+| Local Markdown, no Git | Markdown + constrained YAML envelope | restricted YAML subset + schema + proposed action guard for machine actions; Adapter revision need not be Git | optional; off by default | human reads/edits narrative; machine actions block when parser/guard is unavailable |
+| Git-backed Local Markdown | same canonical file, with Git revision available as one exact-revision mechanism | restricted YAML subset + schema + proposed action guard | optional JSON/TOML with source revision/source hash/payload hash | stale, mutated, or conflicted source enters recovery |
 | GitHub or another hosted native Adapter | one native writable record with mapped envelope fields and a human-readable body | host-native field validation plus universal invariants | optional external read-only view | disclose unsupported fields/capabilities; do not shadow-write a local copy |
 | External Adapter provider | provider's one canonical native record after conformance proof | provider mapping validates every applicable envelope rule | optional for a declared consumer | fall back or remain incomplete when Baseline semantics cannot be preserved |
 | Projection-only consumer | no authority; reads the canonical Adapter's generated output | JSON or TOML parser plus freshness verification | required for that consumer only | reject missing, writable, malformed, or stale projection and route edits to source |
@@ -166,7 +195,7 @@ cannot authorize an action.
 
 ### Why Markdown + constrained YAML is recommended
 
-- It ties for semantic round-trip behavior and has the smallest tested source.
+- It ties for semantic round-trip behavior in the shared corpus.
 - It keeps rationale, links, and recovery guidance in an ordinary Markdown body
   under parser failure or no-Git conditions.
 - It matches the repository's current `System Record` template, Setup
@@ -180,10 +209,11 @@ cannot authorize an action.
 TOML rejects duplicate keys and has more explicit lexical types than general
 YAML, but the proof did not show a material Outcome advantage. TOML still needs
 an application schema, an embedded-envelope convention, and an action guard.
-Markdown + TOML was 39 bytes larger in this fixture and adds a baseline parser
-ecosystem without improving narrative recovery. TOML-only was 50 bytes larger,
-made narrative edits more boundary-sensitive, and removed the ordinary
-Markdown body.
+Markdown + TOML adds a baseline parser ecosystem without improving narrative
+recovery. TOML-only made narrative edits more boundary-sensitive and removed
+the ordinary Markdown body. The hand-formatted TOML fixtures were 52–63 bytes
+larger than the YAML fixture, but formatting choices dominate such a small
+sample, so byte count is descriptive and not a decisive general format claim.
 
 ### Why universal projections are deferred
 
@@ -197,7 +227,7 @@ on demand, never a baseline artifact or writable authority.
 
 | Choice | Cost from current repository state | Legacy and rollback consequence |
 | --- | --- | --- |
-| Recommended Markdown + constrained YAML | low: the template and Local Markdown design already use this shape; rename the draft envelope fields and move the relationship index to its single structured authority | source-archive copies remain immutable historical evidence; no published/live suite records are known, while external copies remain unknown and require discovery before claiming zero migration |
+| Recommended Markdown + constrained YAML | low: the template and Local Markdown design already use this container; add schema/revision/locator and typed Authority/approval fields, preserve distinct lifecycle fields, and keep the existing Section 2 relationship index | source-archive copies remain immutable historical evidence; no published/live suite records are known, while external copies remain unknown and require discovery before claiming zero migration |
 | Markdown + TOML | medium: translate frontmatter, add and pin a TOML parser, update every validator/example, and teach a new delimiter convention | retain predecessor locators; rollback translates metadata back to YAML |
 | TOML-only | high: transform every narrative section into TOML strings/tables, replace Markdown rendering/link behavior, and add parser capability to every baseline Adapter | highest review burden; parserless recovery changes materially |
 | Universal generated projections | medium ongoing cost: build generators, canonical output policy, freshness checks, read-only routing, reconciliation, and failure visibility for every supported Adapter | projections are rebuildable; rollback removes them without changing canonical source only if no consumer treated them as authority |
@@ -233,13 +263,17 @@ The human decision owner must inspect these changed and governing surfaces:
    Markdown Adapter — unchanged Adapter contract that the proposal must fit.
 5. `docs/DECISIONS.md` and `docs/requirements/REQUIREMENTS_LEDGER.md` — remain
    unchanged until the human decision; propagate only the selected option.
-6. Prototype commit [`a591a7d`](https://github.com/JustYannicc/skills/commit/a591a7d)
-   — shared fixtures, parser/action proof, and LLM round-trip evidence.
+6. Prototype commit
+   [`375f98871a443484e15fc6062da85f9342756c3b`](https://github.com/JustYannicc/skills/commit/375f98871a443484e15fc6062da85f9342756c3b)
+   — shared fixtures, strict parser/action proof, raw no-Git recovery, and
+   revision-bound Luna Max round-trip evidence.
 
-The reviewer should decide whether TOML's explicit syntax creates an
-unmeasured material advantage, whether the envelope is small enough, whether
-the no-parser fail-closed rule is acceptable, and whether optional projections
-are sufficiently bounded. Review approval must bind the exact PR revision.
+The reviewer should inspect each raw source/output pair, confirm that rationale
+and links remain naturally readable, and decide whether TOML's explicit syntax
+creates an unmeasured material advantage, whether the envelope is small enough,
+whether the no-parser fail-closed rule is acceptable, and whether optional
+projections are sufficiently bounded. Review approval must bind the exact PR
+revision.
 
 ## Primary research citations and provenance
 

@@ -1,8 +1,12 @@
 ---
 schema_version: 1
-record_id: SYS-000
+record_id: "[opaque logical id in the governing Coordination Space]"
 record_version: 0.1.0-draft
-state: candidate
+record_revision: "[exact Adapter revision or content identity]"
+canonical_locator: "[one writable record locator]"
+design_status: candidate
+operational_status: unbuilt
+catalog_eligibility: not_eligible
 owner:
   id: "[stable Actor id or unambiguous local label]"
   label: "[System owner]"
@@ -10,10 +14,7 @@ authority:
   decision_owner: "[who may accept, change, or activate it]"
   allowed_effects:
     - compose_without_effect
-relationships:
-  - kind: related
-    record_id: SYS-001
-    contract: "[interface or handoff contract locator]"
+governed_by: Thinking in Systems standard
 provenance:
   source: "[original request or governing source]"
   revision: "[source revision or date]"
@@ -21,6 +22,8 @@ provenance:
 approval:
   required: true
   status: pending
+  approver_id: "[stable Actor id]"
+  authority_revision: "[exact authority grant revision]"
   result_revision: "[exact proposed result revision]"
 ---
 
@@ -28,9 +31,9 @@ approval:
 
 Use this template only for a Durable system or material System change. Complete the mandatory meaning from the full standard; include a conditional field only for a named consumer or material risk. Link to facts owned elsewhere instead of copying them.
 
-For the Local Markdown Adapter, this Markdown file is the one writable human authority. Its constrained YAML envelope owns the formal identity, version, current state, owner, action Authority, relationship index, source provenance, and exact approval binding. The body explains their meaning and rationale by reference rather than copying those formal values. Delete the optional `approval` object when no named approval consumer or material risk requires it. Treat envelope comments, style, and key order as non-authoritative presentation.
+For the Local Markdown Adapter, this Markdown file is the one writable human authority. Its constrained YAML envelope owns the formal identity, version and exact record revision, canonical locator, distinct design/operational/eligibility states, owner, action Authority, source provenance, and exact approval binding. The body explains their meaning and rationale by reference rather than copying those formal values. Add `supersedes` only when a predecessor exists. Delete the optional `approval` object when no named approval consumer or material risk requires it. Treat envelope comments, style, and key order as non-authoritative presentation.
 
-Parse and validate the complete envelope before a machine-authorized lifecycle transition, projection, or external effect. A malformed, unsupported, or unavailable envelope remains readable and editable by a human but `unverified` and blocked for machine action. JSON or TOML projections are optional generated read-only views; they identify this canonical locator, record revision, source SHA-256, generation time, and freshness, reject direct edits, and never become a second authority. Adapter-native records may map the same logical fields without requiring YAML or TOML universally. See the [HUMAN REVIEW REQUIRED representation decision](../../../docs/SYSTEM_RECORD_REPRESENTATION.md).
+An Adapter that permits machine-authorized lifecycle transitions, projections, or external effects must implement the proposed `System Record structural validator` and `System Record action guard`. The validator parses the complete envelope; rejects YAML directives, aliases, anchors, explicit tags, duplicate keys, and unknown fields; validates the constrained schema; and validates the Section 2 relationship table's required columns, unique kind/identity/version rows, material-boundary text, and contract-link shape. The guard consumes only validated output and binds eligible lifecycle state, Authority, approval, and action to the exact record revision. Until both production seams exist and pass conformance proof, the Adapter cannot authorize those actions. A malformed, unsupported, or unavailable record remains readable and editable by a human but `unverified` and blocked for machine action. JSON or TOML projections are optional generated read-only views; they identify this canonical locator and record revision, bind source and normalized-payload SHA-256 values, record generation time, reject stale or direct edits, and never become a second authority. Adapter-native records may map the same logical fields without requiring YAML or TOML universally. See the [HUMAN REVIEW REQUIRED representation decision](../../../docs/SYSTEM_RECORD_REPRESENTATION.md).
 
 ## 1. Frame
 
@@ -51,7 +54,16 @@ Parse and validate the complete envelope before a machine-authorized lifecycle t
 
 - **Owned responsibilities:**
 
-The envelope's `relationships` list is the single relationship index. Add one entry for each known material relationship and delete unused placeholders. Use `unknown` only when the uncertainty is itself material. Each entry identifies the relationship kind, related System identity, and interface or handoff contract locator. Section 6 owns the detailed inputs, outputs, Authority, timing, failure behavior, and proof; link rather than copy them.
+Add one row for each known material relationship and delete unused placeholder rows. This is the single semantic relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
+
+| Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
+| --- | --- | --- | --- |
+| Containing System |  |  |  |
+| Subsystem |  |  |  |
+| Upstream System |  |  |  |
+| Dependent System |  |  |  |
+| Peer System |  |  |  |
+| Other material relationship |  |  |  |
 
 - **Affected but not controlled:**
 - **Included and excluded:**
@@ -112,8 +124,8 @@ The envelope's `relationships` list is the single relationship index. Add one en
 - **Explicit Ownership transfers and accepted continuation state:**
 - **Writable authority per information type:**
 - **Derived System representations, source revision, and freshness rule:**
-- **Stable identities and version binding:**
-- **Approval binding and revocation:**
+- **Stable identities and version binding beyond the envelope, including related Systems:**
+- **Approval rationale, revocation, and authoritative evidence beyond the envelope reference:**
 - **Named deterministic validators or effect guards for formalizable material rules:**
 
 ## 7. LLM and deterministic boundary
@@ -200,12 +212,12 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 
 ## 11. Discovery and operation
 
-- **Stable identity and canonical record:**
+- **Discovery routes for the envelope's stable identity and canonical locator:**
 - **Applicability and supported operations:**
 - **Relationship conflicts and precedence not expressed by the envelope index:**
 - **Applicability, operational eligibility, and freshness rationale beyond the envelope state and version:**
 - **Human-readable status and control surface:**
-- **Current state, last and next action, owner, and authoritative links:**
+- **Last and next action and authoritative links:** refer to, rather than repeat, the envelope's owner and status fields.
 - **Contract-selection evidence and no-match or conflict behavior:**
 - **Independent discovery route when an attention or delivery representation fails:**
 
