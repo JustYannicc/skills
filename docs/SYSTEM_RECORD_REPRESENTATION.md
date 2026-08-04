@@ -4,7 +4,7 @@
 approval makes this the decision record at that revision.
 **Human decision:** accept, reject, or revise the representation before issue
 #35 can close.
-**Evidence head:** `455541e255b5482235faa65a82bffc2b21415b94`.
+**Fixed point:** `455541e255b5482235faa65a82bffc2b21415b94`.
 **Disposable proof:**
 [`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1).
 
