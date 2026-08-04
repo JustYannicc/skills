@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-edge-physical-irreversible
 attempt: 1
 contextId: fresh-prototype-edge-physical-irreversible-1
-suiteRevision: git:4cd7c849eaf2aab8a1c5d1741a36dd4e52fae1c8
+suiteRevision: git:73ab8693bff32f8777d204e9c2c1f3d5498be0a4
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:40:00.000Z
 environment:
