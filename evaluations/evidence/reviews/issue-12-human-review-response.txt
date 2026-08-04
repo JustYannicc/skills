@@ -1,6 +1,7 @@
 Issue #12 human-review response
 Status: HUMAN REVIEW REQUIRED
 Date: 2026-08-04
+Historical scope: revision 176403c7f674471e8cb9554bfc1c9bfd003c9259 only. Later human review restored an installed public `references/sources.md`; this record does not describe the current candidate.
 
 Requested changes and resolutions:
 - Other skills are now quoted and identified as skills, for example the 'Workflow' skill.
@@ -8,7 +9,7 @@ Requested changes and resolutions:
 - Thinking in Systems vocabulary now ships inside the always-read runtime standard. CONTEXT.md points to it instead of redefining the same meanings.
 - The installed standard begins with operative guidance. It contains no title page, provenance section, maintainer section, accepted/open decision history, evidence inventory, or inaccessible source list.
 - Provenance, source classification, and historical evidence moved to docs/source/THINKING_IN_SYSTEMS_SOURCES.md outside the installed references.
-- The installed references/sources.md file was removed.
+- At this revision, the installed references/sources.md file was removed.
 - Fixed personal durations, check-in assumptions, biographical warning examples, narrow physical-environment lists, named preparation slogans, and domain-specific implementation technologies were removed or generalized.
 - References to AI judgment use LLM; System representation and deterministic mechanism have distinct meanings.
 - Opportunity cost is named and handled once with the other intervention economics instead of being scattered under unnamed variants.

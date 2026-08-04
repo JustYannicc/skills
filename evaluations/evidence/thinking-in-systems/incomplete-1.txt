@@ -1,14 +1,11 @@
-I’ve preserved the request: change the team’s reminder system so it automatically contacts people who miss a deadline.
+## Governance assessment — waiting for authority
 
-This is a material change to a durable system, but there is no eligible governing contract or authority to act. The unresolved gaps are:
+**Preserved request:** “Change the team's reminder system so it automatically contacts anyone who misses a deadline.”
 
-- the person or role authorized to approve automated contact and the change itself;
-- the eligible recipient scope and deadline definition;
-- the privacy, consent, retention, and message-delivery rules; and
-- the current reminder system’s canonical source, owner, and existing behavior.
+No change or contact will be made. This is a material change to an existing system, but its governing source/version, authorized decision-maker, recipient scope, and privacy, retention, and data-use rule are unknown. Without them, the triggering rule, affected people, permitted data, external effect, legacy impact, and proof boundary cannot be safely defined.
 
-No messages, configuration changes, recipient lookups, or durable records will be created. The only safe preparation is to preserve this request and collect the governing sources.
+Safe preparation is limited to preserving this proposal and documenting the gaps; no recipient lookup, message drafting, configuration, simulation, or durable system change is authorized.
 
-Who is authorized to approve this automation, and where are the current reminder-system contract and the applicable recipient/privacy policy?
+What is the current reminder-system contract (source and version), and which authorized owner can approve the exact recipient scope and privacy/retention rules for this change?
 
-The work is waiting for that authority and those sources. Once supplied, we can bind the approved scope and policy to the current system, propose the successor and its treatment of existing reminders, simulate the exact contact behavior without sending messages, and return the result for approval. The Workflow remains responsible for coordinating the blocked change and its eventual proof.
+Resume when that source and the authorized approval for the exact proposal are provided; then revalidate the contract, prepare a successor and change/legacy record, and simulate the proposed contacts with effectors disabled before any activation. The Workflow skill remains responsible for coordination while this governance gap is unresolved.

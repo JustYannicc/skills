@@ -1,0 +1,18 @@
+## System relationship index
+
+For the System of interest, record the known material relationships once in Section 2 of its Durable System Record:
+
+| Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
+| --- | --- | --- | --- |
+| Containing System | Parent System — version to be bound | This System is within the parent boundary; the Containing System owner retains ownership of integration and the containing Outcome. | Section 6 parent/System-of-interest integration handoff contract |
+| Subsystem | Child System A — version to be bound | Child System A is inside this System's boundary and owns its bounded contributory contract; this System retains integration responsibility. | Section 6 System/Child A handoff contract |
+| Subsystem | Child System B — version to be bound | Child System B is inside this System's boundary and owns its bounded contributory contract; this System retains integration responsibility. | Section 6 System/Child B handoff contract |
+| Peer System | Sibling System — version to be bound | Both Systems share the named Containing System. Peerhood alone creates neither a dependency nor Authority. | Link a shared-constraint or peer interface contract only if one is material |
+| Upstream System | External provider System — version to be bound | This System materially relies on the external System's contracted input, availability, interface, or policy. The relationship does not grant Authority across the boundary. | Section 6 upstream interface contract |
+| Dependent System | External consumer System — version to be bound | The external System materially relies on this System's contracted output or capability. The relationship does not transfer this System's ownership or Authority. | Section 6 dependent interface contract |
+
+Use stable identities and bind versions when they are known. The linked Section 6 contracts, not this index, hold inputs, outputs, timing, Authority, failure behavior, change notification, and completion proof.
+
+No further relationship discovery is required for this drafting step. Add an `unknown` row only if an unresolved relationship could change the Outcome, risk, proof, Authority, support, recovery, or change impact. Do not infer a Subsystem from a delegated Actor; that classification requires an internal System with its own bounded contributory Outcome.
+
+**Proof obligation:** verify that the six known relationships above appear exactly once, each with its related System, material boundary, and applicable contract link. The Containing System owner retains integration responsibility; Workflow retains coordination and the next decision.

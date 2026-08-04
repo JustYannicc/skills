@@ -1,65 +1,46 @@
-## Governing assessment
+## Governance assessment — proposed intake-classification change
 
-This is a material change to an existing Durable System: it changes a classification rule, affects all future intake, and alters the treatment of existing cases. The next-week target is a constraint, not authority to cut over without evidence.
+**Branch and state:** This is a material change to a Durable system, not an intake-rule operation. It changes a decision rule and state transition for all future cases and reinterprets existing cases. The system is ready for a Workflow decision; no rule has changed and no case has been reclassified.
 
-The request authorizes governance assessment only. It does not authorize the replacement, retroactive reclassification, or any resulting external effect.
+**Preserved request:** “Replace the intake classification rule next week for every new and existing case, including cases created under the old rule.”
 
-Before `'Workflow'` coordinates the change, establish:
+**Proposed Outcome:** An authorized successor rule classifies new cases and each eligible existing case correctly under a defined version, while preserving the original classification and history, making coverage and exceptions visible, and retaining a verified repair or rollback path. Good enough for activation is an approved successor contract and Change and Legacy Record, successful zero-effect simulation of the credible support matrix, bounded resumable rollout, and named evidence that the new rule improves the intended intake outcome without unacceptable burden or harm.
 
-- A successor System Record: exact new rule/version, intended Outcome, supported cases, owner, decision and approval Authority, effective date, interfaces, rule engine, exceptions, recovery, and proof.
-- A linked Change and Legacy Record: affected population, cohort discovery method, migration behavior, rollout/cutover, rollback or repair, and completion evidence.
-- One writable authority for case classification. Preserve each case’s original input, prior classification, rule version, decision history, and provenance; do not rewrite history to imply the new rule always applied.
-- The exact rule semantics, including whether retroactive classification changes only the current operational classification or also downstream obligations, communications, access, routing, reporting, or commitments.
-- The governing decision: why replacement beats waiting, changing the surrounding process, configuring an existing mechanism, or retaining the rule; include Opportunity cost, transition cost, maintenance burden, reversibility, delay cost, and the evidence threshold.
-- Clear handoffs: rule owner, approver, case owner, operators, affected consumers, and recovery owner. Capability or confidence does not grant approval Authority.
-- Deterministic enforcement for the rule, version binding, state transitions, approvals, and effect gates. Use an LLM only where probabilistic interpretation is genuinely needed; it must not be the sole policy engine, ledger, clock, or memory.
-- Simulation of the production-intended retrieval, interpretation, classification, and downstream path. It must render exact proposed classification changes and effects without changing production or user-visible state.
-- Proof that distinguishes rule correctness, intended Outcome improvement, migration burden or harm, and continuing operability. Include normal, ambiguous, missing-data, old-rule, degraded, recovery, and rollback cases.
+### Boundary, actors, and authority
 
-The smallest material gaps are: the exact replacement rule, the Authority to approve retroactive treatment, the downstream effects of changed classifications, and the acceptance/rollback criteria.
+Reopen the system boundary. Identify the containing intake process; the classification subsystem; upstream sources that create or enrich cases; dependent systems, queues, reports, automations, and teams that consume classifications; and material peer systems sharing rules, data, or constraints. For every relationship, record the interface, assumptions, owner, failure propagation, proof seam, and change-notification obligation.
 
-## Proposed legacy disposition
+Name the accountable system owner, rule steward, data owner, approver for the successor and activation, migration/review operator, support and recovery owner, and owners of each affected dependency. Workflow retains parent ownership and phase coordination. This assessment authorizes only framing, discovery, drafting, and zero-effect simulation; it does not authorize approval, activation, or live reclassification. Missing authority for any external effect is a decision gap.
 
-Treat every case created under the old rule as an explicitly classified legacy cohort; do not silently bulk-overwrite it.
+Material unknowns to resolve before approval include the purpose and acceptance criteria of the replacement rule; the authoritative source and version of both rules; eligible populations and retention/legal limits; case identity and history model; all consumers of the classification; exception policy; available rollback or repair capability; and the owner and authority for each consequential trade-off.
 
-- `auto-adapt`: cases whose preserved inputs map deterministically to the new rule with no ambiguity, lost meaning, or changed downstream obligation.
-- `review-required`: cases with ambiguous inputs, changed meaning, material downstream consequences, missing supporting evidence, or any non-deterministic classification step.
-- `conflict`: cases where the old and new rules impose incompatible obligations or where applying the new rule would violate an accepted commitment.
-- `unreachable/unknown`: cases whose required source data or owner cannot be reached; preserve their current state and make the gap visible.
-- `exempt`: only cases explicitly authorized to remain under the old rule.
-- `unaffected`: only if a discovered cohort is genuinely outside the stated “every existing case” scope.
+### Decision and operating conditions
 
-Simulate each disposition first. Cut over only after the exact successor rule, legacy disposition, approvals, and rollback/repair path are bound to the tested revision. `'Workflow'` can then coordinate the approved work; this assessment does not select its phases or claim completion.
-## Governing assessment for Workflow
+Compare at least: retain the old rule pending evidence; wait for the missing facts with a recheck trigger; change the surrounding intake process; configure an existing rules mechanism; and adopt the successor rule with a bounded migration. Assess opportunity cost, transition and ongoing support cost, delay, reversibility, and externalities for each affected actor and system. Do not claim a Pareto improvement until impacts on affected actors are known.
 
-This is a material change to a Durable intake-classification system, not a direct rule edit. It changes the treatment of every new case and reinterprets existing cases, so it reopens the System boundary and needs a proposed successor System Record plus a linked Change and Legacy Record. The rule must not be changed live from this assessment.
-
-### Frame and authority
-
-- **Request:** replace the intake classification rule next week for new and existing cases.
-- **Intent / Outcome:** use a classification rule that produces the accepted routing or treatment for both incoming and previously created cases, without losing history, misrouting work, or leaving unknown cohorts silently untreated.
-- **Good-enough threshold:** Workflow may advance a proposal only when the successor rule, its effective boundary, each affected cohort's disposition, approval authority, simulation results, rollout/rollback path, and recovery owner are explicit. It must pause rather than infer any of these material facts.
-- **Boundary:** the System of interest is intake classification and its resulting case state, routing, queues, records, and dependent downstream handling. Its containing system is the organization’s case-management operation. Material interfaces include case creators, operators, approvers, stored case records, rule/configuration owners, and every system or team consuming the classification.
-- **Authority:** an agent may inventory, propose, model, and simulate. The authorized rule owner must approve the exact successor revision, legacy transformation, activation date, and any external effects. Workflow retains parent responsibility and phase coordination; this assessment does not approve, activate, or complete the change.
-
-### Required governing constraints
-
-1. **Establish the successor contract before cutover.** Record the old and proposed rules, stable case identity, inputs and precedence, version/effective-time rules, classification output, exceptions, downstream interface contract, writable authority for each state field, and the owner for integrated outcomes. Preserve original classifications, original inputs, decisions, and provenance; a migration may add a new classification or disposition but must not rewrite history to imply the new rule always applied.
-
-2. **Discover and classify the legacy population.** Produce a bounded, resumable inventory with coverage counts and an explicit `unreachable/unknown` count. Classify every discoverable cohort as `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`. For each non-unaffected cohort, specify the exact transformation or re-evaluation, its preconditions, responsible owner, completion evidence, and rollback or repair path. Unknown coverage remains a visible risk, not evidence of compatibility.
-
-3. **Inspect the operating arrangement.** Identify who benefits from or bears the cost of faster or stricter classification; whether metrics reward throughput, closure, or a favorable category at the expense of correct treatment; and the counter-signal for that gaming route. Remove avoidable operator memory and lookup burdens with versioned defaults and deterministic validation. Test the real conditions that affect classification—missing fields, ambiguous cases, delayed approval, backlog, unavailable downstream consumers, and stale rule or reference data—rather than assuming normal operations.
-
-4. **Define modes and recovery.** In Normal mode, classify only under the approved version and show the rule version on each decision. In Degraded mode, permit only pre-authorized preservation or clearly marked provisional routing; block irreversible downstream effects that depend on a confident classification. In Paused mode, preserve intake and legacy state while preventing rule-driven transitions; expose the unblock condition and owner. In Recovery, restore the last accepted rule/state baseline or repair the bounded affected cohort, verify classifications and downstream reconciliation, then resume in bounded batches. Define triggers, allowed and blocked effects, preserved state, visibility, retry/resumption rules, exit proof, and the healthy baseline for each mode.
-
-5. **Simulate before effects.** Run the production-intended retrieval, interpretation, classification, legacy-discovery, and downstream proposal path with effectors and user-visible writes disabled. Render the exact proposed classifications, transformations, messages, waits, queue effects, exceptions, and rollback candidates. Cover normal cases, ambiguity, missing capability, invalid assumptions, degraded and recovery behavior, each legacy cohort, unknown coverage, and retirement of the old rule. Correct and replay every rejected material case before activation approval.
-
-6. **Prove the hypothesis and govern rollout.** State the hypothesis, baseline, mechanism, observation window based on the expected effect delay, real Outcome signal, operation signal, burden/harm signal, confounders, and retain/revise/pause decision rule. A favorable throughput or completion metric alone cannot promote the rule; pair it with a counter-signal for incorrect treatment, reversals, complaints, or downstream correction. Use a bounded, resumable rollout with a cutover condition, monitoring owner, stop threshold, rollback/repair procedure, and verification of both new and legacy cases.
+Inspect actual incentives and friction: metrics or queues that reward misclassification, defaults that bypass review, incentives to minimize backlog rather than improve intake outcomes, the burden of exception handling, training/access gaps, timing around next week's deadline, and substitution toward untracked workarounds. For every material metric, state its represented outcome, gaming route, and counter-signal. Treat the new rule as a hypothesis with baseline, mechanism, observation window, outcome signal, operation signal, burden/harm signal, confounders, and retain/revise/pause/retire decision rule.
 
 ### Proposed legacy disposition
 
-Treat all existing cases as a migration population, not as automatically reclassified. Preserve each case’s old rule version and prior classification. After discovery, assign the cohort disposition above; auto-adapt only where the approved transformation is deterministic and simulation has shown compatible downstream effects. Route `review-required` and `conflict` cases to a named authorized reviewer, preserve `exempt` cases under their old contract, and retain `unreachable/unknown` cases in a visible exception record with a re-discovery or retirement decision trigger. Explicitly preserve or retire the old rule only after outstanding work, dependent interfaces, access, history, and discovery metadata have been handled.
+Create a successor System Record and linked Change and Legacy Record. Discover the affected population without altering it. Preserve original captures, old classifications, decisions, and provenance. Classify every discoverable cohort as `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`; report counts and keep unknown coverage visible. For each cohort, define the exact transformation or re-evaluation, authoritative writable state, expected dependent-system impact, proof, and whether it may be automatically applied only after approval. Do not rewrite history to imply the new rule always governed.
 
-### Workflow decision gate
+Before any live effect, run a zero-effect simulation through the production-intended retrieval, interpretation, decision, and composition path. Render the exact proposed classifications, writes, messages, waits, dependent effects, exceptions, and rollback/repair actions while disabling production effectors and durable/user-visible writes. Cover normal cases, ambiguous cases, stale or missing source data, missing dependency or approval, incorrect assumptions, each legacy cohort including unknown coverage, degraded behavior, recovery, and predecessor retirement. Correct and replay every rejected material case. Bind approval to the exact successor revision and material assumptions.
 
-Workflow should coordinate framing, the successor and Change and Legacy Records, authority confirmation, zero-effect simulation, adversarial review, resolution check, and the activation decision. It may not schedule or perform the live rule change until the authorized owner accepts the exact proposed revision and the simulation, rollout, rollback, recovery, and legacy-coverage evidence meet the stated threshold.
+Define bounded, resumable rollout and cutover; a stop condition; reconciliation; verification at public seams; and rollback or repair that restores the accepted baseline without erasing historical facts. Preserve predecessor access and the ability to identify its governed cases until retirement criteria and required history retention are met.
+
+### Required operating contract
+
+| Mode | Trigger | Allowed work | Blocked work | Exit proof |
+| --- | --- | --- | --- | --- |
+| Normal | Approved version, dependencies healthy, and simulation evidence accepted | Apply the approved version within the bounded rollout; record versioned decisions and evidence | Unapproved scope expansion or irreversible cleanup | Reconciliation, coverage, outcome, burden, and dependent-system checks pass |
+| Degraded | Dependency, source quality, capacity, or evidence falls below the approved condition | Preserve incoming cases and perform only pre-authorized safe classification or review | Automatic migration/reclassification that could create unverified effects | Limitation is visible; required dependencies and proof seams are restored |
+| Paused | No safe useful action, authority missing, a material ambiguity exists, or rollback/recovery capability is unavailable | Preserve versioned state, queue work, expose the unblock condition | New rule effects and destructive predecessor retirement | Named authority, capability, or evidence gap is resolved and affected simulations are replayed |
+| Recovery | Incident, failed verification, rollback, or recurring error | Bounded triage, restore the accepted baseline, reconcile affected cases, and preserve incident evidence | Resuming autonomous effects before correction and replay | Baseline and affected cases are verified; governing cause is corrected; approval is renewed if stale |
+
+The contract also needs stale-assumption, retry, queue-growth, deadline, interruption, and escalation rules; deterministic controls for stable IDs, version binding, approvals, transitions, reconciliation, and effect gates; and a human-visible control surface for exceptions and recovery.
+
+### Proof, records, and next handoff
+
+Persist the successor System Record, Change and Legacy Record, simulation fixtures/results, approval revision, cohort coverage including unknowns, rollback/repair evidence, and operational health/decay signals because authority, state, recovery, and evidence must survive this interaction. A Design Complete successor must let another competent implementer simulate it without inventing a material rule; it then requires one independent adversarial review and a separate resolution check before activation.
+
+Workflow should coordinate the unresolved authority and rule-definition decisions, the relationship and legacy discovery, the proposed records, simulation, review, and activation gate. The governing constraints above are the handoff; the requested outcome remains unperformed.

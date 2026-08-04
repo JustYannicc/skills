@@ -2,11 +2,12 @@ Issue #12 full-standard targeted trace
 Status: HUMAN REVIEW REQUIRED
 Evaluator: independent fresh-context gpt-5.6-terra read-only subagent
 Date: 2026-08-04
+Historical scope: revision 176403c7f674471e8cb9554bfc1c9bfd003c9259 only. This trace predates later vocabulary, relationship, economics, and fixture revisions and is not proof for the current candidate.
 
 Read completely:
 - skills/thinking-in-systems/SKILL.md
 - skills/thinking-in-systems/references/standard.md (opening rule, vocabulary, sections 1-9, and final section-accounting rule)
-- all seven Thinking in Systems fixtures and all eleven bound raw-evidence files
+- all seven Thinking in Systems fixtures and all eleven bound raw-evidence files present at that revision
 
 Section-to-observable-behavior mapping:
 - Vocabulary: direct evidence uses Outcome and Authority; indirect evidence separates LLM composition from deterministic effects; consequential evidence uses System and Change and Legacy Records plus Opportunity cost.

@@ -1,0 +1,32 @@
+## Irreversible-effect governance assessment
+
+The Workflow skill retains coordination and execution. This assessment authorizes no destruction and performs no effect.
+
+### Accepted frame
+
+- **Intent and Outcome:** prevent harm from the unsafe material. Good enough is that the exact unsafe batch is removed from use and storage risk through an authorized disposition, with the effect and any surrounding-state recovery visibly proven.
+- **System of interest and boundary:** the disposition of the precisely identified batch. The assessment covers identity, safety evidence, authorization, the disposal effect, affected inventory and records, and recovery of surrounding state; it does not expand to destruction of other material or take over Workflow coordination.
+- **Authority:** bind the safety owner's accepted destruction authorization to the exact batch identity, authoritative unsafe-condition evidence, selected destruction method, and effect revision. The executing actor may perform only that bound effect.
+
+### Intervention decision
+
+Destruction is not rejected merely because it is irreversible. The feasible alternatives must be recorded and compared: do nothing or continue storage (excluded by material risk); wait (only if a named fact could change the safety finding before risk becomes unacceptable); reuse (already infeasible); and any safe reversible containment or reclassification. Confirm from authoritative evidence that no acceptable reversible path clears the safety Outcome. Limit the effect to the exact batch and the least-irreversible scope that does so.
+
+Before execution, Workflow must complete proportional stronger mise en place:
+
+- verify the exact batch identifier, quantity or boundaries, custody/location, and authoritative unsafe-condition evidence;
+- verify that the safety owner's approval remains applicable to this exact effect revision and that the executor has authority for the method and site;
+- record the selected method, required safeguards, and pre-effect checks;
+- identify material consequences and Externalities, including exposure during handling, effects on adjacent inventory, records, dependent operations, operators, and required notifications; assign each an owner; and
+- define containment and a safe paused/degraded path if identity, authorization, safety evidence, or a required safeguard fails.
+
+There is no rollback path for destruction. Instead, define mitigation, repair, or recovery for surrounding state: isolate or secure adjacent material as required, reconcile inventory and custody records, notify affected dependent systems or owners, manage any residual hazard or waste, investigate misidentification or handling failure, and restore the accepted safe baseline with evidence.
+
+### Proof and handoff to Workflow
+
+The pre-effect record must name the exact authorized batch, its unsafe-condition evidence, bound approval, method, and passed checks. Post-effect proof must separately show:
+
+1. completed destruction of that exact batch; and
+2. completed recovery or reconciliation of surrounding state, including any containment, inventory/custody update, notification, and residual-hazard disposition.
+
+If any pre-effect check fails or becomes stale, preserve the batch state, prevent the effect, expose the gap, and return to Workflow for a renewed decision or approval. With those governing constraints satisfied, the state is **ready for Workflow decision**.

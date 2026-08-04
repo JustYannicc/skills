@@ -1,0 +1,36 @@
+## Economic governance assessment
+
+**Disposition: accept the current candidate and stop additional feature delivery for now.** It already clears the agreed good-enough threshold. The three observed failure causes are a Pareto concentration hypothesis that should focus attention on the first fix and the remaining two causes; they are not an 80/20 rule, a claim of a Pareto improvement, or a reason to discard protected requirements.
+
+The next feature currently fails the marginal case: its high setup and transition cost, uncertain and apparently low incremental Outcome, possible support burden shifted to another team, and risk of users substituting a manual workaround outweigh its evidenced next-step value. The second feature should not be bundled in by default; doing so would spend option value before the first change has produced evidence. This is an exploitation decision: implement or retain the threshold-clearing candidate on the established path, with no added feature effects authorized by this assessment.
+
+### Decision frame
+
+- **Outcome and proof:** reduce meaningful booking failures while retaining a usable supported booking path. Prove both the Outcome (failure reduction) and burden: support-team load, manual-workaround use, user friction, and recovery or accessibility regressions. A lower failure count alone is not sufficient if it increases workaround or support burden.
+- **Actors and boundary:** booking users, the booking-System owner/operator, and the receiving support team are affected Actors. The support handoff is a material boundary; its owner must either accept the added duty or the burden must be mitigated, reversed, or explicitly authorized. No aggregate gain establishes a Pareto improvement while that team may be worse off.
+- **Constraints and feasible set:** retain the threshold, supported user journeys, support capacity, maintenance ownership, and the decision Authority for scope and cross-team burden. Feasible alternatives are: keep the current candidate only; wait for decision-relevant evidence; change process or support conditions; configure the maintained System; or run a small experiment for one proposed feature. Building both additional features is not currently justified.
+- **Preferences and substitution:** users may prefer the manual path when changed booking friction makes it relatively easier or safer; that is a testable substitution effect, not proof of preference. The support team may prefer predictable, bounded work over transferred exception handling. These preferences may conflict and must not be collapsed into one utility score.
+
+### Cost and scale
+
+Use one stated horizon and comparable booking Outcome units before making a scale claim. Separate:
+
+- fixed setup cost for design, integration, rollout, training, and support readiness;
+- variable cost per booking or support contact;
+- marginal total cost and burden of the next feature; and
+- average total cost per comparable successful booking over the chosen horizon.
+
+Future volume is uncertain, so do not assume that larger scale lowers cost. Minimum efficient scale is relevant only if repeated comparable booking Outcome units and a credible long-run cost relationship are established. Keep support time, coordination, user attention, trust, and workaround risk visible rather than monetizing them without evidence.
+
+### Bounded evidence gate
+
+Do not build further merely to learn. The Workflow skill should coordinate a bounded, reversible experiment only if an answer could change the stop decision. For the next feature, measure or obtain the smallest discriminating evidence:
+
+1. Expected failure reduction beyond the first fix, with a comparison to the three concentrated causes.
+2. Setup, transition, and ongoing support load; whether the receiving team accepts ownership and capacity.
+3. Change in completion, manual-workaround rate, and user-reported friction, including affected or inaccessible journeys.
+4. A plausible volume range and whether it changes marginal versus average total cost for comparable successful bookings.
+
+Run the experiment through the production-intended decision path with effects bounded or simulated, a rollback path, and a named observation window. Retain the stop disposition unless the evidence shows that the next feature clears the good-enough threshold for incremental Outcome, does not leave an unaccepted Externality, and has expected marginal value greater than its incremental total cost. If it does, reassess that one feature independently; do not infer that the second follows.
+
+This assessment creates no external effect or scope approval. The Workflow skill retains evidence gathering, phase coordination, decision recording, and any authorized implementation.

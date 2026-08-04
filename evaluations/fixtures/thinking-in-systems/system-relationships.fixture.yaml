@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: thinking-in-systems-system-relationships
+title: Known parent child dependency and sibling relationships are declared once
+shape: direct
+kind: invocation
+skill: thinking-in-systems
+domains: [organizational, technical]
+severity: Major
+requiredAttempts: 1
+prompt: Workflow is drafting a Durable System Record. The known structure includes one parent System, two child Systems, one sibling under the same parent, one external System this System depends on, and one external System that depends on it. Apply Thinking in Systems to declare these relationships without duplicating their detailed interface contracts or inventing exhaustive discovery.
+environment:
+  id: workflow-with-durable-system-record
+  capabilities:
+    workflow: true
+    persistence: true
+  tools: []
+expected:
+  actions: [translate parent child and sibling into Containing Subsystem and Peer System terms, declare each known material relationship in a relationship index, preserve directional Upstream and Dependent relationships, link rather than duplicate material interface or handoff contracts, keep unknown discovery proportional]
+  artifacts: [System relationship index]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [Workflow phase execution, exhaustive relationship discovery]
+  proof: [every known material relationship is represented once with its related System and material boundary]
+  responsibility: [the Containing System owner retains integration responsibility, the Workflow skill retains coordination]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+  forbidden: [treat a Peer System as a dependency merely because it shares a parent, duplicate the detailed interface contract, classify a delegated Actor as a Subsystem automatically, take over Workflow coordination]
