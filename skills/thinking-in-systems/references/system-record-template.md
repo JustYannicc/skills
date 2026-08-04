@@ -6,14 +6,19 @@ record_revision: "[exact Adapter revision or content identity]"
 canonical_locator: "[one writable record locator]"
 design_status: candidate
 operational_status: unbuilt
+operating_mode: normal
 catalog_eligibility: not_eligible
 owner:
   id: "[stable Actor id or unambiguous local label]"
   label: "[System owner]"
 authority:
   decision_owner: "[who may accept, change, or activate it]"
+  revision: "[exact Authority grant revision]"
   allowed_effects:
-    - compose_without_effect
+    - kind: compose_without_effect
+      action: "[named action]"
+      boundary: "[exact target and scope]"
+      contract: "[governing effect or handoff contract locator]"
 governed_by: Thinking in Systems standard
 provenance:
   source: "[original request or governing source]"
@@ -25,15 +30,16 @@ approval:
   approver_id: "[stable Actor id]"
   authority_revision: "[exact authority grant revision]"
   result_revision: "[exact proposed result revision]"
+  valid_until: "[ISO-8601 timestamp]"
 ---
 
 # [System name] — System Record
 
 Use this template only for a Durable system or material System change. Complete the mandatory meaning from the full standard; include a conditional field only for a named consumer or material risk. Link to facts owned elsewhere instead of copying them.
 
-For the Local Markdown Adapter, this Markdown file is the one writable human authority. Its constrained YAML envelope owns the formal identity, version and exact record revision, canonical locator, distinct design/operational/eligibility states, owner, action Authority, source provenance, and exact approval binding. The body explains their meaning and rationale by reference rather than copying those formal values. Add `supersedes` only when a predecessor exists. Delete the optional `approval` object when no named approval consumer or material risk requires it. Treat envelope comments, style, and key order as non-authoritative presentation.
+For the Local Markdown Adapter, this Markdown file is the one writable human authority. Its constrained YAML envelope owns the formal identity, version and exact record revision, canonical locator, distinct design/operational/eligibility states and operating mode, owner, exact named/scoped action Authority, source provenance, and exact approval binding. The body explains their meaning and rationale by reference rather than copying those formal values. Add `supersedes` only when a predecessor exists. Delete the optional `approval` object when no named approval consumer or material risk requires it; add `revoked_at` only after revocation. Treat envelope comments, style, and key order as non-authoritative presentation.
 
-An Adapter that permits machine-authorized lifecycle transitions, projections, or external effects must implement the proposed `System Record structural validator` and `System Record action guard`. The validator parses the complete envelope; rejects YAML directives, aliases, anchors, explicit tags, duplicate keys, and unknown fields; validates the constrained schema; and validates the Section 2 relationship table's required columns, unique kind/identity/version rows, material-boundary text, and contract-link shape. The guard consumes only validated output and binds eligible lifecycle state, Authority, approval, and action to the exact record revision. Until both production seams exist and pass conformance proof, the Adapter cannot authorize those actions. A malformed, unsupported, or unavailable record remains readable and editable by a human but `unverified` and blocked for machine action. JSON or TOML projections are optional generated read-only views; they identify this canonical locator and record revision, bind source and normalized-payload SHA-256 values, record generation time, reject stale or direct edits, and never become a second authority. Adapter-native records may map the same logical fields without requiring YAML or TOML universally. See the [HUMAN REVIEW REQUIRED representation decision](../../../docs/SYSTEM_RECORD_REPRESENTATION.md).
+An Adapter that permits machine-authorized lifecycle transitions, projections, or external effects must implement the proposed `System Record structural validator` and `System Record action guard`. The validator parses the complete envelope; rejects YAML directives, aliases, anchors, explicit tags, duplicate keys, and unknown fields; validates the constrained schema; and validates the Section 2 relationship table's required columns, unique kind/identity/version rows, material-boundary text, and contract-link shape. The guard consumes only validated output and matches the requested action, target/scope, and contract to an exact current Authority revision; it also binds eligible lifecycle state and `normal` mode, current record revision, approval result and Authority revisions, validity, and revocation. Until both production seams exist and pass conformance proof, the Adapter cannot authorize those actions. A malformed, unsupported, or unavailable record remains readable and editable by a human but `unverified` and blocked for machine action. JSON or TOML projections are optional generated read-only views; they identify this canonical locator and record revision, bind source and independently parsed canonical-payload SHA-256 values, record generation time, reject stale, forged, or direct edits, and never become a second authority. Adapter-native records may map the same logical fields without requiring YAML or TOML universally. See the [HUMAN REVIEW REQUIRED representation decision](../../../docs/SYSTEM_RECORD_REPRESENTATION.md).
 
 ## 1. Frame
 
@@ -54,7 +60,7 @@ An Adapter that permits machine-authorized lifecycle transitions, projections, o
 
 - **Owned responsibilities:**
 
-Add one row for each known material relationship and delete unused placeholder rows. This is the single semantic relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
+Add one row for each known material relationship and delete unused placeholder rows. This is the single semantic relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. For machine-validated Local Markdown records, format the second cell as `<opaque identity> @ <exact version>`. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
 
 | Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
 | --- | --- | --- | --- |

@@ -6,7 +6,7 @@ approval makes this the decision record at that revision.
 #35 can close.
 **Evidence head:** `455541e255b5482235faa65a82bffc2b21415b94`.
 **Disposable proof:**
-[`375f98871a443484e15fc6062da85f9342756c3b`](https://github.com/JustYannicc/skills/commit/375f98871a443484e15fc6062da85f9342756c3b).
+[`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1).
 
 > **HUMAN REVIEW REQUIRED:** merging the associated PR accepts the proposed
 > representation changes in this package. The proof and recommendation do not
@@ -26,9 +26,11 @@ approval makes this the decision record at that revision.
    is a suite convention, not part of CommonMark.
 3. The envelope owns an opaque logical record identity, human-facing version,
    exact record revision, canonical locator, distinct design/operational/
-   eligibility states, owner, action Authority, provenance reference, and an
-   optional exact-revision approval binding. The existing Section 2 table
-   remains the single semantic relationship index; the envelope does not copy it.
+   eligibility states and operating mode, owner, exact named/scoped action
+   Authority, provenance reference, and an optional approval binding with exact
+   result/Authority revisions, validity, and revocation state. The existing
+   Section 2 table remains the single semantic relationship index; the envelope
+   does not copy it.
 4. A production Adapter that authorizes machine lifecycle transitions,
    projections, or effects must implement two named seams: a `System Record
    structural validator` and a `System Record action guard`. The validator
@@ -36,8 +38,10 @@ approval makes this the decision record at that revision.
    anchors, explicit tags, duplicate keys, and unknown fields; validates typed
    objects; and validates the canonical relationship table's required columns,
    identity/version/boundary/link shapes, and uniqueness. The guard consumes
-   only validated output and binds eligible state, Authority, approval, and the
-   action to the exact record revision. Until both seams are implemented and
+   only validated output and matches the requested action, target/scope, and
+   contract to an exact current Authority revision. It also binds eligible state
+   and `normal` mode, current record revision, approval result/Authority
+   revisions, validity, and revocation. Until both seams are implemented and
    proven for an Adapter, the Adapter cannot authorize those actions. Syntax
    and schema validity never assert that the narrative, evidence, ownership,
    relationship classification, or decision is semantically correct.
@@ -47,7 +51,8 @@ approval makes this the decision record at that revision.
    for a declared Adapter consumer. Each projection is read-only, identifies
    its canonical source locator, source revision and SHA-256, records its
    generation time and normalized-payload SHA-256, and is rejected when stale,
-   mutated, or presented to a writable ingestion seam.
+   forged against the independently parsed canonical source, or presented to a
+   writable ingestion seam.
 7. **TOML status: optional generated projection only; not canonical.** No core
    skill or baseline Adapter requires a TOML parser.
 
@@ -97,31 +102,33 @@ options:
 4. Canonical Markdown with one-way generated JSON and TOML projections.
 
 The corpus contains an opaque logical identity, record/schema versions and exact
-revision, distinct design/operational/eligibility states, a canonical locator,
-an Actor reference, enumerated effect Authority, two typed/versioned
-relationships with material boundaries, provenance with a source revision and
-SHA-256, an approver/authority/result revision binding, narrative rationale, a
-working relative Markdown link, an HTML narrative comment, and an envelope
-comment. Relationship objects deliberately stress structured syntax across all
-four options; the proposed production envelope preserves the existing Section 2
-relationship table instead of adopting those comparison-only objects.
+revision, distinct design/operational/eligibility states and operating mode, a
+canonical locator, an Actor reference, a current Authority revision with a
+named action/target-scope/contract grant, provenance with a source revision and
+SHA-256, an approval/result/Authority revision plus validity binding, narrative
+rationale, a working relative Markdown link, an HTML narrative comment, and an
+envelope comment. The Section 2 Markdown table is the sole relationship
+authority in every option, including TOML-only's narrative string; it contains
+two typed/versioned rows with material boundaries and contract links.
 
 Variants cover a deterministic owner/rationale edit simulation, duplicate-key
 and unknown-nested-field malformed YAML and TOML, restricted YAML features,
-missing Authority, pending/ineligible/retired/stale approval cases, direct and
-mutated projection writes, and a canonical edit/revision change that makes a
+duplicate/missing-version/unknown-kind/malformed-link relationship rows,
+missing or stale Authority, wrong action/scope, pending/expired/revoked approval,
+ineligible/retiring/non-normal-mode state, direct projection writes, forged
+payload-plus-hash, reordered output, and canonical edits/revisions that make a
 projection stale. Raw fixtures are also copied outside Git and read by a Node
 process that imports no YAML or TOML parser.
 
-The prototype branch is intentionally outside the proposed production tree.
-Its [README, fixtures, raw LLM outputs, and runner](https://github.com/JustYannicc/skills/tree/375f98871a443484e15fc6062da85f9342756c3b/prototypes/system-record-representation)
+The prototype branch is intentionally outside the proposed production tree. Its
+[README, production-shaped fixtures, raw LLM outputs, table parser, and runner](https://github.com/JustYannicc/skills/tree/dabfca4956e6d07a0cea18d278e75d8726b07ff1/prototypes/system-record-representation)
 are frozen at the exact revision above; this file records the decision-relevant
 result.
 
 ## Measured outcomes
 
 All four options parsed to normalized semantic SHA-256
-`f3b522055b8d26ddff85bf0ae6a67a7c802c0b78cbbd8feb48016f51e4912c3b`.
+`c14a4cb1a0f6dfe0026e262949d21bbd9939c722d42548d995e22b23ce98604d`.
 
 | Measure | Markdown + YAML | Markdown + TOML | TOML-only | Canonical Markdown + generated JSON/TOML |
 | --- | --- | --- | --- | --- |
@@ -134,19 +141,23 @@ All four options parsed to normalized semantic SHA-256
 | Envelope comment retained by parser serialization | no | no | no | no; JSON has no comment syntax |
 | Narrative HTML comment retained | pass | pass | pass inside narrative string | pass in canonical source; not promised in projections |
 | Parserless narrative surface | ordinary Markdown body | ordinary Markdown body | TOML multiline string boundary | ordinary canonical Markdown body |
-| Source bytes in this hand-formatted fixture | 1,851 | 1,903 | 1,914 | 1,851 canonical plus generated copies |
-| Duplicate-key and nested-unknown source blocks | pass | pass | pass | pass at canonical source; missing/mutated projection also blocks |
+| Source bytes in this hand-formatted fixture | 2,203 | 2,250 | 2,261 | 2,203 canonical plus generated copies |
+| Duplicate-key and nested-unknown envelope source blocks | pass | pass | pass | pass at canonical source; missing projection also blocks |
+| Duplicate/missing-version/unknown-kind/malformed-link relationship table blocks | pass | pass | pass | pass at canonical source |
 | Raw narrative recovery outside Git without a YAML/TOML parser | pass | pass | pass, with multiline-string boundary scan | pass at canonical source |
-| Projection semantic equivalence, freshness, and direct-write rejection | not applicable | not applicable | not applicable | JSON and TOML pass; source edit/revision change or payload mutation fails; direct write rejected |
+| Exact action/scope/Authority/revision/mode/approval guard | same schema/guard required | same | same | positive control passes; every stale, wrong-scope, non-normal, expired, revoked, pending, ineligible, or retiring case blocks |
+| Projection semantic equivalence, freshness, and direct-write rejection | not applicable | not applicable | not applicable | JSON/TOML and reordered objects pass; source edit/revision change, payload mutation, or forged payload+hash fails; direct write rejected |
 
 The independent Luna Max trial performed the same edit in isolated raw copies:
 change the owner label, add one recovery sentence beneath `## Rationale`, and
-preserve every identity, version/revision, lifecycle/eligibility state,
-Authority field, relationship/version/boundary, provenance value, approval,
-link, and comment. The exact input revision, model, reasoning effort, context ID,
-raw outputs, and SHA-256 values are retained in the proof branch. One LLM trial
-is behavioral evidence, not a deterministic guarantee. Human readability and
-representation judgment deliberately remain the maintainer's PR decision.
+preserve every identity/version/revision; lifecycle, eligibility, and mode
+state; Authority revision and action/scope/contract grant; Section 2
+relationship identity/version/boundary/link; provenance value; approval
+validity/revocation field; link; and comment. The exact input revision, model,
+reasoning effort, context ID, raw outputs, and SHA-256 values are retained in the
+proof branch. One LLM trial is behavioral evidence, not a deterministic
+guarantee. Human readability and representation judgment deliberately remain
+the maintainer's PR decision.
 
 Parser serialization intentionally tests normalized meaning rather than byte
 identity. YAML and TOML comments are not semantic data, so a material operator
@@ -161,13 +172,13 @@ The deterministic seam validates only formal rules needed by a named consumer:
 | --- | --- |
 | supported schema version and complete envelope boundary | whether the original request and Intent are understood |
 | opaque record identity, human-facing version, exact record revision, and canonical locator shape | whether an owner or decision authority is legitimate |
-| distinct enumerated design, operational, and eligibility states | whether any state claim is true |
-| structurally complete Actor and Authority references | whether the granted Authority covers the proposed effect |
-| canonical relationship-table columns, unique kind/identity/version rows, material-boundary text, and contract-link shape | whether a relationship is material, correctly classified, or governed by the linked contract |
+| distinct enumerated design, operational, eligibility, and operating-mode states | whether any state claim is true |
+| structurally complete Actor and current Authority revision plus named action, target/scope, and contract | whether the Actor legitimately holds Authority or the grant should exist |
+| canonical relationship-table columns, `<identity> @ <version>` cells, unique kind/identity/version rows, material-boundary text, and contract-link shape | whether a relationship is material, correctly classified, or governed by the linked contract |
 | provenance locator, revision, and hash shape | whether a source is authoritative, the declared hash was verified, or evidence is credible |
-| typed conditional object shape and approver/authority/result fields with exact result-revision equality when approval is present | whether the approver legitimately holds the cited Authority, whether the condition is material, or whether another narrative conditional section applies |
-| projection source locator/revision/hash, normalized-payload hash, read-only marker, and freshness | whether the projection preserves all useful narrative meaning |
-| eligible lifecycle state, exact revision, enumerated effect, and approval equality implemented by the proposed action-guard contract | whether the effect is wise or satisfies the Outcome |
+| typed conditional object shape and approver/Authority/result fields with current Authority/result equality, validity, and revocation when approval is present | whether the approver legitimately holds the cited Authority, whether the condition is material, or whether another narrative conditional section applies |
+| projection source locator/revision/hash, independently derived canonical-payload hash, read-only marker, and freshness | whether the projection preserves all useful narrative meaning |
+| eligible lifecycle state, normal mode, current record/Authority revisions, exact requested action/scope/contract grant, and valid unrevoked approval | whether the effect is wise or satisfies the Outcome |
 
 An invalid or unavailable parser produces visible `unverified` or `blocked`
 machine state. The narrative remains available for human reading and editing,
@@ -184,11 +195,11 @@ therefore has no machine-effect capability.
 | Adapter or condition | Canonical representation | Required parser capability | Derived projection support | Degraded behavior |
 | --- | --- | --- | --- | --- |
 | Transient Conversation | conversation state; no durable file before a Persistence boundary | none | none | materialize through a Baseline Adapter before durable work |
-| Local Markdown, no Git | Markdown + constrained YAML envelope | restricted YAML subset + schema + proposed action guard for machine actions; Adapter revision need not be Git | optional; off by default | human reads/edits narrative; machine actions block when parser/guard is unavailable |
-| Git-backed Local Markdown | same canonical file, with Git revision available as one exact-revision mechanism | restricted YAML subset + schema + proposed action guard | optional JSON/TOML with source revision/source hash/payload hash | stale, mutated, or conflicted source enters recovery |
+| Local Markdown, no Git | Markdown + constrained YAML envelope and canonical Section 2 table | restricted YAML subset + table/schema structural validator + action guard for machine actions; Adapter revision need not be Git | optional; off by default | human reads/edits narrative; machine actions block when either seam is unavailable |
+| Git-backed Local Markdown | same canonical file, with Git revision available as one exact-revision mechanism | restricted YAML/table/schema structural validator + action guard | optional JSON/TOML with source revision/source hash/independently derived canonical-payload hash | stale, forged, or conflicted source enters recovery |
 | GitHub or another hosted native Adapter | one native writable record with mapped envelope fields and a human-readable body | host-native field validation plus universal invariants | optional external read-only view | disclose unsupported fields/capabilities; do not shadow-write a local copy |
 | External Adapter provider | provider's one canonical native record after conformance proof | provider mapping validates every applicable envelope rule | optional for a declared consumer | fall back or remain incomplete when Baseline semantics cannot be preserved |
-| Projection-only consumer | no authority; reads the canonical Adapter's generated output | JSON or TOML parser plus freshness verification | required for that consumer only | reject missing, writable, malformed, or stale projection and route edits to source |
+| Projection-only consumer | no authority; reads the canonical Adapter's generated output | JSON or TOML parser plus canonical-source semantic/freshness verification | required for that consumer only | reject missing, writable, malformed, stale, or forged projection and route edits to source |
 | No parser available | canonical text remains readable | none | unavailable | preserve state and narrative; block machine action until validation returns |
 
 ## Decisive trade-offs
@@ -201,8 +212,9 @@ therefore has no machine-effect capability.
 - It matches the repository's current `System Record` template, Setup
   configuration contract, Agent Skills frontmatter convention, and existing
   pinned YAML/Zod validation stack.
-- The decisive safety property comes from the constrained schema and action
-  guard. It does not depend on YAML's permissiveness.
+- The decisive safety property comes from the constrained schema, canonical
+  table validator, and exact-action guard. It does not depend on YAML's
+  permissiveness.
 
 ### Why TOML did not win
 
@@ -227,7 +239,7 @@ on demand, never a baseline artifact or writable authority.
 
 | Choice | Cost from current repository state | Legacy and rollback consequence |
 | --- | --- | --- |
-| Recommended Markdown + constrained YAML | low: the template and Local Markdown design already use this container; add schema/revision/locator and typed Authority/approval fields, preserve distinct lifecycle fields, and keep the existing Section 2 relationship index | source-archive copies remain immutable historical evidence; no published/live suite records are known, while external copies remain unknown and require discovery before claiming zero migration |
+| Recommended Markdown + constrained YAML | low: the template and Local Markdown design already use this container; add schema/revision/locator, operating mode, typed scoped Authority, validity/revocation approval fields, and the machine-validated identity/version convention while keeping the existing Section 2 relationship index | source-archive copies remain immutable historical evidence; no published/live suite records are known, while external copies remain unknown and require discovery before claiming zero migration |
 | Markdown + TOML | medium: translate frontmatter, add and pin a TOML parser, update every validator/example, and teach a new delimiter convention | retain predecessor locators; rollback translates metadata back to YAML |
 | TOML-only | high: transform every narrative section into TOML strings/tables, replace Markdown rendering/link behavior, and add parser capability to every baseline Adapter | highest review burden; parserless recovery changes materially |
 | Universal generated projections | medium ongoing cost: build generators, canonical output policy, freshness checks, read-only routing, reconciliation, and failure visibility for every supported Adapter | projections are rebuildable; rollback removes them without changing canonical source only if no consumer treated them as authority |
@@ -264,9 +276,10 @@ The human decision owner must inspect these changed and governing surfaces:
 5. `docs/DECISIONS.md` and `docs/requirements/REQUIREMENTS_LEDGER.md` — remain
    unchanged until the human decision; propagate only the selected option.
 6. Prototype commit
-   [`375f98871a443484e15fc6062da85f9342756c3b`](https://github.com/JustYannicc/skills/commit/375f98871a443484e15fc6062da85f9342756c3b)
-   — shared fixtures, strict parser/action proof, raw no-Git recovery, and
-   revision-bound Luna Max round-trip evidence.
+   [`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1)
+   — production-shaped shared fixtures, strict envelope/table/action proof,
+   forged-projection rejection, raw no-Git recovery, and revision-bound Luna Max
+   round-trip evidence.
 
 The reviewer should inspect each raw source/output pair, confirm that rationale
 and links remain naturally readable, and decide whether TOML's explicit syntax
