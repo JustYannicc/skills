@@ -43,6 +43,23 @@ The whole method applies to every branch. The branch controls persistence and de
 
 A request has durable or change consequences when it can recur; creates or changes lasting state, rules, structure, or Authority; crosses a handoff; produces an external effect or meaningful commitment; creates continuing ownership or recovery work; or changes how existing items must be handled.
 
+```mermaid
+flowchart TD
+  R["Request, event, or observation"] --> E["Read the full standard and apply the proportional entry check"]
+  E --> F["Frame Intent, Outcome, boundary, assumptions, Authority, and proof"]
+  F --> B{"Which governing branch applies?"}
+  B -->|"Bounded direct operation"| D["Keep the contract and proof in the response"]
+  B -->|"Accepted System contract"| C["Bind its exact identity and version"]
+  B -->|"New Durable system"| N["Open a draft System Record"]
+  B -->|"Material change, recovery, or retirement"| M["Propose the successor and Change and Legacy Record"]
+  B -->|"Unknown or ambiguous contract"| U["Preserve state and expose the smallest material gap"]
+  D --> P["Return visible proof"]
+  C --> P
+  N --> G["Return governing constraints to the 'Workflow' skill or caller"]
+  M --> G
+  U --> G
+```
+
 For a spelling correction, preserve the source, make only the correction, and show the exact result. For a request to govern future corrections, design or change the repeatable System. Both apply systems thinking; only the second needs durable structure.
 
 ## 2. Frame the Outcome and decision
@@ -158,6 +175,18 @@ Material state, assumptions, gaps, proposed or actual effects, health signals, c
 Every durable System publishes enough identity and applicability information to determine whether it may govern an interaction: stable identity, purpose, supported operations and conditions, version, design and operational state, dependencies, Authority, precedence, owner, and canonical record. An ineligible, unbuilt, superseded, retired, or incompatible contract cannot govern execution.
 
 Bind an interaction only to an eligible contract whose applicability, version, and precedence match visible evidence. An LLM or semantic retrieval may find and interpret candidates, but it cannot create eligibility or Authority. No match enters the unknown-case path; conflicting matches enter the ambiguity path.
+
+```mermaid
+flowchart LR
+  R["Interaction"] --> G{"Required capability available?"}
+  G -->|"No"| X["Preserve state and expose the capability gap"]
+  G -->|"Yes"| M["Match eligible contract metadata and evidence"]
+  M --> C{"Exactly one eligible contract applies?"}
+  C -->|"Yes"| B["Bind stable identity and version"]
+  B --> E["Operate inside its Authority"]
+  C -->|"Conflict"| A["Expose ambiguity and smallest discriminating question"]
+  C -->|"No match"| U["Enter the unknown-case path"]
+```
 
 ### LLM judgment and deterministic mechanisms
 
@@ -288,7 +317,52 @@ Design progresses through `Candidate` → `Framing` → `Designing` → `Adversa
 
 Before Design Complete, run one independent, risk-proportionate adversarial review of credible failure modes. The reviewer did not author the reviewed revision. Resolve or explicitly accept each material finding, then have a checker who neither authored the revision nor made the fix verify the resolution evidence. A new full pass is warranted only by materially new evidence or a materially changed boundary.
 
+```mermaid
+stateDiagram-v2
+  state "Evidence needed" as EvidenceNeeded
+  state "Decision blocked" as DecisionBlocked
+  state "Adversarial review" as AdversarialReview
+  state "Resolving findings" as ResolvingFindings
+  state "Resolution check" as ResolutionCheck
+  state "Design Complete" as DesignComplete
+  [*] --> Candidate
+  Candidate --> Framing
+  Framing --> Designing: material frame accepted
+  Framing --> EvidenceNeeded: external fact or concrete reaction needed
+  EvidenceNeeded --> Designing: owning skill or caller returns evidence
+  Designing --> DecisionBlocked: material decision missing
+  DecisionBlocked --> Designing: authorized decision recorded
+  Designing --> AdversarialReview: draft completion gate passes
+  AdversarialReview --> ResolvingFindings: findings recorded
+  ResolvingFindings --> ResolutionCheck: resolutions evidenced
+  ResolutionCheck --> ResolvingFindings: evidence fails
+  ResolutionCheck --> DesignComplete: completion gate passes
+  Candidate --> Cancelled
+  Framing --> Cancelled
+  Designing --> Cancelled
+  DesignComplete --> Superseded: successor accepted
+```
+
 Operational progression remains distinct from design: `Unbuilt` → `Implementing` → `Simulation Ready` → `Simulation Approved` → bounded `Live Pilot` → `Live`. A live System may enter `Degraded`, `Paused`, `Recovery`, `Retiring`, or `Retired`. A design label never claims implementation, adoption, validation, or operation.
+
+```mermaid
+stateDiagram-v2
+  [*] --> Unbuilt: Design Complete version accepted
+  Unbuilt --> Implementing
+  Implementing --> SimulationReady: accepted seams pass
+  SimulationReady --> SimulationApproved: exact proposals accepted
+  SimulationApproved --> LivePilot: named effectors enabled
+  LivePilot --> Live: validation gate passes
+  Live --> Degraded: health or dependency failure
+  Degraded --> Recovery: recovery starts
+  Recovery --> Live: baseline restored and verified
+  Recovery --> Paused: safe restoration unavailable
+  Live --> Paused
+  Paused --> Live
+  Live --> Retiring
+  Paused --> Retiring
+  Retiring --> Retired
+```
 
 ## 7. Govern change, legacy, and retirement
 
