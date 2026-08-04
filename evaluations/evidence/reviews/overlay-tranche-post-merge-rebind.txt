@@ -1,0 +1,20 @@
+Overlay tranche post-merge evidence rebind
+
+Merged PR: #42
+Merged revision: 535374486a2521e49b758023b96e9d8724eb5ccb
+Reviewed runtime candidate: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Reviewed publication evidence: e5c7782d22d5493264695b2e9a4014cd8ffe677c
+
+This is the required post-merge revision-binding correction. It does not claim
+that behavioral runs were repeated. Observation timestamps, raw transcripts,
+raw evidence hashes, referenced artifact hashes, fixture content, and installed
+overlay outputs remain unchanged.
+
+Runtime equivalence proof:
+
+  git diff --quiet ec5e478f881a6d9b13c7296f8c4a23c2687a53b2..535374486a2521e49b758023b96e9d8724eb5ccb -- . ':(exclude)evaluations/**'
+
+Result: exit 0. PR #42's merge commit contains the reviewed runtime tree. The
+observations and deterministic report are rebound to the exact merge revision
+before issue closure. Any later non-evaluation repository change invalidates
+these bindings and requires a new truthful rebind or fresh behavioral proof.

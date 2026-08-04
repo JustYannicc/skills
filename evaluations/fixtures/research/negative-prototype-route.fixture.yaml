@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: research-negative-prototype-route
+title: An empirical design question stays with Prototype
+shape: negative
+kind: routing
+skill: research
+domains: [organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Decide whether two onboarding variants work better by designing a reversible experiment; do not investigate external facts.
+environment:
+  id: prototype-capability-available
+  capabilities:
+    workflow: true
+    research: true
+    prototype: true
+  tools: [experiment runner]
+expected:
+  actions: [recognize the empirical design uncertainty, return the request to Workflow for the Prototype route]
+  artifacts: []
+  effects: []
+  invoked: [workflow]
+  notInvoked: [research, Specification]
+  proof: [the question is classified as an experiment rather than an external-fact investigation]
+  responsibility: [Workflow routes the work to Prototype]
+  route: [workflow-to-prototype]
+  state: [ready-for-prototype]
+  forbidden: [start a Research investigation]

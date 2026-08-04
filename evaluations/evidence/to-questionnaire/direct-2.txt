@@ -1,0 +1,79 @@
+# Evaluation transcript — to-questionnaire/direct, attempt 2
+
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Fresh context: `fresh-questionnaire-direct-final-2`
+Candidate commit: `f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d`
+Suite revision: `git:d6536d81e10ca550b7483aa4a21d319c7cbf7688`
+Pinned To Questionnaire source: `mattpocock/skills` git
+`2ab958093e83e0ec752e6c1c5932da465bf23e0c`.
+
+Applied overlays:
+
+- `to-questionnaire-skill`: `overlays/to-questionnaire/SKILL.md.patch`, SHA-256 `c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91`.
+- `to-questionnaire-openai`: `overlays/to-questionnaire/agents-openai.yaml.patch`, SHA-256 `17b22065a5b8a470d3cf93764e3c9e0ff68b2cf33521dcb981b46d87591c98d1`.
+
+The effective runtime is the pinned upstream skill with only
+`disable-model-invocation: false` and `allow_implicit_invocation: true` from
+the two declared overlays. The upstream recipient/send procedure and
+questionnaire document structure remain intact.
+
+Recorded at (UTC): `2026-08-04T18:24:00.000Z`
+
+## Prompt
+
+Create an asynchronous questionnaire for my colleague, the operations lead who
+owns our approval handoff and knows where and why it stalls. I need observed
+causes, affected stages, decision owners, exception paths, timing and frequency,
+and downstream impacts so I can choose a fix. It is due Friday and should take
+about 15 minutes. Make the completed questionnaire ready to send.
+
+## Expected
+
+- Actions: identify the recipient role expertise and relationship, cover all six concrete knowledge gaps, order questions most-important-first and group them under thematic headings, include title purpose sender recipient answer use and concise context, include deadline effort and guidance that partial or uncertain answers are useful, keep every question to one idea with an answer stub and add rationale only where needed, close with an anything-else question, write the questionnaire file, report its path.
+- Artifacts: recipient-ready questionnaire.
+- Effects: none.
+- Invoked: `to-questionnaire`.
+- Not invoked: interactive grilling, research, decision work.
+- Proof: the questionnaire preserves every upstream document-structure element, every requested knowledge gap has a distinct question, thematic grouping and ordering are visible, the file path is reported.
+- Responsibility: `to-questionnaire` returns the bounded questionnaire result to the Workflow skill.
+- Route: `direct-to-questionnaire`.
+- State: `questionnaire-ready`.
+- Forbidden: answer the missing operational facts itself; research the approval process; make the decision; omit deadline effort partial-answer guidance answer stubs thematic grouping or the closing catch-all; claim completion without inspecting the questionnaire.
+
+## Evaluator result
+
+The enabled invocation overlay made the pinned upstream skill reachable directly
+from the prompt. The prompt already supplied the send contract: the recipient
+is a colleague who is the operations lead, owns the approval handoff, and knows
+where and why it stalls; the return use is choosing a fix; and the response is
+due Friday with a 15-minute effort budget. Because those details were supplied,
+the skill did not invent a recipient or launch an extra grilling exchange.
+
+The skill reported the upstream runtime path
+`to-questionnaire-approval-handoff.md`. For this evaluation, the complete
+questionnaire was captured as
+`evaluations/evidence/to-questionnaire/direct-2.questionnaire.md` and read back
+before completion was reported. Its SHA-256 is
+`c86def1478311b8b35ff29929aeede448ced07a78a007eb15d8f238a58fe6e00`.
+
+The read-back inspection found the required upstream structure:
+
+- A title, purpose, sender, recipient, answer-use statement, and one-paragraph context are present.
+- The answer guidance states the Friday deadline, approximately 15 minutes of effort, and that partial or uncertain answers including “I don’t know” are useful.
+- The thematic `##` sections are ordered as observed causes/affected stages, timing/frequency, decision ownership/exception paths, and downstream impacts.
+- The six requested gap categories each have a distinct question: observed causes; affected stages; decision owners; exception paths; timing/frequency; and downstream impacts. Timing and frequency are separate one-idea questions rather than a compound question.
+- Every question has a directly following answer stub; rationales appear only where a question could be misread or invite a throwaway answer.
+- The document closes with the upstream `## Anything else?` catch-all and an answer stub.
+
+No operational facts were answered, no approval-process research was performed,
+and no fix was selected. The only invoked skill was `to-questionnaire`; the
+bounded questionnaire result returns to Workflow, which retains the parent
+outcome responsibility. No external effect occurred.
+
+## Boundary validation
+
+- The questionnaire is recipient-ready and preserves every required upstream document-structure element.
+- All six requested knowledge-gap categories are represented by distinct questions; the one-idea rule is preserved by splitting timing and frequency.
+- The file was read back and inspected before the path and completion state were reported.
+- Interactive grilling, research, and decision work were not invoked.
+- The response contains no invented operational answers, research claims, or decision.

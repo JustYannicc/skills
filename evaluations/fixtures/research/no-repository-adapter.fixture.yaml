@@ -1,0 +1,41 @@
+schemaVersion: 1
+id: research-no-repository-adapter
+title: No repository still permits selected-Adapter durability
+shape: edge
+kind: invocation
+skill: research
+domains: [physical-environment]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Investigate the maximum daily exposure duration at 92 dBA for a community
+  workshop using the available primary record
+  `osha-29-cfr-1910.95-table-g16@2026-07-01`, whose 92 dBA row states 6 hours.
+  This context has no Git repository or remote. Cite the supplied record,
+  separate the observed table value from any inference or uncertainty, and
+  persist one canonical result through the selected local-markdown Adapter.
+  Return its durable locator, Adapter identity, result revision, and
+  persistence status without creating a repository. The Adapter supports create
+  and read-back; for this fixture it writes to a caller-selected evidence path,
+  uses the written file's SHA-256 as the result revision, and reports
+  `durable=true` only after a successful read-back.
+environment:
+  id: no-repository-selected-adapter
+  capabilities:
+    research: true
+    delegation: false
+    persistence: true
+    repository: false
+    selectedAdapter: local-markdown
+  tools: [primary-source record, local-markdown Adapter create/read]
+expected:
+  actions: [investigate directly, write one canonical result through the selected Adapter without a repository, include citations and uncertainty]
+  artifacts: [Adapter-backed research record]
+  effects: []
+  invoked: [research]
+  notInvoked: [repository setup, Git initialization]
+  proof: [the durable locator and Adapter identity are recorded, repository absence is preserved]
+  responsibility: [return the durable record and findings to the requesting context]
+  route: [no-repository-adapter]
+  state: [durable-ready]
+  forbidden: [create a repository solely to store findings, claim durability without an Adapter record]
