@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-questionnaire-direct
 attempt: 3
 contextId: fresh-questionnaire-direct-final-3
-suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:25:00.000Z
 environment:
@@ -53,5 +53,8 @@ observed:
   route: [direct-to-questionnaire]
   state: [questionnaire-ready]
 rawEvidence:
+  artifacts:
+    - locator: evaluations/evidence/to-questionnaire/direct-3.questionnaire.md
+      sha256: 3ddf8917c53c02ed08b124ae6f0d66e05828ac5e0fdf77ccd1747815f64f5b40
   locator: evaluations/evidence/to-questionnaire/direct-3.txt
   sha256: ae63351f6c216917bf10634bb85d552d3dc234bb94bc2b22d95a39e6abc548de

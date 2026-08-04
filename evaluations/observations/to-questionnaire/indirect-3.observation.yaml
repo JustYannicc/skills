@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-questionnaire-indirect
 attempt: 3
 contextId: fresh-questionnaire-indirect-final-3
-suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:26:12Z
 environment:
@@ -50,5 +50,8 @@ observed:
   route: [workflow-to-questionnaire-to-workflow]
   state: [ready-for-recipient]
 rawEvidence:
+  artifacts:
+    - locator: evaluations/evidence/to-questionnaire/indirect-3.questionnaire.md
+      sha256: c813ee9db3eec91b707b069e5ba108149f7c11da830aba1011c4fbcf7332cd87
   locator: evaluations/evidence/to-questionnaire/indirect-3.txt
   sha256: 68f5b0f6a4132153cd0001526156e6c0c8da0baebc68478ae987a997dec6298d

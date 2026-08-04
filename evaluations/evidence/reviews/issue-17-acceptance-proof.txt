@@ -1,7 +1,7 @@
 Issue #17 — Batch Grill Me acceptance proof
 
-Full candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
-Runtime suite identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 Evidence commit: the Git commit containing this record
 Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
 
@@ -14,11 +14,13 @@ Overlay records:
 Acceptance:
 - Clean pinned-source reapplication is enforced by repository validation.
 - Direct Critical invocation passed three unique Luna Max fresh contexts.
-- Indirect, incomplete, negative, cross-domain, and missing-capability fixtures passed.
+- Direct fact lookup, bounded delegated fact-finding, missing-capability,
+  indirect, incomplete, negative, and cross-domain fixtures passed.
 - Evidence preserves complete finite frontier rounds, sequential dependencies,
   user-held decisions, missing-capability truthfulness, and confirmation before effects.
 - Model invocation and implicit invocation are enabled by the two bounded overlays.
+- Published patch content is included in the public-boundary scan.
 - No full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 27 tests, 262 validated files,
-1 installed skill, and 36 evaluation fixtures.
+Gate: pnpm validate passed with 6 test files / 28 tests, 270 validated files,
+1 installed skill, and 38 evaluation fixtures.

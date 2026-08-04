@@ -1,7 +1,7 @@
 Issue #18 — Research acceptance proof
 
-Full candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
-Runtime suite identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 Evidence commit: the Git commit containing this record
 Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
 
@@ -16,10 +16,11 @@ Acceptance:
   each with bounded Luna Max child research and integrated official-source results.
 - Incomplete, missing-capability, negative Prototype route, and no-repository
   selected-Adapter fixtures passed.
-- Adapter-backed records were written, read back, and revisioned by SHA-256.
+- Adapter-backed records were written, read back, revisioned by SHA-256, and
+  bound as validated evidence artifacts in observations and the report.
 - Evidence distinguishes primary records, inference, caveats, and uncertainty;
   it returns to Workflow only when active and stops before Specification/execution.
 - agents/openai.yaml is unchanged and no full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 27 tests, 262 validated files,
-1 installed skill, and 36 evaluation fixtures.
+Gate: pnpm validate passed with 6 test files / 28 tests, 270 validated files,
+1 installed skill, and 38 evaluation fixtures.

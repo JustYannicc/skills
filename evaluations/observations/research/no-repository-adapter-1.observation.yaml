@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-no-repository-adapter
 attempt: 1
 contextId: fresh-research-no-repo-final-1
-suiteRevision: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+suiteRevision: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:20:09Z
 environment:
@@ -37,5 +37,8 @@ observed:
   route: [no-repository-adapter]
   state: [durable-ready]
 rawEvidence:
+  artifacts:
+    - locator: evaluations/evidence/research/no-repository-adapter-1.record.md
+      sha256: 1240bdf2cbedb0c77da2d245939c13d0822fe2dee46675b9a228b58e40445d43
   locator: evaluations/evidence/research/no-repository-adapter-1.txt
   sha256: bf135bdccb8bf5db2f59a49dba4478b08235c13fb500c7682f938199d6b42d9e

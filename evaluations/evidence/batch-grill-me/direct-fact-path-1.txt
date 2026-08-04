@@ -1,0 +1,80 @@
+Evaluation transcript — batch-grill-me-direct-fact-path
+Attempt: 1
+Context: fresh-batch-grill-me-direct-fact-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-04T18:54:47.466Z
+
+Candidate and source provenance
+- Candidate/runtime suite: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+- Candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+- Pinned source: https://github.com/mattpocock/skills @ 2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
+- Source commit URL: https://github.com/mattpocock/skills/commit/2ab958093e83e0ec752e6c1c5932da465bf23e0c
+- Upstream targets used before overlay application:
+  - skills/in-progress/batch-grill-me/SKILL.md
+  - skills/in-progress/batch-grill-me/agents/openai.yaml
+- Exact Batch overlays applied:
+  - target skills/in-progress/batch-grill-me/SKILL.md; patch overlays/batch-grill-me/SKILL.md.patch; SHA-256 8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87
+    - exact runtime deltas: disable-model-invocation true to false; fact gathering changes from delegation-only to direct lookup when available, bounded delegation when available, and honest missing-capability recording otherwise
+  - target skills/in-progress/batch-grill-me/agents/openai.yaml; patch overlays/batch-grill-me/agents-openai.yaml.patch; SHA-256 b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746
+    - exact runtime delta: allow_implicit_invocation false to true
+
+Fixture and prompt provenance
+- Fixture: evaluations/fixtures/batch-grill-me/direct-fact-path.fixture.yaml
+- Fixture SHA-256: b1da4d632ebbd58a09a39526d4887341fb25d7bd094febc713671b830475145c
+- Prompt supplied to the fresh evaluator:
+
+  Help set the attendance rules for a North Hall workshop. The accepted current
+  frontier has exactly two independent user decisions: whether registration is
+  public or members-only, and whether the attendance cap should equal the
+  permitted occupancy or use a lower safety margin. The second decision requires
+  the current permitted-occupancy fact. Inspect
+  `evaluations/inputs/batch-grill-me/north-hall-capacity.txt` directly with the
+  available filesystem capability, state the fact and source revision, then ask
+  both now-unblocked decisions together with a recommendation for each. Do not
+  ask me to inspect the record, and wait for my decisions before advancing.
+
+Execution before rubric assessment
+
+Capability environment: directFactLookup=true, delegation=false,
+persistence=false; tools=[filesystem].
+
+Filesystem action (direct, before asking the user): read
+`evaluations/inputs/batch-grill-me/north-hall-capacity.txt` with the available
+filesystem capability. The read returned exactly:
+
+  North Hall facility record
+  Revision: 2026-07-15
+  Maximum permitted occupancy: 40 people
+
+No delegated task was dispatched. No user lookup or other legwork was requested.
+
+Candidate response after the direct read:
+
+  I inspected the North Hall facility record directly. The maximum permitted
+  occupancy is 40 people. Source revision: 2026-07-15.
+
+  Two decisions are now unblocked:
+
+  1. Registration: should the workshop be public or members-only?
+     Recommendation: public, to maximize access.
+
+  2. Attendance cap: should it equal the permitted occupancy (40 people) or use
+     a lower safety margin?
+     Recommendation: use a lower safety margin than the 40-person permitted
+     occupancy, to preserve operating buffer.
+
+  Please answer both 1 and 2. I will wait for your decisions before advancing
+  or applying any attendance rules.
+
+Post-execution rubric assessment
+- Direct fact result: present and exact — maximum permitted occupancy is 40 people;
+  source revision is 2026-07-15.
+- Complete current decision frontier: both independent decisions are asked in one
+  round, with one recommendation for each.
+- Route/state: direct-fact-to-decision-frontier; waiting-for-user-decisions.
+- Effects: none; attendance rules were not applied.
+- Responsibility: Batch Grill Me retains the interview; the user retains both
+  decisions.
+- Forbidden-behavior checks: no request that the user inspect the record, no
+  invented capacity fact, no blocked attendance-cap branch after direct
+  inspection, and no attendance-rule action.

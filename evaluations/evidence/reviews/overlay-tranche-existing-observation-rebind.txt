@@ -1,23 +1,28 @@
 Overlay tranche existing-observation rebind attestation
-Full candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
-Runtime suite identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
-Previous candidate: git:03340f9b772e9475bd6924f8de97d98790861408
+Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Previous runtime identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
 
-This is a revision-binding update for the already accepted foundation and
-Thinking in Systems observations, not a claim that those behavioral runs were
-repeated. Their prompts, observed evidence, recorded timestamps, context ids,
-raw evidence, and raw hashes remain unchanged.
+This is a revision-binding update for the 54 already accepted foundation,
+Thinking in Systems, and overlay observations, not a claim that those
+behavioral runs were repeated. Their prompts, observed behavior, recorded
+timestamps, context ids, raw evidence, and raw hashes remain unchanged.
 
-The repository intentionally excludes evaluations/ from runtime candidate
-identity. Commits a17f74b and f9cdc8f only repair fixture executability and
-falsifiability, so they create the final reviewed full candidate while leaving
-the runtime suite identity at d6536d8.
+Candidate b6cbd03 adds validation of published patch content and evidence
+artifact bindings plus two new Batch Grill fact-path fixtures. It does not
+change any overlay patch or installed skill behavior. Artifact locator/hash
+fields were added to the relevant observations to bind the already recorded
+files; the raw files themselves are unchanged.
 
 Runtime-source equivalence proof for the rebound observations:
 
-  git diff --quiet 03340f9b772e9475bd6924f8de97d98790861408..d6536d81e10ca550b7483aa4a21d319c7cbf7688 -- skills/thinking-in-systems
+  git diff --quiet 03340f9b772e9475bd6924f8de97d98790861408..b6cbd0397b3a2565a6377dd57889361b9698ee3a -- skills/thinking-in-systems
 
-Result: exit 0. The runtime candidate adds direct-upstream overlays, their fixtures,
-and overlay validation infrastructure without changing the installed Thinking
-in Systems runtime. Every new overlay fixture receives its own fresh-context
-observation; this attestation applies only to the pre-existing observations.
+Result: exit 0.
+
+Overlay-behavior equivalence proof:
+
+  git diff --quiet d6536d81e10ca550b7483aa4a21d319c7cbf7688..b6cbd0397b3a2565a6377dd57889361b9698ee3a -- overlays validation/overlays.yaml
+
+Result: exit 0. The two newly added fact-path fixtures receive fresh-context
+observations. This attestation applies only to the pre-existing observations.

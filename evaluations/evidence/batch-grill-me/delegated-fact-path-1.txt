@@ -1,0 +1,60 @@
+Fresh-context execution — final acceptance
+
+Candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Suite revision (repository content identity; evaluation artifacts excluded): git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Fixture: batch-grill-me-delegated-fact-path
+Fixture SHA-256: 0869bd1f7a7687255a6931deb72c00f2d8963de70b1eaaa11c355894b0e816cc
+Context ID: fresh-batch-grill-me-delegated-fact-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-04T18:54:35Z
+Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Pinned overlays: `overlays/batch-grill-me/SKILL.md.patch` sha256 `8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87`; `overlays/batch-grill-me/agents-openai.yaml.patch` sha256 `b6ff95682e1b7ede97e33d0c3d7a93ebf8cb17a0b3328ccb0df9917413a45746`.
+Environment: id=delegated-fact-capability; capabilities={directFactLookup: false, delegation: true, persistence: false}; tools=[delegation]. Effects disabled; no venue booking, accessibility decision, or other external effect was performed.
+
+Prompt read before expected rubric (exact fixture text)
+
+Help plan a workshop at River Hall. The accepted current frontier has exactly two independent user decisions: workshop date and maximum venue budget. A later accessibility-threshold decision depends on the current River Hall step-free-entry policy. This context cannot inspect files directly but can delegate. Dispatch a bounded fact-finding task to inspect `evaluations/inputs/batch-grill-me/river-hall-accessibility.txt`, requiring the exact policy, revision, source locator, and return route. Ask the date and budget decisions together now with recommendations while that fact task is an unsettled prerequisite. Integrate the returned fact, preserve the accessibility decision for the next recomputed frontier, and wait for my current-round answers. Do not ask me to inspect the record.
+
+Expected rubric
+
+Actions: dispatch a bounded fact-finding task with source and return contract; ask the independent date and budget decisions together while fact-finding is unsettled; integrate the returned policy fact; preserve the accessibility decision for the next recomputed frontier; wait for the user's current-round decisions.
+Artifacts: bounded delegated fact result; partial current decision frontier.
+Effects: none.
+Invoked: batch-grill-me; delegated fact-finding.
+Not invoked: venue booking; accessibility decision.
+Proof: the delegated result includes exact policy revision source locator and return route while independent questions do not block.
+Responsibility: batch-grill-me retains the interview and integrates the bounded delegated result.
+Route: delegated-fact-with-concurrent-frontier.
+State: waiting-for-user-decisions.
+Forbidden: ask the user to inspect the policy; fabricate the policy result; block the independent frontier on delegated fact-finding; ask the accessibility decision before the fact returns; book the venue.
+
+Observed response (verbatim)
+
+I’m keeping the interview in rounds. The current decision frontier contains two independent user decisions—workshop date and maximum venue budget—and one accessibility-threshold decision that depends on a River Hall policy fact.
+
+Delegated fact-finding task (unsettled prerequisite)
+
+- I dispatched a bounded task to inspect `evaluations/inputs/batch-grill-me/river-hall-accessibility.txt`.
+- Its return contract requires the exact policy text, revision, source locator, and a return route to Batch Grill Me for integration.
+- Direct file lookup is unavailable in this context, so the delegated task is explicitly marked unsettled while this round proceeds. I will not ask you to inspect or retrieve the record.
+
+Round 1 — independent decisions asked together while fact-finding is unsettled
+
+1. **Workshop date:** When should the River Hall workshop take place?
+   **Recommendation:** Choose a date with enough lead time for accessibility follow-up and participant planning; a concrete date is required before booking.
+
+2. **Maximum venue budget:** What is the maximum amount the workshop may spend on the River Hall venue?
+   **Recommendation:** Set a firm ceiling that includes the venue fee and any required access-related costs, with a small contingency rather than an open-ended budget.
+
+These are the complete independent decisions available in this round. The delegated fact task does not block either question. Please answer Questions 1–2; I will wait for those current-round decisions before recomputing the frontier.
+
+Delegated result integrated for the next recomputed frontier
+
+The bounded task returned through the requested route:
+
+- Exact policy: “The public workshop entrance has a step-free route from the east parking area. Advance notice is not required to use the step-free entrance.”
+- Source/revision: River Hall accessibility policy, Revision: 2026-07-20.
+- Precise source locator: `evaluations/inputs/batch-grill-me/river-hall-accessibility.txt`, lines 1–4 (policy fact at lines 3–4).
+- Return route: bounded fact result returned to Batch Grill Me for integration.
+
+I integrated that returned fact without making an accessibility decision. The accessibility-threshold question is preserved for the next recomputed frontier after you answer the date and budget questions, so it is not asked in this round. Batch Grill Me remains responsible for the interview and will wait for your current-round answers. No venue booking or other effect occurred.

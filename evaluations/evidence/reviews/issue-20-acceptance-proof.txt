@@ -1,7 +1,7 @@
 Issue #20 — To Questionnaire acceptance proof
 
-Full candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
-Runtime suite identity: git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Full candidate commit: b6cbd0397b3a2565a6377dd57889361b9698ee3a
+Runtime suite identity: git:b6cbd0397b3a2565a6377dd57889361b9698ee3a
 Evidence commit: the Git commit containing this record
 Pinned source: mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c (MIT)
 
@@ -16,11 +16,12 @@ Acceptance:
 - Direct Critical invocation passed three unique Luna Max fresh contexts.
 - Indirect Workflow invocation passed three unique Luna Max fresh contexts.
 - Cross-domain, incomplete, missing-file-capability, and negative fixtures passed.
-- Every ready artifact was written and read back. The evidence checks the complete
+- Every ready artifact was written, read back, and bound by locator/hash in the
+  observation and report. The evidence checks the complete
   upstream questionnaire structure, distinct gaps, one-idea questions, answer
   stubs, deadline/effort/partial-answer guidance, thematic ordering, and catch-all.
 - Only the two invocation booleans change; the universal procedure is preserved.
 - No full upstream copy is retained.
 
-Gate: pnpm validate passed with 6 test files / 27 tests, 262 validated files,
-1 installed skill, and 36 evaluation fixtures.
+Gate: pnpm validate passed with 6 test files / 28 tests, 270 validated files,
+1 installed skill, and 38 evaluation fixtures.
