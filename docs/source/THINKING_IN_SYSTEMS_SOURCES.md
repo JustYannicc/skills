@@ -21,6 +21,8 @@ The authoritative public concept-to-source map lives in the installed [source gu
 
 The [economic design research note](../research/thinking-in-systems-economic-design-concepts.md) records the source-to-rule boundary for Marginal analysis, Constraints, Preferences, substitution effects, Cost structure, minimum efficient scale, and Externalities. It excludes universal utility maximization and economy-wide planning from the governing method.
 
+The [framing-effect research note](../research/thinking-in-systems-framing-effects.md) records the primary evidence and the bounded inference that multiple matched truthful frames can expose a frame-robust core without turning framing research into manipulation.
+
 Matt Pocock's [`skills` repository at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c) informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
 
 ## License

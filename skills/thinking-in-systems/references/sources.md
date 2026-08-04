@@ -41,6 +41,18 @@ The **Pareto principle / 80–20 rule** and a **Pareto improvement** are differe
 
 The standard connects three different jobs: Pareto concentration prioritizes the search, the Satisficing threshold defines adequate performance, and Marginal analysis decides whether the next increment is worth its incremental total cost. This is a qualitative stopping discipline unless the quantities are genuinely measurable.
 
+## Decision frames and framing effects
+
+Used by the framing questions, Preference evidence, intervention comparison, incentive boundary, and informed-decision safeguards.
+
+- [2002 Prize in Economic Sciences press release](https://www.nobelprize.org/prizes/economic-sciences/2002/press-release/) — the Royal Swedish Academy recognized Daniel Kahneman for integrating psychological research into economics, especially judgment and decision-making under uncertainty. The award was broader than framing alone.
+- [Tversky and Kahneman: The Framing of Decisions and the Psychology of Choice](https://doi.org/10.1126/science.7455683) — materially equivalent formulations produced predictable aggregate shifts in observed choices under the studied conditions.
+- [Kahneman and Tversky: Prospect Theory](https://doi.org/10.2307/1914185) — risky choices can depend on a reference point and whether outcomes are represented as gains or losses.
+
+The standard infers a robustness check from this evidence: compare two or more matched truthful Decision frames while holding alternatives, outcomes, probabilities, denominators, Constraints, time horizon, and material omissions constant. Agreement is stronger evidence for the judgment that remains stable under the tested frames; reversal is evidence of frame sensitivity, not a stable Preference. This is a System-design inference, not a claim made by the cited experiments.
+
+Framing evidence describes a decision vulnerability; it does not authorize manipulation. A default or choice architecture can also change effort, access, implied recommendation, or available alternatives and therefore belongs in Incentive-structure analysis rather than being treated as a pure Framing effect.
+
 ## Constraints, Preferences, substitution, Cost structure, and Externalities
 
 Used by the feasible set, Actor choice and adoption, substitution checks, scale-sensitive decisions, and effects outside the selected decision boundary.

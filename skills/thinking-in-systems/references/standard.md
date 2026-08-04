@@ -29,6 +29,8 @@ Read and apply every section before returning a systems judgment. Scale the dept
 - **Constraint:** a condition that limits the feasible alternatives. A hard constraint excludes an alternative; a soft constraint changes its cost, burden, risk, or attractiveness. Budget, time, capacity, Authority, safety, rights, and operating conditions may all constrain a System.
 - **Feasible set:** the alternatives that satisfy the hard Constraints and are actually available within current Authority, capabilities, resources, and operating conditions.
 - **Preference:** an Actor's evidence-backed ordering among feasible alternatives or Outcome attributes under stated conditions. A Preference is an input to design, not a Requirement or grant of Authority; Preferences may differ among Actors and change with conditions.
+- **Decision frame:** the representation through which an Actor evaluates a decision, including its reference point, gain or loss formulation, absolute or relative quantities, denominator, probability format, time horizon, order, grouping, and salience.
+- **Framing effect:** a material change in judgment or choice when the Decision frame changes while the underlying alternatives, outcomes, probabilities, and consequences remain materially equivalent. Compare multiple matched truthful frames to expose the judgment that remains stable and the part that is frame-sensitive. [Sources](sources.md#decision-frames-and-framing-effects)
 - **Satisficing (good enough):** selecting an option that clears an explicit Outcome threshold after a bounded search. The Pareto principle can prioritize the search; Marginal analysis decides whether further search or refinement is worth its incremental total cost. [Sources](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation)
 - **Pareto principle (80/20 rule):** a hypothesis that a minority of causes or actions may produce most relevant value. It focuses investigation; it is not a universal ratio or permission to discard requirements, safety, rights, trust, accessibility, recovery, counter-signals, or rare catastrophic cases.
 - **Pareto improvement:** a change that makes at least one affected Actor better off on an explicit accepted criterion without making any affected Actor worse off on a material criterion. Claim it only when affected parties and impacts are known; it does not by itself prove fairness or a good starting distribution.
@@ -88,7 +90,7 @@ For a spelling correction, preserve the source, make only the correction, and sh
 
 Start from the original request. Preserve its exact wording or source whenever later interpretation, correction, audit, or migration may depend on it.
 
-Concept sources: [Intent, Outcome, and bounded Authority](sources.md#intent-outcome-and-bounded-authority), [satisficing and Marginal analysis](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation), and [Constraints and Preferences](sources.md#constraints-preferences-substitution-cost-structure-and-externalities).
+Concept sources: [Intent, Outcome, and bounded Authority](sources.md#intent-outcome-and-bounded-authority), [Decision frames and framing effects](sources.md#decision-frames-and-framing-effects), [Satisficing and Marginal analysis](sources.md#satisficing-pareto-marginal-analysis-opportunity-cost-and-preparation), and [Constraints and Preferences](sources.md#constraints-preferences-substitution-cost-structure-and-externalities).
 
 Resolve these questions proportionately:
 
@@ -97,10 +99,13 @@ Resolve these questions proportionately:
 3. **Outcome and satisficing threshold:** What should become true, under which conditions, and what observable result is good enough now? What would justify further search or a higher threshold?
 4. **Constraints and feasible set:** Which hard Constraints exclude alternatives, which soft Constraints change trade-offs, and what is actually feasible under current Authority, resources, capabilities, and operating conditions?
 5. **Preferences and substitution:** Which Actor Preferences are evidenced, where do they conflict, and how could changes in relative cost, friction, access, delay, or availability redirect behavior?
-6. **Boundary:** What is included, excluded, supported, affected, and explicitly not owned?
-7. **Actors and Authority:** Who or what may interpret, decide, prepare, approve, and perform each effect?
-8. **Facts, assumptions, and unknowns:** Which sources support the interpretation? Which propositions remain unconfirmed, including material privacy, retention, safety, or legal conditions?
-9. **Proof:** What human-visible observation would show that the result is correct and useful?
+6. **Decision frames:** Which matched truthful gain/loss, absolute/relative, reference-point, probability, and time-horizon frames could expose a Framing effect? What judgment remains stable across them?
+7. **Boundary:** What is included, excluded, supported, affected, and explicitly not owned?
+8. **Actors and Authority:** Who or what may interpret, decide, prepare, approve, and perform each effect?
+9. **Facts, assumptions, and unknowns:** Which sources support the interpretation? Which propositions remain unconfirmed, including material privacy, retention, safety, or legal conditions?
+10. **Proof:** What human-visible observation would show that the result is correct and useful?
+
+For a material decision that may be frame-sensitive, use two or more materially equivalent Decision frames rather than trusting one presentation as neutral. Hold the alternatives, outcomes, probabilities, denominators, Constraints, time horizon, and material omissions constant while varying the formulation. Identify the Outcome criteria and trade-offs that remain stable across the matched frames. A choice reversal is material evidence of a Framing effect, not proof of a stable Preference; return the sensitivity and unresolved trade-off to the active `'Workflow'` skill or caller. Frames are not equivalent when they change facts, uncertainty, alternatives, effort, defaults, or consequences.
 
 When two reasonable interpretations differ materially, preserve both and ask the smallest question that distinguishes them. Safe preparatory work may continue only inside the accepted Authority boundary.
 
@@ -146,6 +151,7 @@ Evaluate the alternatives together, once:
 
 - the binding hard and soft Constraints and resulting feasible set;
 - affected Actor Preferences, conflicts, and plausible substitution effects;
+- Decision-frame sensitivity and the judgment that remains stable across materially equivalent frames;
 - the best feasible alternative forgone;
 - time, attention, money, capacity, or other resources displaced;
 - transition and switching cost;
@@ -180,7 +186,8 @@ Avoid false numerical precision. Use an outside view when comparable work exists
 ```mermaid
 flowchart TD
   F["Frame Outcome, threshold, Constraints, and Preferences"] --> S["Build the feasible set"]
-  S --> P["Use Pareto concentration to test high-leverage causes or actions"]
+  S --> R["Compare matched truthful Decision frames and identify the stable core"]
+  R --> P["Use Pareto concentration to test high-leverage causes or actions"]
   P --> C{"Candidate clears the Satisficing threshold and protected obligations?"}
   C -->|"No"| M{"Next increment has greater expected value than Marginal total cost?"}
   M -->|"Yes"| P
@@ -299,6 +306,8 @@ Simulation and live operation share the same retrieval, interpretation, decision
 ### Incentives, friction, and operating conditions
 
 Treat incentive structure as a primary design material and a first-line diagnostic. Inspect what the arrangement makes easy, rewarding, costly, avoidable, gameable, or invisible for every Actor, including indirect incentives created by metrics, defaults, access, status, delay, risk transfer, and who bears each cost or receives each benefit. Compare those actual incentives with the accepted Outcome; do not assume that stated goals, instructions, or goodwill override them.
+
+Keep **Framing effects** distinct from incentives and friction. A matched frame changes the formulation while holding material alternatives and consequences constant. A default, preselection, order, or presentation that changes effort, access, implied recommendation, or available alternatives also changes the Incentive structure and must be governed there. Use multiple truthful frames to support informed judgment, never a selected frame to manufacture approval, urgency, fear, or compliance.
 
 When behavior diverges from intent, first inspect incentives and constraints, information, capability, Authority, friction, interfaces, and operating conditions before blaming an Actor. Failure to identify and account for a material incentive is itself a System-design failure. The intended path should be easier and more rewarding than harmful or irrelevant alternatives without using shame, hidden manipulation, artificial scarcity, proxy rewards, or coercion.
 
@@ -527,7 +536,7 @@ One canonical System Record governs each Durable system version. It contains onl
 ### Frame
 
 - original request or problem, Intent, accepted Outcome, Satisficing threshold, and non-Outcomes;
-- System of interest, Containing System, Subsystems, Upstream Systems, Dependent Systems, Peer Systems, supported conditions, affected Actors, Constraints, feasible set, Preferences, and explicit non-ownership;
+- System of interest, Containing System, Subsystems, Upstream Systems, Dependent Systems, Peer Systems, supported conditions, affected Actors, Constraints, feasible set, Preferences, material Decision frames, and explicit non-ownership;
 - owner, nested Responsibilities, decision Authority, and material domain vocabulary;
 - authoritative facts, decisions, assumptions, unknowns, and ambiguity behavior; and
 - selected intervention, Opportunity cost, Marginal analysis, Cost structure and scale where material, Externalities, rationale, and review conditions.
