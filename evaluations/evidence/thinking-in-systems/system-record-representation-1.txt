@@ -1,71 +1,138 @@
-## Proposed canonical record and safe result
+## Canonical representation
 
-This is a new Durable System Record: persistence is required, but Git is not. Use one local Markdown file (for example, `./system-record.md`) as the canonical record. Put a constrained YAML envelope at the top for the formal identity, exact revision, locator, lifecycle and eligibility state, owner, action Authority, provenance, and exact-revision approval binding. Keep the rationale, assumptions, relationship explanation, recovery guidance, and links in the ordinary Markdown body so a person can read and edit them without Git or a YAML parser.
+This is a new Durable System Record, so the durable state, rationale, links,
+Authority, approval, and blocked result must survive this interaction. Use one
+local Markdown file, `<local-folder>/system-record.md`, as the one writable
+canonical record. Git is not required. The file has a constrained YAML envelope
+followed by an ordinary Markdown narrative. A person can read and edit the
+narrative and its links as plain text even while the YAML parser is unavailable.
+JSON and TOML, if a named consumer later needs them, are generated read-only
+projections only; neither is a writable authority.
 
-### Constrained envelope excerpt
+### Constrained YAML envelope (proposed)
 
 ```yaml
 ---
 schema_version: 1
-record_id: "<opaque local logical id>"
+record_id: "<opaque logical id>"
 record_version: "0.1.0-draft"
-record_revision: "<exact content/revision identity>"
-canonical_locator: "./system-record.md"
+record_revision: "<exact proposed record revision>"
+canonical_locator: "<local-folder>/system-record.md"
 design_status: candidate
 operational_status: unbuilt
+operating_mode: normal
 catalog_eligibility: not_eligible
 owner:
   id: "<stable owner Actor id>"
   label: "<System owner>"
 authority:
   decision_owner: "<human decision owner>"
+  revision: "<exact current Authority revision>"
   allowed_effects:
-    - compose_without_effect
+    - kind: compose_without_effect
+      action: "<named external-effect proposal action>"
+      boundary: "<exact target and scope boundary>"
+      contract: "<exact governing effect or handoff contract locator>"
 governed_by: Thinking in Systems standard
 provenance:
-  source: "<original request>"
+  source: "<original request or governing source>"
   revision: "<source revision or date>"
-  sha256: "<verified source hash when available>"
+  sha256: "<64 lowercase hexadecimal source hash>"
 approval:
   required: true
   status: pending
-  approver_id: "<authorized approver>"
-  authority_revision: "<exact authority grant revision>"
-  result_revision: "<must equal record_revision exactly>"
+  approver_id: "<stable authorized approver id>"
+  authority_revision: "<exact current Authority revision>"
+  result_revision: "<exact proposed record revision>"
+  valid_until: "<ISO-8601 timestamp>"
 ---
 ```
 
-The Section 2 table is the single semantic relationship index; do not copy it into the envelope. Its one known relationship is:
+`revoked_at` is deliberately absent: approval is pending, not revoked. The
+placeholders are unresolved facts, not permission to fill in a value from
+confidence. The proposed result revision in `approval.result_revision` must
+equal the exact `record_revision`; the two Authority revision fields must equal
+the current grant. An effect guard must additionally require an unrevoked,
+unexpired approval for that exact result before any effect.
+
+## 1. Rationale and boundary
+
+**Intent:** keep one inspectable, recoverable human record while failing closed
+for an unvalidated, candidate, unbuilt, and unapproved machine action.
+
+**Accepted Outcome:** the local Markdown record preserves the rationale,
+assumptions, links, relationship boundary, exact revision, and approval state;
+only a proven Adapter can authorize a named effect whose action, target/scope,
+contract, Authority revision, and exact approved result all match.
+
+The Section 2 relationship table below is the single semantic relationship
+index. It is not copied into the envelope. Its detailed contract is linked rather
+than duplicated so that the narrative stays readable without Git or a parser.
+
+### Section 2 — Boundary and support
 
 | Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
 | --- | --- | --- | --- |
-| Upstream System | `<known-upstream-system-id> — <exact version to bind>` | This System materially relies on the upstream input, availability, interface, or policy at this boundary. The dependency does not grant Authority across the boundary. | [`Section 6 — upstream interface contract`](#upstream-interface-contract) |
+| Upstream System | `<opaque id> @ <exact version>` | This System materially relies on the Upstream System's input, availability, interface, or policy at this boundary; that reliance does not grant Authority across the boundary. | [Upstream interface contract](#upstream-interface-contract) |
 
-### Human-readable rationale and links
+### Upstream interface contract
 
-**Intent:** preserve one inspectable, recoverable System Record while preventing an unvalidated, unbuilt, or unapproved record from authorizing an effect.
+`<exact governing effect or handoff contract locator>` is the authoritative
+contract location. Its inputs, outputs, timing, failure behavior, and proof are
+owned there, not duplicated in this relationship index. The identity and version
+remain placeholders until confirmed.
 
-**Accepted Outcome:** a person can recover the rationale, assumptions, relationship boundary, approval status, and links from the local Markdown body; a machine can act only after the exact record revision passes the named validation and action-guard seams and receives exact-revision approval.
+## 2. Deterministic validation versus semantic judgment
 
-The body should contain `## Rationale`, `## Sources and assumptions`, and `## Upstream interface contract` headings, with ordinary relative Markdown links such as `[upstream contract](#upstream-interface-contract)`. These links and explanations remain readable when the envelope cannot be parsed. The identity/version placeholders above are unresolved facts, not semantic claims; bind them before any effect.
-
-### Deterministic versus semantic boundary
-
-| Deterministic validation (when the parser is available) | Human or LLM judgment |
+| Deterministic validation (enforceable by an Adapter) | Human or LLM semantic judgment |
 | --- | --- |
-| Parse the complete constrained envelope; reject directives, aliases, anchors, explicit tags, duplicate keys, and unknown fields; validate schema, typed Actor/Authority objects, distinct states, exact revision fields, and approval/result-revision equality. | Whether the request and Intent are understood, the owner or approver is legitimate, the state claim is true, the Upstream relationship is material and correctly classified, the source is authoritative, the evidence is credible, or the effect advances the Outcome. |
-| Validate Section 2 required columns, unique relationship kind/identity/version rows, material-boundary text, and contract-link shape. A proven action guard must also bind eligible state, Authority, approval, enumerated effect, and exact record revision. | Whether the cited Authority covers this effect, the relationship contract is sufficient, or the requested external effect is wise and acceptable. |
+| When a parser is available, parse the complete constrained envelope and reject directives, aliases, anchors, explicit tags, duplicate keys, unknown fields, malformed types, and missing required fields. Validate the distinct lifecycle/mode fields, exact record and Authority revisions, canonical locator, approval bindings, and the one Section 2 table's required columns, unique relationship identity/version, material boundary, and contract-link shape. | Interpret the request and Intent; determine whether the owner and approver are legitimate; assess whether the source is authoritative, the Upstream relationship is material and correctly classified, the boundary is truthful, the evidence is credible, and the proposed effect advances the Outcome. Structural validity never proves any of these. |
+| A proven `System Record action guard` consumes only validated output and matches the requested `kind`, named `action`, exact target/scope `boundary`, and `contract` to the exact current Authority revision. It also requires eligible lifecycle state, `operating_mode: normal`, the exact current `record_revision`, and an exact-result approval whose Authority revision matches, whose `valid_until` has not passed, and which has no `revoked_at`. | Decide whether the cited Authority actually covers the effect, whether the contract is sufficient, and whether the effect is wise or acceptable after considering Outcome, risk, Externalities, and affected Actors. An LLM may propose or explain; it cannot create eligibility, approval, or Authority. |
 
-The unavailable YAML parser means these deterministic checks have not run. A parser or recovery heuristic cannot turn that gap into semantic validity or Authority.
+The YAML parser is unavailable (`yaml_parser: false`), so the deterministic
+validator and action guard have not run and are not proven. No parser fallback,
+text heuristic, or semantic confidence can turn that gap into schema validity or
+authorization.
 
-### Authority and projections
+## 3. Human-readable no-parser/no-Git recovery
 
-The Markdown file at `canonical_locator` is the one writable authority for every meaning. JSON or TOML may exist only as an optional, generated, read-only projection for a named consumer; it must identify the canonical locator, source revision/hash, normalized-payload hash, and freshness, and direct or stale writes must be rejected and sent back to the Markdown source. No projection is generated or made writable here.
+Keep `<local-folder>/system-record.md` as the only writable source. A person may
+open it as plain Markdown, read the rationale and [Upstream interface
+contract](#upstream-interface-contract) link, and edit the narrative while the
+parser or Git is absent. Preserve the exact proposed record revision and all
+placeholders; do not promote a copy, a JSON/TOML projection, or a hand-parsed
+interpretation to authority. A read-only snapshot may be retained for recovery,
+but it must point back to the canonical locator and cannot authorize an effect.
 
-The human decision owner retains representation and approval Authority. A production Adapter must prove both the `System Record structural validator` and `System Record action guard` before it can authorize a machine action.
+When the parser is restored, re-read this exact record revision, run the complete
+structural validator and the proven action guard, and obtain approval bound to
+that exact result revision. If any value or assumption changed, treat it as a
+new revision and repeat the checks; only then can the human decision owner decide
+whether to authorize the named effect.
 
-### Safe action result — BLOCKED
+## 4. Safe action result — **BLOCKED**
 
-**No external effect was performed or authorized.** The machine request is limited to `compose_without_effect`. Machine state is visibly `unverified`/`blocked` because `yaml_parser=false` and no validated `System Record structural validator` plus `System Record action guard` is available or proven. It is also `design_status: candidate`, `operational_status: unbuilt`, `catalog_eligibility: not_eligible`, and `approval.status: pending`; the external effector's capability does not create Authority.
+**Requested operation:** a machine external effect for
+`<named action>` against `<exact target and scope>`, under
+`<exact governing effect or handoff contract locator>`.
 
-Preserve this exact proposal/revision and the human-readable rationale and links. A human may read or edit the canonical Markdown record, but no lifecycle transition, projection generation, or external action may proceed until the parser and both deterministic seams are available and proven, the record is eligible for the named action, and a human with the relevant Authority approves that exact result revision. No Workflow phase or change-management capability is invoked or invented.
+**Result:** **BLOCKED — no external effect was performed, authorized, or
+generated.** The machine state is `unverified` / `machine-action-blocked` because
+the parser is unavailable and neither a validated structural validator nor a
+production-proven action guard is available. The record independently remains
+`design_status: candidate`, `operational_status: unbuilt`,
+`catalog_eligibility: not_eligible`, and `operating_mode: normal`; `normal` mode
+does not override ineligibility or missing proof. Approval is `pending`, so there
+is no exact, valid, unrevoked authorization bound to the current record and
+Authority revisions. The external effector's capability does not create
+Authority.
+
+The only safe work now is human read/edit of the canonical Markdown narrative or
+`compose_without_effect` preparation that preserves this exact proposal and
+revision. Resume machine action only after the parser, structural validator, and
+action guard are available and proven; the record is eligible and built; the
+requested action, exact target/scope boundary, contract, current Authority
+revision, and current record revision match; and the named approver supplies a
+valid, unexpired, unrevoked approval for that exact result. Thinking in Systems
+is the only invoked capability here; no Workflow phase execution or
+change-management capability is invoked or invented.
