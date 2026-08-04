@@ -10,9 +10,10 @@ the highest stable proof seam.
 
 Join the active context supplied by `'Workflow'`. The Outcome owner keeps
 parent responsibility; this skill owns only the Specification result. A direct
-phase request without that context returns its minimum prerequisite gap to the
-caller. An accepted Inline context supplied by the caller remains a valid
-semantic Specification; no parent Outcome or second workflow is created.
+phase request may carry a complete accepted semantic contract from its caller
+and can synthesize that bounded result without a parent workflow. Missing
+material prerequisites return to the caller; no parent Outcome or second
+workflow is created.
 
 Do not interview the user or turn this phase into decomposition, implementation,
 Review, effect execution, or parent completion. Use accepted knowledge and
