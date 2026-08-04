@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-unrelated-resume
 attempt: 3
-contextId: fresh-workflow-mid-unrelated-resume-3
+contextId: fresh-workflow-mid-unrelated-resume-3-resolution
 suiteRevision: git:ce44e42557c60aff88dbcfce90fce126aec6a364
 evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:04:49.000Z
+recordedAt: 2026-08-04T18:24:35.300Z
 environment:
   id: workflow-unrelated-switch-resume
   capabilities: { activeWorkflowContext: true, persistence: false, workflow: true }
@@ -19,7 +19,7 @@ observed:
   effects: [corrected sentence returned]
   forbiddenChecks:
     - criterion: silently replace O6 or lose its continuation
-      evidence: The corrected sentence is returned and the household budget Outcome resumes at ledger L8 with its electricity-entry pickup point.
+      evidence: The raw response states that the unrelated correction is complete, keeps O6 active under its unchanged owner at exact ledger revision L8, and resumes it at the electricity-entry pickup point.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [recursive parent Workflow, durable Adapter]
@@ -29,4 +29,4 @@ observed:
   state: [original-outcome-resumed]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-unrelated-resume-3.txt
-  sha256: b4c755d46f13e0ec0d5b8d3b2f0d3f6e1e460ec20a7b83bceb847d8572c27bff
+  sha256: 9795f729fa5ce1503255a998acafaf068d57ed38e901781a842bd718536f0417

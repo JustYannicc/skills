@@ -1,3 +1,3 @@
-We received it.
+Correction (immediate Review): “We received it.”
 
-Resuming the household budget reconciliation at ledger L8, with the pickup point at checking the electricity entry.
+Safe switch: the unrelated correction is complete; Outcome O6 remains active under its existing owner (unchanged), at exact ledger revision L8. Persistence is unavailable, so no durable handoff, write, or external effect occurred; no effect or approval is active. Resume O6 at the pickup point: check the electricity entry. Next action: check that entry, then continue the household-budget reconciliation.
