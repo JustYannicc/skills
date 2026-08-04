@@ -210,13 +210,23 @@ export const semanticRecord = (record: CandidateRecord) => ({
 export const sha256 = (source: string) =>
   createHash("sha256").update(source).digest("hex");
 
+const compareKeys = ([left]: [string, unknown], [right]: [string, unknown]) => {
+  if (left < right) {
+    return -1;
+  }
+  if (left > right) {
+    return 1;
+  }
+  return 0;
+};
+
 const canonicalize = (value: unknown): string => {
   if (Array.isArray(value)) {
     return `[${value.map(canonicalize).join(",")}]`;
   }
   if (value !== null && typeof value === "object") {
     return `{${Object.entries(value)
-      .toSorted(([left], [right]) => left.localeCompare(right))
+      .toSorted(compareKeys)
       .map(([key, entry]) => `${JSON.stringify(key)}:${canonicalize(entry)}`)
       .join(",")}}`;
   }
