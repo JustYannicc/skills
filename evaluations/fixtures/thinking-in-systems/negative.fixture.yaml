@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: thinking-in-systems-negative
+title: Nearby systems concept stays a lightweight explanation
+shape: negative
+kind: invocation
+skill: thinking-in-systems
+domains: [education]
+severity: Major
+requiredAttempts: 1
+prompt: Explain what a feedback loop is in one paragraph.
+environment:
+  id: conversation-only
+  capabilities:
+    workflow: true
+    persistence: false
+  tools: []
+expected:
+  actions: [apply the proportional entry check, explain the concept in one paragraph]
+  artifacts: []
+  effects: [answer returned]
+  invoked: [thinking-in-systems]
+  notInvoked: [durable system design, migration, specialist phase]
+  proof: [answer checked against the requested explanation]
+  responsibility: [Workflow retains answer quality]
+  route: [lightweight-governance]
+  state: [complete]
+  forbidden: [turn the explanation into coordination or durable paperwork]
+

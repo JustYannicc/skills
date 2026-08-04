@@ -1,5 +1,10 @@
 schemaVersion: 1
 sources:
+  - id: thinking-in-systems-standard-v1
+    url: https://github.com/JustYannicc/skills
+    revision: d078ee7a22f92600eb275f27f5a700e5bf37d778
+    commitUrl: https://github.com/JustYannicc/skills/commit/d078ee7a22f92600eb275f27f5a700e5bf37d778
+    license: MIT
   - id: agent-skills-reference-validator
     url: https://github.com/agentskills/agentskills
     revision: 38a2ff82958afee88dadf4831509e6f7e9d8ef4e

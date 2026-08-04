@@ -8,13 +8,15 @@ This repository is being built around a simple idea: agents become much more use
 
 No skill has been published yet. The repository foundation and design record are complete; skill authoring starts in a dedicated follow-up task.
 
-### Thinking in Systems — planned
+### [Thinking in Systems](skills/thinking-in-systems) — human review required
 
-Thinking in Systems is my secret sauce: the way of thinking I have developed and applied over roughly the last year and a half. It is a large part of how I have been able to make unusually fast progress. The skill will distill that method into a universal system for designing systems.
+Thinking in Systems is my secret sauce: the way of thinking I have developed and applied over roughly the last year and a half. It is a large part of how I have been able to make unusually fast progress. The skill distills that method into universal governing knowledge for designing systems.
 
 It is meant for almost anything: technical work, personal routines, organizations, physical environments, decisions, agent execution, and the systems connecting them. It starts from intent and outcomes, makes assumptions and handoffs explicit, aligns incentives and friction, designs for low-capacity operation, proves behavior at meaningful seams, and keeps systems recoverable as they change and decay.
 
 Installing a skill is not a substitute for understanding it. Read the method, practice it, challenge it, and learn to apply the thinking yourself. The agent should make the process easier and more consistent; the human retains intent, judgment, authority, and the right to make informed exceptions.
+
+The implementation is a review candidate and is not final until the maintainer explicitly approves it.
 
 ## Planned suite
 

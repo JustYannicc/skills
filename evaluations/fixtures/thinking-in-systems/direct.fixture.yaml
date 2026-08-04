@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: thinking-in-systems-direct
+title: Direct systems request returns governing constraints
+shape: direct
+kind: invocation
+skill: thinking-in-systems
+domains: [physical-environment, organizational-work]
+severity: Critical
+requiredAttempts: 3
+prompt: Use Thinking in Systems to assess a community workshop equipment-checkout process before Workflow plans any change.
+environment:
+  id: workflow-without-specialists
+  capabilities:
+    workflow: true
+    persistence: true
+    specialistPhases: false
+  tools: []
+expected:
+  actions: [identify intent and outcome, inspect authority incentives friction and environment, define degradation recovery and proof obligations, return governing constraints to Workflow]
+  artifacts: [governance assessment]
+  effects: []
+  invoked: [thinking-in-systems]
+  notInvoked: [specialist phase execution]
+  proof: [relevant standard clauses identified, Workflow boundary stated]
+  responsibility: [Workflow retains parent responsibility]
+  route: [governance-to-workflow]
+  state: [ready-for-workflow-decision]
+  forbidden: [select Workflow phases or create their results]
+

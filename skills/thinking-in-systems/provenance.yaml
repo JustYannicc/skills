@@ -1,0 +1,11 @@
+schemaVersion: 1
+strategy: adapted
+sources:
+  - id: thinking-in-systems-standard-v1
+  - id: matt-pocock-skills
+retainedBehavior:
+  - Complete approved universal systems method, preserved as the installed runtime reference.
+  - Public-seam proof, progressive disclosure, and model-invocation patterns retained where compatible.
+changedAssumptions:
+  - Governing knowledge returns constraints and evidence while Workflow owns coordination and phase results.
+  - Technical, personal, organizational, physical, communicative, and agent systems share one proportional method.
