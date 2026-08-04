@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: prototype-negative-production-execution
-title: Production execution is routed away from Prototype
+title: Production execution is blocked at the Prototype boundary
 shape: negative
 kind: routing
 skill: prototype

@@ -22,7 +22,7 @@ Status: complete when the bootstrap commit and public remote are verified.
 
 ## Phase 2 — discovery skills
 
-- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors.
+- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Prototype is implemented by issue #19 and remains human-review-required before its Ticket closes.
 - Define and verify the pinned overlays for `research`, `batch-grill-me`, and `to-questionnaire` without copying their full upstream source.
 - Test discovery across technical, personal, organizational, physical, communicative, and agent cases.
 

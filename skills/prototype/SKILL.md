@@ -1,6 +1,6 @@
 ---
 name: prototype
-description: Answer one material design question with a reversible prototype in a technical, personal, organizational, physical, communicative, or agent domain. Use when a design is uncertain and a disposable experiment can produce decision-relevant evidence before specification or implementation.
+description: Prototype one material design question with a reversible experiment in a technical, personal, organizational, physical, communicative, or agent domain. Use when a design is uncertain and a disposable experiment can produce decision-relevant evidence before specification or implementation.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
