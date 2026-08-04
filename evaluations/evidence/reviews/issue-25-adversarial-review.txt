@@ -1,0 +1,29 @@
+review: issue-25 universal Review
+fixed-point: origin/main (455541e)
+candidate-before-resolution: a63ba2fecd5f2a8b1c935cf6d05597bdaef277f6
+behavioral-evidence-before-resolution: fbc5b5980b1d685efe59c2527e151b48627c0c7e
+reviewer: independent gpt-5.6-luna max Standards and Spec axes
+scope: git diff origin/main...fbc5b59, issue #25, accepted repository contracts, and prepared-communication proof
+
+Standards axis: no Critical or Major findings. The one-job universal boundary,
+public metadata/provenance shape, exact revision binding, lifecycle boundaries,
+and human-review gate passed. Two Minor judgment calls were recorded:
+
+1. Provenance could state more clearly that Matt Pocock's code-review skill is
+   inspiration only, because Review is new and suite-owned.
+2. The required Supplemental-unavailable/stale branch lacked a behavioral
+   fixture even though the runtime contract requires waiting.
+
+Spec axis: no findings. Exact inputs, one integrated verdict, code as one
+execution medium, risk-scaled depth, Supplemental integration, all three
+verdict transitions, responsibility return, and the prepared communication
+regression matched issue #25.
+
+Resolution:
+
+- Candidate c6b8230 marks the skill original, describes independent authorship,
+  and records Matt as inspiration-only without bundling code review.
+- Evidence bacf870 adds the required-Supplemental-unavailable fixture and
+  revision-binds all observations/report to c6b8230.
+- Focused and full pnpm validate pass with 28/28 fixtures and zero Critical,
+  Major, or Minor findings.
