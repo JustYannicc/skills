@@ -25,4 +25,4 @@ observed:
   state: [predecessor-disposed-replacement-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-replacement-2.txt
-  sha256: 6e2a56646a6bdf0675b13c5ca54db2a70d3584062a9442c3fd3c33c89be713b4
+  sha256: 4c80861daa49f33c2e88a48097a5192416b424d5ab63cd7cc1e73bbe1b12ae8c
