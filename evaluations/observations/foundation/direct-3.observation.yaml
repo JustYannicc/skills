@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-direct
 attempt: 3
 contextId: fresh-direct-3
-suiteRevision: git:176403c7f674471e8cb9554bfc1c9bfd003c9259
+suiteRevision: git:43088eddb22786afd1e69fd02cbccb0c559dd162
 evaluator: deterministic-foundation
 recordedAt: 2026-08-02T17:00:03.000Z
 environment:
