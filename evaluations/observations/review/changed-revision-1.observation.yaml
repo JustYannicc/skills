@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-changed-revision
 attempt: 1
 contextId: fresh-review-changed-revision-1
-suiteRevision: git:c6b823000db246b92f7faded62bb172a879c1ee1
+suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
 evaluator: gpt-5.6-luna-fresh-context-review
 recordedAt: 2026-08-04T18:43:00.000Z
 environment:
