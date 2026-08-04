@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-cross-domain-direct
+title: Direct Review verifies a cross-domain result at its proof seam
+shape: direct
+kind: invocation
+skill: review
+domains: [organizational-work, physical-environment]
+severity: Critical
+requiredAttempts: 3
+prompt: Review the exact revision of a volunteer equipment checkout rota against its accepted Specification and safety standard before the Workflow owner closes the bounded work.
+environment:
+  id: durable-work-without-supplemental
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools: []
+expected:
+  actions: [accept exact Specification and result revisions, inspect proof seam and governing standards, scale independence to material change, return Verified verdict and in_review to complete transition]
+  artifacts: [revision-bound Review record]
+  effects: []
+  invoked: [review]
+  notInvoked: [implementation, effect execution]
+  proof: [each requirement bound to exact evidence, effect claim separated from result verification]
+  responsibility: [Work owner retains bounded result responsibility, Outcome owner retains parent responsibility]
+  route: [workflow-to-review]
+  state: [in_review-to-complete]
+  forbidden: [complete parent Outcome without parent Review]

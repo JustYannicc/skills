@@ -21,6 +21,17 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
 
+### [Review](skills/review) — implementation candidate
+
+Review verifies any exact result against its accepted Specification and
+governing standards at the agreed proof seam. It treats code as one execution
+medium alongside communication, personal, organizational, physical, and
+agent work; integrates configured Supplemental findings at declared extension
+points; and returns one revision-bound Verified, Changes required, or
+Inconclusive verdict with the corresponding lifecycle transition. This
+candidate remains human-review-required before its implementation Ticket can
+close.
+
 ## Planned suite
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 16 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied.

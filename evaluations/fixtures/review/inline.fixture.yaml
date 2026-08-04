@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-inline
+title: Inline Review remains proportionate
+shape: edge
+kind: composition
+skill: review
+domains: [personal-routine, physical-environment]
+severity: Minor
+requiredAttempts: 1
+prompt: Check this bounded reversible label correction inline against the accepted sentence and show the exact corrected result.
+environment:
+  id: inline-review
+  capabilities:
+    workflow: true
+    persistence: false
+    supplementalReview: false
+  tools: []
+expected:
+  actions: [keep contract inline, perform independent review pass, return Verified at its own seam]
+  artifacts: [inline Review evidence]
+  effects: [exact corrected result returned]
+  invoked: [review]
+  notInvoked: [durable Review artifact, Supplemental reviewer]
+  proof: [exact corrected result is shown and inspected]
+  responsibility: [caller retains parent responsibility]
+  route: [inline-review]
+  state: [in_review-to-complete]
+  forbidden: [create durable workflow for trivial result]

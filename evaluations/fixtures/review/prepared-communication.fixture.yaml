@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-prepared-communication
+title: Prepared communication can be Verified before its effect
+shape: edge
+kind: composition
+skill: review
+domains: [communication, organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Review the exact approved-revision customer reply as a prepared draft before sending; verify the message seam without claiming delivery.
+environment:
+  id: prepared-communication-before-effect
+  capabilities:
+    workflow: true
+    persistence: true
+    scheduling: false
+  tools: []
+expected:
+  actions: [identify result-level proof seam, verify prepared exact revision, record pending effect without claiming delivery, return Verified for the result seam]
+  artifacts: [revision-bound Review record]
+  effects: []
+  invoked: [review]
+  notInvoked: [send message, claim delivery]
+  proof: [message content matches Specification, pending effect is explicit]
+  responsibility: [Work owner retains effect responsibility, Outcome owner retains parent responsibility]
+  route: [prepared-result-review]
+  state: [in_review-to-complete]
+  forbidden: [treat prepared draft as sent or parent Outcome complete]

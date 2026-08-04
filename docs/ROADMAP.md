@@ -31,6 +31,8 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
 - Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors.
 - Author universal `review`, including code and configured Supplemental evidence.
+  Issue #25 now has an implementation candidate; its human-review-required
+  gate remains open until the candidate is explicitly accepted.
 - Prove the lifecycle:
 
 ```text

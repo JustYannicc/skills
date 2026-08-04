@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-supplemental-advisory-absent
+title: Advisory Supplemental absence degrades honestly
+shape: edge
+kind: composition
+skill: review
+domains: [communication, organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: Review an exact volunteer announcement with an advisory tone Supplemental configured but unavailable; core proof is complete.
+environment:
+  id: core-review-with-advisory-gap
+  capabilities:
+    workflow: true
+    persistence: false
+    supplementalReview: false
+  tools: []
+expected:
+  actions: [record advisory capability gap, continue core Specification comparison, return Verified when core proof passes]
+  artifacts: [advisory limitation in Review record]
+  effects: []
+  invoked: [review]
+  notInvoked: [undeclared specialist]
+  proof: [advisory absence does not alter core evidence]
+  responsibility: [Outcome owner retains parent responsibility]
+  route: [review-with-advisory-gap]
+  state: [in_review-to-complete]
+  forbidden: [pretend advisory skill ran]

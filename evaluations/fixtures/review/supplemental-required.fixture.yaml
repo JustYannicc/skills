@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-supplemental-required
+title: Required Supplemental findings enrich the core verdict
+shape: indirect
+kind: routing
+skill: review
+domains: [software, physical-environment]
+severity: Critical
+requiredAttempts: 3
+prompt: Workflow invokes Review for exact result r8 with a configured required safety Supplemental reviewer at the declared extension point.
+environment:
+  id: workflow-with-required-supplemental
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: true
+  tools: [supplemental-reviewer]
+expected:
+  actions: [run Supplemental at declared supplemental-review Extension point, validate Supplemental finding exact result revision, integrate finding into core verdict, return Changes required transition]
+  artifacts: [integrated Review record, Supplemental evidence reference]
+  effects: []
+  invoked: [workflow, review, configured Supplemental reviewer]
+  notInvoked: [Supplemental verdict replacing core]
+  proof: [Supplemental finding is bound to exact result and visible in core evidence]
+  responsibility: [Reviewer owns integrated verdict, Work owner resolves required changes, Outcome owner retains parent responsibility]
+  route: [workflow-to-review-extension]
+  state: [in_review-to-accepted]
+  forbidden: [complete when required Supplemental evidence is stale]
