@@ -1,7 +1,7 @@
 schemaVersion: 1
 id: prototype-negative-production-execution
 title: Production execution is blocked at the Prototype boundary
-shape: negative
+shape: edge
 kind: routing
 skill: prototype
 domains: [organizational, communicative]
@@ -21,7 +21,7 @@ expected:
   artifacts: [blocked-or-simulation prototype result contract]
   effects: []
   invoked: [workflow, prototype]
-  notInvoked: [live policy change, send effect, Specification, implementation]
+  notInvoked: [live policy change, send effect, Specification, implementation, Review, decomposition, parent completion]
   proof: [no production mutation and any simulation evidence is revision-bound]
   responsibility: [Workflow retains effect authority and parent completion]
   route: [prototype-to-workflow-effect-gate]

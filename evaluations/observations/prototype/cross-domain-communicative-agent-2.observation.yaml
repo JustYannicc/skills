@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-cross-domain-communicative-agent
 attempt: 2
 contextId: fresh-prototype-cross-domain-communicative-agent-2
-suiteRevision: git:73ab8693bff32f8777d204e9c2c1f3d5498be0a4
+suiteRevision: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:44:00.000Z
 environment:
@@ -23,12 +23,12 @@ observed:
     - criterion: widen to multiple questions
       evidence: The run keeps one question and one shared observation seam across domains.
       observed: false
-  invoked: [prototype]
-  notInvoked: [send message, production agent call, Specification, implementation]
+  invoked: [workflow, prototype]
+  notInvoked: [send message, production agent call, Specification, implementation, Review, decomposition, parent completion]
   proof: [rehearsal transcript and burden observation are revision-bound with limits]
   responsibility: [Workflow retains parent coordination and any later communication authority]
   route: [workflow-to-cross-domain-prototype-to-workflow]
   state: [cross-domain-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/cross-domain-communicative-agent-2.txt
-  sha256: a94ba5e9a3c8ac1680275f4e86ca7ed3aa85092e907c2236a8643175d249821b
+  sha256: 08b490d7965fadc2cd14e3ebba17395175aa06ddecd71b0808e446c48d91f1c1

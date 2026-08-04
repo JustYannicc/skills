@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-direct-technical-logic
 attempt: 2
 contextId: fresh-prototype-direct-technical-2
-suiteRevision: git:73ab8693bff32f8777d204e9c2c1f3d5498be0a4
+suiteRevision: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:31:00.000Z
 environment:
@@ -20,12 +20,12 @@ observed:
     - criterion: absorb implementation
       evidence: The result returns a decision and evidence to Workflow without creating production code.
       observed: false
-  invoked: [prototype]
-  notInvoked: [to-spec, implementation]
+  invoked: [workflow, prototype]
+  notInvoked: [to-spec, Specification, implementation, Review, decomposition, parent completion]
   proof: [revision-bound before-and-after state evidence at the retry seam]
   responsibility: [Workflow retains parent coordination and completion]
   route: [workflow-to-prototype-to-workflow]
   state: [verdict-ready-for-workflow]
 rawEvidence:
   locator: evaluations/evidence/prototype/direct-technical-2.txt
-  sha256: f13228a8c380d9c7a4d6b281fcd2b05340b3f11fc9a175263a93de574f44ad31
+  sha256: cb47e903c28e3e6f68403eaa5164781978ff94b5541d10a45ea3b8c0799cc811

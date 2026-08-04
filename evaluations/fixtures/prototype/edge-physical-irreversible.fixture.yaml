@@ -21,7 +21,7 @@ expected:
   artifacts: [blocked prototype result contract, safety gap record]
   effects: []
   invoked: [workflow, prototype]
-  notInvoked: [destruction, live physical action, Specification, implementation]
+  notInvoked: [destruction, live physical action, Specification, implementation, Review, decomposition, parent completion]
   proof: [simulation or rehearsal evidence is revision-bound and shows no live effect]
   responsibility: [Workflow retains safety authority and parent completion]
   route: [prototype-safety-boundary-to-workflow]

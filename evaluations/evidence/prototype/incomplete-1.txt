@@ -1,8 +1,13 @@
 Question: What one design question should this prototype answer, and what Outcome would change if the answer is yes or no?
 Context: Outcome, scope, Actors, constraints, and assumptions were not supplied.
+Observer/time: prototype evaluator; 2026-08-04T20:33:00.000Z.
+Result revision: prototype-incomplete-question-attempt-1.
+Measurements: no setup or effect occurred; one missing-question blocker was recorded.
+Source/location: evaluations/evidence/prototype/incomplete-1.txt.
+Limits: no experiment can start until one material question, scope, actor, and authority are supplied.
 Reversible setup: Not started. No scope, actor, reset, or stop authority is available.
 Observation seam: Not defined because no material design question was supplied.
-Evidence: The missing question is the only observed blocker; no experiment or external effect occurred.
+Evidence: condition/method=question-completeness check before setup; observer/time=prototype evaluator, 2026-08-04T20:33:00.000Z; measurements=no setup or effect and one missing-question blocker; source/location=evaluations/evidence/prototype/incomplete-1.txt; result revision=prototype-incomplete-question-attempt-1; limits=no experiment until question, scope, actor, and authority are supplied.
 Stopping rule: wait until the user supplies one material question and its intended Outcome.
 Verdict: blocked, not a prototype verdict.
 Disposition: pause and ask one smallest discriminating question before choosing a setup.

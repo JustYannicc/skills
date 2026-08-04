@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-incomplete-question
 attempt: 1
 contextId: fresh-prototype-incomplete-1
-suiteRevision: git:73ab8693bff32f8777d204e9c2c1f3d5498be0a4
+suiteRevision: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:33:00.000Z
 environment:
@@ -21,11 +21,11 @@ observed:
       evidence: No setup, effect, or experiment is started while the question is missing.
       observed: false
   invoked: [prototype]
-  notInvoked: [setup, Specification, implementation]
+  notInvoked: [setup, Specification, implementation, Review, decomposition, parent completion]
   proof: [the missing question and exact resumption condition are visible]
   responsibility: [Workflow or the caller retains responsibility while the question is unanswered]
   route: [prototype-waiting-for-question]
   state: [waiting-for-question]
 rawEvidence:
   locator: evaluations/evidence/prototype/incomplete-1.txt
-  sha256: 1197a38508b59385108e10a3ee1540dfaa10163f44affeffb14b83632a6482d3
+  sha256: 3801c96b331aab076767ab4b5362d0d2aff4f44056fedcaaa35e8a11357c152a

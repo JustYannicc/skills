@@ -21,7 +21,7 @@ expected:
   artifacts: [prototype result contract, pilot reset record]
   effects: []
   invoked: [workflow, prototype]
-  notInvoked: [to-spec, implementation]
+  notInvoked: [to-spec, Specification, implementation, Review, decomposition, parent completion]
   proof: [baseline and pilot evidence bound to the result revision]
   responsibility: [Workflow retains ownership while the pilot owner has bounded responsibility]
   route: [workflow-to-prototype-to-workflow]

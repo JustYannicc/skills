@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-indirect-personal-organizational
 attempt: 3
 contextId: fresh-prototype-indirect-personal-organizational-3
-suiteRevision: git:73ab8693bff32f8777d204e9c2c1f3d5498be0a4
+suiteRevision: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
 evaluator: gpt-5.6-luna-fresh-context-prototype
 recordedAt: 2026-08-04T20:36:00.000Z
 environment:
@@ -21,11 +21,11 @@ observed:
       evidence: Actors consent to the bounded pilot and no new obligation is assigned.
       observed: false
   invoked: [workflow, prototype]
-  notInvoked: [to-spec, implementation]
+  notInvoked: [to-spec, Specification, implementation, Review, decomposition, parent completion]
   proof: [baseline and pilot evidence bound to the result revision]
   responsibility: [Workflow retains ownership while the pilot owner has bounded responsibility]
   route: [workflow-to-prototype-to-workflow]
   state: [pilot-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/indirect-personal-organizational-3.txt
-  sha256: 0199664daa14d78f5926c342129c5bc497af5001c1c5136590771839ec3fa48b
+  sha256: 5fe58689ca5bfc168a0a553e2b642fded5a338c1dad720d01e9130030c7417e9

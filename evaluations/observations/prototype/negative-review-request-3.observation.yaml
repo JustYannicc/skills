@@ -1,0 +1,34 @@
+schemaVersion: 1
+fixtureId: prototype-negative-review-request
+attempt: 3
+contextId: fresh-prototype-negative-review-request-3
+suiteRevision: git:9bbc37e6b55abc5cd48c027ffad9a6d3c8cea05c
+evaluator: gpt-5.6-luna-fresh-context-prototype-negative
+recordedAt: 2026-08-04T20:48:00.000Z
+environment:
+  id: workflow-with-existing-prototype-result
+  capabilities: { workflow: true, persistence: true, sandbox: true, effects: false }
+  tools: [review-record]
+observed:
+  actions: [route the existing result to Review, inspect its accepted question and evidence revision, return the review verdict to Workflow]
+  artifacts: [review verdict]
+  effects: []
+  forbiddenChecks:
+    - criterion: rerun the experiment
+      evidence: Review inspected the existing result and created no new setup.
+      observed: false
+    - criterion: create a new setup
+      evidence: The review used only the existing result record.
+      observed: false
+    - criterion: claim parent completion
+      evidence: The review verdict returned to Workflow and did not close the parent Outcome.
+      observed: false
+  invoked: [workflow, Review]
+  notInvoked: [prototype, to-spec, Specification, implementation, decomposition, parent completion]
+  proof: [existing result revision checked at the accepted proof seam without a new experiment]
+  responsibility: [Workflow retains parent coordination and completion]
+  route: [workflow-to-review-without-prototype]
+  state: [review-verdict-ready]
+rawEvidence:
+  locator: evaluations/evidence/prototype/negative-review-request-3.txt
+  sha256: 6e9135c0ff8f1ad2b66b430d3fa2887368b05fb4a8c3956ba3c1308f7323a183

@@ -21,7 +21,7 @@ expected:
   artifacts: [incomplete prototype result contract]
   effects: []
   invoked: [prototype]
-  notInvoked: [setup, Specification, implementation]
+  notInvoked: [setup, Specification, implementation, Review, decomposition, parent completion]
   proof: [the missing question and exact resumption condition are visible]
   responsibility: [Workflow or the caller retains responsibility while the question is unanswered]
   route: [prototype-waiting-for-question]
