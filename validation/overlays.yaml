@@ -5,7 +5,7 @@ overlays:
     sourceId: matt-pocock-skills
     target: skills/in-progress/batch-grill-me/SKILL.md
     patchFile: overlays/batch-grill-me/SKILL.md.patch
-    sha256: 8bc432f3fd78afef99fb2d6de094d4832bad194ece91697c2633cd389214db87
+    sha256: 1a8c84c804f4bd6749b192ecea35c91ca964d21ffcd1e60ea03539063810baf0
   - id: batch-grill-me-openai
     skill: batch-grill-me
     sourceId: matt-pocock-skills
@@ -17,13 +17,13 @@ overlays:
     sourceId: matt-pocock-skills
     target: skills/engineering/research/SKILL.md
     patchFile: overlays/research/SKILL.md.patch
-    sha256: 9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074
+    sha256: 1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a
   - id: to-questionnaire-skill
     skill: to-questionnaire
     sourceId: matt-pocock-skills
     target: skills/in-progress/to-questionnaire/SKILL.md
     patchFile: overlays/to-questionnaire/SKILL.md.patch
-    sha256: 77ead674e2467bb24500babda7cfc6dd34e70dfffd43cd4d5b012fb3e41f9160
+    sha256: c1e2a0c7fdb73e30cacc1764eede2a27ad6e347aa52694aa5fdce0eccfb10a91
   - id: to-questionnaire-openai
     skill: to-questionnaire
     sourceId: matt-pocock-skills

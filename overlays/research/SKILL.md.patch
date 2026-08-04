@@ -9,7 +9,7 @@ diff --git a/skills/engineering/research/SKILL.md b/skills/engineering/research/
 @@ -6,7 +6,6 @@ description: Investigate a question against high-trust primary sources and captu
 -Spin up a **background agent** to do the research, so you keep working while it reads.
 +Research one bounded external-fact question and return evidence to the requesting context. When an active `'Workflow'` skill context exists, return the bounded result there. Choose the smallest truthful route:
- 
+
 -Its job:
 -
 -1. Investigate the question against **primary sources** — official docs, source code, specs, first-party APIs — not a secondary write-up of them. Follow every claim back to the source that owns it.
