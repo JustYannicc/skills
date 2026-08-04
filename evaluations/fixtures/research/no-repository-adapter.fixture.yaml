@@ -24,7 +24,7 @@ expected:
   invoked: [research]
   notInvoked: [repository setup, Git initialization]
   proof: [the durable locator and Adapter identity are recorded, repository absence is preserved]
-  responsibility: [return the durable record and findings to Workflow]
+  responsibility: [return the durable record and findings to the requesting context]
   route: [no-repository-adapter]
   state: [durable-ready]
   forbidden: [create a repository solely to store findings, claim durability without an Adapter record]

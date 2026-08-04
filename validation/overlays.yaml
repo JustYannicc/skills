@@ -17,7 +17,7 @@ overlays:
     sourceId: matt-pocock-skills
     target: skills/engineering/research/SKILL.md
     patchFile: overlays/research/SKILL.md.patch
-    sha256: 994f09ad10fb7df90fb04bb534fe05f024a92cfc866ce5283cb0ab82f77159ca
+    sha256: 9ce970c1ffd838b7d1d93f8b262bf1d911dd477292a25ffd1c9a8f9b4fd4c074
   - id: to-questionnaire-skill
     skill: to-questionnaire
     sourceId: matt-pocock-skills

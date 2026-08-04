@@ -11,19 +11,20 @@ prompt: Investigate whether a community workshop should adopt a shared quiet-hou
 environment:
   id: direct-primary-cross-domain
   capabilities:
+    workflow: false
     research: true
     delegation: false
     persistence: true
     selectedAdapter: true
   tools: [primary-source lookup, selected Adapter]
 expected:
-  actions: [bound the external-fact question, investigate directly, distinguish evidence from inference and uncertainty]
-  artifacts: [cited cross-domain research result]
+  actions: [bound the external-fact question, investigate directly, distinguish evidence from inference and uncertainty, persist one canonical research result through the selected Adapter, return its locator revision and durability status to the requesting context]
+  artifacts: [Adapter-backed cited cross-domain research result]
   effects: []
   invoked: [research]
   notInvoked: [Specification, execution]
-  proof: [each material claim cites a high-trust primary source, cross-domain limits and uncertainty are recorded]
-  responsibility: [return findings to the Workflow skill]
+  proof: [each material claim cites a high-trust primary source, cross-domain limits and uncertainty are recorded, the selected Adapter identity durable locator result revision and persistence status are visible]
+  responsibility: [return the bounded findings to the requesting user because no Workflow skill context is active]
   route: [direct-research]
   state: [ready-for-workflow]
-  forbidden: [treat secondary commentary as primary evidence, continue into Specification or execution]
+  forbidden: [treat secondary commentary as primary evidence, pretend the Workflow skill is active, return only Inline findings despite the Persistence boundary, claim durability without an Adapter record, continue into Specification or execution]

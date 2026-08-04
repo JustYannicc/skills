@@ -7,7 +7,8 @@ skill: to-questionnaire
 domains: [communication]
 severity: Critical
 requiredAttempts: 3
-prompt: Create an asynchronous questionnaire for my colleague, the operations lead who owns our approval handoff and knows where and why it stalls. I need the observed causes, affected stages, and authority constraints required to choose a fix, and I need the completed questionnaire ready to send.
+prompt: >-
+  Create an asynchronous questionnaire for my colleague, the operations lead who owns our approval handoff and knows where and why it stalls. I need observed causes, affected stages, decision owners, exception paths, timing and frequency, and downstream impacts so I can choose a fix. It is due Friday and should take about 15 minutes. Make the completed questionnaire ready to send.
 environment:
   id: questionnaire-direct-with-file-write
   capabilities:
@@ -16,13 +17,13 @@ environment:
     recipientContext: true
   tools: []
 expected:
-  actions: [identify the recipient role expertise and relationship, elicit the concrete facts or decisions needed back, draft a discovery questionnaire in the required structure, write the questionnaire file, report its path]
+  actions: [identify the recipient role expertise and relationship, cover all six concrete knowledge gaps, order questions most-important-first and group them under thematic headings, include title purpose sender recipient answer use and concise context, include deadline effort and guidance that partial or uncertain answers are useful, keep every question to one idea with an answer stub and add rationale only where needed, close with an anything-else question, write the questionnaire file, report its path]
   artifacts: [recipient-ready questionnaire]
   effects: []
   invoked: [to-questionnaire]
   notInvoked: [interactive grilling, research, decision work]
-  proof: [the questionnaire names its purpose sender recipient and answer use, every requested knowledge gap has a question, the file path is reported]
+  proof: [the questionnaire preserves every upstream document-structure element, every requested knowledge gap has a distinct question, thematic grouping and ordering are visible, the file path is reported]
   responsibility: [to-questionnaire returns the bounded questionnaire result to the Workflow skill]
   route: [direct-to-questionnaire]
   state: [questionnaire-ready]
-  forbidden: [answer the missing operational facts itself, research the approval process, make the decision, claim completion without inspecting the questionnaire]
+  forbidden: [answer the missing operational facts itself, research the approval process, make the decision, omit deadline effort partial-answer guidance answer stubs thematic grouping or the closing catch-all, claim completion without inspecting the questionnaire]

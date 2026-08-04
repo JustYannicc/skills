@@ -368,4 +368,27 @@ describe("repository validator", () => {
       })
     );
   });
+
+  it("rejects an overlay target that traverses with a Windows separator", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    await writeOverlayFixture(root, {
+      patch: "patch\n",
+      target: String.raw`..\outside`,
+    });
+
+    const result = await validateRepository(root, {
+      sourceTargetLoader: () =>
+        Promise.resolve(Buffer.from("pinned content\n")),
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.findings).toContainEqual(
+      expect.objectContaining({
+        check: "overlay-integrity",
+        message: expect.stringContaining("Path must stay relative"),
+        severity: "Major",
+      })
+    );
+  });
 });

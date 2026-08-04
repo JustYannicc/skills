@@ -59,7 +59,10 @@ const relativePathSchema = z
   .trim()
   .min(1)
   .refine(
-    (value) => !path.isAbsolute(value) && !value.split("/").includes(".."),
+    (value) =>
+      !path.posix.isAbsolute(value) &&
+      !path.win32.isAbsolute(value) &&
+      !value.split(/[\\/]/u).includes(".."),
     "Path must stay relative to its declared root."
   );
 

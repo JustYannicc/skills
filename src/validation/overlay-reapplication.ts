@@ -31,7 +31,10 @@ export const verifyOverlayReapplication: OverlayReapplicationVerifier = async (
     path.join(tmpdir(), "skills-overlay-reapplication-")
   );
   try {
-    const targetPath = path.join(temporaryRoot, input.target);
+    const targetPath = path.resolve(temporaryRoot, input.target);
+    if (!targetPath.startsWith(`${temporaryRoot}${path.sep}`)) {
+      return false;
+    }
     await mkdir(path.dirname(targetPath), { recursive: true });
     await writeFile(targetPath, input.targetContents);
     const { stdout } = await execFileAsync(

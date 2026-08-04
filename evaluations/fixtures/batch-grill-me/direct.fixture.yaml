@@ -7,7 +7,8 @@ skill: batch-grill-me
 domains: [organizational-work]
 severity: Critical
 requiredAttempts: 3
-prompt: Help me decide how to redesign our community workshop booking process. Ask every currently unblocked decision question in one round, give a recommended answer for each, and wait for my answers before asking dependent questions.
+prompt: >-
+  Help me redesign our community workshop booking process. The accepted decision tree has exactly three currently unblocked decisions: whether access is members-only or public, whether allocation is first-come or priority-based, and the maximum booking length. Cancellation rules depend on the allocation choice, and reminder timing depends on the booking-length choice. Ask the complete unblocked frontier in one round, recommend an answer for each, and wait before asking the two dependent questions.
 environment:
   id: user-decision-frontier
   capabilities:
@@ -17,12 +18,12 @@ environment:
     persistence: false
   tools: [filesystem, calendar]
 expected:
-  actions: [map the request as a design tree, compute the complete currently unblocked decision frontier, ask the frontier in one numbered round with a recommendation for each, wait for the user's decisions before advancing]
+  actions: [map the supplied finite decision tree, ask access allocation and maximum booking length together in one numbered round, recommend an answer for each of the three unblocked decisions, defer cancellation rules and reminder timing, wait for the user's decisions before advancing]
   artifacts: [frontier questions and recommendations]
   effects: []
   invoked: [batch-grill-me]
   notInvoked: [execution of the booking-process change]
-  proof: [the skill is reachable through model invocation, the first round includes every independent currently answerable decision and identifies dependent questions for later rounds]
+  proof: [the skill is reachable through model invocation, the first round contains exactly the three supplied unblocked decisions, cancellation and reminder questions remain explicitly downstream]
   responsibility: [batch-grill-me retains responsibility for exhausting the decision frontier and returns the accepted understanding to Workflow]
   route: [decision-frontier-in-rounds]
   state: [awaiting-user-decisions]
