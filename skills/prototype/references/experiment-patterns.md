@@ -67,10 +67,11 @@ reset, one stop authority, one evidence record, and one disposition.
 
 ## Retained upstream shape
 
-The upstream MIT Prototype at revision `2ab958093e83e0ec752e6c1c5932da465bf23e0c`
-uses question-first branch selection, throwaway-by-default setup, no
-persistence by default, visible state, a one-command or one-route handoff, and
-capture of the verdict. This successor retains those behaviors where they fit
-and makes the universal reversible/effect boundary explicit. The canonical
-license, URL, revision, and attribution remain in `validation/sources.yaml` and
-the skill's `provenance.yaml`.
+The pinned MIT Prototype source identified as `matt-pocock-skills` in
+`validation/sources.yaml` uses question-first branch selection,
+throwaway-by-default setup, no persistence by default, visible state, a
+one-command or one-route handoff, and capture of the verdict. This successor
+retains those behaviors where they fit and makes the universal
+reversible/effect boundary explicit. The source inventory is the sole authority
+for its license, URL, revision, and attribution; `provenance.yaml` records the
+skill's source relationship.
