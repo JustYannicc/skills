@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-trivial
 attempt: 1
 contextId: fresh-thinking-in-systems-trivial-1
-suiteRevision: git:472effb773ca145acaf3696b840823620fbc8f07
+suiteRevision: git:03340f9b772e9475bd6924f8de97d98790861408
 evaluator: gpt-5.6-terra-fresh-context-full-standard
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:
