@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-assurance-cadence
 attempt: 1
 contextId: fresh-thinking-in-systems-assurance-cadence-1
-suiteRevision: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+suiteRevision: git:535374486a2521e49b758023b96e9d8724eb5ccb
 evaluator: gpt-5.6-terra-fresh-context-full-standard
 recordedAt: 2026-08-04T16:10:54.000Z
 environment:
