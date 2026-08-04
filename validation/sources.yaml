@@ -1,0 +1,12 @@
+schemaVersion: 1
+sources:
+  - id: agent-skills-reference-validator
+    url: https://github.com/agentskills/agentskills
+    revision: 38a2ff82958afee88dadf4831509e6f7e9d8ef4e
+    commitUrl: https://github.com/agentskills/agentskills/commit/38a2ff82958afee88dadf4831509e6f7e9d8ef4e
+    license: Apache-2.0
+  - id: matt-pocock-skills
+    url: https://github.com/mattpocock/skills
+    revision: 2ab958093e83e0ec752e6c1c5932da465bf23e0c
+    commitUrl: https://github.com/mattpocock/skills/commit/2ab958093e83e0ec752e6c1c5932da465bf23e0c
+    license: MIT
