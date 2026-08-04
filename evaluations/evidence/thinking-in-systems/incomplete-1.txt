@@ -1,12 +1,14 @@
-I can’t make that change yet: it creates a durable, external-contact system without authority, a defined population, privacy rules, or an authoritative source of deadlines.
+I’ve preserved the request: change the team’s reminder system so it automatically contacts people who miss a deadline.
 
-To frame an approved proposal, I need:
+This is a material change to a durable system, but there is no eligible governing contract or authority to act. The unresolved gaps are:
 
-1. Who may authorize automatic outreach, and what actions are allowed?
-2. Who counts as a missed-deadline recipient, from which authoritative deadline/status source, and with what timing or exceptions?
-3. Which contact channels, privacy/retention rules, consent requirements, and escalation limits apply?
-4. What existing reminder system, owner, and legacy recipients/rules must remain compatible?
+- the person or role authorized to approve automated contact and the change itself;
+- the eligible recipient scope and deadline definition;
+- the privacy, consent, retention, and message-delivery rules; and
+- the current reminder system’s canonical source, owner, and existing behavior.
 
-Until then, the safe work is a bounded design or simulation only—no recipient selection, stored contact state, messages, or schedule. If approved, deterministic rules should select eligible records and enforce authority/privacy gates; an LLM may only interpret ambiguous context or draft a proposal. Proof must show the exact proposed recipients and messages, plus excluded, ambiguous, privacy-restricted, failed, and recovery cases before any effect.
+No messages, configuration changes, recipient lookups, or durable records will be created. The only safe preparation is to preserve this request and collect the governing sources.
 
-`'Workflow'` can coordinate the questions and any approved next phase; this assessment does not authorize or complete the change.
+Who is authorized to approve this automation, and where are the current reminder-system contract and the applicable recipient/privacy policy?
+
+The work is waiting for that authority and those sources. Once supplied, we can bind the approved scope and policy to the current system, propose the successor and its treatment of existing reminders, simulate the exact contact behavior without sending messages, and return the result for approval. The Workflow remains responsible for coordinating the blocked change and its eventual proof.

@@ -2,9 +2,9 @@ schemaVersion: 1
 fixtureId: foundation-direct
 attempt: 1
 contextId: fresh-direct-1
-suiteRevision: git:43088eddb22786afd1e69fd02cbccb0c559dd162
+suiteRevision: git:28c3e795624afe19296530494be51523e5d71442
 evaluator: deterministic-foundation
-recordedAt: 2026-08-02T17:00:01.000Z
+recordedAt: 2026-08-04T14:30:00.000Z
 environment: &environment
   id: conversation-only
   capabilities: { persistence: false, delegation: false }
@@ -25,4 +25,4 @@ observed: &observed
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/foundation/direct-1.txt
-  sha256: f1c4a2a86218b45720815882e55d971db88b20f4948565b0c9f488183c063a64
+  sha256: 30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af

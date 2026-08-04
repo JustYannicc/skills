@@ -1,12 +1,13 @@
-Informed exception accepted for the usual pilot-review phase, limited to this internal one-day experiment.
+## Informed exception record
 
-Constraints that remain in force:
+**Decision:** The experiment owner authorizes skipping the usual pilot review for this internal, one-day experiment.
 
-- Scope: internal participants only; no external users or production data.
-- Duration: ends after one day. Any continuation, reuse, or expansion requires reassessment.
-- Effects: no irreversible change, new durable authority, or external effect under this exception.
-- Proof: record the intended outcome, exact experiment boundary, and the observed result.
-- Recovery: keep rollback available; stop and roll back if the scope, data class, affected users, or risk changes.
-- Recheck trigger: immediately if a safeguard normally supplied by pilot review becomes necessary, and at the one-day endpoint before any next step.
+**Safeguard skipped and protection forgone:** Pilot review would provide an independent check of the proposed experiment, its assumptions, effect boundary, and recovery plan before it proceeds. Skipping it may leave an incorrect assumption, unrecognized harm, or an inadequate rollback path undiscovered.
 
-The skipped safeguard is the usual pilot review—not systems thinking, authority limits, evidence, or recovery responsibility. The installed `'Workflow'` skill remains responsible for coordinating the exception and any next phase.
+**Scope and duration:** This exception applies only to the named internal experiment, for one day, with no external users and no production data. It does not authorize any broader rollout, external effect, or reuse of the exception.
+
+**Recovery trigger:** Immediately pause the experiment, preserve its state and this decision record, and use rollback if any external-user or production-data exposure occurs or is proposed; a material assumption fails; an unintended material effect appears; or rollback cannot be verified. Resume only after the Workflow skill rechecks the proposal, recovery evidence, and required approval.
+
+**Remaining constraints for Workflow:** The exception bypasses only pilot review. Workflow retains authority for phase selection, execution, coordination, and completion; it must keep the experiment within this scope, bind any effect to the exact proposal revision, preserve a visible proof seam, and return verification, Outcome, and burden evidence before any continuation or expansion decision.
+
+State: ready for Workflow decision.

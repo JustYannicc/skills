@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: thinking-in-systems-one-time-handoff
+attempt: 1
+contextId: fresh-thinking-in-systems-one-time-handoff-1
+suiteRevision: git:28c3e795624afe19296530494be51523e5d71442
+evaluator: gpt-5.6-terra-fresh-context-full-standard
+recordedAt: 2026-08-04T14:30:00.000Z
+environment:
+  id: active-workflow-with-subagents
+  capabilities: { workflow: true, subagents: true, persistence: false }
+  tools: []
+observed:
+  actions: [treat the one-time handoff as a System interaction despite nonrecurrence, define the System boundary input output Authority proof and failure return, distinguish parent Ownership from bounded child Responsibility, return governing constraints to the Workflow skill]
+  artifacts: [inline handoff contract]
+  effects: []
+  forbiddenChecks:
+    - criterion: treat nonrecurrence as non-system
+      evidence: The response explicitly calls the one-time handoff a System interaction and says nonrecurrence changes only the need for a durable record.
+      observed: false
+    - criterion: transfer parent Ownership
+      evidence: The response leaves parent Ownership integration and terminal proof with Workflow and gives the subagent bounded Responsibility only.
+      observed: false
+    - criterion: describe the Workflow skill as a separate agent
+      evidence: The response explicitly says the same agent follows Thinking in Systems and Workflow as capabilities rather than separate actors.
+      observed: false
+    - criterion: take over Workflow coordination
+      evidence: The response returns a handoff contract for Workflow to coordinate and does not perform delegation or another Workflow phase.
+      observed: false
+  invoked: [thinking-in-systems]
+  notInvoked: [durable System Record, parent completion]
+  proof: [the parent owner verifies and integrates the exact child result]
+  responsibility: [the Workflow skill remains the same agent's coordinator and retains parent Ownership, the subagent accepts only bounded child Responsibility]
+  route: [workflow-to-governance-to-workflow]
+  state: [ready-for-workflow-delegation]
+rawEvidence:
+  locator: evaluations/evidence/thinking-in-systems/one-time-handoff-1.txt
+  sha256: b4296088e1f6373dd303902e4ff2e344e6619cb60a8c21820cbca6bca72a4a8f

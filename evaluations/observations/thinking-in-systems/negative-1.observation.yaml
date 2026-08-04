@@ -2,9 +2,9 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-negative
 attempt: 1
 contextId: fresh-thinking-in-systems-negative-1
-suiteRevision: git:43088eddb22786afd1e69fd02cbccb0c559dd162
+suiteRevision: git:28c3e795624afe19296530494be51523e5d71442
 evaluator: gpt-5.6-terra-fresh-context-full-standard
-recordedAt: 2026-08-04T12:12:55.000Z
+recordedAt: 2026-08-04T14:30:00.000Z
 environment:
   id: conversation-only
   capabilities: { workflow: true, persistence: false }
@@ -25,4 +25,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/negative-1.txt
-  sha256: 95b7a1d0f65bc2dfaa4030e7ca1d9afe0eb7e7d147b8c4a8b89161910b345798
+  sha256: f25e68125f5ff2eefa05ba70c22a5d18289df4d553d07834e4222cb5db633369

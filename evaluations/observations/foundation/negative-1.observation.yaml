@@ -2,9 +2,9 @@ schemaVersion: 1
 fixtureId: foundation-negative
 attempt: 1
 contextId: fresh-negative-1
-suiteRevision: git:43088eddb22786afd1e69fd02cbccb0c559dd162
+suiteRevision: git:28c3e795624afe19296530494be51523e5d71442
 evaluator: deterministic-foundation
-recordedAt: 2026-08-02T17:00:06.000Z
+recordedAt: 2026-08-04T14:30:00.000Z
 environment:
   id: conversation-only
   capabilities: { persistence: false }
@@ -25,4 +25,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/foundation/negative-1.txt
-  sha256: 094ba61c67756bf1725f1fb19b1fe0a36e2e604256488cb49f81aefcc9669f71
+  sha256: d25388bab446d078136553fabc5625a8c482ceb32a010185e40aa0372554637d

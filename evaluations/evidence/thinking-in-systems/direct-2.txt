@@ -1,32 +1,50 @@
-**Governing assessment — community workshop equipment checkout**
+## Governance assessment for Workflow
 
-**Accepted interpretation.** Assess the current and proposed equipment-checkout system before changing it. The intended Outcome is that authorized people can obtain suitable equipment safely, each item’s custody and condition are knowable, returns happen reliably, and the process remains workable for members and workshop operators.
+**Decision state: ready for Workflow decision; no process change is authorized by this assessment.**
 
-**Boundary and Authority.** This covers request, approval, checkout, custody, return, condition reporting, overdue/lost/damaged handling, inventory state, and operator handoffs. It does not authorize changing policy, purchasing equipment, imposing penalties, collecting new personal data, or activating automation. Those require an explicitly authorized decision.
+### Frame
 
-**Material unknowns to resolve before a consequential change.**
+- **Request / role:** assess the community workshop equipment-checkout process before Workflow plans any change. This is a governance assessment of an existing, potentially Durable system, not a change proposal or an instruction to operate it.
+- **Intent:** enable members to obtain equipment when entitled while protecting people, equipment availability, accountability, and the workshop's ability to recover from loss, damage, or disputed custody.
+- **Outcome / good-enough threshold:** a proposed change is good enough only if a competent operator can tell who is entitled to take a specific item, its current custody and condition, when it is due or available again, and how an exception is recovered—without shifting unapproved risk or effort onto members, volunteers, or support staff. Workflow may plan only after the owner, policy, current facts, and approval boundary are established.
+- **Boundary:** include request, eligibility/approval, checkout, custody, return, inspection, inventory state, exception handling, and communications. Exclude changing membership policy, insurance, disciplinary action, purchasing, or any physical or software deployment unless their owners explicitly authorize that scope.
+- **Authority and unknowns:** the workshop's designated process owner must approve policy, risk acceptance, access, data retention, and live changes. The actual owner; rules for eligibility, training, deposits, high-risk equipment, privacy, and incident escalation; current records; and affected users remain unconfirmed. Treat them as visible gaps, not assumptions.
 
-- Who may check out which equipment, under what training or supervision conditions?
-- Which items require reservation, inspection, consumables, deposits, or operator approval?
-- What is the authoritative inventory and custody record today?
-- What counts as a successful return: physical location, condition check, cleaning, accessory completeness, and record update?
-- Who can resolve disputes, override a block, mark damage, or write off a missing item?
-- What operating conditions matter: unattended periods, busy events, unavailable operators, poor connectivity, inaccessible storage, or interrupted returns?
-- What existing loans, reservations, and informal records would a new rule affect?
+### System seams Workflow must govern
 
-**Intervention constraint.** Compare doing nothing, clarifying the existing process, changing the physical/process environment, configuring an existing maintained tool, and custom building. Prefer the least costly reversible option that can meet the threshold. Include opportunity cost: staff time, member friction, displaced workshop activity, ongoing maintenance, and the cost of delay. Waiting is acceptable only with a named evidence trigger and recheck condition.
+- **Actors and ownership:** name one accountable owner for the integrated checkout Outcome; assign bounded responsibility to the member, checkout steward, inventory/maintenance owner, and any access-control or recordkeeping operator. A handoff does not transfer the process owner's responsibility for recovery or proof.
+- **State and handoffs:** preserve the original request, eligibility/training evidence, item identity and condition, custody transition, due/return state, inspection result, exception/incident history, and approval record. Give each material state one writable authority. For each handoff, define input/preconditions, recipient, completion proof, timing, and retry/resumption behavior.
+- **Interfaces and dependencies:** identify the workshop governance system, membership/training records, inventory records, physical storage/access controls, maintenance/repair, insurance or safety policy, and members who depend on predictable availability. For each material interface, state what crosses the boundary, its freshness/accuracy requirement, failure propagation, and change-notification duty.
+- **Incentives, friction, and conditions:** inspect what makes informal borrowing, late return, skipped inspection, hoarding, or inaccurate records easier than correct checkout. Test access hours, staffing, queueing, visibility of item status, language/accessibility, storage layout, and the cost of reporting damage. Make the safe path the low-friction default; do not rely on shame or repeated remembering.
+- **Judgment and enforcement:** people or an LLM may interpret unstructured requests or draft proposals, but deterministic controls must own item IDs, current custody, eligibility validation, approvals, timestamps, conflict prevention, and audit history. Any uncertain eligibility, safety, or ownership case pauses or routes to the named human authority rather than granting access.
 
-**System seams that need a governing rule.**
+### Intervention and preparation constraints
 
-- **Actors and handoffs:** member, approving operator, inventory custodian, maintenance/support owner, and any system. Each handoff needs input, output, timing, Authority, failure behavior, and visible completion evidence.
-- **State:** preserve original request, approval, item identity, borrower/custodian, checkout time, due condition, return evidence, condition history, and any override. One writable authority must own each material state; a dashboard or generated list cannot silently become a second authority.
-- **LLM and enforcement:** an LLM may help interpret a request or draft a notice. Deterministic mechanisms must enforce identity, eligibility, availability, approvals, state transitions, due-time rules, and effect gates.
-- **Incentives and friction:** make the safe, correct path easier than informal borrowing; do not substitute shame, hidden surveillance, or proxy metrics for the Outcome.
-- **Operating modes:** define Normal, Degraded, Paused, and Recovery behavior. For example, if the record system is unavailable, define exactly what may be loaned, what paper or temporary state is preserved, who reconciles it, and what proves recovery.
-- **Legacy and change:** any new rules or record must classify current loans, reservations, inventory discrepancies, and historical damage rather than overwriting history.
+Workflow should compare: retain the current process, wait for the missing facts, simplify physical/process conditions, configure an existing inventory/booking capability, or build a custom mechanism. Prefer the least costly reversible option that clears the Outcome threshold.
 
-**Good-enough proof.** A proposed change should demonstrate visible outcomes for: normal checkout and return; unavailable or already-loaned equipment; missing approval/training; damaged or incomplete return; unavailable record system; interrupted checkout; overdue item; reconciliation after degradation; and affected existing loans. Verify that the rules execute as intended, validate that custody and access improve, and measure burden separately for members and operators.
+Use the Pareto principle as a hypothesis: identify whether a small set of items, handoffs, conditions, or exception types causes most lost availability or support burden, while retaining safeguards for rare but serious safety, access, or trust failures. Do not call a proposal Pareto-improving unless no affected actor is materially worse off; otherwise identify the burden transfer, approving authority, mitigation, and reversal route.
 
-**Persistence.** This is a durable system, so any approved design needs one canonical System Record with its Authority, supported conditions, state ownership, operating modes, proof, and change/legacy treatment. No change is authorized by this assessment alone.
+Required mise en place before a change plan: current process map and observed failure cases; owner and approval boundary; authoritative inventory and membership/training sources; a representative support matrix; a proof seam; and a reversible fallback. Stop fact-finding when these are sufficient to choose a bounded experiment or expose a specific decision gap. Waiting is acceptable only if it names the missing evidence, what remains safe meanwhile, and the recheck trigger.
 
-`'Workflow'` may use these constraints to coordinate the next work, but this assessment does not select phases or claim the parent outcome is complete.
+### Operation, degradation, and recovery
+
+Define Normal, Degraded, Paused, and Recovery behavior before authorizing a change:
+
+- **Normal:** record and verify authorized checkout, custody, return, and condition.
+- **Degraded:** when a record, staff member, access control, or inventory source is unavailable, permit only pre-authorized low-risk work; visibly mark the limitation and preserve enough state to reconcile later.
+- **Paused:** block checkout or selected high-risk equipment where eligibility, custody, or safety cannot be established; retain the request and show the unblock condition.
+- **Recovery:** reconcile records with physical inventory and custody evidence, triage exceptions in bounded order, correct the governing cause, replay the affected failure class, and verify the healthy baseline before restoring normal autonomy.
+
+Name triggers, allowed and blocked effects, preserved state, visibility, owner, retry/resumption rule, and exit proof for each mode. Track decay signals such as stale records, unresolved exceptions, late returns, inventory mismatches, repeated overrides, queue age, and maintenance backlog; treat them as evidence about conditions, not blame.
+
+### Proof, learning, and legacy obligations
+
+Before live effects, simulate the production-intended checkout path with effectors disabled. Cover normal checkout/return, ambiguous eligibility, missing or stale records, unavailable dependency, high-risk item, damage/loss report, degraded operation, recovery, and affected existing loans. The visible proof must distinguish contract correctness, improved availability/safety/accountability, and burden on members and operators.
+
+For a material pilot, record the baseline, hypothesis, intervention, observation window, Outcome signal, operation signal, burden/harm signal, confounders, and retain/revise/pause/retire decision rule. Each metric needs an underlying Outcome, gaming route, counter-signal, owner, and retirement condition.
+
+Any approved change requires a successor steady-state contract and a linked change/legacy record: classify current loans, reservations, inventory records, training/eligibility data, and open incidents; preserve historical facts; specify compatible, auto-adapt, review-required, conflict, exempt, and unknown cohorts; simulate transition; define bounded rollout, rollback/repair, verification, and predecessor retirement. Do not treat installation or adoption as proof of the new Outcome.
+
+### Workflow boundary
+
+Workflow retains parent responsibility, phase selection, coordination, and terminal completion. This assessment supplies governing constraints only; it does not select Workflow phases, create their results, approve a change, or operate the checkout process.

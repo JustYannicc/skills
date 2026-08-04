@@ -1,4 +1,1 @@
-fixture=foundation-direct
-attempt=2
-context=fresh-direct-2
-observed=systems thinking, inline correction, inspection, completion
+Correct the typo in this sentence.

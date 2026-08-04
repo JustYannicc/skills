@@ -1,6 +1,6 @@
 {
-  "evaluatedAt": "2026-08-04T12:16:02.000Z",
-  "fixtureSetRevision": "d9c2d9ada81b243d623272082d17de2b1878c7aa194c66168f8dc8c6b09c31a7",
+  "evaluatedAt": "2026-08-04T14:30:00.000Z",
+  "fixtureSetRevision": "2028fdd1c60962cf4223aa93d572a802c68ed9d4e539dc8d555d786196b54ec8",
   "fixtures": [
     {
       "attempts": [
@@ -18,25 +18,25 @@
           "attempt": 1,
           "contextId": "fresh-direct-1",
           "locator": "evaluations/evidence/foundation/direct-1.txt",
-          "sha256": "f1c4a2a86218b45720815882e55d971db88b20f4948565b0c9f488183c063a64"
+          "sha256": "30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af"
         },
         {
           "attempt": 2,
           "contextId": "fresh-direct-2",
           "locator": "evaluations/evidence/foundation/direct-2.txt",
-          "sha256": "e23a339302a163d915450b0530c9d99ddef3b1202546154273484ec0b923f8c2"
+          "sha256": "30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af"
         },
         {
           "attempt": 3,
           "contextId": "fresh-direct-3",
           "locator": "evaluations/evidence/foundation/direct-3.txt",
-          "sha256": "29a7e4e3f9f651a93d256a756e10a0a8533fbfe412d214b0a7c05f998c25949e"
+          "sha256": "30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af"
         }
       ],
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -55,25 +55,25 @@
           "attempt": 1,
           "contextId": "fresh-edge-1",
           "locator": "evaluations/evidence/foundation/edge-1.txt",
-          "sha256": "51a350c450af4968e33b45c8531fc0d91a2da35be4ffcf73f87a69d9fa4cccaa"
+          "sha256": "97d307f42504c2491361c171013dbe19388a891c360f7e1305723d39e62753de"
         },
         {
           "attempt": 2,
           "contextId": "fresh-edge-2",
           "locator": "evaluations/evidence/foundation/edge-2.txt",
-          "sha256": "7b9b7ca8ea3063d892456bc179d569b4cab46e4bb87f120353b892620a3be042"
+          "sha256": "85af2624a50249e1576d994cdad6a4a0a91485558ddf6e3d3dc1442beb78a98a"
         },
         {
           "attempt": 3,
           "contextId": "fresh-edge-3",
           "locator": "evaluations/evidence/foundation/edge-3.txt",
-          "sha256": "1e41173d4e9da197802bb065ee38448fc0c7abe075f39591c29c98773df645c6"
+          "sha256": "1089b0309225620c478c13a47faa50ffda3bb470ae72a7c88f0fa586c0278e87"
         }
       ],
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -88,13 +88,13 @@
           "attempt": 1,
           "contextId": "fresh-incomplete-1",
           "locator": "evaluations/evidence/foundation/incomplete-1.txt",
-          "sha256": "acfdbe7a4d663f13c965df7129b0a78a369c86d65bf9e7a8d7f2cd5addeac9bf"
+          "sha256": "f03b477690daf303f8789733a62dc4badfe7e2a56b7832a3f19e5c54af2bbd1b"
         }
       ],
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -109,13 +109,13 @@
           "attempt": 1,
           "contextId": "fresh-indirect-1",
           "locator": "evaluations/evidence/foundation/indirect-1.txt",
-          "sha256": "197f2178730ac2a351fc08482b29b474b3b3cfbcde67252458ce1be83b8f38f0"
+          "sha256": "d6a48ddcd7e10c5c2f7c3945530d1d6da0bb982a7a5b08a263a3a19c5941ad37"
         }
       ],
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -130,13 +130,13 @@
           "attempt": 1,
           "contextId": "fresh-negative-1",
           "locator": "evaluations/evidence/foundation/negative-1.txt",
-          "sha256": "094ba61c67756bf1725f1fb19b1fe0a36e2e604256488cb49f81aefcc9669f71"
+          "sha256": "d25388bab446d078136553fabc5625a8c482ceb32a010185e40aa0372554637d"
         }
       ],
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
     },
     {
@@ -155,25 +155,25 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-consequential-1",
           "locator": "evaluations/evidence/thinking-in-systems/consequential-1.txt",
-          "sha256": "9afdcc5b3f36eb4580d38443b7829a9b78855ee08fedd011891ca8405d79513c"
+          "sha256": "2354bf008fb391e411690981576aea09e0a474ddadfb3b9e2c2981b770eede99"
         },
         {
           "attempt": 2,
           "contextId": "fresh-thinking-in-systems-consequential-2",
           "locator": "evaluations/evidence/thinking-in-systems/consequential-2.txt",
-          "sha256": "04ceb2559057f691965680ead2c557022d9bcada9259e251a6d1b2de9783816e"
+          "sha256": "25da4440e38c91e620d8290c45aaa4863a3ef0655560c282330cbb9596ca5e49"
         },
         {
           "attempt": 3,
           "contextId": "fresh-thinking-in-systems-consequential-3",
           "locator": "evaluations/evidence/thinking-in-systems/consequential-3.txt",
-          "sha256": "49d7ce782f8de1eaec76b5a071731ee610b0baf9d5797fec623cb86dd3262320"
+          "sha256": "789200eb32cb6ce40f15059ceb1566927f2f249e8000e41de88108106e4289de"
         }
       ],
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -192,25 +192,25 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-direct-1",
           "locator": "evaluations/evidence/thinking-in-systems/direct-1.txt",
-          "sha256": "29cfe0cdb992fbde5f84b00da363b32bcbe19107fdef83750cfec23f89e3c210"
+          "sha256": "0e3ff5b17af995840986f04b004b2740a63331f508643c259c810e00b41d03e9"
         },
         {
           "attempt": 2,
           "contextId": "fresh-thinking-in-systems-direct-2",
           "locator": "evaluations/evidence/thinking-in-systems/direct-2.txt",
-          "sha256": "1ae8889f019c08f2c01333964720b23dc487e2579f0c68db1627a6cae5445881"
+          "sha256": "5b04234a98ad11ef0cef96613545f8319dbd264dbbb1d006ef8706611a29734b"
         },
         {
           "attempt": 3,
           "contextId": "fresh-thinking-in-systems-direct-3",
           "locator": "evaluations/evidence/thinking-in-systems/direct-3.txt",
-          "sha256": "ff50120ba492d8a275ee2e4b63969be1b5f50887e13ebaf78faffa22263e76fd"
+          "sha256": "0b3051e654b237e7e3b2adcb8588cf04931fe089549b2b74876c752d299a2c1a"
         }
       ],
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -225,13 +225,13 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-edge-1",
           "locator": "evaluations/evidence/thinking-in-systems/edge-1.txt",
-          "sha256": "ea0c96d98c2de397f7e3df34be025f7b91b66509d6f819b144a4a26e29b89b88"
+          "sha256": "6657b2d1ae44eaf434e92fe5edf22f6a9163838a91ec16b8e21edbb7b029759b"
         }
       ],
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -246,13 +246,13 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-incomplete-1",
           "locator": "evaluations/evidence/thinking-in-systems/incomplete-1.txt",
-          "sha256": "627ecee242004b90c3796e20ea466f395f3b276a023e9ce98e8a3c4d54ee1e46"
+          "sha256": "a069bdd76a3b87a14a147383af8de8c2978250c4609cbaafeca6ffe85f079d63"
         }
       ],
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -267,13 +267,13 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-indirect-1",
           "locator": "evaluations/evidence/thinking-in-systems/indirect-1.txt",
-          "sha256": "7da983c14e5e4a6da3d9c4ab297175bd62d1e76e4a675dc5e0c4d890cf031250"
+          "sha256": "65a8f6e21f4721aaf9c1c11c45bbe9381fac1e2c68b8ca2ee95dc7e0269cf06b"
         }
       ],
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -288,14 +288,35 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-negative-1",
           "locator": "evaluations/evidence/thinking-in-systems/negative-1.txt",
-          "sha256": "95b7a1d0f65bc2dfaa4030e7ca1d9afe0eb7e7d147b8c4a8b89161910b345798"
+          "sha256": "f25e68125f5ff2eefa05ba70c22a5d18289df4d553d07834e4222cb5db633369"
         }
       ],
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-thinking-in-systems-one-time-handoff-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-thinking-in-systems-one-time-handoff-1",
+          "locator": "evaluations/evidence/thinking-in-systems/one-time-handoff-1.txt",
+          "sha256": "b4296088e1f6373dd303902e4ff2e344e6619cb60a8c21820cbca6bca72a4a8f"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "thinking-in-systems-one-time-handoff",
+      "status": "passed",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
+      "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
       "attempts": [
@@ -315,12 +336,12 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+      "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:43088eddb22786afd1e69fd02cbccb0c559dd162",
+  "suiteRevision": "git:28c3e795624afe19296530494be51523e5d71442",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -329,7 +350,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 12,
-    "passed": 12
+    "fixtures": 13,
+    "passed": 13
   }
 }

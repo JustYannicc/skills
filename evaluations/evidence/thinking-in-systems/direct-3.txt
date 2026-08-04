@@ -1,49 +1,40 @@
-**Governance assessment — community workshop equipment checkout**
+## Governance assessment: community workshop equipment checkout
 
-**Classification:** Existing repeatable system; its current contract is unknown. Any change could alter access, custody, safety, loss exposure, support burden, and member trust. Treat this as a material change until evidence shows otherwise.
+**Status:** ready for Workflow decision. This is an assessment of an existing, potentially Durable checkout system; no process change, data collection, purchase, communication, or live effect is authorized by this assessment.
 
-**Outcome:** Members can obtain appropriate equipment safely and fairly, while the workshop can reliably know who has custody, when it is due back, and how exceptions are handled.
+### Frame
 
-**Good-enough threshold:** A proposed change must make normal checkout and return understandable and low-friction, preserve accountability, prevent unauthorized or unsafe use, and leave staff able to resolve disputes, loss, damage, overdue items, and outages without inventing rules.
+- **Intent:** make shared equipment available for legitimate use while protecting people, equipment, access fairness, and the workshop's ability to operate.
+- **Outcome:** a member can obtain and return eligible equipment through a clear, fair, auditable path; the workshop can reliably know custody, condition, availability, and overdue or unsafe exceptions. Good enough for planning is a shared, evidence-backed problem frame and a reversible first intervention that does not reduce safety, access, or accountability.
+- **System boundary:** the system of interest is reservation/issue/return/exception handling. The containing system is workshop governance and operations. Likely subsystems are inventory identity, eligibility/training, custody records, maintenance, and incident handling. Upstream systems may include membership, training/authorization, access control, payment or deposits, and supplier/repair services; dependent systems include users, facilitators, safety governance, maintenance, scheduling, and insurance or compliance obligations.
+- **Material unknowns:** current rules and records; equipment classes and hazards; who owns the outcome; membership and training criteria; privacy/retention duties; accessibility needs; capacity and hours; loss, damage, injury, dispute, and overdue history; and any legal, insurance, or contractual constraints. Workflow should preserve the current process and obtain these facts before selecting a change.
 
-**Boundary:** Checkout, return, reservation or queueing if used, eligibility, custody records, condition reporting, overdue handling, and recovery are in scope. Broader workshop membership policy, purchasing, and unrelated scheduling remain outside unless they materially constrain these rules.
+### Authority and state
 
-**Actors and Authority:**
+- Name one workshop owner for the integrated Outcome. Assign bounded responsibility for inventory stewardship, eligibility confirmation, issuing/receiving, maintenance, incident response, and record administration. The Workflow skill retains parent responsibility, coordination, and terminal completion; this assessment does not select its phases or produce their results.
+- Only a named workshop authority may approve changes to eligibility, deposits or charges, sanctions, retention, access, safety controls, or external notifications. Staff or volunteers may perform only explicitly delegated issue/return and escalation effects. An LLM may summarize records or draft proposals but must not decide eligibility, alter custody, approve an exception, or be the sole record of state.
+- Preserve original request, reservation, approval, checkout, return, condition, maintenance, incident, and exception history. Give each material fact one writable authority; any dashboard or reminder is derived, shows its source/revision/freshness, and cannot become a second editable ledger. Stable equipment and transaction identities are required.
+- Each handoff must state producer and receiver, item identity and condition, eligibility and preconditions, time expectation, completion evidence, responsible actor, allowed effect, and escalation/resumption rule. Deterministic validation should enforce known rules such as required fields, state transitions, duplicate checkout prevention, eligibility/version binding, and audit history; human judgment remains explicit for condition disputes and safety exceptions.
 
-- Members may request, collect, return, and report equipment condition within published eligibility rules.
-- Authorized workshop staff determine eligibility exceptions, approve restricted equipment, resolve disputes, and authorize fees or account restrictions.
-- The checkout mechanism may record custody and enforce stated rules, but must not invent eligibility, penalties, or policy.
-- No LLM should be the sole authority for custody, access, or consequences; deterministic identity, timestamps, inventory state, approvals, and audit records should enforce those boundaries.
+### Intervention and readiness
 
-**Material unknowns to resolve before changing the system:**
+Do not presume software is the answer. Compare: retain the process with observation; correct its physical/process friction; configure an existing inventory or reservation tool; adopt a maintained checkout system; or build only if the evidence shows no lower-cost reversible option clears the Outcome threshold. Test the local 80/20 hypothesis: a small set of equipment, handoffs, locations, or rules may account for most unavailability, safety exposure, or staff burden, without discarding safeguards for lower-volume high-risk equipment.
 
-- Which equipment is unrestricted, training-gated, staff-only, consumable, or never loaned?
-- What is the authoritative inventory and member-eligibility source?
-- What proves handoff, return, condition, and custody transfer?
-- Who can override eligibility, extend a due time, waive a consequence, or declare an item lost?
-- What currently fails: availability, queue fairness, missing records, returns, damage reporting, staff workload, or something else?
-- What privacy, retention, insurance, safety, and accessibility constraints apply?
+The likely least-cost first action is a bounded, no-effect baseline observation and walkthrough of the present path, including normal checkout, return, absent staff, missing or damaged equipment, unclear eligibility, and overdue items. Its learning question is: which controllable condition causes the most material mismatch between availability, safety, accountability, and burden? It changes the decision between process/environment changes and a tool change. Required mise en place: owner and decision authority, permission to inspect relevant records and workspace conditions, privacy boundaries, representative actors, a safe observation window, a proof seam, and a rollback-free collection method. Stop preparation when these are present; pause if any is missing. Delay preserves options but prolongs preventable unavailability, unsafe custody uncertainty, or volunteer burden; the observation is reversible and has higher information value than a committed redesign.
 
-**Intervention constraint:** Compare doing nothing, clarifying the current process, changing physical/process conditions, configuring an existing checkout solution, adopting a maintained system, and custom work. Include opportunity cost: the best alternative forgone, displaced staff/member attention, switching and maintenance cost, cost of delay, reversibility, and evidence that the option clears the threshold. Do not select an intervention yet.
+### Conditions, incentives, and operation
 
-**Required governing seams:**
+- Inspect why each actor would bypass the intended path: queues, inconvenient location or hours, unclear rules, embarrassing reporting, inconsistent enforcement, deposit or access barriers, pressure to help another member, and the cost of recording returns. Make the safe, accountable path easier than informal workarounds; do not use shame, hidden surveillance, or proxy targets.
+- Treat access, lighting, storage layout, signage, connectivity, staffing, training availability, peak demand, and tool hazard as operating conditions. A metric such as checkout count or fast turnaround can improve while safety, equitable access, condition reporting, or maintenance worsens; pair it with counter-signals such as unresolved damage, denied eligible access, disputed custody, incidents, and maintenance backlog.
+- Define normal, degraded, paused, and recovery behavior before activation. In degraded operation (for example, ledger unavailable or staff shortage), permit only pre-authorized low-risk checkout with an independently preserved temporary custody record; block high-risk or eligibility-dependent issue. In paused operation, preserve state and issue nothing where custody or safety cannot be verified. Recovery reconciles temporary records, verifies items and condition, resolves exceptions in bounded triage, restores the accepted baseline, and records rather than erases discrepancies. State the owner, trigger, permitted and blocked effects, visibility, resumption condition, and exit proof for each mode.
+- Decay signals include reconciliation differences, repeated manual overrides, growing overdue queue, correction rate, missing condition records, unreported damage, declining availability, access complaints, and maintenance backlog. The owner needs a reachable control surface, event-driven review where possible, a defined reset/reconciliation action, and escalation or retirement conditions.
 
-- One writable authority for each item’s identity, status, location, condition, and current custodian.
-- Explicit handoff contracts for checkout, return, reservation, maintenance hold, and exception handling.
-- A visible distinction between available, reserved, checked out, overdue, unavailable, maintenance, missing, and retired states.
-- A deterministic effect gate for releasing restricted equipment or recording custody; any LLM use is limited to explanation, triage, or drafting.
-- A low-friction normal path that does not make correct use harder than bypassing it.
-- Clear treatment of damaged, missing, late, disputed, or incorrectly recorded items.
-- A degradation rule for unavailable records or identity verification: preserve state and block unsafe release rather than guessing.
-- Recovery rules that reconcile physical inventory with records and preserve history rather than silently rewriting it.
+### Proof, change, and legacy obligations
 
-**Proof obligations before a change is accepted:**
+Before any material change, simulate the production-intended path with effects disabled and show the exact proposed records, notices, approvals, waits, and exceptions. Cover normal use, ambiguous eligibility, weakest realistic staffing/access condition, missing dependency, degraded operation, recovery, incorrect assumptions, existing open checkouts, legacy inventory records, and retirement of any replaced process. Approval binds the exact proposal revision and assumptions.
 
-- Simulate normal checkout and return, ineligible access, ambiguous item identity, unavailable checkout records, overdue return, damage report, conflicting custody claim, and recovery after reconciliation.
-- Verify visible results at the public seams: member instructions, staff authority, custody record, item state, and exception path.
-- Validate the real Outcome separately from operational success: reduced checkout friction or loss is not enough if access becomes unfair, unsafe, confusing, or burdensome.
-- Measure burden and harm alongside the Outcome, including staff exception work, member confusion, accessibility barriers, disputes, and workarounds.
+Separate evidence for: contract conformance (verification); safer and more reliable availability/accountability (validation); burden and harm on members and volunteers; and sustainment/ownership. Establish a baseline from current evidence. Each measure needs its decision, denominator or qualitative rubric, gaming route, counter-signal, observation window based on the proposed mechanism, and retirement condition. Collect only data authorized for the stated purpose, with minimization, access, retention, deletion, and interpretation limits.
 
-**Legacy and change constraint:** Any selected change needs an explicit disposition for existing loans, reservations, condition history, member permissions, and items whose status is unknown. Historical records remain historical; do not rewrite them to imply the new rules always applied.
+Any selected material change requires a successor System Record and a linked Change and Legacy Record before adoption. Classify every discoverable existing cohort--equipment, open checkout, reservation, member eligibility/training record, maintenance or incident record--as unaffected, compatible, auto-adapt, review-required, conflict, exempt, or unreachable/unknown. Preserve original history, simulate the transition, use bounded resumable rollout and repair/rollback, report coverage and unknowns, and explicitly preserve or retire the predecessor. No informed exception is proposed; one would require the relevant authority to see the skipped safeguard, consequence, scope/duration, and recovery trigger.
 
-**Permitted next work:** Preserve the current process and gather the smallest evidence that resolves the material unknowns above. Hand this governing assessment to `'Workflow'`; `'Workflow'` may decide phases and coordination, but no change should be treated as complete until its contract, authority, recovery path, and proof are explicit.
+**Constraint to Workflow:** keep this as a governance frame. It may now decide how to obtain the named facts and compare interventions, but it retains phase selection, coordination, specialist work, implementation, approval, and completion.

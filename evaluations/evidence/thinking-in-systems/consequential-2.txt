@@ -30,3 +30,36 @@ Treat every case created under the old rule as an explicitly classified legacy c
 - `unaffected`: only if a discovered cohort is genuinely outside the stated “every existing case” scope.
 
 Simulate each disposition first. Cut over only after the exact successor rule, legacy disposition, approvals, and rollback/repair path are bound to the tested revision. `'Workflow'` can then coordinate the approved work; this assessment does not select its phases or claim completion.
+## Governing assessment for Workflow
+
+This is a material change to a Durable intake-classification system, not a direct rule edit. It changes the treatment of every new case and reinterprets existing cases, so it reopens the System boundary and needs a proposed successor System Record plus a linked Change and Legacy Record. The rule must not be changed live from this assessment.
+
+### Frame and authority
+
+- **Request:** replace the intake classification rule next week for new and existing cases.
+- **Intent / Outcome:** use a classification rule that produces the accepted routing or treatment for both incoming and previously created cases, without losing history, misrouting work, or leaving unknown cohorts silently untreated.
+- **Good-enough threshold:** Workflow may advance a proposal only when the successor rule, its effective boundary, each affected cohort's disposition, approval authority, simulation results, rollout/rollback path, and recovery owner are explicit. It must pause rather than infer any of these material facts.
+- **Boundary:** the System of interest is intake classification and its resulting case state, routing, queues, records, and dependent downstream handling. Its containing system is the organization’s case-management operation. Material interfaces include case creators, operators, approvers, stored case records, rule/configuration owners, and every system or team consuming the classification.
+- **Authority:** an agent may inventory, propose, model, and simulate. The authorized rule owner must approve the exact successor revision, legacy transformation, activation date, and any external effects. Workflow retains parent responsibility and phase coordination; this assessment does not approve, activate, or complete the change.
+
+### Required governing constraints
+
+1. **Establish the successor contract before cutover.** Record the old and proposed rules, stable case identity, inputs and precedence, version/effective-time rules, classification output, exceptions, downstream interface contract, writable authority for each state field, and the owner for integrated outcomes. Preserve original classifications, original inputs, decisions, and provenance; a migration may add a new classification or disposition but must not rewrite history to imply the new rule always applied.
+
+2. **Discover and classify the legacy population.** Produce a bounded, resumable inventory with coverage counts and an explicit `unreachable/unknown` count. Classify every discoverable cohort as `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`. For each non-unaffected cohort, specify the exact transformation or re-evaluation, its preconditions, responsible owner, completion evidence, and rollback or repair path. Unknown coverage remains a visible risk, not evidence of compatibility.
+
+3. **Inspect the operating arrangement.** Identify who benefits from or bears the cost of faster or stricter classification; whether metrics reward throughput, closure, or a favorable category at the expense of correct treatment; and the counter-signal for that gaming route. Remove avoidable operator memory and lookup burdens with versioned defaults and deterministic validation. Test the real conditions that affect classification—missing fields, ambiguous cases, delayed approval, backlog, unavailable downstream consumers, and stale rule or reference data—rather than assuming normal operations.
+
+4. **Define modes and recovery.** In Normal mode, classify only under the approved version and show the rule version on each decision. In Degraded mode, permit only pre-authorized preservation or clearly marked provisional routing; block irreversible downstream effects that depend on a confident classification. In Paused mode, preserve intake and legacy state while preventing rule-driven transitions; expose the unblock condition and owner. In Recovery, restore the last accepted rule/state baseline or repair the bounded affected cohort, verify classifications and downstream reconciliation, then resume in bounded batches. Define triggers, allowed and blocked effects, preserved state, visibility, retry/resumption rules, exit proof, and the healthy baseline for each mode.
+
+5. **Simulate before effects.** Run the production-intended retrieval, interpretation, classification, legacy-discovery, and downstream proposal path with effectors and user-visible writes disabled. Render the exact proposed classifications, transformations, messages, waits, queue effects, exceptions, and rollback candidates. Cover normal cases, ambiguity, missing capability, invalid assumptions, degraded and recovery behavior, each legacy cohort, unknown coverage, and retirement of the old rule. Correct and replay every rejected material case before activation approval.
+
+6. **Prove the hypothesis and govern rollout.** State the hypothesis, baseline, mechanism, observation window based on the expected effect delay, real Outcome signal, operation signal, burden/harm signal, confounders, and retain/revise/pause decision rule. A favorable throughput or completion metric alone cannot promote the rule; pair it with a counter-signal for incorrect treatment, reversals, complaints, or downstream correction. Use a bounded, resumable rollout with a cutover condition, monitoring owner, stop threshold, rollback/repair procedure, and verification of both new and legacy cases.
+
+### Proposed legacy disposition
+
+Treat all existing cases as a migration population, not as automatically reclassified. Preserve each case’s old rule version and prior classification. After discovery, assign the cohort disposition above; auto-adapt only where the approved transformation is deterministic and simulation has shown compatible downstream effects. Route `review-required` and `conflict` cases to a named authorized reviewer, preserve `exempt` cases under their old contract, and retain `unreachable/unknown` cases in a visible exception record with a re-discovery or retirement decision trigger. Explicitly preserve or retire the old rule only after outstanding work, dependent interfaces, access, history, and discovery metadata have been handled.
+
+### Workflow decision gate
+
+Workflow should coordinate framing, the successor and Change and Legacy Records, authority confirmation, zero-effect simulation, adversarial review, resolution check, and the activation decision. It may not schedule or perform the live rule change until the authorized owner accepts the exact proposed revision and the simulation, rollout, rollback, recovery, and legacy-coverage evidence meet the stated threshold.

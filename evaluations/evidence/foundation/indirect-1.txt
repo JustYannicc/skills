@@ -1,4 +1,8 @@
-fixture=foundation-indirect
-attempt=1
-context=fresh-indirect-1
-observed=workflow routed to research and integrated primary evidence
+**Workflow → Research**
+
+- **External uncertainty:** the factual claim needed to make the next decision has not been established from an authoritative source.
+- **Bounded research task:** use a primary-source lookup to establish that claim, preserve the source URL, publication/effective date, exact supporting passage, and any material limitation.
+- **Research result:** primary evidence attached to the workflow record; the claim is supported only to the stated scope.
+- **Workflow integration:** retain ownership of the decision, compare the evidence against the accepted threshold, and proceed only within existing Authority.
+
+State: **ready for decision**.
