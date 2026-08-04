@@ -1,0 +1,43 @@
+Overlay tranche Luna Max resolution check
+
+Base: 455541e255b5482235faa65a82bffc2b21415b94
+Runtime candidate: ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+Frozen evidence reviewed: 6a4dd1c24f63e1fc9a24c045b4542bb7713bec5b
+Review model: gpt-5.6-luna, max reasoning
+Verdict: PASS — no remaining Critical, Major, or Minor Standards/Spec findings
+
+Independent resolution evidence:
+- `pnpm validate` passed: 6 test files, 28 tests, 271 validated files,
+  1 installed skill, 38 fixtures, and zero evaluation findings.
+- `git diff --check 455541e255b5482235faa65a82bffc2b21415b94..HEAD`
+  passed on the frozen evidence commit with a clean worktree.
+- All five declared overlay records reapplied cleanly and deterministically to
+  mattpocock/skills@2ab958093e83e0ec752e6c1c5932da465bf23e0c.
+- Every declared overlay SHA-256 matched the manifest and acceptance proofs.
+- The three normalized SKILL patches produced byte-identical target files to
+  their reviewed predecessor patches.
+- All 56 observations and the report bind runtime suite identity
+  `git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2`. Earlier candidate labels in
+  raw transcripts remain immutable run history under the explicit rebind
+  attestation and are not publication identities.
+
+Finding resolution:
+1. Published `.patch` files are scanned by the public-boundary validator and a
+   regression test proves private paths inside patch content fail validation.
+2. Additional artifact locators and SHA-256 values are validated, retained in
+   reports, and covered by containment, symlink, mutation, and boundary tests.
+3. Batch Grill Me has separate fresh direct and bounded Luna Max delegated
+   factual-legwork proofs alongside its missing-capability proof.
+4. The normalized evidence and overlay records pass the whitespace gate.
+
+Spec boundaries:
+- Research proves cross-domain primary evidence, citations, uncertainty,
+  selected-Adapter durability, direct-or-delegated capability behavior, and
+  the explicit return-to-Workflow boundary without changing its metadata.
+- To Questionnaire changes only the two invocation booleans and preserves the
+  universal questionnaire procedure.
+- No #13 Workflow behavior or #35 System Record representation changed.
+
+This resolution record is evaluation-only. Adding it does not alter the
+reviewed runtime candidate; publication gates are rerun on the commit that
+contains this record.

@@ -1,0 +1,14 @@
+Round 1 — current decision frontier
+
+The three decisions that are unblocked are below. I’ve included a provisional recommendation for each; these remain your decisions to accept or change.
+
+1. Access scope: should booking be members-only or public?
+   Recommendation: members-only initially, so existing members get predictable access while demand and capacity are measured.
+
+2. Allocation: should bookings be first-come, first-served or priority-based?
+   Recommendation: first-come, first-served, because it is transparent and low-overhead without first having to define a priority policy.
+
+3. Maximum booking length: what should the maximum length of one booking be?
+   Recommendation: cap each booking at 2 hours as a simple starting limit; revisit it after observing utilization and unmet demand.
+
+Please give your decisions for 1–3 (accept or replace each recommendation). I’ll recompute the frontier after you answer. Cancellation rules depend on the allocation choice, and reminder timing depends on the booking-length choice, so I’m deliberately deferring those two questions until their prerequisites are settled. No booking-process change will be executed until you confirm the resulting shared understanding.

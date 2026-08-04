@@ -1,0 +1,67 @@
+Fresh-context execution
+
+Candidate commit: f9cdc8fb48c3d6f557a58e4e9358de825bf9fd4d
+Suite revision (repository content identity; evaluation artifacts excluded): git:d6536d81e10ca550b7483aa4a21d319c7cbf7688
+Context ID: fresh-research-negative-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-04T18:19:31Z
+Pinned upstream: mattpocock/skills git:2ab958093e83e0ec752e6c1c5932da465bf23e0c
+Overlay: the pinned Research skill with the candidate overlay applied exactly. Overlay hash: SKILL.md.patch=1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a.
+Effects: disabled; no Research lookup, experiment execution, Specification, persistence, or other external effect was performed.
+
+Prompt (exact fixture text):
+Decide whether two onboarding variants work better by designing a reversible experiment; do not investigate external facts.
+
+Expected disposition:
+
+- Classify the request as one empirical design uncertainty, not an external-fact investigation.
+- Keep Research and Specification out of the route.
+- Return the request to Workflow for the Prototype route, with Workflow retaining responsibility.
+- State the result as ready-for-prototype without running the experiment or producing an artifact/effect.
+
+Pinned overlay reconstruction:
+
+```markdown
+---
+name: research
+description: "Investigate a bounded external-fact question across technical, personal, organizational, physical, or agent domains using high-trust primary sources. Use when the user or the active 'Workflow' skill needs cited findings, source verification, or uncertainty reduced."
+---
+
+Research one bounded external-fact question and return evidence to the requesting context. When an active `'Workflow'` skill context exists, return the bounded result there. Choose the smallest truthful route:
+
+1. Investigate directly with available primary-source tools, or delegate bounded legwork when an approved delegation capability is available and useful. Delegation is optional; keep the question, source standard, and return route explicit. When `'Workflow'` is active, its parent owner integrates the result.
+2. Use high-trust primary evidence appropriate to the domain: official documentation, source code, specifications, first-party APIs, standards, direct records, or authoritative datasets. Follow every material claim to the source that owns it. Separate observed facts, inferences, conflicts, and uncertainty; if primary evidence is missing or weak, state that gap instead of presenting a confident conclusion.
+3. In Inline mode, return the bounded findings in the conversation. When a Persistence boundary or explicit request requires durability, write one canonical research result through the selected Adapter, including the question, claims, citations, uncertainty, and result revision or locator. Do not assume a repository, Git, Markdown path, or any particular host. If no conforming baseline Adapter or research capability is available, enter visible Degraded mode and return the findings or preserved question plus the exact capability gap to the requesting context; do not claim durable persistence or fabricated evidence.
+4. Return cited findings, uncertainty, source locators, and durability status to the active `'Workflow'` skill when present; otherwise return them to the requesting user or context. Stop at that result boundary: do not continue into Specification, decomposition, execution, or parent completion.
+```
+
+Observed response (verbatim):
+
+This is an empirical design uncertainty—whether onboarding variant A or variant B works better—and not an external-fact investigation. Workflow should return it to the Prototype route for a reversible experiment. Research is not invoked because no external fact lookup is requested, and Specification is not created at this routing boundary. No experiment or other external effect is run. State: ready-for-prototype; Workflow retains responsibility for routing and the parent Outcome.
+
+Observed evidence arrays:
+
+```yaml
+actions:
+  - recognize the empirical design uncertainty
+  - return the request to Workflow for the Prototype route
+artifacts: []
+effects: []
+invoked:
+  - workflow
+notInvoked:
+  - research
+  - Specification
+proof:
+  - the question is classified as an experiment rather than an external-fact investigation
+responsibility:
+  - Workflow routes the work to Prototype
+route:
+  - workflow-to-prototype
+state:
+  - ready-for-prototype
+forbiddenChecks:
+  - criterion: start a Research investigation
+    evidence: The response explicitly classifies the request as an empirical design question, routes it to Prototype through Workflow, and performs no external-fact lookup or Research work.
+    observed: false
+```

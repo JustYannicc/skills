@@ -1,0 +1,49 @@
+schemaVersion: 1
+fixtureId: batch-grill-me-incomplete
+attempt: 1
+contextId: fresh-batch-grill-me-incomplete-final-1
+suiteRevision: git:ec5e478f881a6d9b13c7296f8c4a23c2687a53b2
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-04T18:24:32.000Z
+environment:
+  id: missing-user-decisions
+  capabilities:
+    directFactLookup: true
+    delegation: false
+    persistence: false
+  tools: []
+observed:
+  actions:
+    - expose the missing decision inputs
+    - ask only the currently unblocked user decisions with recommended answers
+    - keep dependent questions for a later round
+  artifacts:
+    - visible unanswered decision frontier
+  effects: []
+  forbiddenChecks:
+    - criterion: invent missing user decisions
+      evidence: The response labels dietary constraints, preparation time, and decision authority as unanswered decisions and gives recommendations without selecting any value.
+      observed: false
+    - criterion: ask dependent questions prematurely
+      evidence: Only the three independent prerequisite decisions are asked; servings, cadence, budget, cuisine, shopping, and implementation are explicitly deferred.
+      observed: false
+    - criterion: claim shared understanding
+      evidence: The response says the interview remains open and waits for the user's answers before recomputing the frontier.
+      observed: false
+  invoked:
+    - batch-grill-me
+  notInvoked:
+    - meal-routine execution
+  proof:
+    - no dietary
+    - time
+    - or authority assumption is silently treated as settled
+  responsibility:
+    - batch-grill-me remains responsible for the decision interview until the frontier is resolved or the user ends it
+  route:
+    - incomplete-frontier-to-user
+  state:
+    - waiting-for-user-decisions
+rawEvidence:
+  locator: evaluations/evidence/batch-grill-me/incomplete-1.txt
+  sha256: 875d7c91993cf680e92d7f3b7449ec5225be7b4842212c66170ee16960102ad5
