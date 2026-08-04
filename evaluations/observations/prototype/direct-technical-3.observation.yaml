@@ -1,0 +1,31 @@
+schemaVersion: 1
+fixtureId: prototype-direct-technical-logic
+attempt: 3
+contextId: fresh-prototype-direct-technical-3
+suiteRevision: git:7a16adebd06f29d32f80ca6fa9c6c5f43a991f66
+evaluator: gpt-5.6-luna-fresh-context-prototype
+recordedAt: 2026-08-04T20:32:00.000Z
+environment:
+  id: workflow-technical-scratch
+  capabilities: { workflow: true, persistence: false, sandbox: true, effects: false }
+  tools: [terminal]
+observed:
+  actions: [name exactly one material question, choose an in-memory state-machine setup, define the transition observation seam and stopping rule, return the verdict to Workflow]
+  artifacts: [prototype result contract]
+  effects: []
+  forbiddenChecks:
+    - criterion: write production data
+      evidence: The reducer uses only in-memory state and the shell has no production adapter.
+      observed: false
+    - criterion: absorb implementation
+      evidence: The result returns a decision and evidence to Workflow without creating production code.
+      observed: false
+  invoked: [prototype]
+  notInvoked: [to-spec, implementation]
+  proof: [revision-bound before-and-after state evidence at the retry seam]
+  responsibility: [Workflow retains parent coordination and completion]
+  route: [workflow-to-prototype-to-workflow]
+  state: [verdict-ready-for-workflow]
+rawEvidence:
+  locator: evaluations/evidence/prototype/direct-technical-3.txt
+  sha256: 4ddabcb46f01a501cbe6bceb5478e37185b298cd7831fd682c31d37fcd425e85

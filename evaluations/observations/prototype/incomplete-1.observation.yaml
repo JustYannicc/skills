@@ -1,0 +1,31 @@
+schemaVersion: 1
+fixtureId: prototype-incomplete-question
+attempt: 1
+contextId: fresh-prototype-incomplete-1
+suiteRevision: git:7a16adebd06f29d32f80ca6fa9c6c5f43a991f66
+evaluator: gpt-5.6-luna-fresh-context-prototype
+recordedAt: 2026-08-04T20:33:00.000Z
+environment:
+  id: conversation-without-question
+  capabilities: { workflow: true, persistence: false, sandbox: false, effects: false }
+  tools: []
+observed:
+  actions: [identify the missing material question, ask one smallest discriminating question, preserve the waiting state]
+  artifacts: [incomplete prototype result contract]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent a design question
+      evidence: The response asks for the material question instead of choosing one.
+      observed: false
+    - criterion: run an unscoped experiment
+      evidence: No setup, effect, or experiment is started while the question is missing.
+      observed: false
+  invoked: [prototype]
+  notInvoked: [setup, implementation]
+  proof: [the missing question and exact resumption condition are visible]
+  responsibility: [Workflow or the caller retains responsibility while the question is unanswered]
+  route: [prototype-waiting-for-question]
+  state: [waiting-for-question]
+rawEvidence:
+  locator: evaluations/evidence/prototype/incomplete-1.txt
+  sha256: b2c76867ec1aae8e9d36650bd016fd9f1fdd405890d559ec99b9339a221215a6
