@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: thinking-in-systems-indirect
-title: Workflow requests governing judgment without transferring ownership
+title: Workflow skill requests governing judgment without transferring ownership
 shape: indirect
 kind: invocation
 skill: thinking-in-systems
@@ -15,14 +15,13 @@ environment:
     approval: true
   tools: []
 expected:
-  actions: [bind intent authority assumptions and proof, separate model composition from deterministic approval and send effects, return constraints to Workflow]
+  actions: [bind intent authority assumptions and proof, separate LLM composition from deterministic approval and send effects, return constraints to the Workflow skill]
   artifacts: [governance assessment]
   effects: []
   invoked: [thinking-in-systems]
   notInvoked: [send effect, parent completion]
   proof: [approval remains bound to the exact draft revision]
-  responsibility: [Workflow integrates the governance assessment]
+  responsibility: [the Workflow skill integrates the governance assessment]
   route: [workflow-to-governance]
   state: [ready-for-workflow-decision]
-  forbidden: [take over coordination or send a message]
-
+  forbidden: [take over Workflow skill coordination or send a message]

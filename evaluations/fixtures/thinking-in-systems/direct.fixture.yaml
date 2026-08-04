@@ -16,14 +16,13 @@ environment:
     specialistPhases: false
   tools: []
 expected:
-  actions: [identify intent and outcome, inspect authority incentives friction and environment, define degradation recovery and proof obligations, return governing constraints to Workflow]
+  actions: [identify intent and outcome, inspect authority incentives friction and operating conditions, define degradation recovery and proof obligations, return governing constraints to the Workflow skill]
   artifacts: [governance assessment]
   effects: []
   invoked: [thinking-in-systems]
   notInvoked: [specialist phase execution]
-  proof: [relevant standard clauses identified, Workflow boundary stated]
-  responsibility: [Workflow retains parent responsibility]
+  proof: [governance assessment covers intent intervention seams operation proof and legacy, Workflow skill boundary stated]
+  responsibility: [the Workflow skill retains parent responsibility]
   route: [governance-to-workflow]
   state: [ready-for-workflow-decision]
-  forbidden: [select Workflow phases or create their results]
-
+  forbidden: [select Workflow skill phases or create their results]

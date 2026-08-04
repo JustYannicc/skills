@@ -21,8 +21,7 @@ expected:
   invoked: [thinking-in-systems]
   notInvoked: [reminder-system change]
   proof: [material gaps and exact resumption condition stated]
-  responsibility: [Workflow remains responsible while blocked]
+  responsibility: [the Workflow skill remains responsible while blocked]
   route: [governance-gap-to-workflow]
   state: [waiting-for-authority]
   forbidden: [invent authority or implement the change]
-

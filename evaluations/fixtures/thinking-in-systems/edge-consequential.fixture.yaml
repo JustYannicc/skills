@@ -16,14 +16,13 @@ environment:
     simulation: true
   tools: []
 expected:
-  actions: [reopen the system boundary, identify authority incentives friction and evidence, define Normal Degraded Paused and Recovery behavior, discover classify and simulate legacy impact, return governing constraints to Workflow]
+  actions: [reopen the system boundary, identify authority incentives friction operating conditions and evidence, govern Normal Degraded Paused and Recovery behavior, discover classify and simulate legacy impact, return governing constraints to the Workflow skill]
   artifacts: [governance assessment, proposed legacy disposition]
   effects: []
   invoked: [thinking-in-systems]
-  notInvoked: [live rule change, Workflow phase execution]
+  notInvoked: [live rule change, Workflow skill phase execution]
   proof: [zero-effect simulation and rollback obligations stated, unknown legacy coverage remains visible]
-  responsibility: [Workflow retains parent responsibility and coordinates the change]
+  responsibility: [the Workflow skill retains parent responsibility and coordinates the change]
   route: [consequential-governance-to-workflow]
   state: [ready-for-workflow-decision]
   forbidden: [apply the rule or claim the Outcome complete]
-

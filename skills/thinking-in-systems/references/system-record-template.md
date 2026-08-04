@@ -5,201 +5,182 @@ version: 0.1.0-draft
 design_status: candidate
 operational_status: unbuilt
 catalog_eligibility: not_eligible
-owner: "[operational owner]"
-decision_authority: "[who may accept/change/activate it]"
+owner: "[System owner]"
+decision_authority: "[who may accept, change, or activate it]"
 governed_by: Thinking in Systems standard
 supersedes: null
 ---
 
-# System-Design Template
+# System Record
 
-Use this template for every durable system and material system change. It is a contract, not a demand for maximum documentation: complete the mandatory core, include conditional sections when their consumer or risk exists, and mark a materially relevant omission `N/A` with a one-line reason. Do not duplicate a fact owned by another system; link to its authority.
+Use this template only for a Durable system or material System change. Complete the mandatory meaning from the full standard; include a conditional field only for a named consumer or material risk. Link to facts owned elsewhere instead of copying them.
 
-## 1. Original request, intent, and outcome
+## 1. Frame
 
-- **Original request/problem:**
-- **Underlying intent:**
-- **Accepted outcome:**
-- **Productivity/progress relationship:**
-- **Good-enough threshold (satisficing):**
-- **Non-outcomes:**
-- **Decision authority:**
+- **Original request or problem:**
+- **Intent:**
+- **Accepted Outcome:**
+- **Good-enough threshold:**
+- **Non-Outcomes:**
+- **Owner and decision Authority:**
+- **Material domain terms:**
+- **Intentionality and progress classification, when relevant:** intended productive use, rest or leisure, intentional or incidental progress, or unresolved Intent; never a moral score.
 
-## 2. Scope and boundary
+## 2. Boundary and support
 
 - **Owned responsibilities:**
 - **Affected but not controlled:**
-- **Included / excluded:**
-- **Support matrix:** actors, environments, devices, permissions, volumes, and cases.
-- **Construction class:** temporary experiment, bounded tool, or maintained system.
-- **Maturity status:** Idea, Spike, Pilot, or Production.
-- **Evidence claim bound to support matrix:** demonstrated seams/cases, real environment, evidence artifact, date/freshness, and evidence still missing.
-- **Assumption delta from the nearest existing system:** operator, cadence, environment, permissions, communication, state, recovery, consequence, fallback, ownership, lifetime, variability.
+- **Included and excluded:**
+- **Supported Actors, cases, operating conditions, interfaces, states, and scale:**
+- **Construction class:** disposable experiment, bounded temporary tool, or maintained System.
+- **Evidence claim:** demonstrated seams and cases, operating conditions, artifact, revision or date, freshness, and evidence still missing.
+- **Material differences from the nearest proven case:**
 
-## 3. Discovery contract
+## 3. Sources, assumptions, ambiguity, and gaps
 
-- **Stable `system_id` and canonical record:**
-- **Applicability triggers:** request types, domain terms, state/events, and explicit invocation.
-- **Operations/capabilities provided:**
-- **Inputs consumed / outputs produced:**
-- **Dependencies and required capabilities:**
-- **Conflicts and precedence:**
-- **Design status, operational status, catalog eligibility, version, and freshness:**
-- **Owner and decision authority:**
-
-The agent's catalog first shortlists only `eligible` systems deterministically by explicit ID, request/operation type, domain, event/state, required capability, operational mode, version, and precedence. `Candidate`, `DesignComplete` but `Unbuilt`, `Superseded`, `Retired`, and explicitly `not_eligible` records cannot govern execution. A Degraded system advertises only the operations its degraded contract still permits. A model may interpret the request and choose among that bounded set while showing the matched evidence. If no system applies, several conflict, or a required capability is missing, the agent preserves the request and enters the unknown-case or gap process rather than inventing a contract.
-
-## 4. Sources, assumptions, ambiguity, and gaps
-
-- **Authoritative facts/decisions and links:**
-- **Material assumptions, provenance, status, and affected proposal revision:**
-- **Potentially ambiguous intent, meaning, scope, authority, cost, or effect:**
+- **Authoritative facts, decisions, and links:**
+- **Material assumptions, status, source, and affected result revision:**
+- **Correction propagation:** governing cause, affected similar work, and replay before restored autonomy.
+- **Potentially ambiguous Intent, meaning, boundary, Authority, cost, or effect:**
 - **Smallest discriminating question for each unresolved ambiguity:**
 - **Unknown-case behavior:**
-- **Capability/connection gap behavior and resumption pointer:** bind the original request/proposal version, blocked preconditions, required proof, source-freshness check, governing-contract revalidation, replay requirement, and approval invalidation rule.
+- **Capability or dependency gap:** original request, blocked condition, preserved state, allowed safe work, proof needed, and resumption condition.
 
-## 5. Actors, authority, state, and interfaces
+## 4. Intervention and Opportunity cost
 
-| Producer | Consumer | Input/precondition | Output | Authority/effect boundary | Timing | Failure/degraded behavior | Completion evidence |
+- **Feasible alternatives:** do nothing; wait with a recheck trigger; change process or operating conditions; configure an existing System; adopt a maintained solution; build a custom solution.
+- **Selected intervention and threshold evidence:**
+- **Best feasible alternative forgone:**
+- **Displaced resources, transition cost, maintenance cost, and cost of delay:**
+- **Reversibility, option value, and sunk investment excluded from prospective value:**
+- **Reference class and material differences:**
+
+## 5. Preparation and stopping rule
+
+- **Required inputs, context, capabilities, permissions, and operating conditions:**
+- **Required versus optional readiness conditions and clearing evidence:**
+- **Proof seam, fallback, and resumption state:**
+- **Preparation stopping rule:**
+- **Disposition:** smallest safe execution or experiment; gap and pause; reduced scope; named deferral trigger; or cancellation.
+
+## 6. Actors, Authority, state, and handoffs
+
+| Producer | Consumer | Input and precondition | Output | Authority and effect boundary | Timing | Failure or degraded behavior | Completion evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |  |
 
 - **Writable authority per information type:**
-- **Projections/caches and freshness rule:**
-- **Stable identifiers and version binding:**
+- **Derived System representations, source revision, and freshness rule:**
+- **Stable identities and version binding:**
 - **Approval binding and revocation:**
-- **Handoff packet:** objective, current state, completed evidence, remaining work, decisions/assumptions, blockers, artifact links, next action, authority, and verification.
+- **Named deterministic validators or effect guards for formalizable material rules:**
 
-## 6. Mise en place and readiness
+## 7. LLM and deterministic boundary
 
-- **Required inputs/context:**
-- **Tools, capabilities, connections, and permissions:**
-- **Physical/digital environment:**
-- **Test/simulation seam:**
-- **Fallback, rollback, and resumption state:**
-- **Readiness conditions:** classify each as required or optional and name the evidence that clears it.
-- **Preparation budget or review point:**
-- **Checkpoint disposition:** start the smallest safe experiment; open a capability/unknown gap and pause with a resumption condition; reduce scope; defer to a named review trigger; or cancel.
-- **Stopping rule:** start the smallest credible execution/experiment when required readiness passes and the next preparation step has less expected decision/risk value than action.
+- **LLM judgments:** interpretation, uncertainty, evidence synthesis, bounded comparison, or proposal composition.
+- **Inputs and governing sources for each material judgment:**
+- **Decision rubric and permitted output:**
+- **Uncertainty behavior:** proceed, compose without effect, clarify, or pause.
+- **Correction path:**
+- **Human or deterministic Authority gate for effects:**
+- **Deterministic mechanisms:** timing, state, validation, transitions, retries, approvals, reconciliation, invariants, and effect gates.
+- **Shared simulation/live path:**
+- **Named effector boundary:**
 
-A missing completion-critical capability is a durable gap, not an excuse for a partial result to be called done. Preserve the work, expose the gap and affected outcome, and propose the smallest safe remedy. After the capability is proven, revalidate source freshness and the governing contract, replay the affected compose-only simulation, and obtain new approval whenever the exact effect proposal is no longer current before resuming.
+## 8. Incentives, friction, and operating conditions
 
-## 7. Economics, incentives, and friction
-
-- **Options:** do nothing, wait/recheck, environmental/process change, configure, maintained existing solution, custom work.
-- **Wait/recheck contract:** trigger, date or cadence, expected new evidence, and expiry disposition.
-- **Opportunity cost, transition cost, maintenance cost, cost of delay:**
-- **Option value / reversible next step:**
-- **Why the selected option clears the threshold:**
 - **Desired and actual incentives:**
-- **Helpful and harmful friction/search cost:**
-- **Compliance dependencies:** what currently requires repeated remembering, noticing, checking, understanding, caring, or willpower?
-- **Ambient progress:** which safe pre-authorized preparation, preservation, maintenance, reconciliation, or recovery continues without active attention?
-- **Exception-based attention:** what genuinely requires a human, when does it surface, and what state remains visible while waiting?
-- **Goodhart/Campbell gaming routes and counter-signals:**
-- **Loss-aversion risk and safeguards:**
+- **Helpful and harmful friction:**
+- **Repeated-compliance dependencies and how they are removed:**
+- **Relevant access, availability, timing, visibility, resources, organizational conditions, competing paths, and transition cost:**
+- **Proxy-gaming routes and counter-signals:**
+- **Voluntary exit and correction path:**
 
 ### Ambient-operation contract
 
-Every ambient operation has one row. If none is safe or useful, record `none`; absence must not be interpreted as authority.
+Every ambient operation has one row. If none is authorized, record `none`.
 
-| Operation | Exact pre-authorization/version | Inputs and privacy/retention boundary | Trigger/cadence | Permitted output/state | Forbidden effects | Health/failure signal | Exception route | Resumption/review condition |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |
+| Operation | Exact Authority and version | Inputs | Trigger | Permitted state or output | Effect boundary | Data purpose, privacy, retention, and use limits | Health signal | Exception route | Review or resumption condition |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |  |
 
-## 8. State, degradation, recovery, and retirement
+## 9. Operating modes, decay, and recovery
 
-```mermaid
-stateDiagram-v2
-  [*] --> Normal
-  Normal --> Degraded
-  Degraded --> Recovery
-  Recovery --> Normal
-  Degraded --> Paused
-  Paused --> Recovery
-  Normal --> Retiring
-  Paused --> Retiring
-  Retiring --> Retired
-```
+For each applicable mode, define trigger, permitted effects, blocked effects, preserved state, visibility, owner, retry or resumption rule, and exit proof.
 
-For each applicable mode—Normal, Degraded, Paused, Recovery—define trigger, allowed and forbidden actions, preserved state, visibility, owner, re-entry criteria, and effect behavior. Add system-specific tiers only when they change behavior. Define month-without-response behavior and retirement disposition.
+| Mode | Contract |
+| --- | --- |
+| Normal |  |
+| Degraded |  |
+| Paused |  |
+| Recovery |  |
 
-## 9. Proof before effects
+- **Interruption behavior:** continuous pickup point or atomic boundary.
+- **Delayed-attention behavior:** queues, retries, reminders, deadlines, stale assumptions, effects, and bounded recovery triage.
+- **Linked incidents, ambiguities, capability gaps, and change proposals:**
+- **Accepted healthy baseline:**
+- **Decay signals:**
+- **Reset or maintenance action and trigger:**
+- **Review trigger or cadence, reachable control surface, evidence inspected, and resulting decision:**
+- **Reset and recovery proof:**
+- **Adaptation, pause, replacement, and retirement conditions:**
 
-### Acceptance scenarios
+## 10. Proof and learning
 
-| Scenario | Initial state/input | Expected visible proposal/result | Forbidden effect | Evidence |
+| Scenario | Initial state or input | Expected visible result | Effect boundary | Evidence |
 | --- | --- | --- | --- | --- |
-| Normal |  |  |  |  |
-| Lowest common denominator |  |  |  |  |
-| Ambiguous |  |  |  |  |
-| Missing capability/dependency |  |  |  |  |
-| Month without attention: eligible ambient operations continue; failures form a bounded discoverable exception set; reminders do not multiply; authority/approvals do not expand; recovery uses preserved state |  |  |  |  |
+| Normal operation |  |  |  |  |
+| Material ambiguity |  |  |  |  |
+| Weakest realistic condition |  |  |  |  |
+| Missing capability or dependency |  |  |  |  |
 | Degraded and recovery |  |  |  |  |
-| Legacy item |  |  |  |  |
-
-- **Compose-only simulation fixture and effector boundary:**
-- **Production-path evidence required:**
-- **Adversarial review:** reviewer/task that did not author the reviewed revision; record reviewer identity, exact revision, credible-risk scope, and findings.
-- **Resolution:** record resolver identity and evidence that each material finding was fixed, explicitly accepted, or made out of scope with rationale.
-- **Resolution check:** checker identity and result. The checker did not author the reviewed revision and did not make the fix. A material boundary change may trigger a new full pass; otherwise use targeted re-checking.
-
-## 10. Measurement and learning
+| Incorrect assumption |  |  |  |  |
+| Affected legacy state |  |  |  |  |
+| Retirement |  |  |  |  |
 
 - **Hypothesis and mechanism:**
 - **Baseline:**
 - **Outcome signal:**
-- **Process/fidelity signal:**
-- **Burden/harm signal:**
-- **Attention burden:** required checks, reminders, searches, decisions, and interventions per meaningful outcome; never optimized to zero without an authority/autonomy counter-signal.
-- **Quantitative evidence available without human burden:**
-- **Goodhart counter-signal:**
-- **Observation window and expected delay:**
-- **Optional early feasibility checkpoint:**
-- **Decision rule:** retain, revise, expand, pause, retire, or repeat.
+- **Operation signal:**
+- **Burden or harm signal:**
+- **Attention-demand signal, when material:** checks, reminders, searches, decisions, corrections, or interventions per meaningful Outcome, interpreted beside autonomy, trust, and correction.
+- **Qualitative comparison or rubric:**
+- **Sensitive or passive data contract, when used:** purpose, Authority or consent, minimization, retention, access, deletion, and interpretation limits.
+- **Observation window, expected delay, and confounders:**
+- **Decision rule:** retain, revise, expand, pause, repeat, or retire.
+- **Recurring monitor, when used:** decision, cadence, threshold, owner, next action, and retirement condition.
+- **Adversarial review:** reviewer who did not author the exact revision, credible-risk scope, and findings.
+- **Resolution:** resolver and evidence for each material finding.
+- **Resolution check:** checker who neither authored the reviewed revision nor made the fix, and result.
 
-## 11. Operation, visibility, and attention
+## 11. Discovery and operation
 
-- **Human-readable status/control surface:**
-- **Current state, freshness, last/next action, owner, and source links:**
-- **What surfaces immediately versus in the next briefing:**
-- **Happy-path invisibility and exception visibility:** what recedes from attention when healthy, and what becomes conspicuous when human judgment or correction is required?
-- **Deterministic schedules, events, retries, and expiry:**
-- **What the model interprets/composes:**
-- **Operational receipts and audit trail:**
+- **Stable identity and canonical record:**
+- **Applicability and supported operations:**
+- **Dependencies, conflicts, and precedence:**
+- **Design status, operational status, eligibility, version, and freshness:**
+- **Human-readable status and control surface:**
+- **Current state, last and next action, owner, and authoritative links:**
+- **Contract-selection evidence and no-match or conflict behavior:**
+- **Independent discovery route when an attention or delivery representation fails:**
 
-## 12. Anti-decay and reset
+## 12. Change, legacy, and retirement
 
-- **Accepted healthy baseline:**
-- **Decay signals:**
-- **Reset trigger:**
-- **Meaningful reset action:**
-- **Reset proof and baseline date:**
-- **Owner/escalation:**
-- **Pause, replacement, and retirement conditions:**
-
-## 13. Change, legacy, and rationale
-
-- **Decision record:** framing, alternatives, evidence, assumptions, trade-offs, choice, expected consequences, and review conditions.
-- **Affected population and discoverability query:**
-- **Legacy classes:** unaffected, compatible, auto-adapt, review-required, conflict, exempt, unreachable/unknown.
-- **Zero-effect migration simulation:**
-- **Rollout/cutover/rollback:**
-- **Coverage and verification:**
+- **Decision rationale and review conditions:**
+- **Successor System Record:**
+- **Affected population and truthful unknown coverage:**
+- **Legacy classification:** `unaffected`, `compatible`, `auto-adapt`, `review-required`, `conflict`, `exempt`, or `unreachable/unknown`.
+- **Exact transformation or re-evaluation per cohort:**
+- **Bounded resumable application and coverage counts:**
+- **Zero-effect transition simulation:**
+- **Rollout, cutover, rollback or repair, and verification:**
+- **Successor monitoring and health-evidence updates:**
+- **Predecessor and retirement disposition:**
 - **What changed since the prior decision:**
 
-## 14. Estimate and commitment contract
+## 13. Completion gate
 
-- **Milestone type:** Budget, Question, Checkpoint, or Deliverable.
-- **Unresolved architecture/production assumptions:**
-- **Reference class and actual history:** initial estimate, apparent completion, actual usability.
-- **Experiment estimate versus delivery estimate:**
-- **Project-capture signals and stop/reset rule:**
-
-## 15. Decisions and completion gate
-
-- **Accepted decisions:**
-- **Current decision frontier:**
-- **Delegated reversible implementation choices:**
-- **Design Complete check:** another competent human or agent can implement and simulate this version without inventing a material rule.
-- **Approval and date:**
+- **Every section of the full standard accounted for:**
+- **Materially expected omissions and reasons:**
+- **Design Complete:** another competent person or agent can implement and simulate this version without inventing a material rule.
+- **Approval, result revision, and date:**

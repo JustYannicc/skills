@@ -24,4 +24,4 @@ expected:
   responsibility: [no parent coordination created]
   route: [lightweight-governance]
   state: [complete]
-  forbidden: [take over Workflow or add durable ceremony or an extra operation]
+  forbidden: [take over the Workflow skill or add durable ceremony or an extra operation]

@@ -1,17 +1,12 @@
-## Informed exception record
+Informed exception accepted for the usual pilot-review phase, limited to this internal one-day experiment.
 
-**Accepted interpretation:** You authorize a one-day internal experiment to proceed without the usual pilot review. The exception is limited to the stated internal scope: no external users and no production data.
+Constraints that remain in force:
 
-**Skipped safeguard:** Pilot review.
+- Scope: internal participants only; no external users or production data.
+- Duration: ends after one day. Any continuation, reuse, or expansion requires reassessment.
+- Effects: no irreversible change, new durable authority, or external effect under this exception.
+- Proof: record the intended outcome, exact experiment boundary, and the observed result.
+- Recovery: keep rollback available; stop and roll back if the scope, data class, affected users, or risk changes.
+- Recheck trigger: immediately if a safeguard normally supplied by pilot review becomes necessary, and at the one-day endpoint before any next step.
 
-**Plausible consequence:** The experiment will not receive the normal independent review of its assumptions, boundaries, failure modes, or readiness before it runs, so defects or an incomplete rollback path may be discovered during the experiment instead.
-
-**Scope and duration:** This exception applies only to this internal experiment, for one day. It does not authorize external effects, production-data use, or a broader or longer-running rollout.
-
-**Recovery trigger:** Stop the experiment and invoke the rollback path immediately if its scope expands, production data or external users would be involved, an unintended effect occurs, or the one-day window ends. Preserve the experiment state and evidence needed to review or resume safely.
-
-Your informed exception is respected; it does not require refusal, shame, or additional coercive friction.
-
-**Remaining constraints for Workflow:** Workflow retains responsibility for deciding and executing the experiment. It may proceed only within the exception boundary, with rollback available. It must preserve the original request and record the exception, exact scope, duration, assumptions, authority, and outcome evidence. Completion proof should show that the experiment remained internal, excluded production data and external users, stayed within one day, and either completed with its results recorded or stopped and rolled back under the trigger above.
-
-State: ready for Workflow decision.
+The skipped safeguard is the usual pilot review—not systems thinking, authority limits, evidence, or recovery responsibility. The installed `'Workflow'` skill remains responsible for coordinating the exception and any next phase.

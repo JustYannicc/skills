@@ -12,14 +12,15 @@ governed_by: the approved S01 v1.0 source
 
 # Public skills repository and Thinking in Systems skill
 
-> Historical design archive. Later accepted decisions supersede its two-channel
-> distribution proposal: the operative suite publishes through skills.sh only.
+> Historical design archive. Current implementation, runtime loading, vocabulary,
+> package layout, and distribution decisions in `docs/DECISIONS.md` supersede
+> conflicting progress claims and proposals below.
 
 ## 1. Outcome and current boundary
 
 Create a public, installable `thinking-in-systems` skill that contains the complete transferable method in the private governance profile and makes its use predictable for Codex, OpenClaw, and other compatible agents. The repository should become a durable home for additional public skills without exposing private agent configuration.
 
-This design covers the repository and first skill. The public repository foundation now exists at [JustYannicc/skills](https://github.com/JustYannicc/skills), with no implemented or discoverable skill. Updating private/global instructions remains a separately reviewed change after the public skill suite is proven. No installation or global configuration has been changed.
+This design originally covered the repository and first skill. The human-review-required Thinking in Systems candidate is now implemented in [draft PR #33](https://github.com/JustYannicc/skills/pull/33). Updating private/global instructions remains a separately reviewed change after the public skill suite is proven. No installation or global configuration has been changed.
 
 Good-enough initial outcome:
 
@@ -139,69 +140,15 @@ Build-versus-buy is evaluated within the durable-system and material-change bran
 
 ## 7. Ordered skill steps and gates
 
-`SKILL.md` should remain procedural and compact—approximately 100–140 lines. Each step ends at a checkable gate.
-
-1. **Choose the branch.** Identify the governing contract or why none applies, the persistence level, and allowed action.
-2. **Find the door.** State original request, intent, outcome, non-outcomes, scope, authority, good-enough threshold, and the smallest discriminating question for material ambiguity.
-3. **Map the seams.** Identify actors, sources of truth, inputs/outputs, handoffs, incentives, friction, environment, support matrix, privacy, permissions, and effect boundaries.
-4. **Choose the smallest adequate path.** Compare doing nothing, waiting/rechecking, environmental/process change, configuration, maintained solutions, and custom work using satisficing, opportunity cost, reversibility, maintenance, and option value.
-5. **Design normal operation and the bad day.** Specify normal, degraded, paused, recovery, ambiguity, capability-gap, and no-response behavior; remove avoidable compliance dependencies and define authorized ambient progress.
-6. **Set mise en place and prove the path.** Define readiness, capabilities, real seam, effect-free simulation, outcome/process/burden evidence, and the checkpoint disposition: experiment, gap/pause, reduced scope, named deferral, or cancellation.
-7. **Break it, record it, and make it discoverable.** Run the independent adversarial pass and separate resolution check; record rationale, version, catalog metadata, decay/reset, migration, legacy coverage, and retirement.
-
-Final completion criterion: the selected branch has its proportionate visible contract; every material assumption and seam is resolved or explicitly blocked; proof, lowest-common-denominator behavior, recovery, change/legacy disposition, and authority are testable; another competent agent can continue without inventing a material rule.
+This historical design selected a compact ordered procedure with checkable gates. The current procedure and completion criteria live only in [`SKILL.md`](../../skills/thinking-in-systems/SKILL.md); the accepted rationale lives in [`docs/DECISIONS.md`](../DECISIONS.md). Those current authorities supersede any procedural proposal elsewhere in this archive.
 
 ## 8. Progressive disclosure and complete standard
 
-The entire universalized S01 method ships with the skill, but only the process needed on every run stays in `SKILL.md`:
-
-```text
-skills/thinking-in-systems/
-├── SKILL.md
-├── references/
-│   ├── standard.md
-│   ├── decision-patterns.md
-│   ├── formalization.md
-│   ├── proof-recovery-and-change.md
-│   ├── remediation.md
-│   ├── examples-and-evals.md
-│   ├── sources.md
-│   └── setup.md
-└── templates/
-    ├── system-record.md
-    └── remediation-record.md
-```
-
-- `SKILL.md` owns invocation, branch selection, steps, gates, and leading-word definitions.
-- `references/standard.md` owns the core method: outcome, system-interaction branches, universal entry check, constitutional rules, lifecycle, discovery, interface/authority layers, and the technical-to-life translation. It points to the two specialized standards below rather than duplicating their definitions. Every durable-system, material-change, recovery, or review branch reads it; the direct-operation branch does not pay that load.
-- `references/decision-patterns.md` owns intentional productivity/progress, intent discovery, incentives/friction, Goodhart/Campbell, satisficing, 80/20, opportunity cost, loss aversion, option value, reference classes, and exploration/exploitation. The pointer fires when choosing interventions, measures, or commitments.
-- `references/formalization.md` owns the prose-plus-pseudocode representation contract, deterministic/LLM judgment boundary, decision tables, invariants, schemas, state transitions, uncertainty, escalation, and effect gates. It remains separate only if drafting proves this is a real branch; otherwise it merges into `standard.md`.
-- `references/proof-recovery-and-change.md` owns simulation equivalence, acceptance scenarios, low-capacity operation, ambient-operation contracts, capability gaps, anti-decay/reset, PDSA, review independence, estimation/evidence maturity, scope change, legacy propagation, and retirement. The pointer fires before proof, activation, recovery, material change, or Design Complete.
-- `references/remediation.md` owns the inventory-and-repair branch for an existing technical, personal, organizational, physical, or agent system. It preserves working behavior and data, surfaces the highest-leverage broken seams, proves one bounded correction, and migrates legacy state rather than reflexively rebuilding.
-- `references/examples-and-evals.md` owns worked cases and the behavioral evaluation suite. The pointer fires when validating the skill, reviewing a system, or when an example is needed to distinguish interpretations.
-- `references/sources.md` owns evidence, attribution, and source classification: normative design choices, empirical claims, historical influences, and fictional/generalized examples.
-- `templates/system-record.md` owns the reusable execution/System/Change-Legacy record shape, discovery metadata, lifecycle states, and modes. The pointer fires whenever a durable record is created or materially changed.
-- `references/setup.md` owns official installation commands, repository discovery, pinned-version use, and the exact standing-trigger snippets for global/project `AGENTS.md` files. It also explains the distinction between model invocation from the description and an always-applied personal standing trigger.
-
-Together, the disclosed references are the complete universalized successor to S01. Each meaning has one owner; the other files use links and leading words rather than restating it.
-
-The full method is universalized, not blindly copied: no named personal platform, assistant identity, programming prohibition, personal approval identity, private path, or work-specific identifying detail belongs in the public core. Public examples are generalized or fictionalized while preserving the decision seam they test.
+The implemented package boundary, runtime ownership, and disclosure rules are recorded in [`docs/ARCHITECTURE.md`](../ARCHITECTURE.md), [`docs/DECISIONS.md`](../DECISIONS.md), and the [installed skill](../../skills/thinking-in-systems/). The maintainer-facing source record remains [`docs/source/THINKING_IN_SYSTEMS_SOURCES.md`](THINKING_IN_SYSTEMS_SOURCES.md). This archive does not restate those current contracts.
 
 ### Public setup contract
 
-The setup reference will include a minimal standing trigger such as:
-
-```markdown
-<!-- thinking-in-systems:start v1 -->
-## Thinking in Systems
-
-For every request that asks the agent to interpret, decide, prepare, or act, invoke `thinking-in-systems`. Apply its proportional entry check; the direct-operation branch keeps bounded reversible work lightweight. When the user chooses an informed exception, expose the skipped safeguard, likely consequence, and recovery trigger, then respect the decision within their authority.
-<!-- thinking-in-systems:end -->
-```
-
-This instruction makes the systems lens universal without forcing a full System Record for a spelling correction. The reference documents the canonical block; a later private change applies it to the maintainer's global instructions using `writing-agents-md` and verifies that the public skill is the invoked authority.
-
-skills.sh has no installation hook that can apply this block. The first public release therefore provides reference-only setup guidance. A later explicit setup command may manage the marked region only after preview and confirmation, with version/hash state, human-edit conflict protection, fail-closed marker validation, idempotent status/update/remove/rollback, link resolution, and platform-specific target discovery. See [managed-block research](research/public-skill/managed-agents-block.md).
+Repository-wide automatic invocation setup is deferred. No setup reference ships with this candidate, and the installed skill does not claim to modify an agent's global instructions. Any future setup work requires a separate governed decision and proof boundary.
 
 ## 9. Repository layout
 
@@ -213,21 +160,15 @@ skills/
 └── skills/
     └── thinking-in-systems/
         ├── SKILL.md
+        ├── agents/
+        │   └── openai.yaml
+        ├── provenance.yaml
         ├── references/
         │   ├── standard.md
-        │   ├── decision-patterns.md
-        │   ├── formalization.md
-        │   ├── proof-recovery-and-change.md
-        │   ├── remediation.md
-        │   ├── examples-and-evals.md
-        │   ├── sources.md
-        │   └── setup.md
-        └── templates/
-            ├── system-record.md
-            └── remediation-record.md
+        │   └── system-record-template.md
 ```
 
-No application scaffold, database, package manager, website, registry client, or custom installer is justified. The maintained official CLI is the existing solution. An optional `agents/openai.yaml` may be added later only if a concrete Codex UI need appears.
+No application scaffold, database, website, registry client, or custom installer is justified. The repository requires `agents/openai.yaml` for deliberate UI and invocation metadata.
 
 ## 10. Behavioral proof suite
 
@@ -293,7 +234,7 @@ The method includes an inventory-and-repair path for an existing repository, wor
 
 ### Examples, evaluations, and sources
 
-Meaningful patterns receive paired good and bad examples that differ at the important decision seam and explain why. Some generalized cases teach the method; a separate subset becomes behavioral evaluations so examples do not merely train the desired prose. Public examples remove named personal assistants, personal platforms, employer context, and other private policy. `references/sources.md` distinguishes normative design choices, empirical claims, historical influences, and fictional or generalized examples.
+Meaningful patterns receive paired good and bad examples that differ at the important decision seam and explain why. A separate subset becomes behavioral evaluations so examples do not merely train the desired prose. Public examples remove named personal assistants, personal platforms, employer context, and other private policy. Repository-facing source classification lives in [`THINKING_IN_SYSTEMS_SOURCES.md`](THINKING_IN_SYSTEMS_SOURCES.md), outside the installed agent references.
 
 ## 12. Skill-suite composition
 

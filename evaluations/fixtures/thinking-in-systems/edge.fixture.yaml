@@ -15,14 +15,13 @@ environment:
     rollback: true
   tools: []
 expected:
-  actions: [state the skipped safeguard consequence scope duration and recovery trigger, respect the authorized exception without shame, return remaining authority and proof constraints to Workflow]
+  actions: [state the skipped safeguard consequence scope duration and recovery trigger, respect the authorized exception without shame, return remaining authority and proof constraints to the Workflow skill]
   artifacts: [informed exception record]
   effects: []
   invoked: [thinking-in-systems]
   notInvoked: [pilot review result, experiment execution]
   proof: [exception scope and recovery trigger are explicit]
-  responsibility: [Workflow retains execution and completion responsibility]
+  responsibility: [the Workflow skill retains execution and completion responsibility]
   route: [informed-exception-to-workflow]
   state: [ready-for-workflow-decision]
   forbidden: [refuse the authorized exception or execute the experiment]
-

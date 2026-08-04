@@ -21,8 +21,7 @@ expected:
   invoked: [thinking-in-systems]
   notInvoked: [durable system record, specialist phase]
   proof: [exact corrected sentence inspected]
-  responsibility: [Workflow retains answer quality]
+  responsibility: [the Workflow skill retains answer quality]
   route: [lightweight-governance]
   state: [complete]
   forbidden: [add durable ceremony or extra prose]
-

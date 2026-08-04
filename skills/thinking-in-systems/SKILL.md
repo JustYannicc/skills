@@ -1,6 +1,6 @@
 ---
 name: thinking-in-systems
-description: Apply systems thinking when interpreting, deciding, preparing, or acting; when designing, changing, recovering, or retiring a technical, personal, organizational, physical, or agent system; or when another skill needs governing judgment about intent, boundaries, authority, incentives, friction, evidence, degradation, recovery, or legacy impact.
+description: Apply systems thinking when interpreting, deciding, preparing, or acting; when designing, changing, operating, recovering, or retiring a technical, personal, organizational, physical, communicative, or agent system; or when another skill needs governing judgment about intent, boundaries, authority, incentives, friction, evidence, degradation, recovery, or legacy impact.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -8,55 +8,31 @@ metadata:
 
 # Thinking in Systems
 
-Supply the universal systems method and governing invariants at each relevant judgment seam. Apply it proportionately: a bounded reversible request stays lightweight, while durable or consequential work receives the clauses its risks require.
+Read the [full standard](references/standard.md) completely before applying this skill. Apply every section on every request. Scale the depth, output, and durable artifacts to consequence; do not decide that a concern is irrelevant before reading it.
 
-This skill owns governing knowledge. Workflow owns phase selection, coordination, parent responsibility, and terminal completion; specialist skills own their phase results. Return a bounded governance assessment to the active Workflow or caller instead of taking over either job.
+This skill supplies governing systems knowledge. When the `'Workflow'` skill is installed and active, it owns phase selection, coordination, parent responsibility, and terminal completion; otherwise the caller owns them. Specialist skills own their phase results. Return a bounded governance assessment to the active `'Workflow'` skill or caller.
 
 ## Apply the governing lens
 
-1. Classify the interaction as a bounded direct operation, an instance of an accepted contract, a new durable system, a material change, or recovery/remediation. This is complete when the branch and persistence need are explicit.
-2. Establish the door: preserve the original request, identify intent and accepted outcome, set the good-enough threshold and boundary, separate facts from assumptions and unknowns, and expose authority and proof. This is complete when materially different interpretations cannot change the authorized result; otherwise return the smallest discriminating question as a gap.
-3. Inspect the seams relevant to the branch: actors, authoritative state, inputs and outputs, handoffs, incentives, friction, environment, permissions, effects, evidence, degraded behavior, recovery, and affected legacy state. This is complete when every material seam has a governing rule or a visible unresolved gap.
-4. Apply the relevant standard clauses at every material judgment. This is complete when each governing constraint names the clause and evidence that supports it without creating a second authority.
-5. Return the governing result: accepted interpretation, applicable invariants, unresolved gaps, permitted authority, proof obligations, and change/legacy consequences. This is complete when the caller can proceed or pause without inventing a material rule.
+1. Classify the interaction and its persistence need using [Apply systems thinking proportionately](references/standard.md#1-apply-systems-thinking-proportionately). Complete this when the branch is explicit and triviality has changed only the scale—not whether systems thinking applies.
+2. Preserve the request and establish intent, accepted Outcome, good-enough threshold, boundary, assumptions, Authority, and proof using [Frame the Outcome and decision](references/standard.md#2-frame-the-outcome-and-decision). Complete this when materially different interpretations cannot change the authorized result; otherwise return the smallest discriminating question as a visible gap.
+3. Compare the intervention and preparation stopping rule using [Choose an intervention](references/standard.md#3-choose-an-intervention). Complete this when the selected path clears the threshold after Opportunity cost, transition and maintenance cost, reversibility, delay, and evidence value are considered proportionately.
+4. Inspect every material seam using [Design the System](references/standard.md#4-design-the-system) and [Operate under real conditions](references/standard.md#5-operate-under-real-conditions). Complete this when every applicable material seam—including actors, Authority, state, interfaces, incentives, friction, operating conditions, LLM judgment, deterministic enforcement, degradation, and recovery—has a governing rule or a visible gap.
+5. Set proof, learning, change, and legacy obligations using [Prove and learn](references/standard.md#6-prove-and-learn) and [Govern change, legacy, and retirement](references/standard.md#7-govern-change-legacy-and-retirement). Complete this when the proportionate proof can distinguish correct operation, useful Outcome, and burden, and every affected existing item has a disposition.
+6. Decide whether durable state is required using [Record only what must persist](references/standard.md#8-record-only-what-must-persist), then apply any authorized exception through [Apply informed exceptions](references/standard.md#9-apply-informed-exceptions). Complete this when the caller can proceed or pause without inventing a material rule.
 
-## Scale the branch
+The section links above provide traceability and a fast route back to the governing clause after the required full read. They are not permission to skip the rest of the standard.
 
-For a bounded, reversible operation with obvious proof, keep the execution contract in the response: preserve the source, state any material interpretation, perform only the accepted operation, and show the exact result. A durable record is unnecessary.
+## Scale the result
 
-For an accepted-contract instance, bind the governing contract and version, surface material assumptions and authority, apply the relevant clauses, and return evidence to the caller.
+For a bounded reversible operation with obvious proof, keep the execution contract in the response: preserve the source, state any material interpretation, perform only the accepted operation, and show the exact result. Create no durable ceremony or extra operation.
 
-For a new durable system, material change, or recovery/remediation case, read the applicable standard sections below before returning the governance assessment. Read the [complete approved standard](references/standard.md) only for whole-design conformance, Design Complete judgment, or a cross-cutting risk that cannot be evaluated from the narrower sections. Use the [System Record template](references/system-record-template.md) only when the caller is creating or changing a durable contract; conditional fields earn inclusion through a named consumer or material risk.
+For an accepted Durable system, bind its exact System Record version, surface material assumptions and Authority, apply the whole standard proportionately, and return evidence to the caller.
 
-When a needed companion capability is unavailable, apply this method directly where its governing contract remains satisfiable. Otherwise identify the missing capability, preserved state, allowed safe work, and exact resumption condition. Never imply that a companion ran.
+For a new Durable system, material change, recovery, or retirement, use the [System Record template](references/system-record-template.md) after reading the standard. Include a conditional field only when a named consumer or material risk requires it.
 
-## Read the authoritative standard precisely
-
-### Frame the judgment
-
-- For outcome, intentionality, proportional branches, or the universal entry check, read [sections 1–3](references/standard.md#1-outcome).
-- For constitutional invariants, intervention economics, incentives, friction, authority, or ambient progress, read [section 4](references/standard.md#4-constitutional-rules).
-- For assumptions, ambiguity, approval binding, and correction, read [section 5](references/standard.md#5-execution-contract-assumptions-and-ambiguity).
-
-### Design and operate
-
-- For lifecycle, readiness, proof seams, simulation, or Design Complete, read [section 6](references/standard.md#6-system-design-lifecycle).
-- For records, authoritative state, interfaces, discovery, or formal model/deterministic boundaries, read [sections 7–8](references/standard.md#7-required-system-record).
-- For low-capacity operation, degradation, friction, environment, and recovery, read [section 9](references/standard.md#9-lowest-common-denominator-operation-friction-and-recovery).
-- For measurement, learning, decay, and verified reset, read [sections 10–11](references/standard.md#10-measurement-and-learning).
-
-### Change and audit
-
-- For scope change, evidence maturity, remediation, legacy propagation, migration, or retirement, read [section 12](references/standard.md#12-change-and-legacy-propagation).
-- For local source-of-truth policy and standard-level acceptance cases, read [sections 13–14](references/standard.md#13-local-source-of-truth-policy-boundary).
-- For evidence classes, provenance, and accepted decisions, read [sections 15–16](references/standard.md#15-evidence-used) and [source provenance](references/sources.md).
-
-The installed reference is the complete current authority. A lightweight branch loads only the sections named by its material judgment.
-
-## Informed exceptions
-
-A user with authority may bypass a safeguard. Before applying the exception, state the skipped safeguard, plausible consequence, affected scope and duration, and review or recovery trigger. Respect the informed decision without coercion or shame; keep systems thinking, responsibility, and verification active proportionately.
+When a named companion skill is unavailable, identify the missing capability, preserved state, allowed safe work, and exact resumption condition. Apply an equivalent directly only when the same contract remains satisfiable; never imply that a companion skill ran.
 
 ## Boundary check
 
-Return governing constraints and evidence, then stop. Phase routing, interviews, research, prototypes, specifications, decomposition, implementation, review verdicts, handoffs, migration execution, and parent completion remain with their owning capabilities. If no such capability is active and the requested outcome needs one, name that capability gap without fabricating its result.
+Return governing constraints and evidence, then stop. Routing, interviews, research, prototypes, specifications, decomposition, implementation, review verdicts, handoffs, migration execution, and parent completion remain with their owning skills or the caller.
