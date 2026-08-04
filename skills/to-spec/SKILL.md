@@ -10,10 +10,12 @@ the highest stable proof seam.
 
 Join the active context supplied by `'Workflow'`. The Outcome owner keeps
 parent responsibility; this skill owns only the Specification result. A direct
-phase request may carry a complete accepted semantic contract from its caller
-and can synthesize that bounded result without a parent workflow. Missing
-material prerequisites return to the caller; no parent Outcome or second
-workflow is created.
+request may bypass a parent Workflow only when its caller supplies a complete,
+accepted, low-risk Inline semantic contract before any Persistence boundary and
+does not request Durable representation or another phase. Missing material
+prerequisites, Durable work, approval or assignment boundaries, multi-phase
+work, meaningful risk, and explicit effect requests return to Workflow or the
+caller; no parent Outcome or second workflow is created.
 
 Do not interview the user or turn this phase into decomposition, implementation,
 Review, effect execution, or parent completion. Use accepted knowledge and

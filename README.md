@@ -21,6 +21,15 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
 
+### [To Spec](skills/to-spec) — implementation candidate (human review required)
+
+To Spec synthesizes accepted knowledge and decisions into one universal Outcome
+Specification, or revises an exact prior revision after a material change. It
+keeps technical and nontechnical work in its own vocabulary, routes missing
+decisions to the capability that owns them, and returns responsibility to
+Workflow. Issue #22 is still open; this candidate is not published until the
+human-review gate and composed-suite release proof are complete.
+
 ## Planned suite
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 16 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied.

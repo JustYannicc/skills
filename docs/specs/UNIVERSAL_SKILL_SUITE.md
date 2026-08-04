@@ -111,7 +111,11 @@ Do not retain unnecessary full upstream copies.
 Setup writes a small managed standing entry to each selected harness's effective
 instruction surface at the selected project or global scope. Every request
 loads Thinking in Systems and then Workflow. Workflow selects the smallest
-truthful Inline or Durable route and invokes phase skills automatically.
+truthful Inline or Durable route and invokes phase skills automatically. A
+complete, accepted, low-risk Inline Specification supplied directly by its
+caller may use the narrow `to-spec` exception described in the Workflow
+routing contract; it cannot cross a Persistence, authority, effect, waiting,
+multi-phase, or meaningful-risk boundary without Workflow.
 
 Simple bounded work may keep its Outcome, Specification, Ticket, history, and
 Review implicit in the conversation. Persistence, assignment, waiting,
