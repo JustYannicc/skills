@@ -1,6 +1,7 @@
 # Thinking in Systems
 
-Status: **HUMAN REVIEW REQUIRED**. This candidate is not final or approved for publication.
+Status: **APPROVED** through issue #12. Suite publication remains gated by #31
+and #32.
 
 Thinking in Systems applies governing systems judgment to every request. It preserves Intent, selects a proportionate intervention, makes material System relationships explicit, tests frame-sensitive decisions through matched truthful Decision frames, accounts for Constraints, Preferences, incentives, Marginal value, Cost structure, Externalities, and real operating conditions, and carries proof through a proportionate post-activation Assurance cadence. Applicability is universal; visible depth and durable artifacts scale with consequence and persistence.
 
@@ -23,4 +24,6 @@ The installed skill has one job: provide governing systems knowledge. Thinking i
 
 The runtime instructions require a complete read of the standard on every invocation. Their section links provide traceability and fast rereading; they are not conditional-loading guidance. The installed source guide is optional further reading linked beside the concepts it informs. Maintainer history, private provenance, review decisions, and publication evidence stay in repository documentation rather than the installed agent-facing standard.
 
-Publication remains blocked until Yannic explicitly reviews and approves this candidate.
+Yannic approved this governing behavior on 2026-08-04. The complete suite is
+not yet approved for publication: #31 owns composed-suite and clean-install
+proof, and #32 owns immutable-release review and publication.

@@ -6,9 +6,11 @@ This repository is being built around a simple idea: agents become much more use
 
 ## Skills
 
-No skill has been published yet. The repository foundation and design record are complete; skill authoring starts in a dedicated follow-up task.
+No skill has been published yet. Thinking in Systems is approved, but suite
+publication remains gated by the composed-suite and clean-install proof in #31
+and the immutable-release review in #32.
 
-### [Thinking in Systems](skills/thinking-in-systems) — human review required
+### [Thinking in Systems](skills/thinking-in-systems) — approved
 
 Thinking in Systems is my secret sauce: the way of thinking I have developed and applied over roughly the last year and a half. It is a large part of how I have been able to make unusually fast progress. The skill distills that method into universal governing knowledge for designing systems.
 
@@ -16,13 +18,14 @@ It is meant for almost anything: technical work, personal routines, organization
 
 Installing a skill is not a substitute for understanding it. Read the method, practice it, challenge it, and learn to apply the thinking yourself. The agent should make the process easier and more consistent; the human retains intent, judgment, authority, and the right to make informed exceptions.
 
-The implementation is a review candidate and is not final until the maintainer explicitly approves it.
+Yannic approved the skill's governing behavior in issue #12. That approval is
+distinct from publishing the complete suite, which still requires #31 and #32.
 
 ## Planned suite
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 16 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied.
 
-The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-02-bootstrap.md).
+The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-04-thinking-in-systems-approved.md).
 
 Publication evidence, clean-install proof, behavioral evaluation, and the
 separate private-activation gate are defined by the

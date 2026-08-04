@@ -40,6 +40,23 @@ sources:
 };
 
 describe("repository validator", () => {
+  it("excludes ignored pnpm store content from repository validation", async () => {
+    const root = await createRepository();
+    await writeValidationFiles(root);
+    await mkdir(path.join(root, ".pnpm-store", "cache"), { recursive: true });
+    await writeFile(
+      path.join(root, ".pnpm-store", "cache", "ignored.md"),
+      `[missing](missing.md)\n\n\`/${"Users"}/private/.agents\`\n`
+    );
+
+    const result = await validateRepository(root, {
+      sourceVerifier: () => Promise.resolve(true),
+    });
+
+    expect(result.checkedFiles).toBe(4);
+    expect(result.findings).toStrictEqual([]);
+  });
+
   it("reports broken local links and private local paths", async () => {
     const root = await createRepository();
     await writeFile(
