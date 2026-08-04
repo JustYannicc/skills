@@ -12,6 +12,13 @@ This repository-wide inventory routes each source class to its authority. Inclus
 - [ClawHub publishing](https://docs.openclaw.ai/clawhub/publishing)
 - [Matt Pocock's skills, inspected revision](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c)
 
+The universal `to-spec` successor is an adapted public skill based on Matt
+Pocock's `skills/engineering/to-spec` at the pinned revision above. It retains
+conversation synthesis, domain vocabulary, and high proof-seam selection while
+removing repository, issue-tracker, and software-PRD assumptions. Its
+representation remains governed by the separate System Record design and the
+selected Adapter.
+
 ## Thinking in Systems
 
 The installed [Sources and further reading](../skills/thinking-in-systems/references/sources.md) file is the single public concept-to-source map for the standard. It preserves the useful public reference spine—including systems engineering, decision economics, behavioral evidence, resilience, representation, preparation, and evaluation—beside the concepts those sources inform.

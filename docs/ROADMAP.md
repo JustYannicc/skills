@@ -29,7 +29,7 @@ Status: complete when the bootstrap commit and public remote are verified.
 ## Phase 3 — delivery and continuity skills
 
 - Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
-- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors.
+- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. `to-spec` is implemented in issue #22's candidate branch and remains human-review-required until explicit maintainer approval.
 - Author universal `review`, including code and configured Supplemental evidence.
 - Prove the lifecycle:
 
