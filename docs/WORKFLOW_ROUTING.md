@@ -143,7 +143,7 @@ contract before Workflow changes state. One message may contain several
 operative clauses; each receives a classification, and a replacement or
 unrelated switch determines which Outcome later clauses address.
 
-The installed [`workflow` Inline reference](../skills/workflow/references/inline-route.md)
+The installed [`workflow` skill](../skills/workflow/SKILL.md#handle-every-new-message-during-active-work)
 owns the executable tests and dispositions for clarification, extension or
 Constraint change, correction, authorized override or informed exception,
 explicit replacement or supersession, and unrelated switch. It also owns the
@@ -219,7 +219,7 @@ active proportionately; they cannot be switched off.
 ## Canonical ownership
 
 This document owns phase selection, representation, and parent routing
-semantics. The installed `workflow` reference owns the executable Inline
+semantics. The installed `workflow` skill owns the executable Inline
 classifier and interruption branch named above. Setup's managed instruction and
 Ask Yannic point here instead of duplicating either route. The adapter-neutral
 state and responsibility meanings remain owned by the

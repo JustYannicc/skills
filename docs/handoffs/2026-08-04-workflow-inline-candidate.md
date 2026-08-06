@@ -15,10 +15,10 @@ without recursion, checks direct-phase prerequisites, integrates bounded child
 results, Reviews exact revisions, verifies effects, and ends only at a verified
 terminal transition.
 
-The installed Inline reference owns the executable classifier and interruption
-branch. The repository routing contract owns phase selection, representation,
-and parent routing. This boundary keeps one source of truth per runtime meaning
-while preserving standalone skills.sh installation.
+The installed Workflow skill owns the executable classifier and interruption
+branch directly in `SKILL.md`. The repository routing contract owns phase
+selection, representation, and parent routing. This boundary keeps one source
+of truth per runtime meaning while preserving standalone skills.sh installation.
 
 The pull request's human-review package records the exact candidate and
 evidence commits, final gates, independent reviewer findings, and resolution
@@ -45,8 +45,8 @@ claim fictional storage, scheduling, monitoring, or completion.
 
 1. [`workflow` steps](../../skills/workflow/SKILL.md): one-job boundary,
    completion criteria, direct-phase prerequisites, and parent terminal gate.
-2. [Inline classifier](../../skills/workflow/references/inline-route.md): the
-   six classifications, mixed-clause handling, materiality, affected-only
+2. [Inline classifier](../../skills/workflow/SKILL.md#handle-every-new-message-during-active-work):
+   the six classifications, mixed-clause handling, materiality, affected-only
    propagation, cancellation, and safe interruption.
 3. [Canonical routing boundary](../WORKFLOW_ROUTING.md): ownership split between
    overall route semantics and the installed Inline executable branch.
