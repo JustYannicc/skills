@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-delegated-change-propagation
 attempt: 3
-contextId: fresh-workflow-delegated-change-propagation-3
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:04:49.000Z
+contextId: workflow-delegated-change-propagation-1db9f1f-sol-high-3
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:10:38Z
 environment:
   id: workflow-delegated-change
   capabilities: { activeWorkflowContext: true, delegation: true, persistence: true, workflow: true }
@@ -20,7 +20,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: cancel unaffected T-B or transfer parent ownership to a child
-      evidence: The structured state marks T-B unaffected with B4/C-B/EB preserved and records parent ownership as retained by Workflow; no child owner is replaced.
+      evidence: The delegated impact map keeps T-B active with B4, C-B, and EB preserved, while the change proposal retains parent Ownership, integration responsibility, and terminal proof with the O7 owner.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [new parent Workflow, replacement child owner]
@@ -30,4 +30,4 @@ observed:
   state: [affected-child-revised-unaffected-child-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/delegated-change-propagation-3.txt
-  sha256: 53c0b685df792742a9cb54455c69eb2737e67f324afe29fccc9da1a3f0604c29
+  sha256: 1aaae8f682b6f7cbb18bd0be9f2ed644239895155b31da661086e9f5fb3a2da0

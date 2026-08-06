@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-unrelated-resume
 attempt: 1
-contextId: fresh-workflow-mid-unrelated-resume-1
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:04:49.000Z
+contextId: workflow-mid-unrelated-resume-1db9f1f-20260806T182607Z-sol-high-1
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:26:07Z
 environment:
   id: workflow-unrelated-switch-resume
   capabilities: { activeWorkflowContext: true, persistence: false, workflow: true }
@@ -19,7 +19,7 @@ observed:
   effects: [corrected sentence returned]
   forbiddenChecks:
     - criterion: silently replace O6 or lose its continuation
-      evidence: The output preserves O6 at ledger revision L8 and the pickup point of checking the electricity entry, then resumes that Outcome.
+      evidence: The response explicitly says the switch is not a replacement, preserves O6 under its current owner at ledger revision L8 with the electricity-entry pickup point and next action before correcting the sentence, and then states that O6 is resumed from that same context.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [recursive parent Workflow, durable Adapter]
@@ -29,4 +29,4 @@ observed:
   state: [original-outcome-resumed]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-unrelated-resume-1.txt
-  sha256: afb4b7eb9f9112b7530a8e86d21c2f100e1a6c3ad841f51c38eb70489c61e4f0
+  sha256: 137c7881326c79bca93c4d8187fd25796da1b1cc878f87e9e8ba154b45e1dd13

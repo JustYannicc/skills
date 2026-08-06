@@ -1,1 +1,3 @@
-Understood: in this rewrite, “warm” means friendly and concise. That clarifies the existing specification without changing the accepted Outcome, audience, or requested result, so I’m keeping Specification S1 and the current inline result revision. No effect has occurred yet; I’ll continue the two-sentence welcome-note rewrite under S1.
+Clarification recorded in the active evidence trail: here, “warm” means friendly and concise. This resolves an ambiguity only; the accepted Outcome, audience, scope, Constraints, Authority, proof seam, and treatment of existing state are unchanged.
+
+Specification S1 and the current result revision remain in force, with Workflow retaining the same parent Outcome owner. I’ll continue the two-sentence welcome-note rewrite from S1. No external effect has occurred.

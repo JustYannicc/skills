@@ -1,7 +1,10 @@
-C2 is an approved material constraint change to the access-eligibility slice of parent Outcome O7. I preserved O7 and recorded the next Specification revision, S6, rather than replacing S5.
+C2 is an approved material Constraint change within the active O7 Workflow, not a clarification or a replacement Outcome. Preserve S5 as the baseline and create Specification revision S6. The S5 → S6 change proposal changes only the access-eligibility contract to C2; terminology and help content remain unchanged.
 
-T-A is affected. Alice remains the owner of T-A, but result A2, claim C-A, and evidence EA are retained as history and are invalid for S6; any review or completion based on them is reopened. Alice must rework the access rules against C2 and return the next access result revision, with its claim and evidence, for review and parent integration.
+Delegated impact map:
 
-T-B is unaffected because C2 does not change terminology or help. Bao remains the owner of active T-B, and result B4, claim C-B, and evidence EB remain valid and preserved; no reroute or rework is required for Bao.
+| Child contract | Impact | Ownership, evidence, and next action |
+| --- | --- | --- |
+| T-A — access rules, result A2, claim C-A, evidence EA | Affected. C2 changes the contract slice that A2 and C-A were meant to satisfy. Preserve A2, C-A, and EA as historical S5 state, but invalidate them as proof for S6 and reopen any affected Review or completion assertion. | Alice retains T-A. Propagate S6 and C2 to Alice with this exact next contract: revise the access-rule result against the new eligibility Constraint and return a new result revision, claim, and evidence for Review at the parent return route. |
+| T-B — help text, result B4, claim C-B, evidence EB | Unaffected. C2 leaves terminology and help content unchanged. | Bao retains active T-B. Preserve B4, C-B, EB, its progress, and its existing contract without rework or rerouting. |
 
-Parent ownership and integration remain unchanged. O7 stays active and non-terminal until Alice's revised access result is reviewed and the S6 coverage is integrated; T-B's preserved result continues to count toward that coverage.
+The O7 owner retains parent Ownership, integration Responsibility, and terminal proof. Re-evaluate parent integration against S6: the access-rule contribution now waits for Alice's revised result and fresh evidence, while B4/C-B/EB remains valid input. No dependency or evidence outside the affected access-eligibility slice is invalidated. O7 remains active and non-terminal until the revised T-A result is reviewed and integrated with the preserved T-B result. No effect is performed in this fixture.

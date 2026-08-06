@@ -1,11 +1,17 @@
-User: Correct “We recieved it”.
+Continuation preserved before the unrelated switch:
 
-Assistant: I preserved the active O6 continuation before switching: household budget, ledger L8, pickup “checking electricity entry”. O6 remains open and owned; no effect or approval has occurred. This request is unrelated to O6, so I am handling it as a separate bounded inline correction without changing the budget Outcome.
+- Outcome: O6, household-budget reconciliation.
+- Owner: the existing O6 Workflow owner remains responsible.
+- Result revision: ledger revision L8.
+- Pickup point: checking the electricity entry.
+- Next action: continue that electricity-entry check against L8.
+- Checkpoint state: no effect or approval is active.
 
-Corrected text: “We received it”
+Bounded Inline Outcome completed and reviewed:
 
-Review: the source is preserved and only “recieved” → “received” changed. No tools, external effects, or approval were used. The correction is complete; O6’s exact continuation remains at ledger L8.
+- Source: “We recieved it”
+- Correction: “We received it”
+- Review: only the misspelling “recieved” was changed; the corrected sentence matches the requested source otherwise.
+- Effect: corrected sentence returned.
 
-User: Resume the budget.
-
-Assistant: Resuming the matching open Outcome O6 from its preserved pickup: ledger L8, checking the electricity entry. I am not inventing a ledger result or claiming the check is complete: no tools are available, and no effect or approval has been requested or performed. O6 remains open and owned at this checkpoint, with the next action to inspect that entry when the ledger is available.
+O6 is now resumed under the same owner at ledger revision L8, exactly at the electricity-entry check; its continuation was preserved rather than reconstructed.

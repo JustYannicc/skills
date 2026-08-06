@@ -1,20 +1,17 @@
-Constraint C2 is a material extension/constraint change to the active Outcome, not a clarification, correction, override, replacement, or unrelated switch. It changes access eligibility, so it must be recorded against the existing parent context and propagated only through the affected dependency closure.
+Classify C2 as a material Constraint change within the existing O7 Workflow. It changes the accepted access-eligibility contract, so preserve S5 as history and propose Specification S6; do not open a new parent Workflow.
 
-Parent and durable state
+## S5 → S6 change proposal
 
-- Preserve the exact incoming change and the O7 baseline at Specification S5. Retain S5, A2, C-A, EA, B4, C-B, and EB as historical state; do not rewrite the baseline to imply that C2 was always in force.
-- Record the approved C2 and its approval provenance as the Authority for this named constraint change only. It does not widen any other effect Authority.
-- Create the next material parent specification revision, O7 at Specification S6, with the access-eligibility slice changed by C2 and terminology/help-content semantics unchanged. Link the transition to the parent Change and Legacy record.
-- Keep O7's parent owner responsible for integration and terminal proof. Delegation and child completion do not transfer that Ownership.
-- Because this context has active assignments and independently finishable children, keep the continuation in the durable Workflow representation: baseline and successor revisions, source change, impact decisions, child owners, evidence status, return route, and the exact next actions.
+- **Source:** approved Constraint C2.
+- **Changed contract slice:** access eligibility only.
+- **Preserved contract:** terminology and help content remain as accepted in S5.
+- **Parent state:** O7 remains active. Its owner retains Ownership of integration and terminal proof.
 
-Impact and propagation
+## Delegated impact map
 
-| Item | Disposition under O7/S6 | Owner and next action |
-| --- | --- | --- |
-| T-A / access rules / A2 / C-A / EA | Affected. A2 is retained as the S5 result but is no longer accepted evidence for the S6 eligibility rule. Invalidate C-A and EA for S6 (and any Review, approval, or completion assertion based on them); do not delete them. Create the next access-rule result revision, A3, with a revised claim and fresh proof. | Alice keeps Responsibility for T-A. Reopen T-A at the affected access-rule specification/execution seam, then return A3, its claim, and its evidence to the O7 parent return route for review. |
-| T-B / help text / B4 / C-B / EB | Unaffected: C2 does not change terminology or help content. Preserve Bao's scope, ownership, progress, claim, and evidence without invalidation or rerouting. Carry B4/C-B/EB forward as unchanged evidence for S6 after recording the impact check. | Bao keeps Responsibility for T-B and continues it under its existing contract. No C2 work is assigned to Bao. |
+| Ticket | Impact | Required disposition | Ownership and evidence |
+| --- | --- | --- | --- |
+| T-A | Affected: result A2 and claim C-A implement the changed access-eligibility contract. | Alice keeps T-A and receives the exact S6 access-eligibility revision, the revised C-A proof seam, and the next action to revise A2 and produce replacement evidence. | Alice retains child Responsibility. EA is invalid for the changed claim until the revised A2 is reviewed against S6; preserve EA as historical evidence rather than treating it as current proof. |
+| T-B | Unaffected: C2 explicitly leaves terminology and help content unchanged, so B4 and C-B still satisfy the accepted contract. | Continue T-B at B4 without cancellation, rework, or revision. | Bao retains child Responsibility; C-B and EB remain current and unchanged. |
 
-The parent remains active and non-terminal. It cannot be marked complete merely because B4 is still valid or because T-A was delegated. The next parent action is to wait for Alice's A3/C-A'/EA' at S6, integrate it with the preserved B4/C-B/EB, and perform parent Review at the O7 proof seam. Before any consequential effect, recheck that the effect and approval are bound to S6 and the accepted A3 revision. If the access proof fails, reopen/recover only the affected access seam; the unaffected help-text evidence remains valid unless new evidence reaches it.
-
-This change therefore preserves parent ownership and all unaffected child evidence while invalidating and rerouting only the access-rule result whose contract slice changed.
+Re-evaluate O7's integration dependencies against S6: update the parent coverage link from S5 to S6 for access eligibility, require revised T-A evidence before parent integration can pass, and retain T-B's existing dependency and evidence because its contract slice did not change. No parent or child Ownership transfers occur. The resulting state is **affected child revised; unaffected child active**.

@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-replacement
 attempt: 2
-contextId: fresh-workflow-mid-replacement-2
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:02:55.000Z
+contextId: workflow-mid-replacement-1db9f1f-c99cdfe5-sol-high-2
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:24:58Z
 environment:
   id: workflow-mid-replacement
   capabilities: { activeWorkflowContext: true, persistence: true, workflow: true }
@@ -15,7 +15,11 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: erase partial effects or abandon active child work
-      evidence: The response retains T1 and its completed evidence, stops T2 and T3 with their history, exposes T1 handling ownership and next action, and performs no booking effect.
+      evidence: >-
+        The response says the non-refundable T1 purchase remains an actual effect,
+        gives T1, T2, and T3 separate dispositions, and retains BR1 under the O5
+        owner's Responsibility until terminal disposition or explicit accepted
+        transfer.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [silent cancellation, recursive parent Workflow]
@@ -25,4 +29,4 @@ observed:
   state: [predecessor-disposed-replacement-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-replacement-2.txt
-  sha256: 4c80861daa49f33c2e88a48097a5192416b424d5ab63cd7cc1e73bbe1b12ae8c
+  sha256: c99cdfe505df2d1556f1ab49f86936b21ee974cda671e7e6df95d01ee68df745

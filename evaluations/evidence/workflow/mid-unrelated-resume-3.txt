@@ -1,3 +1,14 @@
-Correction (immediate Review): “We received it.”
+Applying Thinking in Systems inside the active Workflow, I classify the new request as an unrelated switch. Before switching, I preserve this Inline continuation:
 
-Safe switch: the unrelated correction is complete; Outcome O6 remains active under its existing owner (unchanged), at exact ledger revision L8. Persistence is unavailable, so no durable handoff, write, or external effect occurred; no effect or approval is active. Resume O6 at the pickup point: check the electricity entry. Next action: check that entry, then continue the household-budget reconciliation.
+- Outcome and owner: O6 remains the active household-budget Outcome, and its owner remains responsible throughout the switch.
+- Exact state: ledger revision L8; pickup point is checking the electricity entry.
+- Return route and next action: resume O6 at that same pickup point and check the electricity entry against revision L8.
+- Boundary state: no effect or approval is active.
+
+Separate bounded Inline Outcome:
+
+> We received it.
+
+Review: “recieved” was corrected to “received”; the rest of the sentence was preserved. The correction is complete, with the corrected sentence returned as its only effect.
+
+O6 is now resumed from the preserved continuation—not reconstructed context—at ledger revision L8, checking the electricity entry. The O6 owner remains responsible, and the next action is the electricity-entry check; no effect or approval is active.

@@ -1,1 +1,3 @@
-I can’t move anything yet: the object and destination are ambiguous, and no authority for a physical move is stated. Please identify which object and which candidate location you mean, explain the criterion for “safer” if it is not already established, and confirm that I’m authorized to perform the move. I also have no physical-control capability in this session, so no move has been made.
+I’ve preserved both plausible object–location interpretations, but the requested move remains only a proposed Outcome. Which object should go to which candidate location, and do you authorize that exact move?
+
+No physical effect is available in this environment, so neither object has been moved. After you identify and authorize the move, it still requires an Actor with physical-effect capability and visible confirmation that the intended object reached the intended location.

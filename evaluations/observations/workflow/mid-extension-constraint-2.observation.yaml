@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-extension-constraint
 attempt: 2
-contextId: fresh-workflow-mid-extension-constraint-2
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:02:52.000Z
+contextId: fresh-workflow-mid-extension-constraint-1db9f1f-20260806T181736Z-sol-high-2
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:17:36.000Z
 environment:
   id: workflow-mid-extension
   capabilities: { activeWorkflowContext: true, delegation: false, persistence: true, workflow: true }
@@ -21,7 +21,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: 'invalidate unaffected T2 or Review R2 or claim the parent Outcome complete'
-      evidence: 'The response says T2, C4, and Review R2 are unaffected and must not be edited, rerouted, re-reviewed, or invalidated; O1 remains non-terminal.'
+      evidence: 'The response explicitly keeps T2, result C4, its evidence, completion, and Review R2 valid and prohibits editing, reopening, rerouting, re-reviewing, or invalidating them; it also says O1 is not complete and remains active pending Saturday proof and integration.'
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [separate change-management system, recursive parent Workflow]
@@ -32,4 +32,4 @@ observed:
   state: [accepted-change-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-extension-constraint-2.txt
-  sha256: d4c6e3413a8f4e868cabd9487c0a3f2a573a5a0c0a8d179d6fd45d6db1ce20da
+  sha256: aad27d5188ec9989b18abd23eaf30ae0c4899a801abc3a3cd8ee974f6297a877

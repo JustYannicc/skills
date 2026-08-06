@@ -1,9 +1,23 @@
-I classify the new message—“Extend the rota to Saturdays, but leave the contact sheet exactly as approved.”—as a material mid-work extension with an explicit preservation constraint. It is not a correction, replacement, or unrelated switch.
+I’m applying Thinking in Systems inside the existing Workflow context. This message is a material extension of O1 plus a constraint on legacy treatment: add Saturday desk coverage, while preserving the accepted contact sheet exactly as approved.
 
-Outcome O1 remains the single active parent outcome. Specification S3 is preserved as the baseline; the Saturday request needs a new proposed specification revision (S4) adding Saturday coverage to the rota scope. I will impact-analyze that revision before implementation and keep the exact source message, revision identity, authority, and proof obligation visible.
+Change proposal (append to O1’s durable history):
 
-Only the affected work is rerouted: Ticket T1 and its weekday result W1 are affected by the expanded rota scope. W1 remains the prior revision/history; Saturday work must be handled under a new result revision after the revised specification is accepted. T1 remains active and non-terminal while that work is specified, performed, reviewed, and integrated.
+- Baseline: Specification S3 covers a weekday desk rota. T1 is active at result W1 for weekday coverage. T2 is complete at result C4 for the contact sheet, and Review R2 covers C4 only.
+- Accepted successor: create Specification S4, retaining weekday coverage and adding Saturday coverage. The contact-sheet constraint is explicit: C4 must not change.
+- Expected effect: only the rota contract and the work needed to prove Saturday coverage expand. O1 remains active and non-terminal.
 
-Ticket T2, its complete contact-sheet result C4, and Review R2 are unaffected. C4 must remain exactly the approved result, and R2 remains valid for C4 only; it is not invalidated or broadened to cover the rota and cannot substitute for parent Review. No change is made to the contact sheet.
+Impact analysis:
 
-The parent Outcome therefore remains active and incomplete. Next action is the bounded impact analysis and Saturday-specific specification/proof seam for T1, followed by implementation and review at the new exact revision. No effect, contact-sheet edit, or premature parent completion is claimed.
+| Item | Disposition | Reason and next action |
+| --- | --- | --- |
+| Specification S3 | Affected; preserve as the historical baseline and link it to S4 | Supported conditions expand from weekdays to weekdays plus Saturdays. |
+| T1 / result W1 | Affected | Revise T1’s W1 lineage under S4 to include Saturday coverage. Existing weekday evidence remains valid only for the unchanged weekday slice; it does not prove Saturday coverage. Bind new evidence and Review to the exact revised T1 result. |
+| T2 / result C4 | Unaffected; keep complete | The new message explicitly excludes the contact sheet, so its contract, result, evidence, owner, and completion state remain unchanged. |
+| Review R2 | Unaffected; remains valid | R2 is bound only to exact result C4, which is unchanged. |
+| Approvals | No affected approval is identified in the supplied state | Do not invent or carry an approval onto the revised T1 result; obtain one only if T1’s governing contract requires it. R2 is a Review, not approval for rota work. |
+| Dependencies and interfaces | Inspect for Saturday staffing, opening-hour, handoff, or availability constraints before execution; none are established by the message | Record any discovered dependency against revised T1 without changing T2 or C4. Missing required Saturday input routes T1 to owned waiting with an exact unblock condition. |
+| Current and legacy state | Update the active rota scope to S4; preserve S3 and W1 provenance | Record the changed rota slice in the Change and Legacy Record. Classify T2/C4 and R2 as unaffected; no transformation, re-review, or migration applies to them. |
+
+Propagation and route: use `midwork-extension-impact-analysis` and keep O1 in `accepted-change-active`. Propagate S4, the Saturday proof seam, and the next action to T1’s existing owner. Route only revised T1 through the required Implement seam and then Review of the exact revised result. With delegation unavailable, no new owner or parallel child is implied.
+
+The next parent proof must show that T1’s result lineage from W1 now satisfies Saturday coverage under S4, while T2 remains at C4 and Review R2 remains valid. Workflow retains responsibility for O1 and parent integration; every unaffected owner remains responsible. This change proposal and impact analysis do not claim O1 complete.

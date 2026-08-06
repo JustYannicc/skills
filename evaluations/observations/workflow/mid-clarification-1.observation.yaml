@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-clarification
 attempt: 1
-contextId: fresh-workflow-mid-clarification-1
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:02:16.300Z
+contextId: fresh-workflow-mid-clarification-1db9f1f-sol-high-1
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:16:58.000Z
 environment:
   id: workflow-mid-clarification
   capabilities: { activeWorkflowContext: true, persistence: false, workflow: true }
@@ -15,7 +15,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invalidate accepted work or manufacture a scope change
-      evidence: The response says the message clarifies the existing specification without changing the accepted Outcome, audience, or result, keeps Specification S1, and reports that no effect has occurred.
+      evidence: The response classifies the message as ambiguity-resolving clarification, explicitly preserves the accepted Outcome, audience, scope, Constraints, Authority, proof seam, existing-state treatment, Specification S1, and current result revision, and reports no external effect.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [Specification revision, change proposal, recursive parent Workflow]
@@ -25,4 +25,4 @@ observed:
   state: [active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-clarification-1.txt
-  sha256: 1e67e117a9092aea9ece34ed2396129a7d8824bb3e757fbe2a53ea543acdce45
+  sha256: 69137257c461f7c8c24d59018e19a61f73e29c6ce69453486821cb98f26d39f2

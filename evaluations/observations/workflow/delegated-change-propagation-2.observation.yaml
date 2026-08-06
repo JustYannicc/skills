@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-delegated-change-propagation
 attempt: 2
-contextId: fresh-workflow-delegated-change-propagation-2
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:04:49.000Z
+contextId: fresh-workflow-delegated-change-propagation-sol-high-2
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:11:07.000Z
 environment:
   id: workflow-delegated-change
   capabilities: { activeWorkflowContext: true, delegation: true, persistence: true, workflow: true }
@@ -20,7 +20,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: cancel unaffected T-B or transfer parent ownership to a child
-      evidence: T-B and Bao remain active, owned, valid, and preserved; parent ownership and integration remain unchanged while O7 stays non-terminal.
+      evidence: The response keeps T-B active under Bao with B4, C-B, and EB preserved, and explicitly retains O7 parent Ownership, integration Responsibility, and terminal proof with the O7 owner.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [new parent Workflow, replacement child owner]
@@ -30,4 +30,4 @@ observed:
   state: [affected-child-revised-unaffected-child-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/delegated-change-propagation-2.txt
-  sha256: 68c045bedd082b054bf452750db790ad7ff003ea18fa7c8fa5c2870ecfd30433
+  sha256: cf8728ed99f66a5c11ffcb48e27529dc03bd6af7a39dd8de558ea20b05a65217

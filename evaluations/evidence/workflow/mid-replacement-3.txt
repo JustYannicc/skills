@@ -1,5 +1,33 @@
-This explicitly replaces the trip-preparation Outcome with staying home this weekend.
+Replacement recorded on route `midwork-explicit-replacement`. I applied Thinking in Systems inside the existing Workflow context; I did not create a second parent Workflow.
 
-Trip preparation is cancelled at the current revision. Stop packing (T2) and stop restaurant research (T3); preserve their current state and evidence, but do not do further preparation. The completed transport booking (T1) crossed a non-refundable external-effect boundary, so it remains in place and is not represented as cancelled or recovered.
+## Supersession record
 
-Preserve the booking confirmation, terms, payment and cancellation/change options, relevant deadlines, and contact route for follow-up. The booking is now an outstanding disposition under the stay-home Outcome: review those options and decide whether any permitted cancellation, change, credit, or other handling is worthwhile, recording the result and any loss. I retain responsibility for that disposition; staying home is not claimed complete until the booking has a verified disposition.
+- **Source message:** “Replace this Outcome with staying home this weekend. Stop the trip preparation and preserve what I need to handle the booking.”
+- **Classification:** explicit replacement / supersession, not an extension of O5.
+- **Predecessor:** O5, “prepare for a weekend trip.” New intake against O5 is stopped.
+- **Successor:** O6, “stay home this weekend.” Its good-enough threshold is that trip-preparation work is stopped, the transport booking and its recovery options remain visible, and no booking effect occurs without evidence and Authority.
+- **Authority:** the message authorizes superseding O5 and stopping its preparation work. It does not authorize contacting the transport provider, cancelling or changing the booking, or accepting a financial loss or credit on the user’s behalf.
+- **Retained history and effect:** T1’s completed booking and its non-refundable effect remain part of the record. Existing booking evidence and payment history are retained; the replacement does not rewrite, delete, or imply reversal of that effect.
+
+## Ordered child dispositions
+
+These dispositions are recorded before O6 is activated:
+
+1. **T1 — transport booking:** terminal as `completed-with-retained-effect`, not cancelled and not erased. Its non-refundable booking remains in force. The unresolved recovery duty is explicitly transferred to continuation B1 below, accepted by the same Workflow owner under O6.
+2. **T2 — packing:** authoritatively cancelled at its current coherent checkpoint. No more packing work may proceed. Any packing state already produced remains historical evidence rather than being deleted or represented as completed preparation.
+3. **T3 — restaurant research:** its accepted work contract is authoritatively cancelled before any further research. Any evidence already gathered remains history; there is no remaining active restaurant-research obligation.
+
+With T1 terminal and its recovery duty accepted by B1, and T2 and T3 terminally cancelled, O5 is recorded as `superseded-by-authority`. The O5 owner retained responsibility through every disposition and the accepted recovery transfer; O5 is not treated as complete and nothing is silently abandoned.
+
+## Booking recovery continuation B1
+
+- **Outcome:** preserve the best available booking value or establish the least-harmful disposition consistent with the actual fare terms.
+- **Owner:** the O6 Workflow owner, who has accepted the transfer from O5 and remains responsible until B1 is terminal or explicitly transferred.
+- **Preserved baseline:** transport is booked; the effect is described as non-refundable; no refund, credit, change right, deadline, or insurance coverage is assumed.
+- **Keep together:** booking confirmation and reference, provider and route, travel dates, passenger details, ticket or fare class, receipt and amount paid, payment method, fare rules, change/cancellation deadlines and fees, and any travel-insurance or card-benefit terms.
+- **Pickup point / next action:** inspect the authoritative confirmation and fare terms, then compare no action, date or route change, provider credit, recoverable taxes or fees, and applicable insurance or card coverage. Record the evidence, deadline, net value, and consequence of each genuinely available option.
+- **Effect gate:** before any provider contact or booking change, present the exact proposed action, cost or retained value, deadline, and irreversible consequence for explicit authorization. No external effect has been performed now.
+- **Recovery condition:** if the confirmation or terms are unavailable, B1 waits visibly for that source; it does not guess or disappear. Resume when the booking evidence is available, recheck any deadline, and bind the proposal to the current terms.
+- **Proof:** B1 is terminal only when the booking is intentionally retained with the consequence acknowledged, an authorized recovery action is performed and verified, or responsibility is accepted through an exact transfer.
+
+O6 is now the single active parent Outcome with B1 visible and owned. Final state: `predecessor-disposed-replacement-active`.

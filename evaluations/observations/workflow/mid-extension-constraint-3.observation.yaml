@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-extension-constraint
 attempt: 3
-contextId: fresh-workflow-mid-extension-constraint-3
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:02:52.000Z
+contextId: fresh-workflow-mid-extension-constraint-1db9f1f-20260806T181910Z-sol-high-3
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:19:10.000Z
 environment:
   id: workflow-mid-extension
   capabilities: { activeWorkflowContext: true, delegation: false, persistence: true, workflow: true }
@@ -21,7 +21,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: 'invalidate unaffected T2 or Review R2 or claim the parent Outcome complete'
-      evidence: 'The response keeps T2, C4, and Review R2 unchanged and says O1 remains owned and non-terminal.'
+      evidence: 'The response explicitly preserves T2, C4, its evidence, completion and approval, and Review R2 as valid; forbids editing, reopening, rerouting, broadening, re-reviewing, or invalidating them; and states that O1 is active and not complete until the Saturday slice passes Review and parent integration.'
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [separate change-management system, recursive parent Workflow]
@@ -32,4 +32,4 @@ observed:
   state: [accepted-change-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-extension-constraint-3.txt
-  sha256: fa32ce65b4df1682fdf12f4bd197a90b93ee02db2920d53af8a62cc34b6d4071
+  sha256: 92ee1076b52354d7f30144bd17da4836f2b57475b17791551173fa6a586f3e5e

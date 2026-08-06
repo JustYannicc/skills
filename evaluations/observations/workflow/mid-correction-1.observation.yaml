@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: workflow-mid-correction
 attempt: 1
-contextId: fresh-workflow-mid-correction-1
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:02:52.000Z
+contextId: workflow-mid-correction-1db9f1f-sol-high-1
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:16:55Z
 environment:
   id: workflow-mid-correction
   capabilities: { activeWorkflowContext: true, persistence: true, workflow: true }
@@ -16,19 +16,20 @@ observed:
     - invalidate the false effect evidence
     - reopen O2 at accepted and route recovery from the failed seam
   artifacts:
-    - 'correction event linked to M4'
+    - correction event linked to M4
   effects: []
   forbiddenChecks:
-    - criterion: 'rewrite transition history or leave the reopened Outcome ownerless'
-      evidence: 'The historical report and actual internal-only effect remain preserved, while parent responsibility is reopened at the audience/delivery seam.'
+    - criterion: rewrite transition history or leave the reopened Outcome ownerless
+      evidence: The response preserves the earlier M4 report and O2 completion transition in history, appends a correction event and reopening transition, and explicitly states that the current O2 owner resumes responsibility for the communication Outcome and its terminal proof.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [new unrelated Outcome, recursive parent Workflow]
   proof:
-    - 'the earlier completion remains in history and its invalid evidence is explicit'
-  responsibility: [the current owner resumes responsibility for O2]
+    - the earlier completion remains in history and its invalid evidence is explicit
+  responsibility:
+    - the current owner resumes responsibility for O2
   route: [midwork-correction-recovery]
   state: [accepted-reopened]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-correction-1.txt
-  sha256: 71cf4d68cb48f407b52f7a5b39e9d0054d9dd856487fdfc87bc5c13f64ba607c
+  sha256: 5f23c903d10660223a694c68589d03c2648bd18bde2d38699e31ff0396583e3b

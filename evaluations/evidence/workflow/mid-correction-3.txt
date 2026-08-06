@@ -1,3 +1,11 @@
-Correction recorded: M4 reached only the internal group, not the intended customer group. The earlier “sent to customer group” claim and any Review based on it are invalidated, while the actual internal delivery and its history are preserved. O2 is reopened and remains incomplete; parent Ownership stays with the active Workflow context.
+This is a **Correction** within the active Outcome O2, governed by Thinking in Systems inside the existing Workflow. It is not a new Outcome.
 
-The customer-communication seam is now in recovery. No customer-facing effect is performed here because no effect tool is available. The persisted continuation is to send M4 to the intended customer group under the existing Authority, then verify recipient and delivery at that seam before re-reviewing O2. Until that proof is present, O2 must not be marked complete.
+Append this correction event to the durable history, linked to M4:
+
+- Corrected fact: M4 was delivered only to the internal group; it was not delivered to the customer group required by O2.
+- Invalidated evidence: the earlier report that M4 was sent to the customer group no longer proves the customer-communication effect or completion of O2.
+- Preserved history: retain the original M4 report and the earlier completion transition as historical events, mark that completion as superseded by this correction, and retain the actual internal-group delivery fact. Do not rewrite or delete either event.
+
+Reopen O2 from the failed customer-delivery proof seam. Its current state is `accepted-reopened`, its route is `midwork-correction-recovery`, and the current owner resumes responsibility for O2 through verified completion.
+
+Recovery is to perform or re-perform the authorized customer-group delivery of M4, then verify at the customer-facing proof seam that the intended customer group received it before O2 can be marked complete again. No customer communication effect is claimed in this update, and no unrelated Outcome or recursive parent Workflow is created.

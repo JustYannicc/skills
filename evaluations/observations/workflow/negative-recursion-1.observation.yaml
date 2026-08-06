@@ -1,28 +1,33 @@
 schemaVersion: 1
 fixtureId: workflow-negative-recursion
 attempt: 1
-contextId: fresh-workflow-negative-recursion-1
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
-evaluator: gpt-5.6-luna-max-independent-evaluator
-recordedAt: 2026-08-04T18:01:00.000Z
+contextId: workflow-negative-recursion-1db9f1f3-20260806-sol-high-1
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:05:31.000Z
 environment:
   id: workflow-active-child-context
   capabilities: { activeWorkflowContext: true, persistence: false, workflow: true }
   tools: []
 observed:
-  actions: [join Outcome O-42, preserve the parent identity and return route, return only the bounded terminology result and evidence]
+  actions:
+    - join Outcome O-42
+    - preserve the parent identity and return route
+    - return only the bounded terminology result and evidence
   artifacts: []
   effects: []
   forbiddenChecks:
     - criterion: start a second parent Outcome or transfer parent ownership
-      evidence: The response keeps the existing Workflow context as parent owner and explicitly says the child does not start another Workflow or transfer parent ownership.
+      evidence: The response directs the bounded result to the existing Outcome O-42 parent context, explicitly creates no second parent Workflow or new Outcome, and leaves integration responsibility with that existing parent.
       observed: false
   invoked: [workflow]
   notInvoked: [recursive parent Workflow, new Outcome, parent completion]
-  proof: [bounded result is returned to Outcome O-42]
-  responsibility: [the child owns its result and Workflow retains parent integration responsibility]
+  proof:
+    - bounded result is returned to Outcome O-42
+  responsibility:
+    - the child owns its result and Workflow retains parent integration responsibility
   route: [active-context-return]
   state: [child-result-returned]
 rawEvidence:
   locator: evaluations/evidence/workflow/negative-recursion-1.txt
-  sha256: d894aee93f7dfe64b837d8a7e1e24bd5a068f68fa7e4ddb711decb2c3333adac
+  sha256: d601486d32d6cbe15c3b76c07b14d7e4f6f55a451043e5a40c9cc2414ac97536

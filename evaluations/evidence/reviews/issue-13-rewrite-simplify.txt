@@ -1,0 +1,15 @@
+PR #37 Workflow rewrite — simplify pass
+Candidate reviewed: 012c28c6b2498e376e77db5a21e4345b3507aa4e
+Reviewer: GPT-5.6 Sol High
+Date: 2026-08-06
+
+No Critical or Major findings.
+
+Resolved Minor findings:
+
+1. Replaced duplicated negative phrasing around the proportional route with one positive smallest-path rule.
+2. Rephrased missing-companion behavior as a direct capability-gap rule.
+3. Removed duplicated owner capture from the continuation template while preserving ownership at its acceptance boundary.
+4. Joined artificially wrapped README Workflow prose into natural Markdown paragraphs.
+
+No structural pruning was warranted. The inline route, six message classes, discovery table, interruption behavior, Supplemental seams, and three templates each carry distinct required behavior.
