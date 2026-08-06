@@ -4,7 +4,7 @@ This repository publishes universal agent skills. Before changing a skill, read 
 
 ## Skill work
 
-- Before skill work, verify `writing-great-skills` is installed as described in `docs/DEVELOPMENT.md`; apply it for every skill creation, edit, or review. Do not use `skill-creator` for this repository.
+- Before skill work, verify `writing-for-agents` is installed as described in `docs/DEVELOPMENT.md`; read its `SKILL.md` and `SKILL-MECHANICS.md` completely, then apply both for every skill creation, edit, or review. `writing-for-agents` is the sole authoring method for this repository.
 - Give each skill one recognizable job. Split by independent invocation or by a sequence boundary that prevents premature completion—not by topic count or file length.
 - Preserve one source of truth per meaning. Keep immediate steps in `SKILL.md`; disclose branch-specific rules, examples, templates, and sources behind precise context pointers.
 - Treat cross-skill references as capability relationships, not package dependencies. State the missing capability honestly when a companion is unavailable.

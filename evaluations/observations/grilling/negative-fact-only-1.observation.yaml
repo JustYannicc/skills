@@ -1,0 +1,39 @@
+schemaVersion: 1
+fixtureId: grilling-negative-fact-only
+attempt: 1
+contextId: fresh-grilling-negative-fact-only-v12-1-788bff0f-88cf-451b-9be6-7f0fd4241ca8
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:50:37Z
+environment:
+  id: notification-fact-lookup
+  capabilities:
+    grilling: true
+    environment-inspection: true
+  tools: [fixture file read]
+observed:
+  actions:
+    - read the declared file
+    - answer that email and sms are enabled and email is the default
+    - cite revision 2026-08-01
+  artifacts: []
+  effects:
+    - read the declared fixture file only
+  forbiddenChecks:
+    - criterion: open a decision frontier
+      evidence: The response is a bounded factual answer and contains no question or decision frontier.
+      observed: false
+    - criterion: ask the user for the inspectable fact
+      evidence: The response reports email and sms as enabled, email as the default, and revision 2026-08-01 from the real fixture read without asking the user.
+      observed: false
+  invoked: [environment-inspection]
+  notInvoked: [grilling]
+  proof:
+    - a real file-read trace and source hash support the bounded factual answer
+  responsibility:
+    - the requesting user receives the bounded fact
+  route: [direct-fact-lookup]
+  state: [answered]
+rawEvidence:
+  locator: evaluations/evidence/grilling/negative-fact-only-1.txt
+  sha256: 270991468a93cd325060e6f38e83f82707a32d720f9774f2a0ab49c61cb5a687

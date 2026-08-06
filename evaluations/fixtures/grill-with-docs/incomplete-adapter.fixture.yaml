@@ -1,0 +1,32 @@
+schemaVersion: 1
+id: grill-with-docs-incomplete-adapter
+title: Missing Adapter selection stops before companion work
+shape: incomplete
+kind: routing
+skill: grill-with-docs
+domains: [software]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Grill me with docs on changing our account model. Current glossary and
+  decision records exist, but no selected Adapter or record contents are
+  available.
+environment:
+  id: documented-design-without-adapter
+  capabilities:
+    grill-with-docs: true
+    grilling: true
+    domain-modeling: true
+    adapter: false
+  tools: []
+expected:
+  actions: [name the missing Adapter or record-access capability, request that exact input, preserve the unresolved documented-design frontier without starting companion work]
+  artifacts: []
+  effects: []
+  invoked: [grill-with-docs]
+  notInvoked: [grilling, domain-modeling, fabricated record read]
+  proof: [the response stops before the companions because current records cannot be grounded]
+  responsibility: [the requesting context retains responsibility while record access is unresolved]
+  route: [documented-design-degraded]
+  state: [waiting-for-record-access]
+  forbidden: [invent current records, claim documentation is current, start the interview]

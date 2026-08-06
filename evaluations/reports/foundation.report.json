@@ -1,191 +1,7 @@
 {
-  "evaluatedAt": "2026-08-04T18:54:47.466Z",
-  "fixtureSetRevision": "ca7c8f86c3a587ab5f10d35fe4e3979e6847221819e5a22c9084861daf2f6c68",
+  "evaluatedAt": "2026-08-06T16:56:14.000Z",
+  "fixtureSetRevision": "3aebb849a011792a8f0edeed0919a1ac685cfe53d1929263b974f4fa88c10c74",
   "fixtures": [
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-cross-domain-final-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-cross-domain-final-1",
-          "locator": "evaluations/evidence/batch-grill-me/cross-domain-1.txt",
-          "sha256": "1fa6faca4ddbb66b1b391313714ea14fcc26da711e7c8695657fdf64f5405656"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-cross-domain",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "a480edabc57806f48930e482f5c5e9fe3cbf6e783aa7698825c94cd48ba7733c"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-delegated-fact-final-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-delegated-fact-final-1",
-          "locator": "evaluations/evidence/batch-grill-me/delegated-fact-path-1.txt",
-          "sha256": "71239bfef7e0fe20fe881e1c17f186fb52e0a0a72bf3a1925d1da7f12a133002"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-delegated-fact-path",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "0869bd1f7a7687255a6931deb72c00f2d8963de70b1eaaa11c355894b0e816cc"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-direct-1",
-        "fresh-batch-grill-me-direct-2",
-        "fresh-batch-grill-me-direct-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-direct-1",
-          "locator": "evaluations/evidence/batch-grill-me/direct-1.txt",
-          "sha256": "d2e065fe3155180596e98d7697862b4594cd86b743826a06772bd36eb5a325e6"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-batch-grill-me-direct-2",
-          "locator": "evaluations/evidence/batch-grill-me/direct-2.txt",
-          "sha256": "34ffdec64f8332ac434150302b402e9aff7133f51571ba20709ca98db3e4596b"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-batch-grill-me-direct-3",
-          "locator": "evaluations/evidence/batch-grill-me/direct-3.txt",
-          "sha256": "1697621543bdbc8fea3b803950621307170922e0dca4336d0a26d7daf51876a2"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-direct",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "2be29cf4f053dd59929e747ce027fe5b79e6a8a8c2bad8a8c459a227c428b78b"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-direct-fact-final-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-direct-fact-final-1",
-          "locator": "evaluations/evidence/batch-grill-me/direct-fact-path-1.txt",
-          "sha256": "d5214b23fe1eb4265d1a108e314a0944e0acac0d4bd0519fb7339f975d78e491"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-direct-fact-path",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "b1da4d632ebbd58a09a39526d4887341fb25d7bd094febc713671b830475145c"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-incomplete-final-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-incomplete-final-1",
-          "locator": "evaluations/evidence/batch-grill-me/incomplete-1.txt",
-          "sha256": "875d7c91993cf680e92d7f3b7449ec5225be7b4842212c66170ee16960102ad5"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-incomplete",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "f42c4701c1f2319318bee0251b6b9c27defdd652b410a13438a2136664d5f455"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-indirect-final-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-indirect-final-1",
-          "locator": "evaluations/evidence/batch-grill-me/indirect-1.txt",
-          "sha256": "3d8552c858ad7996eea7f4c2ff1840d158e7bd47bc3f733b2700b515a4dd6403"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-indirect",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "91cf162f9d3bac302d73b68275db4e0c837302e6fe41776951bb63ad25550f20"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-missing-final-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-missing-final-1",
-          "locator": "evaluations/evidence/batch-grill-me/missing-capability-1.txt",
-          "sha256": "51fdf9a3a5f97a66bc5364b1efddd7d111097580c5bf338350d010a9b9ae2d21"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-missing-capability",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "c2f0061a1dc688c4287ccd6e7af8cf36f6b53c2c9381b2b6680b2b204ed8f801"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-batch-grill-me-negative-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-batch-grill-me-negative-1",
-          "locator": "evaluations/evidence/batch-grill-me/negative-1.txt",
-          "sha256": "50d0cb294ddc71c898bd6e05da18cae4c36f1a016720e83712bb389f0fc9c15e"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "batch-grill-me-negative",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "91b3b043a35faae7ad8a2cbb1475b55f53925a17385cb26ba291e7c524d1025e"
-    },
     {
       "attempts": [
         1,
@@ -220,7 +36,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -257,7 +73,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -278,7 +94,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -299,7 +115,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -320,8 +136,340 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-grill-with-docs-direct-composition-sol-high-1-20260806t164016z",
+        "fresh-grill-with-docs-direct-composition-sol-high-2-keGlgR",
+        "fresh-grill-with-docs-direct-composition-3-6wZMVf"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grill-with-docs-direct-composition-sol-high-1-20260806t164016z",
+          "locator": "evaluations/evidence/grill-with-docs/direct-composition-1.txt",
+          "sha256": "5d4867339cee162fe80798fb0c8d5410641ad83667d2daa5634a57c26a8b753b"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-grill-with-docs-direct-composition-sol-high-2-keGlgR",
+          "locator": "evaluations/evidence/grill-with-docs/direct-composition-2.txt",
+          "sha256": "1a2aab7a6ff18a4de163ae62c74d772419a2287528ee8cb9d37a31ff19829dc8"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-grill-with-docs-direct-composition-3-6wZMVf",
+          "locator": "evaluations/evidence/grill-with-docs/direct-composition-3.txt",
+          "sha256": "854c26136fa99999203d576d4955fe26fcfa986acd885a99731fb590226809a3"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grill-with-docs-direct-composition",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "07647379ea72b546d6ecf045e9d1a2062c35ef24c821acaf7b748c534bb250af"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7",
+          "locator": "evaluations/evidence/grill-with-docs/edge-missing-domain-modeling-1.txt",
+          "sha256": "1731461315bd8e62bd6f2fb86ca3b257286f1033a9713b9bcd51436e7efbd344"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grill-with-docs-edge-missing-domain-modeling",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "127a48e559897587ce84921b19e1c2c49c3e060bf6b8c61cb303870400909d76"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-gwd-edge-missing-grilling-1-egxl9qnx"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-gwd-edge-missing-grilling-1-egxl9qnx",
+          "locator": "evaluations/evidence/grill-with-docs/edge-missing-grilling-1.txt",
+          "sha256": "3548c19da68c0b645971e5cc7cf9f9be85ef8420bff99f168f608ca6cc648ebb"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grill-with-docs-edge-missing-grilling",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "1eff3df3706faa5f7d26c2ec6703c4ece857523222e1f3717d2f85450db3d5f7"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-grill-with-docs-incomplete-adapter-1-k7m4qx"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grill-with-docs-incomplete-adapter-1-k7m4qx",
+          "locator": "evaluations/evidence/grill-with-docs/incomplete-adapter-1.txt",
+          "sha256": "76b048a8d547b8cda1e2ce049647f9a64ca04a7b507fc309a7d89016a65f57d1"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grill-with-docs-incomplete-adapter",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "df95d2589253bacfc841ae2ab0cdd2997832b860c5275b459edc3b94ffa2b2c2"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-gwd-indirect-workflow-1-5b4d64ba-234e-439e-8406-5516ce5eff62",
+        "fresh-gwd-indirect-workflow-v12-2-235bdf6b-0984-4142-98ed-99df5c85c080",
+        "fresh-gwd-indirect-workflow-sol-high-3-20260806T164152Z"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-gwd-indirect-workflow-1-5b4d64ba-234e-439e-8406-5516ce5eff62",
+          "locator": "evaluations/evidence/grill-with-docs/indirect-workflow-1.txt",
+          "sha256": "382415eb5865bc117d606b1f06cf5fe81edc652257a3ff395c4426240007c6af"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-gwd-indirect-workflow-v12-2-235bdf6b-0984-4142-98ed-99df5c85c080",
+          "locator": "evaluations/evidence/grill-with-docs/indirect-workflow-2.txt",
+          "sha256": "341c196cabcbde14df26619ba64c4b96e5889491e7dbec077b859a917c299797"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-gwd-indirect-workflow-sol-high-3-20260806T164152Z",
+          "locator": "evaluations/evidence/grill-with-docs/indirect-workflow-3.txt",
+          "sha256": "4651aee45fe3dcab3cef03e50f4875044a7c268ed9afc32631c753372d488a61"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grill-with-docs-indirect-workflow",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "cefc678cb185e593c4e427070a50f1d1d81cf0ea51a21bc548a99673ecd6aee3"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-gwd-negative-glossary-v12-1-febad68b-dd72-490b-b1eb-c69c2bd17ef9"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-gwd-negative-glossary-v12-1-febad68b-dd72-490b-b1eb-c69c2bd17ef9",
+          "locator": "evaluations/evidence/grill-with-docs/negative-glossary-read-1.txt",
+          "sha256": "eaad84019e358b5af16391473877cb82a85fa4e7c2e161766e940af5c282da3d"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grill-with-docs-negative-glossary-read",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "a196cdbbe7200507c2f330282235d1104d50bc8d992c1f2607ac88b3da286fc3"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-grilling-direct-frontier-format-v12-1-95e382ed-cd64-486b-946a-dad1d89b255e",
+        "fresh-grilling-direct-frontier-format-sol-high-2-caca5c66-a73a-4ee6-9483-0124492446cf",
+        "fresh-grilling-direct-frontier-format-sol-high-3-3e166a19-21a6-4c72-9a1d-964aea7862ff"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grilling-direct-frontier-format-v12-1-95e382ed-cd64-486b-946a-dad1d89b255e",
+          "locator": "evaluations/evidence/grilling/direct-frontier-format-1.txt",
+          "sha256": "589736cf87925374e291a862587581cbb438750197f298a7ed36c6363c5ebcda"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-grilling-direct-frontier-format-sol-high-2-caca5c66-a73a-4ee6-9483-0124492446cf",
+          "locator": "evaluations/evidence/grilling/direct-frontier-format-2.txt",
+          "sha256": "f65b292342db3cdff5d84bbb73c632ff1c6448ca8601075b13dd7d07963cc100"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-grilling-direct-frontier-format-sol-high-3-3e166a19-21a6-4c72-9a1d-964aea7862ff",
+          "locator": "evaluations/evidence/grilling/direct-frontier-format-3.txt",
+          "sha256": "e09e59c4bdb08bf279c8218fb5bd9162d7a63de2b68f28ed6f0a960e5b74318e"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grilling-direct-frontier-format",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "98d30f87c616d67b2044d4aaee3e45d9ece31e54ca156c811d07c8000f01cc0a"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-grilling-edge-confirmation-gate-v12-1-14db50eb-4630-485a-b566-29ba6056bc4b",
+        "fresh-grilling-edge-confirmation-gate-v12-2-b92894e0-38ca-4323-ba38-8aa3d9a093a3",
+        "fresh-grilling-edge-confirmation-gate-v12-3-12c675d9-be22-42ca-a65d-b788ec6c88d1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grilling-edge-confirmation-gate-v12-1-14db50eb-4630-485a-b566-29ba6056bc4b",
+          "locator": "evaluations/evidence/grilling/edge-confirmation-gate-1.txt",
+          "sha256": "f47b6bce90b3a17731803ced0974bc9e8792fd169ea46315fa93ec8811751760"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-grilling-edge-confirmation-gate-v12-2-b92894e0-38ca-4323-ba38-8aa3d9a093a3",
+          "locator": "evaluations/evidence/grilling/edge-confirmation-gate-2.txt",
+          "sha256": "f158789fb3ec6b01f9ca325cd21a9263e698bfe8fa0407976811acc21349fba9"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-grilling-edge-confirmation-gate-v12-3-12c675d9-be22-42ca-a65d-b788ec6c88d1",
+          "locator": "evaluations/evidence/grilling/edge-confirmation-gate-3.txt",
+          "sha256": "cf0e73af773fa5ba6fba355956ebe94ab0e82a0a2480c662ea5c1bbfb81f470e"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grilling-edge-confirmation-gate",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "6ab99efcebceffce4f86301d7b738356ab49822b575d3b3c3d5d55ea3b67b1a7"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-grilling-edge-delegated-fact-v12-1-b29b368c-01b3-4a0d-9eb6-18b4c3d232d7"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grilling-edge-delegated-fact-v12-1-b29b368c-01b3-4a0d-9eb6-18b4c3d232d7",
+          "locator": "evaluations/evidence/grilling/edge-delegated-fact-1.txt",
+          "sha256": "a3120780b35451b91ddd1e014b24f957a1396bc5d101cb6d059888f136e7d4ca"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grilling-edge-delegated-fact",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "9f6bbf92839be82307917e4730702f079819cbfbbdee32736369b5cbc013baf9"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-grilling-incomplete-first-frontier-v12-1-33c9147d-d64b-4e2f-9efb-db4450ec9420"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grilling-incomplete-first-frontier-v12-1-33c9147d-d64b-4e2f-9efb-db4450ec9420",
+          "locator": "evaluations/evidence/grilling/incomplete-first-frontier-1.txt",
+          "sha256": "9cbd9f7ec04497533e9ef1cd2b6545ff1adb3147d6baa950ff21a3e3d6602328"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grilling-incomplete-first-frontier",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "05f0ed69b3c01ebdf97fb10221a1b282ff4ae8ee9e2c7a12c384511d603fe4d9"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-grilling-indirect-agent-fact-v12-1-57a39dc9-0217-4c87-8e23-2974e85bbd83",
+        "fresh-grilling-indirect-agent-fact-v12-2-sol-high-20260806T164746Z",
+        "A15B04AC-B428-48A5-B719-59BF88147373"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grilling-indirect-agent-fact-v12-1-57a39dc9-0217-4c87-8e23-2974e85bbd83",
+          "locator": "evaluations/evidence/grilling/indirect-agent-fact-1.txt",
+          "sha256": "861b39f017434b70ce097da0073563b483098bf3830de5e4a6dd4c212f317e09"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-grilling-indirect-agent-fact-v12-2-sol-high-20260806T164746Z",
+          "locator": "evaluations/evidence/grilling/indirect-agent-fact-2.txt",
+          "sha256": "b4256628f65b639a2477f01cabc86bfeb52d788b26753ae5533b2ca0b9ed1d07"
+        },
+        {
+          "attempt": 3,
+          "contextId": "A15B04AC-B428-48A5-B719-59BF88147373",
+          "locator": "evaluations/evidence/grilling/indirect-agent-fact-3.txt",
+          "sha256": "3bdb6f49f9c4794839688e2e6c45afab8c92bc202b641350ba8d883cb161737d"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grilling-indirect-agent-fact",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "d0d31e62bdbaf390890878dd1b42b4bfd929d4a1c005157bcd66e29e2752c69f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-grilling-negative-fact-only-v12-1-788bff0f-88cf-451b-9be6-7f0fd4241ca8"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-grilling-negative-fact-only-v12-1-788bff0f-88cf-451b-9be6-7f0fd4241ca8",
+          "locator": "evaluations/evidence/grilling/negative-fact-only-1.txt",
+          "sha256": "270991468a93cd325060e6f38e83f82707a32d720f9774f2a0ab49c61cb5a687"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "grilling-negative-fact-only",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "c99af046be0f0ec3701e8c21155f860c670e64e1a9bc156cdf194026abddc552"
     },
     {
       "attempts": [
@@ -375,7 +523,7 @@
       "findings": [],
       "fixtureId": "research-cross-domain-direct",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "32162af6e6142728141fe6cf2acf30c94b0be5fe29a9db8aad916acf708d3fed"
     },
     {
@@ -396,7 +544,7 @@
       "findings": [],
       "fixtureId": "research-incomplete-scope",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "dd34c41c6cf54e720944df890c714e4d6fceb0aacab7a89dab5a902c4c63372c"
     },
     {
@@ -433,7 +581,7 @@
       "findings": [],
       "fixtureId": "research-indirect-workflow-delegation",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "f3d3cb7e5f0738c6d5c09ff4c118e77e0fce9f9771015556c29d0a1cb5acb3b4"
     },
     {
@@ -454,7 +602,7 @@
       "findings": [],
       "fixtureId": "research-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "a7d37a7fc50e38501aa520e92db7f56188458c0f06bb5a2d6a50cbe9aa1bba32"
     },
     {
@@ -475,7 +623,7 @@
       "findings": [],
       "fixtureId": "research-negative-prototype-route",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "f1d557adaa48ec8348d6db010b00d05ba072bd6edbbbfa1a4ddd427d944cd67f"
     },
     {
@@ -502,250 +650,8 @@
       "findings": [],
       "fixtureId": "research-no-repository-adapter",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "ad6accb9df792e4123e9c002c0ba95a123314dbaebe0af5d45d1fe9fc8a1a566"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-changed-revision-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-changed-revision-1",
-          "locator": "evaluations/evidence/review/changed-revision-1.txt",
-          "sha256": "febc07ee8dd46fbf1d770117962ca8315751bbaf5b22df90d21d05a4cd171a4e"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-changed-revision",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "35d9a6d5ec56dc5d39b62cf385b650fb85059ddebd081ecc84a6775ba2b8ca15"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-code-medium-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-code-medium-1",
-          "locator": "evaluations/evidence/review/code-medium-1.txt",
-          "sha256": "e6608394a1f139c6e02b0f32b80772c4b4b4b1e7fce622fe309bfe967bad3704"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-code-medium",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "ecf22bf91a9285f42fae4baf3961298792fcb85c26fe2a1082133a27df53ddfe"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-review-cross-domain-direct-1",
-        "fresh-review-cross-domain-direct-2",
-        "fresh-review-cross-domain-direct-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-cross-domain-direct-1",
-          "locator": "evaluations/evidence/review/cross-domain-direct-1.txt",
-          "sha256": "7b08d5c026d6b5b2b7442586f3b0fb9195f2aef8c0410dda09f6e4955452a56a"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-review-cross-domain-direct-2",
-          "locator": "evaluations/evidence/review/cross-domain-direct-2.txt",
-          "sha256": "cf59f1d112d313582c8cc954d4db1f5fbefe9d49fbc882409ce205173a204573"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-review-cross-domain-direct-3",
-          "locator": "evaluations/evidence/review/cross-domain-direct-3.txt",
-          "sha256": "aee76d0175942223924d2c1e51e39f590588a930ddf6acc25fec413d4a19b386"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-cross-domain-direct",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "088e4b3db0c7c2c7ae4b660b33bd47fec0af6776298c4dcb53456c02d3ebc375"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-inconclusive-effect-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-inconclusive-effect-1",
-          "locator": "evaluations/evidence/review/inconclusive-effect-1.txt",
-          "sha256": "12cef811802847cd3b386ee3f8806b59dee9f17007f34be96a6f149e96fe1594"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-inconclusive-effect",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "01d8e33b1cf00361ca3e555fb09b417845b7fe9bf8d4b78edf6c83eb90dbefb5"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-inline-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-inline-1",
-          "locator": "evaluations/evidence/review/inline-1.txt",
-          "sha256": "f1c9dbcab0f424c798febead7388534d62ca321af2b9d6b466d7d6396ad25b3a"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-inline",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "4bdcd610c5457e3a89f8365f97377b32249f0c027d2c0449def1b12c1cb3ca44"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-negative-no-spec-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-negative-no-spec-1",
-          "locator": "evaluations/evidence/review/negative-no-spec-1.txt",
-          "sha256": "ac51355d8fe4e4bac546bf704200f0af896b0cf17534c35100a4391473386487"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-negative-no-spec",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "163cb4eb2920fd12defff44680f2e161c661b6dd24a6c163d66a6ec6a23b4a9b"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-prepared-communication-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-prepared-communication-1",
-          "locator": "evaluations/evidence/review/prepared-communication-1.txt",
-          "sha256": "36cc04826b855b232c3f5485fc22cecbae6d49653f8139fef4c1e61d365b0a05"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-prepared-communication",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "8085cf5c39059640681b950e8812f955a45d1a417631f5a47858e7c1f9725006"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-supplemental-advisory-absent-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-supplemental-advisory-absent-1",
-          "locator": "evaluations/evidence/review/supplemental-advisory-absent-1.txt",
-          "sha256": "ca1ab1ea0b34e90e2c1ac7d76a5f3a05704fc526be28ea4d46c6ae81fa0284ba"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-supplemental-advisory-absent",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "fcaa93b7c961f51d1079ba5d01cfaa3adcd62dc604712dc8ae78d1e2f55bb0a2"
-    },
-    {
-      "attempts": [
-        1,
-        2,
-        3
-      ],
-      "contextIds": [
-        "fresh-review-supplemental-required-1",
-        "fresh-review-supplemental-required-2",
-        "fresh-review-supplemental-required-3"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-supplemental-required-1",
-          "locator": "evaluations/evidence/review/supplemental-required-1.txt",
-          "sha256": "a10c56ad243903b2d47b19ae2ff796cf2ca859e9fe3b2ba3fb5688da6ace2e89"
-        },
-        {
-          "attempt": 2,
-          "contextId": "fresh-review-supplemental-required-2",
-          "locator": "evaluations/evidence/review/supplemental-required-2.txt",
-          "sha256": "fb9b4addac4425ad77664ee39bb7c93007c5744079d60983df14d79cf63dd9e0"
-        },
-        {
-          "attempt": 3,
-          "contextId": "fresh-review-supplemental-required-3",
-          "locator": "evaluations/evidence/review/supplemental-required-3.txt",
-          "sha256": "ba0c2ef68bdfd1ece9b65d5249feaceada6b3bc5dbf649a05ace86df7922a479"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-supplemental-required",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "5229e8f82038a6308c01f7eeed6c328d9aee8bc0b352f55af25436521cc0e5a9"
-    },
-    {
-      "attempts": [
-        1
-      ],
-      "contextIds": [
-        "fresh-review-supplemental-required-missing-1"
-      ],
-      "evidence": [
-        {
-          "attempt": 1,
-          "contextId": "fresh-review-supplemental-required-missing-1",
-          "locator": "evaluations/evidence/review/supplemental-required-missing-1.txt",
-          "sha256": "d74894833ce753eb4c20fcf161f220a162fedab9767f870c5c9b1b3d9b29389e"
-        }
-      ],
-      "findings": [],
-      "fixtureId": "review-supplemental-required-missing",
-      "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
-      "fixtureRevision": "e3aebd50d5886a3a7e2328182f750dd8d8887a0c3b82b7da4b920a255933c0f8"
     },
     {
       "attempts": [
@@ -765,7 +671,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -786,7 +692,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -823,7 +729,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -860,7 +766,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -881,7 +787,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -902,7 +808,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -923,7 +829,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -944,7 +850,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -965,7 +871,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -986,7 +892,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -1007,8 +913,29 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-issue-35-system-record-representation-resolution-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-issue-35-system-record-representation-resolution-1",
+          "locator": "evaluations/evidence/thinking-in-systems/system-record-representation-1.txt",
+          "sha256": "a854433e37a64554a879e1dee28a045b4fe2c01f2f3ec06934b320b577ea41e6"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "thinking-in-systems-system-record-representation",
+      "status": "passed",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
+      "fixtureRevision": "e64a47c17164ec5fe393d0a3591ac2f5c4b66e0e6d4b2ebd4b02dd7303303f2b"
     },
     {
       "attempts": [
@@ -1028,7 +955,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -1049,7 +976,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     },
     {
@@ -1076,7 +1003,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-cross-domain",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35"
     },
     {
@@ -1131,7 +1058,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-direct",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "8648c4e09094d91e5e00a5e5a81450acb3c06695dce9ae15bd1596cc318f624b"
     },
     {
@@ -1152,7 +1079,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-incomplete",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "67ad8e377e31ccbd5ae91ae759b033bbc2e48c0b2fd7dc96bfa4329824348028"
     },
     {
@@ -1207,7 +1134,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-indirect",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "c1ab1c0ad65e5021f0c6fd826870db73ecc4d0a45d3446f937c320a581ea0b89"
     },
     {
@@ -1228,7 +1155,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "3677af27f161d55b1b6783ee25b05b457e79dee5821e1e5a2158ee50ef4d9466"
     },
     {
@@ -1249,12 +1176,12 @@
       "findings": [],
       "fixtureId": "to-questionnaire-negative",
       "status": "passed",
-      "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+      "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
       "fixtureRevision": "ead7c724eba0812b80580200b3064116db5566ba6367eddd0bd5a37c5e2adc9c"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0",
+  "suiteRevision": "git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -1263,7 +1190,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 48,
-    "passed": 48
+    "fixtures": 43,
+    "passed": 43
   }
 }

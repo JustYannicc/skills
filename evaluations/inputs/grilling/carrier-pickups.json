@@ -1,0 +1,9 @@
+{
+  "revision": "2026-08-01",
+  "source": "carrier-service-window",
+  "pickups": {
+    "weekday": "18:30",
+    "saturday": "14:00",
+    "sunday": null
+  }
+}

@@ -1,0 +1,61 @@
+Fresh-context execution — grill-with-docs-edge-missing-domain-modeling fixture attempt 1
+
+Candidate revision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+Frozen contract checkout: git:7e5b067bc0de2b0ded0841a243950717602be535
+Evaluator: gpt-5.6-sol-high-fresh-context
+Context ID: fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7
+Recorded at (UTC): 2026-08-06T16:42:06Z
+
+Effective runtime
+
+- Root: pinned-runtime-worktree
+- Grill With Docs `SKILL.md` sha256: 2d4c5eea65afba9b3fe0ba56037ed4d837103b2aefab9fe90eaccf3c939b249a
+- Grill With Docs `agents/openai.yaml` sha256: 4e3ac56fd00c573cf3a1f4b55663627d8be2e4e2d5277b790becc5a1db82d10d
+- Available companions: Grilling
+- Unavailable companions: Domain Modeling
+
+Exact prompt
+
+Grill me with docs on the return-to-office policy using the records seeded by evaluations/inputs/grill-with-docs/work-policy-records.json. The selected ephemeral Adapter and Grilling are available, but Domain Modeling is not. Preserve the exact record locators and unresolved frontier for resumption.
+
+Exact environment
+
+- id: documented-design-missing-domain-modeling
+- capabilities: grill-with-docs=true, grilling=true, domain-modeling=false, adapter=ephemeral-records
+- tools: [ephemeral Adapter read]
+
+Fixture-sandbox Adapter trace
+
+The Adapter operations below are declared fixture-sandbox events, not external actions.
+
+1. `seed-create`: copied `evaluations/inputs/grill-with-docs/work-policy-records.json` to the unique fresh ephemeral seed `ephemeral-sandbox/gwd-edge-missing-domain-modeling-1.DHzuboMX/work-policy-records.json`.
+   - source sha256 before copy: `a841d7de1e04ee48e16e5682f267b1f982b6168c1f01f8727b896e2273ddf161`
+   - seed sha256 before reads: `a841d7de1e04ee48e16e5682f267b1f982b6168c1f01f8727b896e2273ddf161`
+2. `ephemeral Adapter read`: read `glossary/work-policy` at revision `r4` from the seed.
+   - exact canonical record: `{"locator":"glossary/work-policy","revision":"r4","terms":{"anchor day":"A weekday when a team is expected to work from its shared site.","policy exception":"A time-bounded departure from the ordinary attendance rule."}}`
+   - canonical record sha256: `64748bab11789cd5f9d7110d3f8bf2c7aa67336ad25b21de4f86c945de1641cf`
+3. `ephemeral Adapter read`: read `decisions/return-to-office` at revision `r7` from the seed.
+   - exact canonical record: `{"locator":"decisions/return-to-office","revision":"r7","status":"accepted","summary":"Each team will use common anchor days and a documented exception path."}`
+   - canonical record sha256: `9386985a5bb25b24c6ee94eb20bf960063ce419340bc34d24bbedecb967801e6`
+4. `ephemeral Adapter update`: zero events; updates were not a declared tool and no write was attempted.
+5. Post-read boundary check:
+   - whole-seed sha256 after reads: `a841d7de1e04ee48e16e5682f267b1f982b6168c1f01f8727b896e2273ddf161`
+   - result: the before/after seed hashes match and both records remain unchanged.
+
+Response — generated once and preserved unedited
+
+Grill With Docs is in degraded mode. I read `glossary/work-policy` at `r4` and `decisions/return-to-office` at `r7` through the selected ephemeral Adapter. The glossary defines “anchor day” as a weekday when a team is expected at its shared site and “policy exception” as a time-bounded departure from the ordinary attendance rule. The accepted decision says teams will use common anchor days and a documented exception path, but it does not specify the weekdays or the exception path’s concrete decision rules.
+
+Domain Modeling is unavailable. Grill With Docs requires Domain Modeling throughout the Grilling interview to preserve shared language and qualifying decisions, so I cannot substitute Grilling alone or begin claiming documented shared understanding. No glossary or decision record was written.
+
+Resumable documented-design frontier, bound to the records actually read:
+
+- `glossary/work-policy` at `r4`: validate and preserve the meanings of “anchor day” and “policy exception” through Domain Modeling before treating them as the interview’s shared language.
+- `decisions/return-to-office` at `r7`: retain the accepted direction—common anchor days plus a documented exception path—while leaving the unspecified anchor weekdays and concrete exception-path rules unresolved.
+- Resumption condition: when Domain Modeling is available alongside Grilling and the selected Adapter, re-invoke Grill With Docs, reread `glossary/work-policy` at `r4` and `decisions/return-to-office` at `r7` (recording any revision drift before proceeding), then resume the documented interview from these unresolved choices and persist only language or qualifying decisions that actually resolve.
+
+State: `waiting-for-domain-modeling-capability`. Route: `documented-design-degraded`. The requesting context retains responsibility for resumption. The interview and shared understanding are not complete.
+
+Evaluation result
+
+Pass. The response names the missing Domain Modeling capability, does not use Grilling as a substitute, grounds the degraded result in real reads of `glossary/work-policy` at `r4` and `decisions/return-to-office` at `r7`, preserves a record-bound unresolved frontier and exact resumption condition, leaves responsibility with the requesting context, performs no Adapter write, and does not claim shared understanding or interview completion.

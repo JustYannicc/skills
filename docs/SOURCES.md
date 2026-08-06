@@ -10,7 +10,7 @@ This repository-wide inventory routes each source class to its authority. Inclus
 - [OpenAI Build skills](https://developers.openai.com/plugins/build/skills)
 - [ClawHub skill format](https://github.com/openclaw/clawhub/blob/main/docs/skill-format.md)
 - [ClawHub publishing](https://docs.openclaw.ai/clawhub/publishing)
-- [Matt Pocock's skills, inspected revision](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c)
+- [Matt Pocock's skills, current pinned revision](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e)
 
 ## Thinking in Systems
 

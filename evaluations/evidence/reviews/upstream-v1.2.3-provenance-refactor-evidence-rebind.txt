@@ -1,0 +1,25 @@
+Upstream v1.2.3 provenance-refactor evidence rebind attestation
+
+Recorded: 2026-08-06
+Prior behavioral candidate: git:f8477701b81620392f6ff5020329f0c4e50d375a
+Rebound behavioral candidate: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+Evaluation-contract commit: git:7e5b067bc0de2b0ded0841a243950717602be535
+
+The pre-existing 47 active observations were not rerun. Their prompts, model
+responses, recordedAt values, raw-evidence files, and raw-evidence hashes remain
+unchanged. Only each observation's suiteRevision was advanced from the prior
+behavioral candidate to the rebound candidate.
+
+That rebind is truthful because the production delta from the prior behavioral
+candidate to the rebound candidate changes repository validation structure and
+maintainer provenance only: it extracts central provenance validation, shares
+and caches pinned-target resolution, moves its tests, and corrects the historical
+Thinking in Systems source record. It does not change an installed skill,
+overlay, prior fixture, prior prompt, or prior raw model response.
+
+The only new behavioral runtime coverage is recorded separately in the fresh
+Grilling and Grill With Docs families. Those 22 observations use distinct Sol
+High fresh contexts and exercise the direct, indirect, incomplete, negative,
+and edge contracts introduced for the current v1.2.3 overlays. This attestation
+does not relabel historical Batch Grill Me evidence or claim that any earlier
+model round trip was repeated.
