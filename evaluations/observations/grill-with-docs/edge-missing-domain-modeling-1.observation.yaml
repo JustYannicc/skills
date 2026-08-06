@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-edge-missing-domain-modeling
 attempt: 1
 contextId: fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7
-suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
+suiteRevision: git:51fc9fe6ed78d02c9672e442dcf7dd51dd4ef001
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:42:06.000Z
 environment:

@@ -1,31 +1,35 @@
 schemaVersion: 1
 fixtureId: prototype-incomplete-question
 attempt: 1
-contextId: fresh-prototype-incomplete-1
-suiteRevision: git:2983a2e2f0a1d9dfaea247168b4a56a0c51e4b28
-evaluator: gpt-5.6-luna-fresh-context-prototype
-recordedAt: 2026-08-04T20:33:00.000Z
+contextId: fresh-sol-high-r2-prototype-incomplete-1
+suiteRevision: git:51fc9fe6ed78d02c9672e442dcf7dd51dd4ef001
+evaluator: gpt-5.6-sol-high-fresh-context-prototype
+recordedAt: 2026-08-06T18:01:01.000Z
 environment:
   id: conversation-without-question
-  capabilities: { workflow: true, persistence: false, sandbox: false, effects: false }
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: false
+    effects: false
   tools: []
 observed:
-  actions: [identify the missing material question, ask one smallest discriminating question, preserve the waiting state]
-  artifacts: [incomplete prototype result contract]
+  actions: [identify the missing material learning question, ask one smallest discriminating question, preserve the exact resumption condition]
+  artifacts: [incomplete Prototype result]
   effects: []
   forbiddenChecks:
     - criterion: invent a design question
-      evidence: The response asks for the material question instead of choosing one.
+      evidence: The result marks the learning question as missing and asks the caller for the decision and uncertainty instead of supplying either.
       observed: false
     - criterion: run an unscoped experiment
-      evidence: No setup, effect, or experiment is started while the question is missing.
+      evidence: The compact result is blocked before setup with a pause disposition and an exact step-1 resumption condition.
       observed: false
   invoked: [prototype]
   notInvoked: [setup, Specification, implementation, Review, decomposition, parent completion]
-  proof: [the missing question and exact resumption condition are visible]
+  proof: [the missing learning question and exact resumption condition are visible]
   responsibility: [Workflow or the caller retains responsibility while the question is unanswered]
   route: [prototype-waiting-for-question]
   state: [waiting-for-question]
 rawEvidence:
   locator: evaluations/evidence/prototype/incomplete-1.txt
-  sha256: 3801c96b331aab076767ab4b5362d0d2aff4f44056fedcaaa35e8a11357c152a
+  sha256: b6efdf276428d803d5f87b3d9036fb38ddc7943ba57d9d29415d8fdbb1c4a47b

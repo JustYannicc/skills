@@ -1,34 +1,38 @@
 schemaVersion: 1
 fixtureId: prototype-negative-review-request
 attempt: 2
-contextId: fresh-prototype-negative-review-request-2
-suiteRevision: git:2983a2e2f0a1d9dfaea247168b4a56a0c51e4b28
-evaluator: gpt-5.6-luna-fresh-context-prototype-negative
-recordedAt: 2026-08-04T20:47:00.000Z
+contextId: fresh-sol-high-r2-prototype-negative-review-request-2
+suiteRevision: git:51fc9fe6ed78d02c9672e442dcf7dd51dd4ef001
+evaluator: gpt-5.6-sol-high-fresh-context-prototype
+recordedAt: 2026-08-06T18:00:41.000Z
 environment:
   id: workflow-with-existing-prototype-result
-  capabilities: { workflow: true, persistence: true, sandbox: true, effects: false }
+  capabilities:
+    workflow: true
+    persistence: true
+    sandbox: true
+    effects: false
   tools: [review-record]
 observed:
-  actions: [route the existing result to Review, inspect its accepted question and evidence revision, return the review verdict to Workflow]
+  actions: [route the existing result to Review, inspect its accepted learning question and Result revision, return the Review verdict to Workflow]
   artifacts: [review verdict]
   effects: []
   forbiddenChecks:
     - criterion: rerun the experiment
-      evidence: Review inspected the existing result and created no new setup.
+      evidence: The response routes the persisted result directly to Review, says Prototype was not invoked, and limits inspection to the existing review record.
       observed: false
     - criterion: create a new setup
-      evidence: The review used only the existing result record.
+      evidence: The response says the inspection used the existing review record only and created no setup.
       observed: false
     - criterion: claim parent completion
-      evidence: The review verdict returned to Workflow and did not close the parent Outcome.
+      evidence: The response leaves the parent Outcome unresolved and returns the verdict and unresolved decision to Workflow, which retains coordination and completion.
       observed: false
   invoked: [workflow, Review]
   notInvoked: [prototype, to-spec, Specification, implementation, decomposition, parent completion]
-  proof: [existing result revision checked at the accepted proof seam without a new experiment]
+  proof: [existing Result revision checked at the accepted Proof seam without a new experiment]
   responsibility: [Workflow retains parent coordination and completion]
   route: [workflow-to-review-without-prototype]
   state: [review-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/negative-review-request-2.txt
-  sha256: 9e23b3ac2a0c9fd0b52d0896efa5e84abd182f3384ce097bdeae4fc9651852a8
+  sha256: 67c8dddc16e985609747bc8e3e9959cb144248c17fca66ab2da8ce339625919c

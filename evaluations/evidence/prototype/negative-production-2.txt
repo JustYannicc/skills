@@ -1,14 +1,11 @@
-Question: Can the reminder policy be evaluated without enabling it for every employee?
-Context: Reminder-policy Outcome; employee recipient scope; Workflow is the effect authority; live activation and messaging are constrained; assumption that fake recipients model the trigger safely.
-Observer/time: prototype evaluator; 2026-08-04T20:38:00.000Z.
-Result revision: prototype-negative-production-attempt-2.
-Measurements: simulated trigger and recipient burden were inspected with zero live sends.
-Source/location: evaluations/evidence/prototype/negative-production-2.txt.
-Limits: simulation contract only; no live policy activation, messaging, or effect authority.
-Reversible setup: A private simulation with fake recipients and disabled policy/messaging effects; Workflow retains effect authority and can stop it.
-Observation seam: simulated trigger, recipient selection, and burden/ambiguity signals before any live send.
-Evidence: condition/method=private simulation with fake recipients and disabled effects; observer/time=prototype evaluator, 2026-08-04T20:38:00.000Z; measurements=simulated trigger and recipient burden with zero live sends; source/location=evaluations/evidence/prototype/negative-production-2.txt; result revision=prototype-negative-production-attempt-2; limits=simulation only, no live policy activation, messaging, or effect authority.
-Stopping rule: stop before any live policy or message effect; continue only if Workflow authorizes a bounded simulation.
-Verdict: blocked — production execution is outside Prototype; the live rollout is not a prototype.
-Disposition: pause — Workflow owns the effect gate and receives the authority and simulation evidence.
-Return route: Workflow receives the blocked verdict, simulation limits, and exact approval needed before any effect.
+Learning question: Can a private rehearsal reveal whether the reminder trigger selects the intended recipients and whether the notice is clear and proportionate, without changing the employee policy or delivering a message?
+
+Blocked status: Prototype was invoked only to test the reversible boundary. The requested organization-wide activation and same-day notices are live effects, so the request stopped before setup. No policy administration or messaging action was taken, and no rehearsal or simulation was run.
+
+Safe proposal: Workflow may separately authorize an isolated rehearsal built from a copied policy configuration, fictional recipient records, and disabled delivery. An observer could inspect selected fictional recipients and rendered notices, then discard the copied state. This is an unexercised proposal and supplies no prototype evidence.
+
+Missing safe prerequisite: Workflow authorization for that bounded rehearsal, including its fictional scope, observer, stop Authority, disposal action, and continued exclusion of live policy state, employee data, and message delivery.
+
+Exact resumption condition: Resume Prototype after Workflow authorizes the isolated rehearsal with those boundaries. Enabling the employee policy or sending notices remains a separate effect-gated decision outside Prototype.
+
+Disposition: Pause at the Workflow effect gate. Prototype retains this blocked experiment result and returns the proposed safe seam plus the missing authorization to Workflow. Workflow retains live-effect Authority, the rollout decision, and parent completion.

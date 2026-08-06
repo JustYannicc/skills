@@ -1,0 +1,11 @@
+Learning question: Is the proposed technical interaction understandable to its intended user?
+
+Status: Degraded and blocked before setup. Workflow state is `waiting-for-required-technical-prototype`; the learning question remains unanswered.
+
+Preserved reversible experiment contract: If the required Supplemental becomes available, Prototype will give it this learning question, the retain-or-revise decision, the single-interaction user-visible boundary, the intended user's observation seam, the sandbox-only disposable setup, Workflow stop Authority, disabled live effects, stopping rule, evidence requirements, and Workflow return route. No setup or Proof seam was exercised.
+
+Disposition: Pause. Effective configuration requires the `technical-prototype` Supplemental, but it is unavailable. It was not invoked, no substitute procedure ran, and no artifact, observation, or Result revision exists.
+
+Exact resumption condition: Resume this preserved experiment only when Workflow revalidates the required mapping and a conforming `technical-prototype` Supplemental is available for this scope to accept the bounded contract and return an exact disposable artifact or Result revision, exercise record, sourced observations and limits, disposal state, and unresolved uncertainty to Prototype.
+
+Return responsibility: Prototype retains the blocked experiment result and completion criterion. Workflow retains parent coordination and Recovery, owns the waiting state, and resumes through `workflow-to-prototype-to-required-supplemental-gap-to-waiting`. No Specification, implementation, Review, decomposition, parent completion, or live effect occurred.

@@ -1,0 +1,42 @@
+schemaVersion: 1
+fixtureId: prototype-configured-technical-supplemental
+attempt: 3
+contextId: fresh-sol-high-r2-prototype-configured-technical-supplemental-3
+suiteRevision: git:51fc9fe6ed78d02c9672e442dcf7dd51dd4ef001
+evaluator: gpt-5.6-sol-high-fresh-context-prototype
+recordedAt: 2026-08-06T18:03:58Z
+environment:
+  id: workflow-with-configured-technical-prototype
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: true
+    effects: false
+    technical-prototype: advisory-configured
+  tools: [configured-technical-prototype]
+observed:
+  actions: [frame one learning question and reversible boundary, invoke the configured technical-prototype Supplemental with bounded inputs, integrate its Result revision and Proof-seam evidence, issue one core verdict and disposition]
+  artifacts: [Prototype result, bounded Supplemental result]
+  effects: []
+  forbiddenChecks:
+    - criterion: transfer Prototype completion to the Supplemental skill
+      evidence: The configured Supplemental returns only its bounded artifact and Result revisions, exercise, sourced observations, limits, disposal state, and unresolved uncertainty; Prototype separately integrates that evidence and owns the core verdict, disposition, completion criterion, and returned Prototype Result.
+      observed: false
+    - criterion: widen the learning question
+      evidence: The isolated transition tests only whether the complete exposed state preserves the interruption cause, acknowledges Retry, advances the attempt once, and shows the next action; rendered-interface and real-user comprehension remain explicit unresolved limits.
+      observed: false
+    - criterion: enable live effects
+      evidence: The fake Retry input and state projections remain in the configured sandbox, with persistence, credentials, network access, production retries, external writes, and every live effect disabled throughout the exercise.
+      observed: false
+    - criterion: promote the disposable artifact directly
+      evidence: Disposal removes the fake input and both projections; the retain disposition applies only to revision-bound design evidence, while Workflow owns any later Specification or implementation decision.
+      observed: false
+  invoked: [workflow, prototype, technical-prototype Supplemental]
+  notInvoked: [Specification, implementation, Review, decomposition, parent completion]
+  proof: [Supplemental observations and limits are integrated into the exact Prototype Result revision]
+  responsibility: [the Supplemental skill owns only its bounded technical result, Prototype retains its full completion criterion, Workflow retains parent coordination]
+  route: [workflow-to-prototype-to-configured-supplemental-to-prototype-to-workflow]
+  state: [integrated-technical-verdict-ready]
+rawEvidence:
+  locator: evaluations/evidence/prototype/configured-technical-supplemental-3.txt
+  sha256: 8441534c53ccdfc9d0bb228c534ff317d90c5bca319185b74baeae7a8012f904
