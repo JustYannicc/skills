@@ -68,21 +68,26 @@ flowchart TD
   GWD --> DM["Domain Modeling<br/>shared language"]
   DOC -- "No" --> GR
   DOC -- "No" --> DM
-  GR --> SP["To Spec<br/>accepted Outcome contract"]
-  DM --> SP
-  F -- "No" --> SP
-  SP --> TK["To Tickets<br/>bounded work contracts"]
-  TK --> IM["Implement<br/>execute accepted work"]
+  GR --> SG{"Semantic Specification<br/>already sufficient?"}
+  DM --> SG
+  F -- "No" --> SG
+  SG -- "No" --> SP["To Spec<br/>accepted Outcome contract"]
+  SG -- "Yes" --> TG{"Materialized Tickets<br/>needed?"}
+  SP --> TG
+  TG -- "Yes" --> TK["To Tickets<br/>bounded work contracts"]
+  TG -- "No" --> IM["Implement<br/>execute accepted work"]
+  TK --> IM
   IM --> RV["Review<br/>verify exact result revision"]
   RV -- "changes required" --> IM
-  RV -- "inconclusive" --> HO["Wait, resume, or Handoff<br/>responsibility persists"]
+  RV -- "inconclusive" --> HO["Wait, resume, or Handoff skill<br/>responsibility persists"]
   HO --> RV
   RV -- "verified" --> VE["Perform and verify<br/>authorized effects"]
   VE --> PR["Parent Review<br/>integrate child evidence"]
   PR -- "new evidence or material change" --> WF
   PR --> TC{"Terminal condition"}
   TC --> DONE["Verified completion"]
-  TC --> TRANSFER["Accepted transfer"]
+  TC --> HT["Handoff skill"]
+  HT --> TRANSFER["Accepted transfer"]
   TC --> CANCEL["Authoritative cancellation"]
 ```
 

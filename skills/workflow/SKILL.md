@@ -27,21 +27,29 @@ flowchart TD
   GWD --> DM["Domain Modeling<br/>shared language"]
   DOC -- "No" --> GR
   DOC -- "No" --> DM
-  GR --> S["To Spec<br/>accepted Outcome contract"]
-  DM --> S
-  F -- "No" --> S
-  S --> TK["To Tickets<br/>bounded work contracts"]
-  TK --> I["Implement<br/>execute accepted work"]
+  GR --> SG{"Semantic Specification<br/>already sufficient?"}
+  DM --> SG
+  F -- "No" --> SG
+  SG -- "No" --> S["To Spec<br/>accepted Outcome contract"]
+  SG -- "Yes" --> TG{"Materialized Tickets<br/>needed?"}
+  S --> TG
+  TG -- "Yes" --> TK["To Tickets<br/>bounded work contracts"]
+  TG -- "No" --> I["Implement<br/>execute accepted work"]
+  TK --> I
   I --> RV["Review<br/>verify the exact result"]
   RV -- "changes required" --> I
   RV -- "inconclusive" --> Q["Wait with owned continuation"]
-  Q --> RV
+  Q --> HC{"Transfer or unsupported<br/>automatic resumption?"}
+  HC -- "Yes" --> RH["Handoff<br/>accepted continuation"]
+  HC -- "No, resume" --> RV
+  RH -- "resume" --> RV
   RV -- "verified" --> E["Perform and verify authorized effects"]
   E --> P["Parent Review<br/>integrate child evidence"]
   P -- "new evidence or material change" --> W
   P --> X{"Terminal condition"}
   X --> DONE["Verified completion"]
-  X --> TRANSFER["Accepted transfer"]
+  X --> TH["Handoff<br/>accepted transfer"]
+  TH --> TRANSFER["Accepted transfer"]
   X --> CANCEL["Authoritative cancellation"]
 ```
 
@@ -51,7 +59,7 @@ The diagram shows every capability; follow only the smallest path needed to sati
 2. **Choose the representation.** Use Inline mode for bounded synchronous work before a Persistence boundary. Use Durable mode when state, responsibility, waiting, approval, assignment, multiple independently finishable units, or meaningful risk must survive the interaction. Complete this step when the representation can preserve the contract or an exact capability gap and resumption condition are visible.
 3. **Map existing reality when needed.** If Durable work materially depends on an existing scope without a current verified map, invoke the `'Migrate System'` skill for bounded current-state mapping. Record actual sources, Actors, responsibilities, relationships, active work, evidence, waiting state, and unknowns. Independent areas may be delegated, but the migration owner integrates and verifies them. Route persistent Fog of war to the `'Wayfinder'` skill. Route every discovered change to ordinary Workflow; migration does not repair the represented System. Complete this step when the materially affected current state is trustworthy enough for ordinary work.
 4. **Remove only blocking uncertainty.** Select discovery by the uncertainty table below. The `'Wayfinder'` skill begins with the `'Domain Modeling'` and `'Grilling'` skills when their capabilities are available. When durable plans or design records are in scope, it uses the `'Grill With Docs'` skill, which composes both. Independent discovery may run concurrently; dependent questions wait. Complete this step when the remaining uncertainty either permits a truthful Specification or is an explicit operating rule for irreducible Fog of war.
-5. **Specify and decompose proportionately.** Invoke the `'To Spec'` skill for the accepted Outcome contract and the `'To Tickets'` skill when work has independently finishable units, delegation, dependencies, concurrency, or another Persistence boundary. A direct request for a later phase enters there only after its minimum contract, owner, Authority, exact revision, proof seam, and return route are present. Complete this step when every executable unit is covered by an accepted contract without invented prerequisites.
+5. **Specify and decompose proportionately.** A complete bounded request may remain the semantic Specification for one implicit Inline Ticket. Invoke the `'To Spec'` skill when a Specification must persist, cross an approval or assignment boundary, coordinate multiple phases, govern meaningful risk, or is explicitly requested. Invoke the `'To Tickets'` skill when work has independently finishable units, delegation, dependencies, concurrency, cross-session execution, or another Persistence boundary. A direct request for a later phase enters there only after its minimum contract, owner, Authority, exact revision, Proof seam, and return route are present. Complete this step when every executable unit is covered by an accepted contract without invented prerequisites.
 6. **Implement, Review, and integrate.** Each invoked capability joins the active Workflow context, owns its bounded result, and returns evidence. Review every exact result at its accepted Proof seam. Perform only authorized effects, verify their real result, update affected current and legacy state, and run parent Review over the integrated Outcome. Complete this step when all required child dispositions and effects are integrated at the current revisions.
 7. **Reach a truthful terminal condition.** End parent responsibility only on verified parent completion, an accepted transfer with exact continuation, or authoritative cancellation with every material disposition. Delegation, submission, approval, scheduling, waiting, failure, child completion, and an unaccepted handoff are non-terminal.
 
@@ -78,7 +86,7 @@ Preserve the message and classify each operative clause before changing state. O
 | **Clarification** | Resolves an ambiguity without changing the accepted Outcome, scope, Constraints, Authority, proof, or treatment of existing state. | Append the clarified meaning or fact and continue at the same Specification and result revisions. |
 | **Extension or Constraint change** | Adds or changes the Outcome, scope, supported conditions, Constraint, interface, Authority, proof, or legacy treatment. | Propose the change, create a new Specification or result revision when material, inspect affected work, and reroute only that work. |
 | **Correction** | Shows that an earlier interpretation, evidence claim, result, or completion assertion was false under the original contract. | Append a correction event, preserve history, invalidate false evidence, reopen affected responsibility, and recover from the failed seam. |
-| **Authorized override or Informed exception** | Requests a safeguard to be bypassed within claimed Authority. | Verify Authority. Record the skipped protection, plausible consequence, affected scope and duration, and Review, reversal, or recovery trigger. Keep every unaffected safeguard active. |
+| **Authorized override or Informed exception** | Requests a safeguard to be bypassed within claimed Authority. | Verify Authority. When it holds, record the skipped protection, plausible consequence, affected scope and duration, and Review, reversal, or recovery trigger. When it does not, preserve the exact proposal and result, perform no guarded effect, and enter approval or waiting with an owner and observable unblock condition. Keep every unaffected safeguard active. |
 | **Explicit replacement or supersession** | Replaces the active Outcome or accepted contract instead of extending it. | Record the predecessor, partial effects, retained evidence, dependencies, and every child disposition before establishing or joining the successor. |
 | **Unrelated switch** | Does not advance, clarify, correct, replace, or share a material contract with the active Outcome. | Preserve exact continuation first, then start or join the other Outcome. Resume the original from its recorded pickup point. |
 
@@ -101,7 +109,7 @@ Use the [material-change template](references/material-change-template.md) when 
 - **Atomic work crossing its effect boundary:** observe the accepted effect or failure and enter verification or recovery before switching attention.
 - **Changed approved work:** invalidate affected Review and approval. Recheck validity, expiry, revocation, conditions, and exact revision immediately before resuming any effect.
 
-Use the [continuation template](references/continuation-template.md) when state must survive the interaction. Short waits may be observed directly. Longer waits need an accepted durable continuation and scheduled resumption or monitor when available. Without automatic resumption, arrange an accepted handoff with the responsible Actor and exact next check. Waiting remains owned.
+Use the [continuation template](references/continuation-template.md) when state must survive the interaction. Short waits may be observed directly. Longer waits need an accepted durable continuation and scheduled resumption or monitor when available. Invoke the `'Handoff'` skill when responsibility or context must transfer, including when automatic resumption is unavailable. It returns an accepted continuation with the responsible Actor and exact next check. If that capability is unavailable, preserve the same contract in visible Degraded mode until a safe equivalent, restored capability, or accepted transfer is available. Waiting remains owned.
 
 ## Use Supplemental skills at declared Extension points
 
