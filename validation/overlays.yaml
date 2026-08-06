@@ -5,7 +5,7 @@ overlays:
     sourceId: matt-pocock-skills
     target: skills/engineering/grill-with-docs/SKILL.md
     patchFile: overlays/grill-with-docs/SKILL.md.patch
-    sha256: 48691b33cccc3eba7760706f3ce6b3bd126fd1454edfa9344ec9469f9aca0fd6
+    sha256: a4715db7287b15aea4ed528afb9b78d355d04a8e5dddc3348c89bfc65b20bdd6
   - id: grill-with-docs-openai
     skill: grill-with-docs
     sourceId: matt-pocock-skills
@@ -17,7 +17,7 @@ overlays:
     sourceId: matt-pocock-skills
     target: skills/productivity/grilling/SKILL.md
     patchFile: overlays/grilling/SKILL.md.patch
-    sha256: bbf2f6b28431e3ad9d64aa6f36ed9ec3f641113c00621313381e210a4c41feab
+    sha256: c64184935d266ddf481c9fed6dc3b84aee641fd3325a8352c7a36e5a7084559b
   - id: research-skill
     skill: research
     sourceId: matt-pocock-skills

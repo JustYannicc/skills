@@ -8,7 +8,7 @@ diff --git a/skills/engineering/grill-with-docs/SKILL.md b/skills/engineering/gr
 -disable-model-invocation: true
 +description: Sharpen a documented plan or design through a relentless interview while preserving shared language and qualifying decisions. Use when existing records should ground the design and stay current as decisions resolve.
  ---
- 
+
 -Run a `/grilling` session, using the `/domain-modeling` skill.
 +Run a `grilling` interview and use `domain-modeling` throughout it. Read the current records through the selected Adapter, keep the domain glossary and qualifying decision records current there, and return the confirmed shared understanding to the requesting context.
 +
