@@ -18,15 +18,15 @@ This skill owns the learning question, reversible boundary, evidence integration
 
    Complete this step when a reader can tell which observation would change which decision and what remains outside the experiment.
 
-2. **Choose the smallest reversible experiment.** Read [Experiment patterns](references/experiment-patterns.md) to choose the least costly setup that exposes the Proof seam. Apply the `technical-prototype` Extension point only when Effective configuration maps a user-selected Supplemental skill to that seam for the current scope. Name the experiment's scope, reset or disposal action, stop Authority, and disabled live effects. Keep the setup throwaway from day one and trivial for its intended observer to exercise.
+2. **Choose the smallest reversible experiment.** Read [Experiment patterns](references/experiment-patterns.md) to choose the least costly setup that exposes the Proof seam. Apply the `technical-prototype` Extension point only when Effective configuration maps a user-selected Supplemental skill to that seam for the current scope. Name the experiment's scope, reset or disposal action, stop Authority, and allowed and disabled effects. Keep effects disabled by default. Permit a real-world effect only when it is bounded, reversible, accepted by every affected Actor, explicitly authorized inside the experiment, and protected by stop, reset or recovery, and pre-effect proof gates. Keep the setup throwaway from day one and trivial for its intended observer to exercise.
 
-   Complete this step when the experiment can start, stop, reset, or be disposed of inside its Authority without creating an unaccepted commitment or live effect.
+   Complete this step when the experiment can start, stop, reset, or be disposed of inside its Authority without creating an unaccepted commitment or effect.
 
 3. **Set the evidence and stopping rules.** Define the Proof seam, baseline or comparison where material, evidence source, signals and counter-signals, and observation window. Choose the window from the expected evidence delay. Stop when the question is answered, the evidence cannot answer it, the reversible boundary is threatened, or another increment is not worthwhile.
 
    Complete this step when another Actor can distinguish enough evidence, inconclusive evidence, and a mandatory stop.
 
-4. **Run the bounded experiment.** Exercise only the accepted setup and preserve the relevant before-and-after state, evidence source, observer and time, exact Result revision, and evidence limits. Integrate returned Supplemental evidence without accepting a widened question, Authority, effect boundary, or completion claim. Keep live effects disabled.
+4. **Run the bounded experiment.** Exercise only the accepted setup and preserve the relevant before-and-after state, evidence source, observer and time, exact Result revision, and evidence limits. Integrate returned Supplemental evidence without accepting a widened question, Authority, effect boundary, or completion claim. Keep every effect inside the accepted boundary and prove reset or recovery before returning a verdict.
 
    When a required capability, fact, Authority, reset, or Proof seam is missing, enter visible Degraded mode. Preserve the experiment and evidence, then return the gap and exact resumption condition to the active `'Workflow'` skill or caller. Use a simulation, rehearsal, mock, or isolated trial when it can answer a question about an irreversible or costly-to-reverse effect; otherwise return a blocked verdict before that effect.
 
@@ -40,7 +40,7 @@ This skill owns the learning question, reversible boundary, evidence integration
 
 Use this seam only when Effective configuration maps the user-selected Supplemental skill to `technical-prototype` for the current scope. Name similarity does not create a mapping, and the core Prototype contract remains complete without a Supplemental skill unless Effective configuration marks that capability required.
 
-Give the configured Supplemental skill the learning question and decision, context and Constraints, reversible boundary and disabled effects, Proof seam and stopping rule, required evidence, and return route. Require it to return the exact artifact or Result revision and how it was exercised, observations with sources and limits, reset or disposal state, and unresolved uncertainty.
+Give the configured Supplemental skill the learning question and decision, context and Constraints, reversible boundary and allowed and disabled effects, Proof seam and stopping rule, required evidence, and return route. Require it to return the exact artifact or Result revision and how it was exercised, observations with sources and limits, reset or disposal state, and unresolved uncertainty.
 
 The Supplemental skill owns only its bounded technical result. Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion. The active `'Workflow'` skill retains parent responsibility.
 
@@ -51,7 +51,7 @@ Record an advisory Supplemental failure and continue with another safe pattern o
 - **Learning question:** the one material design question.
 - **Decision informed:** the decision the evidence can change.
 - **Context:** Outcome, System of interest and boundary, Actors, Constraints, and assumptions.
-- **Reversible experiment:** setup, scope, reset or disposal, stop Authority, and disabled effects.
+- **Reversible experiment:** setup, scope, reset or disposal, stop Authority, and allowed and disabled effects.
 - **Proof seam:** what was observed or compared and why it answers the question.
 - **Evidence:** condition and method, observer and time, source, exact Result revision, limits, and integrated Supplemental evidence when present.
 - **Stopping rule:** the threshold, event, or evidence delay that ended the run.
