@@ -28,27 +28,6 @@ Use fixtures, disposable context, and fake effectors. Inspect both the process a
 
 A question may cross several environments. Compose the smallest patterns that share one learning question, Proof seam, reversible boundary, evidence record, and disposition.
 
-Every pattern stays throwaway from day one, trivial for its intended observer to exercise, isolated from live persistence by default, and explicit about the full relevant state at the Proof seam. At a Persistence boundary, retain the question, verdict, evidence, and disposable artifact as primary evidence. Dispose of the setup rather than promoting it directly into a maintained System.
+Every pattern stays isolated from live persistence by default and explicit about the full relevant state at the Proof seam. At a Persistence boundary, retain the question, verdict, evidence, and a revision-bound artifact reference only when the artifact is needed to inspect or reproduce the evidence. Dispose of the setup rather than promoting it directly into a maintained System.
 
-## Technical prototype Extension point
-
-Use this seam only when Effective configuration maps a Supplemental skill to `technical-prototype` for the current scope. Name similarity does not create a mapping.
-
-Give the configured Supplemental skill:
-
-- the learning question and decision it informs;
-- the Outcome, System boundary, Actors, Constraints, and assumptions;
-- the reversible boundary and allowed or disabled effects;
-- the Proof seam and stopping rule; and
-- the required evidence and return route.
-
-Require it to return:
-
-- the exact artifact or Result revision and how it was exercised;
-- observations at the Proof seam, with evidence sources and limits;
-- reset or disposal state; and
-- any missing capability or unresolved uncertainty.
-
-The Supplemental skill owns only its bounded technical result. Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion. The active `'Workflow'` skill retains parent responsibility.
-
-Record an advisory Supplemental failure and continue with another safe pattern only when the core contract remains satisfiable. A required failure moves the work to waiting or Recovery with preserved state and an exact resumption condition. Never imply that an unavailable Supplemental skill ran.
+Apply the configured Supplemental contract in [Use the `technical-prototype` Extension point](../SKILL.md#use-the-technical-prototype-extension-point) when a technical pattern is mapped to that seam.

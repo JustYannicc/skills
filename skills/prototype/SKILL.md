@@ -18,7 +18,7 @@ This skill owns the learning question, reversible boundary, evidence integration
 
    Complete this step when a reader can tell which observation would change which decision and what remains outside the experiment.
 
-2. **Choose the smallest reversible experiment.** Read [Experiment patterns](references/experiment-patterns.md) to choose the least costly setup that exposes the Proof seam and to apply the configured `technical-prototype` Extension point when it matches. Name the experiment's scope, reset or disposal action, stop Authority, and disabled live effects. Keep the setup throwaway from day one and trivial for its intended observer to exercise.
+2. **Choose the smallest reversible experiment.** Read [Experiment patterns](references/experiment-patterns.md) to choose the least costly setup that exposes the Proof seam. Apply the `technical-prototype` Extension point only when Effective configuration maps a user-selected Supplemental skill to that seam for the current scope. Name the experiment's scope, reset or disposal action, stop Authority, and disabled live effects. Keep the setup throwaway from day one and trivial for its intended observer to exercise.
 
    Complete this step when the experiment can start, stop, reset, or be disposed of inside its Authority without creating an unaccepted commitment or live effect.
 
@@ -34,7 +34,17 @@ This skill owns the learning question, reversible boundary, evidence integration
 
 5. **Return one verdict and disposition.** State whether the question was answered, inconclusive, or blocked, and give the answer when available. Choose one disposition: retain, revise, discard, pause, or run one separately authorized bounded follow-up. Return the exact evidence and unresolved decision to the active `'Workflow'` skill or caller.
 
-   Complete the run only when every result field below is present, the disposition is explicit, and return responsibility is named.
+   Complete an exercised experiment only when every result field below is present, the disposition is explicit, and return responsibility is named. A request stopped before setup returns the compact waiting result defined below instead of inventing experiment fields.
+
+## Use the `technical-prototype` Extension point
+
+Use this seam only when Effective configuration maps the user-selected Supplemental skill to `technical-prototype` for the current scope. Name similarity does not create a mapping, and the core Prototype contract remains complete without a Supplemental skill unless Effective configuration marks that capability required.
+
+Give the configured Supplemental skill the learning question and decision, context and Constraints, reversible boundary and disabled effects, Proof seam and stopping rule, required evidence, and return route. Require it to return the exact artifact or Result revision and how it was exercised, observations with sources and limits, reset or disposal state, and unresolved uncertainty.
+
+The Supplemental skill owns only its bounded technical result. Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion. The active `'Workflow'` skill retains parent responsibility.
+
+Record an advisory Supplemental failure and continue with another safe pattern only when the core contract remains satisfiable. When a required Supplemental is unavailable before an attempt, enter waiting with preserved state and its availability as the exact resumption condition. When a required attempt fails and needs intervention, enter Recovery with the failed-attempt evidence, preserved state, responsible Actor, and exact resumption condition. Never imply that an unavailable Supplemental skill ran.
 
 ## Return the result
 
@@ -49,4 +59,4 @@ This skill owns the learning question, reversible boundary, evidence integration
 - **Disposition:** retain, revise, discard, pause, or one bounded follow-up, with responsible Actor and next action.
 - **Return route:** the exact evidence and unresolved decision returned to the active `'Workflow'` skill or caller.
 
-A blocked run still returns the learning question, missing safe prerequisite, and exact resumption condition. It does not claim a completed experiment or parent Outcome.
+A request blocked before setup returns the learning question, blocked status, pause disposition, missing safe prerequisite, exact resumption condition, and return responsibility. It does not fabricate a setup, exercised Proof seam, evidence, Result revision, completed experiment, or parent Outcome. A run blocked after setup returns every applicable result field and states which seam or evidence remains unexercised.

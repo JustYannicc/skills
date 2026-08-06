@@ -27,7 +27,7 @@ Prototype answers one material design question through a reversible experiment.
 Use it when trying, simulating, or rehearsing a candidate can produce evidence
 before commitment. Each run names its learning question, reversible boundary,
 Proof seam, stopping rule, verdict, and disposition, then returns revision-bound
-evidence to Workflow. A configured `technical-prototype` Supplemental skill may
+evidence to the active `'Workflow'` skill. A configured `technical-prototype` Supplemental skill may
 construct a bounded technical result, while Prototype retains evidence
 integration and its completion criterion. Live effects, Specification,
 implementation, Review, and parent completion remain with their owning phases.
