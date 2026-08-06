@@ -36,7 +36,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -73,7 +73,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -94,7 +94,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -115,7 +115,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -136,7 +136,7 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
     },
     {
@@ -191,7 +191,7 @@
       "findings": [],
       "fixtureId": "research-cross-domain-direct",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "32162af6e6142728141fe6cf2acf30c94b0be5fe29a9db8aad916acf708d3fed"
     },
     {
@@ -212,7 +212,7 @@
       "findings": [],
       "fixtureId": "research-incomplete-scope",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "dd34c41c6cf54e720944df890c714e4d6fceb0aacab7a89dab5a902c4c63372c"
     },
     {
@@ -249,7 +249,7 @@
       "findings": [],
       "fixtureId": "research-indirect-workflow-delegation",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "f3d3cb7e5f0738c6d5c09ff4c118e77e0fce9f9771015556c29d0a1cb5acb3b4"
     },
     {
@@ -270,7 +270,7 @@
       "findings": [],
       "fixtureId": "research-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "a7d37a7fc50e38501aa520e92db7f56188458c0f06bb5a2d6a50cbe9aa1bba32"
     },
     {
@@ -291,7 +291,7 @@
       "findings": [],
       "fixtureId": "research-negative-prototype-route",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "f1d557adaa48ec8348d6db010b00d05ba072bd6edbbbfa1a4ddd427d944cd67f"
     },
     {
@@ -318,7 +318,7 @@
       "findings": [],
       "fixtureId": "research-no-repository-adapter",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "ad6accb9df792e4123e9c002c0ba95a123314dbaebe0af5d45d1fe9fc8a1a566"
     },
     {
@@ -339,7 +339,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -360,7 +360,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -397,7 +397,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -434,7 +434,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -455,7 +455,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -476,7 +476,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -497,7 +497,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -518,7 +518,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -539,7 +539,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -560,7 +560,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -581,7 +581,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -602,7 +602,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-record-representation",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "e64a47c17164ec5fe393d0a3591ac2f5c4b66e0e6d4b2ebd4b02dd7303303f2b"
     },
     {
@@ -623,7 +623,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -644,7 +644,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     },
     {
@@ -671,7 +671,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-cross-domain",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35"
     },
     {
@@ -726,7 +726,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-direct",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "8648c4e09094d91e5e00a5e5a81450acb3c06695dce9ae15bd1596cc318f624b"
     },
     {
@@ -747,7 +747,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-incomplete",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "67ad8e377e31ccbd5ae91ae759b033bbc2e48c0b2fd7dc96bfa4329824348028"
     },
     {
@@ -802,7 +802,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-indirect",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "c1ab1c0ad65e5021f0c6fd826870db73ecc4d0a45d3446f937c320a581ea0b89"
     },
     {
@@ -823,7 +823,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "3677af27f161d55b1b6783ee25b05b457e79dee5821e1e5a2158ee50ef4d9466"
     },
     {
@@ -844,12 +844,12 @@
       "findings": [],
       "fixtureId": "to-questionnaire-negative",
       "status": "passed",
-      "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+      "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
       "fixtureRevision": "ead7c724eba0812b80580200b3064116db5566ba6367eddd0bd5a37c5e2adc9c"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:ee509ccdec36762ecc922dd187c4003c40c88a3c",
+  "suiteRevision": "git:f8477701b81620392f6ff5020329f0c4e50d375a",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
