@@ -1,19 +1,45 @@
 ---
-system_id: SXX
-title: "[System name]"
-version: 0.1.0-draft
+schema_version: 1
+record_id: "[opaque logical id in the governing Coordination Space]"
+record_version: 0.1.0-draft
+record_revision: "[exact Adapter revision or content identity]"
+canonical_locator: "[one writable record locator]"
 design_status: candidate
 operational_status: unbuilt
+operating_mode: normal
 catalog_eligibility: not_eligible
-owner: "[System owner]"
-decision_authority: "[who may accept, change, or activate it]"
+owner:
+  id: "[stable Actor id or unambiguous local label]"
+  label: "[System owner]"
+authority:
+  decision_owner: "[who may accept, change, or activate it]"
+  revision: "[exact Authority grant revision]"
+  allowed_effects:
+    - kind: compose_without_effect
+      action: "[named action]"
+      boundary: "[exact target and scope]"
+      contract: "[governing effect or handoff contract locator]"
 governed_by: Thinking in Systems standard
-supersedes: null
+provenance:
+  source: "[original request or governing source]"
+  revision: "[source revision or date]"
+  sha256: "[64 lowercase hexadecimal characters]"
+approval:
+  required: true
+  status: pending
+  approver_id: "[stable Actor id]"
+  authority_revision: "[exact authority grant revision]"
+  result_revision: "[exact proposed result revision]"
+  valid_until: "[ISO-8601 timestamp]"
 ---
 
-# System Record
+# [System name] — System Record
 
 Use this template only for a Durable system or material System change. Complete the mandatory meaning from the full standard; include a conditional field only for a named consumer or material risk. Link to facts owned elsewhere instead of copying them.
+
+For the Local Markdown Adapter, this Markdown file is the one writable human authority. Its constrained YAML envelope owns the formal identity, version and exact record revision, canonical locator, distinct design/operational/eligibility states and operating mode, owner, exact named/scoped action Authority, source provenance, and exact approval binding. The body explains their meaning and rationale by reference rather than copying those formal values. Add `supersedes` only when a predecessor exists. Delete the optional `approval` object when no named approval consumer or material risk requires it; add `revoked_at` only after revocation. Treat envelope comments, style, and key order as non-authoritative presentation.
+
+An Adapter that permits machine-authorized lifecycle transitions, projections, or external effects must implement the proposed `System Record structural validator` and `System Record action guard`. The validator parses the complete envelope; rejects YAML directives, aliases, anchors, explicit tags, duplicate keys, and unknown fields; validates the constrained schema; and validates the Section 2 relationship table's required columns, unique kind/identity/version rows, material-boundary text, and contract-link shape. The guard consumes only validated output and matches the requested action, target/scope, and contract to an exact current Authority revision; it also binds eligible lifecycle state and `normal` mode, current record revision, approval result and Authority revisions, validity, and revocation. Until both production seams exist and pass conformance proof, the Adapter cannot authorize those actions. A malformed, unsupported, or unavailable record remains readable and editable by a human but `unverified` and blocked for machine action. JSON or TOML projections are optional generated read-only views; they identify this canonical locator and record revision, bind source and independently parsed canonical-payload SHA-256 values, record generation time, reject stale, forged, or direct edits, and never become a second authority. Adapter-native records may map the same logical fields without requiring YAML or TOML universally. See the [HUMAN REVIEW REQUIRED representation decision](../../../docs/SYSTEM_RECORD_REPRESENTATION.md).
 
 ## 1. Frame
 
@@ -26,7 +52,7 @@ Use this template only for a Durable system or material System change. Complete 
 - **Feasible set under current Authority, resources, capabilities, and operating conditions:**
 - **Affected Actor Preferences, conflicts, evidence, and conditions under which they may change:**
 - **Matched truthful Decision frames, when the decision is materially frame-sensitive:** reference points, gain/loss and absolute/relative formulations, probability formats, denominators, time horizons, stable judgment, and any frame-sensitive reversal; keep alternatives, outcomes, Constraints, and material omissions constant.
-- **Owner, bounded Responsibilities, and decision Authority:**
+- **Rationale and constraints for the envelope owner, bounded Responsibilities, and decision Authority:**
 - **Material domain terms:**
 - **Intentionality and progress classification, when relevant:** intended productive use, rest or leisure, intentional or incidental progress, or unresolved Intent; never a moral score.
 
@@ -34,7 +60,7 @@ Use this template only for a Durable system or material System change. Complete 
 
 - **Owned responsibilities:**
 
-Add one row for each known material relationship and delete unused placeholder rows. This is a relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
+Add one row for each known material relationship and delete unused placeholder rows. This is the single semantic relationship index, not an exhaustive-discovery requirement or a duplicate interface contract. Use `unknown` only when the uncertainty is itself material. For machine-validated Local Markdown records, format the second cell as `<opaque identity> @ <exact version>`. Link to the Section 6 interface or handoff contract instead of repeating its inputs, outputs, Authority, timing, failure behavior, or proof.
 
 | Relationship | Related System identity and version | This System's role and material boundary | Interface or handoff contract reference, if material |
 | --- | --- | --- | --- |
@@ -104,8 +130,8 @@ Add one row for each known material relationship and delete unused placeholder r
 - **Explicit Ownership transfers and accepted continuation state:**
 - **Writable authority per information type:**
 - **Derived System representations, source revision, and freshness rule:**
-- **Stable identities and version binding:**
-- **Approval binding and revocation:**
+- **Stable identities and version binding beyond the envelope, including related Systems:**
+- **Approval rationale, revocation, and authoritative evidence beyond the envelope reference:**
 - **Named deterministic validators or effect guards for formalizable material rules:**
 
 ## 7. LLM and deterministic boundary
@@ -192,12 +218,12 @@ For each applicable mode, define trigger, permitted effects, blocked effects, pr
 
 ## 11. Discovery and operation
 
-- **Stable identity and canonical record:**
+- **Discovery routes for the envelope's stable identity and canonical locator:**
 - **Applicability and supported operations:**
-- **Relationship index, conflicts, and precedence:**
-- **Design status, operational status, eligibility, version, and freshness:**
+- **Relationship conflicts and precedence not expressed by the envelope index:**
+- **Applicability, operational eligibility, and freshness rationale beyond the envelope state and version:**
 - **Human-readable status and control surface:**
-- **Current state, last and next action, owner, and authoritative links:**
+- **Last and next action and authoritative links:** refer to, rather than repeat, the envelope's owner and status fields.
 - **Contract-selection evidence and no-match or conflict behavior:**
 - **Independent discovery route when an attention or delivery representation fails:**
 

@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: grilling-indirect-agent-fact
+attempt: 1
+contextId: fresh-grilling-indirect-agent-fact-v12-1-57a39dc9-0217-4c87-8e23-2974e85bbd83
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:45:18Z
+environment:
+  id: workflow-notification-settings
+  capabilities:
+    workflow: true
+    grilling: true
+    environment-inspection: true
+  tools: [fixture file read]
+observed:
+  actions:
+    - invoke Grilling from Workflow
+    - read and report revision 2026-08-01 with enabled channels email and sms and default email
+    - ask both and only the two open user decisions with the exact numbered question and recommendation format
+    - defer quiet-hour and retry questions
+    - wait for the user's frontier answers
+  artifacts: []
+  effects:
+    - read the declared fixture file only
+  forbiddenChecks:
+    - criterion: ask the user which channels or default are configured
+      evidence: The response reports revision 2026-08-01, enabled channels email and sms, and default email from the real fixture read and asks no configuration-fact question.
+      observed: false
+    - criterion: ask either dependent question
+      evidence: The response states that quiet-hour and retry behavior are deferred and asks no question about either dependent decision.
+      observed: false
+    - criterion: continue into Specification
+      evidence: The response explicitly says Specification has not begun and waits for both frontier answers.
+      observed: false
+  invoked: [workflow, grilling]
+  notInvoked: [Specification, implementation]
+  proof:
+    - a real file-read trace and source hash support the facts
+    - both questions use the literal Grilling format
+  responsibility:
+    - Workflow retains parent responsibility and the user retains decision authority
+  route: [workflow-to-grilling]
+  state: [waiting-for-frontier-answers]
+rawEvidence:
+  locator: evaluations/evidence/grilling/indirect-agent-fact-1.txt
+  sha256: 861b39f017434b70ce097da0073563b483098bf3830de5e4a6dd4c212f317e09

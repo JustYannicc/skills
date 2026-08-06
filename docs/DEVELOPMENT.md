@@ -26,12 +26,12 @@ otherwise.
 
 ## Authoring prerequisite
 
-`writing-great-skills` is a development-time prerequisite. It governs invocation, one-job granularity, progressive disclosure, context pointers, completion criteria, and pruning. It is not a runtime dependency of published skills.
+`writing-for-agents` is a development-time prerequisite. Its `SKILL.md` governs context pointers, information hierarchy, completion criteria, leading words, and pruning. Its `SKILL-MECHANICS.md` governs skill frontmatter, invocation choice, splitting, and router skills. Read and apply both files completely before creating, editing, or reviewing a skill. It is not a runtime dependency of published skills.
 
 Verify or install it explicitly from Matt Pocock's public repository:
 
 ```sh
-npx skills@latest add mattpocock/skills --skill writing-great-skills
+npx skills@latest add mattpocock/skills --skill writing-for-agents
 ```
 
 The installer does not resolve this transitively. A fresh authoring environment must run this setup deliberately before changing a skill.
@@ -60,10 +60,11 @@ Choose the policy rather than copying the example. Use `false` for a deliberatel
 
 ## Minimum validation
 
-Add each skill to `validation/repository.yaml`, provide valid frontmatter,
-`agents/openai.yaml`, and `provenance.yaml`, then add its behavioral fixtures
-under `evaluations/`. Fixtures and observations are YAML; raw evidence has a
-checked SHA-256 locator.
+Add each local skill and its provenance to `validation/repository.yaml`, and
+provide valid frontmatter and `agents/openai.yaml`. Provenance is repository
+evidence rather than installed runtime content, so installed skill directories
+do not carry `provenance.yaml`. Add behavioral fixtures under `evaluations/`.
+Fixtures and observations are YAML; raw evidence has a checked SHA-256 locator.
 
 After changing fixtures or observations, record the deterministic report:
 
@@ -85,9 +86,12 @@ artifacts are excluded from the working-tree identity so recording evidence
 does not create a self-referential hash.
 
 `validation/sources.yaml` is the only authority for upstream URLs, revisions,
-and licenses. Per-skill provenance refers to source ids from that inventory.
-`validation/overlays.yaml` binds every overlay to its source, target, patch
-file, and SHA-256. The target must exist at the pinned source revision; a
+and licenses. The schema-v2 `validation/repository.yaml` contains exactly one
+provenance record for every local skill directory. Original records stay
+minimal. Adapted records name their adaptation mode, exact pinned source
+targets, retained behavior, and changed assumptions. `validation/overlays.yaml`
+binds every overlay to its source, target, patch file, and SHA-256. Every
+provenance and overlay target must exist at the pinned source revision; a
 missing, escaping, or stale target or patch blocks validation.
 
 Before publication, also prove missing companions degrade honestly, run the

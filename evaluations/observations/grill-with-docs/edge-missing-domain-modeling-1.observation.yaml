@@ -1,0 +1,44 @@
+schemaVersion: 1
+fixtureId: grill-with-docs-edge-missing-domain-modeling
+attempt: 1
+contextId: fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:42:06.000Z
+environment:
+  id: documented-design-missing-domain-modeling
+  capabilities:
+    grill-with-docs: true
+    grilling: true
+    domain-modeling: false
+    adapter: ephemeral-records
+  tools: [ephemeral Adapter read]
+observed:
+  actions:
+    - read and identify glossary/work-policy at r4 and decisions/return-to-office at r7
+    - name the missing Domain Modeling capability
+    - preserve the unresolved documented-design frontier and exact resumption condition
+  artifacts:
+    - resumable frontier bound to glossary/work-policy r4 and decisions/return-to-office r7
+  effects: [read the ephemeral records only]
+  forbiddenChecks:
+    - criterion: silently replace Domain Modeling
+      evidence: The response explicitly names Domain Modeling as unavailable and states that Grilling alone cannot substitute for the required documented-design composition.
+      observed: false
+    - criterion: write a record
+      evidence: The Adapter trace contains zero update events, and the unique seed's SHA-256 is identical before and after the two declared reads.
+      observed: false
+    - criterion: claim shared understanding
+      evidence: The response says the interview and shared understanding are not complete and leaves the state waiting for Domain Modeling.
+      observed: false
+  invoked: [grill-with-docs]
+  notInvoked: [unavailable domain-modeling, completed interview]
+  proof:
+    - real Adapter reads plus the exact missing capability and record locators support resumption
+  responsibility:
+    - the requesting context retains responsibility for resumption
+  route: [documented-design-degraded]
+  state: [waiting-for-domain-modeling-capability]
+rawEvidence:
+  locator: evaluations/evidence/grill-with-docs/edge-missing-domain-modeling-1.txt
+  sha256: 1731461315bd8e62bd6f2fb86ca3b257286f1033a9713b9bcd51436e7efbd344

@@ -1,0 +1,39 @@
+schemaVersion: 1
+id: grill-with-docs-indirect-workflow
+title: Workflow implicitly routes a recorded policy design into one interview
+shape: indirect
+kind: routing
+skill: grill-with-docs
+domains: [organizational-work]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Workflow has reached an unresolved return-to-office policy design. Use a fresh
+  ephemeral Adapter seeded from
+  evaluations/inputs/grill-with-docs/work-policy-records.json. The two open
+  decisions are which weekdays become anchor days and which role approves policy
+  exceptions. Office-notification timing depends on the anchor-day choice, and
+  exception review cadence depends on the approver. Invoke the bounded
+  capability that grounds the interview in current records, then return the
+  eventual confirmed understanding to Workflow. No term or decision is resolved
+  by this prompt.
+environment:
+  id: workflow-policy-ephemeral-adapter
+  capabilities:
+    workflow: true
+    grill-with-docs: true
+    grilling: true
+    domain-modeling: true
+    adapter: ephemeral-records
+  tools: [ephemeral Adapter read, ephemeral Adapter update, ephemeral Adapter read-back]
+expected:
+  actions: [implicitly route from Workflow to Grill With Docs, read glossary/work-policy at r4 and decisions/return-to-office at r7, ask both and only the open decisions in the exact Grilling format, defer notification and review-cadence questions]
+  artifacts: [glossary/work-policy remains byte-identical at r4, decisions/return-to-office remains byte-identical at r7]
+  effects: [read the two ephemeral Adapter records only]
+  invoked: [workflow, grill-with-docs, grilling, domain-modeling]
+  notInvoked: [implementation, parent completion]
+  proof: [real Adapter read events and before-after hashes show that unresolved records were not written]
+  responsibility: [Workflow retains parent responsibility and will integrate the confirmed result]
+  route: [workflow-to-documented-design-interview]
+  state: [waiting-for-frontier-answers]
+  forbidden: [write unresolved language or decisions, absorb Workflow responsibility, claim shared understanding]

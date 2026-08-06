@@ -1,0 +1,68 @@
+Fresh-context execution — attempt 1
+
+Candidate identity: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+Evaluation-contract revision: git:7e5b067bc0de2b0ded0841a243950717602be535
+Context ID: fresh-gwd-edge-missing-grilling-1-egxl9qnx
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T16:41:55Z
+
+Applied runtime trace
+
+- Runtime instance: effective-runtime-25960
+- Pinned upstream: mattpocock/skills git:6acc160e4e0cd062dbbbd7a1b26ae92855edf07e
+- Effective `grill-with-docs` skill locator: `skills/engineering/grill-with-docs/SKILL.md`
+- Effective skill SHA-256: `2d4c5eea65afba9b3fe0ba56037ed4d837103b2aefab9fe90eaccf3c939b249a`
+- Effective metadata locator: `skills/engineering/grill-with-docs/agents/openai.yaml`
+- Effective metadata SHA-256: `4e3ac56fd00c573cf3a1f4b55663627d8be2e4e2d5277b790becc5a1db82d10d`
+- Applied skill overlay SHA-256: `a4715db7287b15aea4ed528afb9b78d355d04a8e5dddc3348c89bfc65b20bdd6`
+- Applied metadata overlay SHA-256: `a051ae6dbabc7a5e74dfe2f84b1019472e80906880becc4f130b5f91415a017b`
+
+Environment
+
+- ID: `documented-design-missing-grilling`
+- Capabilities: `grill-with-docs=true`, `grilling=false`, `domain-modeling=true`, `adapter=ephemeral-records`
+- Declared tool: ephemeral Adapter read
+- External effects: disabled. Ephemeral sandbox setup and reads are not external effects.
+
+Ephemeral Adapter read trace
+
+- Source seed locator: `evaluations/inputs/grill-with-docs/subscription-records.json`
+- Source seed SHA-256: `b8ef0f058792ad8a3f3eca7fd587265fe05ecb9a1b1ed5abd5d1314bd1a1970b`
+- Unique ephemeral seed instance: `gwd-edge-missing-grilling-1.EGxl9QNx`
+- Ephemeral seed SHA-256 before reads: `b8ef0f058792ad8a3f3eca7fd587265fe05ecb9a1b1ed5abd5d1314bd1a1970b`
+- Ephemeral seed mode during reads: read-only
+- Read 1: locator `glossary/subscriptions`, revision `r1`, canonical-record SHA-256 `76566e400ee04399dbaae10767fdedf37107692aa1498cb34e93e169c2c0b0df`
+- Read 1 value: `{"locator":"glossary/subscriptions","revision":"r1","terms":{"cancellation":"A member-requested end to future subscription service.","save window":"unresolved"}}`
+- Read 2: locator `decisions/cancellation`, revision `r3`, canonical-record SHA-256 `96587afe206ee809d852b4e4e0553224aa97a7628dc98e9575478934be70afa0`
+- Read 2 value: `{"locator":"decisions/cancellation","revision":"r3","status":"accepted","summary":"Members may reverse a cancellation until its effective service-end event."}`
+- Record hashes are SHA-256 over key-sorted compact JSON bytes without a trailing line feed.
+- Ephemeral seed SHA-256 after reads: `b8ef0f058792ad8a3f3eca7fd587265fe05ecb9a1b1ed5abd5d1314bd1a1970b`
+- No Adapter write was attempted or performed.
+
+Prompt (exact fixture text, issued once):
+
+Grill me with docs on subscription cancellation using the records seeded by evaluations/inputs/grill-with-docs/subscription-records.json. The selected ephemeral Adapter and Domain Modeling are available, but Grilling is not. Preserve the exact record locators and unresolved frontier for resumption.
+
+Observed response (verbatim):
+
+`grill-with-docs` is invoked for the subscription-cancellation design, grounded in two read-only Adapter results:
+
+- `glossary/subscriptions` at revision `r1` (record SHA-256 `76566e400ee04399dbaae10767fdedf37107692aa1498cb34e93e169c2c0b0df`) defines cancellation as “A member-requested end to future subscription service.” Its `save window` term is explicitly unresolved.
+- `decisions/cancellation` at revision `r3` (record SHA-256 `96587afe206ee809d852b4e4e0553224aa97a7628dc98e9575478934be70afa0`) is accepted and says members may reverse a cancellation until its effective service-end event.
+
+Grilling is unavailable, so the required interview cannot begin. Domain Modeling and the ephemeral Adapter are available, but neither substitutes for the missing Grilling capability. I am preserving the interview frontier instead of claiming shared understanding or a completed interview.
+
+Unresolved interview frontier:
+
+1. Resolve what exact interval or event boundary the glossary term `save window` denotes.
+2. Establish whether `save window` names the reversal period already bounded by the effective service-end event in `decisions/cancellation` at `r3`, or whether it is a separate concept requiring its own boundary.
+
+Exact resumption condition: when Grilling becomes available, resume `grill-with-docs` from this frontier using `glossary/subscriptions` at `r1` and `decisions/cancellation` at `r3` as the grounded starting state. Run the interview with Domain Modeling, then write qualifying glossary or decision updates only after the interview resolves them and the requesting context authorizes those Adapter effects.
+
+State: `waiting-for-grilling-capability` via `documented-design-degraded`. The requesting context retains responsibility for resuming this work. No record was written, no companion was silently replaced, and no shared understanding is claimed.
+
+Truthful evaluator grade
+
+- Grade: PASS.
+- Basis: the response reads and identifies both exact record locators and revisions, names the missing Grilling capability, preserves the record-bound unresolved frontier and exact resumption condition, retains responsibility in the requesting context, performs only declared read effects, and avoids every forbidden behavior.
+- Retry: none. This is the sole attempt and the observed response is unedited.

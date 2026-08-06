@@ -1,2 +1,54 @@
-schemaVersion: 1
-expectedSkills: [domain-modeling, thinking-in-systems]
+schemaVersion: 2
+skills:
+  - name: thinking-in-systems
+    provenance:
+      strategy: adapted
+      adaptationMode: suite-owned-synthesis
+      sources:
+        - sourceId: thinking-in-systems-standard-v1
+          targets: [docs/source/THINKING_IN_SYSTEMS_STANDARD.md]
+        - sourceId: matt-pocock-skills-thinking-in-systems-lineage
+          targets:
+            - skills/productivity/writing-great-skills/SKILL.md
+            - skills/productivity/writing-great-skills/GLOSSARY.md
+            - skills/engineering/tdd/SKILL.md
+      retainedBehavior:
+        - Complete approved universal systems method, preserved as the installed runtime reference.
+        - Public-seam proof, progressive disclosure, and LLM-invocation patterns retained where compatible.
+        - Public reference spine preserved as an installed concept-to-source guide without making evidence a second governing authority.
+      changedAssumptions:
+        - The later accepted suite boundary assigns coordination, equivalent fallback work, and phase results to the 'Workflow' skill or the caller; this skill returns their governing requirements and evidence obligations.
+        - Technical, personal, organizational, physical, communicative, and agent systems share one proportional method.
+        - A System may be one-time, recurring, or continuous; recurrence changes persistence and lifecycle obligations rather than admission to systems reasoning.
+        - Thinking in Systems and the 'Workflow' skill are capability instructions composed by the same agent unless the active workflow explicitly delegates bounded work.
+        - Known material Containing, Subsystem, Upstream, Dependent, Peer, and other relationships are indexed without duplicating their interface contracts.
+        - Economics is a bounded design lens; Pareto concentration prioritizes search, Satisficing defines adequacy, Marginal analysis governs further effort, and Constraints, Preferences, Cost structure, substitution effects, and Externalities remain boundary- and evidence-aware.
+        - Matched truthful Decision frames expose the stable judgment and frame-sensitive remainder without treating observed selection as stable Preference evidence or using framing to manufacture approval.
+        - Activation begins an Assurance cadence whose verification, validation, burden, harm, and sustainment checks taper only after stable evidence or remain continuous when cheap and actionable.
+  - name: domain-modeling
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills-domain-modeling-lineage
+          targets:
+            - skills/engineering/domain-modeling/SKILL.md
+            - skills/engineering/domain-modeling/CONTEXT-FORMAT.md
+            - skills/engineering/domain-modeling/ADR-FORMAT.md
+        - sourceId: matt-pocock-skills
+          targets:
+            - skills/engineering/domain-modeling/SKILL.md
+            - skills/engineering/domain-modeling/CONTEXT-FORMAT.md
+      retainedBehavior:
+        - Active terminology work challenges fuzzy, overloaded, or conflicting language instead of merely reading a glossary.
+        - Concise canonical meanings, aliases, and avoided labels are recorded as terms crystallize.
+        - Concrete scenarios stress-test boundaries and contradictions before a meaning is accepted.
+        - Authoritative artifacts and observed practice are cross-referenced against the proposed language.
+        - The skill can join Grill With Docs when terminology and user-held decisions must be resolved together.
+      changedAssumptions:
+        - A selected Adapter, rather than a repository root or CONTEXT.md path, stores the canonical language record in its native representation.
+        - Technical code cross-reference becomes evidence-aware comparison of authoritative artifacts, sources, observations, and practice in any supported domain.
+        - ADR creation and architectural trade-off decisions return to 'Workflow' or their owning capability; this skill owns shared terminology only.
+        - System relationships use the Thinking in Systems vocabulary while non-System concepts retain explicit domain relationships.
+        - Missing write Authority, stale revisions, or unavailable persistence produce a visible conflict or capability gap instead of a claimed canonical update.
+        - The skill joins an active Outcome and returns bounded language evidence without completing the parent work.

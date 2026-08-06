@@ -1,9 +1,0 @@
-diff --git a/skills/in-progress/batch-grill-me/agents/openai.yaml b/skills/in-progress/batch-grill-me/agents/openai.yaml
---- a/skills/in-progress/batch-grill-me/agents/openai.yaml
-+++ b/skills/in-progress/batch-grill-me/agents/openai.yaml
-@@ -2,4 +2,4 @@ interface:
-   display_name: "Batch Grill Me"
-   short_description: "Sharpen a plan a round of questions at a time"
- policy:
--  allow_implicit_invocation: false
-+  allow_implicit_invocation: true
