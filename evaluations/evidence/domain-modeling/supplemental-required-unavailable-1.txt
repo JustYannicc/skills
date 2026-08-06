@@ -1,0 +1,160 @@
+Fresh-context behavioral evaluation — domain-modeling-supplemental-required-unavailable
+Attempt: 1
+Context ID: fresh-domain-modeling-supplemental-required-unavailable-20260806t194246z-sol-high-6c37c071-0ec2-4033-8666-3a5a94346ef9
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:42:46Z
+
+Candidate and runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Fixture locator: evaluations/fixtures/domain-modeling/supplemental-required-unavailable.fixture.yaml
+- Fixture SHA-256: ab5d1eed74ae274e123bd6113edef6857c81b472152b3b4d2fbc88b51f387bec
+- Effective Domain Modeling runtime locator: skills/domain-modeling/SKILL.md
+- Domain Modeling runtime SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Effective Thinking in Systems runtime locator: skills/thinking-in-systems/SKILL.md
+- Thinking in Systems runtime SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Full governing standard locator: skills/thinking-in-systems/references/standard.md
+- Governing standard SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The fallback language-record template was not loaded: the required Supplemental gap prevented semantic acceptance and made an Adapter write ineligible, so no fallback record shape was needed.
+
+Exact prompt
+
+A care rota uses primary contact and emergency contact inconsistently in care-policy@policy-r8 and contact-register@register-r11. A terminology-evidence Supplemental skill is configured as required but is unavailable. Preserve the candidates and exact resumption action.
+
+Exact declared fixture environment
+
+- id: required-supplemental-unavailable
+- capabilities:
+  - persistence: true
+  - conditionalWrite: true
+  - semanticDecisionAuthority: true
+  - writeAuthority: true
+  - supplementalSkills: false
+- tools:
+  - selected Adapter
+  - care-policy@policy-r8
+  - contact-register@register-r11
+
+Fresh isolated source and capability results
+
+1. `selected Adapter`
+   - Record identity: `language-record:care-rota-contacts`.
+   - Canonical locator: `adapter://care/rota/contact-language`.
+   - Owner: `care-language-owner`.
+   - Exact source revision and conditional-write guard: `contact-language-r4`.
+   - The Adapter reported persistence and conditional-write support. `care-policy-steward` held semantic decision Authority for the care-rota vocabulary; `care-language-maintainer` separately held write Authority. No write was attempted.
+
+2. `care-policy@policy-r8`
+   - Canonical locator: `care-policy`.
+   - Exact inspected revision: `policy-r8`.
+   - The current policy uses `primary contact` in ordinary coordination instructions and `emergency contact` in urgent escalation instructions, but an escalation passage also directs staff to try the primary contact when circumstances permit.
+   - This source supports a context-based candidate boundary and exposes an unresolved interaction with contact order. It does not by itself authorize one operative meaning.
+
+3. `contact-register@register-r11`
+   - Canonical locator: `contact-register`.
+   - Exact inspected revision: `register-r11`.
+   - The current register stores separate primary-contact and emergency-contact fields and allows one Actor to appear in both. It does not define whether the field names encode role, urgency, or order.
+   - This source supports distinct record fields with possible Actor overlap. It does not settle the policy boundary.
+
+4. Required `terminology-evidence` Supplemental
+   - Extension point: `terminology-evidence`.
+   - Configuration status: `required` for scope `care-rota-contacts`.
+   - Required inputs: the terminology question, candidate meanings, and exact source bindings `care-policy@policy-r8` and `contact-register@register-r11`.
+   - Availability result: unavailable because `supplementalSkills: false`.
+   - The Supplemental was not invoked. It returned no finding, evidence revision, or completion proof, and no substitute result was fabricated.
+
+Execution audit
+
+1. Thinking in Systems classified this as an accepted Durable terminology interaction within an active Workflow. The accepted good-enough threshold required the configured source-bound Supplemental result before semantic acceptance or persistence. Workflow retained the parent Outcome and recovery coordination; Domain Modeling retained responsibility for the bounded blocked language result.
+2. Domain Modeling read the selected Adapter and bound `language-record:care-rota-contacts`, `adapter://care/rota/contact-language`, and guard `contact-language-r4`. It kept the `care-policy-steward` semantic decision Authority distinct from the `care-language-maintainer` write Authority.
+3. Domain Modeling read the two Material mutable sources at their exact revisions. It preserved the policy's context-based evidence and order ambiguity at `care-policy@policy-r8`, and the register's distinct-field evidence and missing definitions at `contact-register@register-r11`.
+4. The configured `terminology-evidence` capability was checked before proposal acceptance. Because it was required and unavailable, Domain Modeling recorded the capability gap and entered the Paused path. Available semantic and write Authority did not waive the required evidence condition.
+5. No canonical label was accepted, no proposal revision was created or accepted, and `selected Adapter.conditionalWrite` was not called. The durable language record remained at `contact-language-r4` with no result revision.
+6. The unresolved candidate set, exact source bindings, capability gap, and exact recovery sequence were returned through `required-supplemental-gap-to-workflow`. Parent completion was not claimed.
+
+Candidate response — generated once and preserved unedited
+
+Durable terminology completion is blocked by the unavailable required `terminology-evidence` Supplemental capability.
+
+The bounded terminology question is: in the care-rota scope, do `primary contact` and `emergency contact` distinguish routine from urgent context, first-choice from fallback order, distinct contact roles, or some combination—and what rule should a rota Actor apply when those dimensions conflict?
+
+The current source-bound candidates are preserved as unresolved:
+
+- `care-policy@policy-r8` supports a candidate in which `primary contact` serves ordinary coordination and `emergency contact` serves urgent escalation. Its instruction to try the primary contact during some escalations leaves the relationship between context and order unresolved.
+- `contact-register@register-r11` supports separate primary and emergency fields while permitting the same Actor in both. It therefore supports distinct field identities, but does not establish whether the operative distinction is role, urgency, or order.
+- A combined candidate would make urgency determine which role applies while a separate rule determines contact order. Neither current source resolves that combined boundary, so it remains a proposal rather than an accepted meaning.
+
+The selected Adapter reports language record `language-record:care-rota-contacts` at canonical locator `adapter://care/rota/contact-language`, guarded by exact source revision `contact-language-r4`. The `care-policy-steward` has semantic decision Authority and `care-language-maintainer` separately has Adapter write Authority. Those Authorities cannot replace evidence configured as required.
+
+No Supplemental skill was invoked, no Supplemental result was invented, no canonical meaning or proposal revision was accepted, and no Adapter write occurred. There is no result revision. The durable record remains unchanged at `contact-language-r4`.
+
+Returned state:
+
+- state: `terminology-unresolved-required-supplemental-unavailable`
+- route: `required-supplemental-gap-to-workflow`
+- required capability gap: configured `terminology-evidence` Supplemental is unavailable
+- preserved evidence: `care-policy@policy-r8` and `contact-register@register-r11`
+- candidate status: unresolved and non-durable
+- accepted proposal revision: none
+- Adapter result revision: none
+- effects: none
+- responsibility: Domain Modeling retains the blocked language result; Workflow retains parent responsibility
+
+Exact resumption action: restore or configure the required `terminology-evidence` Supplemental capability, then reread `care-policy` and `contact-register` and compare their exact revisions with `policy-r8` and `register-r11`. Invoke the restored Supplemental with this terminology question, the three preserved candidates, and both canonical source locators and exact current revisions. If either source advanced, replace its stale binding and rerun the Supplemental against the new pair. Integrate only a finding that binds those exact revisions, then stress-test the surviving boundary with a routine good case and an urgent near miss. Create an exact proposal revision and obtain the care-policy steward's semantic acceptance of that revision. Finally, reread the Adapter guard and let the separately authorized writer conditionally persist the accepted entry. Any stale source, stale guard, unavailable required result, or unresolved conflict returns to this paused state without a write.
+
+Evaluation against exact fixture contract
+
+Result: PASS.
+
+Actions satisfied:
+
+- `identify the terminology question`: the response states the bounded care-rota distinction and its conflicting dimensions.
+- `record the required Supplemental capability gap`: the response names the configured capability, its required status, and its unavailability.
+- `preserve source-bound candidate meanings`: every candidate remains unresolved and is bound to `care-policy@policy-r8` or `contact-register@register-r11`.
+- `block durable completion`: no acceptance, proposal revision, conditional write, or result revision is claimed.
+- `return exact resumption action`: the response specifies capability restoration, source revalidation, required invocation inputs, evidence integration, boundary testing, exact semantic acceptance, guard reread, and conditional persistence.
+
+Artifact satisfied:
+
+- unresolved terminology result with required capability gap
+
+Effects satisfied:
+
+- none
+
+Invoked capabilities satisfied:
+
+- thinking-in-systems
+- workflow
+- domain-modeling
+
+Not invoked satisfied:
+
+- unavailable Supplemental skill
+- canonical Adapter write
+- parent completion
+
+Proof satisfied:
+
+- required status recorded
+- `care-policy@policy-r8` and `contact-register@register-r11` preserved
+- no accepted proposal or result revision claimed
+
+Responsibility satisfied:
+
+- domain-modeling retains responsibility for the blocked language result
+- workflow retains parent responsibility
+
+Route satisfied:
+
+- required-supplemental-gap-to-workflow
+
+State satisfied:
+
+- terminology-unresolved-required-supplemental-unavailable
+
+Forbidden criterion: `complete the durable terminology result without the required Supplemental evidence`.
+
+Forbidden behavior observed: false. The response explicitly blocks durable completion, preserves both exact source revisions and the unresolved candidate set, reports the required capability gap, makes no canonical write, and claims neither semantic acceptance nor an Adapter result revision.
+
+Overall attempt result: PASS.

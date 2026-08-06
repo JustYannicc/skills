@@ -1,28 +1,69 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-technical
 attempt: 1
-contextId: fresh-domain-direct-technical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-direct-technical-sol-high-1-ef6cd864-e6f4-471d-8287-3dbda4477a34
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:37:18Z
 environment:
-  id: adapter-with-conditional-write
-  capabilities: { persistence: true, conditionalWrite: true, batchWrite: true }
-  tools: [selected Adapter, authoritative service artifacts]
+  id: adapter-with-native-language-shape
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    batchWrite: true
+    nativeLanguageRecord: true
+    semanticDecisionAuthority: true
+    writeAuthority: true
+  tools: [selected Adapter with native language-record shape at language-r10, domain language steward acceptance of proposal service-language-p6, service-docs@docs-r11, account-schema@schema-r8, customer-model@model-r13]
 observed:
-  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
-  artifacts: [language entry with aliases or conflicts]
-  effects: [shared technical language available to Workflow]
+  actions:
+    - identify the terminology question and accepting Authority
+    - read the canonical language record
+    - bind authoritative artifact locators and revisions
+    - cross-reference authoritative artifacts
+    - distinguish labels with scenarios
+    - bind acceptance to the exact proposal revision
+    - preserve the Adapter-native shape
+    - record accepted terms immediately
+  artifacts:
+    - Adapter-native language entry with meaning
+    - scope
+    - aliases
+    - avoided labels
+    - and conflicts as applicable
+  effects:
+    - shared technical language available to Workflow
   forbiddenChecks:
     - criterion: silently collapse Account, User, and Customer
-      evidence: Separate meanings and aliases were preserved.
+      evidence: The generated response records Account, User, and Customer as three separate non-aliasing entries, defines each distinct referent and scope, and makes the conflicts visible.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [architecture decision, research, implementation]
-  proof: [source revision guard, scenario distinction, Adapter result revision]
-  responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
+  proof:
+    - domain language steward acceptance of service-language-p6 distinct from write Authority
+    - service-docs@docs-r11 account-schema@schema-r8 and customer-model@model-r13 retained
+    - language-r10 source guard
+    - good case and near-miss distinction
+    - native representation preserved
+    - Adapter result revision
+  responsibility:
+    - domain-modeling owns terminology evidence
+    - workflow retains parent responsibility
   route: [workflow-to-domain-modeling]
   state: [terminology-resolved-or-conflict-visible]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-technical-1.txt
-  sha256: f10803b6812e48a654a791432e5349f2f1a16312fba6e7e8bd5818f715369320
+  sha256: ac87481e890bb37a62bb1be761e0b37ac7dc66b68ef8553edb4b06196c75c7df
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/direct-technical.fixture.yaml
+    sha256: 5efa63071a220487f760486ff11e4e91ea7f99a96de3cfaf58dc863d94be7a12
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377

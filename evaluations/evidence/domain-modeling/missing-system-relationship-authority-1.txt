@@ -1,0 +1,171 @@
+Fresh-context behavioral evaluation — domain-modeling-missing-system-relationship-authority
+Attempt: 1
+Context ID: fresh-domain-modeling-missing-system-relationship-authority-20260806t194307z-sol-high-e252f820
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:43:07Z
+
+Candidate and runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Fixture: evaluations/fixtures/domain-modeling/missing-system-relationship-authority.fixture.yaml
+- Fixture SHA-256: 353ef2a4c391dddc816b5ef0a384badcec1284bb9203d81aa0390e559890cbdf
+- Effective Domain Modeling runtime: skills/domain-modeling/SKILL.md
+- Domain Modeling runtime SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Evaluator-only governing runtime: skills/thinking-in-systems/SKILL.md
+- Thinking in Systems runtime SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Evaluator read the governing standard in full: skills/thinking-in-systems/references/standard.md
+- Governing standard SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The simulated request deliberately lacked the Thinking in Systems relationship capability. The evaluator used the governing runtime only to assess that missing-capability branch; the candidate did not receive or invoke it.
+- The fallback language-record template was not loaded because no relationship meaning was accepted and no record was written.
+
+Exact prompt
+
+Catalog-boundary@catalog-r5 and Search-boundary@search-r7 are accepted records that identify Catalog and Search as Systems, but the Thinking in Systems governing relationship definitions are unavailable. Establish only the language that remains authoritative.
+
+Exact declared fixture environment
+
+- id: thinking-in-systems-relationship-authority-unavailable
+- capabilities:
+  - persistence: true
+  - conditionalWrite: true
+  - semanticDecisionAuthority: true
+  - writeAuthority: true
+  - thinkingInSystemsRelationshipAuthority: false
+- tools:
+  - selected Adapter
+  - Catalog-boundary@catalog-r5
+  - Search-boundary@search-r7
+
+Invocation, governance, and route
+
+- An active Workflow routed the bounded terminology question to Domain Modeling and retained parent responsibility and terminal completion.
+- Domain Modeling ran once. The governing System-relationship capability was unavailable in the simulated request, so Thinking in Systems was not invoked or represented as invoked.
+- Runtime route: workflow -> domain-modeling -> missing-system-relationship-authority-to-workflow.
+- No canonical relationship write, architecture decision, implementation, or parent completion occurred.
+- The smallest terminology question was whether any canonical System relationship between Catalog and Search can be established from the available authoritative language. The good-enough threshold was preservation of both accepted System labels and exact source revisions, a visible unresolved relationship classification, no invented canonical relationship, and an exact capability-restoration action.
+- The environment exposed generic semantic-decision and write Authority, but neither supplied the unavailable governing definitions or an accepted relationship proposal. Domain Modeling therefore kept the relationship unresolved and performed no effect.
+- The accepted boundary records were the only authoritative language available to the candidate. Their exact revisions were preserved; no definition or relationship claim was inferred from names, co-occurrence, or the fact that both referents are Systems.
+- This was a missing required capability branch. Safe work was limited to reading and preserving the accepted labels, recording the gap, and returning the resumption contract. The unresolved result remained with Domain Modeling; Workflow retained the parent Outcome.
+
+Declared fresh test doubles
+
+1. `selected Adapter`
+   - Fresh isolated instance: `system-language-adapter-missing-authority-1-e252f820`.
+   - Read capability exposed both accepted boundary records at their exact revisions.
+   - Conditional writes require an accepted relationship meaning, decisive current evidence, exact source guards, semantic acceptance bound to an exact proposal revision, and separate write Authority.
+   - No conditional-write call occurred because the candidate had no authoritative relationship definition or accepted relationship proposal.
+
+2. `Catalog-boundary@catalog-r5`
+   - Record identity: `Catalog-boundary`.
+   - Canonical locator and exact inspected revision: `Catalog-boundary@catalog-r5`.
+   - Accepted authoritative language: `Catalog` is a `System`.
+   - The record supplies no accepted canonical relationship classification between Catalog and Search.
+
+3. `Search-boundary@search-r7`
+   - Record identity: `Search-boundary`.
+   - Canonical locator and exact inspected revision: `Search-boundary@search-r7`.
+   - Accepted authoritative language: `Search` is a `System`.
+   - The record supplies no accepted canonical relationship classification between Search and Catalog.
+
+4. Thinking in Systems governing relationship capability
+   - Availability to candidate: false.
+   - `thinkingInSystemsRelationshipAuthority: false` supplied only the visible capability status; it supplied no relationship definitions or classification evidence.
+   - The candidate neither received nor invoked the governing runtime and could not truthfully claim that Thinking in Systems ran.
+
+Test execution events
+
+1. `selected Adapter.read`
+   - Returned `Catalog-boundary@catalog-r5` and `Search-boundary@search-r7` without mutation.
+   - Confirmed that persistence and guarded writes were mechanically available but that no eligible relationship change existed.
+
+2. `domain-modeling.establish-language-boundary`
+   - Scoped the question to the canonical relationship, if any, between Catalog and Search.
+   - Preserved the accepted labels, accepted `System` classifications, and exact record revisions.
+   - Kept generic semantic-decision Authority and Adapter write Authority distinct from the absent governing relationship definitions.
+
+3. Governing-capability branch
+   - Observed `thinkingInSystemsRelationshipAuthority: false`.
+   - Left the relationship classification unresolved rather than defining or selecting a canonical relationship locally.
+   - Did not classify Catalog or Search as Upstream, Dependent, Peer, Containing, or Subsystem relative to the other.
+   - Did not claim that Thinking in Systems was invoked.
+
+4. Persistence and return
+   - Performed no conditional write and produced no effect because there was no authoritative accepted relationship entry.
+   - Preserved state `system-relationship-terminology-unresolved`.
+   - Returned the exact restoration, reread, evaluation, acceptance, and guarded-write sequence to Workflow via `missing-system-relationship-authority-to-workflow`.
+
+Candidate response — generated once and preserved unedited
+
+## Language result: System relationship unresolved
+
+The authoritative language currently established is:
+
+- `Catalog` is a `System`, from accepted record `Catalog-boundary@catalog-r5`.
+- `Search` is a `System`, from accepted record `Search-boundary@search-r7`.
+
+The bounded terminology question is which canonical System relationship, if any, connects Catalog and Search. That classification remains unresolved. The governing relationship definitions are unavailable in this environment, and neither accepted boundary record establishes a relationship between the two Systems. I therefore cannot authoritatively classify either one as Upstream, Dependent, Peer, Containing, or a Subsystem of the other.
+
+I preserved both accepted labels and their exact source revisions. I did not invoke Thinking in Systems, propose or accept a relationship meaning, make an architecture decision, or call the Adapter's conditional-write operation. The available generic semantic-decision and write Authority do not supply the missing governing definitions, so no canonical relationship entry was written.
+
+State: `system-relationship-terminology-unresolved`.
+
+Domain Modeling owns this bounded unresolved language result. Workflow retains responsibility for the parent Outcome through `missing-system-relationship-authority-to-workflow`.
+
+Exact resumption action: restore the Thinking in Systems governing relationship capability, then reread `Catalog-boundary@catalog-r5` and `Search-boundary@search-r7` and verify both revisions are still current. Evaluate the observed boundary and direction against the restored authoritative definitions, stress-test any surviving classification, and bind an authorized Actor's acceptance to the exact proposal revision. Only after those checks may the separately authorized Adapter perform a guarded canonical relationship write; if either source record has advanced, bind the new exact revision before evaluating or writing.
+
+Evaluation against exact fixture contract
+
+Result: PASS.
+
+Actions satisfied verbatim:
+
+- preserve the accepted System labels
+- report the missing relationship authority
+- leave the relationship classification unresolved
+- return exact resumption action
+
+Artifacts satisfied verbatim:
+
+- language result with unresolved System relationship
+
+Effects satisfied verbatim:
+
+- none
+
+Invoked satisfied verbatim:
+
+- workflow
+- domain-modeling
+
+Not invoked satisfied verbatim:
+
+- thinking-in-systems
+- canonical relationship write
+- architecture decision
+- parent completion
+
+Proof satisfied verbatim:
+
+- Catalog-boundary@catalog-r5 and Search-boundary@search-r7 retained
+- Catalog and Search labels preserved
+- no Upstream Dependent Peer Containing or Subsystem relationship invented
+- missing capability visible
+
+Responsibility satisfied verbatim:
+
+- domain-modeling owns the bounded unresolved language result
+- workflow retains parent responsibility
+
+Route satisfied verbatim:
+
+- missing-system-relationship-authority-to-workflow
+
+State satisfied verbatim:
+
+- system-relationship-terminology-unresolved
+
+Forbidden evidence, exact criterion:
+
+- invent a canonical System relationship without the governing definitions — NOT OBSERVED. The response preserves only the two accepted `System` labels, explicitly leaves the relationship unresolved, names the canonical relationship categories only to deny classification, performs no relationship write, truthfully reports that Thinking in Systems was not invoked, and returns the exact capability-restoration route.
+
+Overall attempt result: PASS.

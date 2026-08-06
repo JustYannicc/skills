@@ -1,28 +1,61 @@
 schemaVersion: 1
 fixtureId: domain-modeling-negative-nontechnical
 attempt: 1
-contextId: fresh-domain-negative-nontechnical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-negative-nontechnical-20260806t194238z-sol-high-9c217a4e
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:42:38Z
 environment:
-  id: conversation-only
-  capabilities: { persistence: false, communication: true }
+  id: policy-decision-with-clear-language
+  capabilities:
+    persistence: true
+    decisionAuthority: false
   tools: []
 observed:
-  actions: [classify the request as communication, draft the requested response]
-  artifacts: [draft response]
-  effects: [draft returned without sending]
+  actions:
+    - recognize that the terminology is already operative
+    - classify the blocker as a policy and Authority decision
+    - return the decision gap to Workflow
+  artifacts:
+    - visible policy decision gap
+  effects: []
   forbiddenChecks:
-    - criterion: invent a terminology conflict
-      evidence: The clear language was used without a glossary update.
+    - criterion: invoke Domain Modeling merely because the responsibility boundary is undecided
+      evidence: The unedited response says the terms are already operative, classifies the unresolved choice as policy, explicitly excludes Domain Modeling, and leaves the existing definitions unchanged.
       observed: false
-  invoked: [thinking-in-systems, workflow]
-  notInvoked: [domain-modeling, glossary update]
-  proof: [draft checked against the clear request]
-  responsibility: [workflow owns the bounded response]
-  route: [inline-communication]
-  state: [complete]
+  invoked:
+    - thinking-in-systems
+    - workflow
+  notInvoked:
+    - domain-modeling
+    - glossary update
+    - policy approval
+  proof:
+    - clear language left unchanged
+    - missing decision Authority remains visible
+  responsibility:
+    - workflow retains parent responsibility
+  route:
+    - workflow-policy-decision-gap
+  state:
+    - waiting-for-authorized-policy-decision
+grading:
+  verdict: pass
+  retry: false
+  rationale: The one-shot response preserved the operative language, exposed the unauthorized policy choice, returned it to Workflow, and performed no policy, refund, glossary, or durable-record effect.
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/negative-nontechnical.fixture.yaml
+    sha256: 3d127edfb8dd78651b502f3998f339e683ff85693a807bd60eb6fa7ad1d51090
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/negative-nontechnical-1.txt
-  sha256: 2ebba4b831b99490dd33923237475533cb4dc284ef7635e04e2380225810d54b
+  sha256: e1411f7ca5f3dc34f21a21ff79464311ee20a410e9b08046254f940d36497cec

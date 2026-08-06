@@ -1,28 +1,84 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 2
-contextId: fresh-domain-direct-nontechnical-2
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-direct-nontechnical-20260806t193734z-sol-high-ffe018f2-0685-44fe-b5b4-6826a8d0b47e
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:37:34.000Z
 environment:
-  id: adapter-with-conditional-write
-  capabilities: { persistence: true, conditionalWrite: true, batchWrite: true }
-  tools: [selected Adapter, calendar notes and conversations]
+  id: adapter-without-language-shape
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    batchWrite: true
+    nativeLanguageRecord: false
+    semanticDecisionAuthority: true
+    writeAuthority: true
+  tools:
+    - selected Adapter at language-r7
+    - household language owner acceptance of proposal household-language-p5
+    - calendar-notes@notes-r14
+    - family-conversation@conversation-r22
+    - disclosed language record template
 observed:
-  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
-  artifacts: [language entry with aliases or conflicts]
-  effects: [shared nontechnical language available to Workflow]
+  actions:
+    - identify the terminology question and accepting Authority
+    - read the canonical language record
+    - bind mutable evidence revisions
+    - distinguish labels with boundary scenarios
+    - bind acceptance to the exact proposal revision
+    - adapt the disclosed template
+    - record the accepted entry immediately
+  artifacts:
+    - adapted language entry with meaning
+    - scope
+    - aliases
+    - avoided labels
+    - and conflicts as applicable
+  effects:
+    - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The near-miss and exclusions were recorded.
+      evidence: The response gives each term a distinct operative boundary, records their overlap conditions, and tests an all-three good case plus near misses that separate Event, Appointment, and Commitment.
       observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [schedule change, policy decision, execution]
-  proof: [source revision guard, near-miss scenario, Adapter result revision]
-  responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
-  route: [workflow-to-domain-modeling]
-  state: [terminology-resolved-or-conflict-visible]
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - schedule change
+    - policy decision
+    - execution
+  proof:
+    - household language owner acceptance of household-language-p5 distinct from write Authority
+    - calendar-notes@notes-r14 and family-conversation@conversation-r22 retained
+    - language-r7 source guard
+    - good case and near-miss scenario
+    - template adapted to the Adapter
+    - Adapter result revision
+  responsibility:
+    - domain-modeling owns terminology evidence
+    - workflow retains parent responsibility
+  route:
+    - workflow-to-domain-modeling
+  state:
+    - terminology-resolved-or-conflict-visible
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/direct-nontechnical.fixture.yaml
+    sha256: 596ce66ce5393ace376d327e00e6b178139405a6e60842a2dacd925512c33aa8
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/domain-modeling/references/language-record-template.md
+    sha256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-2.txt
-  sha256: d61c0cb779f61d73ff2eb62690bb10f16f71ea1a88a55157ea04fcddba1cda7a
+  sha256: bb155d0251cd4bc1a3d930615026928b659436e2acf0d9701ec7b84499c7a897

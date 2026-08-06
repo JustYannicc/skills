@@ -1,0 +1,65 @@
+schemaVersion: 1
+fixtureId: domain-modeling-missing-system-relationship-authority
+attempt: 1
+contextId: fresh-domain-modeling-missing-system-relationship-authority-20260806t194307z-sol-high-e252f820
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:43:07Z
+environment:
+  id: thinking-in-systems-relationship-authority-unavailable
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    semanticDecisionAuthority: true
+    writeAuthority: true
+    thinkingInSystemsRelationshipAuthority: false
+  tools: [selected Adapter, Catalog-boundary@catalog-r5, Search-boundary@search-r7]
+observed:
+  actions:
+    - preserve the accepted System labels
+    - report the missing relationship authority
+    - leave the relationship classification unresolved
+    - return exact resumption action
+  artifacts:
+    - language result with unresolved System relationship
+  effects: []
+  forbiddenChecks:
+    - criterion: invent a canonical System relationship without the governing definitions
+      evidence: The response preserves only the accepted Catalog and Search System labels, explicitly leaves their relationship unresolved, names every canonical relationship category only to deny classification, performs no relationship write, truthfully reports that Thinking in Systems was not invoked, and returns the exact capability-restoration route.
+      observed: false
+  invoked:
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - thinking-in-systems
+    - canonical relationship write
+    - architecture decision
+    - parent completion
+  proof:
+    - Catalog-boundary@catalog-r5 and Search-boundary@search-r7 retained
+    - Catalog and Search labels preserved
+    - no Upstream Dependent Peer Containing or Subsystem relationship invented
+    - missing capability visible
+  responsibility:
+    - domain-modeling owns the bounded unresolved language result
+    - workflow retains parent responsibility
+  route:
+    - missing-system-relationship-authority-to-workflow
+  state:
+    - system-relationship-terminology-unresolved
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/missing-system-relationship-authority.fixture.yaml
+    sha256: 353ef2a4c391dddc816b5ef0a384badcec1284bb9203d81aa0390e559890cbdf
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/missing-system-relationship-authority-1.txt
+  sha256: a55430c939b62fdd38d05be8abdf125f33525d587817bf289e2ae9d2aa2884aa

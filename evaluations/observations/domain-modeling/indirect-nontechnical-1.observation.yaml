@@ -1,28 +1,77 @@
 schemaVersion: 1
 fixtureId: domain-modeling-indirect-nontechnical
 attempt: 1
-contextId: fresh-domain-indirect-nontechnical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-indirect-nontechnical-sol-high-1-4a4b943a-c73e-4265-8979-463841412bf2
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:43:26Z
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
 environment:
   id: adapter-baseline
-  capabilities: { persistence: true, conditionalWrite: false, delegation: true }
-  tools: [selected Adapter, volunteer notes and forms]
-observed:
-  actions: [classify the blocker as terminology, route to domain-modeling, return bounded terminology evidence]
-  artifacts: [language result for Workflow]
-  effects: []
-  forbiddenChecks:
-    - criterion: assign volunteers while the terminology blocker remains
-      evidence: Assignment waited for the terminology result.
-      observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [schedule assignment, policy decision, execution]
-  proof: [terminology result returned before assignment]
-  responsibility: [workflow integrates the result, domain-modeling owns the bounded language result]
-  route: [workflow-to-domain-modeling]
-  state: [ready-for-assignment-or-discovery]
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    delegation: true
+    semanticDecisionAuthority: true
+    writeAuthority: true
+  tools:
+    - selected Adapter
+    - volunteer language steward acceptance of proposal meal-service-language-p6
+    - volunteer-handbook@handbook-r5
+    - signup-form@form-r9
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/indirect-nontechnical.fixture.yaml
+    sha256: c042a6f550cc4cbabfe88d9672ef2a317d95cf8bae11dcc8ea7080a8abaf1816
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt
-  sha256: 9b5a26180f7a6907cc92e251d30d0cb63c3d7f53d230768fb1f2b04f438686eb
+  sha256: e07cadc67e0bc2d35282cd1002dc5a34b4546e8cf787776006b5601048560126
+observed:
+  actions:
+    - classify the blocker as terminology
+    - route to domain-modeling
+    - cross-reference the revision-bound handbook and form
+    - stress-test the labels
+    - bind the steward acceptance to proposal meal-service-language-p6
+    - record the accepted meanings
+    - return bounded language evidence
+  artifacts:
+    - language result with operative meanings or visible conflicts for Workflow
+  effects:
+    - accepted meal-service language recorded
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - schedule assignment
+    - policy decision
+    - execution
+  proof:
+    - semantic acceptance distinct from write Authority
+    - exact proposal and accepting Actor
+    - volunteer-handbook@handbook-r5 and signup-form@form-r9 retained
+    - accepted terms recorded before assignment
+    - bounded result returned to Workflow
+  responsibility:
+    - workflow integrates the result
+    - domain-modeling owns the bounded language result
+  route:
+    - workflow-to-domain-modeling
+  state:
+    - ready-for-assignment-or-discovery
+  forbiddenChecks:
+    - criterion: assign volunteers while the terminology blocker remains
+      observed: false
+      evidence: >-
+        The route disabled assignment effects; the guarded atomic commit and
+        verification reread each reported zero assignment effects; the response
+        returned the recorded language to Workflow without assigning a volunteer.

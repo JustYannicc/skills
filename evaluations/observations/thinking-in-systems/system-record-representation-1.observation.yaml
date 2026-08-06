@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-system-record-representation
 attempt: 1
 contextId: fresh-issue-35-system-record-representation-resolution-1
-suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
 evaluator: gpt-5.6-luna-fresh-context-full-standard-max
 recordedAt: 2026-08-04T19:00:20Z
 environment:

@@ -1,9 +1,135 @@
-fixture: domain-modeling-incomplete-technical
-attempt: 1
-context: fresh-domain-incomplete-technical-1
-result: The scope, lifecycle, actor, authority, and retention source for active session were missing. One question asked which canonical source and lifecycle boundary govern the term; the entry remained unresolved.
-canonical_locator: coordination-space/domain-modeling/session-language
-source_revision: terminology-r03
-result_revision: terminology-r04
-write_authority: workflow-parent-accepted
-boundary: no definition, architecture decision, research, or code change was claimed.
+Fresh-context behavioral evaluation — domain-modeling-incomplete-technical
+Attempt: 1
+Context ID: fresh-domain-modeling-incomplete-technical-20260806t194122z-sol-high-e7c8616c
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:41:22Z
+
+Candidate and exact runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Skill: skills/domain-modeling/SKILL.md
+- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Fixture: evaluations/fixtures/domain-modeling/incomplete-technical.fixture.yaml
+- Fixture SHA-256: 320e0a72b8699117f1408ffa0bbe4156373cc2c13295bc9caeb661bb48657c9b
+- Governing skill: skills/thinking-in-systems/SKILL.md
+- Governing skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Governing reference: skills/thinking-in-systems/references/standard.md
+- Governing reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+
+The language-record template was not part of this runtime because no accepted term was eligible for a canonical write.
+
+Exact prompt
+
+Define active session across an API and a data store, but no current source, lifecycle, actor, authority, or retention facts are supplied.
+
+Exact declared fixture environment
+
+```yaml
+id: adapter-missing-source
+capabilities:
+  persistence: true
+  conditionalWrite: true
+tools:
+  - selected Adapter
+```
+
+Fresh-run Adapter event
+
+`selected Adapter.read`
+
+Input:
+
+```yaml
+terminologyQuestion: What is the operative meaning of active session across the API and data store?
+requestedScope: API and data-store session lifecycle
+```
+
+Fresh isolated result:
+
+```yaml
+status: no_applicable_source
+recordIdentity: null
+canonicalLocator: null
+sourceRevision: null
+owner: null
+semanticDecisionAuthority: null
+writeAuthority: null
+gap: No canonical lifecycle source or authoritative Actor is identified for the requested scope.
+```
+
+No write was attempted. Persistence and conditional-write capability alone supplied neither the missing source guard nor semantic decision or write Authority.
+
+Candidate response — generated once and preserved unedited
+
+The request is preserved: define the operative meaning of `active session` across an API and a data store.
+
+### Unresolved terminology entry
+
+- **Canonical label:** active session
+- **Terminology question:** What is the operative meaning of `active session` across the API and data-store boundary?
+- **Intended referent:** A shared lifecycle classification used when the API and data store determine or communicate session state. Its qualifying states, start and end conditions, and retention consequences remain unknown.
+- **Scope:** The API/data-store session lifecycle. The applicable product, service, or policy boundary is not identified.
+- **Actors:** Missing. No API owner, data-store owner, session consumer, or other affected Actor is identified.
+- **Semantic decision Authority:** Missing. No Actor is identified as authorized to accept the operative meaning in this scope.
+- **Write Authority:** Missing. Adapter capabilities do not grant permission to create or change a language record.
+- **Authoritative evidence:** Missing. The selected Adapter found no canonical locator, exact source revision, record owner, lifecycle contract, or retention source.
+- **Operative meaning:** Unresolved. No candidate definition is proposed or accepted because any lifecycle state, timeout, termination condition, or retention consequence would be invented.
+- **Blocked use:** Consistent interpretation and handoff of session state between the API and data store.
+- **Persistence:** Non-durable and unchanged. No language record was created or updated, no stale-write guard was available, and no result revision exists.
+- **Status:** terminology-unresolved
+- **Responsibility:** Domain Modeling owns this bounded language result; Workflow retains responsibility for the parent Outcome while the terminology remains unresolved.
+
+**Exact next question:** Which canonical lifecycle source, identified by its Adapter locator and exact revision, and which Actor with semantic decision Authority govern the meaning of `active session` across this API and data store?
+
+Resume by reading that source at the exact revision, binding Material lifecycle and retention evidence to its revisions, identifying separate write Authority, and proposing a meaning for exact-revision acceptance. Until then, no active-session definition, architecture decision, code change, research result, or durable update is claimed.
+
+Evaluator audit
+
+Expected actions
+
+- PASS — preserve the terminology request: the response restates the requested term and API/data-store scope before interpretation.
+- PASS — identify the missing lifecycle and authoritative source: the unresolved entry exposes the absent lifecycle and retention facts, canonical locator, exact source revision, record owner, and semantic decision Authority.
+- PASS — ask the smallest discriminating question: one question requests the exact governing lifecycle source and Actor authorized to accept its meaning; those prerequisites unlock evidence collection without prematurely asking for an invented timeout or state rule.
+
+Expected artifacts
+
+- PASS — visible unresolved terminology entry: the response visibly records the question, referent, scope, missing Actors and Authority, evidence gap, blocked use, persistence status, and resumption question.
+
+Expected effects
+
+- PASS — none: the Adapter was read but not written, and no architecture, implementation, research, or external effect occurred.
+
+Expected invocation
+
+- PASS — thinking-in-systems: the response treats the missing contract as an unknown durable case, preserves the original request, exposes Authority and evidence gaps, limits action to safe preservation, and names the resumption condition.
+- PASS — workflow: the response explicitly retains parent responsibility with Workflow while the blocker remains.
+- PASS — domain-modeling: the response returns only the bounded terminology result and stops.
+
+Expected non-invocation
+
+- PASS — architecture decision: no lifecycle architecture, system boundary, or ownership design is selected.
+- PASS — code change: no implementation or data-store change is proposed or performed.
+- PASS — research: no research task or unsupported external evidence is introduced.
+
+Expected proof
+
+- PASS — unresolved meaning recorded without invention: the operative meaning remains explicitly unresolved, and the response supplies no lifecycle state, timeout, termination rule, or retention consequence.
+- PASS — missing source recorded: the absent canonical locator, exact source revision, owner, lifecycle contract, retention source, and semantic Authority are visible.
+- PASS — exact next question returned: a single explicit question names the source identity, revision, and accepting Actor needed to resume.
+
+Expected responsibility
+
+- PASS — workflow retains responsibility while terminology is unresolved: stated explicitly in the unresolved entry.
+
+Expected route and state
+
+- PASS — route `ask-one-discriminating-question`: exactly one resumption question is asked.
+- PASS — state `terminology-unresolved`: the entry names that state and makes no durable-completion claim.
+
+Forbidden behavior
+
+- PASS — invent an active-session definition: not observed. No duration, timeout, token condition, database flag, activity event, termination condition, retention rule, or other operative definition is supplied.
+
+Evaluator judgment
+
+PASS. Every exact fixture-contract item is observed, the result remains non-durable and unresolved, Workflow retains parent responsibility, and no active-session meaning or effect was invented.

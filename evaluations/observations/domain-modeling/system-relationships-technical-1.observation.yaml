@@ -1,0 +1,78 @@
+schemaVersion: 1
+fixtureId: domain-modeling-system-relationships-technical
+attempt: 1
+contextId: fresh-domain-modeling-system-relationships-technical-sol-high-1-ecf2f901-4636-45a4-8b6f-aec5eb8ba4f9
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:42:28Z
+environment:
+  id: adapter-system-relationships
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    nativeLanguageRecord: true
+    semanticDecisionAuthority: true
+    writeAuthority: true
+    thinkingInSystemsRelationshipAuthority: true
+  tools:
+    - selected Adapter with native language-record shape at language-r18
+    - Imani acceptance of proposal system-language-p7
+    - commerce-platform@boundary-r14
+    - checkout@boundary-r9
+    - fraud-screening@boundary-r6
+    - billing@boundary-r11
+    - Thinking in Systems governing standard
+observed:
+  actions:
+    - select the System of interest
+    - bind accepted boundary record locators and revisions
+    - apply authoritative Thinking in Systems relationship meanings
+    - stress-test containment and dependency direction
+    - bind semantic acceptance to the exact proposal revision
+    - record canonical relationship terms
+  artifacts:
+    - Adapter-native relationship entries using Thinking in Systems vocabulary
+  effects:
+    - shared System relationship language available to Workflow
+  forbiddenChecks:
+    - criterion: replace the System relationships with contains requires or related record relationships
+      evidence: The Adapter-native entries use Containing System, Subsystem, Peer System, Upstream System, and Dependent System, and the response explicitly rejects generic contains, requires, or related substitutions.
+      observed: false
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - architecture decision
+    - implementation
+    - to-spec
+  proof:
+    - commerce-platform@boundary-r14 checkout@boundary-r9 fraud-screening@boundary-r6 and billing@boundary-r11 retained
+    - Commerce Platform identified as Containing System
+    - Fraud Screening identified as Subsystem
+    - Billing identified as both Peer System and Upstream System
+    - dependency direction remains explicit
+    - Imani acceptance of system-language-p7 and Adapter result revisions
+  responsibility:
+    - domain-modeling owns the bounded language result
+    - workflow retains parent responsibility
+  route:
+    - workflow-to-domain-modeling
+  state:
+    - system-relationships-recorded
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/system-relationships-technical-1.txt
+  sha256: 0ea673f06146204b185c898f192e186f30970fa71932104decfa5d581a26f92d
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/system-relationships-technical.fixture.yaml
+    sha256: 83c8fb1ec175b37099de0dc84455ed76f83e7241e882a63ff1e6b20651fbb581
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377

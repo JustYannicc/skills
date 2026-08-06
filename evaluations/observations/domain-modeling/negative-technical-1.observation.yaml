@@ -1,28 +1,48 @@
 schemaVersion: 1
 fixtureId: domain-modeling-negative-technical
 attempt: 1
-contextId: fresh-domain-negative-technical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-negative-technical-sol-high-1-797b8b82-f9a7-437e-9a8e-df2a5503e30e
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:42:03Z
 environment:
-  id: conversation-with-implementation
-  capabilities: { persistence: false, implementation: true }
-  tools: [code editor, test runner]
+  id: architecture-decision-with-clear-language
+  capabilities:
+    persistence: true
+    designAuthority: false
+  tools: [accepted System boundary records]
 observed:
-  actions: [classify the request as implementation, route to the execution capability]
-  artifacts: [implementation result for Review]
+  actions:
+    - recognize that the domain language is already operative
+    - classify the blocker as a System design decision
+    - return the architecture gap to Workflow
+  artifacts: [visible System design decision gap]
   effects: []
   forbiddenChecks:
-    - criterion: create a glossary or architectural decision for a null-pointer fix
-      evidence: Existing terminology remained unchanged.
+    - criterion: invoke Domain Modeling merely because the System boundary is undecided
+      evidence: The response identifies already-operative terminology, routes the unresolved ownership boundary to Workflow as a System-design decision, and explicitly states that Domain Modeling was not invoked.
       observed: false
-  invoked: [thinking-in-systems, workflow, implement]
-  notInvoked: [domain-modeling, glossary update]
-  proof: [terms remain unchanged, implementation result submitted]
-  responsibility: [workflow retains parent responsibility, implement owns the bounded result]
-  route: [workflow-to-implement]
-  state: [ready-for-review]
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [domain-modeling, glossary update, architecture approval, implement]
+  proof:
+    - domain language remains unchanged
+    - unresolved design Authority remains visible
+  responsibility: [workflow retains parent responsibility]
+  route: [workflow-system-design-gap]
+  state: [waiting-for-authorized-system-design-decision]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/negative-technical-1.txt
-  sha256: f36d246d58bb4b82dc62b59117d9b062048e288a4fd51a9a31d40f731a135358
+  sha256: a3bacf9b79ca3a5461b9adf72d67c80453ef3be920981336c4ca2782ffcd19b2
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/negative-technical.fixture.yaml
+    sha256: af9162a0f485cdb927da34c10c15487529c18973dbd4b6837f662040b21f714b
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377

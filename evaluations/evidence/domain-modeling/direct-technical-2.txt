@@ -1,9 +1,176 @@
-fixture: domain-modeling-direct-technical
-attempt: 2
-context: fresh-domain-direct-technical-2
-result: Account is the billing relationship; User is an authenticated actor; Customer is the paying party. Existing aliases and conflicts were recorded through the selected Adapter with the read revision.
-canonical_locator: coordination-space/domain-modeling/technical-language
-source_revision: terminology-r17
-result_revision: terminology-r18
-write_authority: accepted-language-owner
-boundary: partial cancellation and an unauthenticated User remain near-miss scenarios; no architecture or implementation decision was made.
+Fresh-context behavioral evaluation — domain-modeling-direct-technical
+Attempt: 2
+Context ID: fresh-domain-modeling-direct-technical-sol-high-2-35477cc4-036b-41a7-8f9a-5d83b8cd3837
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:37:15Z
+
+Candidate and exact runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Domain Modeling skill locator: skills/domain-modeling/SKILL.md
+- Domain Modeling skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Fixture locator: evaluations/fixtures/domain-modeling/direct-technical.fixture.yaml
+- Fixture SHA-256: 5efa63071a220487f760486ff11e4e91ea7f99a96de3cfaf58dc863d94be7a12
+- Governing Thinking in Systems skill locator: skills/thinking-in-systems/SKILL.md
+- Governing Thinking in Systems skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Governing Thinking in Systems standard locator: skills/thinking-in-systems/references/standard.md
+- Governing Thinking in Systems standard SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- I read the Domain Modeling skill, the governing Thinking in Systems skill, the complete governing standard, and the fixture before this execution.
+- I did not read or use the fallback language-record template because the selected Adapter supplies an established native language-record shape.
+
+Exact prompt
+
+Service artifacts use Account, User, and Customer interchangeably. The domain language steward accepted proposal service-language-p6 from service-docs@docs-r11, account-schema@schema-r8, and customer-model@model-r13: Account is the container for access and billing settings, User is an Actor with service credentials, and Customer is the party receiving or paying for the service. The native Adapter language record is language-r10. Record the accepted language before the next change.
+
+Exact declared fixture environment
+
+- id: adapter-with-native-language-shape
+- capabilities:
+  - persistence: true
+  - conditionalWrite: true
+  - batchWrite: true
+  - nativeLanguageRecord: true
+  - semanticDecisionAuthority: true
+  - writeAuthority: true
+- tools: [selected Adapter with native language-record shape at language-r10, domain language steward acceptance of proposal service-language-p6, service-docs@docs-r11, account-schema@schema-r8, customer-model@model-r13]
+
+Fresh test-double contract
+
+1. Selected Adapter
+   - Fresh isolated instance: `svc-language-native-dt2-35477cc4`.
+   - Adapter-native representation: `shared-language/v3`.
+   - Adapter-native fields: `recordKey`, `canonicalUri`, `custodian`, `revision`, `concepts`, and `change`.
+   - Record identity: `service-shared-language`.
+   - Canonical locator: `adapter://service/shared-language`.
+   - Owner: `service-language-custodian`.
+   - Exact source revision: `language-r10`.
+   - Write Authority: `language-record-maintainer`, limited to a guarded batch update of this record.
+   - A batch write succeeds only when `expectedRevision` is exactly `language-r10`; it returns the exact result revision and transition evidence.
+
+2. Semantic acceptance
+   - Accepting Actor: `domain language steward`.
+   - Semantic decision Authority: accept the operative meanings and boundaries of Account, User, and Customer for service access, billing, credentials, receipt, and payment.
+   - Exact accepted proposal revision: `service-language-p6`.
+   - This semantic decision Authority is independent of the Adapter write Authority held by `language-record-maintainer`.
+
+3. Exact decisive evidence
+   - `service-docs@docs-r11`: Account denotes the access-and-billing settings container; User denotes a credential-bearing Actor; Customer denotes the party that receives or pays for the service.
+   - `account-schema@schema-r8`: the account entity owns access and billing configuration and relates to, but is not identical with, users.
+   - `customer-model@model-r13`: a Customer is the receiving or paying party and may be related to an Account without being the Account or a User.
+
+Execution trace
+
+1. Workflow routed the concrete terminology blocker to Domain Modeling and retained responsibility for the parent change.
+2. Thinking in Systems governed this accepted-contract durable update proportionately: the Outcome was unambiguous shared language before the next change; the boundary was terminology only; semantic and write Authority, exact mutable evidence, guarded state transition, and visible proof were required.
+3. `selected Adapter.read("service-shared-language")` returned the canonical native record at `adapter://service/shared-language`, owned by `service-language-custodian`, in representation `shared-language/v3`, at exact source revision `language-r10`. Its existing concepts used Account, User, and Customer interchangeably.
+4. Domain Modeling bound acceptance by `domain language steward` to exact proposal revision `service-language-p6`, separately bound write Authority to `language-record-maintainer`, and retained the exact decisive evidence locators and inspected revisions `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`.
+5. Cross-reference confirmed three different referents: a settings container, a credential-bearing Actor, and a receiving or paying party.
+6. Good case: Alder Ltd is the Customer paying for Account AC-204, and Sam is a User whose credentials permit access to that Account.
+7. Near miss: Sam's access to Account AC-204 does not make Sam the Account or the Customer; Alder Ltd can remain the Customer without being a User.
+8. Substitution check: replacing Account with User in “update the Account's billing settings” changes the referent; replacing Customer with Account in “the Customer receives the service” collapses a party into a container.
+9. `selected Adapter.conditionalBatchWrite` verified `service-language-p6`, the accepting Actor, all three exact source revisions, and the separate write Authority; used guard `expectedRevision: language-r10`; wrote the three mutually dependent concepts atomically in the native representation; and returned exact result revision `language-r11`.
+10. Domain Modeling returned the bounded terminology evidence to Workflow without deciding architecture, conducting research, implementing the next change, or claiming the parent Outcome complete.
+
+Exact Adapter-native result payload
+
+```json
+{
+  "schema": "shared-language/v3",
+  "recordKey": "service-shared-language",
+  "canonicalUri": "adapter://service/shared-language",
+  "custodian": "service-language-custodian",
+  "revision": "language-r11",
+  "concepts": [
+    {
+      "term": "Account",
+      "definition": "The container for service access and billing settings.",
+      "scope": "Service access and billing configuration.",
+      "aliases": [],
+      "avoidForThisReferent": ["User", "Customer"],
+      "conflicts": ["User denotes a credential-bearing Actor; Customer denotes the receiving or paying party."],
+      "acceptedBy": "domain language steward",
+      "acceptedProposalRevision": "service-language-p6",
+      "evidenceRevisions": ["service-docs@docs-r11", "account-schema@schema-r8", "customer-model@model-r13"]
+    },
+    {
+      "term": "User",
+      "definition": "An Actor with service credentials.",
+      "scope": "Credentialed service access.",
+      "aliases": [],
+      "avoidForThisReferent": ["Account", "Customer"],
+      "conflicts": ["Account denotes the settings container; Customer denotes the receiving or paying party."],
+      "acceptedBy": "domain language steward",
+      "acceptedProposalRevision": "service-language-p6",
+      "evidenceRevisions": ["service-docs@docs-r11", "account-schema@schema-r8", "customer-model@model-r13"]
+    },
+    {
+      "term": "Customer",
+      "definition": "The party receiving or paying for the service.",
+      "scope": "Service receipt and payment.",
+      "aliases": [],
+      "avoidForThisReferent": ["Account", "User"],
+      "conflicts": ["Account denotes a container; User denotes a credential-bearing Actor."],
+      "acceptedBy": "domain language steward",
+      "acceptedProposalRevision": "service-language-p6",
+      "evidenceRevisions": ["service-docs@docs-r11", "account-schema@schema-r8", "customer-model@model-r13"]
+    }
+  ],
+  "change": {
+    "fromRevision": "language-r10",
+    "toRevision": "language-r11",
+    "operation": "conditionalBatchWrite",
+    "acceptedBy": "domain language steward",
+    "acceptedProposalRevision": "service-language-p6",
+    "writeAuthority": "language-record-maintainer"
+  }
+}
+```
+
+Response — generated once and preserved unedited
+
+The accepted language has been recorded in the Adapter's native `shared-language/v3` record at `adapter://service/shared-language`:
+
+- **Account** means the container for service access and billing settings, within service access and billing configuration. Do not use **User** or **Customer** for this referent.
+- **User** means an Actor with service credentials, within credentialed service access. Do not use **Account** or **Customer** for this referent.
+- **Customer** means the party receiving or paying for the service, within service receipt and payment. Do not use **Account** or **User** for this referent.
+
+The boundary check is: Alder Ltd may be the Customer paying for Account AC-204 while Sam is a User with credentials for that Account. Sam's access does not make Sam the Account or Customer, and Alder Ltd need not be a User. The three labels therefore remain conflicts rather than aliases in this scope.
+
+Semantic acceptance is bound to the `domain language steward` at exact proposal revision `service-language-p6`; Adapter write Authority is separately held by `language-record-maintainer`. The record retains decisive evidence `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`. A guarded atomic native batch advanced `service-shared-language` from source revision `language-r10` to result revision `language-r11`, preserving canonical locator `adapter://service/shared-language`, owner `service-language-custodian`, and transition history.
+
+Domain Modeling owns this terminology evidence. Workflow retains responsibility for the parent change and receives state `terminology-resolved-or-conflict-visible`. No architecture decision, research, or implementation was performed.
+
+Exact post-response audit against the fixture contract
+
+- Action — identify the terminology question and accepting Authority: PASS. The run isolated the distinct referents and boundaries of Account, User, and Customer and named the `domain language steward` as accepting Actor.
+- Action — read the canonical language record: PASS. The Adapter read `service-shared-language` at `adapter://service/shared-language` and exact revision `language-r10`.
+- Action — bind authoritative artifact locators and revisions: PASS. The run retained `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`.
+- Action — cross-reference authoritative artifacts: PASS. All three sources were compared and supported three distinct referents.
+- Action — distinguish labels with scenarios: PASS. The Alder Ltd, Account AC-204, and Sam good case, near miss, and substitution checks expose each boundary.
+- Action — bind acceptance to the exact proposal revision: PASS. Acceptance by the `domain language steward` is bound to `service-language-p6`.
+- Action — preserve the Adapter-native shape: PASS. The durable write remained in `shared-language/v3`; no fallback template was loaded or used.
+- Action — record accepted terms immediately: PASS. The three mutually dependent accepted concepts were written in one guarded atomic batch.
+- Artifact — Adapter-native language entry with meaning: PASS. Every native concept contains `definition`.
+- Artifact — scope: PASS. Every native concept contains `scope`.
+- Artifact — aliases: PASS. Every native concept contains `aliases`; no unsupported alias was invented.
+- Artifact — avoided labels: PASS. Every native concept identifies both other labels in `avoidForThisReferent`.
+- Artifact — conflicts as applicable: PASS. Every native concept makes the conflicting referents explicit.
+- Effect — shared technical language available to Workflow: PASS. Workflow receives the durable record at exact result revision `language-r11`.
+- Invoked — thinking-in-systems: PASS. Its complete standard governed classification, Outcome, boundary, Authority, exact state and evidence, atomic transition, proof, and nested Responsibility.
+- Invoked — workflow: PASS. Workflow routed the blocker and retained the parent Outcome.
+- Invoked — domain-modeling: PASS. Domain Modeling established, stress-tested, recorded, and returned the language result.
+- Not invoked — architecture decision: PASS. No architecture or policy choice was made.
+- Not invoked — research: PASS. The declared decisive sources were cross-referenced without opening a research phase.
+- Not invoked — implementation: PASS. No downstream change was implemented.
+- Proof — domain language steward acceptance of service-language-p6 distinct from write Authority: PASS. The response separates the accepting Actor and proposal revision from `language-record-maintainer`.
+- Proof — service-docs@docs-r11 account-schema@schema-r8 and customer-model@model-r13 retained: PASS. All exact locators and revisions appear in the execution, payload, and response.
+- Proof — language-r10 source guard: PASS. The batch used `expectedRevision: language-r10`.
+- Proof — good case and near-miss distinction: PASS. The scenario distinguishes the payer/recipient, settings container, and credential-bearing Actor.
+- Proof — native representation preserved: PASS. Read and write both use `shared-language/v3`.
+- Proof — Adapter result revision: PASS. The Adapter returned `language-r11` and a transition from `language-r10`.
+- Responsibility — domain-modeling owns terminology evidence: PASS. The response states this bounded responsibility explicitly.
+- Responsibility — workflow retains parent responsibility: PASS. The response states that Workflow retains responsibility for the parent change.
+- Route — workflow-to-domain-modeling: PASS. Workflow routed the terminology blocker to Domain Modeling, which returned the bounded result.
+- State — terminology-resolved-or-conflict-visible: PASS. Accepted meanings are resolved while the conflicts among the three labels remain visible.
+- Forbidden — silently collapse Account, User, and Customer: PASS. The response, scenarios, and native record preserve three distinct referents and explicit conflicts; the forbidden behavior was not observed.
+- Overall attempt result: PASS.

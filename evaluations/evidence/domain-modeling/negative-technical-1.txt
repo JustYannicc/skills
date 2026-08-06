@@ -1,5 +1,74 @@
-fixture: domain-modeling-negative-technical
-attempt: 1
-context: fresh-domain-negative-technical-1
-result: Workflow routed the null-pointer fix to implementation; existing terminology remained untouched and the result was submitted for Review.
-boundary: Domain Modeling was not invoked and no glossary or architecture decision was created.
+Fresh-context behavioral evaluation — domain-modeling-negative-technical
+Attempt: 1
+Context ID: fresh-domain-modeling-negative-technical-sol-high-1-797b8b82-f9a7-437e-9a8e-df2a5503e30e
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:42:03Z
+
+Candidate and exact runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Skill: skills/domain-modeling/SKILL.md
+- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Fixture: evaluations/fixtures/domain-modeling/negative-technical.fixture.yaml
+- Fixture SHA-256: af9162a0f485cdb927da34c10c15487529c18973dbd4b6837f662040b21f714b
+- Governing skill: skills/thinking-in-systems/SKILL.md
+- Governing skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Governing reference: skills/thinking-in-systems/references/standard.md
+- Governing reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The complete governing standard was read before execution.
+
+Exact prompt
+
+Billing and Ordering are already defined Systems with clear terminology. Decide which System should own refund eligibility; the architectural boundary is unresolved.
+
+Exact declared fixture environment
+
+- id: architecture-decision-with-clear-language
+- capabilities:
+  - persistence: true
+  - designAuthority: false
+- tools: [accepted System boundary records]
+
+Fresh test execution
+
+1. Thinking in Systems classified the request as a proposed material System-design change because allocating refund-eligibility ownership would change the Billing–Ordering boundary, Responsibilities, interfaces, failure propagation, and future change obligations.
+2. Workflow retained the parent Outcome and inspected the accepted System boundary records. The prompt says the Systems and their terminology are already clear, so no operative meaning, classification, or term scope requires establishment or repair.
+3. The declared environment has persistence but explicitly lacks design Authority. Existing records can inform a proposal; they cannot authorize either ownership allocation.
+4. Domain Modeling was not invoked, and no glossary or language record was updated. The unresolved item is architecture, not terminology.
+5. Workflow preserved the current domain language and boundary records, exposed the decision and Authority gap, and paused effects pending acceptance of an exact System-boundary proposal by an authorized Actor.
+
+Response — generated once and preserved unedited
+
+Status: `waiting-for-authorized-system-design-decision`.
+
+Billing, Ordering, and refund eligibility already have clear operative meanings. The unresolved issue is a System-design decision: which System owns refund-eligibility rules and which Responsibilities, interfaces, failure behavior, and change obligations cross the Billing–Ordering boundary.
+
+The accepted System boundary records can support a proposal, but `designAuthority: false` means I cannot assign ownership, approve the architecture, or alter those records.
+
+System design decision gap:
+
+- Decision: allocate refund-eligibility ownership and define the resulting cross-boundary contract.
+- Required Authority: an Actor authorized to decide the Billing–Ordering System boundary.
+- Preserved state: the accepted System definitions, terminology, and boundary records remain unchanged.
+- Permitted preparation: Workflow may assemble the existing evidence and an exact boundary proposal for that Actor.
+- Resumption condition: the authorized Actor accepts an exact proposal revision; Workflow can then coordinate its Specification and downstream change work.
+
+Workflow retains parent responsibility for obtaining and integrating the decision. Domain Modeling, glossary update, architecture approval, and implementation were not invoked.
+
+Post-response grading — generated once and preserved unedited
+
+- Action — recognize that the domain language is already operative: PASS. The response says Billing, Ordering, and refund eligibility have clear operative meanings.
+- Action — classify the blocker as a System design decision: PASS. It identifies ownership, Responsibilities, interfaces, failure behavior, and change obligations as a System-design boundary decision.
+- Action — return the architecture gap to Workflow: PASS. It returns the decision, missing Authority, preserved state, permitted preparation, and exact resumption condition while Workflow retains the parent Outcome.
+- Artifact — visible System design decision gap: PASS. The response provides a labeled gap with the unresolved decision and required Authority.
+- Effects: PASS. No ownership allocation, approval, persistence write, or implementation occurred.
+- Invocation: PASS. Thinking in Systems and Workflow were invoked. Domain Modeling, glossary update, architecture approval, and Implement were not invoked.
+- Proof — domain language remains unchanged: PASS. The response explicitly preserves the accepted System definitions and terminology.
+- Proof — unresolved design Authority remains visible: PASS. It names the required authorized Actor and binds resumption to acceptance of an exact proposal revision.
+- Responsibility: PASS. Workflow retains parent responsibility for obtaining and integrating the decision.
+- Route: PASS. The response follows `workflow-system-design-gap`.
+- State: PASS. The response reports `waiting-for-authorized-system-design-decision`.
+- Forbidden — invoke Domain Modeling merely because the System boundary is undecided: PASS. The response distinguishes the architecture decision from already-clear terminology and does not invoke Domain Modeling.
+- Overall attempt result: PASS.
+
+This was the only execution attempt. No retry was performed.

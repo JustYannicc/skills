@@ -1,28 +1,55 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-nontechnical
 attempt: 2
-contextId: fresh-domain-edge-nontechnical-2
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-edge-nontechnical-2-444763e3-f782-4ace-99fe-a36265491b43
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:37:54.000Z
 environment:
   id: adapter-unavailable
-  capabilities: { persistence: false, conditionalWrite: false, handoff: true }
-  tools: [conversation]
+  capabilities:
+    persistence: false
+    conditionalWrite: false
+    handoff: true
+  tools: [pickup-policy@policy-r3, guardian-message@message-r8, conversation]
 observed:
-  actions: [preserve both meanings, report the Adapter capability gap, ask the authority question]
-  artifacts: [non-durable conflict result and capability gap]
+  actions:
+    - preserve both sourced meanings
+    - run an Actor and Authority scenario
+    - report the Adapter capability gap
+    - ask the smallest authority question
+  artifacts:
+    - non-durable conflict result and capability gap
   effects: []
   forbiddenChecks:
     - criterion: claim the canonical language record was updated
-      evidence: The result explicitly stated that it was non-durable.
+      evidence: The once-generated response says no canonical language record was read, guarded, created, or updated, and the recorded effect trace is empty.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [policy approval, pickup action, canonical Adapter write]
-  proof: [both meanings retained, missing capability recorded, exact next question]
-  responsibility: [workflow retains parent responsibility]
+  proof:
+    - pickup-policy@policy-r3 and guardian-message@message-r8 retained
+    - both meanings retained
+    - non-durable status explicit
+    - missing semantic Authority and Adapter capability recorded
+    - exact next question
+  responsibility:
+    - workflow retains parent responsibility
   route: [degraded-terminology-conflict]
   state: [terminology-conflicted-and-non-durable]
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/edge-nontechnical.fixture.yaml
+    sha256: f6cd5125afcfab40b9b0b6bca4a0993a1bc03826215928dc01c4140cf0bb7280
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-nontechnical-2.txt
-  sha256: 7e8c09d878c1071858d4435802b81af08ef7ded69e88b1684aa1868a69be7bc8
+  sha256: a8a2be6597ec918ce1e294d8288db2c3baec53c98f09b537e4f43dd7c0f1ae77

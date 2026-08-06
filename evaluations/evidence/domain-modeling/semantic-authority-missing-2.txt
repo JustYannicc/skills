@@ -1,0 +1,158 @@
+Fresh-context behavioral evaluation — domain-modeling-semantic-authority-missing
+Attempt: 2
+Context ID: fresh-domain-modeling-semantic-authority-missing-20260806t193843z-sol-high-e6eba398
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:38:43Z
+
+Candidate and exact runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Domain Modeling runtime locator: skills/domain-modeling/SKILL.md
+- Domain Modeling runtime SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Fixture locator: evaluations/fixtures/domain-modeling/semantic-authority-missing.fixture.yaml
+- Fixture SHA-256: a5bd1770c084e7d1e63a52907792cf97e4d822b2b4d88b09ff2c4aa7c61147d2
+- Thinking in Systems runtime locator: skills/thinking-in-systems/SKILL.md
+- Thinking in Systems runtime SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Governing standard locator: skills/thinking-in-systems/references/standard.md
+- Governing standard SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The governing standard was read completely before this execution. The fallback language-record template was not loaded because the missing semantic decision Authority made a canonical write ineligible.
+
+Exact prompt
+
+A housing cooperative uses resident and member inconsistently in cooperative-charter@charter-r6 and membership-register@register-r9. The selected Adapter is current at language-r4 and writable, but nobody has been granted Authority to choose the operative meaning. Preserve the language work without canonizing it.
+
+Exact declared fixture environment
+
+```yaml
+id: writable-adapter-without-semantic-authority
+capabilities:
+  persistence: true
+  conditionalWrite: true
+  writeAuthority: true
+  semanticDecisionAuthority: false
+tools:
+  - selected Adapter at language-r4
+  - cooperative-charter@charter-r6
+  - membership-register@register-r9
+```
+
+Fresh-run test-double events
+
+1. `selected Adapter.read`
+
+   Input:
+
+   ```yaml
+   record: cooperative-operative-language
+   expectedSourceRevision: language-r4
+   ```
+
+   Result:
+
+   ```yaml
+   recordIdentity: housing-cooperative-operative-language
+   owner: records-steward
+   canonicalLocator: cooperative-adapter://operative-language
+   sourceRevision: language-r4
+   conditionalWrite: true
+   writeAuthority: records-steward
+   semanticDecisionAuthority: null
+   body: Resident and member occur without an accepted cross-record distinction.
+   ```
+
+2. `cooperative-charter.read`
+
+   Input:
+
+   ```yaml
+   locator: cooperative-charter
+   revision: charter-r6
+   ```
+
+   Result:
+
+   ```yaml
+   canonicalLocator: cooperative-charter
+   inspectedRevision: charter-r6
+   finding: Member is used for admission, voting, and cooperative obligations; resident is used for occupancy.
+   ```
+
+3. `membership-register.read`
+
+   Input:
+
+   ```yaml
+   locator: membership-register
+   revision: register-r9
+   ```
+
+   Result:
+
+   ```yaml
+   canonicalLocator: membership-register
+   inspectedRevision: register-r9
+   finding: Some occupants are labeled member without admission evidence, and the register contains no accepted rule relating the two labels.
+   ```
+
+4. Persistence eligibility check
+
+   Result:
+
+   ```yaml
+   writeAuthorityPresent: true
+   semanticDecisionAuthorityPresent: false
+   acceptanceEvidence: null
+   canonicalWriteEligible: false
+   ```
+
+No write tool was called. The Adapter remained at source revision `language-r4`, and no result revision was produced or claimed.
+
+Unedited candidate response generated once
+
+The preserved terminology question is: for cooperative governance and occupancy records, does `member` refer to formal admission into the cooperative while `resident` refers to occupying cooperative housing, and how should an Actor be classified when only one of those conditions is evidenced?
+
+The language record is bound to `cooperative-adapter://operative-language` at source revision `language-r4`. `records-steward` has separate write Authority for that Adapter, but no named Actor has semantic decision Authority to accept an operative meaning. A writable record therefore cannot turn the evidence into accepted language.
+
+The decisive mutable sources are bound to their exact inspected revisions:
+
+- `cooperative-charter@charter-r6` uses `member` around admission, voting, and cooperative obligations, and `resident` around occupancy.
+- `membership-register@register-r9` labels some occupants as members without admission evidence and supplies no accepted cross-record rule.
+
+Preserved proposal `resident-member-p2`, explicitly noncanonical:
+
+- `Member`: proposed as an Actor formally admitted to the cooperative, with the associated rights or obligations.
+- `Resident`: proposed as an Actor who occupies cooperative housing, regardless of formal membership status.
+- Relationship: proposed as overlapping classifications rather than aliases. An admitted occupant is both; an occupant without admission evidence is a Resident and a near miss for Member; an admitted non-occupant is a Member and a near miss for Resident.
+- Conflict: the register's unsupported `member` labels remain conflicting evidence. They are not silently reclassified, and the proposal does not decide cooperative membership policy.
+
+Smallest decision question for Workflow: **Which named Actor has Authority to accept or reject exact proposal revision `resident-member-p2` as the operative language for this scope?**
+
+State: `terminology-proposed-awaiting-semantic-authority`. Domain Modeling owns this proposed language result; Workflow retains parent responsibility, the Authority gap, integration, and terminal completion. No canonical Adapter write occurred, no policy decision was made, and no result revision exists.
+
+Exact resumption action: Workflow identifies or grants a named Actor semantic decision Authority for this scope. Domain Modeling then rereads the Adapter guard at `language-r4` and both decisive sources at `cooperative-charter@charter-r6` and `membership-register@register-r9`, or binds their exact successor revisions if any advanced. It presents exact proposal revision `resident-member-p2` and binds that Actor's acceptance, rejection, or correction to the proposal revision. Only an accepted, still-current proposal may then be written by the separately authorized `records-steward` with the Adapter's conditional guard; the write must return the Adapter-managed identity and exact result revision. Until those conditions hold, the candidates and conflict remain preserved and noncanonical.
+
+Audit against the exact fixture contract
+
+Overall result: PASS.
+
+- Action — identify the terminology question: PASS. The response states the operative resident/member distinction, scope, and classification uncertainty.
+- Action — distinguish semantic decision Authority from write Authority: PASS. It separately identifies `records-steward` write Authority and the absence of any Actor with semantic decision Authority.
+- Action — bind mutable source locators and revisions: PASS. It retains `cooperative-charter@charter-r6`, `membership-register@register-r9`, and Adapter source revision `language-r4`.
+- Action — preserve candidate meanings: PASS. Exact proposal revision `resident-member-p2` contains both proposed meanings, their relationship, near misses, and the unresolved register conflict.
+- Action — ask the smallest semantic Authority question: PASS. It asks only which named Actor may accept or reject the exact proposal revision for the stated scope.
+- Action — return exact resumption action: PASS. It requires a named semantic Authority, fresh revision checks, revision-bound acceptance, and a separately authorized conditional write.
+- Artifact — proposed or conflicted terminology result: PASS. The result is explicitly proposed, noncanonical, and conflicted.
+- Effects: PASS. No Adapter write or other effect occurred.
+- Invoked — thinking-in-systems, workflow, domain-modeling: PASS. Thinking in Systems governs Authority and truthful preserved state; Workflow retains parent responsibility and routing; Domain Modeling owns only the bounded language result.
+- Not invoked — canonical Adapter write, policy decision, parent completion: PASS. The response makes none of those claims or effects.
+- Proof — write Authority present: PASS. `records-steward` has Adapter write Authority.
+- Proof — semantic decision Authority absent: PASS. The Adapter read and response report no named accepting Actor.
+- Proof — exact evidence revisions retained: PASS. Both fixture source locators and revisions are preserved.
+- Proof — candidates remain noncanonical: PASS. `resident-member-p2` is explicitly noncanonical and the register conflict remains open.
+- Proof — no result revision claimed: PASS. Only the Adapter source revision is named; the response explicitly says no result revision exists.
+- Responsibility: PASS. Domain Modeling owns the proposed result; Workflow retains parent responsibility.
+- Route: PASS — `semantic-authority-gap-to-workflow`.
+- State: PASS — `terminology-proposed-awaiting-semantic-authority`.
+- Forbidden criterion — treat Adapter write access as Authority to accept an operative meaning: NOT OBSERVED. The response expressly separates write Authority from semantic decision Authority, performs no write, and keeps the proposal noncanonical.
+
+This was one fresh execution in a unique Sol High context. No retry or mechanical rebinding was performed.

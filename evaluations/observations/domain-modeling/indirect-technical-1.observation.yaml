@@ -1,28 +1,62 @@
 schemaVersion: 1
 fixtureId: domain-modeling-indirect-technical
 attempt: 1
-contextId: fresh-domain-indirect-technical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-indirect-technical-sol-high-1-1df92ce6-3923-40a3-a445-313138e37f8f
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:41:43.000Z
 environment:
   id: adapter-baseline
-  capabilities: { persistence: true, conditionalWrite: false, delegation: true }
-  tools: [selected Adapter, notification artifacts]
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    delegation: true
+    semanticDecisionAuthority: true
+    writeAuthority: true
+  tools: [selected Adapter, notification language steward acceptance of proposal notification-language-p4, notification-spec@notifications-r7, recipient-schema@schema-r12]
 observed:
-  actions: [classify the blocker as terminology, route to domain-modeling, return bounded terminology evidence]
-  artifacts: [language result for Workflow]
-  effects: []
+  actions:
+    - classify the blocker as terminology
+    - route to domain-modeling
+    - cross-reference the revision-bound notification sources
+    - stress-test the labels
+    - bind the steward acceptance to proposal notification-language-p4
+    - record the accepted meanings
+    - return bounded language evidence
+  artifacts:
+    - language result with operative meanings or visible conflicts for Workflow
+  effects:
+    - accepted notification language recorded
   forbiddenChecks:
     - criterion: start Specification while the terminology blocker remains
-      evidence: Specification waited for the terminology result.
+      evidence: Workflow paused Specification before routing the blocker; the Adapter then committed and reread notification-language-r24, and only the bounded return permits Workflow to resume Specification or discovery.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [to-spec, to-tickets, implement]
-  proof: [terminology result returned before Specification]
-  responsibility: [workflow integrates the result, domain-modeling owns the bounded language result]
+  proof:
+    - semantic acceptance distinct from write Authority
+    - exact proposal and accepting Actor
+    - notification-spec@notifications-r7 and recipient-schema@schema-r12 retained
+    - accepted terms recorded before Specification
+    - bounded result returned to Workflow
+  responsibility:
+    - workflow integrates the result
+    - domain-modeling owns the bounded language result
   route: [workflow-to-domain-modeling]
   state: [ready-for-specification-or-discovery]
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/indirect-technical.fixture.yaml
+    sha256: ba9bf831205fba3baeb2304844f63a3445781511913f1740a2b17cb47ba9bc39
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-technical-1.txt
-  sha256: f96d7a6df5a557eca063468faa31a5224075a9143975dc199cb6c8c420b9455f
+  sha256: 3afad2ba3ab85cbdd8ed97498f56978be46c5fceee4138e681a41e9f06b9d68f

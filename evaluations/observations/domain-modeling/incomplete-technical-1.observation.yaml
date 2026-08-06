@@ -1,28 +1,59 @@
 schemaVersion: 1
 fixtureId: domain-modeling-incomplete-technical
 attempt: 1
-contextId: fresh-domain-incomplete-technical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-incomplete-technical-20260806t194122z-sol-high-e7c8616c
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:41:22.000Z
 environment:
   id: adapter-missing-source
-  capabilities: { persistence: true, conditionalWrite: true }
+  capabilities:
+    persistence: true
+    conditionalWrite: true
   tools: [selected Adapter]
 observed:
-  actions: [preserve the terminology request, identify the missing scope or source, ask one discriminating question]
-  artifacts: [visible unresolved terminology entry]
+  actions:
+    - preserve the terminology request
+    - identify the missing lifecycle and authoritative source
+    - ask the smallest discriminating question
+  artifacts:
+    - visible unresolved terminology entry
   effects: []
   forbiddenChecks:
     - criterion: invent an active-session definition
-      evidence: The entry stayed unresolved pending a source and lifecycle boundary.
+      evidence: The response keeps the operative meaning unresolved and supplies no lifecycle state, timeout, token condition, database flag, activity event, termination condition, retention rule, or other operative definition.
       observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [architecture decision, code change, research]
-  proof: [missing source recorded, exact next question returned]
-  responsibility: [workflow retains responsibility while terminology is unresolved]
-  route: [ask-one-discriminating-question]
-  state: [terminology-unresolved]
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - architecture decision
+    - code change
+    - research
+  proof:
+    - unresolved meaning recorded without invention
+    - missing source recorded
+    - exact next question returned
+  responsibility:
+    - workflow retains responsibility while terminology is unresolved
+  route:
+    - ask-one-discriminating-question
+  state:
+    - terminology-unresolved
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/incomplete-technical.fixture.yaml
+    sha256: 320e0a72b8699117f1408ffa0bbe4156373cc2c13295bc9caeb661bb48657c9b
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/incomplete-technical-1.txt
-  sha256: 456ab232a4fee929ef24abae89fa295cc02e8227b91a6901680304586d1118d2
+  sha256: 5a9d2551ec1884e4052d4f03760ca30660eec3c624e668daf1b57e8e29ad1bf8

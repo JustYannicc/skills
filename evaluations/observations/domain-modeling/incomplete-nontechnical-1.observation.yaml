@@ -1,28 +1,59 @@
 schemaVersion: 1
 fixtureId: domain-modeling-incomplete-nontechnical
 attempt: 1
-contextId: fresh-domain-incomplete-nontechnical-1
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-incomplete-nontechnical-20260806t194205z-sol-high-5d56d96d
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:42:05.000Z
 environment:
   id: adapter-missing-source
-  capabilities: { persistence: true, conditionalWrite: true }
+  capabilities:
+    persistence: true
+    conditionalWrite: true
   tools: [selected Adapter]
 observed:
-  actions: [preserve the terminology request, identify the missing scope or source, ask one discriminating question]
-  artifacts: [visible unresolved terminology entry]
+  actions:
+    - preserve the terminology request
+    - identify the missing scope and authoritative source
+    - ask the smallest discriminating question
+  artifacts:
+    - visible unresolved terminology entry
   effects: []
   forbiddenChecks:
     - criterion: invent an urgent threshold or policy
-      evidence: The entry stayed unresolved pending an owner and example.
+      evidence: The response records that no threshold, deadline, priority, escalation rule, example, or other policy meaning is proposed or accepted.
       observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [policy decision, scheduling, execution]
-  proof: [missing source recorded, exact next question returned]
-  responsibility: [workflow retains responsibility while terminology is unresolved]
-  route: [ask-one-discriminating-question]
-  state: [terminology-unresolved]
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - policy decision
+    - scheduling
+    - execution
+  proof:
+    - unresolved meaning recorded without invention
+    - missing source recorded
+    - exact next question returned
+  responsibility:
+    - workflow retains responsibility while terminology is unresolved
+  route:
+    - ask-one-discriminating-question
+  state:
+    - terminology-unresolved
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/incomplete-nontechnical.fixture.yaml
+    sha256: 5fd8674643ecddb1eaef51881e21b806c4571b472eb3c7bdb6901232e70ae860
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/incomplete-nontechnical-1.txt
-  sha256: 87d093fdc2c4f822b22789338e175cec8a132afc47a8e2ece9eadb0a90f0c98b
+  sha256: 624e5f8c70024216af753fddc190ef7ba48cc269538bff165881f538946771a7

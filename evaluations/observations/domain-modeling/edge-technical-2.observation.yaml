@@ -1,28 +1,64 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 2
-contextId: fresh-domain-edge-technical-2
-suiteRevision: git:94bece28de55b79f5ae36802143b62c39c63c76f
-evaluator: issue-16-fresh-context
-recordedAt: 2026-08-04T20:35:00.000Z
+contextId: fresh-domain-modeling-edge-technical-sol-high-2-f3862197-d169-4ea1-ac10-b17e879c9481
+suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T19:38:25Z
 environment:
-  id: adapter-stale-revision
-  capabilities: { persistence: true, conditionalWrite: true, writeAuthority: false, batchWrite: false }
-  tools: [selected Adapter, API and process artifacts]
+  id: native-adapter-stale-decisive-evidence
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    batchWrite: false
+    semanticDecisionAuthority: true
+    writeAuthority: true
+    nativeLanguageRecord: true
+  tools: [selected Adapter with native language-record shape, language steward acceptance for proposal p3, API and process artifacts at r9 and r10]
 observed:
-  actions: [surface the conflicting meanings, preserve both contexts, report stale revision, report missing write Authority, ask the authority question, return exact next action to Workflow]
-  artifacts: [conflict and recovery evidence, continuation action]
+  actions:
+    - bind mutable artifact locators and revisions
+    - cross-reference the glossary and observed behavior
+    - detect the decisive source advance
+    - invalidate acceptance based on r9
+    - preserve both contexts as proposed or conflicted
+    - return exact resumption action to Workflow
+  artifacts:
+    - source-bound conflict and recovery evidence
+    - continuation action
   effects: []
   forbiddenChecks:
-    - criterion: overwrite the canonical language record after a stale revision
-      evidence: The Adapter rejected the stale write and retained both candidates.
+    - criterion: write the canonical language record from stale decisive evidence
+      evidence: The fresh Adapter test double received zero conditional-write and write calls; the native representation, content digest, and source/result revision remained unchanged at catalog-language-record/v4, sha256:5280264213355644a12e92b976d2c91b28f4cb113f77bc24ef3ebaf4a08a1724, and language-r44.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [code edit, architecture decision, forced overwrite]
-  proof: [stale revision bound, authority gap recorded, both meanings retained, exact continuation action, recovery next check]
-  responsibility: [workflow retains parent responsibility]
-  route: [terminology-conflict-recovery]
-  state: [terminology-conflicted-and-waiting-for-authority]
+  notInvoked: [code edit, architecture decision, canonical Adapter write]
+  proof:
+    - proposal p3 remains bound to artifacts-r9
+    - current evidence revision is artifacts-r10
+    - stale acceptance invalidated
+    - both meanings retained
+    - native representation unchanged
+    - exact resumption action
+  responsibility:
+    - workflow retains parent responsibility
+  route:
+    - terminology-conflict-recovery
+  state:
+    - terminology-conflicted-and-waiting-for-current-evidence
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-2.txt
-  sha256: 9aaa71c117cf6963adfc5ea2e704995dca75fb097536c0ab4951fa1a17479934
+  sha256: f762e923a04fa662a67a701ba20a0d2df62ec4fe698c3a798b7a81ca0d08ebe1
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/edge-technical.fixture.yaml
+    sha256: de16cfc724438b22ad1f20572f05bb1a75c5f86938f1c7a34d6e74246891f6fc
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377

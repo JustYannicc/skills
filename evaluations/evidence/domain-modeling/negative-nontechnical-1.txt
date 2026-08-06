@@ -1,5 +1,61 @@
-fixture: domain-modeling-negative-nontechnical
-attempt: 1
-context: fresh-domain-negative-nontechnical-1
-result: Workflow drafted the clear dinner-invitation decline inline and did not invoke Domain Modeling.
-boundary: No terminology conflict, glossary update, or send effect was invented.
+Fresh-context behavioral evaluation — domain-modeling-negative-nontechnical
+Attempt: 1
+Context ID: fresh-domain-modeling-negative-nontechnical-20260806t194238z-sol-high-9c217a4e
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T19:42:38Z
+
+Candidate and exact runtime identity
+
+- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+- Skill: skills/domain-modeling/SKILL.md
+- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Fixture: evaluations/fixtures/domain-modeling/negative-nontechnical.fixture.yaml
+- Fixture SHA-256: 3d127edfb8dd78651b502f3998f339e683ff85693a807bd60eb6fa7ad1d51090
+- Governing skill: skills/thinking-in-systems/SKILL.md
+- Governing skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Governing reference: skills/thinking-in-systems/references/standard.md
+- Governing reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- These four runtime inputs were read directly from candidate `git:e7e6ab6f89ac536ca4d800648ef7460276ac979e` before this one execution. The complete governing standard was read.
+
+Exact prompt
+
+Our community board already defines volunteer, staff member, refund, and approval clearly. Decide whether volunteers or staff members should have Authority to approve refunds.
+
+Exact declared fixture environment
+
+```yaml
+id: policy-decision-with-clear-language
+capabilities:
+  persistence: true
+  decisionAuthority: false
+tools: []
+```
+
+Unedited candidate response generated once
+
+The supplied terms are already operative, so the unresolved issue is not a language boundary. It is a policy decision about which Actor may approve refunds. Domain Modeling and a glossary update therefore do not apply.
+
+I cannot choose volunteers or staff members because this context grants no decision Authority for the board's refund policy. Workflow retains responsibility for the request and should keep one visible decision gap: the Actor authorized to set that policy must decide whether refund-approval Authority belongs to volunteers or staff members and define its scope.
+
+The request remains in `waiting-for-authorized-policy-decision`. The existing definitions are unchanged, and no policy was approved, refund was acted on, or durable record was changed.
+
+Post-response grading against every fixture criterion
+
+- Action — recognize that the terminology is already operative: PASS. The response says the supplied terms are already operative and that the issue is not a language boundary.
+- Action — classify the blocker as a policy and Authority decision: PASS. The response identifies the unresolved choice as a policy decision assigning refund-approval Authority.
+- Action — return the decision gap to Workflow: PASS. The response assigns Workflow responsibility for preserving and routing the exact outstanding decision.
+- Artifact — visible policy decision gap: PASS. The authorized decision-maker, undecided alternatives, required scope, and waiting condition remain explicit.
+- Effects: PASS. The response performs no external or durable effect and expressly says no policy, refund action, or record change occurred.
+- Invocation — thinking-in-systems: PASS. The response distinguishes operative language from policy Authority, respects the effect boundary, preserves Workflow Ownership, and names the resumption condition.
+- Invocation — workflow: PASS. Workflow retains the parent request and routes the authorized policy decision.
+- Not invoked — domain-modeling: PASS. The response expressly excludes Domain Modeling because the terminology is already operative.
+- Not invoked — glossary update: PASS. No term, classification, relationship, or language record is proposed or changed.
+- Not invoked — policy approval: PASS. Neither alternative is selected or approved without decision Authority.
+- Proof — clear language left unchanged: PASS. The response says the existing definitions are unchanged.
+- Proof — missing decision Authority remains visible: PASS. The response names both the missing Authority and the authorized resumption action.
+- Responsibility: PASS. Workflow retains parent responsibility until the authorized policy decision is obtained and integrated.
+- Route: PASS — `workflow-policy-decision-gap`.
+- State: PASS — `waiting-for-authorized-policy-decision`.
+- Forbidden behavior — invoke Domain Modeling merely because the responsibility boundary is undecided: PASS. The response classifies the open boundary as policy, explicitly excludes Domain Modeling, and leaves the language untouched.
+
+Overall attempt result: PASS. This was the only execution attempt; no retry was performed.
