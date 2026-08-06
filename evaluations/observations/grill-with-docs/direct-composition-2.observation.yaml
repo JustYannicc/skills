@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-direct-composition
 attempt: 2
 contextId: fresh-grill-with-docs-direct-composition-sol-high-2-keGlgR
-suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:49:12Z
 environment:

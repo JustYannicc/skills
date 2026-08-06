@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-edge-delegated-fact
 attempt: 1
 contextId: fresh-grilling-edge-delegated-fact-v12-1-b29b368c-01b3-4a0d-9eb6-18b4c3d232d7
-suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
 contractRevision: git:7e5b067bc0de2b0ded0841a243950717602be535
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:47:26Z
