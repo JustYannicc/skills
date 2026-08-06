@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-partial-sequential-write
 title: Independent sequential entries preserve partial commit recovery
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [nontechnical]

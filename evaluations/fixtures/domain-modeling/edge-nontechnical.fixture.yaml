@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-edge-nontechnical
 title: Conflicting nontechnical meanings and missing authority remain visible
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [nontechnical]

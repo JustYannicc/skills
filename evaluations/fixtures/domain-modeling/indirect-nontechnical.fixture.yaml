@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-indirect-nontechnical
 title: Workflow routes a nontechnical terminology blocker
+skill: domain-modeling
 shape: indirect
 kind: routing
 domains: [nontechnical]

@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-supplemental-required-unavailable
 title: Unavailable required Supplemental blocks durable completion
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [nontechnical]

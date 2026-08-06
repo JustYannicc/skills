@@ -304,15 +304,20 @@ describe("evaluation suite", () => {
         systemReferenceDirectory,
       ].map((directory) => mkdir(directory, { recursive: true }))
     );
-    const evidence = "fresh Domain Modeling response\n";
     const domainSkill = "# Domain Modeling\n\nEstablish shared language.\n";
     const systemSkill = "# Thinking in Systems\n\nRead the standard.\n";
     const systemStandard = "# Standard\n\nDefine System relationships.\n";
-    const fixture = fixtureYaml("direct", "Major", 1).replaceAll(
-      "foundation-direct",
-      "domain-modeling-direct"
+    const fixture = fixtureYaml("direct", "Major", 1).replace(
+      "id: foundation-direct",
+      "id: language-direct\nskill: domain-modeling"
     );
-    await writeFile(path.join(evidenceDirectory, "direct.txt"), evidence);
+    const evidence = `Candidate: ${candidateIdentity.revision}
+Runtime: skills/domain-modeling/SKILL.md ${sha256(domainSkill)}
+Fixture: evaluations/fixtures/domain-modeling/direct.fixture.yaml ${sha256(fixture)}
+Governing skill: skills/thinking-in-systems/SKILL.md ${sha256(systemSkill)}
+Governing reference: skills/thinking-in-systems/references/standard.md ${sha256(systemStandard)}
+Response: fresh Domain Modeling response
+`;
     await writeFile(path.join(domainSkillDirectory, "SKILL.md"), domainSkill);
     await mkdir(path.join(root, "skills", "thinking-in-systems"), {
       recursive: true,
@@ -329,12 +334,13 @@ describe("evaluation suite", () => {
       path.join(fixtureDirectory, "direct.fixture.yaml"),
       fixture
     );
-    const boundObservation = `${observationYaml("direct", sha256(evidence))
-      .replaceAll("foundation-direct", "domain-modeling-direct")
-      .replaceAll(
-        "evaluations/evidence/direct.txt",
-        "evaluations/evidence/domain-modeling/direct.txt"
-      )}runtimeInputs:
+    const observationFor = (rawEvidence: string): string =>
+      `${observationYaml("direct", sha256(rawEvidence))
+        .replaceAll("foundation-direct", "language-direct")
+        .replaceAll(
+          "evaluations/evidence/direct.txt",
+          "evaluations/evidence/domain-modeling/direct.txt"
+        )}runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md
     sha256: ${sha256(domainSkill)}
@@ -348,6 +354,8 @@ describe("evaluation suite", () => {
     locator: skills/thinking-in-systems/references/standard.md
     sha256: ${sha256(systemStandard)}
 `;
+    const boundObservation = observationFor(evidence);
+    await writeFile(path.join(evidenceDirectory, "direct.txt"), evidence);
     await writeFile(
       path.join(observationDirectory, "direct.observation.yaml"),
       boundObservation
@@ -357,15 +365,16 @@ describe("evaluation suite", () => {
       candidateIdentity,
       requireShapeCoverage: false,
     });
-    expect(bound.findings).toStrictEqual([]);
-    expect(bound.report.fixtures[0]?.evidence[0]?.runtimeInputs).toHaveLength(
-      4
-    );
+    expect({
+      findings: bound.findings,
+      runtimeInputs:
+        bound.report.fixtures[0]?.evidence[0]?.runtimeInputs?.length,
+    }).toStrictEqual({ findings: [], runtimeInputs: 4 });
 
     await writeFile(
       path.join(observationDirectory, "direct.observation.yaml"),
       observationYaml("direct", sha256(evidence))
-        .replaceAll("foundation-direct", "domain-modeling-direct")
+        .replaceAll("foundation-direct", "language-direct")
         .replaceAll(
           "evaluations/evidence/direct.txt",
           "evaluations/evidence/domain-modeling/direct.txt"
@@ -389,6 +398,43 @@ describe("evaluation suite", () => {
       boundObservation
     );
 
+    const staleTranscript = `Candidate: git:${"b".repeat(40)}
+Runtime: skills/domain-modeling/SKILL.md ${"b".repeat(64)}
+Response: stale Domain Modeling response
+`;
+    await writeFile(
+      path.join(evidenceDirectory, "direct.txt"),
+      staleTranscript
+    );
+    await writeFile(
+      path.join(observationDirectory, "direct.observation.yaml"),
+      observationFor(staleTranscript)
+    );
+    const rebound = await validateEvaluations(root, {
+      candidateIdentity,
+      requireShapeCoverage: false,
+    });
+    expect({
+      failed: rebound.report.summary.failed,
+      hasRawRevisionFinding: rebound.findings.some(
+        (finding) =>
+          finding.check === "runtime-evidence" &&
+          finding.message.includes("does not name its suite revision") &&
+          finding.severity === "Critical"
+      ),
+      status: rebound.report.fixtures[0]?.status,
+    }).toStrictEqual({
+      failed: 1,
+      hasRawRevisionFinding: true,
+      status: "failed",
+    });
+
+    await writeFile(path.join(evidenceDirectory, "direct.txt"), evidence);
+    await writeFile(
+      path.join(observationDirectory, "direct.observation.yaml"),
+      boundObservation
+    );
+
     await writeFile(
       path.join(domainSkillDirectory, "SKILL.md"),
       "# Domain Modeling\n\nChanged runtime.\n"
@@ -397,13 +443,20 @@ describe("evaluation suite", () => {
       candidateIdentity,
       requireShapeCoverage: false,
     });
-    expect(stale.findings).toContainEqual(
-      expect.objectContaining({
-        check: "runtime-evidence",
-        file: "skills/domain-modeling/SKILL.md",
-        message: expect.stringContaining("runtime input hash does not match"),
-        severity: "Critical",
-      })
-    );
+    expect({
+      failed: stale.report.summary.failed,
+      hasRuntimeHashFinding: stale.findings.some(
+        (finding) =>
+          finding.check === "runtime-evidence" &&
+          finding.file === "skills/domain-modeling/SKILL.md" &&
+          finding.message.includes("runtime input hash does not match") &&
+          finding.severity === "Critical"
+      ),
+      status: stale.report.fixtures[0]?.status,
+    }).toStrictEqual({
+      failed: 1,
+      hasRuntimeHashFinding: true,
+      status: "failed",
+    });
   });
 });

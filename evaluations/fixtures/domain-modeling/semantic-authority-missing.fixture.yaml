@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-semantic-authority-missing
 title: Adapter write access cannot accept an operative meaning
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [nontechnical]

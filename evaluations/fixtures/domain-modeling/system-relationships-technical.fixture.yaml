@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-system-relationships-technical
 title: System relationships retain Thinking in Systems meanings
+skill: domain-modeling
 shape: edge
 kind: invocation
 domains: [technical]

@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-indirect-technical
 title: Workflow routes a technical terminology blocker
+skill: domain-modeling
 shape: indirect
 kind: routing
 domains: [technical]

@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-edge-technical
 title: Native Adapter refuses terminology based on stale decisive evidence
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [technical]

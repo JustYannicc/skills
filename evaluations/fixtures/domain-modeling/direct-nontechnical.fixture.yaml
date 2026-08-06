@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-direct-nontechnical
 title: Direct nontechnical terminology request records a shared language
+skill: domain-modeling
 shape: direct
 kind: invocation
 domains: [nontechnical]

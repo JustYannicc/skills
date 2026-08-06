@@ -14,17 +14,22 @@ import type {
   FindingSeverity,
 } from "./evaluation-contracts.ts";
 import { evaluateFixture } from "./evaluation-runner.ts";
-import type { EvaluationReport } from "./evaluation-runner.ts";
+import type {
+  EvaluationFinding,
+  EvaluationReport,
+} from "./evaluation-runner.ts";
 import { listFiles } from "./filesystem.ts";
 import { findPublicBoundaryViolations } from "./public-boundary.ts";
 import { resolveCandidateIdentity } from "./repository-identity.ts";
 import type { CandidateIdentity } from "./repository-identity.ts";
 
 export interface SuiteFinding {
+  attempt?: number;
   check: string;
   severity: FindingSeverity;
   message: string;
   file?: string;
+  fixtureId?: string;
 }
 
 export interface EvaluationSuiteReport {
@@ -130,8 +135,10 @@ const verifyRawEvidence = async (
         if (!lexicalContainment) {
           return [
             {
+              attempt: observation.attempt,
               check: "raw-evidence",
               file: reference.locator,
+              fixtureId: observation.fixtureId,
               message: `${reference.kind} for ${observation.fixtureId} escapes the repository.`,
               severity: "Critical",
             },
@@ -143,8 +150,10 @@ const verifyRawEvidence = async (
           if (!resolvedEvidencePath.startsWith(`${absoluteRoot}${path.sep}`)) {
             return [
               {
+                attempt: observation.attempt,
                 check: "raw-evidence",
                 file: reference.locator,
+                fixtureId: observation.fixtureId,
                 message: `${reference.kind} for ${observation.fixtureId} escapes the repository through a symbolic link.`,
                 severity: "Critical",
               },
@@ -155,16 +164,20 @@ const verifyRawEvidence = async (
             evidence.toString("utf-8")
           ).map(
             (violation): SuiteFinding => ({
+              attempt: observation.attempt,
               check: "raw-evidence",
               file: reference.locator,
+              fixtureId: observation.fixtureId,
               message: `${reference.kind} contains ${violation}.`,
               severity: "Critical",
             })
           );
           if (sha256(evidence) !== reference.sha256) {
             findings.push({
+              attempt: observation.attempt,
               check: "raw-evidence",
               file: reference.locator,
+              fixtureId: observation.fixtureId,
               message: `${reference.kind} hash does not match ${observation.fixtureId} attempt ${observation.attempt}.`,
               severity: "Major",
             });
@@ -173,8 +186,10 @@ const verifyRawEvidence = async (
         } catch {
           return [
             {
+              attempt: observation.attempt,
               check: "raw-evidence",
               file: reference.locator,
+              fixtureId: observation.fixtureId,
               message: `${reference.kind} file is missing for ${observation.fixtureId} attempt ${observation.attempt}.`,
               severity: "Major",
             },
@@ -187,6 +202,10 @@ const verifyRawEvidence = async (
 };
 
 type RuntimeInput = NonNullable<EvaluationObservation["runtimeInputs"]>[number];
+type RuntimeEvidenceFinding = SuiteFinding & {
+  attempt: number;
+  fixtureId: string;
+};
 
 const domainRuntimeRequirements = (
   fixture: EvaluationFixture,
@@ -212,13 +231,15 @@ const verifyRuntimeInput = async (
   absoluteRoot: string,
   observation: EvaluationObservation,
   input: RuntimeInput
-): Promise<SuiteFinding[]> => {
+): Promise<RuntimeEvidenceFinding[]> => {
   const inputPath = path.resolve(root, input.locator);
   if (!inputPath.startsWith(`${path.resolve(root)}${path.sep}`)) {
     return [
       {
+        attempt: observation.attempt,
         check: "runtime-evidence",
         file: input.locator,
+        fixtureId: observation.fixtureId,
         message: `Runtime input for ${observation.fixtureId} escapes the repository.`,
         severity: "Critical",
       },
@@ -230,8 +251,10 @@ const verifyRuntimeInput = async (
     if (!resolvedInputPath.startsWith(`${absoluteRoot}${path.sep}`)) {
       return [
         {
+          attempt: observation.attempt,
           check: "runtime-evidence",
           file: input.locator,
+          fixtureId: observation.fixtureId,
           message: `Runtime input for ${observation.fixtureId} escapes the repository through a symbolic link.`,
           severity: "Critical",
         },
@@ -242,8 +265,10 @@ const verifyRuntimeInput = async (
       ? []
       : [
           {
+            attempt: observation.attempt,
             check: "runtime-evidence",
             file: input.locator,
+            fixtureId: observation.fixtureId,
             message: `Bound runtime input hash does not match ${observation.fixtureId} attempt ${observation.attempt}.`,
             severity: "Critical",
           },
@@ -251,12 +276,55 @@ const verifyRuntimeInput = async (
   } catch {
     return [
       {
+        attempt: observation.attempt,
         check: "runtime-evidence",
         file: input.locator,
+        fixtureId: observation.fixtureId,
         message: `Runtime input file is missing for ${observation.fixtureId} attempt ${observation.attempt}.`,
         severity: "Critical",
       },
     ];
+  }
+};
+
+const verifyRawRuntimeClaims = async (
+  root: string,
+  observation: EvaluationObservation
+): Promise<RuntimeEvidenceFinding[]> => {
+  try {
+    const rawEvidence = await readFile(
+      path.resolve(root, observation.rawEvidence.locator),
+      "utf-8"
+    );
+    const findings: RuntimeEvidenceFinding[] = [];
+    if (!rawEvidence.includes(observation.suiteRevision)) {
+      findings.push({
+        attempt: observation.attempt,
+        check: "runtime-evidence",
+        file: observation.rawEvidence.locator,
+        fixtureId: observation.fixtureId,
+        message: `Raw evidence for ${observation.fixtureId} attempt ${observation.attempt} does not name its suite revision.`,
+        severity: "Critical",
+      });
+    }
+    for (const input of observation.runtimeInputs ?? []) {
+      if (
+        !rawEvidence.includes(input.locator) ||
+        !rawEvidence.includes(input.sha256)
+      ) {
+        findings.push({
+          attempt: observation.attempt,
+          check: "runtime-evidence",
+          file: observation.rawEvidence.locator,
+          fixtureId: observation.fixtureId,
+          message: `Raw evidence for ${observation.fixtureId} attempt ${observation.attempt} does not name its ${input.role} locator and hash.`,
+          severity: "Critical",
+        });
+      }
+    }
+    return findings;
+  } catch {
+    return [];
   }
 };
 
@@ -265,16 +333,16 @@ const verifyRuntimeInputs = async (
   observations: EvaluationObservation[],
   fixtures: EvaluationFixture[],
   fixturePaths: Map<string, string>
-): Promise<SuiteFinding[]> => {
+): Promise<RuntimeEvidenceFinding[]> => {
   const absoluteRoot = await realpath(root);
   const fixtureById = new Map(fixtures.map((fixture) => [fixture.id, fixture]));
-  const findings: SuiteFinding[] = [];
-  const inputVerifications: Promise<SuiteFinding[]>[] = [];
+  const findings: RuntimeEvidenceFinding[] = [];
+  const inputVerifications: Promise<RuntimeEvidenceFinding[]>[] = [];
 
   for (const observation of observations) {
     const inputs = observation.runtimeInputs ?? [];
-    if (observation.fixtureId.startsWith("domain-modeling-")) {
-      const fixture = fixtureById.get(observation.fixtureId);
+    const fixture = fixtureById.get(observation.fixtureId);
+    if (fixture?.skill === "domain-modeling") {
       const fixturePath = fixturePaths.get(observation.fixtureId);
       if (fixture && fixturePath) {
         const requirements = domainRuntimeRequirements(fixture, fixturePath);
@@ -286,7 +354,9 @@ const verifyRuntimeInputs = async (
         ] satisfies RuntimeInput["role"][]) {
           if (inputs.filter((input) => input.role === role).length !== 1) {
             findings.push({
+              attempt: observation.attempt,
               check: "runtime-evidence",
+              fixtureId: observation.fixtureId,
               message: `Domain Modeling observation ${observation.fixtureId} attempt ${observation.attempt} requires exactly one ${role} runtime input.`,
               severity: "Critical",
             });
@@ -299,8 +369,10 @@ const verifyRuntimeInputs = async (
             )
           ) {
             findings.push({
+              attempt: observation.attempt,
               check: "runtime-evidence",
               file: locator,
+              fixtureId: observation.fixtureId,
               message: `Domain Modeling observation ${observation.fixtureId} attempt ${observation.attempt} is missing its ${role} runtime input.`,
               severity: "Critical",
             });
@@ -313,8 +385,10 @@ const verifyRuntimeInputs = async (
     for (const input of inputs) {
       if (seenLocators.has(input.locator)) {
         findings.push({
+          attempt: observation.attempt,
           check: "runtime-evidence",
           file: input.locator,
+          fixtureId: observation.fixtureId,
           message: `Runtime input is duplicated for ${observation.fixtureId} attempt ${observation.attempt}.`,
           severity: "Critical",
         });
@@ -325,6 +399,9 @@ const verifyRuntimeInputs = async (
       inputVerifications.push(
         verifyRuntimeInput(root, absoluteRoot, observation, input)
       );
+    }
+    if (fixture?.skill === "domain-modeling") {
+      inputVerifications.push(verifyRawRuntimeClaims(root, observation));
     }
   }
 
@@ -337,7 +414,8 @@ const buildReport = (
   fixtureContents: Map<string, string>,
   fixturePaths: string[],
   observations: EvaluationObservation[],
-  candidateIdentity: CandidateIdentity
+  candidateIdentity: CandidateIdentity,
+  integrityFindings: SuiteFinding[]
 ): EvaluationSuiteReport => {
   const revisionById = new Map<string, string>();
   for (const fixturePath of fixturePaths) {
@@ -352,10 +430,25 @@ const buildReport = (
   }
 
   const reports = fixtures
-    .map((fixture) => ({
-      ...evaluateFixture(fixture, observations),
-      fixtureRevision: revisionById.get(fixture.id) ?? sha256(fixture.id),
-    }))
+    .map((fixture) => {
+      const report = evaluateFixture(fixture, observations);
+      const fixtureIntegrityFindings: EvaluationFinding[] = integrityFindings
+        .filter((finding) => finding.fixtureId === fixture.id)
+        .map((finding) => ({
+          ...(finding.attempt ? { attempt: finding.attempt } : {}),
+          field: finding.check,
+          message: finding.message,
+          severity: finding.severity,
+        }));
+      const findings = [...report.findings, ...fixtureIntegrityFindings];
+      return {
+        ...report,
+        findings,
+        fixtureRevision: revisionById.get(fixture.id) ?? sha256(fixture.id),
+        status:
+          findings.length === 0 ? ("passed" as const) : ("failed" as const),
+      };
+    })
     .toSorted((left, right) => left.fixtureId.localeCompare(right.fixtureId));
   const evaluatedAt =
     observations
@@ -531,7 +624,8 @@ export const validateEvaluations = async (
     fixtures.contents,
     fixturePaths,
     observations.values,
-    candidateIdentity
+    candidateIdentity,
+    [...rawEvidenceFindings, ...runtimeInputFindings]
   );
   for (const fixtureReport of report.fixtures) {
     for (const finding of fixtureReport.findings) {

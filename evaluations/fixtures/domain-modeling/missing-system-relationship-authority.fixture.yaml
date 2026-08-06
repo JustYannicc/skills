@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-missing-system-relationship-authority
 title: Missing Thinking in Systems authority leaves System relationships unresolved
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [technical]

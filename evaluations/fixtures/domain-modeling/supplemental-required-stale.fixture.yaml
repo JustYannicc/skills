@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-supplemental-required-stale
 title: Required Supplemental terminology evidence remains revision-bound
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [nontechnical]

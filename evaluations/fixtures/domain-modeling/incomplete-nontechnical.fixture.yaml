@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-incomplete-nontechnical
 title: Incomplete nontechnical terminology request asks one discriminating question
+skill: domain-modeling
 shape: incomplete
 kind: invocation
 domains: [nontechnical]

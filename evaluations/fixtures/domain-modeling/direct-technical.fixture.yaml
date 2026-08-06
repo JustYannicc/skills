@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-direct-technical
 title: Direct technical terminology request records a shared language
+skill: domain-modeling
 shape: direct
 kind: invocation
 domains: [technical]

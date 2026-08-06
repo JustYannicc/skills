@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-supplemental-advisory-unavailable
 title: Advisory Supplemental failure does not replace the core criterion
+skill: domain-modeling
 shape: edge
 kind: routing
 domains: [technical]

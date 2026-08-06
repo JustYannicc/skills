@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-negative-nontechnical
 title: An unclear responsibility decision with clear terms does not invoke Domain Modeling
+skill: domain-modeling
 shape: negative
 kind: invocation
 domains: [nontechnical]

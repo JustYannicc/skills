@@ -1,6 +1,7 @@
 schemaVersion: 1
 id: domain-modeling-negative-technical
 title: An unclear architecture boundary with clear terms does not invoke Domain Modeling
+skill: domain-modeling
 shape: negative
 kind: invocation
 domains: [technical]
