@@ -1,0 +1,40 @@
+Upstream v1.2.3 overlay whitespace correction attestation
+Attested at: 2026-08-06T16:03:13Z
+Previous candidate: git:ee509ccdec36762ecc922dd187c4003c40c88a3c
+Corrected candidate: git:f8477701b81620392f6ff5020329f0c4e50d375a
+Pinned upstream: git:6acc160e4e0cd062dbbbd7a1b26ae92855edf07e
+
+This is a revision-binding correction, not a claim that the behavioral runs
+were repeated. The surviving observations retain their original recordedAt
+values, context ids, observed behavior, and raw evidence hashes. Batch Grill Me
+fixtures and observations remain inactive, and its raw historical evidence was
+not rebound as v1.2.3 proof.
+
+Candidate f847770 normalizes blank context lines inside the Grill With Docs and
+Grilling SKILL.md patch records and updates their declared SHA-256 values. The
+intended applied skill outputs are unchanged. No installed Thinking in Systems
+runtime file or surviving evaluation fixture changed.
+
+Applied-output equivalence proof:
+
+  1. Check out the previous patch records from candidate ee509cc.
+  2. Apply the previous Grill With Docs and Grilling patches to one clean clone
+     of the exact pinned upstream.
+  3. Apply the corrected patches to a second clean clone of the same upstream.
+  4. Compare the resulting
+     skills/engineering/grill-with-docs/SKILL.md and
+     skills/productivity/grilling/SKILL.md files byte for byte.
+
+Result: both comparisons exited 0; the applied outputs are identical.
+
+Deterministic correction proof:
+
+  git diff --quiet ee509ccdec36762ecc922dd187c4003c40c88a3c..f8477701b81620392f6ff5020329f0c4e50d375a -- skills/thinking-in-systems
+
+Result: exit 0.
+
+All six active overlay patches also pass ordinary git apply --check against the
+exact pinned upstream. The full repository diff from base commit
+0f6917da79bbd641291b8d23032cb44f71f44e47 through corrected candidate f847770
+passes git diff --check. Any later non-evaluation repository change produces a
+new candidate identity and invalidates these bindings.

@@ -29,3 +29,15 @@ grill-with-docs or wayfinder → to-spec → to-tickets → implement → code-r
 ```
 
 The reusable structure is valuable. The universal version should preserve the progression from uncertainty to an executable contract, decomposition, action, and independent review while allowing domain-specific execution skills at the implementation step.
+
+## 2026-08-06 — v1.2.3 addendum
+
+The current suite pin is [`6acc160e4e0cd062dbbbd7a1b26ae92855edf07e`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e), inspected as upstream v1.2.3. The 2026-08-02 assessment above remains historical evidence for its inspected revision; this addendum records only the later source changes and accepted migration.
+
+The current upstream promotes `to-questionnaire` under `skills/productivity/` rather than `skills/in-progress/`. Its retained questionnaire behavior is unchanged for this suite, and the existing model-invocation overlays now target the promoted paths.
+
+The accepted decision-interview roster replaces the in-progress Batch Grill Me source with two promoted skills. `grilling` owns the design tree, full currently unblocked frontier, dependent-question waiting, user-owned decisions, and final shared-understanding confirmation. Its overlay changes only factual legwork so the agent inspects directly when possible, delegates through an approved capability when useful, and preserves a visible prerequisite gap when neither route is available. `grill-with-docs` remains a small composition skill: its overlay enables model invocation and makes the document path universal by using the selected Adapter while invoking Grilling and Domain Modeling as companion capabilities.
+
+The Research source remains at `skills/engineering/research/SKILL.md`. Its existing capability-aware and Adapter-neutral overlay reapplies unchanged to the new pin.
+
+The upstream authoring authority is now `skills/productivity/writing-for-agents/`. Skill work reads both `SKILL.md` and `SKILL-MECHANICS.md`; the latter owns frontmatter, invocation choice, splitting by invocation, and router mechanics. The authoring profile and repository instructions now install and use that authority instead of Writing Great Skills.

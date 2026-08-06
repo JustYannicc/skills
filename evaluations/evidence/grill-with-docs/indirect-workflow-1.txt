@@ -1,0 +1,57 @@
+Fresh-context execution — grill-with-docs/indirect-workflow, attempt 1
+
+Candidate: `git:1543812281d9addbcda2a39fe339ee79cff07ff8`
+Frozen evaluation contract HEAD: `7e5b067bc0de2b0ded0841a243950717602be535`
+Evaluator: `gpt-5.6-sol-high-fresh-context`
+Context ID: `fresh-gwd-indirect-workflow-1-5b4d64ba-234e-439e-8406-5516ce5eff62`
+Recorded at (UTC): `2026-08-06T16:40:12.000Z`
+Effective runtime worktree: `pinned-runtime-worktree`
+Runtime fingerprints:
+
+- Grill With Docs `SKILL.md`: `2d4c5eea65afba9b3fe0ba56037ed4d837103b2aefab9fe90eaccf3c939b249a`
+- Grill With Docs `agents/openai.yaml`: `4e3ac56fd00c573cf3a1f4b55663627d8be2e4e2d5277b790becc5a1db82d10d`
+- Grilling `SKILL.md`: `6af16209ae3f0554db806a89e1a94641243e6c53b8540d67925545e2b8176ab6`
+- Domain Modeling `SKILL.md`: `152e2c97239affb12a60c5f4a7e74ab546a49ae169688c81f4e2ccc42dafa579`
+
+Environment: `workflow-policy-ephemeral-adapter`; workflow=true, grill-with-docs=true, grilling=true, domain-modeling=true, adapter=ephemeral-records; tools=[ephemeral Adapter read, ephemeral Adapter update, ephemeral Adapter read-back].
+
+## Prompt (exact fixture text)
+
+Workflow has reached an unresolved return-to-office policy design. Use a fresh ephemeral Adapter seeded from evaluations/inputs/grill-with-docs/work-policy-records.json. The two open decisions are which weekdays become anchor days and which role approves policy exceptions. Office-notification timing depends on the anchor-day choice, and exception review cadence depends on the approver. Invoke the bounded capability that grounds the interview in current records, then return the eventual confirmed understanding to Workflow. No term or decision is resolved by this prompt.
+
+## Fixture-sandbox Adapter and tool events
+
+The fresh Adapter copy was `ephemeral-sandbox/gwd-indirect-workflow-1.JWM9sV/work-policy-records.json`, copied from the declared seed solely for this attempt. Adapter events below are fixture-sandbox operations, not external actions.
+
+1. `ephemeral Adapter read` — read `glossary/work-policy` at revision `r4`. Returned bytes: `{"locator":"glossary/work-policy","revision":"r4","terms":{"anchor day":"A weekday when a team is expected to work from its shared site.","policy exception":"A time-bounded departure from the ordinary attendance rule."}}`. Record SHA-256 before response: `a60e2801e4a856e2dcd403ca8b36926062ae92e4dabf01b2641b1263c0ed164b`.
+2. `ephemeral Adapter read` — read `decisions/return-to-office` at revision `r7`. Returned bytes: `{"locator":"decisions/return-to-office","revision":"r7","status":"accepted","summary":"Each team will use common anchor days and a documented exception path."}`. Record SHA-256 before response: `74620d32bd32aef99137e3d7f271dcd7bd2652bd25b1425476462adb4c35a28d`.
+3. `ephemeral Adapter update` — not called. The prompt resolves no term or decision, so neither record was eligible to write.
+4. `ephemeral Adapter read-back` — read `glossary/work-policy` again at revision `r4`. Record SHA-256 after response: `a60e2801e4a856e2dcd403ca8b36926062ae92e4dabf01b2641b1263c0ed164b`; byte-identical to the before-read record.
+5. `ephemeral Adapter read-back` — read `decisions/return-to-office` again at revision `r7`. Record SHA-256 after response: `74620d32bd32aef99137e3d7f271dcd7bd2652bd25b1425476462adb4c35a28d`; byte-identical to the before-read record.
+
+Whole Adapter SHA-256 before: `a841d7de1e04ee48e16e5682f267b1f982b6168c1f01f8727b896e2273ddf161`.
+Whole Adapter SHA-256 after: `a841d7de1e04ee48e16e5682f267b1f982b6168c1f01f8727b896e2273ddf161`.
+
+## Observed response (verbatim; generated once and not edited)
+
+I’ve grounded this round in `glossary/work-policy` at r4 and `decisions/return-to-office` at r7.
+
+❓ **Q1** - **Anchor weekdays**: Which weekdays should become the common anchor days?
+
+➡️ I recommend Tuesday and Wednesday: two adjacent midweek days maximize predictable overlap while leaving Monday and Friday flexible.
+
+❓ **Q2** - **Policy-exception approver**: Which role should approve policy exceptions?
+
+➡️ I recommend the People Operations lead: one policy-owning role can apply the exception standard consistently across teams.
+
+Office-notification timing and exception review cadence remain deferred until their prerequisite decisions are answered. I did not update either Adapter record because no term or decision has been confirmed. This interview is waiting for your frontier answers; Workflow retains parent responsibility and will integrate the eventual confirmed understanding.
+
+## Truthful grade
+
+Result: pass for attempt 1; no retry was run.
+
+- Route and invocation: the response implicitly routes Workflow’s documented policy design through Grill With Docs, using Grilling’s two-question frontier and Domain Modeling’s current glossary and decision records. It does not invoke implementation or parent completion.
+- Frontier: it asks both and only the two supplied open decisions. Each uses the literal numbered-question line followed by a recommendation line. Notification timing and review cadence are explicitly deferred.
+- State and responsibility: the response waits for frontier answers, does not claim shared understanding, and leaves parent responsibility and later integration with Workflow.
+- Effects and artifacts: there were only two real Adapter record reads plus read-backs in the fresh fixture sandbox. No update was called. The glossary remains byte-identical at r4, the decision record remains byte-identical at r7, and the whole Adapter hash is unchanged.
+- Forbidden checks: unresolved language or decisions were not written; Workflow responsibility was not absorbed; shared understanding was not claimed.

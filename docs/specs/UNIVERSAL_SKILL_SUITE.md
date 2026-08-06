@@ -70,24 +70,25 @@ contract owns its meaning until an explicit change revises both.
 
 ### Suite
 
-Implement the accepted 16-skill roster:
+Implement the accepted 17-skill roster:
 
 1. `thinking-in-systems`
 2. `workflow`
 3. `ask-yannic`
 4. `migrate-system`
 5. `domain-modeling`
-6. `batch-grill-me`
-7. `wayfinder`
-8. `research`
-9. `prototype`
-10. `to-questionnaire`
-11. `to-spec`
-12. `to-tickets`
-13. `implement`
-14. `review`
-15. `handoff`
-16. `setup-system-thinking`
+6. `grill-with-docs`
+7. `grilling`
+8. `wayfinder`
+9. `research`
+10. `prototype`
+11. `to-questionnaire`
+12. `to-spec`
+13. `to-tickets`
+14. `implement`
+15. `review`
+16. `handoff`
+17. `setup-system-thinking`
 
 Thinking in Systems supplies governing knowledge. Workflow coordinates the
 parent Outcome. Every other runtime skill owns one bounded phase or guidance
@@ -101,10 +102,11 @@ revision, preserve useful compatible behavior, and rewrite assumptions that
 make it repository-, tracker-, actor-, or software-specific. Record revision,
 license, retained behavior, and changed assumptions per skill.
 
-Install `research`, `batch-grill-me`, and `to-questionnaire` directly from the
-pinned upstream source with deterministic verified overlays. Offer
-`writing-great-skills` unchanged only through the optional authoring profile.
-Do not retain unnecessary full upstream copies.
+Install `research`, `grill-with-docs`, `grilling`, and `to-questionnaire`
+directly from the pinned upstream source with deterministic verified overlays.
+Offer `writing-for-agents`, including `SKILL-MECHANICS.md`, unchanged only
+through the optional authoring profile. Keep upstream behavior linked through
+capability relationships and retain only the declared patches locally.
 
 ### Automatic operation
 
@@ -176,49 +178,53 @@ and maintenance, and removes itself through `skills remove` as its final action.
    automatically so that Workflow does not operate from invented assumptions.
 10. As a user facing unclear language, I want Domain Modeling to establish
     shared meanings before decisions harden.
-11. As a user holding several independent decisions, I want Batch Grilling to
-    cover the current frontier efficiently while dependent questions wait.
-12. As a user facing persistent uncertainty, I want Wayfinder to create an
+11. As a user sharpening a documented plan or design, I want Grill With Docs to
+    compose Grilling and Domain Modeling so shared understanding and current
+    records advance together through the selected Adapter.
+12. As a user holding several independent decisions, I want Grilling to cover
+    the current frontier efficiently while dependent questions wait and every
+    decision remains mine.
+13. As a user facing persistent uncertainty, I want Wayfinder to create an
     operating strategy rather than pretend all fog can disappear.
-13. As a user missing external facts, I want Research to establish them from
+14. As a user missing external facts, I want Research to establish them from
     high-trust primary evidence.
-14. As a user unsure whether a design works, I want one reversible Prototype to
+15. As a user unsure whether a design works, I want one reversible Prototype to
     answer the material question before commitment.
-15. As a user needing another person's knowledge, I want a complete asynchronous
+16. As a user needing another person's knowledge, I want a complete asynchronous
     Questionnaire whose answers return to a clear decision.
-16. As a user with accepted intent, I want a universal Specification that does
+17. As a user with accepted intent, I want a universal Specification that does
     not assume software or invent missing decisions.
-17. As a user coordinating work, I want bounded universal Tickets with explicit
+18. As a user coordinating work, I want bounded universal Tickets with explicit
     dependencies, owners, authority, and proof seams.
-18. As a Work owner, I want Implementation to carry my Ticket through a usable
+19. As a Work owner, I want Implementation to carry my Ticket through a usable
     exact result and evidence without falsely completing Review or the parent.
-19. As a user reviewing any result, including code, I want one universal verdict
+20. As a user reviewing any result, including code, I want one universal verdict
     against the Specification and governing standards.
-20. As an Outcome owner delegating a simple task, I want the child owner to be
+21. As an Outcome owner delegating a simple task, I want the child owner to be
     responsible for its usable result while I remain responsible for integration.
-21. As an Outcome owner waiting on an external event, I want a real continuation
+22. As an Outcome owner waiting on an external event, I want a real continuation
     and resumption mechanism rather than a false claim of monitoring.
-22. As an outgoing owner, I want Handoff to preserve exact continuation and end
+23. As an outgoing owner, I want Handoff to preserve exact continuation and end
     my responsibility only when the successor accepts it.
-23. As an Approver, I want approval bound to the exact revision and rechecked
+24. As an Approver, I want approval bound to the exact revision and rechecked
     before the effect so that later changes cannot inherit stale authority.
-24. As a user asking for an external effect, I want completion proven at the
+25. As a user asking for an external effect, I want completion proven at the
     real effect boundary rather than at draft, submission, or scheduling.
-25. As a user operating a recurring system, I want responsibility governed by
+26. As a user operating a recurring system, I want responsibility governed by
     a horizon, cadence, transfer rule, or cancellation condition.
-26. As a user discovering false completion later, I want history preserved and
+27. As a user discovering false completion later, I want history preserved and
     responsibility reopened rather than the evidence silently rewritten.
-27. As an installer, I want Setup to inspect, preview, apply, teach, verify, and
+28. As an installer, I want Setup to inspect, preview, apply, teach, verify, and
     roll back changes at exactly the scope I selected.
-28. As a user of different agent harnesses, I want Setup to edit the verified
+29. As a user of different agent harnesses, I want Setup to edit the verified
     native instruction surface instead of assuming one filename universally.
-29. As a maintainer, I want every skill attributable to its exact source and
+30. As a maintainer, I want every skill attributable to its exact source and
     revision so that upstream behavior and adaptations remain auditable.
-30. As a maintainer, I want repeatable deterministic and behavioral gates so
+31. As a maintainer, I want repeatable deterministic and behavioral gates so
     that publication reflects observed behavior rather than confidence.
-31. As a maintainer, I want one immutable reviewed release identity so that
+32. As a maintainer, I want one immutable reviewed release identity so that
     installation, evidence, and rollback refer to the same suite.
-32. As a private user, I want global activation performed only after public
+33. As a private user, I want global activation performed only after public
     proof, with private preferences preserved outside the public core.
 
 ## Implementation decisions
@@ -279,7 +285,7 @@ discovery, and one final clean public-source installation.
 
 ## Acceptance criteria
 
-1. All 16 roster skills satisfy their one-job and source-strategy contracts.
+1. All 17 roster skills satisfy their one-job and source-strategy contracts.
 2. Automatic entry applies Thinking in Systems then Workflow on every request
    after Setup, including trivial Inline work.
 3. Universal discovery, Specification, Tickets, implementation, Review,

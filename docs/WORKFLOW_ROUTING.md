@@ -116,16 +116,21 @@ Workflow selects discovery by the uncertainty it must remove:
 | Uncertainty | Capability | Result returned to Workflow |
 | --- | --- | --- |
 | Unclear or conflicting terminology | `domain-modeling` | Operative meanings and visible conflicts |
-| Decisions the user currently holds | `batch-grill-me` | Accepted decisions and remaining frontier |
+| Documented plan or design decisions | `grill-with-docs` | Confirmed shared understanding plus current domain and qualifying decision records |
+| Decisions the user currently holds without a documentation need | `grilling` | Accepted decisions and remaining frontier |
 | Persistent, multi-session, or irreducible fog | `wayfinder` | Durable decision map and operating strategy |
 | Missing external facts | `research` | Cited findings and uncertainty |
 | One empirical design question | `prototype` | Reversible experiment verdict and evidence |
 | Knowledge held by another person | `to-questionnaire` | Complete asynchronous questionnaire and return use |
 
-Wayfinder begins with Domain Modeling and Batch Grilling, then invokes other
-discovery capabilities as needed. Independent discovery may run concurrently;
-dependent questions remain sequential. Workflow integrates every result and
-retains responsibility for its quality and use.
+Grill With Docs invokes Grilling for the design-tree interview and Domain
+Modeling for shared language and qualifying decision records through the
+selected Adapter. These are capability relationships rather than package
+dependencies, so a missing companion remains a visible gap. Wayfinder uses
+Grill With Docs when a documented plan or design is in scope and otherwise
+invokes Domain Modeling and Grilling directly as needed. Independent discovery
+may run concurrently; dependent questions remain sequential. Workflow
+integrates every result and retains responsibility for its quality and use.
 
 ## Active context and delegation
 

@@ -1,10 +1,19 @@
-import { readdir } from "node:fs/promises";
+import { readdir, stat } from "node:fs/promises";
 import path from "node:path";
 
 interface ListFilesOptions {
   excludeDirectories?: ReadonlySet<string>;
   suffix?: string;
 }
+
+export const pathExists = async (filePath: string): Promise<boolean> => {
+  try {
+    await stat(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 export const listFiles = async (
   root: string,
