@@ -1,0 +1,68 @@
+schemaVersion: 1
+fixtureId: grilling-edge-delegated-fact
+attempt: 1
+contextId: fresh-grilling-edge-delegated-fact-v12-1-b29b368c-01b3-4a0d-9eb6-18b4c3d232d7
+suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+contractRevision: git:7e5b067bc0de2b0ded0841a243950717602be535
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:47:26Z
+hashes:
+  fixtureSha256: 9f6bbf92839be82307917e4730702f079819cbfbbdee32736369b5cbc013baf9
+  runtimeSha256: 6af16209ae3f0554db806a89e1a94641243e6c53b8540d67925545e2b8176ab6
+  carrierSourceSha256: 99b3484d119ab6413bf434138693e7bc28be373f7d5b564af620b4f32dfa05e1
+  rawResponseSha256: 7f33e97b1100291217bc9aa2c07752b7d22a0781c7b49c35705346343d932954
+environment:
+  id: warehouse-frontier-with-delegated-fact
+  capabilities:
+    grilling: true
+    direct-environment-inspection: false
+    approved-delegation: true
+  tools: [bounded fixture fact delegation]
+childTrace:
+  id: /root/implement_upstream_v12/eval_grill_delegated/carrier_fact_read
+  boundary: read and hash only evaluations/inputs/grilling/carrier-pickups.json
+  source: evaluations/inputs/grilling/carrier-pickups.json
+  sourceRevision: git:7e5b067bc0de2b0ded0841a243950717602be535
+  recordRevision: 2026-08-01
+  result:
+    weekday: "18:30"
+    saturday: "14:00"
+    sunday: null
+  returnRoute: returned to /root/implement_upstream_v12/eval_grill_delegated for Grilling frontier integration
+  terminal: reported once and stopped
+observed:
+  actions:
+    - delegate only the carrier-pickup file read with its source and return route explicit
+    - hold cutoff-time questions
+    - ask both independent decisions now with recommendations
+    - wait for the user's two decisions
+  artifacts: []
+  effects:
+    - one bounded child fact read
+  forbiddenChecks:
+    - criterion: ask the user for carrier pickup times
+      evidence: The response says it will not ask the user to retrieve the carrier times, and no such question appears.
+      observed: false
+    - criterion: block either independent decision
+      evidence: Both declared independent decisions are asked together in the current round despite the delegated fact prerequisite.
+      observed: false
+    - criterion: ask a cutoff-time question before integrating the fact
+      evidence: The response explicitly holds the cutoff-time branch and asks no cutoff-time question.
+      observed: false
+  invoked: [grilling, approved fact delegation]
+  notInvoked: [implementation]
+  proof:
+    - a real bounded child call and result trace identifies the file revision and hash
+    - the raw response asks exactly the two independent user decisions with one recommendation each
+    - only fact-dependent questions wait
+  responsibility:
+    - Grilling retains the frontier while the user owns decisions and the child result has an explicit return route
+  route: [grilling-frontier-with-fact-legwork]
+  state: [waiting-for-user-decisions-and-fact-integration]
+grading:
+  verdict: pass
+  retry: false
+  rationale: The bounded delegation and current frontier satisfy every expected action and proof requirement without triggering a forbidden behavior.
+rawEvidence:
+  locator: evaluations/evidence/grilling/edge-delegated-fact-1.txt
+  sha256: a3120780b35451b91ddd1e014b24f957a1396bc5d101cb6d059888f136e7d4ca

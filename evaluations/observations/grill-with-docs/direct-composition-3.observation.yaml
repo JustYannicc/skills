@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: grill-with-docs-direct-composition
+attempt: 3
+contextId: fresh-grill-with-docs-direct-composition-3-6wZMVf
+suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:40:51Z
+environment:
+  id: subscription-records-ephemeral-adapter
+  capabilities:
+    grill-with-docs: true
+    grilling: true
+    domain-modeling: true
+    adapter: ephemeral-records
+  tools: [ephemeral Adapter read, ephemeral Adapter update, ephemeral Adapter read-back]
+observed:
+  actions:
+    - read glossary/subscriptions at r1 and decisions/cancellation at r3
+    - update only the confirmed save-window term and read it back at a new revision
+    - ask both and only the two open decisions in the exact Grilling format
+    - defer notification and support questions
+  artifacts:
+    - ephemeral glossary/subscriptions advances from r1 with the confirmed save-window definition
+    - decisions/cancellation remains byte-identical at r3
+  effects: [one confirmed glossary update in the ephemeral Adapter only]
+  forbiddenChecks:
+    - criterion: write an unresolved design decision
+      evidence: The only Adapter update advanced glossary/subscriptions from r1 to r2 and wrote the confirmed save-window definition; neither open decision was written.
+      observed: false
+    - criterion: mutate decisions/cancellation
+      evidence: The canonical decisions/cancellation record hash was cbbbd0b3a3de252cf85e8a2246a7e32a6bd4d9cc39e107aeec5e5e49586abeb7 both before and after the update, proving byte identity at r3.
+      observed: false
+    - criterion: claim shared understanding
+      evidence: The response says it is waiting for the two frontier answers and makes no shared-understanding claim.
+      observed: false
+  invoked: [grill-with-docs, grilling, domain-modeling]
+  notInvoked: [implementation]
+  proof:
+    - real Adapter read-write-read-back events with before and after hashes
+    - every interview question uses the literal Grilling format
+  responsibility: [the requesting context retains responsibility while the interview waits for answers]
+  route: [documented-design-interview]
+  state: [waiting-for-frontier-answers]
+rawEvidence:
+  locator: evaluations/evidence/grill-with-docs/direct-composition-3.txt
+  sha256: 854c26136fa99999203d576d4955fe26fcfa986acd885a99731fb590226809a3

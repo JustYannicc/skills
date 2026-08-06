@@ -1,0 +1,56 @@
+schemaVersion: 1
+fixtureId: grill-with-docs-indirect-workflow
+attempt: 3
+contextId: fresh-gwd-indirect-workflow-sol-high-3-20260806T164152Z
+suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:41:52Z
+environment:
+  id: workflow-policy-ephemeral-adapter
+  capabilities:
+    workflow: true
+    grill-with-docs: true
+    grilling: true
+    domain-modeling: true
+    adapter: ephemeral-records
+  tools: [ephemeral Adapter read, ephemeral Adapter update, ephemeral Adapter read-back]
+observed:
+  actions:
+    - implicitly route from Workflow to Grill With Docs
+    - read glossary/work-policy at r4 and decisions/return-to-office at r7
+    - ask both and only the open decisions in the exact Grilling format
+    - defer notification and review-cadence questions
+  artifacts:
+    - glossary/work-policy remains byte-identical at r4
+    - decisions/return-to-office remains byte-identical at r7
+  effects:
+    - read the two ephemeral Adapter records only
+  forbiddenChecks:
+    - criterion: write unresolved language or decisions
+      evidence: No Adapter update event occurred; whole-file and per-record before/after hashes are identical, and read-back preserved r4 and r7 byte-for-byte.
+      observed: false
+    - criterion: absorb Workflow responsibility
+      evidence: The raw response explicitly says Workflow retains parent responsibility and describes only the bounded documented-design interview state.
+      observed: false
+    - criterion: claim shared understanding
+      evidence: The raw response waits for both frontier answers and conditions the eventual return on resolving the remaining frontier and receiving user confirmation.
+      observed: false
+  invoked:
+    - workflow
+    - grill-with-docs
+    - grilling
+    - domain-modeling
+  notInvoked:
+    - implementation
+    - parent completion
+  proof:
+    - real Adapter read events and before-after hashes show that unresolved records were not written
+  responsibility:
+    - Workflow retains parent responsibility and will integrate the confirmed result
+  route:
+    - workflow-to-documented-design-interview
+  state:
+    - waiting-for-frontier-answers
+rawEvidence:
+  locator: evaluations/evidence/grill-with-docs/indirect-workflow-3.txt
+  sha256: 4651aee45fe3dcab3cef03e50f4875044a7c268ed9afc32631c753372d488a61

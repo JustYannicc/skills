@@ -1,0 +1,33 @@
+Fresh-context execution — grill-with-docs-negative-glossary-read fixture attempt 1
+
+Candidate revision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+Frozen contract checkout: git:7e5b067bc0de2b0ded0841a243950717602be535
+Evaluator: gpt-5.6-sol-high-fresh-context
+Context ID: fresh-gwd-negative-glossary-v12-1-febad68b-dd72-490b-b1eb-c69c2bd17ef9
+Recorded at (UTC): 2026-08-06T16:41:17Z
+
+Effective runtime
+
+- Root: pinned-runtime-worktree
+- Grill With Docs `SKILL.md` sha256: 2d4c5eea65afba9b3fe0ba56037ed4d837103b2aefab9fe90eaccf3c939b249a
+- Grill With Docs `agents/openai.yaml` sha256: 4e3ac56fd00c573cf3a1f4b55663627d8be2e4e2d5277b790becc5a1db82d10d
+- Fixture `evaluations/fixtures/grill-with-docs/negative-glossary-read.fixture.yaml` sha256: a196cdbbe7200507c2f330282235d1104d50bc8d992c1f2607ac88b3da286fc3
+
+Exact prompt
+
+Our policy glossary defines “core hours” as 10:00–15:00 local time. What does “core hours” mean in that glossary? Do not redesign the policy or interview me.
+
+Exact environment
+
+- id: supplied-glossary-definition
+- capabilities: grill-with-docs=true
+- tools: []
+- Runtime effects: disabled; no tool call, Adapter read or update, record creation, or external action was available or performed.
+
+Response — generated once and preserved unedited
+
+In that glossary, “core hours” means 10:00–15:00 local time.
+
+Evaluation result
+
+Pass. The response returns the supplied definition as a bounded inline answer. It does not invoke Grill With Docs, Grilling, or Domain Modeling; start an interview; open a design frontier; or modify or invent a record. The requesting user receives the answer, and the response stops in the answered state.
