@@ -103,7 +103,8 @@ domain without multiplying every skill across every possible domain.
 | `ask-yannic` | Explains the canonical route when explicitly invoked and performs no route. |
 | `migrate-system` | Maps and verifies current state through ordinary Workflow without repairing the represented system. |
 | `domain-modeling` | Resolves operative terminology without absorbing decisions or architecture. |
-| `batch-grill-me` | Exhausts the currently unblocked user-decision frontier while dependent questions wait. |
+| `grill-with-docs` | Composes Grilling and Domain Modeling through the selected Adapter, preserving one documented-design interview job and honest companion gaps. |
+| `grilling` | Exhausts the currently unblocked user-decision frontier while dependent questions wait, user decisions remain user-owned, and shared understanding requires confirmation. |
 | `wayfinder` | Begins with language and grilling, persists a map, and governs reducible or irreducible fog. |
 | `research` | Establishes external facts with primary evidence and capability-aware direct or delegated legwork. |
 | `prototype` | Answers one empirical design question through a reversible cross-domain experiment. |
@@ -190,7 +191,9 @@ The repository exposes one documented validation command. It checks at least:
 - frontmatter, names, descriptions, and invocation policy;
 - `agents/openai.yaml` structure and agreement with `SKILL.md`;
 - local links, context pointers, and disclosed-file reachability;
-- source revisions, licenses, provenance, retained behavior, and overlay hashes;
+- source revisions, licenses, exact central provenance coverage and source
+  targets, absence of installed provenance baggage, retained behavior, and
+  overlay hashes;
 - public/private boundaries, credentials, suspicious local paths, and employer
   material;
 - skills.sh discovery metadata and complete suite manifest;

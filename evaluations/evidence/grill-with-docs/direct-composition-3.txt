@@ -1,0 +1,93 @@
+Fresh-context execution — direct composition fixture attempt 3
+
+Candidate: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+Frozen contract revision: git:7e5b067bc0de2b0ded0841a243950717602be535
+Fixture SHA-256: 07647379ea72b546d6ecf045e9d1a2062c35ef24c821acaf7b748c534bb250af
+Evaluator: gpt-5.6-sol-high-fresh-context
+Fresh context: fresh-grill-with-docs-direct-composition-3-6wZMVf
+Recorded at (UTC): 2026-08-06T16:40:51Z
+
+Effective runtime verified before execution:
+
+- Grill With Docs `SKILL.md`: `pinned-runtime-worktree/skills/engineering/grill-with-docs/SKILL.md`, SHA-256 `2d4c5eea65afba9b3fe0ba56037ed4d837103b2aefab9fe90eaccf3c939b249a`.
+- Grill With Docs `agents/openai.yaml`: `pinned-runtime-worktree/skills/engineering/grill-with-docs/agents/openai.yaml`, SHA-256 `4e3ac56fd00c573cf3a1f4b55663627d8be2e4e2d5277b790becc5a1db82d10d`.
+- Grilling `SKILL.md`: `pinned-runtime-worktree/skills/productivity/grilling/SKILL.md`, SHA-256 `6af16209ae3f0554db806a89e1a94641243e6c53b8540d67925545e2b8176ab6`.
+- Domain Modeling `SKILL.md`: `pinned-runtime-worktree/skills/engineering/domain-modeling/SKILL.md`, SHA-256 `152e2c97239affb12a60c5f4a7e74ab546a49ae169688c81f4e2ccc42dafa579`.
+
+Pinned source and applied overlays:
+
+- Upstream source: `mattpocock/skills`, revision `6acc160e4e0cd062dbbbd7a1b26ae92855edf07e`.
+- Applied overlay `grill-with-docs-skill`: `overlays/grill-with-docs/SKILL.md.patch`, SHA-256 `a4715db7287b15aea4ed528afb9b78d355d04a8e5dddc3348c89bfc65b20bdd6`.
+- Applied overlay `grill-with-docs-openai`: `overlays/grill-with-docs/agents-openai.yaml.patch`, SHA-256 `a051ae6dbabc7a5e74dfe2f84b1019472e80906880becc4f130b5f91415a017b`.
+- Applied overlay `grilling-skill`: `overlays/grilling/SKILL.md.patch`, SHA-256 `c64184935d266ddf481c9fed6dc3b84aee641fd3325a8352c7a36e5a7084559b`.
+- Domain Modeling was present beside the effective runtimes as the declared companion capability.
+
+Prompt (exact normalized fixture value):
+
+Grill me with docs on subscription cancellation. Use a fresh ephemeral Adapter seeded from evaluations/inputs/grill-with-docs/subscription-records.json. I confirm only this glossary decision now: “save window” means the 14 days after a cancellation request during which the member may reverse it without re-enrollment. Exactly two design decisions remain open: whether service stays active throughout that window or ends immediately, and whether any refund is automatic or request-based. Notification timing depends on the service choice; support permissions depend on the refund choice. Start the documented interview but do not resolve or write either open decision.
+
+Environment (exact fixture contract):
+
+- id: `subscription-records-ephemeral-adapter`
+- capabilities: `grill-with-docs=true`, `grilling=true`, `domain-modeling=true`, `adapter=ephemeral-records`
+- tools: `ephemeral Adapter read`, `ephemeral Adapter update`, `ephemeral Adapter read-back`
+- Fixture-environment operations are declared sandbox events, not external actions.
+
+Fresh ephemeral Adapter instance:
+
+- Declared seed: `evaluations/inputs/grill-with-docs/subscription-records.json`.
+- Seed SHA-256 before execution: `b8ef0f058792ad8a3f3eca7fd587265fe05ecb9a1b1ed5abd5d1314bd1a1970b`.
+- Unique copy: `ephemeral-sandbox/gwd-direct-composition-3-fresh.6wZMVf/subscription-records.json`.
+- Copy SHA-256 before the first Adapter read: `b8ef0f058792ad8a3f3eca7fd587265fe05ecb9a1b1ed5abd5d1314bd1a1970b`.
+
+Tool events:
+
+1. `ephemeral Adapter read`
+   - Read `glossary/subscriptions` at revision `r1` from the unique copy.
+   - Exact canonical record bytes: `{"locator":"glossary/subscriptions","revision":"r1","terms":{"cancellation":"A member-requested end to future subscription service.","save window":"unresolved"}}\n`.
+   - Glossary record SHA-256 before update: `d77ea395d747f53beb81cd3a639e428c633261b8783e7862e09ada1987831d57`.
+   - Read `decisions/cancellation` at revision `r3` from the unique copy.
+   - Exact canonical record bytes: `{"locator":"decisions/cancellation","revision":"r3","status":"accepted","summary":"Members may reverse a cancellation until its effective service-end event."}\n`.
+   - Decision record SHA-256 before update: `cbbbd0b3a3de252cf85e8a2246a7e32a6bd4d9cc39e107aeec5e5e49586abeb7`.
+
+2. `ephemeral Adapter update`
+   - Updated only `glossary/subscriptions`: advanced revision `r1` to `r2` and replaced the unresolved `save window` value with `The 14 days after a cancellation request during which the member may reverse it without re-enrollment.`
+   - No field under `decisions/cancellation` was written.
+
+3. `ephemeral Adapter read-back`
+   - Read `glossary/subscriptions` at new revision `r2`.
+   - Exact canonical record bytes: `{"locator":"glossary/subscriptions","revision":"r2","terms":{"cancellation":"A member-requested end to future subscription service.","save window":"The 14 days after a cancellation request during which the member may reverse it without re-enrollment."}}\n`.
+   - Glossary record SHA-256 after update: `7f3ce638b4c5f43efb35310ac84dc29841fca84ecbfd29f661fc73e847da7db2`.
+   - Read `decisions/cancellation` at revision `r3`.
+   - Exact canonical record bytes: `{"locator":"decisions/cancellation","revision":"r3","status":"accepted","summary":"Members may reverse a cancellation until its effective service-end event."}\n`.
+   - Decision record SHA-256 after update: `cbbbd0b3a3de252cf85e8a2246a7e32a6bd4d9cc39e107aeec5e5e49586abeb7`; it is byte-identical to the before record.
+   - Ephemeral Adapter artifact SHA-256 after update: `b4d61e57f0155aa15f45fa2d45fd8d68af4d928e0aadd4822a4aff8944e4630a`.
+   - Structural read-back assertion succeeded for the exact confirmed definition, `r2`, and unchanged `decisions/cancellation@r3`.
+   - Source seed SHA-256 after execution: `b8ef0f058792ad8a3f3eca7fd587265fe05ecb9a1b1ed5abd5d1314bd1a1970b`; the source seed was preserved.
+
+Observed response:
+
+The confirmed glossary term was persisted to `glossary/subscriptions@r2` and read back successfully: **save window** means the 14 days after a cancellation request during which the member may reverse it without re-enrollment. `decisions/cancellation@r3` remains unchanged.
+
+❓ **Q1** - **Service during the save window**: After a member requests cancellation, should subscription service remain active throughout the 14-day save window, or should service end immediately while reversal remains available?
+
+➡️ Keep service active throughout the save window. This makes the reversal path continuous for the member and avoids a stop-and-restart experience while the cancellation is still reversible.
+
+❓ **Q2** - **Refund handling**: When cancellation creates an eligible refund, should the refund be issued automatically, or only after the member requests it?
+
+➡️ Use request-based refunds. This preserves an explicit member choice while the service and cancellation timing rules are still being settled.
+
+Notification timing remains downstream of Q1, and support permissions remain downstream of Q2; neither is on this round’s frontier. I’m waiting for your answers to Q1 and Q2. The requesting context retains responsibility while the documented interview waits.
+
+Response-generation attestation: the response above was generated once from the recorded event state and preserved verbatim without retry or editing.
+
+Truthful grade (single pass, no retry): PASS.
+
+Grading rationale:
+
+- The direct route invoked Grill With Docs and both available companion capabilities, Grilling and Domain Modeling.
+- The actual Adapter events read both required starting revisions, wrote only the confirmed glossary term plus its new revision, and read back both records with exact before/after hashes.
+- The source seed stayed unchanged, the ephemeral glossary advanced to `r2`, and `decisions/cancellation@r3` remained byte-identical.
+- The response asks both and only the two currently open design decisions. Each uses the literal Grilling question and recommendation format.
+- Notification timing and support permissions are visibly deferred to later rounds, and the response waits without resolving either design decision or claiming shared understanding.
+- The requesting context visibly retains responsibility in state `waiting-for-frontier-answers` on route `documented-design-interview`.

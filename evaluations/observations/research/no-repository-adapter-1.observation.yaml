@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-no-repository-adapter
 attempt: 1
 contextId: fresh-research-no-repo-final-1
-suiteRevision: git:5168e5f4d168bbf0310494d0afa8ab27020d35eb
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:20:09Z
 environment:

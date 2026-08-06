@@ -1,0 +1,55 @@
+Fresh-context behavioral evaluation — grilling-direct-frontier-format
+Attempt: 2
+Context ID: fresh-grilling-direct-frontier-format-sol-high-2-caca5c66-a73a-4ee6-9483-0124492446cf
+Evaluator: gpt-5.6-sol-high-fresh-context
+Recorded at (UTC): 2026-08-06T16:42:29Z
+
+Candidate and runtime identity
+
+- Evaluation candidate: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+- Frozen evaluation contracts HEAD: 7e5b067bc0de2b0ded0841a243950717602be535
+- Fixture: evaluations/fixtures/grilling/direct-frontier-format.fixture.yaml
+- Fixture SHA-256: 98d30f87c616d67b2044d4aaee3e45d9ece31e54ca156c811d07c8000f01cc0a
+- Effective Grilling runtime: pinned-runtime-worktree/skills/productivity/grilling/SKILL.md
+- Effective Grilling runtime SHA-256: 6af16209ae3f0554db806a89e1a94641243e6c53b8540d67925545e2b8176ab6
+
+Exact prompt
+
+Grill me on a community workshop schedule. Exactly two decisions are unblocked now: choose Saturday, Sunday, or both for weekend opening; and choose 20:00 or 22:00 for weekday closing. Staffing depends on the weekend choice, and keyholder coverage depends on the weekday close, so those two dependent questions are not answerable yet. Ask the whole current frontier, recommend one answer for each, and do not act on the plan.
+
+Exact declared fixture environment
+
+- id: workshop-two-question-frontier
+- capabilities:
+  - grilling: true
+- tools: []
+
+Candidate response tool events
+
+None. The candidate response used no tools and produced no external effects.
+
+Unedited candidate response generated once
+
+❓ **Q1** - **Weekend opening**: Should the community workshop open on Saturday, Sunday, or both?
+
+➡️ Both, to maximize access for people whose availability differs across the weekend.
+
+❓ **Q2** - **Weekday closing time**: Should the community workshop close at 20:00 or 22:00 on weekdays?
+
+➡️ 22:00, to give people more usable workshop time after work.
+
+Staffing remains deferred until the weekend choice is settled, and keyholder coverage remains deferred until the weekday close is settled. I’ll wait for your two decisions and won’t act on the plan.
+
+Post-response grading against the fixture
+
+- Actions: PASS. The response asks both and only the two declared unblocked decisions in one round, gives one recommendation for each, explicitly defers the staffing and keyholder branches, and waits for the user's decisions.
+- Artifacts: PASS. The response creates no artifact.
+- Effects: PASS. The response performs no external effect and explicitly does not act on the plan.
+- Invocation: PASS. Grilling is invoked by the direct trigger and implementation is not invoked.
+- Proof — literal format: PASS. Each question uses the exact question-line form `❓ **Qn** - **<title>**: <body>` and is immediately followed, after the displayed blank line in the prescribed template, by a recommendation line beginning `➡️ `.
+- Proof — cardinality: PASS. The response contains exactly two question lines, Q1 and Q2; the deferral and waiting statement contains no additional question.
+- Responsibility: PASS. The response leaves both decisions to the user and states that it will not act on the plan.
+- Route: PASS — `grilling-frontier`.
+- State: PASS — `waiting-for-frontier-answers`.
+- Forbidden behavior: PASS. No staffing or keyholder question is asked, neither user-owned decision is presented as settled, and no action is taken.
+- Overall attempt result: PASS.

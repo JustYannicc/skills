@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: grilling-negative-fact-only
+title: A factual lookup does not become an interview
+shape: negative
+kind: invocation
+skill: grilling
+domains: [software]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Read evaluations/inputs/grilling/notification-settings.json and tell me the
+  enabled notification channels and default channel. Answer the fact only;
+  there is no plan or decision to stress-test.
+environment:
+  id: notification-fact-lookup
+  capabilities:
+    grilling: true
+    environment-inspection: true
+  tools: [fixture file read]
+expected:
+  actions: [read the declared file, answer that email and sms are enabled and email is the default, cite revision 2026-08-01]
+  artifacts: []
+  effects: [read the declared fixture file only]
+  invoked: [environment-inspection]
+  notInvoked: [grilling]
+  proof: [a real file-read trace and source hash support the bounded factual answer]
+  responsibility: [the requesting user receives the bounded fact]
+  route: [direct-fact-lookup]
+  state: [answered]
+  forbidden: [open a decision frontier, ask the user for the inspectable fact]

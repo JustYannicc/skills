@@ -1,0 +1,5 @@
+{
+  "revision": "2026-08-01",
+  "enabledChannels": ["email", "sms"],
+  "defaultChannel": "email"
+}

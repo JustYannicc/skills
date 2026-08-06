@@ -17,13 +17,13 @@ The private originals remain outside this public repository. Their fingerprints 
 
 ## Source inventory
 
-The authoritative public concept-to-source map lives in the installed [source guide](../../skills/thinking-in-systems/references/sources.md). The repository-wide [source inventory](../SOURCES.md) routes to it and separately records skill-design and distribution sources. Pinned repository and upstream revisions used by deterministic provenance validation live in [`validation/sources.yaml`](../../validation/sources.yaml), and the installed package's machine-readable adaptation record lives in [`skills/thinking-in-systems/provenance.yaml`](../../skills/thinking-in-systems/provenance.yaml).
+The authoritative public concept-to-source map lives in the installed [source guide](../../skills/thinking-in-systems/references/sources.md). The repository-wide [source inventory](../SOURCES.md) routes to it and separately records skill-design and distribution sources. Pinned repository and upstream revisions used by deterministic provenance validation live in [`validation/sources.yaml`](../../validation/sources.yaml), and the central machine-readable adaptation record lives in [`validation/repository.yaml`](../../validation/repository.yaml). Provenance remains repository evidence rather than installed runtime content.
 
 The [economic design research note](../research/thinking-in-systems-economic-design-concepts.md) records the source-to-rule boundary for Marginal analysis, Constraints, Preferences, substitution effects, Cost structure, minimum efficient scale, and Externalities. It excludes universal utility maximization and economy-wide planning from the governing method.
 
 The [framing-effect research note](../research/thinking-in-systems-framing-effects.md) records the primary evidence and the bounded inference that multiple matched truthful frames can expose a frame-robust core without turning framing research into manipulation.
 
-Matt Pocock's [`skills` repository at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c) informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
+Matt Pocock's [`skills` repository at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c), inspected on 2026-08-02, informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns through the then-current `writing-great-skills` and `tdd` sources. The repository's separate current Matt pin governs present authoring guidance and overlays; advancing that operational pin does not rewrite this historical lineage. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
 
 ## License
 
