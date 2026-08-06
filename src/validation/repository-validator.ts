@@ -1,32 +1,31 @@
 import { createHash } from "node:crypto";
-import { readFile, readdir, realpath, stat } from "node:fs/promises";
+import { readFile, readdir, realpath } from "node:fs/promises";
 import path from "node:path";
 
 import { parse as parseYaml } from "yaml";
 import { z } from "zod";
 
-import type { FindingSeverity } from "./evaluation-contracts.ts";
-import { listFiles } from "./filesystem.ts";
+import { listFiles, pathExists } from "./filesystem.ts";
 import { verifyOverlayReapplication } from "./overlay-reapplication.ts";
 import type { OverlayReapplicationVerifier } from "./overlay-reapplication.ts";
 import { findPublicBoundaryViolations } from "./public-boundary.ts";
+import type { RepositoryFinding } from "./repository-contracts.ts";
+import { validateRepositoryProvenance } from "./repository-provenance.ts";
+import { relativePathSchema, skillNameSchema } from "./repository-schemas.ts";
 import {
+  createPinnedTargetResolver,
   loadPinnedTarget,
   loadSourceInventory,
   verifyPinnedSource,
 } from "./source-inventory.ts";
 import type {
+  PinnedTargetResolver,
   SourceInventory,
   SourceTargetLoader,
   SourceVerifier,
 } from "./source-inventory.ts";
 
-export interface RepositoryFinding {
-  check: string;
-  severity: FindingSeverity;
-  message: string;
-  file?: string;
-}
+export type { RepositoryFinding } from "./repository-contracts.ts";
 
 export interface RepositoryValidation {
   findings: RepositoryFinding[];
@@ -51,31 +50,6 @@ const textExtensions = new Set([
   ".yaml",
   ".yml",
 ]);
-const skillNameSchema = z
-  .string()
-  .trim()
-  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/u);
-const relativePathSchema = z
-  .string()
-  .trim()
-  .min(1)
-  .refine(
-    (value) =>
-      !path.posix.isAbsolute(value) &&
-      !path.win32.isAbsolute(value) &&
-      !value.split(/[\\/]/u).includes(".."),
-    "Path must stay relative to its declared root."
-  );
-
-const exists = async (filePath: string): Promise<boolean> => {
-  try {
-    await stat(filePath);
-    return true;
-  } catch {
-    return false;
-  }
-};
-
 const localMarkdownTargets = (contents: string): string[] => {
   const targets: string[] = [];
   const expression = /!?(?:\[[^\]]*\])\((?<target>[^)]+)\)/gu;
@@ -115,40 +89,6 @@ const openAiMetadataSchema = z.object({
   policy: z.object({
     allow_implicit_invocation: z.boolean(),
   }),
-});
-
-const originalProvenanceSchema = z
-  .object({ strategy: z.literal("original") })
-  .strict();
-const adaptedProvenanceSchema = z
-  .object({
-    adaptationMode: z.string().trim().min(1),
-    changedAssumptions: z.array(z.string().trim().min(1)).min(1),
-    retainedBehavior: z.array(z.string().trim().min(1)).min(1),
-    sources: z
-      .array(
-        z.object({
-          sourceId: z.string().trim().min(1),
-          targets: z.array(relativePathSchema).min(1),
-        })
-      )
-      .min(1),
-    strategy: z.literal("adapted"),
-  })
-  .strict();
-const provenanceSchema = z.discriminatedUnion("strategy", [
-  originalProvenanceSchema,
-  adaptedProvenanceSchema,
-]);
-
-const repositoryConfigSchema = z.object({
-  schemaVersion: z.literal(2),
-  skills: z.array(
-    z.object({
-      name: skillNameSchema,
-      provenance: z.unknown(),
-    })
-  ),
 });
 
 const overlayInventorySchema = z.object({
@@ -204,7 +144,9 @@ const validateMarkdown = async (
 
       const targets = await Promise.all(
         localMarkdownTargets(contents).map(async (target) => ({
-          exists: await exists(path.resolve(path.dirname(filePath), target)),
+          exists: await pathExists(
+            path.resolve(path.dirname(filePath), target)
+          ),
           target,
         }))
       );
@@ -260,7 +202,6 @@ const validateSkill = async (
   const skillRoot = path.join(skillsRoot, skillName);
   const skillPath = path.join(skillRoot, "SKILL.md");
   const metadataPath = path.join(skillRoot, "agents", "openai.yaml");
-  const provenancePath = path.join(skillRoot, "provenance.yaml");
   const findings: RepositoryFinding[] = [];
   let frontmatter: z.infer<typeof frontmatterSchema> | undefined;
   let metadata: z.infer<typeof openAiMetadataSchema> | undefined;
@@ -325,24 +266,15 @@ const validateSkill = async (
     }
   }
 
-  if (await exists(provenancePath)) {
-    findings.push({
-      check: "skill-provenance",
-      file: path.relative(root, provenancePath),
-      message:
-        "Provenance is repository evidence and must live in validation/repository.yaml, not installed skill runtime files.",
-      severity: "Major",
-    });
-  }
-
   return findings;
 };
 
 const validateSkills = async (
-  root: string,
-  sourceInventory: SourceInventory,
-  loadTarget: SourceTargetLoader
-): Promise<{ findings: RepositoryFinding[]; checkedSkills: number }> => {
+  root: string
+): Promise<{
+  findings: RepositoryFinding[];
+  skillNames: string[];
+}> => {
   const skillsRoot = path.join(root, "skills");
   const entries = await readdir(skillsRoot, { withFileTypes: true }).catch(
     () => []
@@ -354,109 +286,10 @@ const validateSkills = async (
   const nested = await Promise.all(
     skillNames.map((skillName) => validateSkill(root, skillsRoot, skillName))
   );
-  const findings = nested.flat();
-  const configPath = path.join(root, "validation", "repository.yaml");
-
-  try {
-    const config = repositoryConfigSchema.parse(
-      parseYaml(await readFile(configPath, "utf-8"))
-    );
-    const configuredNames = config.skills.map((skill) => skill.name);
-    if (new Set(configuredNames).size !== configuredNames.length) {
-      findings.push({
-        check: "skill-structure",
-        file: path.relative(root, configPath),
-        message: "Skill provenance records must have unique names.",
-        severity: "Major",
-      });
-    }
-    const expected = new Set(configuredNames);
-    const actual = new Set(skillNames);
-    for (const skillName of configuredNames.filter(
-      (name) => !actual.has(name)
-    )) {
-      findings.push({
-        check: "skill-structure",
-        file: path.relative(root, skillsRoot),
-        message: `Expected skill directory is missing: ${skillName}.`,
-        severity: "Major",
-      });
-    }
-    for (const skillName of skillNames.filter((name) => !expected.has(name))) {
-      findings.push({
-        check: "skill-structure",
-        file: path.relative(root, path.join(skillsRoot, skillName)),
-        message: `Skill directory is absent from validation/repository.yaml: ${skillName}.`,
-        severity: "Major",
-      });
-    }
-    const sources = new Map(
-      sourceInventory.sources.map((source) => [source.id, source])
-    );
-    const provenanceFindings = await Promise.all(
-      config.skills.map(async (skill): Promise<RepositoryFinding[]> => {
-        const result = provenanceSchema.safeParse(skill.provenance);
-        if (!result.success) {
-          return [
-            {
-              check: "skill-provenance",
-              file: path.relative(root, configPath),
-              message: `Invalid provenance for skill "${skill.name}": ${result.error.message}`,
-              severity: "Major",
-            },
-          ];
-        }
-        if (result.data.strategy === "original") {
-          return [];
-        }
-        const sourceFindings = await Promise.all(
-          result.data.sources.map(
-            async (sourceReference): Promise<RepositoryFinding[]> => {
-              const source = sources.get(sourceReference.sourceId);
-              if (source === undefined) {
-                return [
-                  {
-                    check: "skill-provenance",
-                    file: path.relative(root, configPath),
-                    message: `Provenance for skill "${skill.name}" references unknown source "${sourceReference.sourceId}".`,
-                    severity: "Major",
-                  },
-                ];
-              }
-              const targetResults = await Promise.all(
-                sourceReference.targets.map(async (target) => ({
-                  exists: (await loadTarget(source, target)) !== null,
-                  target,
-                }))
-              );
-              return targetResults
-                .filter((target) => !target.exists)
-                .map((targetResult) => ({
-                  check: "skill-provenance",
-                  file: path.relative(root, configPath),
-                  message: `Provenance for skill "${skill.name}" target "${targetResult.target}" does not exist at the pinned source revision.`,
-                  severity: "Major",
-                }));
-            }
-          )
-        );
-        return sourceFindings.flat();
-      })
-    );
-    findings.push(...provenanceFindings.flat());
-  } catch (error) {
-    findings.push({
-      check: "skill-structure",
-      file: path.relative(root, configPath),
-      message:
-        error instanceof Error
-          ? error.message
-          : "Invalid repository validation config.",
-      severity: "Major",
-    });
-  }
-
-  return { checkedSkills: skillNames.length, findings };
+  return {
+    findings: nested.flat(),
+    skillNames,
+  };
 };
 
 interface SourceValidation {
@@ -507,8 +340,7 @@ const validateSourcePins = async (
 
 const validateOverlays = async (
   root: string,
-  sourceInventory: SourceInventory,
-  loadTarget: SourceTargetLoader,
+  resolvePinnedTarget: PinnedTargetResolver,
   verifyReapplication: OverlayReapplicationVerifier
 ): Promise<RepositoryFinding[]> => {
   const inventoryPath = path.join(root, "validation", "overlays.yaml");
@@ -529,32 +361,32 @@ const validateOverlays = async (
             },
           ];
     const absoluteRoot = await realpath(root);
-    const sources = new Map(
-      sourceInventory.sources.map((source) => [source.id, source])
-    );
     const nested = await Promise.all(
       inventory.overlays.map(async (overlay): Promise<RepositoryFinding[]> => {
         const findings: RepositoryFinding[] = [];
-        const source = sources.get(overlay.sourceId);
-        let targetContents: Buffer | null = null;
-        if (source === undefined) {
+        const targetResolution = await resolvePinnedTarget(
+          overlay.sourceId,
+          overlay.target
+        );
+        if (targetResolution.status === "source-unknown") {
           findings.push({
             check: "overlay-integrity",
             file: path.relative(root, inventoryPath),
             message: `Overlay "${overlay.id}" references unknown source "${overlay.sourceId}".`,
             severity: "Major",
           });
-        } else {
-          targetContents = await loadTarget(source, overlay.target);
-          if (targetContents === null) {
-            findings.push({
-              check: "overlay-integrity",
-              file: path.relative(root, inventoryPath),
-              message: `Overlay "${overlay.id}" target "${overlay.target}" does not exist at the pinned source revision.`,
-              severity: "Major",
-            });
-          }
+        } else if (targetResolution.status === "target-missing") {
+          findings.push({
+            check: "overlay-integrity",
+            file: path.relative(root, inventoryPath),
+            message: `Overlay "${overlay.id}" target "${overlay.target}" does not exist at the pinned source revision.`,
+            severity: "Major",
+          });
         }
+        const targetContents =
+          targetResolution.status === "resolved"
+            ? targetResolution.contents
+            : null;
         const patchPath = path.resolve(root, overlay.patchFile);
         try {
           const resolvedPatchPath = await realpath(patchPath);
@@ -630,35 +462,47 @@ export const validateRepository = async (
   root: string,
   options: RepositoryValidationOptions = {}
 ): Promise<RepositoryValidation> => {
-  const sourceValidation = await validateSourcePins(
-    root,
-    options.sourceVerifier ?? verifyPinnedSource
-  );
-  const files = await listFiles(root, {
-    excludeDirectories: excludedDirectories,
-  });
+  const [sourceValidation, files, skillValidation] = await Promise.all([
+    validateSourcePins(root, options.sourceVerifier ?? verifyPinnedSource),
+    listFiles(root, { excludeDirectories: excludedDirectories }),
+    validateSkills(root),
+  ]);
   const sourceTargetLoader = options.sourceTargetLoader ?? loadPinnedTarget;
-  const skillValidation = await validateSkills(
-    root,
+  const resolvePinnedTarget = createPinnedTargetResolver(
     sourceValidation.inventory,
     sourceTargetLoader
   );
+  const [
+    markdownFindings,
+    publicBoundaryFindings,
+    provenanceFindings,
+    overlays,
+  ] = await Promise.all([
+    validateMarkdown(root, files),
+    validatePublicBoundary(root, files),
+    validateRepositoryProvenance({
+      resolvePinnedTarget,
+      root,
+      skillNames: skillValidation.skillNames,
+    }),
+    validateOverlays(
+      root,
+      resolvePinnedTarget,
+      options.overlayReapplicationVerifier ?? verifyOverlayReapplication
+    ),
+  ]);
   const findings = [
-    ...(await validateMarkdown(root, files)),
-    ...(await validatePublicBoundary(root, files)),
+    ...markdownFindings,
+    ...publicBoundaryFindings,
     ...sourceValidation.findings,
     ...skillValidation.findings,
-    ...(await validateOverlays(
-      root,
-      sourceValidation.inventory,
-      sourceTargetLoader,
-      options.overlayReapplicationVerifier ?? verifyOverlayReapplication
-    )),
+    ...provenanceFindings,
+    ...overlays,
   ];
 
   return {
     checkedFiles: files.length,
-    checkedSkills: skillValidation.checkedSkills,
+    checkedSkills: skillValidation.skillNames.length,
     findings,
   };
 };

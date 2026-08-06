@@ -23,7 +23,7 @@ The [economic design research note](../research/thinking-in-systems-economic-des
 
 The [framing-effect research note](../research/thinking-in-systems-framing-effects.md) records the primary evidence and the bounded inference that multiple matched truthful frames can expose a frame-robust core without turning framing research into manipulation.
 
-Matt Pocock's [`skills` repository at `6acc160`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e) informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
+Matt Pocock's [`skills` repository at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c), inspected on 2026-08-02, informed LLM invocation, progressive disclosure, context pointers, and proof-at-public-seam patterns through the then-current `writing-great-skills` and `tdd` sources. The repository's separate current Matt pin governs present authoring guidance and overlays; advancing that operational pin does not rewrite this historical lineage. Thinking in Systems is not copied from an upstream skill and has no runtime dependency on that repository.
 
 ## License
 
