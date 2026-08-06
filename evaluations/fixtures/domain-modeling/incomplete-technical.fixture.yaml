@@ -14,12 +14,12 @@ environment:
     conditionalWrite: true
   tools: [selected Adapter]
 expected:
-  actions: [preserve the terminology request, identify the missing scope or source, ask one discriminating question]
+  actions: [preserve the terminology request, identify the missing lifecycle and authoritative source, ask the smallest discriminating question]
   artifacts: [visible unresolved terminology entry]
   effects: []
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [architecture decision, code change, research]
-  proof: [missing source recorded, exact next question returned]
+  proof: [unresolved meaning recorded without invention, missing source recorded, exact next question returned]
   responsibility: [workflow retains responsibility while terminology is unresolved]
   route: [ask-one-discriminating-question]
   state: [terminology-unresolved]

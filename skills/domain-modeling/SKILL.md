@@ -1,6 +1,6 @@
 ---
 name: domain-modeling
-description: Establish shared terminology when a word, relationship, or boundary is unclear or contested; challenge meanings with concrete scenarios, record the language result through the selected Adapter, and return decisions or other work to Workflow.
+description: Establish and preserve shared terminology. Use when the operative meaning, classification, or scope of a term is unclear or conflicting, or when another skill encounters a terminology blocker.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -8,110 +8,42 @@ metadata:
 
 # Domain Modeling
 
-Use this skill when the words are the problem: a term is vague, overloaded,
-used as two different things, or missing a name that people need to coordinate.
-It is the active discipline for changing a shared language, not a passive
-glossary lookup. Join the active `'Workflow'` context when one exists; do not
-start a second Outcome or transfer the parent responsibility.
+Establish and preserve shared terminology. Challenge conflicting terms, sharpen fuzzy language, stress-test boundaries with concrete scenarios, cross-reference authoritative reality, and record accepted meanings as they crystallize. Reading an existing language record is ordinary context use; invoke this skill when the language itself must change.
+
+Join the active `'Workflow'` context when one exists. When Grill With Docs invokes this skill, maintain the shared language throughout its interview while Grilling retains the decision frontier. Domain Modeling owns only the bounded language result and never the parent Outcome.
 
 ## Establish the language boundary
 
-1. Identify the smallest terminology question. State the intended referent,
-   the context in which it applies, the actors using it, and the decision or
-   handoff it is meant to support. Treat a requested artifact, architecture,
-   policy, or implementation as outside this skill unless a term boundary is
-   the actual blocker. Complete when the terminology question, scope, actors,
-   and supporting use are explicit.
-2. Read the current canonical language record through the selected Adapter.
-   Follow the host's native locator and format; never assume a repository,
-   `CONTEXT.md`, an ADR directory, a tracker, or a codebase. If no language
-   record exists and the work is durable, create the smallest Adapter-native
-   record only after the Adapter's canonical write capability is available.
-   When more than one context or language record could apply, identify the
-   scope explicitly or ask one discriminating question before writing. Complete
-   when the canonical source and its durable metadata are read, or a missing
-   capability is visible.
-3. Collect candidate meanings from the user's words and the authoritative
-   sources, artifacts, observations, and actors that the selected Coordination
-   space exposes. Apply the active `'Thinking in Systems'` evidence
-   classification when available; terminology work may report a decision gap
-   but does not decide it. Complete when candidate sources and evidence labels
-   are separated from decisions and unknowns.
+1. Identify the smallest terminology question. State the intended referent, the scope in which the meaning must hold, the Actors who use it, and the decision or handoff it must support. Name the Actor with semantic decision Authority to accept the operative meaning in that scope; keep that Authority distinct from permission to write the Adapter. An architecture, policy, Specification, or implementation request remains with its owning capability unless terminology is the actual blocker. Complete when the question, scope, Actors, accepting Authority, and blocked use are explicit or the missing Authority is visible.
+
+2. Read the canonical language record through the selected Adapter and bind its exact source revision. Preserve the Adapter's native locator and representation. If several contexts could apply, identify the correct one or ask one discriminating question. If no record exists, wait until the first term is accepted and write Authority is available before creating the smallest useful record. Complete when the applicable authority and revision are known, or the missing source, Adapter, or Authority is visible.
+
+3. Collect candidate meanings from the user's words, authoritative sources and artifacts, relevant Actors, and observed practice. Bind every Material mutable source to its canonical locator and exact inspected revision. In technical work, compare specifications, interfaces, schemas, and observed behavior; in other domains, compare policies, routines, forms, conversations, and observation. Separate facts, decisions, assumptions, and unknowns. A contradiction is evidence to surface, not permission to choose a convenient meaning. Unverifiable or stale decisive evidence leaves the affected meaning proposed or conflicted.
+
+   If the `terminology-evidence` Extension point is configured, give its Supplemental skills the terminology question, scope, candidates, and relevant sources. Each returns source-bound findings and unresolved gaps. Domain Modeling integrates that evidence and remains responsible for the language result. An advisory failure is recorded and the core procedure continues when its completion criterion remains satisfiable; a required failure becomes a visible capability gap and blocks durable completion. Complete when every candidate meaning has its source and evidence status, or a named gap.
 
 ## Sharpen and stress-test
 
-4. For each candidate term, propose one operative meaning: what it refers to,
-   its scope and boundary, and what it explicitly does not refer to. Preserve a
-   stable existing meaning unless an authorized correction changes it. Keep the
-   definition short enough for two competent readers to apply it the same way.
-   Complete when the candidate meaning and exclusions pass that two-reader test
-   or are marked unresolved.
-5. Classify nearby labels with the aliases, conflicts, and relationship rules
-   in the [entry contract](references/terminology-record.md). Reuse the
-   selected Adapter's and Workflow's canonical relationship meanings; do not
-   create a second relationship vocabulary. Complete when every nearby label
-   is an alias, conflict, or mapped relationship, or is visibly unresolved.
+4. Propose one canonical label and an operative meaning that says what the term refers to, where its boundary lies, and what it excludes. Keep the meaning to one or two sentences that two competent readers can apply alike. Classify nearby labels as aliases when they share the referent, avoided labels when they should not be used in this scope, or conflicts when their referents or boundaries differ. Preserve a stable accepted meaning unless an authorized correction replaces it. Bind the accepting Actor's decision to the exact proposal revision. Without accepted semantic decision Authority, keep the proposal visible and ask the smallest decision question. Complete when each relevant label has one classification and each meaning is either accepted at an exact proposal revision or visibly unresolved.
 
-6. Stress-test every proposed meaning with the smallest distinguishing scenario
-   first. Start with a substitution or boundary probe; add actor, lifecycle,
-   authority, ownership, scope, or source comparisons only while ambiguity or
-   material risk remains. For a technical context, compare the language in
-   relevant specifications, interfaces, schemas, or observed behavior. For a
-   non-technical context, compare policies, routines, conversations, forms, or
-   observed practice. Stop when two competent readers converge or the conflict
-   is explicit and owned. This is an evidence cross-reference, not a requirement
-   to inspect code or change an implementation. Complete when the smallest probe
-   resolves the meaning or leaves an owned conflict.
-7. If scenarios or sources still disagree, record the visible conflict and ask
-   the smallest question that separates the meanings. Do not silently choose a
-   convenient interpretation, manufacture consensus, or turn a terminology
-   gap into a research, design, or execution task.
-   If resolving the words exposes a hard-to-reverse, surprising trade-off,
-   flag that an owning Workflow decision record may be warranted; do not create
-   or adjudicate that decision here. Complete when the conflict and next
-   discriminating question are recorded without a silent decision.
+5. Start with substitution and a good-case/near-miss boundary scenario. If ambiguity or Material risk remains, vary only the dimension that distinguishes the candidates: lifecycle state, Actor or Authority, relationship direction or containment, or the presence of a relied-on source or capability. Stop when two competent readers converge or the remaining conflict and smallest discriminating question are explicit. Complete when every accepted meaning survives a good case and near miss, or the conflict has a named owner and next question.
 
-## Record and return
+Use the authoritative System relationship definitions already loaded from the `'Thinking in Systems'` skill. If that capability is unavailable, leave the System relationship unresolved and report the missing authority. For concepts that are not Systems, record an explicit domain relationship instead of borrowing Workflow's record relationships.
 
-8. Write each resolved change through the selected Adapter immediately only
-   with accepted write Authority. Carry the exact revision from the canonical
-   read in Step 2 into the Adapter's declared conditional-write mechanism when
-   it supports one. If a stale revision is reported or Authority is missing,
-   preserve both candidates as a visible conflict/recovery result instead of
-   overwriting the language authority. When conditional writes are unavailable,
-   use the Adapter's declared baseline transition/history semantics only for a
-   new entry; an existing authority without an exact revision or equivalent
-   stale-detection mechanism is a capability gap, not permission to overwrite.
-   If accepted write Authority is missing while the Adapter is available,
-   return the proposed entries and exact next action to `'Workflow'`; do not
-   mark the durable terminology result complete. A Durable record must expose
-   its immutable identity, owner, canonical locator, transition history, and
-   exact mutable-result source/result revisions; if any required metadata is
-   unavailable, report the capability gap and do not claim a durable update.
-   Do not imply safe concurrent claiming. For several entries in one accepted
-   change, use one Adapter batch/transaction when available; otherwise preserve
-   each guarded append. The Adapter owns serialization and System Record
-   representation; this skill does not choose a host format. Complete when an
-   authorized guarded write returns its canonical locator, revisions, history,
-   and evidence, or a truthful conflict/capability result is returned.
-9. If the selected Adapter is unavailable, report the capability gap and
-   proposed entries to `'Workflow'` in its Degraded mode. An Inline interaction
-   may return a clearly non-durable terminology result; a Durable result must
-   not claim that the canonical language record was updated. Complete when the
-   gap and non-durable status are explicit.
-10. Return the bounded entry and proof bundle from the reference to `'Workflow'`
-    or the caller, including unresolved questions and any capability gap.
-    Completion means every relevant term has one operative meaning or a visible
-    unresolved conflict, the Adapter write/evidence boundary is truthful, and
-    the parent Outcome remains with Workflow.
+## Record meanings as they crystallize
 
-For the adapter-neutral entry contract and scenario prompts, read
-[Terminology record and proof](references/terminology-record.md). The linked
-reference defines semantic fields only; it does not prescribe a host format.
+6. Write each accepted term through the selected Adapter immediately after verifying its semantic acceptance, decisive source revisions, and separate write Authority. Preserve the host's native structure. When the Adapter has no established language-record shape, read the [language record template](references/language-record-template.md) and adapt it to the host.
+
+   Write mutually dependent entries in one Adapter batch or transaction; an Adapter without atomic group writes exposes a capability gap for that change. Independent entries may be written sequentially. Reread the exact language-record guard after every committed entry. If a later write fails, stop and return the committed identities and result revisions, the uncommitted remainder, the incomplete aggregate change, and the exact recovery action.
+
+   For an existing durable record, guard the write with the exact language-record source revision or the Adapter's equivalent stale-write protection. Stale decisive evidence, a stale language-record revision, missing semantic decision or write Authority, or an unavailable guard leaves the candidates and conflict intact and returns an exact resumption action. If the Adapter is unavailable, return the proposed entries as explicitly non-durable and name the capability needed to persist them. A Durable update's proof includes the exact accepted proposal revision and accepting Actor, decisive source locators and revisions, Adapter-managed record identity, owner, canonical locator, transition history, and exact language-record source and result revisions. Complete when the authorized write returns that proof, or the proposal, conflict, partial state, and persistence gap are truthfully preserved.
+
+## Return the language result
+
+7. Return the terminology question and scope; semantic decision Authority and acceptance evidence; entries changed or proposed; aliases, avoided labels, conflicts, and relationships; decisive scenarios and exact source locators and revisions; the Adapter locator and language-record source/result revisions when available; any partial committed state; and every unresolved question, capability gap, and exact next action. Return a qualifying architectural or policy trade-off to `'Workflow'` for its owning decision record rather than deciding it here.
+
+Completion means every relevant term has one operative meaning or a visible unresolved conflict, the persistence claim is truthful, and the parent Outcome remains with `'Workflow'` or the caller.
 
 ## Boundary
 
-This skill owns shared language. It does not own architectural decisions,
-research, product or policy choices, specifications, tickets, implementation,
-Review verdicts, migration execution, handoffs, or parent completion. When a
-term is settled, return its evidence and stop.
+This skill establishes and preserves shared terminology. It does not own architectural or policy decisions, research, Specifications, Tickets, implementation, Review verdicts, migration, handoffs, the Grilling interview, or parent completion. Return the bounded language evidence and stop.

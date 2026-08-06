@@ -82,4 +82,55 @@ describe("evaluation contracts", () => {
       }).success
     ).toBeFalsy();
   });
+
+  it("accepts optional runtime bindings only with recognized roles", () => {
+    const base = {
+      attempt: 1,
+      contextId: "fresh-context-1",
+      environment: {
+        capabilities: { persistence: false },
+        id: "conversation-only",
+        tools: [],
+      },
+      evaluator: "deterministic-foundation",
+      observed: {
+        ...expected,
+        forbidden: undefined,
+        forbiddenChecks: [
+          {
+            criterion: "claim completion before review",
+            evidence: "completion followed inspection",
+            observed: false,
+          },
+        ],
+      },
+      rawEvidence: {
+        locator: "evaluations/evidence/foundation/direct-1.txt",
+        sha256: "a".repeat(64),
+      },
+      recordedAt: "2026-08-02T12:00:00.000Z",
+      schemaVersion: 1 as const,
+      suiteRevision: `working-tree:${"a".repeat(64)}`,
+    };
+
+    expect(
+      evaluationObservationSchema.safeParse({
+        ...base,
+        fixtureId: "domain-modeling-direct",
+      }).success
+    ).toBeTruthy();
+    expect(
+      evaluationObservationSchema.safeParse({
+        ...base,
+        fixtureId: "domain-modeling-direct",
+        runtimeInputs: [
+          {
+            locator: "skills/domain-modeling/SKILL.md",
+            role: "unrecognized",
+            sha256: "a".repeat(64),
+          },
+        ],
+      }).success
+    ).toBeFalsy();
+  });
 });

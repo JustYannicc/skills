@@ -1,26 +1,26 @@
 schemaVersion: 1
 id: domain-modeling-negative-nontechnical
-title: Clear nontechnical communication work does not invoke terminology modeling
+title: An unclear responsibility decision with clear terms does not invoke Domain Modeling
 shape: negative
 kind: invocation
 domains: [nontechnical]
 severity: Major
 requiredAttempts: 1
-prompt: Draft a kind decline to a dinner invitation; the language and intent are clear.
+prompt: Our community board already defines volunteer, staff member, refund, and approval clearly. Decide whether volunteers or staff members should have Authority to approve refunds.
 environment:
-  id: conversation-only
+  id: policy-decision-with-clear-language
   capabilities:
-    persistence: false
-    communication: true
+    persistence: true
+    decisionAuthority: false
   tools: []
 expected:
-  actions: [classify the request as communication, draft the requested response]
-  artifacts: [draft response]
-  effects: [draft returned without sending]
+  actions: [recognize that the terminology is already operative, classify the blocker as a policy and Authority decision, return the decision gap to Workflow]
+  artifacts: [visible policy decision gap]
+  effects: []
   invoked: [thinking-in-systems, workflow]
-  notInvoked: [domain-modeling, glossary update]
-  proof: [draft checked against the clear request]
-  responsibility: [workflow owns the bounded response]
-  route: [inline-communication]
-  state: [complete]
-  forbidden: [invent a terminology conflict]
+  notInvoked: [domain-modeling, glossary update, policy approval]
+  proof: [clear language left unchanged, missing decision Authority remains visible]
+  responsibility: [workflow retains parent responsibility]
+  route: [workflow-policy-decision-gap]
+  state: [waiting-for-authorized-policy-decision]
+  forbidden: [invoke Domain Modeling merely because the responsibility boundary is undecided]

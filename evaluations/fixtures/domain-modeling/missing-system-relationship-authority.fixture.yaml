@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: domain-modeling-missing-system-relationship-authority
+title: Missing Thinking in Systems authority leaves System relationships unresolved
+shape: edge
+kind: routing
+domains: [technical]
+severity: Major
+requiredAttempts: 1
+prompt: Catalog-boundary@catalog-r5 and Search-boundary@search-r7 are accepted records that identify Catalog and Search as Systems, but the Thinking in Systems governing relationship definitions are unavailable. Establish only the language that remains authoritative.
+environment:
+  id: thinking-in-systems-relationship-authority-unavailable
+  capabilities:
+    persistence: true
+    conditionalWrite: true
+    semanticDecisionAuthority: true
+    writeAuthority: true
+    thinkingInSystemsRelationshipAuthority: false
+  tools: [selected Adapter, Catalog-boundary@catalog-r5, Search-boundary@search-r7]
+expected:
+  actions: [preserve the accepted System labels, report the missing relationship authority, leave the relationship classification unresolved, return exact resumption action]
+  artifacts: [language result with unresolved System relationship]
+  effects: []
+  invoked: [workflow, domain-modeling]
+  notInvoked: [thinking-in-systems, canonical relationship write, architecture decision, parent completion]
+  proof: [Catalog-boundary@catalog-r5 and Search-boundary@search-r7 retained, Catalog and Search labels preserved, no Upstream Dependent Peer Containing or Subsystem relationship invented, missing capability visible]
+  responsibility: [domain-modeling owns the bounded unresolved language result, workflow retains parent responsibility]
+  route: [missing-system-relationship-authority-to-workflow]
+  state: [system-relationship-terminology-unresolved]
+  forbidden: [invent a canonical System relationship without the governing definitions]

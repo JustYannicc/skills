@@ -6,21 +6,24 @@ kind: routing
 domains: [technical]
 severity: Major
 requiredAttempts: 1
-prompt: Workflow is specifying service notifications, but recipient, subscriber, and contact are used inconsistently. Resolve terminology before Specification.
+prompt: >-
+  Workflow is specifying service notifications, but recipient, subscriber, and contact are used inconsistently. The notification language steward accepted proposal notification-language-p4: recipient is the person or role a notification is addressed to; subscriber is an Actor with an active subscription; contact is the reachable address or identifier used for delivery. The acceptance is based on notification-spec@notifications-r7 and recipient-schema@schema-r12. Record the accepted language before Specification.
 environment:
   id: adapter-baseline
   capabilities:
     persistence: true
-    conditionalWrite: false
+    conditionalWrite: true
     delegation: true
-  tools: [selected Adapter, notification artifacts]
+    semanticDecisionAuthority: true
+    writeAuthority: true
+  tools: [selected Adapter, notification language steward acceptance of proposal notification-language-p4, notification-spec@notifications-r7, recipient-schema@schema-r12]
 expected:
-  actions: [classify the blocker as terminology, route to domain-modeling, return bounded terminology evidence]
-  artifacts: [language result for Workflow]
-  effects: []
+  actions: [classify the blocker as terminology, route to domain-modeling, cross-reference the revision-bound notification sources, stress-test the labels, bind the steward acceptance to proposal notification-language-p4, record the accepted meanings, return bounded language evidence]
+  artifacts: [language result with operative meanings or visible conflicts for Workflow]
+  effects: [accepted notification language recorded]
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [to-spec, to-tickets, implement]
-  proof: [terminology result returned before Specification]
+  proof: [semantic acceptance distinct from write Authority, exact proposal and accepting Actor, notification-spec@notifications-r7 and recipient-schema@schema-r12 retained, accepted terms recorded before Specification, bounded result returned to Workflow]
   responsibility: [workflow integrates the result, domain-modeling owns the bounded language result]
   route: [workflow-to-domain-modeling]
   state: [ready-for-specification-or-discovery]

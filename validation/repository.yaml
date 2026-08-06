@@ -50,5 +50,7 @@ skills:
         - Technical code cross-reference becomes evidence-aware comparison of authoritative artifacts, sources, observations, and practice in any supported domain.
         - ADR creation and architectural trade-off decisions return to 'Workflow' or their owning capability; this skill owns shared terminology only.
         - System relationships use the Thinking in Systems vocabulary while non-System concepts retain explicit domain relationships.
-        - Missing write Authority, stale revisions, or unavailable persistence produce a visible conflict or capability gap instead of a claimed canonical update.
+        - Semantic decision Authority accepts an exact terminology proposal separately from Adapter write Authority; either missing Authority keeps the result proposed or conflicted.
+        - Decisive mutable evidence and language-record writes bind exact source revisions; stale evidence, partial sequential writes, or unavailable persistence produce visible recovery state instead of a claimed canonical update.
+        - Configured terminology-evidence Supplemental skills contribute source-bound findings at a declared Extension point while Domain Modeling retains integration responsibility and its completion criterion.
         - The skill joins an active Outcome and returns bounded language evidence without completing the parent work.

@@ -1,28 +1,30 @@
 schemaVersion: 1
 id: domain-modeling-edge-technical
-title: Conflicting technical contexts and stale Adapter revision remain visible
+title: Native Adapter refuses terminology based on stale decisive evidence
 shape: edge
 kind: routing
 domains: [technical]
 severity: Critical
 requiredAttempts: 3
-prompt: The glossary says Order means a whole purchase, but an API and process support partial cancellation; two contexts also use Account differently. The selected Adapter reports a stale language-record revision and no accepted write Authority.
+prompt: The glossary says Order means a whole purchase, but an API and process support partial cancellation; two contexts also use Account differently. The language steward accepted proposal p3 from API evidence at artifacts-r9, but the API advanced to artifacts-r10 before the native Adapter write.
 environment:
-  id: adapter-stale-revision
+  id: native-adapter-stale-decisive-evidence
   capabilities:
     persistence: true
     conditionalWrite: true
-    writeAuthority: false
     batchWrite: false
-  tools: [selected Adapter, API and process artifacts]
+    semanticDecisionAuthority: true
+    writeAuthority: true
+    nativeLanguageRecord: true
+  tools: [selected Adapter with native language-record shape, language steward acceptance for proposal p3, API and process artifacts at r9 and r10]
 expected:
-  actions: [surface the conflicting meanings, preserve both contexts, report stale revision, report missing write Authority, ask the authority question, return exact next action to Workflow]
-  artifacts: [conflict and recovery evidence, continuation action]
+  actions: [bind mutable artifact locators and revisions, cross-reference the glossary and observed behavior, detect the decisive source advance, invalidate acceptance based on r9, preserve both contexts as proposed or conflicted, return exact resumption action to Workflow]
+  artifacts: [source-bound conflict and recovery evidence, continuation action]
   effects: []
   invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [code edit, architecture decision, forced overwrite]
-  proof: [stale revision bound, authority gap recorded, both meanings retained, exact continuation action, recovery next check]
+  notInvoked: [code edit, architecture decision, canonical Adapter write]
+  proof: [proposal p3 remains bound to artifacts-r9, current evidence revision is artifacts-r10, stale acceptance invalidated, both meanings retained, native representation unchanged, exact resumption action]
   responsibility: [workflow retains parent responsibility]
   route: [terminology-conflict-recovery]
-  state: [terminology-conflicted-and-waiting-for-authority]
-  forbidden: [overwrite the canonical language record after a stale revision]
+  state: [terminology-conflicted-and-waiting-for-current-evidence]
+  forbidden: [write the canonical language record from stale decisive evidence]

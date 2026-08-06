@@ -6,21 +6,26 @@ kind: invocation
 domains: [nontechnical]
 severity: Critical
 requiredAttempts: 3
-prompt: A household calendar uses appointment, event, and commitment interchangeably. Establish canonical labels, aliases, exclusions, and one near-miss without changing the schedule.
+runtimeReferences: [skills/domain-modeling/references/language-record-template.md]
+prompt: >-
+  A household calendar uses appointment, event, and commitment interchangeably. The household language owner accepted proposal household-language-p5 from calendar-notes@notes-r14 and family-conversation@conversation-r22: event is any calendar entry, appointment is an event arranged with another Actor, and commitment is an event an Actor has agreed to attend. The current language record is language-r7, and the selected Adapter has no native language-record shape. Record the accepted language without changing the schedule.
 environment:
-  id: adapter-with-conditional-write
+  id: adapter-without-language-shape
   capabilities:
     persistence: true
     conditionalWrite: true
     batchWrite: true
-  tools: [selected Adapter, calendar notes and conversations]
+    nativeLanguageRecord: false
+    semanticDecisionAuthority: true
+    writeAuthority: true
+  tools: [selected Adapter at language-r7, household language owner acceptance of proposal household-language-p5, calendar-notes@notes-r14, family-conversation@conversation-r22, disclosed language record template]
 expected:
-  actions: [identify the terminology question, read the canonical language record, run boundary scenarios, record the terminology entry]
-  artifacts: [language entry with aliases or conflicts]
+  actions: [identify the terminology question and accepting Authority, read the canonical language record, bind mutable evidence revisions, distinguish labels with boundary scenarios, bind acceptance to the exact proposal revision, adapt the disclosed template, record the accepted entry immediately]
+  artifacts: [adapted language entry with meaning, scope, aliases, avoided labels, and conflicts as applicable]
   effects: [shared nontechnical language available to Workflow]
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [schedule change, policy decision, execution]
-  proof: [source revision guard, near-miss scenario, Adapter result revision]
+  proof: [household language owner acceptance of household-language-p5 distinct from write Authority, calendar-notes@notes-r14 and family-conversation@conversation-r22 retained, language-r7 source guard, good case and near-miss scenario, template adapted to the Adapter, Adapter result revision]
   responsibility: [domain-modeling owns terminology evidence, workflow retains parent responsibility]
   route: [workflow-to-domain-modeling]
   state: [terminology-resolved-or-conflict-visible]

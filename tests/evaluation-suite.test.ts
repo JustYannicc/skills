@@ -267,4 +267,143 @@ describe("evaluation suite", () => {
       })
     );
   });
+
+  it("rejects Domain Modeling evidence after a bound runtime input changes", async () => {
+    const root = await mkdtemp(path.join(tmpdir(), "evaluation-suite-"));
+    const fixtureDirectory = path.join(
+      root,
+      "evaluations",
+      "fixtures",
+      "domain-modeling"
+    );
+    const observationDirectory = path.join(
+      root,
+      "evaluations",
+      "observations",
+      "domain-modeling"
+    );
+    const evidenceDirectory = path.join(
+      root,
+      "evaluations",
+      "evidence",
+      "domain-modeling"
+    );
+    const domainSkillDirectory = path.join(root, "skills", "domain-modeling");
+    const systemReferenceDirectory = path.join(
+      root,
+      "skills",
+      "thinking-in-systems",
+      "references"
+    );
+    await Promise.all(
+      [
+        fixtureDirectory,
+        observationDirectory,
+        evidenceDirectory,
+        domainSkillDirectory,
+        systemReferenceDirectory,
+      ].map((directory) => mkdir(directory, { recursive: true }))
+    );
+    const evidence = "fresh Domain Modeling response\n";
+    const domainSkill = "# Domain Modeling\n\nEstablish shared language.\n";
+    const systemSkill = "# Thinking in Systems\n\nRead the standard.\n";
+    const systemStandard = "# Standard\n\nDefine System relationships.\n";
+    const fixture = fixtureYaml("direct", "Major", 1).replaceAll(
+      "foundation-direct",
+      "domain-modeling-direct"
+    );
+    await writeFile(path.join(evidenceDirectory, "direct.txt"), evidence);
+    await writeFile(path.join(domainSkillDirectory, "SKILL.md"), domainSkill);
+    await mkdir(path.join(root, "skills", "thinking-in-systems"), {
+      recursive: true,
+    });
+    await writeFile(
+      path.join(root, "skills", "thinking-in-systems", "SKILL.md"),
+      systemSkill
+    );
+    await writeFile(
+      path.join(systemReferenceDirectory, "standard.md"),
+      systemStandard
+    );
+    await writeFile(
+      path.join(fixtureDirectory, "direct.fixture.yaml"),
+      fixture
+    );
+    const boundObservation = `${observationYaml("direct", sha256(evidence))
+      .replaceAll("foundation-direct", "domain-modeling-direct")
+      .replaceAll(
+        "evaluations/evidence/direct.txt",
+        "evaluations/evidence/domain-modeling/direct.txt"
+      )}runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: ${sha256(domainSkill)}
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/direct.fixture.yaml
+    sha256: ${sha256(fixture)}
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: ${sha256(systemSkill)}
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: ${sha256(systemStandard)}
+`;
+    await writeFile(
+      path.join(observationDirectory, "direct.observation.yaml"),
+      boundObservation
+    );
+
+    const bound = await validateEvaluations(root, {
+      candidateIdentity,
+      requireShapeCoverage: false,
+    });
+    expect(bound.findings).toStrictEqual([]);
+    expect(bound.report.fixtures[0]?.evidence[0]?.runtimeInputs).toHaveLength(
+      4
+    );
+
+    await writeFile(
+      path.join(observationDirectory, "direct.observation.yaml"),
+      observationYaml("direct", sha256(evidence))
+        .replaceAll("foundation-direct", "domain-modeling-direct")
+        .replaceAll(
+          "evaluations/evidence/direct.txt",
+          "evaluations/evidence/domain-modeling/direct.txt"
+        )
+    );
+    const missing = await validateEvaluations(root, {
+      candidateIdentity,
+      requireShapeCoverage: false,
+    });
+    expect(missing.findings).toContainEqual(
+      expect.objectContaining({
+        check: "runtime-evidence",
+        message: expect.stringContaining(
+          "requires exactly one skill runtime input"
+        ),
+        severity: "Critical",
+      })
+    );
+    await writeFile(
+      path.join(observationDirectory, "direct.observation.yaml"),
+      boundObservation
+    );
+
+    await writeFile(
+      path.join(domainSkillDirectory, "SKILL.md"),
+      "# Domain Modeling\n\nChanged runtime.\n"
+    );
+    const stale = await validateEvaluations(root, {
+      candidateIdentity,
+      requireShapeCoverage: false,
+    });
+    expect(stale.findings).toContainEqual(
+      expect.objectContaining({
+        check: "runtime-evidence",
+        file: "skills/domain-modeling/SKILL.md",
+        message: expect.stringContaining("runtime input hash does not match"),
+        severity: "Critical",
+      })
+    );
+  });
 });

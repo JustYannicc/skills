@@ -7,6 +7,15 @@ const evidenceReferenceSchema = z.object({
   locator: nonEmptyString,
   sha256: z.string().regex(/^[a-f0-9]{64}$/u),
 });
+const runtimeInputSchema = evidenceReferenceSchema.extend({
+  role: z.enum([
+    "skill",
+    "fixture",
+    "governing-skill",
+    "governing-reference",
+    "disclosed-reference",
+  ]),
+});
 
 export const severitySchema = z.enum(["Critical", "Major", "Minor"]);
 
@@ -57,6 +66,7 @@ export const evaluationFixtureSchema = z
     kind: z.enum(["invocation", "routing", "composition", "setup", "adapter"]),
     prompt: nonEmptyString,
     requiredAttempts: z.number().int().positive(),
+    runtimeReferences: stringList.optional(),
     schemaVersion: z.literal(1),
     severity: severitySchema,
     shape: z.enum(["direct", "indirect", "incomplete", "negative", "edge"]),
@@ -89,6 +99,7 @@ export const evaluationObservationSchema = z.object({
     artifacts: z.array(evidenceReferenceSchema).optional(),
   }),
   recordedAt: z.iso.datetime(),
+  runtimeInputs: z.array(runtimeInputSchema).min(1).optional(),
   schemaVersion: z.literal(1),
   suiteRevision: z
     .string()

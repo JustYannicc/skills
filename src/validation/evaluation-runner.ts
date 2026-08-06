@@ -25,6 +25,16 @@ export interface EvaluationReport {
     artifacts?: { locator: string; sha256: string }[];
     contextId: string;
     locator: string;
+    runtimeInputs?: {
+      locator: string;
+      role:
+        | "skill"
+        | "fixture"
+        | "governing-skill"
+        | "governing-reference"
+        | "disclosed-reference";
+      sha256: string;
+    }[];
     sha256: string;
   }[];
 }
@@ -185,9 +195,13 @@ export const evaluateFixture = (
         locator,
         sha256,
       };
-      return artifacts && artifacts.length > 0
-        ? { artifacts, ...evidence }
-        : evidence;
+      return {
+        ...(artifacts && artifacts.length > 0 ? { artifacts } : {}),
+        ...evidence,
+        ...(observation.runtimeInputs
+          ? { runtimeInputs: observation.runtimeInputs }
+          : {}),
+      };
     }),
     findings,
     fixtureId: fixture.id,

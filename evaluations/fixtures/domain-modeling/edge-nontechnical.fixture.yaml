@@ -6,21 +6,21 @@ kind: routing
 domains: [nontechnical]
 severity: Critical
 requiredAttempts: 3
-prompt: A pickup plan uses safe to mean physically safe and authorized by a guardian, but the authority and boundary are not established. The selected Adapter is unavailable.
+prompt: The pickup plan uses safe to mean physically safe in pickup-policy@policy-r3 and authorized by a guardian in guardian-message@message-r8, but no Actor has semantic decision Authority to choose the operative boundary. The selected Adapter is unavailable.
 environment:
   id: adapter-unavailable
   capabilities:
     persistence: false
     conditionalWrite: false
     handoff: true
-  tools: [conversation]
+  tools: [pickup-policy@policy-r3, guardian-message@message-r8, conversation]
 expected:
-  actions: [preserve both meanings, report the Adapter capability gap, ask the authority question]
+  actions: [preserve both sourced meanings, run an Actor and Authority scenario, report the Adapter capability gap, ask the smallest authority question]
   artifacts: [non-durable conflict result and capability gap]
   effects: []
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [policy approval, pickup action, canonical Adapter write]
-  proof: [both meanings retained, missing capability recorded, exact next question]
+  proof: [pickup-policy@policy-r3 and guardian-message@message-r8 retained, both meanings retained, non-durable status explicit, missing semantic Authority and Adapter capability recorded, exact next question]
   responsibility: [workflow retains parent responsibility]
   route: [degraded-terminology-conflict]
   state: [terminology-conflicted-and-non-durable]
