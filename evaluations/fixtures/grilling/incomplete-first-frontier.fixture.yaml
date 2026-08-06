@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: grilling-incomplete-first-frontier
+title: An underspecified idea becomes an explicit first frontier
+shape: incomplete
+kind: invocation
+skill: grilling
+domains: [personal]
+severity: Major
+requiredAttempts: 1
+prompt: Grill me on “making mornings better.” That is all the context I have supplied.
+environment:
+  id: underspecified-morning-idea
+  capabilities:
+    grilling: true
+  tools: []
+expected:
+  actions: [make the missing intended outcome and constraints explicit, ask the complete currently answerable first frontier with recommendations, wait for answers before expanding dependent branches]
+  artifacts: []
+  effects: []
+  invoked: [grilling]
+  notInvoked: [implementation, assumed morning plan]
+  proof: [the response exposes rather than fills the missing design choices and uses the Grilling question format]
+  responsibility: [the user owns the decisions]
+  route: [grilling-frontier]
+  state: [waiting-for-frontier-answers]
+  forbidden: [invent the intended outcome, present a finished plan]

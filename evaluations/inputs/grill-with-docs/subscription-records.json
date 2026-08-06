@@ -1,0 +1,16 @@
+{
+  "glossary": {
+    "locator": "glossary/subscriptions",
+    "revision": "r1",
+    "terms": {
+      "cancellation": "A member-requested end to future subscription service.",
+      "save window": "unresolved"
+    }
+  },
+  "decision": {
+    "locator": "decisions/cancellation",
+    "revision": "r3",
+    "status": "accepted",
+    "summary": "Members may reverse a cancellation until its effective service-end event."
+  }
+}

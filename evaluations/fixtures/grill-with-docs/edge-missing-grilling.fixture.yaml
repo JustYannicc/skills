@@ -1,0 +1,33 @@
+schemaVersion: 1
+id: grill-with-docs-edge-missing-grilling
+title: Missing Grilling preserves exact documented-design state
+shape: edge
+kind: composition
+skill: grill-with-docs
+domains: [physical-systems]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Grill me with docs on subscription cancellation using the records seeded by
+  evaluations/inputs/grill-with-docs/subscription-records.json. The selected
+  ephemeral Adapter and Domain Modeling are available, but Grilling is not.
+  Preserve the exact record locators and unresolved frontier for resumption.
+environment:
+  id: documented-design-missing-grilling
+  capabilities:
+    grill-with-docs: true
+    grilling: false
+    domain-modeling: true
+    adapter: ephemeral-records
+  tools: [ephemeral Adapter read]
+expected:
+  actions: [read and identify glossary/subscriptions at r1 and decisions/cancellation at r3, name the missing Grilling capability, preserve the unresolved interview frontier and exact resumption condition]
+  artifacts: [resumable frontier bound to glossary/subscriptions r1 and decisions/cancellation r3]
+  effects: [read the ephemeral records only]
+  invoked: [grill-with-docs]
+  notInvoked: [unavailable grilling, completed interview]
+  proof: [real Adapter reads plus the exact missing capability and record locators support resumption]
+  responsibility: [the requesting context retains responsibility for resumption]
+  route: [documented-design-degraded]
+  state: [waiting-for-grilling-capability]
+  forbidden: [silently replace Grilling, write a record, claim shared understanding]
