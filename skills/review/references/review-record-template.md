@@ -12,6 +12,8 @@ Use this template for every Review record. Preserve the named fields, but compre
 
 **Coverage:** Specification `[complete | gaps]` · Standards `[complete | gaps]` · Supplemental `[integrated | advisory unavailable | required blocked | not configured]` · effect `[verified | pending | outside this seam]`
 
+**Review controls:** depth `[Inline | Standard | High]` · Reviewer/independence `[Actor and relationship]` · evidence matrix `[Material paths and stopping rationale]` · sources `[identities]` · capability gaps `[none or exact unavailable capability]`
+
 ## How the result works
 
 [Explain the Material path in a few sentences: trigger or input → decisive behavior or state transition → visible output or effect. Include the Material degraded or recovery path. For a UI or other human–System interaction, describe the experienced flow and feedback, not merely its implementation.]
@@ -22,13 +24,13 @@ Use this template for every Review record. Preserve the named fields, but compre
 
 | Requirement | Observation at the Proof seam | Exact Evidence reference | Status |
 | --- | --- | --- | --- |
-| [accepted behavior or boundary] | [what actually happened] | [condition, method, result, observer, time, location, exact revision] | [pass | fail | unknown] |
+| [accepted behavior or boundary] | [what actually happened] | [condition, method, result, observer, time, location, exact revision; use `unknown—not supplied` for absent provenance] | [pass | fail | unknown] |
 
 ### Standards
 
 | Governing rule | Observation at the Proof seam | Exact Evidence reference | Status |
 | --- | --- | --- | --- |
-| [standard and exact version] | [including interaction quality, maintainability, or System fit when Material] | [condition, method, result, observer, time, location, exact revision] | [pass | fail | unknown] |
+| [standard and exact version] | [including interaction quality, maintainability, or System fit when Material] | [condition, method, result, observer, time, location, exact revision; use `unknown—not supplied` for absent provenance] | [pass | fail | unknown] |
 
 ## Findings
 
