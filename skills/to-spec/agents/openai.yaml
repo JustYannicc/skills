@@ -1,5 +1,5 @@
 interface:
   display_name: "To Spec"
-  short_description: "Synthesize context into an Outcome Specification"
+  short_description: "Turn an accepted Outcome into a Specification"
 policy:
   allow_implicit_invocation: true

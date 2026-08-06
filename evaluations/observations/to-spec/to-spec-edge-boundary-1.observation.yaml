@@ -1,37 +1,37 @@
 schemaVersion: 1
 fixtureId: to-spec-edge-boundary
 attempt: 1
-contextId: fresh-to-spec-edge-boundary-d4626c-1
-suiteRevision: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
-evaluator: gpt-5.6-luna-fresh-context
-recordedAt: 2026-08-04T20:50:00.000Z
+contextId: fresh-to-spec-edge-boundary-sol-high-20260806-1
+suiteRevision: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
 environment:
   id: workflow-specification-boundary
   capabilities: { workflow: true, persistence: false, to-spec: true, to-tickets: true, implement: true, scheduler: true }
   tools: []
 observed:
-  actions: [preserve accepted intent, synthesize one Outcome Specification, materialize only the Specification, return decomposition/execution to Workflow]
-  artifacts: [Outcome Specification]
+  actions: [bind accepted Outcome contract, materialize only the Specification artifact, return decomposition/execution to Workflow]
+  artifacts: [accepted Outcome Specification artifact]
   effects: []
   forbiddenChecks:
     - criterion: create Tickets
-      evidence: No Ticket list, identifiers, or creation is present.
+      evidence: The bounded return sends Ticket decomposition to Workflow and creates none.
       observed: false
     - criterion: schedule an effect
-      evidence: No reminder or scheduler action is performed.
+      evidence: Reminder scheduling is returned to Workflow and no scheduled effect appears.
       observed: false
     - criterion: invent requirements
-      evidence: Only settled venue fields are carried and no requirement is added.
+      evidence: The artifact carries the supplied Room Cedar contract and its exact facilities source.
       observed: false
     - criterion: claim approval
-      evidence: State is Proposed and exact-revision approval remains with the Approver.
+      evidence: Acceptance is bound to the supplied venue-lead grant in venue-setup-r4.
       observed: false
   invoked: [to-spec]
   notInvoked: [to-tickets, implement, scheduler]
-  proof: [Specification boundary and next Workflow phase are explicit]
-  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  proof: [venue-setup-r4 and exact Specification revision are bound, 24 chairs two wheelchair spaces 1.2 m aisle and working microphone are preserved, the 08:20 walk-through and later Workflow route are explicit]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
   route: [workflow-to-spec]
-  state: [Proposed]
+  state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-edge-boundary-1.txt
-  sha256: 5b6ffa9b3fba0f470834e194c00adeec8582bbfde1b5a6bb0692231cc5dac354
+  sha256: 691f46dd0918a5563d7ea2a62a97f2af8de82b24cbc52b6756698de478511b6c

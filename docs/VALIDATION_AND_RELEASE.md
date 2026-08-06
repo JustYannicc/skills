@@ -109,7 +109,7 @@ domain without multiplying every skill across every possible domain.
 | `research` | Establishes external facts with primary evidence and capability-aware direct or delegated legwork. |
 | `prototype` | Answers one empirical design question through a reversible cross-domain experiment. |
 | `to-questionnaire` | Produces an asynchronous knowledge request for another person and a clear return use. |
-| `to-spec` | Synthesizes accepted intent without inventing missing decisions. |
+| `to-spec` | Materializes one accepted Outcome contract without inventing missing decisions. |
 | `to-tickets` | Produces collectively covering, bounded, owned work and returns Specification gaps. |
 | `implement` | Executes one Ticket and submits an exact result with evidence without completing Review or parent work. |
 | `review` | Integrates core and Supplemental evidence into one exact-revision verdict across domains. |

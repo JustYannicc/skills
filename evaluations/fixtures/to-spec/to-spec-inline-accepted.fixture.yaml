@@ -8,28 +8,34 @@ domains: [personal, communication]
 severity: Major
 requiredAttempts: 1
 prompt: >-
-  I accept responsibility and authority to write a concise welcome note for the
-  named recipient today. The exact recipient, purpose, tone, scope, exclusion,
-  constraints, accepted decisions with source and confidence, no unresolved
-  exceptions, proof (the recipient can read the note), and terminal condition
-  (the note is accepted in this conversation) are settled. Represent this
-  accepted request as one Inline Outcome Specification; do not create durable
-  records or send it.
+  Workflow supplied accepted Outcome contract `welcome-note-r2`. Outcome: Sam
+  receives a concise welcome note today that confirms the 10:00 orientation in
+  Room 4 and tells them to ask Alex for access support. Good enough is 60 words
+  or fewer, warm and direct, with the time, room, and support contact exactly
+  present. Scope is the note text; sending it and changing orientation details
+  are excluded. The confirmed schedule `orientation-r3` and Sam's plain-language
+  Preference are accepted with high confidence. Alex is Outcome owner and
+  Approver; the coordinator is Specification Work owner. Authority covers an
+  exact faithful Inline Specification and later drafting, not sending. Proof
+  seam: Alex reads the proposed note and can identify the three required facts.
+  Terminal condition: an approved note is later sent and receipt is verified.
+  No unresolved exception remains. Materialize this exact faithful Inline
+  Specification in the conversation and return later execution to Workflow.
 environment:
   id: workflow-inline-specification
   capabilities:
-    workflow: false
+    workflow: true
     persistence: false
     to-spec: true
   tools: []
 expected:
-  actions: [preserve accepted request, synthesize implicit Specification]
-  artifacts: [inline Outcome Specification]
+  actions: [bind accepted Outcome contract, materialize faithful Inline Specification]
+  artifacts: [accepted Inline Outcome Specification artifact]
   effects: []
   invoked: [to-spec]
   notInvoked: [durable Adapter, to-tickets, implement]
-  proof: [accepted request is represented as an implicit Specification]
-  responsibility: [direct caller retains parent responsibility]
-  route: [inline-specification]
+  proof: [welcome-note-r2 and exact Inline artifact revision are bound, Sam 10:00 Room 4 Alex access support and 60-word threshold are preserved, sending remains excluded from this phase]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-inline-specification-to-workflow]
   state: [Accepted]
   forbidden: [force durable artifact/tracker ceremony, invent missing decisions, execute extra work]

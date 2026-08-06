@@ -44,3 +44,4 @@ skills:
         - Route material gaps to the discovery or approval capability that owns the uncertainty instead of inventing decisions.
         - Leave Durable representation to the selected Adapter and bind the resulting locator and exact revision when supplied.
         - Bind Specifications, approvals, evidence, and material-change impact to exact revisions while preserving unaffected accepted work.
+        - Expose a specification-enrichment Extension point for configured Supplemental evidence while retaining the core Specification and acceptance boundary.

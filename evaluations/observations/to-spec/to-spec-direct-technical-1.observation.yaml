@@ -1,37 +1,37 @@
 schemaVersion: 1
 fixtureId: to-spec-direct-technical
 attempt: 1
-contextId: fresh-to-spec-direct-technical-d4626c-1
-suiteRevision: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
-evaluator: gpt-5.6-luna-fresh-context
-recordedAt: 2026-08-04T20:45:00.000Z
+contextId: fresh-to-spec-direct-technical-sol-high-20260806-1
+suiteRevision: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
 environment:
   id: workflow-specification-ready
   capabilities: { workflow: true, persistence: true, adapter: true, to-spec: true }
   tools: [selected canonical Adapter]
 observed:
-  actions: [preserve accepted intent, synthesize one Outcome Specification, honor selected Durable mode, bind exact Specification revision]
-  artifacts: [durable Outcome Specification]
+  actions: [bind accepted Outcome contract, materialize one Specification from the reusable template, honor selected Durable mode, bind exact Specification revision]
+  artifacts: [accepted durable Outcome Specification artifact]
   effects: []
   forbiddenChecks:
     - criterion: invent missing decisions
-      evidence: Accepted fields, sources, confidence, and rationale are carried without adding requirements or implementation choices.
+      evidence: The artifact carries the exact cutover contract and marks inapplicable branches rather than adding behavior.
       observed: false
     - criterion: absorb decomposition or implementation
-      evidence: No Tickets, implementation, tests, or effects are produced; downstream work returns to Workflow.
+      evidence: Implementation is returned to Workflow and no deployment or client mutation occurs.
       observed: false
     - criterion: claim parent completion
-      evidence: State is Proposed and Workflow retains parent integration and terminal responsibility.
+      evidence: The result keeps integration and terminal-proof Responsibility with the API owner while Workflow coordinates downstream routing.
       observed: false
     - criterion: claim durable persistence without Adapter evidence
-      evidence: The supplied Adapter locator outcome:consumer-compat/v1 and exact host revision adapter-r42 bind the durable record.
+      evidence: The artifact binds the supplied Adapter locator outcome:consumer-compat/v1 and exact revision adapter-r42.
       observed: false
   invoked: [to-spec]
   notInvoked: [to-tickets, implement]
-  proof: [all required Specification fields are present, exact revision is identified, canonical Adapter locator is recorded]
-  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  proof: [consumer-compat-r9 and exact Specification revision are bound, alpha-2 beta-4 mode retryAfterMs optional region 250 ms and 09:00 1 October cutover are preserved, compat-e12 revision e12-r6 is cited, canonical locator outcome:consumer-compat/v1 and adapter-r42 are recorded]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
   route: [workflow-to-spec]
-  state: [Proposed]
+  state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-direct-technical-1.txt
-  sha256: 7864950f58e3efb155f0c903d1592cfd4e953abda6b82c77051067ca02637de3
+  sha256: 3da2c9c3c341ad14ea5d7c82080d4f2b4d03c89aa0e021f8c25bfdd84029eba5

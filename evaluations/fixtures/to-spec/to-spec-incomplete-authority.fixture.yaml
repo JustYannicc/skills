@@ -9,28 +9,30 @@ severity: Major
 requiredAttempts: 1
 prompt: >-
   Write the Outcome Specification for an automatic reminder that contacts
-  anyone who misses a deadline. The Outcome threshold, owner, Approver,
-  recipient and privacy scope, current-system source, and contact authority are
-  not supplied. Preserve the request and expose the smallest decisions needed;
-  do not invent them or contact anyone.
+  anyone who misses a deadline. The user holds the missing Outcome threshold
+  and recipient-scope decisions; a program coordinator holds the recipient
+  accessibility facts; an external policy source owns the privacy obligations;
+  and the Outcome owner, Approver, current-system source, and contact Authority
+  are not supplied. Preserve the request and return one discovery-gap record
+  for each missing item.
 environment:
   id: workflow-specification-gaps
   capabilities:
     workflow: true
     persistence: false
     to-spec: true
-    batch-grill-me: true
+    grilling: true
     research: true
     to-questionnaire: true
   tools: []
 expected:
-  actions: [preserve request and state, enumerate material missing decisions, route gaps to batch-grill-me, research, to-questionnaire, and Workflow approval, state exact resumption condition]
-  artifacts: [Specification gap record]
+  actions: [preserve request and state, classify each uncertainty and complete the discovery-gap template, return gaps to Workflow, Workflow routes to grilling research to-questionnaire and approval, state exact resumption condition]
+  artifacts: [Specification discovery-gap record]
   effects: []
   invoked: [to-spec]
   notInvoked: [to-tickets, implement, effect]
-  proof: [each gap has an owner or Approver/source and resumption condition]
-  responsibility: [to-spec owns the bounded Specification result, Workflow remains responsible while blocked]
-  route: [to-spec-to-batch-grill-me, to-spec-to-research, to-spec-to-questionnaire, to-spec-to-workflow-approval]
+  proof: [each gap records uncertainty class impact blocking status smallest request owner or Approver and resumption action, Workflow selects each owning capability]
+  responsibility: [to-spec owns the bounded gap record, Workflow coordinates discovery while Outcome ownership remains an explicit blocking gap]
+  route: [to-spec-to-grilling, to-spec-to-research, to-spec-to-questionnaire, to-spec-to-workflow-approval]
   state: [Waiting for discovery]
-  forbidden: [invent Authority, present accepted Specification, execute effect]
+  forbidden: [invent Authority, present accepted Specification, execute effect, infer an operating cadence or transfer rule from missing inputs, classify missing Authority as an exception]

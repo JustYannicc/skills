@@ -23,12 +23,7 @@ distinct from publishing the complete suite, which still requires #31 and #32.
 
 ### [To Spec](skills/to-spec) — implementation candidate (human review required)
 
-To Spec synthesizes accepted knowledge and decisions into one universal Outcome
-Specification, or revises an exact prior revision after a material change. It
-keeps technical and nontechnical work in its own vocabulary, routes missing
-decisions to the capability that owns them, and returns responsibility to
-Workflow. Issue #22 is still open; this candidate is not published until the
-human-review gate and composed-suite release proof are complete.
+To Spec turns an accepted Outcome contract into a clear Specification artifact for downstream work, or revises it after a material change. It preserves the Outcome's vocabulary, routes material gaps to the capability that owns them, and returns responsibility to Workflow. Issue #22 is still open; this candidate is not published until the human-review gate and composed-suite release proof are complete.
 
 ## Planned suite
 

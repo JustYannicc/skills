@@ -1,41 +1,76 @@
-Fresh-context to-spec run
-Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+Fresh-context To Spec run
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
 
-Outcome Specification — exact host revision adapter-r42
+# Consumer compatibility cutover — Specification
 
-Representation: Durable mode selected by Workflow. The canonical Adapter
-accepted the write at opaque locator outcome:consumer-compat/v1 and exact host
-revision adapter-r42. The Adapter's representation format remains its
-authority; no serialization is selected here. State: Proposed: this exact
-revision is synthesized and recorded, but Approver acceptance and parent
-completion are not claimed.
+- **Specification state:** Accepted
+- **Accepted Outcome source and exact revision:** `consumer-compat-r9`
+- **Specification revision:** `consumer-compat-r9-spec-r1`
+- **Representation mode:** Durable
+- **Canonical locator and Adapter revision:** `outcome:consumer-compat/v1`; `adapter-r42`
+- **Approver, Authority, and acceptance evidence:** The API owner approved the faithful representation under the acceptance grant in `consumer-compat-r9`. Authority covers persistence of this Specification only. The selected canonical Adapter write succeeded and returned the locator and Adapter revision above.
 
-Outcome: Keep the public configuration response compatible for the named
-consumer group throughout the stated migration window.
-Scope: Named consumer group, public configuration response boundary, accepted
-actors/environments, and stated migration window.
-Exclusions: Accepted exclusions and unrelated improvements; required
-remediation, propagation, and recovery remain in scope.
-Constraints: Accepted hard group/window boundaries and timeout threshold; no
-soft preference was supplied. Each item carries its source, confidence, and
-effect on proof or recovery.
-Responsibility: Named Outcome owner and Specification Work owner from the
-accepted context; to-spec owns this bounded result; Workflow retains parent
-integration and terminal responsibility.
-Authority: Named Approver owns intent/material trade-offs. Effect authority is
-separately bounded by the supplied scope, limits, and validity. No effect is
-executed and no authority is inferred.
-Accepted decisions: Preserve public compatibility over the named window and
-retain supplied scope, owners, Approver, effect authority, timeout, exclusions,
-proof observation, and terminal condition. Each has source/confidence and
-rationale from the accepted context; no assumptions are added.
-Unresolved exceptions: None; no material unknowns or contradictions supplied.
-Proof seam: Highest stable seam is the consumer-visible public response,
-observed through the named window at the accepted timeout/terminal check, plus
-the Adapter record at outcome:consumer-compat/v1 revision adapter-r42.
-Terminal condition: Accepted compatibility remains true through the window and
-the terminal observation/recovery checks pass. No parent completion is claimed.
-Return: exact Durable Specification revision, locator, Proposed state, and all
-responsibility/authority/proof/terminal fields return to Workflow via
-workflow-to-spec; downstream Tickets, implementation, and Review remain out
-of this phase.
+## 1. Intent and Outcome
+
+- **Original request:** Keep clients `alpha-2` and `beta-4` compatible with the public configuration response at the 09:00 1 October migration cutover.
+- **Intent:** Preserve the accepted public configuration contract for both exact client revisions at the bounded cutover query.
+- **Accepted Outcome:** At the 09:00 1 October cutover, `alpha-2` and `beta-4` each parse required fields `mode` and `retryAfterMs`, tolerate the new optional `region` field, and receive the public configuration response within 250 ms at the public contract-query Proof seam.
+- **Satisficing / good-enough threshold:** Both exact clients meet all three compatibility conditions and the 250 ms limit at the accepted Proof seam.
+
+## 2. Scope, exclusions, and Constraints
+
+- **Included Actors, Systems, environments, conditions, time horizon, and boundaries:** Clients `alpha-2` and `beta-4`; the public configuration response; the bounded cutover contract query; the 09:00 1 October migration cutover.
+- **Exclusions:** Client upgrades, deployment, other endpoints, decomposition, and implementation are outside this Specification result.
+- **Required remediation, propagation, and recovery:** Update any compatibility record affected by the verification. No deployment, client mutation, or other remediation, propagation, or recovery was accepted.
+
+| Constraint or Preference | Hard Constraint, Soft Constraint, or Preference | Source and confidence | Effect on feasible choices |
+| --- | --- | --- | --- |
+| Both clients must parse `mode` and `retryAfterMs` and tolerate optional `region`. | Hard Constraint | Contract suite `compat-e12`, revision `e12-r6`; high confidence | A result that fails any field condition for either exact client is unacceptable. |
+| The response must arrive within 250 ms at the accepted Proof seam. | Hard Constraint | Contract suite `compat-e12`, revision `e12-r6`; high confidence | A result above 250 ms is unacceptable. |
+
+## 3. Responsibility and Authority
+
+- **Outcome owner and parent terminal-proof duty:** The API owner retains integration and parent terminal-proof Responsibility.
+- **Specification Work owner:** The integration lead.
+- **Known Executors, Reviewers, or successor route:** Implementation returns to `'Workflow'`; `'Workflow'` coordinates its downstream owner and route. No executor or reviewer is assigned by this Specification.
+- **Approver for Intent and material trade-offs:** The API owner.
+- **Effect Authority:** The API owner authorizes faithful persistence of `consumer-compat-r9-spec-r1` at the canonical locator through `adapter-r42`. This Authority excludes deployment, client mutation, and changes outside the bounded Specification artifact. No further effect Authority is granted.
+
+## 4. Knowledge and decisions
+
+| Kind | Accepted statement or visible gap | Status | Source, exact revision, and confidence | Material consequence |
+| --- | --- | --- | --- | --- |
+| Decision | The cutover contract is bounded to the public configuration query for `alpha-2` and `beta-4` at 09:00 1 October. | Accepted | `consumer-compat-r9`; accepted Outcome contract | Fixes the Actors, seam, and time boundary. |
+| Fact | Compatibility and the 250 ms limit are accepted hard Constraints. | Accepted | `compat-e12`, revision `e12-r6`; high confidence | Both conditions must pass. |
+| Decision | Durable mode and the canonical Adapter are selected. | Accepted | `consumer-compat-r9`; Workflow selection | Requires the canonical locator and Adapter revision to be bound. |
+| Decision | Persistence is authorized; deployment and client mutation are not. | Accepted | `consumer-compat-r9` acceptance grant | Limits this phase to the Specification effect. |
+| Fact | The bounded cutover verification is not an Operating Outcome, and no unresolved exception remains. | Accepted | `consumer-compat-r9`; accepted Outcome contract | No Operating Outcome, discovery-gap, or irreducible-fog branch applies. |
+
+## 5. Accepted behavior
+
+| Actor, condition, or event | Required behavior or policy | Expected visible result | Governing decision or Constraint |
+| --- | --- | --- | --- |
+| `alpha-2` runs the public configuration contract query at the cutover. | Parse required `mode` and `retryAfterMs`; tolerate optional `region`; use no fallback. | The query passes for `alpha-2`. | Compatibility hard Constraint in `compat-e12` revision `e12-r6`. |
+| `beta-4` runs the public configuration contract query at the cutover. | Parse required `mode` and `retryAfterMs`; tolerate optional `region`; use no fallback. | The query passes for `beta-4`. | Compatibility hard Constraint in `compat-e12` revision `e12-r6`. |
+| Either exact client receives the response at the accepted Proof seam. | Complete the response within 250 ms. | Observed response time is at most 250 ms. | Latency hard Constraint in `compat-e12` revision `e12-r6`. |
+| Verification affects a compatibility record. | Update that affected record. | The record reflects the verified cutover result. | Accepted terminal condition in `consumer-compat-r9`. |
+
+## 6. Proof and terminal condition
+
+- **Highest stable Proof seam:** The public cutover contract query for the public configuration response.
+- **Evidence, observer, timing, and relevant limits:** At 09:00 1 October, contract-query evidence for both `alpha-2` and `beta-4` must show successful parsing of `mode` and `retryAfterMs`, tolerance of optional `region`, no fallback, and response time at or below 250 ms. The API owner receives this evidence as Outcome owner and terminal-proof owner. Evidence is limited to these two client revisions and this query.
+- **Terminal condition:** Both exact clients pass the public contract query with no fallback, each response is within 250 ms, and every compatibility record affected by the verification is updated. This completes the bounded Specification result only; it does not complete the parent Outcome.
+
+## 7. Unresolved items and exceptions
+
+None. No unresolved exception, discovery gap, or additional approval remains for this faithful Specification representation.
+
+## Bounded return
+
+- **Exact result:** Accepted Durable Specification `consumer-compat-r9-spec-r1` at `outcome:consumer-compat/v1`, persisted through Adapter revision `adapter-r42`.
+- **Unresolved exceptions and branch records:** None; no conditional branch applies.
+- **Responsibility:** `to-spec` owns the bounded Specification result; the integration lead is the named Specification Work owner; the API owner retains integration and parent terminal-proof Responsibility.
+- **Authority:** Faithful Specification persistence only; deployment and client mutation remain unauthorized.
+- **Proof seam and terminal condition:** Bound in section 6.
+- **Next route:** Return Implementation to `'Workflow'` for downstream coordination.

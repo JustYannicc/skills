@@ -1,34 +1,34 @@
 schemaVersion: 1
 fixtureId: to-spec-inline-accepted
 attempt: 1
-contextId: fresh-to-spec-inline-accepted-direct-d4626c-1
-suiteRevision: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
-evaluator: gpt-5.6-luna-fresh-context
-recordedAt: 2026-08-04T20:51:00.000Z
+contextId: fresh-to-spec-inline-accepted-sol-high-20260806-1
+suiteRevision: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
 environment:
   id: workflow-inline-specification
-  capabilities: { workflow: false, persistence: false, to-spec: true }
+  capabilities: { workflow: true, persistence: false, to-spec: true }
   tools: []
 observed:
-  actions: [preserve accepted request, synthesize implicit Specification]
-  artifacts: [inline Outcome Specification]
+  actions: [bind accepted Outcome contract, materialize faithful Inline Specification]
+  artifacts: [accepted Inline Outcome Specification artifact]
   effects: []
   forbiddenChecks:
     - criterion: force durable artifact/tracker ceremony
-      evidence: The accepted Specification remains implicit in the conversation; no file, tracker, or Adapter record is created.
+      evidence: The artifact remains Inline and records no canonical locator or Adapter revision.
       observed: false
     - criterion: invent missing decisions
-      evidence: Every field comes from the settled request with no new decision.
+      evidence: Every requirement is carried from welcome-note-r2 or orientation-r3.
       observed: false
     - criterion: execute extra work
-      evidence: No note send or downstream work is performed.
+      evidence: The note is neither drafted nor sent; later execution returns to Workflow.
       observed: false
   invoked: [to-spec]
   notInvoked: [durable Adapter, to-tickets, implement]
-  proof: [accepted request is represented as an implicit Specification]
-  responsibility: [direct caller retains parent responsibility]
-  route: [inline-specification]
+  proof: [welcome-note-r2 and exact Inline artifact revision are bound, Sam 10:00 Room 4 Alex access support and 60-word threshold are preserved, sending remains excluded from this phase]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-inline-specification-to-workflow]
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-inline-accepted-1.txt
-  sha256: 1466379fd4171a4feb686d642101bfa222c86732784af5b5f6ae1334acca83cb
+  sha256: 73f60ef89d22d76cfd81574284209834e6160f7885b177255b91c24cdc2ea9af

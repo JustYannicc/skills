@@ -58,14 +58,6 @@ New evidence may return work to discovery, Specification, decomposition, or
 execution. A direct request for a later phase enters at that phase only after
 Workflow verifies its minimum prerequisites.
 
-One narrow Inline exception preserves proportionality: when a direct caller
-already supplies a complete, accepted, low-risk semantic Specification and
-requests only an Inline result before a Persistence boundary, `to-spec` may
-return that bounded result without a parent Workflow context. The exception
-does not permit Durable representation, effects, approval or assignment
-boundaries, waiting, multiple phases, meaningful risk, or parent completion;
-those requests still enter through Workflow and its prerequisite checks.
-
 ## Proportional representation
 
 ### Inline mode

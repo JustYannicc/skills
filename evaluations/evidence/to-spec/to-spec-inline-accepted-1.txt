@@ -1,22 +1,87 @@
-Fresh-context to-spec run
-Candidate: git:d4626cff91d178f37332100f12a9c9942a97bee4
+Fresh-context To Spec run
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
 
-Outcome Specification (Inline, Accepted)
+# Welcome note — Specification
 
-Outcome: a concise welcome note for the named recipient, serving the settled
-purpose and tone and readable by that recipient today.
-Scope: this one note, recipient, today, and the in-conversation writing boundary.
-Exclusions: durable records, sending the note, and unrelated communication.
-Constraints: settled recipient, purpose, tone, scope, exclusion, and supplied
-hard limits/preferences with source, confidence, and effect.
-Responsibility: direct caller retains parent Outcome responsibility; to-spec owns
-this bounded semantic result. No Workflow host or second workflow is created.
-Authority: caller accepts responsibility and authority for this in-conversation
-note; no external-send authority is exercised.
-Accepted decisions: all decisions stated in the request with source/confidence.
-Unresolved exceptions: none.
-Proof seam: note is represented in this conversation and can be read by the
-named recipient.
-Terminal condition: note is accepted in this conversation.
-Representation/state: one implicit Inline Specification, revision v1, Accepted.
-No file, tracker, durable Adapter, send, or downstream phase is created.
+- **Specification state:** Accepted
+- **Accepted Outcome source and exact revision:** `welcome-note-r2`
+- **Specification revision:** `welcome-note-r2-inline-spec-r1`
+- **Representation mode:** Inline
+- **Canonical locator and Adapter revision, when Durable:** Not applicable; no Durable representation or Adapter is requested.
+- **Approver, Authority, and acceptance evidence:** Alex is Approver. Alex's Authority covers this exact faithful Inline Specification and later drafting, but not sending. Workflow supplied `welcome-note-r2` as accepted and requested an exact faithful representation; this revision adds no material judgment.
+
+## 1. Intent and Outcome
+
+- **Original request:** Materialize the accepted `welcome-note-r2` contract as an exact faithful Inline Specification, then return later execution to Workflow.
+- **Intent:** Give Sam a concise, warm, direct welcome note today that confirms the orientation details and names the access-support contact.
+- **Accepted Outcome:** Sam receives a welcome note today that states the 10:00 orientation in Room 4 and tells Sam to ask Alex for access support.
+- **Satisficing / good-enough threshold:** The note is 60 words or fewer, warm and direct, and contains the time, room, and support contact exactly.
+
+## 2. Scope, exclusions, and Constraints
+
+- **Included Actors, Systems, environments, conditions, time horizon, and boundaries:** Sam is the recipient; Alex is the access-support contact, Outcome owner, and Approver; the coordinator is Specification Work owner; Workflow coordinates successor work. The bounded result is the note text in the Inline conversation representation, for use today.
+- **Exclusions:** Sending the note and changing orientation details are excluded from this Specification phase.
+- **Required remediation, propagation, and recovery:** None is required within the accepted note-text scope. Later sending and receipt verification remain parent-Outcome work coordinated by Workflow.
+
+| Constraint or Preference | Hard Constraint, Soft Constraint, or Preference | Source and confidence | Effect on feasible choices |
+| --- | --- | --- | --- |
+| The note is 60 words or fewer. | Hard Constraint | `welcome-note-r2`; accepted, confidence not separately stated | Drafts over 60 words do not satisfy the Outcome. |
+| The note states 10:00, Room 4, and Alex as the access-support contact exactly. | Hard Constraint | `welcome-note-r2` and confirmed schedule `orientation-r3`; schedule accepted with high confidence | These three facts must be preserved without alteration. |
+| The note is warm and direct. | Soft Constraint | `welcome-note-r2`; accepted, confidence not separately stated | Tone and phrasing must remain concise, welcoming, and direct. |
+| Use Sam's plain-language Preference. | Preference | Sam's accepted plain-language Preference; high confidence | Prefer ordinary, readily understood wording. |
+| Scope is note text only; do not send or change orientation details in this phase. | Hard Constraint | `welcome-note-r2`; accepted, confidence not separately stated | Successor work may draft and review text, but sending and schedule changes require a different authorized route. |
+
+## 3. Responsibility and Authority
+
+- **Outcome owner and parent terminal-proof duty:** Alex owns the Outcome and retains integration and responsibility for proving the parent terminal condition.
+- **Specification Work owner:** The coordinator owns this bounded Specification result.
+- **Known Executors, Reviewers, or successor route:** Workflow coordinates later drafting; Alex reviews the proposed note. No sender is authorized or named by this Specification.
+- **Approver for Intent and material trade-offs:** Alex.
+- **Effect Authority:** Alex's Authority covers this exact faithful Inline Specification and later drafting. It does not cover sending the note or changing orientation details. No execution request is made here.
+
+## 4. Knowledge and decisions
+
+| Kind | Accepted statement or visible gap | Status | Source, exact revision, and confidence | Material consequence |
+| --- | --- | --- | --- | --- |
+| Fact | The orientation is at 10:00 in Room 4. | Accepted and confirmed | Schedule `orientation-r3`; high confidence | The note must state both details exactly. |
+| Decision | The note tells Sam to ask Alex for access support. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | Alex must be named as the support contact. |
+| Preference | Sam prefers plain language. | Accepted | Sam's plain-language Preference; high confidence | Drafting should avoid needlessly complex wording. |
+| Decision | Good enough is 60 words or fewer, warm and direct, with all three required facts exactly present. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | This is the drafting and review threshold. |
+| Decision | Scope is note text; sending and orientation-detail changes are excluded. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | This phase cannot produce either excluded effect. |
+| Decision | Alex is Outcome owner and Approver; the coordinator is Specification Work owner; Workflow coordinates successor execution. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | Responsibility remains separated across Specification, integration, approval, and coordination. |
+| Decision | Alex reads the proposed note and identifies the three required facts at the Proof seam. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | Approval evidence must expose the required facts to Alex. |
+| Decision | The parent Outcome ends only after an approved note is later sent and receipt is verified. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | This Specification does not complete the parent Outcome. |
+| Exception | No unresolved exception remains. | Accepted | Outcome contract `welcome-note-r2`; confidence not separately stated | No exception blocks this Inline Specification. |
+
+## 5. Accepted behavior
+
+| Actor, condition, or event | Required behavior or policy | Expected visible result | Governing decision or Constraint |
+| --- | --- | --- | --- |
+| Workflow routes later drafting | Produce note text that is 60 words or fewer, warm, direct, and in plain language. | A concise proposed note is available for Alex's review. | Accepted good-enough threshold and Sam's Preference. |
+| Proposed note text | State the 10:00 orientation in Room 4 and tell Sam to ask Alex for access support, preserving all three facts exactly. | Alex can identify the time, room, and support contact in the text. | `welcome-note-r2` and `orientation-r3`. |
+| Alex reviews the proposed note | Check the proposed text against the exact three facts and accepted quality threshold. | The note is approved only if it satisfies the accepted contract. | Accepted Proof seam and Alex's approval Authority. |
+| This Specification phase | Do not send the note or change orientation details. | No excluded external effect or schedule change occurs. | Accepted scope and Authority limit. |
+| After approval | Return execution to Workflow for the separately authorized sending and receipt-verification route. | Parent terminal work remains visible and owned. | Accepted terminal condition and successor route. |
+
+## 6. Proof and terminal condition
+
+- **Highest stable Proof seam:** Alex reads the proposed note and can identify the three required facts: 10:00, Room 4, and Alex as the access-support contact.
+- **Evidence, observer, timing, and relevant limits:** The evidence is the proposed note text; Alex is the observer; review occurs before any sending. This seam proves note-content compliance, not sending or receipt.
+- **Terminal condition:** An approved note is later sent and receipt is verified. That terminal condition belongs to the parent Outcome and is not completed by this Specification return.
+
+## 7. Unresolved items and exceptions
+
+| Item | Impact | Owner or Approver | Next check | Blocks acceptance? |
+| --- | --- | --- | --- | --- |
+| None. | No unresolved item or exception remains. | Alex | No discovery check is required. | No |
+
+## 8. Bounded return
+
+- **Exact result:** Accepted Inline Specification `welcome-note-r2-inline-spec-r1`, faithfully bound to accepted Outcome source `welcome-note-r2`.
+- **Branch records:** No Operating Outcome, material-revision, discovery-gap, irreducible-fog, or Supplemental-evidence branch applies.
+- **Responsibility:** The coordinator owns this bounded Specification result; Alex retains parent integration and terminal-proof responsibility.
+- **Authority:** Exact faithful Inline specification and later drafting are authorized; sending is not authorized by this result.
+- **Proof seam:** Alex identifies 10:00, Room 4, and Alex as the access-support contact in the proposed note.
+- **Terminal condition:** An approved note is later sent and receipt is verified.
+- **Next route:** Return to Workflow for later drafting and coordination. Do not invoke a Durable Adapter, ticket decomposition, implementation, sending, or orientation changes from this phase.

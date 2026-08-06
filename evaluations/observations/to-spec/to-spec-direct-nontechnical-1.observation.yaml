@@ -1,34 +1,34 @@
 schemaVersion: 1
 fixtureId: to-spec-direct-nontechnical
 attempt: 1
-contextId: fresh-to-spec-direct-nontechnical-d4626c-1
-suiteRevision: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
-evaluator: gpt-5.6-luna-fresh-context
-recordedAt: 2026-08-04T20:46:00.000Z
+contextId: fresh-to-spec-direct-nontechnical-sol-high-20260806-1
+suiteRevision: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
 environment:
   id: workflow-nontechnical-specification-ready
   capabilities: { workflow: true, persistence: false, to-spec: true }
   tools: []
 observed:
-  actions: [preserve accepted intent, synthesize one Outcome Specification, use the workshop's vocabulary with universal semantic fields]
-  artifacts: [Outcome Specification]
+  actions: [bind accepted Outcome contract, materialize one Specification from the reusable template, preserve the workshop's vocabulary]
+  artifacts: [accepted Outcome Specification artifact]
   effects: []
   forbiddenChecks:
     - criterion: invent missing decisions
-      evidence: Every field is tied to the supplied workshop context with source and confidence; no new requirement is added.
+      evidence: Every material value is carried from workshop-welcome-r7 or venue access sheet v3; the artifact adds no new requirement.
       observed: false
     - criterion: absorb decomposition or implementation
-      evidence: The response contains one semantic Specification and no schedule, Ticket, implementation, or event execution.
+      evidence: The result is one Specification and returns later work to Workflow.
       observed: false
     - criterion: claim parent completion
-      evidence: Revision v1 is Proposed pending Approver acceptance, while Workflow retains parent responsibility.
+      evidence: The result explicitly says the accepted Specification does not complete the workshop welcome Outcome.
       observed: false
   invoked: [to-spec]
   notInvoked: [to-tickets, implement]
-  proof: [all required Specification fields are present, no software-only assumptions]
-  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  proof: [contract workshop-welcome-r7 and exact Specification revision are bound, the 40 named participants and 18 September boundary are preserved, venue access sheet v3 and representative arrival-journey Proof seam are preserved]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
   route: [workflow-to-spec]
-  state: [Proposed]
+  state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-direct-nontechnical-1.txt
-  sha256: aed869b4fce469ae46afd1cbd57aac8c649ae5c26da3aad56fe26bd469e983c1
+  sha256: 8519c058516e95e5e4fa4dcd4fe5800d6fd62464cd5e35ab9ca85d6abe465e38

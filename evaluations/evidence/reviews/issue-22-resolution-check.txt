@@ -1,18 +1,77 @@
-Issue: #22 — To Spec review resolution check
+Issue: #22 — PR #40 To Spec resolution check
 Status: HUMAN REVIEW REQUIRED
-Fixed point: git:455541e255b5482235faa65a82bffc2b21415b94
-Final candidate implementation: git:dbf15995b62f963c4524c664136bf2bf40282658
-Final evidence/report commit: git:14e3e3e82be25cf6d87cb5a89dc2a54be5584e04
-Evaluator: gpt-5.6-luna (independent resolution check)
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+Check type: exactly one narrow resolution check of the five recorded findings
 
-Verdict: PASS. The README candidate section and the bounded direct Inline
-exception resolve the independent Standards findings. The rule is identical
-in the skill and governing Workflow documents; Durable/effect/approval,
-assignment, waiting, multi-phase, meaningful-risk, and parent-completion paths
-still require Workflow. The workflow=false Inline fixture exercises the safe
-exception, and the evaluation report contains 26 passed fixtures with zero
-findings. `pnpm validate` and `git diff --check` pass; the worktree was clean.
+Verdict: PASS
 
-Scope check: no #1 mutation, no #35 System Record representation decision, no
-private or sensitive material. This check confirms technical resolution only;
-human review remains required and issue #22 remains open.
+1. PASS — Incomplete-input trigger.
+   `skills/to-spec/SKILL.md:3` now makes the model-facing description cover
+   material gaps blocking a requested Specification, so the incomplete branch
+   is discoverable without first loading the skill body.
+
+2. PASS — Parent Outcome Responsibility.
+   The normative skill text is corrected: `skills/to-spec/SKILL.md:10` assigns
+   parent Responsibility to the Outcome owner, and line 56 limits Workflow to
+   downstream coordination while retaining integration and terminal-proof
+   Responsibility with that owner. The incomplete and irreducible-fog records
+   agree at
+   `evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt:110-113`
+   and `evaluations/evidence/to-spec/to-spec-irreducible-fog-1.txt:104-107`.
+   The two previously contradictory To Spec observations are now corrected:
+   `evaluations/observations/to-spec/to-spec-direct-technical-1.observation.yaml:23-25`
+   keeps integration and terminal-proof Responsibility with the API owner while
+   Workflow coordinates downstream routing, and
+   `evaluations/observations/to-spec/to-spec-operating-outcome-1.observation.yaml:23-25`
+   does the same with the program owner. These statements now match each file's
+   responsibility summary at lines 32 and 29 respectively and the named
+   Outcome-owner rule in the skill.
+
+3. PASS — Classification vocabulary.
+   `skills/to-spec/SKILL.md:20` restricts material-input kinds to fact,
+   assumption, inference, decision, unknown, or exception; explicitly makes
+   missing Authority an unknown; and restricts Constraint classification to
+   Hard Constraint, Soft Constraint, or Preference. The template repeats the
+   exact Constraint vocabulary at
+   `skills/to-spec/references/outcome-specification-template.md:29-33`.
+   The incomplete evidence uses `Unknown` for every missing item, including
+   Authority, at
+   `evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt:42-53`,
+   and its Constraint rows use only `Hard Constraint` at lines 27-30.
+
+4. PASS — Fresh irreducible-fog proof.
+   `evaluations/fixtures/to-spec/to-spec-irreducible-fog.fixture.yaml:10-40`
+   supplies the accepted `weather-rule-r3`, 35 km/h threshold, Hall B safe
+   mode, 15-minute feedback, 30-person recovery, Authority, transfer, and
+   terminal condition while keeping the live gust value irreducible. Fresh
+   observation
+   `evaluations/observations/to-spec/to-spec-irreducible-fog-1.observation.yaml:2-7,16-40`
+   binds the candidate and raw evidence. The raw record preserves the unresolved
+   gust value at
+   `evaluations/evidence/to-spec/to-spec-irreducible-fog-1.txt:48`, the exact
+   rule and operating behavior at lines 49-52 and 89-97, and the owner,
+   transfer, proof, and terminal boundaries at lines 34-40, 68-72, and 80-87.
+   Its recorded SHA-256
+   `9fd50c826e20b4bc0b6297a0bb5f7e2d049ce8d3eb221ebbe9c9515d61355f18`
+   matches the raw evidence file.
+
+5. PASS — Incomplete case does not invent cadence or transfer rules.
+   `evaluations/fixtures/to-spec/to-spec-incomplete-authority.fixture.yaml:10-17,28-38`
+   requires preservation of each missing item and expressly forbids inferred
+   cadence, transfer rules, and treating missing Authority as an exception.
+   The fresh raw evidence labels recurrence only as an unaccepted inference and
+   infers no cadence, horizon, or transfer rule at
+   `evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt:44-53`.
+   Its Operating Outcome fields leave cadence, owner, transfer, cancellation,
+   and stability-window terms unsupplied at lines 85-92, while lines 107-113
+   return discovery coordination to Workflow and retain Outcome ownership as
+   gap G5. Its recorded SHA-256
+   `f89560eee576d9c01983fda7bcbb44c1d2889a23743e35e88276af212e0a0e98`
+   matches the raw evidence file.
+
+Disposition: all five recorded findings pass. This final disposition preserves
+the prior PASS results for findings 1, 3, 4, and 5 and changes only finding 2
+after verifying the two corrected observation assertions.
+This check grants no human approval, does not merge PR #40, and does not close
+Issue #22.

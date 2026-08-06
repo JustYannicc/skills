@@ -1,34 +1,40 @@
 schemaVersion: 1
 fixtureId: to-spec-incomplete-authority
 attempt: 1
-contextId: fresh-to-spec-incomplete-authority-d4626c-1
-suiteRevision: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
-evaluator: gpt-5.6-luna-fresh-context
-recordedAt: 2026-08-04T20:48:00.000Z
+contextId: fresh-to-spec-incomplete-authority-sol-high-20260806-1
+suiteRevision: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
 environment:
   id: workflow-specification-gaps
-  capabilities: { workflow: true, persistence: false, to-spec: true, batch-grill-me: true, research: true, to-questionnaire: true }
+  capabilities: { workflow: true, persistence: false, to-spec: true, grilling: true, research: true, to-questionnaire: true }
   tools: []
 observed:
-  actions: [preserve request and state, enumerate material missing decisions, route gaps to batch-grill-me, research, to-questionnaire, and Workflow approval, state exact resumption condition]
-  artifacts: [Specification gap record]
+  actions: [preserve request and state, classify each uncertainty and complete the discovery-gap template, return gaps to Workflow, Workflow routes to grilling research to-questionnaire and approval, state exact resumption condition]
+  artifacts: [Specification discovery-gap record]
   effects: []
   forbiddenChecks:
     - criterion: invent Authority
-      evidence: Approver and contact/effect authority, limits, and validity remain unresolved and route to Workflow approval.
+      evidence: The result states that no contact Authority exists and prohibits the effect.
       observed: false
     - criterion: present accepted Specification
-      evidence: The result is a Waiting for discovery gap record and requires every routed return before synthesis.
+      evidence: The artifact remains Waiting for discovery with eight explicit blocking gaps.
       observed: false
     - criterion: execute effect
-      evidence: No person is contacted and no configuration, Ticket, implementation, or effect occurs.
+      evidence: The continuation forbids sending or configuring reminder contacts.
+      observed: false
+    - criterion: infer an operating cadence or transfer rule from missing inputs
+      evidence: The artifact explicitly says no cadence is inferred and leaves review cadence, transfer, and cancellation rules unsupplied.
+      observed: false
+    - criterion: classify missing Authority as an exception
+      evidence: Contact Authority is recorded as a blocking Unknown, and the artifact explicitly says missing Authority is not an exception.
       observed: false
   invoked: [to-spec]
   notInvoked: [to-tickets, implement, effect]
-  proof: [each gap has an owner or Approver/source and resumption condition]
-  responsibility: [to-spec owns the bounded Specification result, Workflow remains responsible while blocked]
-  route: [to-spec-to-batch-grill-me, to-spec-to-research, to-spec-to-questionnaire, to-spec-to-workflow-approval]
+  proof: [each gap records uncertainty class impact blocking status smallest request owner or Approver and resumption action, Workflow selects each owning capability]
+  responsibility: [to-spec owns the bounded gap record, Workflow coordinates discovery while Outcome ownership remains an explicit blocking gap]
+  route: [to-spec-to-grilling, to-spec-to-research, to-spec-to-questionnaire, to-spec-to-workflow-approval]
   state: [Waiting for discovery]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt
-  sha256: 075fb13a8944b7d9afa2aaa535a1e97d3b019b1461f70bcb35d939653726b5d0
+  sha256: f89560eee576d9c01983fda7bcbb44c1d2889a23743e35e88276af212e0a0e98

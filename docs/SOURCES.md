@@ -12,12 +12,7 @@ This repository-wide inventory routes each source class to its authority. Inclus
 - [ClawHub publishing](https://docs.openclaw.ai/clawhub/publishing)
 - [Matt Pocock's skills, current pinned revision](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e)
 
-The universal `to-spec` successor is an adapted public skill based on Matt
-Pocock's `skills/engineering/to-spec` at the pinned revision above. Its
-complete retained-behavior and changed-assumption record is
-[`skills/to-spec/provenance.yaml`](../skills/to-spec/provenance.yaml);
-representation remains governed by the separate System Record design and the
-selected Adapter.
+The universal `to-spec` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-spec` at the pinned revision above. Its complete retained-behavior and changed-assumption record is [`validation/repository.yaml`](../validation/repository.yaml); representation remains governed by the separate System Record design and the selected Adapter.
 
 ## Thinking in Systems
 

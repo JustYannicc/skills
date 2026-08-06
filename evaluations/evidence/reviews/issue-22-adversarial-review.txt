@@ -1,33 +1,42 @@
 Issue: #22 — Universalize To Spec
 Review type: one independent adversarial two-axis review
 Status: HUMAN REVIEW REQUIRED
-Fixed point: git:455541e255b5482235faa65a82bffc2b21415b94
-Candidate implementation: git:dbf15995b62f963c4524c664136bf2bf40282658
-Evidence/report commit at review: git:14e3e3e82be25cf6d87cb5a89dc2a54be5584e04
-Review models: gpt-5.6-luna (fresh independent Standards and Spec passes)
+Candidate reviewed: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+Reviewer: gpt-5.6-sol (high), independent fresh context
 
-Spec axis: PASS. No Critical, Major, or Minor findings. The review verified
-the universal Required fields and acceptance states, domain-neutral semantic
-contract, discovery routing and continuation, exact revision impact, direct
-complete Inline behavior, Durable Adapter locator/revision evidence, the
-technical/nontechnical/incomplete/revision/negative/edge fixtures, and the
-adapter-neutral boundary for the separate System Record representation design.
+Standards axis findings
 
-Standards axis: PASS after resolution. The first pass identified two findings:
+1. Major — The model-facing description omitted the incomplete-input trigger.
+   Resolution: the description now explicitly covers incomplete requests and
+   material gaps, so invocation does not depend on hidden reference knowledge.
 
-1. Minor: README lacked a section for the implemented To Spec candidate.
-2. Major unless intentionally amended: the direct no-Workflow path was broader
-   than the accepted Workflow routing contract.
+2. Major — Workflow was described as retaining parent Outcome Responsibility.
+   Resolution: the skill, fixtures, and final evidence now keep integration and
+   terminal-proof Responsibility with the named Outcome owner. To Spec owns its
+   bounded Specification result; Workflow coordinates downstream routing.
 
-Resolution: commit dbf15995b62f963c4524c664136bf2bf40282658 adds a
-human-review-required README candidate section, narrows the bypass to a
-complete, accepted, low-risk Inline semantic Specification before Persistence,
-and excludes Durable representation, effects, approval/assignment boundaries,
-waiting, multiple phases, meaningful risk, and parent completion. The same
-exception and limits are recorded in docs/WORKFLOW_ROUTING.md and
-docs/specs/UNIVERSAL_SKILL_SUITE.md. All observations and the report were then
-rebound to the exact candidate.
+3. Minor — Classification vocabulary drifted outside the accepted universal
+   terms.
+   Resolution: Constraints are classified only as Hard Constraint, Soft
+   Constraint, or Preference. Missing Authority is an Unknown rather than an
+   Exception, and operating fields carry accepted meaning or named gaps.
 
-Review conclusion: no unresolved Critical, Major, or Minor findings. This is a
-technical review package; it does not grant human approval, merge the change,
-or close issue #22.
+Spec axis findings
+
+4. Major — The irreducible-fog branch lacked fresh behavioral proof.
+   Resolution: fixture `to-spec-irreducible-fog` and fresh evidence bind
+   `weather-rule-r3`, the 35 km/h threshold, Hall B safe mode, 15-minute
+   feedback, 30-person recovery, exact Authority, transfer, and terminal proof
+   while leaving the live gust value unresolved.
+
+5. Major — The incomplete case invented operating cadence and transfer rules.
+   Resolution: the final incomplete evidence explicitly says no cadence is
+   inferred, leaves cadence/transfer/cancellation as gaps, classifies missing
+   Authority as Unknown, and returns discovery coordination to Workflow while
+   Outcome ownership remains gap G5.
+
+Disposition
+
+All five findings were implemented. This record does not replace the required
+independent resolution check, grant human approval, merge PR #40, or close
+issue #22.

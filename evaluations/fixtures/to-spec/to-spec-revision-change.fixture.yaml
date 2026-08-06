@@ -8,14 +8,25 @@ domains: [technical, organizational]
 severity: Major
 requiredAttempts: 1
 prompt: >-
-  Specification revision v1 was accepted with its complete Outcome, scope,
-  exclusions, constraints, actors, authority, proof, and terminal condition;
-  two dependent Tickets, one approval, and evidence for the original scope
-  also exist. The accepted scope now excludes one consumer group and changes a
-  material constraint. Compare v1 and v2, perform impact analysis over affected
-  dependencies, completed work, approvals, evidence, current-state records,
-  effects, and legacy state, preserve unaffected work, and return v2 for
-  re-approval; do not execute anything.
+  Revise accepted Specification `delivery-window-v1`. Its Outcome is to deliver
+  the weekly supply package to North and South clinics by Friday 16:00. It
+  includes both clinics, excludes stock purchasing, requires cold-chain
+  temperature 2-8 C, permits the logistics lead to arrange both deliveries,
+  proves delivery through signed receipts plus temperature logs, and ends when
+  both deliveries and any remediation are verified. Operations owns the
+  Outcome; the logistics lead owns the Specification; the regional director is
+  Approver. Accepted change `change-r4` removes South clinic from scope and
+  changes North's deadline to Thursday 14:00 while retaining the 2-8 C
+  Constraint. Existing exact items: Ticket `T-NORTH-r2` plans North and must be
+  revised; Ticket `T-SOUTH-r3` plans South and must be cancelled; completed work
+  `route-draft-r7` covers both and must be reassessed; approval `approval-a9`
+  and evidence `route-check-e5` bind v1 and are invalid for affected scope;
+  current-state record `delivery-map-r6` and legacy schedule `calendar-r12`
+  require propagation. Unrelated training Ticket `T-TRAIN-r1` and evidence
+  `cold-chain-e2` remain valid. All cited source records are accepted with high
+  confidence. No delivery effect has occurred. Compare v1
+  with proposed v2, complete the material-revision branch, preserve unaffected
+  work, and return v2 for regional-director re-approval without executing.
 environment:
   id: workflow-specification-revision
   capabilities:
@@ -29,8 +40,8 @@ expected:
   effects: []
   invoked: [to-spec]
   notInvoked: [to-tickets, implement]
-  proof: [old/new revision and affected set are recorded]
-  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  proof: [delivery-window-v1 proposed v2 and change-r4 are bound, T-NORTH-r2 T-SOUTH-r3 route-draft-r7 approval-a9 route-check-e5 delivery-map-r6 and calendar-r12 receive explicit dispositions, T-TRAIN-r1 and cold-chain-e2 remain valid]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
   route: [revision-change-to-spec]
   state: [Proposed]
   forbidden: [mutate prior revision in place, reuse stale approval, invalidate unrelated work, claim completion]

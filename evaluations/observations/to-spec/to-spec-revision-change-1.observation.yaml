@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-spec-revision-change
 attempt: 1
-contextId: fresh-to-spec-revision-change-d4626c-1
-suiteRevision: git:b4ac6998ef7e4ecd38d7f7803e09fbd414b359d2
-evaluator: gpt-5.6-luna-fresh-context
-recordedAt: 2026-08-04T20:49:00.000Z
+contextId: fresh-to-spec-revision-change-sol-high-20260806-1
+suiteRevision: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
 environment:
   id: workflow-specification-revision
   capabilities: { workflow: true, persistence: false, to-spec: true }
@@ -15,23 +15,23 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: mutate prior revision in place
-      evidence: v1 remains immutable and v2 is issued as a separate revision with retained history.
+      evidence: delivery-window-v1 is preserved and the successor is proposed as delivery-window-v2.
       observed: false
     - criterion: reuse stale approval
-      evidence: v1 approval/evidence are invalidated at the affected seam and exact-v2 re-approval is required.
+      evidence: approval-a9 is invalidated and regional-director re-approval is required.
       observed: false
     - criterion: invalidate unrelated work
-      evidence: Unrelated Tickets, dependencies, completed work, records, approvals, evidence, and effects are preserved.
+      evidence: T-TRAIN-r1 and cold-chain-e2 remain valid.
       observed: false
     - criterion: claim completion
-      evidence: v2 is Proposed and awaits re-approval; no downstream work or effect is claimed.
+      evidence: The result is Proposed and returns to Workflow for re-approval without executing.
       observed: false
   invoked: [to-spec]
   notInvoked: [to-tickets, implement]
-  proof: [old/new revision and affected set are recorded]
-  responsibility: [to-spec owns the bounded Specification result, Workflow retains parent Outcome responsibility]
+  proof: [delivery-window-v1 proposed v2 and change-r4 are bound, T-NORTH-r2 T-SOUTH-r3 route-draft-r7 approval-a9 route-check-e5 delivery-map-r6 and calendar-r12 receive explicit dispositions, T-TRAIN-r1 and cold-chain-e2 remain valid]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
   route: [revision-change-to-spec]
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-revision-change-1.txt
-  sha256: 28024f09f180e2a9e99996b1097a9cc46597f3a1652cc64188475da774ac91ef
+  sha256: 1cc44bac0d6dc381ee2b711580423c7b95facfdc24859a58d5e05053243954e7
