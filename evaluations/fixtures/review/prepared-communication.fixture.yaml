@@ -7,7 +7,16 @@ skill: review
 domains: [communication, organizational-work]
 severity: Major
 requiredAttempts: 1
-prompt: Review the exact approved-revision customer reply as a prepared draft before sending; verify the message seam without claiming delivery.
+prompt: >-
+  Review exact prepared result `customer-reply@r9` against accepted Specification
+  `reply-spec@r4` and communication standard `customer-comms@2.3` before sending.
+  The approved draft names the billing error, corrected amount and date, single
+  recipient action, reply route when the correction is wrong, and two-business-day
+  response expectation in plain language. Recipient rehearsal evidence
+  `reply-rehearsal@r9-1` found the flow clear, coherent, respectful, low-effort,
+  trustworthy, and recoverable, with every Specification and Standards item
+  passing. The draft is approved but has not been sent. Verify the result seam
+  without claiming delivery.
 environment:
   id: prepared-communication-before-effect
   capabilities:

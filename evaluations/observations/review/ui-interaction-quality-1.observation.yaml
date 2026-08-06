@@ -1,0 +1,56 @@
+schemaVersion: 1
+fixtureId: review-ui-interaction-quality
+attempt: 1
+contextId: final-sol-review-ui-interaction-quality-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:30.000Z
+environment:
+  id: rendered-ui-flow
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - interactive-preview
+observed:
+  actions:
+    - pin all target revisions and rendered proof seam
+    - exercise the Material happy error degraded and recovery paths
+    - inspect supported viewports keyboard pointer and touch inputs
+    - assess observable clarity coherence control friction feedback accessibility trust and feel
+    - keep Specification and Standards evidence separate
+    - return one integrated verdict
+  artifacts:
+    - revision-bound Review record
+    - rendered interaction evidence
+  effects: []
+  forbiddenChecks:
+    - criterion: review code alone
+      evidence: Changes required; bounded credible-support matrix proved expired-code focus, announcement, and mobile recovery defects. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: approve from static screenshots alone
+      evidence: Changes required; bounded credible-support matrix proved expired-code focus, announcement, and mobile recovery defects. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: omit Material input methods or recovery
+      evidence: Changes required; bounded credible-support matrix proved expired-code focus, announcement, and mobile recovery defects. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - implementation
+    - undeclared specialist
+  proof:
+    - walkthrough traces trigger state transitions feedback visible output error and recovery
+    - complete exact Evidence references support representative readable anchors
+  responsibility:
+    - Reviewer owns verdict
+    - Work owner owns correction
+    - Outcome owner retains parent responsibility
+  route:
+    - rendered-ui-review
+  state:
+    - in_review-to-accepted
+rawEvidence:
+  locator: evaluations/evidence/review/ui-interaction-quality-1.txt
+  sha256: d6c08444e2e66322402aba88616554018cb03dff4c89b8381ff0c0595826b024

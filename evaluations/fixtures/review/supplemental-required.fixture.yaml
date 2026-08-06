@@ -7,7 +7,19 @@ skill: review
 domains: [software, physical-environment]
 severity: Critical
 requiredAttempts: 3
-prompt: Workflow invokes Review for exact equipment-control result r8. The user-selected `supplemental-review` mapping is `public-safety-review` from `public-skills@example.org/public-safety-review` version `4.0.2`, scoped to lockout and recovery behavior, required, input contract `Specification + result + safety standard + proof seam`, expected evidence `revision-bound exercised-path observations`, failure behavior `return Inconclusive waiting`; invoke only this mapping at the declared extension point.
+prompt: >-
+  Workflow invokes Review for exact equipment-control result r8 against
+  `control-spec@r5` and `equipment-safety@4.1`. The user-selected
+  `supplemental-review` mapping is `public-safety-review` from
+  `public-skills@example.org/public-safety-review` version `4.0.2`, scoped to
+  lockout and recovery behavior, required, input contract `Specification + result
+  + safety standard + proof seam`, expected evidence `revision-bound
+  exercised-path observations`, failure behavior `return Inconclusive waiting`;
+  invoke only this mapping at the declared extension point. The available mapped
+  reviewer returns valid evidence `safety-review@r8-1`, explicitly bound to result
+  r8, showing that recovery releases lockout before the safety acknowledgment and
+  therefore violates `equipment-safety@4.1`. Integrate that finding into the core
+  verdict without letting the Supplemental replace Review.
 environment:
   id: workflow-with-required-supplemental
   capabilities:

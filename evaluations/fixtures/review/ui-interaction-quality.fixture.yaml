@@ -7,7 +7,16 @@ skill: review
 domains: [software, communication]
 severity: Major
 requiredAttempts: 1
-prompt: Review exact revision ui-r17 of a responsive account-recovery flow against Specification spec-r9 and the named accessibility and product interaction standards. The proof seam is the rendered flow, and executable preview access is available.
+prompt: >-
+  Review exact revision `ui-r17` of a responsive account-recovery flow against
+  Specification `spec-r9`, accessibility standard `a11y@2.2`, and interaction
+  standard `product-ui@5.0`. The Proof seam is executable preview `preview@r17-3`.
+  Rendered evidence covers desktop and mobile with keyboard, pointer, and touch:
+  the happy path completes with clear feedback, but the expired-code error moves
+  focus to the page heading instead of the error, provides no announced
+  explanation, and hides the resend action below the mobile viewport; keyboard
+  and screen-reader users cannot identify or recover without searching. No other
+  finding remains. Return the integrated result-level verdict.
 environment:
   id: rendered-ui-flow
   capabilities:

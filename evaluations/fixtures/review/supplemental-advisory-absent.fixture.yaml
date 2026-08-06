@@ -7,7 +7,16 @@ skill: review
 domains: [communication, organizational-work]
 severity: Major
 requiredAttempts: 1
-prompt: Review exact volunteer announcement result r12. The user-selected `supplemental-review` mapping is `plain-language-review` from `public-skills@example.org/plain-language-review` version `2.1.0`, scoped to recipient comprehension, advisory, input contract `Specification + result + audience`, expected evidence `revision-bound reading observations`, failure behavior `record limitation and continue`; that capability is unavailable and core proof is complete. Do not substitute any similar installed skill.
+prompt: >-
+  Review exact volunteer announcement result r12 against `announcement-spec@r3`
+  and `public-comms@1.4`. Core evidence `announcement-check@r12-2` binds every
+  Specification and Standards item to a passing observation. The user-selected
+  `supplemental-review` mapping is `plain-language-review` from
+  `public-skills@example.org/plain-language-review` version `2.1.0`, scoped to
+  recipient comprehension, advisory, input contract `Specification + result +
+  audience`, expected evidence `revision-bound reading observations`, failure
+  behavior `record limitation and continue`; that capability is unavailable.
+  Do not substitute any similar installed skill.
 environment:
   id: core-review-with-advisory-gap
   capabilities:

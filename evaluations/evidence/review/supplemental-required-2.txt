@@ -1,9 +1,80 @@
-fresh-context: review-supplemental-required-2
-reviewer: gpt-5.6-luna-fresh-context-review
-target: safety-sensitive result
-specification: spec-safety-8
-result: result-safety-r8
-standards: safety-standard-3
-extension: supplemental-review
-supplemental: required-safety-review-r8
-observation: required specialist evidence was exact and visible; Review retained the integrated lifecycle transition and sent findings to the Work owner.
+Context: final-sol-review-supplemental-required-2
+Evaluator: gpt-5.6-sol
+Suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+Fixture: review/supplemental-required
+Attempt: 2
+
+Context: `final-sol-review-supplemental-required-2` · candidate `fa1e76f`
+
+# Review — equipment-control r8
+
+**Verdict:** Changes required
+
+**Reason:** Required Supplemental evidence `safety-review@r8-1`, validly bound to result r8, demonstrates that recovery releases lockout before safety acknowledgment, violating `equipment-safety@4.1`.
+
+**Target:** Specification `control-spec@r5` · result `equipment-control@r8` · standards `equipment-safety@4.1` · Proof seam `exercised lockout-and-recovery path` · effect evidence `outside this result-level seam`
+
+**Coverage:** Specification `gaps` · Standards `gaps; decisive failure established` · Supplemental `integrated` · effect `outside this seam`
+
+**Review controls:** depth `High` · Reviewer/independence `Workflow Reviewer, separate from the mapped Supplemental reviewer` · evidence matrix `normal lockout and degraded recovery paths; stop for this revision after the recovery-path safety breach independently requires correction` · sources `control-spec@r5, equipment-control@r8, equipment-safety@4.1, mapping configuration, safety-review@r8-1` · capability gaps `none`
+
+## How the result works
+
+Recovery is triggered while safety acknowledgment is pending. Result r8 releases lockout before that acknowledgment completes, exposing the unsafe recovery state at the Proof seam. Recovery must instead retain lockout through acknowledgment; correction is then re-exercised against the same path.
+
+## Evidence
+
+### Specification
+
+| Requirement | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| Lockout and recovery behavior | r8 releases lockout before safety acknowledgment; the accepted Specification’s exact ordering clause was not supplied. | `control-spec@r5`; clause evidence `unknown—not supplied`; observed sequence `safety-review@r8-1` | unknown |
+
+### Standards
+
+| Governing rule | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| `equipment-safety@4.1` lockout and recovery ordering | Exercised recovery releases lockout before safety acknowledgment. | `safety-review@r8-1`, revision-bound to `equipment-control@r8` | fail |
+| System-fit recovery lens | The recovery transition defeats the safety acknowledgment boundary. | `safety-review@r8-1` | fail |
+
+## Findings
+
+### Critical — Recovery releases lockout prematurely
+
+- **Rule:** `equipment-safety@4.1`
+- **Evidence:** `safety-review@r8-1` observes result r8 releasing lockout before safety acknowledgment.
+- **Consequence:** Recovery can expose an unsafe equipment state before its required safety boundary is satisfied.
+- **Correction:** Keep lockout asserted until safety acknowledgment succeeds, then exercise and record the corrected recovery sequence.
+
+## Supplemental reviewers
+
+| Mapping | Scope and status | Exact result binding | Evidence or limitation | Disposition |
+| --- | --- | --- | --- | --- |
+| `public-safety-review`, `public-skills@example.org/public-safety-review`, version `4.0.2`, `supplemental-review` | lockout and recovery; required; contract `Specification + result + safety standard + proof seam`; expected revision-bound exercised-path observations; failure means Inconclusive waiting | `equipment-control@r8` | Valid `safety-review@r8-1`; early lockout release violates `equipment-safety@4.1` | integrated |
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → accepted`
+- **Reviewer:** Workflow Reviewer; owns the integrated verdict independently of the Supplemental reviewer
+- **Work owner:** Equipment-control Work owner; correct r8 and resubmit a new exact revision
+- **Outcome owner:** Workflow Outcome owner; retains parent integration and completion responsibility
+- **Approver:** Not required at this result-level Review seam; any real effect remains separately governed
+
+## Pending effects, limitations, and next check
+
+No real effect is authorized or proven here. The Work owner must correct the sequencing and submit a new immutable result. The exact next check is an exercised recovery path showing lockout remains asserted until acknowledgment completes. Resume Review against the new revision-bound tuple; escalate to the Outcome owner if the corrected result or required evidence remains unavailable.
+
+## Full audit
+
+| Check | Result |
+| --- | --- |
+| Exact selected mapping validated | Pass — identity, source, version, scope, required status, input contract, evidence contract, and failure behavior are explicit |
+| Only declared Supplemental invoked | Pass — no similar or unmapped specialist used |
+| Supplemental return validated | Pass — fixture declares `safety-review@r8-1` valid, revision-bound to r8, and based on exercised-path observations |
+| Core Review retained | Pass — Supplemental supplied evidence; the Workflow Reviewer integrated it and selected the verdict |
+| Axes kept separate | Pass — Specification remains unknown where its clause is absent; the Standards violation is independently established |
+| Required evidence disposition | Pass — integrated, so the target is not blocked as Inconclusive |
+| Verdict and transition | Pass — proven safety breach yields `Changes required` and `in_review → accepted` |
+| Responsibility | Pass — Work owner corrects; Outcome owner retains parent responsibility |
+| Effect boundary | Pass — no real effect performed, authorized, or claimed |
+| Forbidden behavior | Pass — no false completion, stale evidence acceptance, unmapped reviewer, or Supplemental-owned verdict |

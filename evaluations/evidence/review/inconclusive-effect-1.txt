@@ -1,8 +1,69 @@
-fresh-context: review-inconclusive-effect-1
-reviewer: gpt-5.6-luna-fresh-context-review
-target: approved message draft
-specification: spec-delivery-6
-result: result-message-r4
-proof-seam: delivery receipt
-effect-evidence: unavailable
-observation: result verification and effect verification stayed separate; missing receipt and unblock condition produced Inconclusive and an owned continuation record; no send occurred.
+context: final-sol-review-inconclusive-effect-1
+evaluator: gpt-5.6-sol
+suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: review-inconclusive-effect
+attempt: 1
+
+# Review — approved-message delivery effect
+
+**Verdict:** Inconclusive
+
+**Reason:** The approved result is reviewable, but delivery-service acceptance and the matching effect receipt remain unobserved.
+
+**Target:** Specification `[accepted message contract@bound revision]` · result `[approved message@bound revision]` · standards `[governing delivery standards@bound revisions]` · Proof seam `[delivery-service acceptance and receipt]` · effect evidence `[pending]`
+
+**Coverage:** Specification `[gaps at effect seam]` · Standards `[complete for reviewed boundary]` · Supplemental `[not configured]` · effect `[pending]`
+
+**Review controls:** depth `[Standard]` · Reviewer/independence `[fresh Review pass]` · evidence matrix `[approved result → service acceptance → matching receipt; stop because Material effect evidence is unavailable]` · sources `[prompt and bound Workflow records]` · capability gaps `[acceptance/receipt unavailable; automatic scheduling unavailable]`
+
+## How the result works
+
+The approved message is submitted to the delivery service. Completion at this Proof seam requires the service to accept that exact message revision and produce a matching effect receipt. The service has not yet confirmed acceptance and the receipt is delayed, so Review preserves the pending state without resending or claiming the effect occurred.
+
+## Evidence
+
+### Specification
+
+| Requirement | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| Exact message is prepared and approved | Prompt identifies the message as approved | prompt; exact revision binding retained by Workflow | pass |
+| Delivery service accepts the exact message | Acceptance has not been observed | `unknown—not supplied` | unknown |
+| Matching receipt proves the real effect | Receipt is delayed and unavailable | `unknown—not supplied` | unknown |
+
+### Standards
+
+| Governing rule | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| Separate preparation, approval, and effect proof | Approval is recorded separately from the unproved effect | current Review procedure; prompt | pass |
+| Prevent false completion | No Verified verdict or completed-effect claim is made | this Review record | pass |
+
+## Findings
+
+No findings. The pending effect evidence is an owned proof gap, not evidence of a defective prepared result.
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → waiting`
+- **Reviewer:** fresh Reviewer
+- **Work owner:** remains responsible for obtaining the delivery-service acceptance record and matching receipt
+- **Outcome owner:** retains parent integration and completion Responsibility
+- **Approver:** approval exists for the exact message revision; it does not prove delivery
+
+## Pending effects, limitations, and next check
+
+The Work owner must inspect the delivery-service record for the exact approved message revision and obtain both an accepted status and its matching receipt identifier and timestamp. Review resumes at the effect boundary when those records arrive. If the governed delivery timeout expires first, the Work owner escalates through the delivery-service recovery route and records that outcome before resubmission. The Reviewer then rechecks the exact tuple and effect evidence; Review performs no delivery action.
+
+## Criterion audit
+
+- **PASS — Actions:** separates result verification from effect verification; records the missing evidence and unblock condition; returns Inconclusive/waiting; preserves the Work owner.
+- **PASS — Artifact:** supplies a continuation record.
+- **PASS — Effects:** performs no external effect.
+- **PASS — Invocation:** applies Review.
+- **PASS — Not invoked:** neither claims Verified nor executes/resends the effect.
+- **PASS — Proof:** states the effect-evidence requirement and exact next check.
+- **PASS — Responsibility:** Work owner remains responsible while waiting.
+- **PASS — Route:** effect proof routes to waiting.
+- **PASS — State:** `in_review → waiting`.
+- **PASS — Forbidden behavior:** does not treat the approved message as a completed effect.
+
+**Overall audit: PASS.**

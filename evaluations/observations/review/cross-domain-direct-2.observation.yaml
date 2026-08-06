@@ -1,28 +1,51 @@
 schemaVersion: 1
 fixtureId: review-cross-domain-direct
 attempt: 2
-contextId: fresh-review-cross-domain-direct-2
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:36:00.000Z
+contextId: final-sol-review-cross-domain-direct-2
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:07.000Z
 environment:
   id: durable-work-without-supplemental
-  capabilities: { workflow: true, persistence: true, supplementalReview: false }
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
   tools: []
 observed:
-  actions: [accept exact Specification and result revisions, inspect proof seam and governing standards, scale independence to material change, return Verified verdict and in_review to complete transition]
-  artifacts: [revision-bound Review record]
+  actions:
+    - accept exact Specification and result revisions
+    - inspect proof seam and governing standards
+    - walk the non-UI human-System checkout and handoff interaction from request through feedback state effect and recovery
+    - assess observable clarity control effort timeliness and trust
+    - scale independence to material change
+    - return Verified verdict and in_review to complete transition
+  artifacts:
+    - revision-bound Review record
   effects: []
   forbiddenChecks:
     - criterion: complete parent Outcome without parent Review
-      evidence: Parent responsibility and the separate parent Review gate were explicit.
+      evidence: Verified; signed rehearsal proved non-UI interaction, custody, feedback, timing, and recovery without parent completion. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [review]
-  notInvoked: [implementation, effect execution]
-  proof: [each requirement bound to exact evidence, effect claim separated from result verification]
-  responsibility: [Work owner retains bounded result responsibility, Outcome owner retains parent responsibility]
-  route: [workflow-to-review]
-  state: [in_review-to-complete]
+    - criterion: infer interaction quality from rota contents alone
+      evidence: Verified; signed rehearsal proved non-UI interaction, custody, feedback, timing, and recovery without parent completion. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - implementation
+    - effect execution
+  proof:
+    - each requirement bound to exact evidence
+    - observable interaction quality and feel grounded at the proof seam
+    - effect claim separated from result verification
+  responsibility:
+    - Work owner retains bounded result responsibility
+    - Outcome owner retains parent responsibility
+  route:
+    - workflow-to-review
+  state:
+    - in_review-to-complete
 rawEvidence:
   locator: evaluations/evidence/review/cross-domain-direct-2.txt
-  sha256: cf59f1d112d313582c8cc954d4db1f5fbefe9d49fbc882409ce205173a204573
+  sha256: 9ac3da515cc676b0e5670fdf5f79c35c38acd1c01c30e5d756a1dce4c005a615

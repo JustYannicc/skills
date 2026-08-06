@@ -1,28 +1,43 @@
 schemaVersion: 1
 fixtureId: review-inline
 attempt: 1
-contextId: fresh-review-inline-1
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:47:00.000Z
+contextId: final-sol-review-inline-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:12.000Z
 environment:
   id: inline-review
-  capabilities: { workflow: true, persistence: false, supplementalReview: false }
+  capabilities:
+    workflow: true
+    persistence: false
+    supplementalReview: false
   tools: []
 observed:
-  actions: [keep contract inline, perform independent review pass, return Verified at its own seam]
-  artifacts: [inline Review evidence]
-  effects: [exact corrected result returned]
+  actions:
+    - keep contract inline
+    - perform independent review pass
+    - return Verified at its own seam
+  artifacts:
+    - inline Review evidence
+  effects:
+    - exact corrected result returned
   forbiddenChecks:
     - criterion: create durable workflow for trivial result
-      evidence: The result and proof remained in the response without durable artifacts.
+      evidence: Verified; exact corrected sentence returned through a proportionate Inline matrix. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [review]
-  notInvoked: [durable Review artifact, Supplemental reviewer]
-  proof: [exact corrected result is shown and inspected]
-  responsibility: [caller retains parent responsibility]
-  route: [inline-review]
-  state: [in_review-to-complete]
+  invoked:
+    - review
+  notInvoked:
+    - durable Review artifact
+    - Supplemental reviewer
+  proof:
+    - exact corrected result is shown and inspected
+  responsibility:
+    - caller retains parent responsibility
+  route:
+    - inline-review
+  state:
+    - in_review-to-complete
 rawEvidence:
   locator: evaluations/evidence/review/inline-1.txt
-  sha256: f1c9dbcab0f424c798febead7388534d62ca321af2b9d6b466d7d6396ad25b3a
+  sha256: c97e352901d64b2e872056208672056bea8d3abb3c9741f10898cbef76b502c5

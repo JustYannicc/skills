@@ -1,28 +1,52 @@
 schemaVersion: 1
 fixtureId: review-supplemental-required
 attempt: 1
-contextId: fresh-review-supplemental-required-1
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:39:00.000Z
+contextId: final-sol-review-supplemental-required-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:27.000Z
 environment:
   id: workflow-with-required-supplemental
-  capabilities: { workflow: true, persistence: true, supplementalReview: true }
-  tools: [supplemental-reviewer]
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: true
+  tools:
+    - supplemental-reviewer
 observed:
-  actions: [run Supplemental at declared supplemental-review Extension point, validate Supplemental finding exact result revision, integrate finding into core verdict, return Changes required transition]
-  artifacts: [integrated Review record, Supplemental evidence reference]
+  actions:
+    - validate the exact selected mapping source version scope required status input evidence and failure behavior
+    - run only that Supplemental at declared supplemental-review Extension point
+    - validate Supplemental finding exact result revision
+    - integrate finding into the applicable axis without replacing core Review
+    - return Changes required transition
+  artifacts:
+    - integrated Review record
+    - Supplemental evidence reference
   effects: []
   forbiddenChecks:
     - criterion: complete when required Supplemental evidence is stale
-      evidence: Required evidence matched the exact result revision and the verdict returned Changes required.
+      evidence: Changes required; valid r8-bound required evidence integrated while core Reviewer retained verdict. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [workflow, review, configured Supplemental reviewer]
-  notInvoked: [Supplemental verdict replacing core]
-  proof: [Supplemental finding is bound to exact result and visible in core evidence]
-  responsibility: [Reviewer owns integrated verdict, Work owner resolves required changes, Outcome owner retains parent responsibility]
-  route: [workflow-to-review-extension]
-  state: [in_review-to-accepted]
+    - criterion: invoke an unmapped similar specialist
+      evidence: Changes required; valid r8-bound required evidence integrated while core Reviewer retained verdict. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - workflow
+    - review
+    - configured Supplemental reviewer
+  notInvoked:
+    - Supplemental verdict replacing core
+  proof:
+    - mapping identity and Supplemental finding are bound to exact result r8 and visible in core evidence
+  responsibility:
+    - Reviewer owns integrated verdict
+    - Work owner resolves required changes
+    - Outcome owner retains parent responsibility
+  route:
+    - workflow-to-review-extension
+  state:
+    - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/supplemental-required-1.txt
-  sha256: a10c56ad243903b2d47b19ae2ff796cf2ca859e9fe3b2ba3fb5688da6ace2e89
+  sha256: 67d1c9a34804030f7c65213d43b1308662bc46a2816788938a0cabe62df168f4

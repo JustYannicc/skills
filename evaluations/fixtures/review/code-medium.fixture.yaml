@@ -7,7 +7,15 @@ skill: review
 domains: [software, organizational-work]
 severity: Major
 requiredAttempts: 1
-prompt: Review code revision r42 against the accepted data-export Specification and repository standards, with no bundled code-review replacement.
+prompt: >-
+  Review code revision r42 against accepted data-export Specification
+  `export-spec@r4` and repository standards `repo-standard@r7`, with no bundled
+  code-review replacement. Repository-read evidence shows the public success path
+  returns the specified CSV, but a sink failure after the first write leaves a
+  partial artifact, exposes the dependency error, and defines no cleanup or safe
+  retry state. Validation, serialization, sink lifecycle, and error translation
+  also converge in one path with implicit recovery ownership. Return the exact
+  target-level verdict and keep the parent Outcome open.
 environment:
   id: code-without-code-review-companion
   capabilities:

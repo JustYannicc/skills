@@ -7,7 +7,15 @@ skill: review
 domains: [organizational-work, physical-environment]
 severity: Major
 requiredAttempts: 1
-prompt: Workflow asks Review to verify exact revision ops-r6 of a community kitchen closing procedure against Specification spec-r3 and the facility standard. Assess whether the next shift lead can safely understand, change, operate, support, and recover it without hidden knowledge.
+prompt: >-
+  Workflow asks Review to verify exact revision `ops-r6` of a community kitchen
+  closing procedure against Specification `spec-r3` and facility standard
+  `facility-ops@6.0`. Rehearsal notes `close-rehearsal@r6-2` show the next shift
+  lead can run the normal checklist, but after a simulated gas-monitor fault the
+  procedure says only `reset if safe`; the current owner had to supply an
+  unrecorded isolation sequence, escalation contact, and reopen criterion. Assess
+  whether the future responsible Actor can safely understand, change, operate,
+  support, and recover it without hidden knowledge.
 environment:
   id: maintainable-operating-procedure
   capabilities:

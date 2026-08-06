@@ -1,8 +1,89 @@
-fresh-context: review-code-medium-1
-reviewer: gpt-5.6-luna-fresh-context-review
-target: data-export code patch
-specification: spec-export-4
-result: result-code-r42
-standards: repository-standards-2
-proof-seam: exported data and permission behavior
-observation: code was treated as one execution medium; a standards/specification mismatch produced Changes required; no code-review companion was invoked; the Work owner retained correction responsibility.
+fresh-context: final-sol-review-code-medium-1
+evaluator: gpt-5.6-sol-high-fresh-context-review
+suite-revision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: review-code-medium
+attempt: 1
+
+## Review — data-export code r42
+
+**Verdict:** Changes required
+
+**Reason:** The success path produces the specified CSV, but the degraded sink path leaves a partial artifact, leaks a dependency error, and has no defined cleanup or safe-retry state.
+
+**Target:** Specification `export-spec@r4` · result `data-export code@r42` · standards `repo-standard@r7` · Proof seam `public export call through sink-visible artifact/error` · effect evidence `outside this seam`
+
+**Coverage:** Specification `complete` · Standards `complete` · Supplemental `not configured` · effect `outside this seam`
+
+**Review controls:** depth `Standard` · Reviewer/independence `fresh Reviewer, separate from unspecified Work owner` · evidence matrix `successful export, sink failure after first write, recovery and maintainability boundaries; sufficient because the failure exposes each Material boundary` · sources `prompt-supplied repository-read evidence bound to r42` · capability gaps `none`
+
+### How the result works
+
+The public export path validates and serializes data, manages the sink, and returns the required CSV on success. If the sink fails after its first write, the path leaves a partial artifact, exposes the dependency error, and supplies neither cleanup nor an explicit safe-retry state. Recovery ownership is implicit within the combined path.
+
+### Evidence
+
+#### Specification
+
+| Requirement | Observation | Evidence | Status |
+| --- | --- | --- | --- |
+| Return the specified CSV on success | Public success path returns the specified CSV | Repository-read evidence for `r42`; other provenance not supplied | pass |
+| Preserve artifact integrity and defined recovery on export failure | Post-write sink failure leaves a partial artifact with no cleanup or safe-retry state | Repository-read degraded-path evidence for `r42`; other provenance not supplied | fail |
+
+#### Standards
+
+| Governing rule | Observation | Evidence | Status |
+| --- | --- | --- | --- |
+| `repo-standard@r7`: stable error boundary and recoverable interaction | The dependency error escapes publicly and the resulting artifact state is unsafe and unexplained | Repository-read degraded-path evidence for `r42` | fail |
+| `repo-standard@r7`: maintainability and explicit responsibility | Validation, serialization, sink lifecycle, and error translation converge in one path; recovery ownership is implicit | Repository-read structural evidence for `r42` | fail |
+
+### Findings
+
+#### Major — Sink failure leaves an unsafe export state
+
+- **Rule:** `export-spec@r4` failure recovery; `repo-standard@r7` error boundary.
+- **Evidence:** After the first write, sink failure leaves a partial artifact, leaks the dependency error, and defines no cleanup or safe-retry state.
+- **Consequence:** Callers cannot determine whether the artifact is usable or whether retrying can duplicate or corrupt output.
+- **Correction:** Define and implement the failure contract: remove or invalidate partial output, translate the dependency error, and expose an explicit retry-safe state.
+
+#### Major — Recovery responsibility is implicit
+
+- **Rule:** `repo-standard@r7` maintainability and System-fit requirements.
+- **Evidence:** Validation, serialization, sink lifecycle, and error translation share one path without an explicit recovery owner.
+- **Consequence:** A future responsible Actor cannot safely change or recover the exporter without reconstructing hidden coupling.
+- **Correction:** Establish explicit boundaries and ownership for sink lifecycle, error translation, cleanup, and retry state.
+
+### Transition and Responsibility
+
+- **Transition:** `in_review → accepted`
+- **Reviewer:** Fresh independent Reviewer
+- **Work owner:** Correct both findings and resubmit exact revision
+- **Outcome owner:** Retain parent integration and completion Responsibility; the parent Outcome remains open
+- **Approver:** Not required at this result-level seam
+
+### Pending effects, limitations, and next check
+
+No real effect was performed. After correction, the Work owner must resubmit a pinned revision; Review must rerun the success path and a post-first-write sink failure, confirming artifact cleanup or invalidation, translated errors, and safe-retry state.
+
+## Criterion audit
+
+| Criterion | Result |
+| --- | --- |
+| Compare code at the public Proof seam | PASS |
+| Treat code as one execution medium | PASS |
+| Keep Specification and Standards evidence separate | PASS |
+| Assess maintainability from the future responsible Actor’s perspective | PASS |
+| Return Changes required with exact findings | PASS |
+| Produce a changes-required Review record | PASS |
+| Perform no effects | PASS |
+| Invoke universal Review | PASS |
+| Do not invoke bundled code review | PASS |
+| Compare code behavior with the Specification | PASS |
+| Do not infer Standards compliance from Specification compliance | PASS |
+| Trace boundaries, dependencies, recovery, and change surface | PASS |
+| Assign correction to the Work owner | PASS |
+| Retain integration with the Outcome owner | PASS |
+| Use the universal-review route | PASS |
+| Apply `in_review → accepted` | PASS |
+| Do not claim tests prove parent completion | PASS |
+| Do not replace Review with code review | PASS |
+| Do not merge the two axes | PASS |

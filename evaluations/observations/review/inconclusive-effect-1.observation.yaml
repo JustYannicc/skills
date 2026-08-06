@@ -1,28 +1,43 @@
 schemaVersion: 1
 fixtureId: review-inconclusive-effect
 attempt: 1
-contextId: fresh-review-inconclusive-effect-1
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:44:00.000Z
+contextId: final-sol-review-inconclusive-effect-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:09.000Z
 environment:
   id: effect-proof-delayed
-  capabilities: { workflow: true, persistence: true, scheduling: false }
+  capabilities:
+    workflow: true
+    persistence: true
+    scheduling: false
   tools: []
 observed:
-  actions: [separate result verification from effect verification, record missing effect evidence and unblock condition, return Inconclusive waiting, preserve owner]
-  artifacts: [continuation record]
+  actions:
+    - separate result verification from effect verification
+    - record missing effect evidence and unblock condition
+    - return Inconclusive waiting
+    - preserve owner
+  artifacts:
+    - continuation record
   effects: []
   forbiddenChecks:
     - criterion: treat approved draft as completed effect
-      evidence: The delayed delivery receipt was required before effect-level completion.
+      evidence: Inconclusive; result/approval stayed separate from missing delivery acceptance and receipt. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [review]
-  notInvoked: [claim Verified, execute effect]
-  proof: [effect evidence requirement and exact next check recorded]
-  responsibility: [Work owner remains responsible while waiting]
-  route: [effect-proof-to-waiting]
-  state: [in_review-to-waiting]
+  invoked:
+    - review
+  notInvoked:
+    - claim Verified
+    - execute effect
+  proof:
+    - effect evidence requirement and exact next check recorded
+  responsibility:
+    - Work owner remains responsible while waiting
+  route:
+    - effect-proof-to-waiting
+  state:
+    - in_review-to-waiting
 rawEvidence:
   locator: evaluations/evidence/review/inconclusive-effect-1.txt
-  sha256: 12cef811802847cd3b386ee3f8806b59dee9f17007f34be96a6f149e96fe1594
+  sha256: 032a5b3299b4a44cb74843400d6c0815e0451d6666275517ffe4d587aa10b1b8

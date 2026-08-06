@@ -1,0 +1,82 @@
+context: final-sol-review-maintainability-cross-domain-1
+evaluator: gpt-5.6-sol
+suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: review-maintainability-cross-domain
+attempt: 1
+
+# Review — community-kitchen closing procedure `ops-r6`
+
+**Verdict:** Changes required
+
+**Reason:** The future shift lead completed normal closing but could not recover from a simulated gas-monitor fault without the current owner supplying an undocumented isolation sequence, escalation contact, and reopen criterion.
+
+**Target:** Specification `spec-r3` · result `ops-r6` · standards `facility-ops@6.0` · Proof seam `independent next-shift execution of normal closing and gas-monitor-fault recovery` · effect evidence `outside this rehearsal seam`
+
+**Coverage:** Specification `complete for supplied Material paths` · Standards `complete for supplied Material paths` · Supplemental `not configured` · effect `outside this seam`
+
+**Review controls:** depth `High` · Reviewer/independence `Workflow-invoked Reviewer, independent of the procedure owner for this pass` · evidence matrix `normal closing; gas-monitor degradation; isolation, escalation, and reopen recovery; future-Actor maintainability audit` · sources `ops-r6, close-rehearsal@r6-2, facility-ops@6.0` · capability gaps `none`
+
+Further combinations would not change the verdict: the representative normal path passes, while the distinct safety-related degraded path already exposes a decisive recovery failure. Additional combinations become Material after that path is documented.
+
+## How the result works
+
+The next shift lead follows `ops-r6` and completes the normal closing checklist. A simulated gas-monitor fault then reaches the instruction `reset if safe`, which provides no observable safety test, isolation sequence, escalation route, or reopen authority. Execution stops until the current owner supplies those rules from memory. The procedure therefore operates normally only while conditions remain nominal; its degraded and recovery behavior depends on hidden knowledge.
+
+## Maintainability audit
+
+| Area | Future responsible Actor assessment | Status |
+| --- | --- | --- |
+| Source of truth | `ops-r6` is not authoritative for fault recovery; essential rules remain with the current owner. | Fail |
+| Boundaries | `if safe` does not define the decision boundary between reset, isolation, escalation, and remaining closed. | Fail |
+| Complexity and change surface | Several safety decisions are compressed into one ambiguous instruction, obscuring what must change together. | Fail |
+| Dependencies | Isolation capability, escalation contact, backup route, reopen authority, and required observations are undeclared. | Fail |
+| Rationale | The conditions supporting isolation and reopening decisions are not recorded, preventing safe future modification. | Fail |
+| Ownership | The current owner is an undocumented operational dependency and single point of failure. | Fail |
+| Operating burden | Routine closing is usable; a fault creates delay and requires synchronous owner intervention. | Fail |
+| Degradation | The procedure recognizes a fault but supplies no executable degraded mode. | Fail |
+| Recovery | A future shift lead cannot independently isolate, escalate, verify safety, or determine reopening. | Fail |
+| Legacy disposition | The current owner’s informal sequence has neither been incorporated into the procedure nor explicitly retired and replaced. | Fail |
+| Normal operation | The next shift lead can execute the ordinary checklist from the recorded procedure. | Pass |
+| Supportability | Without an authoritative escalation route and diagnostic criteria, another Actor cannot support the procedure safely. | Fail |
+
+## Evidence
+
+### Specification
+
+| Requirement | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| Normal closing under `spec-r3` | The next shift lead completed the normal checklist. | `close-rehearsal@r6-2`, normal-path rehearsal of result `ops-r6` | Pass |
+| Gas-monitor-fault recovery under `spec-r3` | The procedure stopped at `reset if safe`; isolation, escalation, and reopen rules had to be supplied from memory. | `close-rehearsal@r6-2`, simulated-fault rehearsal of result `ops-r6` | Fail |
+| Independent operation by the future responsible Actor | The next shift lead could not finish recovery without current-owner intervention. | `close-rehearsal@r6-2`, future-Actor handoff observation | Fail |
+
+### Standards
+
+| Governing rule | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| `facility-ops@6.0` — safe degraded operation and recovery | `ops-r6` contains no executable isolation, escalation, or reopen path for the simulated fault. | `ops-r6` inspected with `close-rehearsal@r6-2` | Fail |
+| Maintainability — understandable and operable without hidden rules | Material recovery knowledge exists only with the current owner. | `close-rehearsal@r6-2`, owner intervention | Fail |
+| Maintainability — safely changeable and supportable | Decision rationale, dependencies, contacts, authority, and recovery criteria are absent from the source of truth. | `ops-r6`, fault instruction `reset if safe` | Fail |
+| Maintainability — recoverable with owned legacy disposition | The informal current practice is neither recorded nor explicitly superseded. | `ops-r6` and `close-rehearsal@r6-2` | Fail |
+
+## Findings
+
+### Major — Gas-monitor recovery depends on hidden owner knowledge
+
+- **Rule:** `spec-r3` recovery behavior, `facility-ops@6.0`, and the maintainability requirement that a future responsible Actor can understand, operate, support, change, and recover the result.
+- **Evidence:** In `close-rehearsal@r6-2`, the future shift lead could proceed only after the current owner supplied an unrecorded isolation sequence, escalation contact, and reopen criterion.
+- **Consequence:** A future shift may reset unsafely, remain blocked during a fault, escalate to the wrong party, or reopen without authorized evidence. The procedure is not safely transferable.
+- **Correction:** Replace `reset if safe` with an explicit fault decision path covering isolation steps, observable reset conditions, do-not-reset conditions, an owned authoritative escalation route with fallback, reopen criteria and authority, and the disposition of the former informal practice. Rehearse the new exact revision with a shift lead who receives no author coaching.
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → accepted`
+- **Reviewer:** Workflow-invoked Reviewer
+- **Work owner:** Current procedure owner; records and validates the complete recovery path, then resubmits an exact revision.
+- **Outcome owner:** Retains responsibility for integrating the corrected procedure and proving the parent closing outcome.
+- **Approver:** Operational approval for the corrected exact revision remains pending outside this rehearsal seam.
+
+## Pending effects, limitations, and next check
+
+The Work owner must publish a new procedure revision and produce a new revision-bound rehearsal showing an uninstructed future shift lead can detect the fault, isolate safely, escalate through the authoritative route, and reopen—or remain closed—using explicit criteria.
+
+The next check is Review of that exact procedure revision and rehearsal record. If the recovery authority or criteria cannot be established, keep the procedure unapproved for operational use and escalate to the facility safety authority; resume Review only when the owned dependency is resolved.

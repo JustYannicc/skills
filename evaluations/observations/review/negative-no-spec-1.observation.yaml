@@ -1,28 +1,39 @@
 schemaVersion: 1
 fixtureId: review-negative-no-spec
 attempt: 1
-contextId: fresh-review-negative-no-spec-1
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:45:00.000Z
+contextId: final-sol-review-negative-no-spec-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:15.000Z
 environment:
   id: discovery-before-review
-  capabilities: { workflow: true, persistence: false, supplementalReview: false }
+  capabilities:
+    workflow: true
+    persistence: false
+    supplementalReview: false
   tools: []
 observed:
-  actions: [route missing Specification to Workflow discovery, preserve request and responsibility]
+  actions:
+    - route missing Specification to Workflow discovery
+    - preserve request and responsibility
   artifacts: []
   effects: []
   forbiddenChecks:
     - criterion: issue review verdict without exact Specification and result
-      evidence: No Review verdict was issued; the request returned to Specification discovery.
+      evidence: No Review verdict; routed rough idea to Workflow discovery. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [workflow]
-  notInvoked: [review]
-  proof: [no verdict until exact Specification and result exist]
-  responsibility: [Outcome owner and Workflow retain responsibility]
-  route: [missing-spec-to-workflow]
-  state: [needs-specification]
+  invoked:
+    - workflow
+  notInvoked:
+    - review
+  proof:
+    - no verdict until exact Specification and result exist
+  responsibility:
+    - Outcome owner and Workflow retain responsibility
+  route:
+    - missing-spec-to-workflow
+  state:
+    - needs-specification
 rawEvidence:
   locator: evaluations/evidence/review/negative-no-spec-1.txt
-  sha256: ac51355d8fe4e4bac546bf704200f0af896b0cf17534c35100a4391473386487
+  sha256: 3168fb681680df131200c7721ce862defd7f75f78eae80165ffc0ca441a5b2de

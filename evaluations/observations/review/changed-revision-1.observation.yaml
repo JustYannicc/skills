@@ -1,28 +1,46 @@
 schemaVersion: 1
 fixtureId: review-changed-revision
 attempt: 1
-contextId: fresh-review-changed-revision-1
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:43:00.000Z
+contextId: final-sol-review-changed-revision-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:00.000Z
 environment:
   id: changed-result-with-stale-evidence
-  capabilities: { workflow: true, persistence: true, supplementalReview: false }
-  tools: [revision-store]
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - revision-store
 observed:
-  actions: [detect changed result revision, invalidate prior evidence, bind review to r2, return Inconclusive waiting with exact next check]
-  artifacts: [revision-mismatch finding, continuation record]
+  actions:
+    - detect changed result revision
+    - invalidate prior evidence
+    - bind review to r2
+    - return Inconclusive waiting with exact next check
+  artifacts:
+    - revision-mismatch finding
+    - continuation record
   effects: []
   forbiddenChecks:
     - criterion: carry approval from r1 to r2
-      evidence: Approval and effect evidence were explicitly limited to r1; r2 entered waiting.
+      evidence: Inconclusive; rejected r1-bound approval/effect evidence for r2 and recorded owned next check. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [review]
-  notInvoked: [reuse prior approval, complete target]
-  proof: [prior evidence is visibly bound to r1 and cannot satisfy r2]
-  responsibility: [Work owner remains responsible, Outcome owner retains parent responsibility]
-  route: [revision-change-to-waiting]
-  state: [in_review-to-waiting]
+  invoked:
+    - review
+  notInvoked:
+    - reuse prior approval
+    - complete target
+  proof:
+    - prior evidence is visibly bound to r1 and cannot satisfy r2
+  responsibility:
+    - Work owner remains responsible
+    - Outcome owner retains parent responsibility
+  route:
+    - revision-change-to-waiting
+  state:
+    - in_review-to-waiting
 rawEvidence:
   locator: evaluations/evidence/review/changed-revision-1.txt
-  sha256: febc07ee8dd46fbf1d770117962ca8315751bbaf5b22df90d21d05a4cd171a4e
+  sha256: d2ffab1633593eedba65932f723679f461baf74ccbb9440e1bbd9239d7789770

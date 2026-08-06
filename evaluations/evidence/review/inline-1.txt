@@ -1,7 +1,62 @@
-fresh-context: review-inline-1
-reviewer: gpt-5.6-luna-fresh-context-review
-target: reversible label correction
-specification: spec-label-1
-result: result-label-2
-proof-seam: corrected sentence shown to caller
-observation: Inline Review performed an independent pass, returned the exact corrected result and Verified for its own seam, and created no durable workflow artifact.
+context: final-sol-review-inline-1
+evaluator: gpt-5.6-sol
+suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: evaluations/fixtures/review/inline.fixture.yaml
+attempt: 1
+
+## Review — blue-shelf label correction
+
+**Verdict:** Verified
+**Reason:** A fresh character-for-character pass confirms the submitted result exactly matches the accepted sentence.
+
+**Target:** Specification `inline prompt@1` · result `submitted sentence@1` · standards `Review@fa1e76f` · Proof seam `returned sentence` · effect evidence `visible below`
+
+**Coverage:** Specification `complete` · Standards `complete` · Supplemental `not configured` · effect `verified`
+
+**Review controls:** depth `Inline` · Reviewer/independence `fresh assistant pass` · evidence matrix `exact text, punctuation, and absence of additional text; mismatch would require correction` · sources `inline prompt and submitted result` · capability gaps `none`
+
+### How the result works
+
+The accepted and submitted sentences were compared exactly. They match, including capitalization and punctuation. A mismatch such as retaining “green shelf” would produce `Changes required`.
+
+**Exact corrected result:** `Returns go on the blue shelf.`
+
+### Evidence
+
+| Axis | Requirement | Observation | Status |
+| --- | --- | --- | --- |
+| Specification | Exact accepted sentence | Submitted text matches character for character | pass |
+| Specification | No other text changed | Submitted result contains only the accepted sentence | pass |
+| Standards | Proportionate Inline review | Fresh pass completed without durable workflow or external effect | pass |
+
+**Findings:** No findings.
+
+### Transition and Responsibility
+
+- **Transition:** `in_review → complete`
+- **Reviewer:** assistant, fresh Inline pass
+- **Work owner:** no correction required
+- **Outcome owner:** caller retains parent Responsibility
+- **Approver:** not required
+
+No pending effect exists at this Review seam.
+
+## Criterion audit — `final-sol-review-inline-1`
+
+| Criterion | Result |
+| --- | --- |
+| Keep contract inline | PASS |
+| Perform independent fresh review pass | PASS |
+| Return Verified at its own seam | PASS |
+| Produce inline Review evidence | PASS |
+| Return the exact corrected result | PASS |
+| Invoke Review behavior | PASS |
+| Do not create a durable Review artifact | PASS |
+| Do not invoke a Supplemental reviewer | PASS |
+| Show and inspect the exact corrected result | PASS |
+| Caller retains parent Responsibility | PASS |
+| Use `inline-review` route | PASS |
+| Apply `in_review → complete` | PASS |
+| Do not create durable workflow for trivial work | PASS |
+
+**Overall:** PASS

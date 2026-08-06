@@ -7,7 +7,11 @@ skill: review
 domains: [personal-routine, physical-environment]
 severity: Minor
 requiredAttempts: 1
-prompt: Check this bounded reversible label correction inline against the accepted sentence and show the exact corrected result.
+prompt: >-
+  Check this bounded reversible label correction inline. The accepted sentence is
+  `Returns go on the blue shelf.` and the submitted corrected result is exactly
+  `Returns go on the blue shelf.` The previous label said `green shelf`; no other
+  text changed. Show the exact corrected result after a fresh pass.
 environment:
   id: inline-review
   capabilities:

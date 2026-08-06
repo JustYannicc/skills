@@ -1,28 +1,53 @@
 schemaVersion: 1
 fixtureId: review-code-medium
 attempt: 1
-contextId: fresh-review-code-medium-1
-suiteRevision: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
-evaluator: gpt-5.6-luna-fresh-context-review
-recordedAt: 2026-08-04T18:38:00.000Z
+contextId: final-sol-review-code-medium-1
+suiteRevision: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:03.000Z
 environment:
   id: code-without-code-review-companion
-  capabilities: { workflow: true, persistence: true, supplementalReview: false }
-  tools: [repository-read]
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - repository-read
 observed:
-  actions: [compare code at the public proof seam, treat code as one execution medium, inspect Specification and governing standards, return Changes required with exact findings]
-  artifacts: [changes-required Review record]
+  actions:
+    - compare code at the public proof seam
+    - treat code as one execution medium
+    - report Specification and Standards evidence as separate axes
+    - assess maintainability from the future responsible Actor perspective
+    - return Changes required with exact findings
+  artifacts:
+    - changes-required Review record
   effects: []
   forbiddenChecks:
     - criterion: claim tests alone prove parent completion
-      evidence: The finding required Specification and proof-seam evidence beyond tests and kept parent integration open.
+      evidence: Changes required; separate axes exposed unsafe partial export state and implicit future-Actor recovery ownership. The final response audit explicitly avoided this behavior.
       observed: false
-  invoked: [review]
-  notInvoked: [bundled code-review skill]
-  proof: [code behavior and Specification are compared at the accepted seam]
-  responsibility: [Work owner resolves findings, Outcome owner integrates evidence]
-  route: [universal-review]
-  state: [in_review-to-accepted]
+    - criterion: replace universal Review with bundled code review
+      evidence: Changes required; separate axes exposed unsafe partial export state and implicit future-Actor recovery ownership. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: merge Specification and Standards into one undifferentiated pass
+      evidence: Changes required; separate axes exposed unsafe partial export state and implicit future-Actor recovery ownership. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - bundled code-review skill
+  proof:
+    - code behavior and Specification are compared at the accepted seam
+    - Standards results cannot be inferred from Specification results
+    - future responsible Actor can trace boundaries dependencies recovery and change surface
+  responsibility:
+    - Work owner resolves findings
+    - Outcome owner integrates evidence
+  route:
+    - universal-review
+  state:
+    - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/code-medium-1.txt
-  sha256: e6608394a1f139c6e02b0f32b80772c4b4b4b1e7fce622fe309bfe967bad3704
+  sha256: 464d2e7efe0f1bec19a78c324d51bc8d0827d9389cd53cff770906e94f610387
