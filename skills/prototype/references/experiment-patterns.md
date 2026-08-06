@@ -1,77 +1,54 @@
 # Experiment patterns
 
-Choose one pattern after naming the question. These patterns preserve the
-useful shape of Matt Pocock's pinned Prototype skill while removing its
-assumption that every experiment is a code change. They are examples of setup
-forms, not extra phases or permission to widen the question.
+## Representation or model
 
-## Technical
+Externalize the decision-bearing state, relationships, or transitions. Exercise representative and awkward cases, then expose the full relevant state at the Proof seam so an observer can tell what changed.
 
-- **Logic or state:** keep the decision-bearing reducer, state machine, or pure
-  functions separate from a throwaway shell. Use in-memory state, a tiny
-  interactive terminal view, one command, and a full state render after each
-  meaningful action. The shell is evidence collection; it is not production
-  code.
-- **UI or interaction:** use an isolated local preview that mirrors the host
-  route and data shape; do not alter the live route. Render three structurally
-  different variants (maximum five) behind a shareable `?variant=` switcher,
-  with a clearly prototype-only control that is gated out of production. Use
-  stubs for mutations and record the variant, context, and observation that
-  decides the question.
-- **Data or API:** use a scratch adapter, fixture, or local simulator with
-  production effects disabled. Keep the interface small enough to lift a
-  validated decision later without promoting the throwaway shell.
+## Alternative forms
 
-## Personal
+Compare a small set of materially different candidates against the same Outcome and Proof seam. Keep their surrounding conditions equivalent enough that the observed difference can inform the named decision.
 
-Use a voluntary, bounded non-production pilot for one person or a clearly
-consented small scope. Keep commitments reversible, measure both the intended
-Outcome and burden, and name a reset that restores the prior routine or
-environment.
+## Rehearsal or walkthrough
 
-## Organizational
+Privately simulate an interaction, communication, handoff, or coordinated action. Observe comprehension, ambiguity, friction, and burden without creating the live commitment the experiment is meant to inform.
 
-Use a simulation, role-play, or low-stakes non-production pilot with named
-Actors and stop authority. Do not silently enact a policy, assign a new
-obligation, or export burden to another team; observe incentives, friction, and
-handoffs at the chosen seam.
+## Bounded pilot
 
-## Physical
+Use an isolated, voluntary scope with a known baseline, stop Authority, and reset. Observe both the intended Outcome and the burden or harm transferred to Actors or related Systems.
 
-Use a safe bench setup, model, mock, or staged low-risk trial. Isolate live
-equipment and people from material hazard, write explicit stop triggers, and
-require the relevant safety authority before any effect outside the disposable
-boundary. A physical action that cannot be safely reset is not a prototype.
+## Physical mock or staged trial
 
-## Communicative
+Use a model, mock, bench setup, or safely resettable trial. Isolate people and live equipment from material hazard, and stop at the reversible boundary when the relevant safety Authority or pre-effect proof is absent.
 
-Use a private draft, rehearsal, role-play, or red-team read-through. Observe
-comprehension, ambiguity, emotional or accessibility burden, and likely
-misinterpretation. Do not send, publish, or commit another person without an
-authorized Workflow or caller effect gate.
+## Agent sandbox
 
-## Agent
+Use fixtures, disposable context, and fake effectors. Inspect both the process and user-visible result while credentials, external tools, and mutations remain outside the experiment boundary.
 
-Use a sandbox prompt, fixture set, fake tool, or disposable context. Inspect the
-trace and user-visible result at the seam; keep credentials, external tools,
-and mutations unavailable unless the accepted setup explicitly bounds them.
-Compare process and failure behavior, not just a pleasing output.
+## Compose only what the question needs
 
-## Cross-domain choice
+A question may cross several environments. Compose the smallest patterns that share one learning question, Proof seam, reversible boundary, evidence record, and disposition.
 
-If a question crosses domains, keep one shared question and observation seam,
-then compose the smallest setup that touches each named boundary. For example,
-a communicative rehearsal of an agent-assisted personal routine can use a
-private script, a fake agent tool, and a burden check; it must still have one
-reset, one stop authority, one evidence record, and one disposition.
+Every pattern stays throwaway from day one, trivial for its intended observer to exercise, isolated from live persistence by default, and explicit about the full relevant state at the Proof seam. At a Persistence boundary, retain the question, verdict, evidence, and disposable artifact as primary evidence. Dispose of the setup rather than promoting it directly into a maintained System.
 
-## Retained upstream shape
+## Technical prototype Extension point
 
-The pinned MIT Prototype source identified as `matt-pocock-skills` in
-`validation/sources.yaml` uses question-first branch selection,
-throwaway-by-default setup, no persistence by default, visible state, a
-one-command or one-route handoff, and capture of the verdict. This successor
-retains those behaviors where they fit and makes the universal
-reversible/effect boundary explicit. The source inventory is the sole authority
-for its license, URL, revision, and attribution; `provenance.yaml` records the
-skill's source relationship.
+Use this seam only when Effective configuration maps a Supplemental skill to `technical-prototype` for the current scope. Name similarity does not create a mapping.
+
+Give the configured Supplemental skill:
+
+- the learning question and decision it informs;
+- the Outcome, System boundary, Actors, Constraints, and assumptions;
+- the reversible boundary and allowed or disabled effects;
+- the Proof seam and stopping rule; and
+- the required evidence and return route.
+
+Require it to return:
+
+- the exact artifact or Result revision and how it was exercised;
+- observations at the Proof seam, with evidence sources and limits;
+- reset or disposal state; and
+- any missing capability or unresolved uncertainty.
+
+The Supplemental skill owns only its bounded technical result. Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion. The active `'Workflow'` skill retains parent responsibility.
+
+Record an advisory Supplemental failure and continue with another safe pattern only when the core contract remains satisfiable. A required failure moves the work to waiting or Recovery with preserved state and an exact resumption condition. Never imply that an unavailable Supplemental skill ran.

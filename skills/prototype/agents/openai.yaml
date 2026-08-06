@@ -1,5 +1,5 @@
 interface:
   display_name: "Prototype"
-  short_description: "Answer one design question with a reversible experiment"
+  short_description: "Prototype one question with a reversible experiment"
 policy:
   allow_implicit_invocation: true

@@ -17,12 +17,12 @@ environment:
     effects: false
   tools: [review-record]
 expected:
-  actions: [route the existing result to Review, inspect its accepted question and evidence revision, return the review verdict to Workflow]
+  actions: [route the existing result to Review, inspect its accepted learning question and Result revision, return the Review verdict to Workflow]
   artifacts: [review verdict]
   effects: []
   invoked: [workflow, Review]
   notInvoked: [prototype, to-spec, Specification, implementation, decomposition, parent completion]
-  proof: [existing result revision checked at the accepted proof seam without a new experiment]
+  proof: [existing Result revision checked at the accepted Proof seam without a new experiment]
   responsibility: [Workflow retains parent coordination and completion]
   route: [workflow-to-review-without-prototype]
   state: [review-verdict-ready]

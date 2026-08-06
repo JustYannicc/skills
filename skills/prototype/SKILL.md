@@ -1,6 +1,6 @@
 ---
 name: prototype
-description: Prototype one material design question with a reversible experiment in a technical, personal, organizational, physical, communicative, or agent domain. Use when a design is uncertain and a disposable experiment can produce decision-relevant evidence before specification or implementation.
+description: Prototype one material design question with a reversible experiment. Use when trying, simulating, or rehearsing a candidate could produce evidence that changes a design decision before Specification or implementation.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -8,107 +8,45 @@ metadata:
 
 # Prototype
 
-Use one reversible experiment to answer one material design question. The
-prototype is a discovery result: it returns a verdict and evidence to the
-active `'Workflow'` skill or caller. It does not create the Outcome
-Specification, decompose Tickets, implement the selected design, or complete
-the parent Outcome.
+A prototype is one reversible experiment that answers one material design question. The question decides its shape.
 
-## Run the experiment
+This skill owns the learning question, reversible boundary, evidence integration, verdict, and disposition. It returns that bounded result to the active `'Workflow'` skill or caller. Specification, decomposition, implementation, Review, live effects, and parent completion remain with their owning phases.
 
-1. **Name the question.** Turn the request into one sentence that could change
-   the next design decision. State the affected Outcome, scope, Actors,
-   constraints, assumptions, and the one observation seam that can discriminate
-   between the live alternatives. If there is no material question, ask one
-   smallest discriminating question and stop with the work waiting for that
-   answer.
+## Run the prototype
 
-   Complete this step when a reader can tell what answer would change and what
-   remains outside the experiment. Do not combine independent questions into a
-   feature list.
+1. **State the learning question and decision.** Name one material question whose answer could change one design decision. State the affected Outcome, System of interest and boundary, Actors, Constraints, assumptions, and live alternatives. If the material question is missing, ask the smallest discriminating question and preserve the exact resumption condition.
 
-2. **Choose the smallest reversible setup.** Read the branch guidance in
-   [Experiment patterns](references/experiment-patterns.md), then select the
-   least costly setup that can expose the seam. Keep it disposable from day
-   one: use memory, a scratch adapter, a private rehearsal, a simulator, a
-   stub, or a bounded low-risk pilot. Name the reset/disposal action and the
-   person with authority to stop it. Reuse the host's conventions when they
-   make the experiment runnable; do not create a production integration just
-   to learn.
+   Complete this step when a reader can tell which observation would change which decision and what remains outside the experiment.
 
-   A prototype may run in a technical, personal, organizational, physical,
-   communicative, or agent environment. The domain changes the setup, not the
-   contract or the reversible boundary.
+2. **Choose the smallest reversible experiment.** Read [Experiment patterns](references/experiment-patterns.md) to choose the least costly setup that exposes the Proof seam and to apply the configured `technical-prototype` Extension point when it matches. Name the experiment's scope, reset or disposal action, stop Authority, and disabled live effects. Keep the setup throwaway from day one and trivial for its intended observer to exercise.
 
-   Complete this step when the setup can be started, stopped, and disposed of
-   within the stated authority without changing the production system or
-   creating an unaccepted commitment.
+   Complete this step when the experiment can start, stop, reset, or be disposed of inside its Authority without creating an unaccepted commitment or live effect.
 
-3. **Set the observation and stopping rules.** Define the baseline or comparison,
-   signals and counter-signals, the evidence source, and the observation window
-   needed for the mechanism to show a result. Choose the window from the
-   expected evidence delay; never import a fixed duration without a reason.
-   Stop when the question is answered, the evidence is no longer decision-
-   relevant, the safety boundary is threatened, or the setup cannot produce
-   trustworthy evidence. A failed or inconclusive run is evidence, not a
-   reason to widen scope silently.
+3. **Set the evidence and stopping rules.** Define the Proof seam, baseline or comparison where material, evidence source, signals and counter-signals, and observation window. Choose the window from the expected evidence delay. Stop when the question is answered, the evidence cannot answer it, the reversible boundary is threatened, or another increment is not worthwhile.
 
-   Complete this step when another person can tell what would count as enough,
-   what would trigger a pause, and when the run ends.
+   Complete this step when another Actor can distinguish enough evidence, inconclusive evidence, and a mandatory stop.
 
-4. **Run only the bounded experiment.** Exercise the setup at the observation
-   seam, record the relevant state before and after each meaningful action, and
-   preserve the exact result revision and evidence location. Return the
-   disposable artifact and verdict with a pointer to the evidence channel; the
-   active `'Workflow'` skill or caller decides whether its Adapter must persist
-   that primary source at a persistence boundary. Keep bounded inline work in
-   the conversation. Git, a tracker, and a particular host are optional. Keep
-   external effects disabled. A pilot must be non-production or an explicitly
-   accepted isolated boundary with its own effect gate; never use live
-   production execution to learn. If a required
-   capability, authority, fact, or safe reset is missing, enter visible
-   Degraded mode: preserve the setup and evidence, stop the experiment, and
-   return the gap to the active `'Workflow'` skill or caller rather than
-   improvising an unsafe equivalent.
+4. **Run the bounded experiment.** Exercise only the accepted setup and preserve the relevant before-and-after state, evidence source, observer and time, exact Result revision, and evidence limits. Integrate returned Supplemental evidence without accepting a widened question, Authority, effect boundary, or completion claim. Keep live effects disabled.
 
-   An irreversible or costly-to-reverse production action is not a prototype.
-   Do not delete, publish, deploy, contact, change policy, expose a person to
-   material risk, or alter live records as part of this skill. If the question
-   can be answered by a faithful simulation or rehearsal, use that; otherwise
-   return a blocked verdict with the missing authority, stronger pre-effect
-   proof, and exact next decision needed by the active `'Workflow'` skill or
-   caller.
+   When a required capability, fact, Authority, reset, or Proof seam is missing, enter visible Degraded mode. Preserve the experiment and evidence, then return the gap and exact resumption condition to the active `'Workflow'` skill or caller. Use a simulation, rehearsal, mock, or isolated trial when it can answer a question about an irreversible or costly-to-reverse effect; otherwise return a blocked verdict before that effect.
 
-   Complete this step when the observation seam has been exercised (or the
-   safe boundary has stopped it), with evidence tied to the result revision.
+   Complete this step when the Proof seam was exercised or the reversible boundary stopped the run, with every evidence claim bound to its Result revision.
 
-5. **Return one verdict and disposition.** Report the contract below, using
-   `blocked` or `inconclusive` when the setup did not answer the question.
-   Recommend one disposition—retain the validated decision, replace it with a
-   named alternative, discard the idea, pause for a named dependency, or run
-   one separately authorized follow-up. Return unresolved uncertainty,
-   safety/authority gaps, and evidence limits to the active `'Workflow'` skill
-   or caller; do not continue into Specification, decomposition,
-   implementation, Review, or parent completion.
+5. **Return one verdict and disposition.** State whether the question was answered, inconclusive, or blocked, and give the answer when available. Choose one disposition: retain, revise, discard, pause, or run one separately authorized bounded follow-up. Return the exact evidence and unresolved decision to the active `'Workflow'` skill or caller.
 
-   The run is complete only when every field is present, the disposition is
-   explicit, the evidence is revision-bound, and the return responsibility is
-   named.
+   Complete the run only when every result field below is present, the disposition is explicit, and return responsibility is named.
 
-## Result contract
+## Return the result
 
-```text
-Question: one material design question.
-Context: affected Outcome, scope, Actors, constraints, and assumptions.
-Reversible setup: scope, actors, reset/disposal, and stop authority.
-Observation seam: what was observed, compared, and why it answers the question.
-Evidence: condition and method, observer/time, measurements or observations, source/location, result revision, and limits.
-Stopping rule: the threshold, event, or evidence delay that ended the run.
-Verdict: retain, reject, inconclusive, or blocked—with the answer to the question.
-Disposition: retain/replace/discard/pause/one bounded follow-up, with owner and next action.
-Return route: the exact evidence and unresolved decision the active Workflow or caller receives.
-```
+- **Learning question:** the one material design question.
+- **Decision informed:** the decision the evidence can change.
+- **Context:** Outcome, System of interest and boundary, Actors, Constraints, and assumptions.
+- **Reversible experiment:** setup, scope, reset or disposal, stop Authority, and disabled effects.
+- **Proof seam:** what was observed or compared and why it answers the question.
+- **Evidence:** condition and method, observer and time, source, exact Result revision, limits, and integrated Supplemental evidence when present.
+- **Stopping rule:** the threshold, event, or evidence delay that ended the run.
+- **Verdict:** answered, inconclusive, or blocked, with the answer when available.
+- **Disposition:** retain, revise, discard, pause, or one bounded follow-up, with responsible Actor and next action.
+- **Return route:** the exact evidence and unresolved decision returned to the active `'Workflow'` skill or caller.
 
-The result is useful even when no experiment ran: preserve the named question,
-missing safe prerequisite, and resumption condition instead of claiming a
-verdict or a completed Outcome.
+A blocked run still returns the learning question, missing safe prerequisite, and exact resumption condition. It does not claim a completed experiment or parent Outcome.

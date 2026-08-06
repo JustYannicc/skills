@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: prototype-configured-technical-supplemental
+title: Configured technical Supplemental evidence returns to core Prototype
+shape: direct
+kind: routing
+skill: prototype
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: "Use Prototype to learn whether an interrupted retry remains understandable. Effective configuration maps the technical-prototype Extension point to the available technical prototyping skill."
+environment:
+  id: workflow-with-configured-technical-prototype
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: true
+    effects: false
+    technical-prototype: advisory-configured
+  tools: [configured-technical-prototype]
+expected:
+  actions: [frame one learning question and reversible boundary, invoke the configured technical-prototype Supplemental with bounded inputs, integrate its Result revision and Proof-seam evidence, issue one core verdict and disposition]
+  artifacts: [Prototype result, bounded Supplemental result]
+  effects: []
+  invoked: [workflow, prototype, technical-prototype Supplemental]
+  notInvoked: [Specification, implementation, Review, decomposition, parent completion]
+  proof: [Supplemental observations and limits are integrated into the exact Prototype Result revision]
+  responsibility: [the Supplemental skill owns only its bounded technical result, Prototype retains its full completion criterion, Workflow retains parent coordination]
+  route: [workflow-to-prototype-to-configured-supplemental-to-prototype-to-workflow]
+  state: [integrated-technical-verdict-ready]
+  forbidden: [transfer Prototype completion to the Supplemental skill, widen the learning question, enable live effects, promote the disposable artifact directly]

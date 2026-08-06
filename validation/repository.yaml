@@ -1,5 +1,24 @@
 schemaVersion: 2
 skills:
+  - name: prototype
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets:
+            - skills/engineering/prototype/SKILL.md
+            - skills/engineering/prototype/LOGIC.md
+            - skills/engineering/prototype/UI.md
+      retainedBehavior:
+        - One explicit design question chooses the prototype shape.
+        - The setup is throwaway from day one, trivial for its intended observer to exercise, isolated from live persistence by default, and explicit about relevant state.
+        - The question, verdict, evidence, and disposable artifact are captured when they must persist, while validated decisions return to the owning workflow.
+      changedAssumptions:
+        - Prototype owns one reversible experiment across technical, personal, organizational, physical, communicative, and agent Systems instead of prescribing code-only logic and interface artifacts.
+        - Universal experiment shapes replace framework, route, terminal, and implementation-specific instructions while preserving question-first branch selection.
+        - The configured technical-prototype Supplemental Extension point may own bounded technical construction, while core Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion.
+        - Proof seams, Result revisions, Authority, Degraded mode, evidence delays, and live-effect boundaries follow the Thinking in Systems standard.
   - name: thinking-in-systems
     provenance:
       strategy: adapted

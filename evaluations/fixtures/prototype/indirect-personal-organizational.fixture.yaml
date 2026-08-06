@@ -17,13 +17,13 @@ environment:
     effects: false
   tools: [local-record]
 expected:
-  actions: [route one empirical question to Prototype, name the bounded personal and organizational pilot, observe completion and burden at one handoff seam, return the disposition to Workflow]
-  artifacts: [prototype result contract, pilot reset record]
+  actions: [route one empirical learning question to Prototype, name the bounded voluntary pilot, observe completion and burden at one handoff Proof seam, return the verdict and disposition to Workflow]
+  artifacts: [Prototype result, pilot reset record]
   effects: []
   invoked: [workflow, prototype]
   notInvoked: [to-spec, Specification, implementation, Review, decomposition, parent completion]
-  proof: [baseline and pilot evidence bound to the result revision]
-  responsibility: [Workflow retains ownership while the pilot owner has bounded responsibility]
+  proof: [baseline and pilot evidence bound to the exact Result revision]
+  responsibility: [Prototype retains the experiment result while Workflow retains Ownership and the pilot Actor has bounded Responsibility]
   route: [workflow-to-prototype-to-workflow]
   state: [pilot-verdict-ready]
   forbidden: [activate a new policy, assign an unaccepted obligation]

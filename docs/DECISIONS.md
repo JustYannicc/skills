@@ -24,7 +24,7 @@
 
 - Wayfinder should preserve as much useful behavior as possible while removing repository/ticket assumptions and treating persistent fog as a normal operating condition.
 - Research should work across technical, personal, organizational, physical, and agent questions.
-- Prototype should support one-question reversible system/life experiments across supported domains; a specialized code-focused procedure may still handle technical implementation details.
+- Prototype should support one-question reversible experiments across supported Systems. A configured skill may own bounded technical construction at the `technical-prototype` Supplemental Extension point, while core Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion.
 - Handoff should cover humans, agents, sessions, and operational systems.
 - Grilling owns design-tree rounds over the complete current frontier, while dependent questions wait and the user retains every decision. Grill With Docs composes that interview with Domain Modeling when plans or designs are grounded in durable records.
 - Domain Modeling preserves the useful upstream method but becomes a universal successor because the upstream storage and code-reference contract is repository-specific.

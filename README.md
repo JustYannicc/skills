@@ -24,12 +24,13 @@ distinct from publishing the complete suite, which still requires #31 and #32.
 ### [Prototype](skills/prototype) — implemented
 
 Prototype answers one material design question through a reversible experiment.
-Use it when a technical, personal, organizational, physical, communicative, or
-agent design needs evidence before commitment. Each run names its question,
-reversible setup, observation seam, evidence, stopping rule, verdict, and
-disposition, then returns that bounded result to Workflow. Production effects,
-unsafe or irreversible actions, Specification, and implementation remain with
-their owning phases.
+Use it when trying, simulating, or rehearsing a candidate can produce evidence
+before commitment. Each run names its learning question, reversible boundary,
+Proof seam, stopping rule, verdict, and disposition, then returns revision-bound
+evidence to Workflow. A configured `technical-prototype` Supplemental skill may
+construct a bounded technical result, while Prototype retains evidence
+integration and its completion criterion. Live effects, Specification,
+implementation, Review, and parent completion remain with their owning phases.
 
 ## Planned suite
 

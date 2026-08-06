@@ -136,7 +136,7 @@ replacing assumptions that narrow the accepted universal job:
 
 - `wayfinder`: tracker/repository assumptions and reducible-fog-only completion;
 - `domain-modeling`: repository glossary, ADR-path, and code-only assumptions;
-- `prototype`: one-question reversible experiments across supported domains;
+- `prototype`: code-only experiments and technical prescriptions, replaced by universal experiment shapes plus a governed `technical-prototype` Supplemental Extension point;
 - `to-spec`: engineering PRD, user-story, issue-tracker, and test-module assumptions;
 - `to-tickets`: codebase, tracer-bullet implementation, and tracker assumptions;
 - `implement`: tests, typechecking, code Review, and commit assumptions; and
@@ -163,6 +163,11 @@ required for a stated scope. Advisory failure is recorded and permits the core
 to continue; required failure moves the Ticket to waiting or recovery.
 Overlapping supplements require explicit selection instead of automatic
 duplication.
+
+Prototype declares `technical-prototype` for configured technical construction.
+The Supplemental skill returns its bounded Result revision and Proof-seam
+evidence; core Prototype retains the learning question, reversible boundary,
+evidence integration, verdict, disposition, and completion criterion.
 
 Setup explains this model and the overall lifecycle while configuring it, so
 users can customize behavior without forking or editing core skills.

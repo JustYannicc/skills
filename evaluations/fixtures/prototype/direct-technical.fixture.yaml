@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: prototype-direct-technical-logic
-title: Direct technical prototype names a question and observes a state seam
+title: Direct technical prototype remains complete without a Supplemental skill
 shape: direct
 kind: invocation
 skill: prototype
@@ -15,15 +15,16 @@ environment:
     persistence: false
     sandbox: true
     effects: false
-  tools: [terminal]
+    technical-prototype: false
+  tools: [sandbox]
 expected:
-  actions: [name exactly one material question, choose an in-memory state-machine setup, define the transition observation seam and stopping rule, return the verdict to Workflow]
-  artifacts: [prototype result contract]
+  actions: [name exactly one material learning question, choose the smallest isolated representation or model, define the retry Proof seam and stopping rule, return the verdict and disposition to Workflow]
+  artifacts: [Prototype result]
   effects: []
   invoked: [workflow, prototype]
-  notInvoked: [to-spec, Specification, implementation, Review, decomposition, parent completion]
-  proof: [revision-bound before-and-after state evidence at the retry seam]
-  responsibility: [Workflow retains parent coordination and completion]
+  notInvoked: [technical-prototype Supplemental, to-spec, Specification, implementation, Review, decomposition, parent completion]
+  proof: [before-and-after retry evidence bound to the exact Result revision]
+  responsibility: [Prototype retains the learning question and experiment result while Workflow retains parent coordination and completion]
   route: [workflow-to-prototype-to-workflow]
   state: [verdict-ready-for-workflow]
-  forbidden: [write production data, absorb implementation]
+  forbidden: [write live data, require a Supplemental skill for core completion, absorb implementation]
