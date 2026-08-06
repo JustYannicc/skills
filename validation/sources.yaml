@@ -12,6 +12,6 @@ sources:
     license: Apache-2.0
   - id: matt-pocock-skills
     url: https://github.com/mattpocock/skills
-    revision: 2ab958093e83e0ec752e6c1c5932da465bf23e0c
-    commitUrl: https://github.com/mattpocock/skills/commit/2ab958093e83e0ec752e6c1c5932da465bf23e0c
+    revision: 6acc160e4e0cd062dbbbd7a1b26ae92855edf07e
+    commitUrl: https://github.com/mattpocock/skills/commit/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e
     license: MIT

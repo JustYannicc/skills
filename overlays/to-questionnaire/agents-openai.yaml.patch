@@ -1,6 +1,6 @@
-diff --git a/skills/in-progress/to-questionnaire/agents/openai.yaml b/skills/in-progress/to-questionnaire/agents/openai.yaml
---- a/skills/in-progress/to-questionnaire/agents/openai.yaml
-+++ b/skills/in-progress/to-questionnaire/agents/openai.yaml
+diff --git a/skills/productivity/to-questionnaire/agents/openai.yaml b/skills/productivity/to-questionnaire/agents/openai.yaml
+--- a/skills/productivity/to-questionnaire/agents/openai.yaml
++++ b/skills/productivity/to-questionnaire/agents/openai.yaml
 @@ -2,4 +2,4 @@
    display_name: "To Questionnaire"
    short_description: "Front-load questions into a doc for someone to answer"

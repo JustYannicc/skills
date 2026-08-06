@@ -1,0 +1,15 @@
+diff --git a/skills/engineering/grill-with-docs/SKILL.md b/skills/engineering/grill-with-docs/SKILL.md
+--- a/skills/engineering/grill-with-docs/SKILL.md
++++ b/skills/engineering/grill-with-docs/SKILL.md
+@@ -1,7 +1,8 @@
+ ---
+ name: grill-with-docs
+-description: A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
+-disable-model-invocation: true
++description: Sharpen a documented plan or design through a relentless interview while preserving shared language and qualifying decisions. Use when existing records should ground the design and stay current as decisions resolve.
+ ---
+ 
+-Run a `/grilling` session, using the `/domain-modeling` skill.
++Run a `grilling` interview and use `domain-modeling` throughout it. Read the current records through the selected Adapter, keep the domain glossary and qualifying decision records current there, and return the confirmed shared understanding to the requesting context.
++
++These are companion capabilities rather than bundled dependencies. When either capability is unavailable, name the gap and preserve the unresolved frontier for resumption.

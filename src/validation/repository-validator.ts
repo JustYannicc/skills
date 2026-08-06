@@ -117,28 +117,38 @@ const openAiMetadataSchema = z.object({
   }),
 });
 
-const provenanceSchema = z
+const originalProvenanceSchema = z
+  .object({ strategy: z.literal("original") })
+  .strict();
+const adaptedProvenanceSchema = z
   .object({
-    changedAssumptions: z.array(z.string().trim().min(1)),
-    retainedBehavior: z.array(z.string().trim().min(1)),
-    schemaVersion: z.literal(1),
-    sources: z.array(z.object({ id: z.string().trim().min(1) })),
-    strategy: z.enum(["original", "adapted", "upstream-overlay"]),
+    adaptationMode: z.string().trim().min(1),
+    changedAssumptions: z.array(z.string().trim().min(1)).min(1),
+    retainedBehavior: z.array(z.string().trim().min(1)).min(1),
+    sources: z
+      .array(
+        z.object({
+          sourceId: z.string().trim().min(1),
+          targets: z.array(relativePathSchema).min(1),
+        })
+      )
+      .min(1),
+    strategy: z.literal("adapted"),
   })
-  .superRefine((provenance, context) => {
-    if (provenance.strategy !== "original" && provenance.sources.length === 0) {
-      context.addIssue({
-        code: "custom",
-        message:
-          "Adapted and upstream-overlay skills require a source reference.",
-        path: ["sources"],
-      });
-    }
-  });
+  .strict();
+const provenanceSchema = z.discriminatedUnion("strategy", [
+  originalProvenanceSchema,
+  adaptedProvenanceSchema,
+]);
 
 const repositoryConfigSchema = z.object({
-  expectedSkills: z.array(skillNameSchema),
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
+  skills: z.array(
+    z.object({
+      name: skillNameSchema,
+      provenance: z.unknown(),
+    })
+  ),
 });
 
 const overlayInventorySchema = z.object({
@@ -245,8 +255,7 @@ const validatePublicBoundary = async (
 const validateSkill = async (
   root: string,
   skillsRoot: string,
-  skillName: string,
-  sourceIds: ReadonlySet<string>
+  skillName: string
 ): Promise<RepositoryFinding[]> => {
   const skillRoot = path.join(skillsRoot, skillName);
   const skillPath = path.join(skillRoot, "SKILL.md");
@@ -316,25 +325,12 @@ const validateSkill = async (
     }
   }
 
-  try {
-    const provenance = provenanceSchema.parse(
-      parseYaml(await readFile(provenancePath, "utf-8"))
-    );
-    for (const source of provenance.sources) {
-      if (!sourceIds.has(source.id)) {
-        findings.push({
-          check: "skill-provenance",
-          file: path.relative(root, provenancePath),
-          message: `Provenance references unknown source "${source.id}".`,
-          severity: "Major",
-        });
-      }
-    }
-  } catch (error) {
+  if (await exists(provenancePath)) {
     findings.push({
       check: "skill-provenance",
       file: path.relative(root, provenancePath),
-      message: `Invalid provenance.yaml: ${error instanceof Error ? error.message : "unknown schema error"}`,
+      message:
+        "Provenance is repository evidence and must live in validation/repository.yaml, not installed skill runtime files.",
       severity: "Major",
     });
   }
@@ -344,7 +340,8 @@ const validateSkill = async (
 
 const validateSkills = async (
   root: string,
-  sourceIds: ReadonlySet<string>
+  sourceInventory: SourceInventory,
+  loadTarget: SourceTargetLoader
 ): Promise<{ findings: RepositoryFinding[]; checkedSkills: number }> => {
   const skillsRoot = path.join(root, "skills");
   const entries = await readdir(skillsRoot, { withFileTypes: true }).catch(
@@ -355,9 +352,7 @@ const validateSkills = async (
     .map((entry) => entry.name)
     .toSorted();
   const nested = await Promise.all(
-    skillNames.map((skillName) =>
-      validateSkill(root, skillsRoot, skillName, sourceIds)
-    )
+    skillNames.map((skillName) => validateSkill(root, skillsRoot, skillName))
   );
   const findings = nested.flat();
   const configPath = path.join(root, "validation", "repository.yaml");
@@ -366,9 +361,18 @@ const validateSkills = async (
     const config = repositoryConfigSchema.parse(
       parseYaml(await readFile(configPath, "utf-8"))
     );
-    const expected = new Set(config.expectedSkills);
+    const configuredNames = config.skills.map((skill) => skill.name);
+    if (new Set(configuredNames).size !== configuredNames.length) {
+      findings.push({
+        check: "skill-structure",
+        file: path.relative(root, configPath),
+        message: "Skill provenance records must have unique names.",
+        severity: "Major",
+      });
+    }
+    const expected = new Set(configuredNames);
     const actual = new Set(skillNames);
-    for (const skillName of config.expectedSkills.filter(
+    for (const skillName of configuredNames.filter(
       (name) => !actual.has(name)
     )) {
       findings.push({
@@ -386,6 +390,60 @@ const validateSkills = async (
         severity: "Major",
       });
     }
+    const sources = new Map(
+      sourceInventory.sources.map((source) => [source.id, source])
+    );
+    const provenanceFindings = await Promise.all(
+      config.skills.map(async (skill): Promise<RepositoryFinding[]> => {
+        const result = provenanceSchema.safeParse(skill.provenance);
+        if (!result.success) {
+          return [
+            {
+              check: "skill-provenance",
+              file: path.relative(root, configPath),
+              message: `Invalid provenance for skill "${skill.name}": ${result.error.message}`,
+              severity: "Major",
+            },
+          ];
+        }
+        if (result.data.strategy === "original") {
+          return [];
+        }
+        const sourceFindings = await Promise.all(
+          result.data.sources.map(
+            async (sourceReference): Promise<RepositoryFinding[]> => {
+              const source = sources.get(sourceReference.sourceId);
+              if (source === undefined) {
+                return [
+                  {
+                    check: "skill-provenance",
+                    file: path.relative(root, configPath),
+                    message: `Provenance for skill "${skill.name}" references unknown source "${sourceReference.sourceId}".`,
+                    severity: "Major",
+                  },
+                ];
+              }
+              const targetResults = await Promise.all(
+                sourceReference.targets.map(async (target) => ({
+                  exists: (await loadTarget(source, target)) !== null,
+                  target,
+                }))
+              );
+              return targetResults
+                .filter((target) => !target.exists)
+                .map((targetResult) => ({
+                  check: "skill-provenance",
+                  file: path.relative(root, configPath),
+                  message: `Provenance for skill "${skill.name}" target "${targetResult.target}" does not exist at the pinned source revision.`,
+                  severity: "Major",
+                }));
+            }
+          )
+        );
+        return sourceFindings.flat();
+      })
+    );
+    findings.push(...provenanceFindings.flat());
   } catch (error) {
     findings.push({
       check: "skill-structure",
@@ -576,13 +634,15 @@ export const validateRepository = async (
     root,
     options.sourceVerifier ?? verifyPinnedSource
   );
-  const sourceIds = new Set(
-    sourceValidation.inventory.sources.map((source) => source.id)
-  );
   const files = await listFiles(root, {
     excludeDirectories: excludedDirectories,
   });
-  const skillValidation = await validateSkills(root, sourceIds);
+  const sourceTargetLoader = options.sourceTargetLoader ?? loadPinnedTarget;
+  const skillValidation = await validateSkills(
+    root,
+    sourceValidation.inventory,
+    sourceTargetLoader
+  );
   const findings = [
     ...(await validateMarkdown(root, files)),
     ...(await validatePublicBoundary(root, files)),
@@ -591,7 +651,7 @@ export const validateRepository = async (
     ...(await validateOverlays(
       root,
       sourceValidation.inventory,
-      options.sourceTargetLoader ?? loadPinnedTarget,
+      sourceTargetLoader,
       options.overlayReapplicationVerifier ?? verifyOverlayReapplication
     )),
   ];
