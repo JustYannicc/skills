@@ -16,13 +16,13 @@ environment:
     supplementalReview: false
   tools: [repository-read]
 expected:
-  actions: [compare code at the public proof seam, treat code as one execution medium, inspect Specification and governing standards, return Changes required with exact findings]
+  actions: [compare code at the public proof seam, treat code as one execution medium, report Specification and Standards evidence as separate axes, assess maintainability from the future responsible Actor perspective, return Changes required with exact findings]
   artifacts: [changes-required Review record]
   effects: []
   invoked: [review]
   notInvoked: [bundled code-review skill]
-  proof: [code behavior and Specification are compared at the accepted seam]
+  proof: [code behavior and Specification are compared at the accepted seam, Standards results cannot be inferred from Specification results, future responsible Actor can trace boundaries dependencies recovery and change surface]
   responsibility: [Work owner resolves findings, Outcome owner integrates evidence]
   route: [universal-review]
   state: [in_review-to-accepted]
-  forbidden: [claim tests alone prove parent completion]
+  forbidden: [claim tests alone prove parent completion, replace universal Review with bundled code review, merge Specification and Standards into one undifferentiated pass]

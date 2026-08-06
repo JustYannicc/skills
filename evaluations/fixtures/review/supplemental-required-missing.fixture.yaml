@@ -7,7 +7,7 @@ skill: review
 domains: [physical-environment, software]
 severity: Major
 requiredAttempts: 1
-prompt: Review an exact result with a configured required safety Supplemental reviewer, but the specialist capability is unavailable in this environment.
+prompt: Review exact equipment-layout result r5. The user-selected `supplemental-review` mapping is `public-safety-review` from `public-skills@example.org/public-safety-review` version `4.0.2`, scoped to trip and egress hazards, required, input contract `Specification + result + safety standard + site constraints`, expected evidence `revision-bound hazard observations`, failure behavior `wait without a verdict pass`; that capability is unavailable. Do not substitute any similar installed skill.
 environment:
   id: workflow-with-required-supplemental-gap
   capabilities:
@@ -16,13 +16,13 @@ environment:
     supplementalReview: false
   tools: []
 expected:
-  actions: [invoke configured required Supplemental at declared extension point, detect missing required capability, record dependency and unblock condition, return Inconclusive waiting]
+  actions: [validate the exact selected mapping source version scope required status input evidence and failure behavior, invoke only that configured required Supplemental at declared extension point, detect missing required capability, record dependency and unblock condition, return Inconclusive waiting]
   artifacts: [continuation record, required Supplemental gap]
   effects: []
   invoked: [review, configured Supplemental reviewer]
   notInvoked: [complete target, pretend required evidence exists]
-  proof: [required failure blocks completion and exact next check recorded]
+  proof: [mapping identity and result r5 remain visible, required failure blocks completion and exact next check recorded]
   responsibility: [Work owner remains responsible, Outcome owner retains parent responsibility]
   route: [required-supplemental-to-waiting]
   state: [in_review-to-waiting]
-  forbidden: [treat missing required Supplemental as advisory]
+  forbidden: [treat missing required Supplemental as advisory, invoke an unmapped similar specialist]

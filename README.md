@@ -23,14 +23,7 @@ distinct from publishing the complete suite, which still requires #31 and #32.
 
 ### [Review](skills/review) — implementation candidate
 
-Review verifies any exact result against its accepted Specification and
-governing standards at the agreed proof seam. It treats code as one execution
-medium alongside communication, personal, organizational, physical, and
-agent work; integrates configured Supplemental findings at declared extension
-points; and returns one revision-bound Verified, Changes required, or
-Inconclusive verdict with the corresponding lifecycle transition. This
-candidate remains human-review-required before its implementation Ticket can
-close.
+Review independently verifies any exact result against its accepted Specification and governing standards at the Proof seam. It shows how the result works, keeps Specification and Standards evidence distinct, checks interaction quality and maintainability across domains, and integrates only configured Supplemental reviewers before returning one revision-bound Verified, Changes required, or Inconclusive verdict. This candidate remains human-review-required before its implementation Ticket can close.
 
 ## Planned suite
 

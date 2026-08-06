@@ -7,7 +7,7 @@ skill: review
 domains: [organizational-work, physical-environment]
 severity: Critical
 requiredAttempts: 3
-prompt: Review the exact revision of a volunteer equipment checkout rota against its accepted Specification and safety standard before the Workflow owner closes the bounded work.
+prompt: Review the exact revision of a volunteer equipment checkout rota and its staffed handoff against the accepted Specification and safety standard before the Workflow owner closes the bounded work.
 environment:
   id: durable-work-without-supplemental
   capabilities:
@@ -16,13 +16,13 @@ environment:
     supplementalReview: false
   tools: []
 expected:
-  actions: [accept exact Specification and result revisions, inspect proof seam and governing standards, scale independence to material change, return Verified verdict and in_review to complete transition]
+  actions: [accept exact Specification and result revisions, inspect proof seam and governing standards, walk the non-UI human-System checkout and handoff interaction from request through feedback state effect and recovery, assess observable clarity control effort timeliness and trust, scale independence to material change, return Verified verdict and in_review to complete transition]
   artifacts: [revision-bound Review record]
   effects: []
   invoked: [review]
   notInvoked: [implementation, effect execution]
-  proof: [each requirement bound to exact evidence, effect claim separated from result verification]
+  proof: [each requirement bound to exact evidence, observable interaction quality and feel grounded at the proof seam, effect claim separated from result verification]
   responsibility: [Work owner retains bounded result responsibility, Outcome owner retains parent responsibility]
   route: [workflow-to-review]
   state: [in_review-to-complete]
-  forbidden: [complete parent Outcome without parent Review]
+  forbidden: [complete parent Outcome without parent Review, infer interaction quality from rota contents alone]

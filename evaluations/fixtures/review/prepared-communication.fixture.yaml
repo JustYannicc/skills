@@ -16,13 +16,13 @@ environment:
     scheduling: false
   tools: []
 expected:
-  actions: [identify result-level proof seam, verify prepared exact revision, record pending effect without claiming delivery, return Verified for the result seam]
+  actions: [identify result-level proof seam, verify prepared exact revision, assess the recipient interaction for clarity coherence effort tone trust and recovery instructions using observable message evidence, record pending effect without claiming delivery, return Verified for the result seam]
   artifacts: [revision-bound Review record]
   effects: []
   invoked: [review]
   notInvoked: [send message, claim delivery]
-  proof: [message content matches Specification, pending effect is explicit]
+  proof: [message content matches Specification, interaction quality and feel are evidenced separately under Standards, pending effect is explicit]
   responsibility: [Work owner retains effect responsibility, Outcome owner retains parent responsibility]
   route: [prepared-result-review]
   state: [in_review-to-complete]
-  forbidden: [treat prepared draft as sent or parent Outcome complete]
+  forbidden: [treat prepared draft as sent or parent Outcome complete, equate polished wording with successful delivery]

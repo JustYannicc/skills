@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-ui-interaction-quality
+title: Rendered UI interaction quality is proved across Material paths
+shape: direct
+kind: composition
+skill: review
+domains: [software, communication]
+severity: Major
+requiredAttempts: 1
+prompt: Review exact revision ui-r17 of a responsive account-recovery flow against Specification spec-r9 and the named accessibility and product interaction standards. The proof seam is the rendered flow, and executable preview access is available.
+environment:
+  id: rendered-ui-flow
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools: [interactive-preview]
+expected:
+  actions: [pin all target revisions and rendered proof seam, exercise the Material happy error degraded and recovery paths, inspect supported viewports keyboard pointer and touch inputs, assess observable clarity coherence control friction feedback accessibility trust and feel, keep Specification and Standards evidence separate, return one integrated verdict]
+  artifacts: [revision-bound Review record, rendered interaction evidence]
+  effects: []
+  invoked: [review]
+  notInvoked: [implementation, undeclared specialist]
+  proof: [walkthrough traces trigger state transitions feedback visible output error and recovery, complete exact Evidence references support representative readable anchors]
+  responsibility: [Reviewer owns verdict, Work owner owns correction, Outcome owner retains parent responsibility]
+  route: [rendered-ui-review]
+  state: [in_review-to-accepted]
+  forbidden: [review code alone, approve from static screenshots alone, omit Material input methods or recovery]

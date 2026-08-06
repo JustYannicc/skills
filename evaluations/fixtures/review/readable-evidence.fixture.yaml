@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-readable-evidence
+title: Review evidence is readable and exactly traceable
+shape: edge
+kind: composition
+skill: review
+domains: [organizational-work, communication]
+severity: Major
+requiredAttempts: 1
+prompt: Return the durable Review record for exact policy-result revision r11. The underlying evidence ledger is complete but long; make the decision understandable without sacrificing exact traceability.
+environment:
+  id: complete-large-evidence-ledger
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools: [evidence-ledger]
+expected:
+  actions: [lead with one verdict reason target and coverage, explain How the result works from trigger through state and visible result including recovery, keep Specification and Standards evidence separate, use concise representative evidence anchors, retain exact references to the complete revision-bound evidence ledger, state transition Responsibility and pending effects]
+  artifacts: [template-conformant Review record]
+  effects: []
+  invoked: [review]
+  notInvoked: [copy entire evidence ledger]
+  proof: [a reader can understand the decision before the evidence tables and trace every claim to the complete exact record]
+  responsibility: [Reviewer owns verdict, Work owner owns correction or effects, Outcome owner retains parent responsibility]
+  route: [durable-readable-review]
+  state: [in_review-to-complete]
+  forbidden: [bury verdict after evidence, replace complete evidence with summary, merge Specification and Standards evidence]
