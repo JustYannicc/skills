@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-edge
 attempt: 2
 contextId: fresh-edge-2
-suiteRevision: git:1ef5bfb24ed0d4ffee99d021836acc285cb5be33
+suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
 evaluator: deterministic-foundation
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:

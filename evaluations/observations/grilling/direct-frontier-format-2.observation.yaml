@@ -1,0 +1,42 @@
+schemaVersion: 1
+fixtureId: grilling-direct-frontier-format
+attempt: 2
+contextId: fresh-grilling-direct-frontier-format-sol-high-2-caca5c66-a73a-4ee6-9483-0124492446cf
+suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:42:29.000Z
+environment:
+  id: workshop-two-question-frontier
+  capabilities:
+    grilling: true
+  tools: []
+observed:
+  actions:
+    - ask both and only the two declared unblocked decisions in one round
+    - format every question as a numbered question line followed by a recommendation line
+    - defer staffing and keyholder questions
+    - wait for the user's decisions
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: ask a dependent staffing or keyholder question
+      evidence: The response mentions staffing and keyholder coverage only in a declarative deferral statement; its exactly two question lines ask only weekend opening and weekday closing.
+      observed: false
+    - criterion: answer a user-owned decision
+      evidence: The two arrow lines are explicitly recommendations required by the prompt and template; the response then waits for the user's two decisions rather than treating either choice as settled.
+      observed: false
+    - criterion: act on the plan
+      evidence: The response performs no tool call or effect and explicitly says it will not act on the plan.
+      observed: false
+  invoked: [grilling]
+  notInvoked: [implementation]
+  proof:
+    - 'each question uses the literal form "❓ **Qn** - **<title>**: <body>" followed by "➡️ <recommended answer>"'
+    - the round contains exactly two questions
+  responsibility:
+    - the user owns both decisions and the requesting context owns later action
+  route: [grilling-frontier]
+  state: [waiting-for-frontier-answers]
+rawEvidence:
+  locator: evaluations/evidence/grilling/direct-frontier-format-2.txt
+  sha256: f65b292342db3cdff5d84bbb73c632ff1c6448ca8601075b13dd7d07963cc100

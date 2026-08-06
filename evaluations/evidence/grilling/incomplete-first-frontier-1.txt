@@ -1,0 +1,43 @@
+Fresh-context execution — grilling-incomplete-first-frontier fixture attempt 1
+
+Candidate revision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+Frozen contract checkout: git:7e5b067bc0de2b0ded0841a243950717602be535
+Evaluator: gpt-5.6-sol-high-fresh-context
+Context ID: fresh-grilling-incomplete-first-frontier-v12-1-33c9147d-d64b-4e2f-9efb-db4450ec9420
+Recorded at (UTC): 2026-08-06T16:47:39Z
+
+Effective runtime
+
+- Root: pinned-runtime-worktree
+- Grilling `SKILL.md` sha256: 6af16209ae3f0554db806a89e1a94641243e6c53b8540d67925545e2b8176ab6
+- Fixture sha256: 05f0ed69b3c01ebdf97fb10221a1b282ff4ae8ee9e2c7a12c384511d603fe4d9
+
+Exact prompt
+
+Grill me on “making mornings better.” That is all the context I have supplied.
+
+Exact environment
+
+- id: underspecified-morning-idea
+- capabilities: grilling=true
+- tools: []
+
+Test execution events
+
+[]
+
+Response — generated once and preserved unedited
+
+❓ **Q1** - **Meaning of “better”**: What primary outcome should a better morning produce for you: feeling less rushed, having more energy, starting earlier, completing a specific activity, enjoying the morning more, or something else? What observable sign would tell you it improved?
+
+➡️ Start with “less rushed” and define success as completing your essential morning responsibilities without hurrying or beginning the day stressed. That is my recommendation, not an assumption; the outcome and success signal are yours to choose.
+
+❓ **Q2** - **Non-negotiable constraints**: What boundaries must any morning approach respect—for example fixed commitments, sleep needs, health needs, care responsibilities, noise, budget, space, or other people?
+
+➡️ Protect sufficient sleep and fixed responsibilities first, then optimize inside those boundaries. Tell me which constraints actually apply rather than treating my examples as facts about you.
+
+Reply with both answers. I’m waiting before asking about wake time, bedtime, routines, alarms, breakfast, exercise, or tools because those branches depend on your intended outcome and constraints. I will not turn this into a finished plan or act on it yet.
+
+Evaluation result
+
+Pass. The response exposes the missing intended outcome, observable success signal, and non-negotiable constraints instead of filling them in. It asks the complete currently answerable first frontier as exactly two numbered questions, gives a separate recommendation for each in the required Grilling format, explicitly leaves both decisions with the user, and waits for both answers. It defers wake time, bedtime, routine, alarm, food, exercise, and tool branches because they depend on those root answers, presents no finished morning plan, and performs no action or undeclared tool event. No retry was run.

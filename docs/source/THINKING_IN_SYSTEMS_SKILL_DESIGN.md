@@ -162,13 +162,16 @@ skills/
         ├── SKILL.md
         ├── agents/
         │   └── openai.yaml
-        ├── provenance.yaml
         ├── references/
         │   ├── standard.md
         │   └── system-record-template.md
 ```
 
-No application scaffold, database, website, registry client, or custom installer is justified. The repository requires `agents/openai.yaml` for deliberate UI and invocation metadata.
+The schema-v2 `validation/repository.yaml` owns the exact local-skill roster and
+central provenance records. Provenance is repository evidence and stays outside
+installed skill directories. No application scaffold, database, website,
+registry client, or custom installer is justified. The repository requires
+`agents/openai.yaml` for deliberate UI and invocation metadata.
 
 ## 10. Behavioral proof suite
 
@@ -243,7 +246,7 @@ There is no reliable skill dependency mechanism, but each skill should still hav
 | Layer | Treatment | Runtime guarantee |
 | --- | --- | --- |
 | Systems thesis and universal invariants | Thinking in Systems owns intent, seams, incentives, low-capacity operation, proof, recovery, change, legacy, and system strategy | Available whenever the anchor skill is installed |
-| Distinct workflow | A separate skill owns Wayfinding, Research, Prototyping, Handoff, Batch Grilling, or another independently invocable job | Available only when that skill is explicitly installed |
+| Distinct workflow | A separate skill owns Wayfinding, Research, Prototyping, Handoff, Grill With Docs, Grilling, Domain Modeling, or another independently invocable job | Available only when that skill is explicitly installed |
 | Cross-skill relationship | Reference the companion by capability and name; setup documents the recommended suite and exact multi-skill install command | No claim of automatic dependency resolution |
 | Missing companion | State the absent capability and either use a clearly bounded fallback or ask for installation; never pretend the companion ran | Honest degraded behavior |
 
@@ -256,8 +259,9 @@ The initial design backlog is:
 | Research | Remove engineering/repository assumptions; research any technical, personal, organizational, physical, or agent question against the best available evidence | Supplies evidence and reduces uncertainty for system decisions |
 | Prototype | Keep Matt's code prototype for software; design a universal system/life prototype workflow for reversible real-world, process, policy, environment, and agent experiments | Tests a material system question without prematurely committing to full implementation |
 | Handoff | Adapt the contract for continuation across agents, humans, sessions, and operational systems—not only coding contexts | Preserves state, authority, rationale, uncertainty, and exact next frontier |
-| Batch Grilling | Prefer the batch frontier over Grill Me; preserve the useful non-engineering procedure and align its questions with intent, systems, and decision authority | Resolves independent unknowns without turning every request into an interview |
-| Domain Modeling | Retain the existing skill unless a focused audit finds a concrete cross-domain gap | Establishes shared language; likely referenced rather than forked |
+| Grill With Docs | Keep one documented-plan or design interview job by composing Grilling and Domain Modeling through the selected Adapter | Connects shared understanding to current language and qualifying decision records without creating a package dependency |
+| Grilling | Preserve the design tree, full current frontier, dependent-question waiting, user-owned decisions, and shared-understanding confirmation; make fact legwork capability-aware | Resolves independent decisions without turning every request into an interview |
+| Domain Modeling | Preserve the useful active-language discipline in a universal successor with Adapter-neutral records | Establishes shared language as an independently invocable companion |
 | TDD | Keep the existing engineering TDD skill for software; place only the universal proof-at-seams principles inside Thinking in Systems unless later evidence justifies a separate cross-domain proof skill | Software TDD remains specialized; system proof remains universal |
 | Setup | Later separate setup workflow inspired by Matt's setup skill | Installs the selected suite explicitly and manages standing triggers safely |
 | Maintainer Query | Later independent skill | Routes decisions to the maintainer's documented judgment; not a dependency of the first release |

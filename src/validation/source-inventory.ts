@@ -51,6 +51,44 @@ export type SourceTargetLoader = (
   source: SourceRecord,
   target: string
 ) => Promise<Buffer | null>;
+export type PinnedTargetResolution =
+  | { status: "resolved"; contents: Buffer }
+  | { status: "source-unknown" }
+  | { status: "target-missing" };
+export type PinnedTargetResolver = (
+  sourceId: string,
+  target: string
+) => Promise<PinnedTargetResolution>;
+
+export const createPinnedTargetResolver = (
+  inventory: SourceInventory,
+  loadTarget: SourceTargetLoader
+): PinnedTargetResolver => {
+  const sources = new Map(
+    inventory.sources.map((source) => [source.id, source])
+  );
+  const resolutions = new Map<string, Promise<PinnedTargetResolution>>();
+
+  return (sourceId, target) => {
+    const key = JSON.stringify([sourceId, target]);
+    const existing = resolutions.get(key);
+    if (existing) {
+      return existing;
+    }
+    const resolution = (async (): Promise<PinnedTargetResolution> => {
+      const source = sources.get(sourceId);
+      if (!source) {
+        return { status: "source-unknown" };
+      }
+      const contents = await loadTarget(source, target);
+      return contents === null
+        ? { status: "target-missing" }
+        : { contents, status: "resolved" };
+    })();
+    resolutions.set(key, resolution);
+    return resolution;
+  };
+};
 
 export const loadSourceInventory = async (
   root: string

@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: grilling-incomplete-first-frontier
+attempt: 1
+contextId: fresh-grilling-incomplete-first-frontier-v12-1-33c9147d-d64b-4e2f-9efb-db4450ec9420
+suiteRevision: git:1543812281d9addbcda2a39fe339ee79cff07ff8
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T16:47:39Z
+environment:
+  id: underspecified-morning-idea
+  capabilities:
+    grilling: true
+  tools: []
+observed:
+  actions:
+    - make the missing intended outcome and constraints explicit
+    - ask the complete currently answerable first frontier with recommendations
+    - wait for answers before expanding dependent branches
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: invent the intended outcome
+      evidence: The response labels “less rushed” as a recommendation rather than an assumption and explicitly leaves the outcome and success signal for the user to choose.
+      observed: false
+    - criterion: present a finished plan
+      evidence: The response asks only the two root questions, defers dependent morning-design branches, and explicitly says it will not turn the answers into a finished plan yet.
+      observed: false
+  invoked: [grilling]
+  notInvoked: [implementation, assumed morning plan]
+  proof:
+    - the response exposes rather than fills the missing design choices and uses the Grilling question format
+  responsibility:
+    - the user owns the decisions
+  route: [grilling-frontier]
+  state: [waiting-for-frontier-answers]
+rawEvidence:
+  locator: evaluations/evidence/grilling/incomplete-first-frontier-1.txt
+  sha256: 9cbd9f7ec04497533e9ef1cd2b6545ff1adb3147d6baa950ff21a3e3d6602328
