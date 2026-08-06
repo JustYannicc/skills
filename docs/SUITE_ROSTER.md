@@ -2,11 +2,11 @@
 
 **Status:** accepted design
 **Decision source:** [Select the suite roster and one-job boundaries](https://github.com/JustYannicc/skills/issues/6)
-**Upstream baseline:** [`mattpocock/skills` at `2ab9580`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c)
+**Upstream baseline:** [`mattpocock/skills` at `6acc160`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e)
 
 ## Roster contract
 
-The first complete runtime suite contains 16 skills. Each has one recognizable
+The first complete runtime suite contains 17 skills. Each has one recognizable
 job, one completion boundary, and one source strategy. Thinking in Systems is
 the governing knowledge; Workflow owns coordination; phase skills own their
 individual results. Every phase skill is complete without Supplemental skills.
@@ -33,7 +33,8 @@ suite still requires human review before publication.
 | `ask-yannic` | Explain which route, skill, or Supplemental capability fits and why. | The user has an actionable recommendation and trade-off; no route is executed. | New, suite-owned |
 | `migrate-system` | Adopt an existing system into the workflow by recording and verifying its actual current state. | The material operating scope is canonically represented well enough for ordinary Workflow to proceed. | New, suite-owned |
 | `domain-modeling` | Establish and preserve shared terminology. | Relevant terms have one operative meaning or a visible unresolved conflict. | Universal successor retaining the name |
-| `batch-grill-me` | Resolve the currently unblocked user-decision frontier in rounds. | The decision frontier is empty or blocked only by facts or decisions outside the current exchange. | Direct upstream plus overlay |
+| `grill-with-docs` | Sharpen a documented plan or design while keeping shared language and qualifying decisions current. | The user confirms shared understanding and the selected Adapter contains the resolved domain terms and qualifying decision records. | Direct upstream plus overlay |
+| `grilling` | Resolve the currently unblocked user-decision frontier in rounds. | The design-tree frontier is empty and the user confirms shared understanding. | Direct upstream plus overlay |
 | `wayfinder` | Navigate persistent, multi-session, or irreducible fog through a durable decision map and operating strategy. | The next route is truthfully specifiable or governed under remaining fog. | Universal successor retaining the name |
 | `research` | Establish external facts against high-trust primary evidence. | The research question is answered with cited evidence, uncertainty, and durable state when required. | Direct upstream plus overlay |
 | `prototype` | Answer one design question through a reversible experiment. | The question has a verdict and evidence; the experiment has a disposition. | Universal successor retaining the name |
@@ -64,7 +65,8 @@ or responsibility.
 The discovery skills separate by the uncertainty they remove:
 
 - terminology → `domain-modeling`;
-- currently answerable user decisions → `batch-grill-me`;
+- documented planning or design decisions → `grill-with-docs`, which composes `grilling` with `domain-modeling`;
+- currently answerable user decisions without that documentation need → `grilling`;
 - persistent or irreducible multi-session fog → `wayfinder`;
 - external facts → `research`;
 - an empirical design question → `prototype`; and
@@ -124,7 +126,8 @@ reapplies and behavior passes verification.
 | --- | --- | --- |
 | `to-questionnaire` | Recipient-focused asynchronous discovery questionnaire. | Enable model invocation in both `SKILL.md` and `agents/openai.yaml`. |
 | `research` | Primary-source investigation and cited durable findings. | Make delegation capability-aware and write through the selected durable Adapter instead of requiring a repository. |
-| `batch-grill-me` | Ask the complete currently unblocked decision frontier in rounds. | Enable model invocation and make factual legwork direct-or-delegated according to available capability. |
+| `grill-with-docs` | Compose a Grilling interview with Domain Modeling so records stay current as shared understanding forms. | Enable model invocation and replace repository-only document assumptions with the selected Adapter and honest companion-capability behavior. |
+| `grilling` | Preserve design-tree rounds, the complete frontier, dependent-question waiting, user-owned decisions, and shared-understanding confirmation. | Make factual legwork direct or delegated according to available capability while preserving the interview contract. |
 
 ## Universal successors
 
@@ -166,10 +169,11 @@ users can customize behavior without forking or editing core skills.
 
 ## Authoring profile
 
-[`writing-great-skills`](https://github.com/mattpocock/skills/tree/2ab958093e83e0ec752e6c1c5932da465bf23e0c/skills/productivity/writing-great-skills)
+[`writing-for-agents`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e/skills/productivity/writing-for-agents)
 is installed unchanged from Matt's pinned source only for the optional authoring
-profile. It governs every skill creation or edit in this repository but is not
-part of the 16-skill runtime suite.
+profile. Authors read both `SKILL.md` and `SKILL-MECHANICS.md` before skill work.
+It governs every skill creation, edit, or review in this repository but is not
+part of the 17-skill runtime suite.
 
 ## Deferred Ask Yannic expansion
 
@@ -184,5 +188,5 @@ unbounded prose to the route guide.
 - No code-review skill is bundled. Matt's Code Review informs the separation
   of standards and Specification evidence only.
 - No software-specific testing workflow belongs to the suite.
-- `writing-great-skills` is authoring infrastructure, not runtime workflow.
+- `writing-for-agents` and its skill mechanics are authoring infrastructure, not runtime workflow.
 - Supplemental skills never replace the core contract implicitly.

@@ -20,7 +20,7 @@ const writeValidationFiles = async (root: string): Promise<void> => {
   await mkdir(path.join(root, "validation"), { recursive: true });
   await writeFile(
     path.join(root, "validation", "repository.yaml"),
-    "schemaVersion: 1\nexpectedSkills: []\n"
+    "schemaVersion: 2\nskills: []\n"
   );
   await writeFile(
     path.join(root, "validation", "sources.yaml"),
@@ -171,7 +171,7 @@ describe("repository validator", () => {
       expect.arrayContaining([
         expect.stringContaining("must match its directory"),
         expect.stringContaining("invocation policies disagree"),
-        expect.stringContaining("provenance.yaml"),
+        expect.stringContaining("validation/repository.yaml"),
       ])
     );
   });
@@ -215,41 +215,6 @@ describe("repository validator", () => {
       expect.objectContaining({
         check: "source-pins",
         message: expect.stringContaining("could not be verified"),
-        severity: "Major",
-      })
-    );
-  });
-
-  it("rejects provenance sources absent from the central inventory", async () => {
-    const root = await createRepository();
-    await writeValidationFiles(root);
-    const skill = path.join(root, "skills", "adapted-skill");
-    await mkdir(path.join(skill, "agents"), { recursive: true });
-    await writeFile(
-      path.join(skill, "SKILL.md"),
-      "---\nname: adapted-skill\ndescription: Adapted test skill.\n---\n\n# Adapted skill\n\nApply the complete accepted procedure and return evidence.\n"
-    );
-    await writeFile(
-      path.join(skill, "agents", "openai.yaml"),
-      "interface:\n  display_name: Adapted skill\n  short_description: Adapted test skill\npolicy:\n  allow_implicit_invocation: true\n"
-    );
-    await writeFile(
-      path.join(skill, "provenance.yaml"),
-      "schemaVersion: 1\nstrategy: adapted\nsources: [{ id: missing-source }]\nretainedBehavior: [bounded result]\nchangedAssumptions: [universal scope]\n"
-    );
-    await writeFile(
-      path.join(root, "validation", "repository.yaml"),
-      "schemaVersion: 1\nexpectedSkills: [adapted-skill]\n"
-    );
-
-    const result = await validateRepository(root, {
-      sourceVerifier: () => Promise.resolve(true),
-    });
-
-    expect(result.findings).toContainEqual(
-      expect.objectContaining({
-        check: "skill-provenance",
-        message: expect.stringContaining("unknown source"),
         severity: "Major",
       })
     );

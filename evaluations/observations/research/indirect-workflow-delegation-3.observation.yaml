@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-indirect-workflow-delegation
 attempt: 3
 contextId: fresh-research-indirect-final-3
-suiteRevision: git:2983a2e2f0a1d9dfaea247168b4a56a0c51e4b28
+suiteRevision: git:02ff1a51a63004d9c5c4ea7733a6a2b1901d4171
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:19:06.300Z
 environment:

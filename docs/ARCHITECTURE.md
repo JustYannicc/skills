@@ -65,6 +65,14 @@ Arrows show lifecycle relationships, not package dependencies. Setup installs
 every selected skill explicitly because current distribution does not resolve
 transitive dependencies.
 
+The accepted runtime roster contains 17 skills. Within discovery, Grill With
+Docs is the documented-plan composition entry: it invokes Grilling for
+design-tree rounds and Domain Modeling for shared language and qualifying
+decision records through the selected Adapter. Grilling and Domain Modeling
+remain independently invocable one-job skills. Their arrows are capability
+relationships, so unavailable companions produce a visible gap instead of an
+assumed transitive installation.
+
 ## Strategy before plan
 
 A plan assumes enough visibility to select actions. Strategy defines how decisions are made as observations change. The universal Wayfinder must therefore support three conditions:

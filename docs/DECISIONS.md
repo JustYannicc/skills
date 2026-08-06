@@ -26,7 +26,7 @@
 - Research should work across technical, personal, organizational, physical, and agent questions.
 - Prototype should support one-question reversible system/life experiments across supported domains; a specialized code-focused procedure may still handle technical implementation details.
 - Handoff should cover humans, agents, sessions, and operational systems.
-- Batch Grilling is preferred over single-question Grill Me for the independent decision frontier, while later questions still wait when answers are dependent.
+- Grilling owns design-tree rounds over the complete current frontier, while dependent questions wait and the user retains every decision. Grill With Docs composes that interview with Domain Modeling when plans or designs are grounded in durable records.
 - Domain Modeling preserves the useful upstream method but becomes a universal successor because the upstream storage and code-reference contract is repository-specific.
 - Universal proof-at-seams principles belong in Thinking in Systems; the public suite does not add a software-specific testing workflow.
 - Universal Review applies to code as one possible execution medium. No code-review skill is bundled; Matt Pocock's version is design inspiration only. Setup may configure user-selected Supplemental reviewers whose findings enrich rather than replace the universal Review.
@@ -34,9 +34,9 @@
 - To Questionnaire remains a universal discovery skill. Workflow may invoke it when another person holds the missing knowledge. The suite retains the upstream behavior and changes model invocation only, then Setup installs it explicitly from the configured source.
 - The automatic coordinator is `workflow`, the user-invoked guide is `ask-yannic`, and the run-once installer/configurator is `setup-system-thinking`.
 - `migrate-system` owns Conformance migration. Workflow detects a nonconforming system or workspace and invokes it automatically; invocation is automatic, while migration effects remain governed by scope, authority, reversibility, and approval.
-- Setup installs `to-questionnaire`, `research`, and `batch-grill-me` directly from Matt Pocock's pinned source and applies only declared, hashed overlays for model invocation or capability-aware portability. The repository does not retain full copies of those skills.
-- `domain-modeling` and `handoff` require universal successors under their existing names because their current storage, actor, and continuation contracts are narrower than the suite. `writing-great-skills` remains an unchanged upstream authoring prerequisite offered through an optional authoring profile.
-- The 16-skill runtime roster and every one-job boundary are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md).
+- Setup installs `to-questionnaire`, `research`, `grill-with-docs`, and `grilling` directly from Matt Pocock's pinned source and applies only declared, hashed overlays for model invocation or capability-aware portability. The repository does not retain full copies of those skills.
+- `domain-modeling` and `handoff` require universal successors under their existing names because their current storage, actor, and continuation contracts are narrower than the suite. `writing-for-agents`, including `SKILL-MECHANICS.md`, remains the unchanged upstream authoring prerequisite offered through an optional authoring profile.
+- The 17-skill runtime roster and every one-job boundary are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md).
 - `setup-system-thinking` must explain the lifecycle, responsibility model, automatic migration, and Extension/Supplemental configuration while installing and verifying them.
 - `ask-yannic` version one is a route guide. A later separately designed expansion may help coworkers query a governed representation of Yannic's judgment; it requires explicit source, authority, uncertainty, privacy, update, and correction boundaries.
 
@@ -53,7 +53,7 @@
 - Runtime phase skills are model-invoked; `ask-yannic` and `setup-system-thinking` are user-invoked.
 - Bounded synchronous work uses Inline mode; a Persistence boundary switches to Durable mode. The method, responsibility, and Review remain active in both.
 - Workflow owns the canonical routing model. `ask-yannic` explains that model and Yannic-specific rationale without executing the route.
-- Workflow routes discovery by the uncertainty to remove: terminology to Domain Modeling, user-held decisions to Batch Grilling, persistent or multi-session fog to Wayfinder, external facts to Research, empirical design questions to Prototype, and another person's knowledge to Questionnaire. Wayfinder begins with Domain Modeling and Batch Grilling, then invokes other discovery capabilities as needed.
+- Workflow routes discovery by the uncertainty to remove: terminology to Domain Modeling, documented plan or design decisions to Grill With Docs, other user-held decisions to Grilling, persistent or multi-session fog to Wayfinder, external facts to Research, empirical design questions to Prototype, and another person's knowledge to Questionnaire. Grill With Docs invokes Grilling and Domain Modeling as companion capabilities through the selected Adapter. Wayfinder uses that composition for documented planning and invokes the companions directly otherwise.
 - Every Outcome has a semantic Specification. `to-spec` materializes it durably only across a persistence, approval, assignment, multi-phase, or meaningful-risk boundary, or on explicit request; bounded Inline work may use the accepted request as its Specification.
 - Every executable unit is semantically a Ticket. `to-tickets` materializes Tickets for independently completable units, delegation, dependencies, concurrency, cross-session work, or another persistence requirement; one bounded Inline unit may remain implicit.
 - Universal Review always runs at the accepted proof seam. Its depth and independence scale with risk, but conversation, plans, prose, code, and real-world effects all remain reviewable results. Workflow then verifies the actual effect and the parent Outcome's terminal condition.
