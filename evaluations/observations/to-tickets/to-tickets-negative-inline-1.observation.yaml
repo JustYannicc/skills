@@ -1,0 +1,41 @@
+schemaVersion: 1
+fixtureId: to-tickets-negative-inline
+attempt: 1
+contextId: fresh-to-tickets-negative-inline-20260808-1
+suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:33:00.000Z
+environment:
+  id: conversation-inline-single-unit
+  capabilities:
+    workflow: true
+    persistence: false
+    to-tickets: true
+    adapter: true
+  tools: []
+observed:
+  actions: [classify one bounded synchronous unit, keep its implicit Ticket in the conversation, inspect the exact corrected result]
+  artifacts: []
+  effects: [corrected sentence returned]
+  forbiddenChecks:
+    - criterion: force Durable decomposition
+      evidence: Workflow selected the implicit Inline Ticket route.
+      observed: false
+    - criterion: create tracker records
+      evidence: No Adapter or tracker operation occurred.
+      observed: false
+    - criterion: invent a parent Outcome
+      evidence: The sentence remained the bounded Outcome and Result.
+      observed: false
+    - criterion: claim a Ticket-set revision
+      evidence: No durable decomposition was materialized.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [to-tickets, durable Adapter, implement]
+  proof: [the corrected sentence is the single Result and immediate Proof seam, no Persistence boundary or durable frontier is created]
+  responsibility: [Workflow owns the implicit Ticket and immediate Review]
+  route: [inline]
+  state: [complete]
+rawEvidence:
+  locator: evaluations/evidence/to-tickets/to-tickets-negative-inline-1.txt
+  sha256: 4688d1744755c2cb57c33df9fe033fe608d6377765f6f4e69eb31e63cdfc89e8

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-supplemental
 attempt: 1
 contextId: fresh-to-spec-supplemental-sol-high-20260806-1
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:

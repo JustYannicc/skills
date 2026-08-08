@@ -1,0 +1,45 @@
+schemaVersion: 1
+fixtureId: to-tickets-edge-dependency-recovery
+attempt: 1
+contextId: fresh-to-tickets-edge-dependency-recovery-20260808-1
+suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:37:00.000Z
+environment:
+  id: workflow-to-tickets-dependency-recovery
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    atomic-claims: false
+    to-tickets: true
+  tools: [selected canonical Adapter]
+observed:
+  actions: [bind requires edges, represent external permit as Continuation, keep dependent Ticket blocked, place stale Claim in Recovery, declare concurrent claiming unsupported]
+  artifacts: [Ticket dependency view, Continuation record, Recovery queue]
+  effects: []
+  forbiddenChecks:
+    - criterion: create a fake permit Ticket
+      evidence: The permit is an external dependency in Continuation.
+      observed: false
+    - criterion: treat cancellation as satisfying requires
+      evidence: The dependent remains blocked until explicit replace, waive, or cancel authority.
+      observed: false
+    - criterion: return stale active work to the Work frontier
+      evidence: Stale T-SETUP is in Recovery.
+      observed: false
+    - criterion: claim atomic concurrency
+      evidence: The Adapter limitation disables parallel claiming.
+      observed: false
+    - criterion: execute effects
+      evidence: Decomposition performs no effect.
+      observed: false
+  invoked: [to-tickets]
+  notInvoked: [implement, scheduler]
+  proof: [site-opening-r4 is bound, T-OPEN remains blocked by the unwaived permit requirement, permit unblock condition and next check are recorded, stale T-SETUP Claim is Recovery work, Adapter limitation disables parallel claiming]
+  responsibility: [T-OPEN owner retains responsibility while waiting, external permit has no invented Work owner, Recovery owner must resolve stale setup coordination]
+  route: [workflow-to-tickets-recovery]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-tickets/to-tickets-edge-dependency-recovery-1.txt
+  sha256: 16d0f9140cf06b5f15968a7feea842fbd9a3a0db6f789487b9e6c799c178dbfe

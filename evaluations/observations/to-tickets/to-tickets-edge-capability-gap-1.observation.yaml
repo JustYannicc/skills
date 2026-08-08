@@ -1,0 +1,44 @@
+schemaVersion: 1
+fixtureId: to-tickets-edge-capability-gap
+attempt: 1
+contextId: fresh-to-tickets-edge-capability-gap-20260808-1
+suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:34:00.000Z
+environment:
+  id: workflow-to-tickets-required-durable-gap
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: false
+    to-tickets: true
+  tools: []
+observed:
+  actions: [recognize session and approval Persistence boundaries, create one proposed Ticket contract, preserve Result owner Authority and Proof seam, record missing Adapter and exact resumption action]
+  artifacts: [proposed Ticket contract, capability-gap continuation]
+  effects: []
+  forbiddenChecks:
+    - criterion: leave the unit implicit despite a Persistence boundary
+      evidence: The later session and approval require a proposed Durable Ticket.
+      observed: false
+    - criterion: invent an Adapter write
+      evidence: No locator is claimed while adapter is unavailable.
+      observed: false
+    - criterion: infer approval Authority
+      evidence: Director approval remains a distinct required role.
+      observed: false
+    - criterion: submit the request
+      evidence: Administrator submission is preserved as later execution.
+      observed: false
+    - criterion: claim completion
+      evidence: State is Waiting for capability restoration.
+      observed: false
+  invoked: [to-tickets]
+  notInvoked: [implement, submit effect, review]
+  proof: [permit-request-r2 and proposed Ticket-set revision are preserved, coordinator preparation director approval and administrator submission remain distinct, no durable locator is claimed]
+  responsibility: [coordinator retains proposed Ticket responsibility, director remains Approver, Workflow owns the capability gap and resumption]
+  route: [to-tickets-to-workflow-capability-gap]
+  state: [Waiting]
+rawEvidence:
+  locator: evaluations/evidence/to-tickets/to-tickets-edge-capability-gap-1.txt
+  sha256: 283c772a52c644f8c43edc4d8ad8d95067502921daf2847d983817658663897c

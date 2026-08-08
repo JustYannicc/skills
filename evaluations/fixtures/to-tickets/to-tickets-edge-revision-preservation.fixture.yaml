@@ -1,0 +1,36 @@
+schemaVersion: 1
+id: to-tickets-edge-revision-preservation
+title: A material Specification revision invalidates only affected decomposition
+shape: edge
+kind: invocation
+skill: to-tickets
+domains: [technical, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Reconcile Ticket decomposition for Specification `delivery-window-v1` after
+  accepted change `change-r4` removes South clinic and moves North delivery to
+  Thursday 14:00 while retaining the 2-8 C cold-chain Constraint. Ticket
+  `T-NORTH-r2`, its dependency and evidence, and the parent coverage row are
+  affected; unrelated training Ticket `T-TRAIN-r1` and evidence `cold-chain-e2`
+  remain valid. Produce a proposed Ticket-set revision that invalidates only
+  affected decomposition and returns it for re-approval. Do not execute a
+  delivery or mutate the prior revision.
+environment:
+  id: workflow-to-tickets-revision-preservation
+  capabilities:
+    workflow: true
+    persistence: false
+    to-tickets: true
+  tools: []
+expected:
+  actions: [bind prior and successor Specification revisions, trace affected Ticket dependency and evidence closure, invalidate only affected decomposition, preserve unrelated accepted work, return proposed revision for approval]
+  artifacts: [proposed revised Ticket set, revision impact map]
+  effects: []
+  invoked: [to-tickets]
+  notInvoked: [implement, delivery effect]
+  proof: [delivery-window-v1 change-r4 and proposed Ticket-set revision are bound, T-NORTH-r2 receives an affected disposition, South scope is removed, T-TRAIN-r1 and cold-chain-e2 remain valid]
+  responsibility: [To Tickets owns the bounded revision result, regional director remains Approver, Outcome owner retains parent integration]
+  route: [to-tickets-revision-to-workflow-approval]
+  state: [Proposed]
+  forbidden: [mutate prior Specification or Ticket revision, invalidate unrelated training work, reuse stale approval or evidence, execute delivery, claim completion]

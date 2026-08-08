@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-negative-no-spec
 attempt: 1
 contextId: final-sol-review-negative-no-spec-1
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:15.000Z
 environment:

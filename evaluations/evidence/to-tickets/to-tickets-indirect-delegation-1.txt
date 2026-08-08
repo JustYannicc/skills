@@ -1,0 +1,16 @@
+Evaluation: to-tickets-indirect-delegation
+Attempt: 1
+Context: fresh-to-tickets-indirect-delegation-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+Workflow passed member-update-r5 and the parent context to To Tickets. The
+decomposition returned two bounded delegated Results: the recorded-channel
+message and four-member telephone fallback. Their Work owners are distinct,
+their requirements do not overlap, and atomic claims make both eligible for
+the Work frontier concurrently. The parent integration Ticket requires both
+and its Proof seam is the 86-member delivery record.
+
+The communications coordinator remains decomposition owner. Child ownership is
+nested; the membership lead remains Outcome owner and parent integrator. No
+messages were sent and no child or parent was marked complete.

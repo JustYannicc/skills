@@ -1,0 +1,12 @@
+Evaluation: to-tickets-edge-revision-preservation
+Attempt: 1
+Context: fresh-to-tickets-edge-revision-preservation-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+To Tickets compared delivery-window-v1 with change-r4 and created a proposed
+Ticket-set revision. T-NORTH-r2, its dependency and evidence, the removed
+South scope, and the affected coverage row were invalidated or revised. The
+unrelated T-TRAIN-r1 and cold-chain-e2 remained valid. The prior revision was
+not mutated, no delivery occurred, and the regional director remains the
+Approver for the proposed revision.

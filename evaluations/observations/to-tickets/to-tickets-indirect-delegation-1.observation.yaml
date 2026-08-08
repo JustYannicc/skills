@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: to-tickets-indirect-delegation
+attempt: 1
+contextId: fresh-to-tickets-indirect-delegation-20260808-1
+suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:31:00.000Z
+environment:
+  id: workflow-to-tickets-delegation-concurrency
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    atomic-claims: true
+    delegation: true
+    to-tickets: true
+  tools: [selected canonical Adapter]
+observed:
+  actions: [bind Workflow context and accepted Specification, create independently finishable delegated child Results, mark child Tickets concurrently eligible, create parent integration Ticket with two requires edges, return nested ownership]
+  artifacts: [Durable delegated Ticket set, dependency and frontier view]
+  effects: []
+  forbiddenChecks:
+    - criterion: transfer parent ownership to a child
+      evidence: Membership lead remains Outcome owner; child owners receive only bounded responsibility.
+      observed: false
+    - criterion: treat delegation or child completion as parent completion
+      evidence: Integration Ticket and parent Proof seam remain outstanding.
+      observed: false
+    - criterion: invent a third delivery channel
+      evidence: Only recorded-channel message and telephone fallback are covered.
+      observed: false
+    - criterion: execute or send the messages
+      evidence: No communication effect was performed by decomposition.
+      observed: false
+    - criterion: assume concurrency without atomic-claims evidence
+      evidence: The frontier permits concurrent child claims only because the environment declares atomic claims.
+      observed: false
+  invoked: [workflow, to-tickets]
+  notInvoked: [implement, send effect, review]
+  proof: [member-update-r5 and exact Ticket-set revision are bound, message and telephone fallback Tickets are independent frontier work, integration Ticket requires both, 86-member delivery evidence is the parent Proof seam]
+  responsibility: [child Work owners retain bounded responsibility, communications coordinator retains decomposition responsibility, membership lead retains parent Outcome ownership and integration]
+  route: [workflow-to-tickets-to-workflow]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-tickets/to-tickets-indirect-delegation-1.txt
+  sha256: a2ef0055ab6d3d27009416f924adf448b19cf299a18dc23f26a60dcf5fd04795

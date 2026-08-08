@@ -1,0 +1,12 @@
+Evaluation: to-tickets-edge-dependency-recovery
+Attempt: 1
+Context: fresh-to-tickets-edge-dependency-recovery-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+The dependency view bound site-opening-r4. T-OPEN requires T-SETUP and the
+external permit condition. The permit remains a Continuation with an unblock
+condition and next check rather than a fake Ticket. A stale T-SETUP Claim is
+Recovery work, and the Adapter's lack of atomic claims disables parallel
+claiming. T-OPEN remains blocked; cancellation would require explicit replace,
+waive, or cancel authority before any unblock. No effect ran.
