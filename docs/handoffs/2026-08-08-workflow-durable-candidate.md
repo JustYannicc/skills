@@ -3,20 +3,20 @@
 **Scope:** issue #14, extending the accepted Workflow Inline route through
 Persistence boundaries with one adapter-neutral Durable contract.
 
-> **HUMAN REVIEW REQUIRED** — this candidate is locally complete and validated,
-> but it does not approve, merge, or close issue #14.
+> **HUMAN REVIEW REQUIRED** — the local implementation candidate is validated,
+> but this handoff does not approve, merge, or close issue #14.
 
 ## Task checklist
 
-- [ ] Read project authorities, issue #14, native dependencies, writing-for-agents, systems-first, and proof-driven-development.
-- [ ] Preserve the accepted Inline route and exact Workflow vocabulary.
-- [ ] Define the Durable route, canonical record set, responsibility, state, claims, evidence, continuation, recovery, and proof bundle.
-- [ ] Bind Transient Conversation, Local Markdown, Git-backed, GitHub, and external Adapter capabilities without making Git or scheduling prerequisites.
-- [ ] Bind the accepted #35 System Record representation and deterministic validator/action-guard seam without adding a second authority.
-- [ ] Cover migration, Change and Legacy Records, Degraded mode, waiting, delegation, Supplemental Extension points, effects, and parent terminal proof.
-- [ ] Add fresh behavioral fixtures, observations, evidence, deterministic seam tests, and provenance/registry updates where needed.
-- [ ] Run `pnpm evaluations:record`, `pnpm validate`, `git diff --check`, simplify, one adversarial review, one resolution check, and focused reruns.
-- [ ] Commit a coherent local candidate and record the exact candidate identity, evidence counts, unresolved human decisions, and review surfaces.
+- [x] Read project authorities, issue #14, native dependencies, writing-for-agents, systems-first, and proof-driven-development.
+- [x] Preserve the accepted Inline route and exact Workflow vocabulary.
+- [x] Define the Durable route, canonical record set, responsibility, state, claims, evidence, continuation, recovery, and proof bundle.
+- [x] Bind Transient Conversation, Local Markdown, Git-backed, GitHub, and external Adapter capabilities without making Git or scheduling prerequisites.
+- [x] Bind the accepted #35 System Record representation and deterministic validator/action-guard seam without adding a second authority.
+- [x] Cover migration, Change and Legacy Records, Degraded mode, waiting, delegation, Supplemental Extension points, effects, and parent terminal proof.
+- [x] Add fresh behavioral fixtures, observations, evidence, deterministic seam tests, and provenance/registry updates where needed.
+- [x] Run focused style, type, test, diff, fixture, evidence, simplify, adversarial, and resolution checks. The combined `pnpm evaluations:record`/`pnpm validate` gate remains pending the required fresh Domain Modeling proof for the combined #14+#23 candidate.
+- [x] Commit a coherent local candidate and record the exact candidate identity, evidence counts, unresolved human decisions, and review surfaces.
 
 ## Systems-first gates
 
@@ -33,9 +33,13 @@ Persistence boundaries with one adapter-neutral Durable contract.
 
 ## Handoff
 
-- **Candidate identity:** pending final commit.
-- **Evidence counts:** pending final `pnpm evaluations:record` report.
+- **Candidate identity:** `git:3a9d5f2` (full revision to be recorded after the evaluation-only commit).
+- **Evidence counts:** 11 Durable fixtures, 19 revision-bound attempts; the
+  action-guard Critical fixture has three fresh contexts per final candidate.
+  Raw evidence and observation hashes are recorded with the evaluation commit.
 - **Unresolved human decisions:** accept, revise, or reject this #14 candidate;
   decide whether the concrete Adapter capability matrix is sufficient for each
-  claimed provider; retain any remaining #35 representation review conditions.
-- **Coordinator review surfaces:** pending final list of changed files.
+  claimed provider; retain downstream Adapter conformance as a separate gate.
+- **Coordinator review surfaces:** `git show --stat 3a9d5f2` plus the
+  evaluation-only evidence/observation tranche and its final-candidate
+  rebind attestation.
