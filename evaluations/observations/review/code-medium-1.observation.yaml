@@ -1,0 +1,53 @@
+schemaVersion: 1
+fixtureId: review-code-medium
+attempt: 1
+contextId: final-sol-review-code-medium-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:03.000Z
+environment:
+  id: code-without-code-review-companion
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - repository-read
+observed:
+  actions:
+    - compare code at the public proof seam
+    - treat code as one execution medium
+    - report Specification and Standards evidence as separate axes
+    - assess maintainability from the future responsible Actor perspective
+    - return Changes required with exact findings
+  artifacts:
+    - changes-required Review record
+  effects: []
+  forbiddenChecks:
+    - criterion: claim tests alone prove parent completion
+      evidence: Changes required; separate axes exposed unsafe partial export state and implicit future-Actor recovery ownership. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: replace universal Review with bundled code review
+      evidence: Changes required; separate axes exposed unsafe partial export state and implicit future-Actor recovery ownership. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: merge Specification and Standards into one undifferentiated pass
+      evidence: Changes required; separate axes exposed unsafe partial export state and implicit future-Actor recovery ownership. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - bundled code-review skill
+  proof:
+    - code behavior and Specification are compared at the accepted seam
+    - Standards results cannot be inferred from Specification results
+    - future responsible Actor can trace boundaries dependencies recovery and change surface
+  responsibility:
+    - Work owner resolves findings
+    - Outcome owner integrates evidence
+  route:
+    - universal-review
+  state:
+    - in_review-to-accepted
+rawEvidence:
+  locator: evaluations/evidence/review/code-medium-1.txt
+  sha256: 464d2e7efe0f1bec19a78c324d51bc8d0827d9389cd53cff770906e94f610387

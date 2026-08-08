@@ -1,0 +1,33 @@
+schemaVersion: 1
+fixtureId: workflow-delegated-change-propagation
+attempt: 2
+contextId: fresh-workflow-delegated-change-propagation-sol-high-2
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:11:07.000Z
+environment:
+  id: workflow-delegated-change
+  capabilities: { activeWorkflowContext: true, delegation: true, persistence: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - classify C2 as extension or constraint change
+    - create Specification revision S6 and impact analysis
+    - propagate the exact changed contract to T-A result A2 claim C-A and owner Alice
+    - preserve T-B result B4 claim C-B and evidence EB
+    - re-evaluate parent integration dependencies
+  artifacts: [S5 to S6 change proposal, delegated impact map]
+  effects: []
+  forbiddenChecks:
+    - criterion: cancel unaffected T-B or transfer parent ownership to a child
+      evidence: The response keeps T-B active under Bao with B4, C-B, and EB preserved, and explicitly retains O7 parent Ownership, integration Responsibility, and terminal proof with the O7 owner.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [new parent Workflow, replacement child owner]
+  proof: [T-A result A2 and evidence EA are affected while T-B result B4 claim C-B and evidence EB continue unchanged]
+  responsibility: [the O7 owner retains parent responsibility and Alice and Bao retain their respective child ownership]
+  route: [midwork-delegated-change-propagation]
+  state: [affected-child-revised-unaffected-child-active]
+rawEvidence:
+  locator: evaluations/evidence/workflow/delegated-change-propagation-2.txt
+  sha256: cf8728ed99f66a5c11ffcb48e27529dc03bd6af7a39dd8de558ea20b05a65217

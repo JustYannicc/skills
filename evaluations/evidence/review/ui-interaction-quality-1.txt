@@ -1,0 +1,73 @@
+context: final-sol-review-ui-interaction-quality-1
+evaluator: gpt-5.6-sol-high-fresh-context-review
+suite: candidate git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: review-ui-interaction-quality
+attempt: 1
+
+# Review — Account recovery `ui-r17`
+
+**Verdict:** Changes required
+
+**Reason:** The expired-code path is not perceivable or readily recoverable for keyboard and screen-reader users, and the mobile resend action requires searching outside the viewport.
+
+**Target:** Specification `spec-r9` · result `ui-r17` · standards `a11y@2.2`, `product-ui@5.0` · Proof seam `preview@r17-3` · effect evidence `outside this result-level seam`
+
+**Coverage:** Specification `complete` · Standards `complete` · Supplemental `not configured` · effect `outside this seam`
+
+**Review controls:** depth `Standard` · Reviewer/independence `current Reviewer, fresh pass independent of implementation` · sources `supplied rendered evidence bound to preview@r17-3/ui-r17` · capability gaps `none`
+
+## How the result works
+
+A user starts account recovery, enters the code, and receives clear completion feedback on the happy path. With an expired code, the flow enters an error state, but focus moves to the page heading and no explanation is announced. On mobile, the resend action is also below the viewport. Keyboard and screen-reader users therefore cannot identify the failure or reach recovery without searching.
+
+## Credible-support matrix
+
+| Cell | Viewport and path | Inputs | Observable result | Status |
+| --- | --- | --- | --- | --- |
+| M1 | Desktop, happy path | Keyboard and pointer | Recovery completes with clear feedback. | pass |
+| M2 | Mobile, happy path | Touch | Recovery completes with clear feedback. | pass |
+| M3 | Desktop, expired code and recovery | Keyboard, screen reader; pointer visual cross-check | Focus lands on the heading, no explanation is announced, and assistive users must search for recovery. | fail |
+| M4 | Mobile, expired code and recovery | Touch/pointer plus keyboard and screen reader | M3 failures remain; resend is additionally below the viewport. | fail |
+
+This covers both supported viewport classes, every declared input method, the normal path, degraded state, and recovery. Further Cartesian combinations are equivalent under the supplied evidence; the mobile layout difference and assistive-input difference are already isolated, and no other finding remains.
+
+## Evidence audit
+
+### Specification axis
+
+| Requirement | Observation at the Proof seam | Exact evidence reference | Status |
+| --- | --- | --- | --- |
+| Successful account recovery | Desktop and mobile happy paths complete with clear feedback. | `M1–M2`; rendered evidence for `preview@r17-3`, result `ui-r17`; review-request evidence, original observer/time `unknown—not supplied` | pass |
+| Expired-code failure must be identifiable and recoverable | The failure is not announced, focus misses the error, and mobile recovery is hidden below the viewport. | `M3–M4`; same exact target binding and provenance | fail |
+
+### Standards axis
+
+| Governing rule | Observation at the Proof seam | Exact evidence reference | Status |
+| --- | --- | --- | --- |
+| `a11y@2.2` — accessible error identification, focus, and recovery | Keyboard and screen-reader users receive neither useful focus placement nor an announced explanation and must search for recovery. | `M3–M4`; `preview@r17-3`/`ui-r17` | fail |
+| `product-ui@5.0` — clear, coherent, controllable error and recovery interaction | The happy path is clear, but the degraded path adds avoidable friction, weakens control and trust, and feels brittle rather than intentional. | `M1–M4`; `preview@r17-3`/`ui-r17` | fail |
+
+Interaction clarity, feedback, accessibility, control, friction, recovery, trust, and feel were Material and audited above. Maintainability and broader System-fit claims were not Material to this bounded rendered-interaction seam and were not used to support the verdict.
+
+## Finding
+
+### Major — Expired-code feedback and recovery are inaccessible
+
+- **Rule:** `spec-r9` expired-code recovery; `a11y@2.2`; `product-ui@5.0`.
+- **Evidence:** `M3–M4`, bound to `ui-r17` at `preview@r17-3`.
+- **Consequence:** Keyboard and screen-reader users cannot understand the failure or recover without searching; mobile users face additional recovery friction.
+- **Correction:** Put focus on an accessible error target, announce the expired-code explanation, and keep resend immediately discoverable in the supported mobile viewport. Re-exercise M1–M4 on the corrected exact revision.
+
+No Supplemental reviewer was configured or invoked. No other finding remains.
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → accepted`
+- **Reviewer:** Current independent Reviewer; owns this verdict.
+- **Work owner:** `ui-r17` submitter; owns correction and resubmission.
+- **Outcome owner:** `spec-r9` Outcome owner; retains parent integration and completion responsibility.
+- **Approver:** Not required at this result-level Proof seam.
+
+## Pending effects, limitations, and next check
+
+No real effect or parent Outcome completion is claimed. After correction, the Work owner must submit a new exact result and preview revision. The next Review should rebind the full target tuple and rerun M1–M4; escalate only if consistent focus, announcement, or mobile recovery behavior remains unavailable.

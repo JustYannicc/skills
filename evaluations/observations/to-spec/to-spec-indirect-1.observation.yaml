@@ -1,0 +1,31 @@
+schemaVersion: 1
+fixtureId: to-spec-indirect
+attempt: 1
+contextId: fresh-to-spec-indirect-sol-high-20260806-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: workflow-with-accepted-discovery
+  capabilities: { workflow: true, persistence: false, to-spec: true, research: false }
+  tools: []
+observed:
+  actions: [bind accepted Outcome contract, use only accepted discovery decisions, materialize one Specification from the reusable template, return it to Workflow]
+  artifacts: [accepted Outcome Specification artifact]
+  effects: []
+  forbiddenChecks:
+    - criterion: silently resolve unresolved discovery
+      evidence: The artifact reports no unresolved exception because customer-update-r6 supplies a complete accepted discovery result; it adds no hidden decision.
+      observed: false
+    - criterion: send effect
+      evidence: The communications coordinator may prepare but not send, and the result returns downstream work to Workflow.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [customer-update-r6 and exact Specification revision are bound, 86 members Hall C unchanged 18:00 start and Monday 12:00 boundary are preserved, roster-r11 member-contact-p4 and four telephone fallbacks are preserved]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec-to-workflow]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-indirect-1.txt
+  sha256: 1eeda6f10b314b38d1d11e5a340b5db7fe56be41122ef6b45c8a3e0788a78052

@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-migration-current-state
+attempt: 1
+contextId: workflow-migration-current-state-1db9f1f-sol-high-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:07:25Z
+environment:
+  id: workflow-existing-unmapped-program
+  capabilities: { persistence: true, workflow: true, migrateSystem: true, wayfinder: true }
+  tools: []
+observed:
+  actions: [load Thinking in Systems before Workflow, establish one parent Outcome, invoke Migrate System for bounded current-state mapping, record actual sources actors responsibilities relationships active work evidence waiting state and unknowns, verify the integrated map, route the proposed approval-stage change back to ordinary Workflow]
+  artifacts: [verified current-state map with provenance and visible confidence, separate change proposal]
+  effects: []
+  forbiddenChecks:
+    - criterion: silently redesign the represented program or treat mapping as parent completion
+      evidence: The response keeps C1 separate and explicitly unperformed, preserves existing responsibilities and work during mapping, excludes repair or redesign from migration, and states that migration completion will not be treated as parent completion.
+      observed: false
+  invoked: [thinking-in-systems, workflow, migrate-system]
+  notInvoked: [separate migration lifecycle, repair during migration]
+  proof: [existing reality is represented well enough for ordinary Workflow and the requested change remains unperformed]
+  responsibility: [the migration Work owner owns the bounded map while Workflow retains parent integration and terminal responsibility]
+  route: [durable-current-state-mapping, ordinary-change-work]
+  state: [mapping-in-review, parent-active]
+rawEvidence:
+  locator: evaluations/evidence/workflow/migration-current-state-1.txt
+  sha256: e21fc3f31f32ca80076df69be8b0198ddc4a5bca2529d9a5ee835447d58c1b07

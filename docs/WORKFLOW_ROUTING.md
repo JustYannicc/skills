@@ -136,6 +136,26 @@ A related request updates or extends the active Outcome. Before switching to
 unrelated work, Workflow preserves enough continuation state to resume the
 current Outcome without reconstruction.
 
+### Mid-work message routing
+
+Every incoming mid-work message is classified by its effect on the active
+contract before Workflow changes state. One message may contain several
+operative clauses; each receives a classification, and a replacement or
+unrelated switch determines which Outcome later clauses address.
+
+The installed [`workflow` skill](../skills/workflow/SKILL.md#handle-every-new-message-during-active-work)
+owns the executable tests and dispositions for clarification, extension or
+Constraint change, correction, authorized override or informed exception,
+explicit replacement or supersession, and unrelated switch. It also owns the
+Inline interruption boundary. This contract owns when that branch is entered
+and the requirement that material changes trace the changed contract's
+dependency closure, invalidate and propagate only affected evidence, Review,
+approval, completion, and child contracts, preserve parent and unaffected
+ownership, and link a Durable system transition to its Change and Legacy Record
+when material. Durable serialization and Adapter operations remain governed by
+their accepted contracts; the System Record representation remains owned by
+#35.
+
 ## Authority and effects
 
 The accepted request defines effect authority. A clear request to perform an
@@ -198,8 +218,9 @@ active proportionately; they cannot be switched off.
 
 ## Canonical ownership
 
-This document owns routing semantics. `workflow` carries the executable version
-through a precise reference to it. Setup's managed instruction and Ask Yannic
-point here instead of duplicating the route. The adapter-neutral state and
-responsibility meanings remain owned by the
+This document owns phase selection, representation, and parent routing
+semantics. The installed `workflow` skill owns the executable Inline
+classifier and interruption branch named above. Setup's managed instruction and
+Ask Yannic point here instead of duplicating either route. The adapter-neutral
+state and responsibility meanings remain owned by the
 [Universal work and coordination contract](UNIVERSAL_WORK_CONTRACT.md).

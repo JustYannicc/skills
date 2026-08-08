@@ -1,0 +1,53 @@
+# Prototype result — private explanation rehearsal
+
+**Learning question:** Can one private rehearsal with a sandboxed assistant make a difficult-plan explanation clearer without increasing the speaker's immediate emotional burden?
+
+**Decision informed:** Whether Workflow should retain this private rehearsal pattern as a candidate preparation aid before any separately authorized real communication. This result does not decide whether the explanation should be sent.
+
+**Context:**
+
+- Outcome: prepare an explanation whose listener can identify the proposed change, its reason, and the requested next step without increasing the speaker's immediate burden.
+- System of interest and boundary: one throwaway rehearsal spanning private notes and a fake-agent listener sandbox. The boundary ends before persistence, credentials, live agents, real recipients, delivery, or changes to the plan.
+- Actors: the staged person role supplies the explanation, burden rating, and stop decision; the fake assistant acts only as a disposable listener; Prototype owns this experiment result; Workflow retains parent coordination and all Authority over later communication.
+- Constraints: one learning question, one revision, private notes only, no persistence, no live credentials, no live agent call, no message sending, and no claim about a real person's response.
+- Assumptions: an unaided paraphrase of three required elements is a useful comprehension signal, while an immediate same-scale burden rating is a limited counter-signal rather than a durable emotional-outcome measure.
+
+**Reversible experiment:** The staged person role writes a baseline explanation in private notes and records immediate burden from 0 (none) to 10 (highest). The fake assistant paraphrases it without prompting and identifies ambiguity. The person role makes one revision, and the same checks run once more. Scope is one explanation and one revision. The person role may stop at any point. Reset/disposal deletes the scratch transcript and fake-agent context after the revision-bound evidence is retained. Disabled effects are sending the explanation, contacting a recipient, using credentials, calling a live agent, persisting the rehearsal, changing the plan, or committing to the assistant's wording.
+
+**Proof seam:** At the same seam after each version, observe whether the fake listener correctly identifies (1) the proposed schedule change, (2) the reason and unchanged commitment, and (3) the requested response, plus the speaker's immediate burden rating. The question is answered for this staged rehearsal if comprehension improves and burden does not rise. Conflicting signals, a missing rating, a stop request, or a threatened boundary makes the result inconclusive or blocked.
+
+**Rehearsal transcript — exact Result revision `private-rehearsal-cross-domain:r2`:**
+
+> Staged person, baseline: “We may need to shift next week's review because things are getting rushed. I still want to keep the plan moving, but perhaps a little more time would help. Let me know what you think.”
+>
+> Fake assistant, baseline paraphrase: “You might delay something next week because the work feels rushed, but I cannot tell which event moves, what remains committed, or what response you need.”
+>
+> Baseline comprehension: 0 of 3 required elements were complete; the review date, unchanged launch commitment, and response deadline were ambiguous.
+>
+> Staged person, baseline burden: 7/10. No stop request.
+>
+> Staged person, revised rehearsal: “I propose moving the evidence review from Tuesday to Friday because the current review window is rushed. The launch date and scope stay unchanged. Please tell me by noon tomorrow whether Friday creates a conflict.”
+>
+> Fake assistant, revised paraphrase: “You want to move only the evidence review from Tuesday to Friday because its current window is rushed, while keeping launch date and scope unchanged, and you want conflict feedback by noon tomorrow.”
+>
+> Revised comprehension: 3 of 3 required elements were correct without clarification.
+>
+> Staged person, revised burden: 6/10. No stop request.
+
+**Evidence:** One disposable private communication rehearsal was composed with one fake-agent sandbox in environment `workflow-private-rehearsal-sandbox`, using only `fake-agent` and `private-notes`. The observer was the Prototype evaluator at `2026-08-06T17:59:54Z`. The transcript, comprehension observations, and burden observations above are all bound to exact Result revision `private-rehearsal-cross-domain:r2`.
+
+| Signal | Baseline | Revised |
+| --- | ---: | ---: |
+| Required elements correctly paraphrased | 0/3 | 3/3 |
+| Material ambiguities | 3 | 0 |
+| Immediate emotional-burden rating | 7/10 | 6/10 |
+
+Evidence limits: the person, plan, transcript, and ratings are staged fixture data. Fake-agent comprehension is only a proxy for a real listener, and a synthetic immediate rating cannot establish a real person's emotional response, durability, privacy impact, or the result of a live conversation. No live communication, live agent integration, credentials, persistence, or Supplemental skill was exercised or approved.
+
+**Stopping rule:** Stop after the single allowed revision when all three elements are correctly paraphrased and burden is no higher than baseline. Stop earlier if burden rises, the person role requests a stop, private containment fails, a live effect becomes possible, or the reversible boundary is otherwise threatened. The revised rehearsal met the bounded threshold, so another increment was not worthwhile.
+
+**Verdict:** Answered for this staged sandbox only: yes. Fake-listener comprehension improved from 0/3 to 3/3, material ambiguity fell from 3 to 0, and the staged immediate-burden signal fell from 7/10 to 6/10. This evidence does not establish transfer to a real person or recipient.
+
+**Disposition:** Retain this rehearsal pattern and its bounded evidence as a candidate input to Workflow, then dispose of the scratch sandbox transcript. Workflow is responsible for deciding whether a separately authorized, voluntary real-person trial is warranted and for preserving that person's stop Authority. No communication or agent integration is authorized or performed.
+
+**Return route:** Return exact Result revision `private-rehearsal-cross-domain:r2`, its transcript, the 0/3-to-3/3 comprehension comparison, the 7/10-to-6/10 staged burden observation, the evidence limits, and the unresolved real-person transfer question to Workflow through `workflow-to-cross-domain-prototype-to-workflow`. Prototype retains responsibility for this experiment result. Workflow retains parent coordination and any later communication Authority. Specification, decomposition, implementation, Review, and parent completion remain outside this result.

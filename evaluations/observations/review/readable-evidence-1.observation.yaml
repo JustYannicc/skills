@@ -1,0 +1,53 @@
+schemaVersion: 1
+fixtureId: review-readable-evidence
+attempt: 1
+contextId: final-sol-review-readable-evidence-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:36.000Z
+environment:
+  id: complete-large-evidence-ledger
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - evidence-ledger
+observed:
+  actions:
+    - lead with one verdict reason target and coverage
+    - explain How the result works from trigger through state and visible result including recovery
+    - keep Specification and Standards evidence separate
+    - use concise representative evidence anchors
+    - retain exact references to the complete revision-bound evidence ledger
+    - state transition Responsibility and pending effects
+  artifacts:
+    - template-conformant Review record
+  effects: []
+  forbiddenChecks:
+    - criterion: bury verdict after evidence
+      evidence: Verified; verdict-first walkthrough retained exact complete-ledger references and stopping rationale. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: replace complete evidence with summary
+      evidence: Verified; verdict-first walkthrough retained exact complete-ledger references and stopping rationale. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: merge Specification and Standards evidence
+      evidence: Verified; verdict-first walkthrough retained exact complete-ledger references and stopping rationale. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - copy entire evidence ledger
+  proof:
+    - a reader can understand the decision before the evidence tables and trace every claim to the complete exact record
+  responsibility:
+    - Reviewer owns verdict
+    - Work owner owns correction or effects
+    - Outcome owner retains parent responsibility
+  route:
+    - durable-readable-review
+  state:
+    - in_review-to-complete
+rawEvidence:
+  locator: evaluations/evidence/review/readable-evidence-1.txt
+  sha256: ef1808a9f4f849e6c6b9d4976292839582d0d6d9b48c96705ecf0821e0e3d5e2

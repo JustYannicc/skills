@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: prototype-direct-technical-logic
+title: Direct technical prototype remains complete without a Supplemental skill
+shape: direct
+kind: invocation
+skill: prototype
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: "Use Prototype to answer one question: does this state transition remain understandable when a user retries an interrupted action?"
+environment:
+  id: workflow-technical-scratch
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: true
+    effects: false
+    technical-prototype: false
+  tools: [sandbox]
+expected:
+  actions: [name exactly one material learning question, choose the smallest isolated representation or model, define the retry Proof seam and stopping rule, return the verdict and disposition to Workflow]
+  artifacts: [Prototype result]
+  effects: []
+  invoked: [workflow, prototype]
+  notInvoked: [technical-prototype Supplemental, to-spec, Specification, implementation, Review, decomposition, parent completion]
+  proof: [before-and-after retry evidence bound to the exact Result revision]
+  responsibility: [Prototype retains the learning question and experiment result while Workflow retains parent coordination and completion]
+  route: [workflow-to-prototype-to-workflow]
+  state: [verdict-ready-for-workflow]
+  forbidden: [write live data, require a Supplemental skill for core completion, absorb implementation]

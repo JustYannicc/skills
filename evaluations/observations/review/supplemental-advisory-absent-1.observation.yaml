@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: review-supplemental-advisory-absent
+attempt: 1
+contextId: final-sol-review-supplemental-advisory-absent-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:21.000Z
+environment:
+  id: core-review-with-advisory-gap
+  capabilities:
+    workflow: true
+    persistence: false
+    supplementalReview: false
+  tools: []
+observed:
+  actions:
+    - validate the exact selected mapping source version scope advisory status input evidence and failure behavior
+    - record advisory capability gap
+    - continue separate core Specification and Standards comparisons
+    - return Verified when core proof passes
+  artifacts:
+    - advisory limitation in Review record
+  effects: []
+  forbiddenChecks:
+    - criterion: pretend advisory skill ran
+      evidence: Verified; exact advisory mapping unavailable, limitation visible, no substitution. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: invoke an unmapped similar specialist
+      evidence: Verified; exact advisory mapping unavailable, limitation visible, no substitution. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - undeclared specialist
+  proof:
+    - mapping identity and result r12 remain visible
+    - advisory absence does not alter core evidence
+  responsibility:
+    - Outcome owner retains parent responsibility
+  route:
+    - review-with-advisory-gap
+  state:
+    - in_review-to-complete
+rawEvidence:
+  locator: evaluations/evidence/review/supplemental-advisory-absent-1.txt
+  sha256: 4c86e53ea5bcc1bb1a25d19e4979fd7c3e6d561279c692d4ef8b6762d05cb6ae

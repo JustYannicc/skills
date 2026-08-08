@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-supplemental-review-success
+attempt: 1
+contextId: workflow-supplemental-review-success-1db9f1f3-20260806-sol-high-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:06:37Z
+environment:
+  id: workflow-supplemental-review-available
+  capabilities: { persistence: true, workflow: true, review: true, supplementalReview: true }
+  tools: []
+observed:
+  actions: [invoke the configured Supplemental skill only at workflow.review, provide the exact Specification and result revisions, return the specialist finding to universal Review, integrate it into one core verdict, retain Workflow parent responsibility]
+  artifacts: [specialist finding linked as Review evidence]
+  effects: []
+  forbiddenChecks:
+    - criterion: let the Supplemental skill replace universal Review or complete the parent Outcome
+      evidence: The response says the Supplemental reviewer owns only its finding, universal Review owns the integrated verdict, Workflow keeps O20 open through terminal proof, and the finding neither replaces Review nor completes O20.
+      observed: false
+  invoked: [thinking-in-systems, workflow, configured mobility-access review, review]
+  notInvoked: [Supplemental replacement verdict, unrelated Extension point]
+  proof: [the universal Review verdict accounts for insufficient turning clearance at the exact reviewed revision]
+  responsibility: [the Supplemental reviewer owns its finding while universal Review owns the verdict and Workflow owns parent integration]
+  route: [supplemental-review-advisory, universal-review-integration]
+  state: [changes-required]
+rawEvidence:
+  locator: evaluations/evidence/workflow/supplemental-review-success-1.txt
+  sha256: 3b1d77e7656f5bfd3a8c8f8e3f074a648771aa6363536b6d149cd060be454182

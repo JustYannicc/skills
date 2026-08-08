@@ -1,0 +1,113 @@
+Fresh-context To Spec run
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+
+# Automatic deadline reminder — Specification
+
+- **Specification state:** Waiting for discovery
+- **Accepted Outcome source and exact revision:** No accepted Outcome contract or source revision was supplied. The exact fixture prompt is the sole request source and is not treated as accepted Outcome evidence.
+- **Specification revision:** `inline:automatic-deadline-reminder:r1`
+- **Representation mode:** Inline; persistence is unavailable.
+- **Canonical locator and Adapter revision, when Durable:** Not applicable.
+- **Approver, Authority, and acceptance evidence:** Approver is missing (G6), contact Authority is missing (G8), and no acceptance evidence exists.
+
+## 1. Intent and Outcome
+
+- **Original request:** “Write the Outcome Specification for an automatic reminder that contacts anyone who misses a deadline. The user holds the missing Outcome threshold and recipient-scope decisions; a program coordinator holds the recipient accessibility facts; an external policy source owns the privacy obligations; and the Outcome owner, Approver, current-system source, and contact Authority are not supplied. Preserve the request and return one discovery-gap record for each missing item.”
+- **Intent:** Inference, not yet accepted: automate a reminder when a deadline is missed.
+- **Accepted Outcome:** Not yet available. A candidate Outcome is that, after the accepted missed-deadline threshold is met, the current system causes an authorized, privacy-compliant, accessible reminder to reach only the accepted recipient scope, with an observable result. G1–G8 block acceptance of that wording.
+- **Satisficing / good-enough threshold:** Missing; the user owns this decision (G1).
+
+## 2. Scope, exclusions, and Constraints
+
+- **Included Actors, Systems, environments, conditions, time horizon, and boundaries:** The request identifies deadline-missing contacts and an automatic reminder. Exact recipients (G2), accessibility needs (G3), privacy boundaries (G4), operating ownership (G5), approval (G6), current-system boundary (G7), and authorization to contact (G8) remain unresolved.
+- **Exclusions:** No exclusions or optional improvements have been accepted.
+- **Required remediation, propagation, and recovery:** None were supplied; they cannot be accepted or omitted until the Outcome owner, Approver, current-system source, and governing decisions are known.
+
+| Constraint or Preference | Hard Constraint, Soft Constraint, or Preference | Source and confidence | Effect on feasible choices |
+| --- | --- | --- | --- |
+| Preserve the requested automatic-reminder behavior without inventing threshold, recipients, facts, policy, ownership, approval, system state, or Authority. | Hard Constraint | Fixture prompt; high confidence; no revision supplied | The artifact must remain in discovery rather than select or execute a design. |
+| Any eventual contact must be bounded by resolved accessibility facts, privacy obligations, and contact Authority. | Hard Constraint | Fixture prompt identifies those inputs as material; high confidence; exact obligations remain unknown | No channel, content, recipient, retention rule, or send action can be accepted yet. |
+
+## 3. Responsibility and Authority
+
+- **Outcome owner and parent terminal-proof duty:** Missing (G5). `to-spec` owns only this bounded gap record; it does not inherit parent Outcome ownership.
+- **Specification Work owner:** `to-spec`, limited to `inline:automatic-deadline-reminder:r1` and its gap records.
+- **Known Executors, Reviewers, or successor route:** No Executor or Reviewer is accepted. Workflow must coordinate the discovery and approval routes listed below; no implementation route is authorized.
+- **Approver for Intent and material trade-offs:** Missing (G6).
+- **Effect Authority:** Missing (G8). No Actor, grant, scope, limit, validity period, or authorization for automated contact was supplied; no contact may be executed from this artifact.
+
+## 4. Knowledge and decisions
+
+| Kind | Accepted statement or visible gap | Status | Source, exact revision, and confidence | Material consequence |
+| --- | --- | --- | --- | --- |
+| Fact | The request asks for an automatic reminder associated with a missed deadline. | Supplied request, not an accepted Outcome | Fixture prompt; revision unavailable; high confidence | Preserved as the candidate behavior only. |
+| Inference | The requested behavior may recur for qualifying deadline events. | Unaccepted inference | Request wording; revision unavailable; medium confidence | No cadence, horizon, or transfer rule is inferred. |
+| Unknown | Outcome threshold (G1). | Blocking | User-held decision per fixture prompt; revision unavailable; high confidence that it is missing | The trigger and good-enough condition cannot be specified. |
+| Unknown | Recipient scope (G2). | Blocking | User-held decision per fixture prompt; revision unavailable; high confidence that it is missing | “Anyone” cannot safely determine actual recipients. |
+| Unknown | Recipient accessibility facts (G3). | Blocking | Program-coordinator-held facts per fixture prompt; revision unavailable; high confidence that they are missing | Accessible channels and presentation cannot be specified. |
+| Unknown | Privacy obligations (G4). | Blocking | External policy source per fixture prompt; exact source and revision unavailable; high confidence that obligations are missing | Data use, message content, channel, logging, and retention boundaries cannot be specified. |
+| Unknown | Outcome owner (G5). | Blocking | Not supplied; high confidence | Parent Responsibility and terminal-proof duty are unassigned. |
+| Unknown | Approver and approval Authority (G6). | Blocking | Not supplied; high confidence | Intent, trade-offs, and the resulting semantic contract cannot be accepted. |
+| Unknown | Current-system source (G7). | Blocking | Not supplied; high confidence | The authoritative deadline state and stable Proof seam cannot be selected. |
+| Unknown | Contact Authority (G8). | Blocking | Not supplied; high confidence | Automated contact is unauthorized. Missing Authority is not classified as an exception. |
+
+## 5. Accepted behavior
+
+No behavior is accepted yet. The following is only a blocked candidate and introduces no default decision:
+
+| Actor, condition, or event | Required behavior or policy | Expected visible result | Governing decision or Constraint |
+| --- | --- | --- | --- |
+| A deadline state from the source resolved by G7 satisfies the threshold resolved by G1. | Evaluate only the recipient scope resolved by G2; do not act before G1, G2, G6, and G8 are accepted. | A qualifying event is distinguishable at the accepted Proof seam; exact evidence remains blocked by G7. | G1, G2, G6, G7, G8 |
+| An in-scope recipient has a qualifying missed deadline. | Use only contact behavior permitted by G8 and conforming to G3 and G4. | The authorized observer can verify the accepted accessible reminder result without assuming a channel, content, or data-retention policy. | G3, G4, G8 |
+
+## 6. Proof and terminal condition
+
+- **Highest stable Proof seam:** Unknown until the current-system source and its exact revision are supplied (G7).
+- **Evidence, observer, timing, and relevant limits:** Unknown. G1 determines qualifying timing; G2 the observed population; G3–G4 permitted evidence; G5 the terminal-proof owner; G6 acceptance; G7 the evidence source; and G8 the lawful/authorized effect boundary.
+- **Terminal condition:** Not yet accepted. This Outcome cannot terminate merely on producing this Specification. A terminal condition can be accepted only after G1–G8 resolve the exact qualifying condition, authorized accessible contact result, evidence source and observer, required propagation/recovery, and responsible Outcome owner.
+
+## 7. Unresolved items and exceptions
+
+| Item | Impact | Owner or Approver | Next check | Blocks acceptance? |
+| --- | --- | --- | --- | --- |
+| G1 — Outcome threshold | Trigger and satisficing condition absent | User; Approver G6 pending | Grilling decision | Yes |
+| G2 — Recipient scope | Contact population absent | User; Approver G6 pending | Grilling decision | Yes |
+| G3 — Accessibility facts | Accessible behavior absent | Program coordinator; Approver G6 pending | Questionnaire evidence | Yes |
+| G4 — Privacy obligations | Governing limits absent | External policy source; Approver G6 pending | Research exact policy | Yes |
+| G5 — Outcome owner | Parent Responsibility absent | Workflow must obtain assignment | Approval/assignment | Yes |
+| G6 — Approver | Semantic acceptance Authority absent | Workflow must obtain assignment | Approval/authority check | Yes |
+| G7 — Current-system source | Fact source and Proof seam absent | Current-system steward is unknown | Questionnaire/source evidence | Yes |
+| G8 — Contact Authority | Effect authorization absent | Authority holder is unknown | Approval/authority evidence | Yes |
+
+There are no accepted exceptions.
+
+## Operating Outcome
+
+- **Observation horizon or recurrence boundary:** No cadence is inferred. If the recurring interpretation is accepted, each event must be bounded by G1 and observed through G7.
+- **Review cadence and evidence inspected:** Not supplied; selection is blocked by G7 and acceptance by G6.
+- **Responsible owner while operating:** Missing (G5).
+- **Valid transfer rule and acceptance evidence:** Not supplied; it requires the owner from G5 and Approver from G6.
+- **Cancellation condition and Authority:** Not supplied; it requires G6 and G8.
+- **Condition that ends a finite stability window, if any:** No finite stability window was supplied or inferred.
+
+## Discovery gaps
+
+| Missing fact or decision | Material impact and blocking status | Owning capability | Smallest question, evidence request, or experiment | Responsible owner and Approver | Exact resumption condition and action |
+| --- | --- | --- | --- | --- | --- |
+| G1 — Outcome threshold; decision unknown | **Blocking:** trigger, timing, and good-enough result cannot be fixed. | Grilling, routed by Workflow | Ask the user: “What exact observable condition makes a deadline missed for this Outcome, and what result is good enough?” | User owns the decision; Approver remains G6 | Resume `to-spec` when the user supplies an explicit threshold decision with a source revision; bind it to the trigger and satisficing threshold, then submit it to the resolved Approver. |
+| G2 — Recipient-scope decision unknown | **Blocking:** “anyone” does not identify who may receive a reminder. | Grilling, routed by Workflow | Ask the user: “Exactly which recipient roles or identities are in scope and out of scope for each qualifying missed deadline?” | User owns the decision; Approver remains G6 | Resume when an explicit inclusion/exclusion decision and source revision are supplied; bind the resulting recipient boundary and seek approval. |
+| G3 — Recipient accessibility facts unknown | **Blocking:** accessible reminder behavior cannot be specified. | To-questionnaire, routed by Workflow | Ask the program coordinator for the smallest source-backed recipient accessibility matrix: in-scope recipient group, required accessible format/channel, and evidence revision. | Program coordinator supplies facts; Approver remains G6 | Resume when the coordinator returns the matrix with provenance and revision; classify the facts, constrain candidate behavior, and seek approval. |
+| G4 — Privacy obligations unknown | **Blocking:** permitted data, content, channel, logging, and retention cannot be bounded. | Research, routed by Workflow | Retrieve the exact applicable external policy text, jurisdiction/scope, effective revision, and clauses governing automated deadline reminders and contact data. | Workflow assigns research; external policy source governs the facts; Approver remains G6 | Resume when the authoritative policy source, exact revision, applicability, and obligations are recorded; bind them as Constraints and seek approval. |
+| G5 — Outcome owner unknown | **Blocking:** parent Responsibility, integration, and terminal-proof duty are unassigned. | Workflow approval/assignment route | Ask the authority-bearing sponsor to name one Outcome owner and confirm that Actor accepts integration and parent terminal-proof Responsibility. | Workflow coordinates; authority-bearing sponsor and eventual Outcome owner are not supplied | Resume when a named owner and dated assignment/acceptance evidence are supplied; bind that Actor without transferring `to-spec`’s bounded record ownership. |
+| G6 — Approver and approval Authority unknown | **Blocking:** Intent and material trade-offs cannot be accepted. | Workflow approval route | Ask the authority-bearing sponsor to identify the Approver and provide the exact scope and validity of that Actor’s approval Authority for this Outcome. | Workflow coordinates; authority-bearing sponsor and Approver are not supplied | Resume when the Approver identity, Authority scope, limits, validity, and evidence are supplied; present the revised artifact for explicit acceptance. |
+| G7 — Current-system source unknown | **Blocking:** authoritative deadline/contact state and the highest stable Proof seam cannot be selected. | To-questionnaire, routed by Workflow | Ask the current-system steward, once identified, for the canonical source locator, schema/semantics, exact revision, freshness, and observable deadline/contact fields. | Workflow locates the steward; steward and Approver G6 are not supplied | Resume when a steward supplies source evidence with locator and exact revision; verify it can represent the G1 trigger and G2 scope, select the stable Proof seam, and seek approval. |
+| G8 — Contact Authority unknown | **Blocking:** no automated contact effect is authorized. | Workflow approval/Authority route | Ask the relevant Authority holder for an explicit grant naming the Actor/system permitted to contact, recipient scope, channels/effects, limits, validity period, revocation rule, and evidence. | Workflow locates the Authority holder; Approver remains G6 unless the grant identifies a distinct authorized approver | Resume only when the exact grant and evidence are supplied and cover the G2 scope and behavior constrained by G3–G4; bind the Authority and recheck acceptance. Do not contact anyone before then. |
+
+## Continuation and return
+
+- **Returned result:** `inline:automatic-deadline-reminder:r1`, Waiting for discovery.
+- **Responsibility:** `to-spec` owns this bounded Specification gap record. Outcome ownership and parent terminal-proof Responsibility remain an explicit blocking gap (G5).
+- **Workflow routes:** G1–G2 to Grilling; G3 and G7 to To-questionnaire; G4 to Research; G5, G6, and G8 to the applicable approval/Authority routes.
+- **Safe allowed work:** Workflow may collect and classify only the requested decisions, evidence, ownership, and Authority records. No implementation, reminder send, or other external effect is authorized.
+- **Next action:** Workflow coordinates the eight routes, preserves each returned source and revision, and resumes `to-spec` only when the corresponding row’s resumption condition is met. The artifact remains Waiting for discovery until all blocking gaps are resolved and the resolved Approver accepts an exact successor revision.

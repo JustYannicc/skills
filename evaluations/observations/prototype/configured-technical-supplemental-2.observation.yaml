@@ -1,0 +1,66 @@
+schemaVersion: 1
+fixtureId: prototype-configured-technical-supplemental
+attempt: 2
+contextId: fresh-sol-high-r2-prototype-configured-technical-supplemental-2
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context-prototype
+recordedAt: 2026-08-06T18:01:23Z
+environment:
+  id: workflow-with-configured-technical-prototype
+  capabilities:
+    workflow: true
+    persistence: false
+    sandbox: true
+    effects: false
+    technical-prototype: advisory-configured
+  tools: [configured-technical-prototype]
+observed:
+  actions:
+    - frame one learning question and reversible boundary
+    - invoke the configured technical-prototype Supplemental with bounded inputs
+    - integrate its Result revision and Proof-seam evidence
+    - issue one core verdict and disposition
+    - exercise one disposable interrupted-to-queued state-card transition and dispose of its input and frames
+  artifacts:
+    - Prototype result
+    - bounded Supplemental result
+    - revision-bound before-and-after state-card transcript
+  effects: []
+  forbiddenChecks:
+    - criterion: transfer Prototype completion to the Supplemental skill
+      evidence: The Supplemental returns the bounded state-card revision, exercise, observations, limits, and disposal state; Prototype integrates that evidence and separately owns the answered verdict, retain disposition, complete result, and return to Workflow.
+      observed: false
+    - criterion: widen the learning question
+      evidence: The trace tests only whether the exposed before-and-after state shows the interruption, accepted Retry, attempt continuity, and current action; rendered-interface wording and real-user comprehension remain unresolved rather than becoming claims of this experiment.
+      observed: false
+    - criterion: enable live effects
+      evidence: A copied in-memory value receives a fake Retry input in the declared sandbox; persistence, credentials, network execution, production effectors, and external mutation remain outside the boundary, and disposal removes every trace value.
+      observed: false
+    - criterion: promote the disposable artifact directly
+      evidence: The disposition retains only revision-bound design evidence and explicitly discards the state-card trace; Workflow owns any later Specification or implementation decision.
+      observed: false
+  invoked:
+    - workflow
+    - prototype
+    - technical-prototype Supplemental
+  notInvoked:
+    - Specification
+    - implementation
+    - Review
+    - decomposition
+    - parent completion
+  proof:
+    - Supplemental observations and limits are integrated into the exact Prototype Result revision
+    - the post-Retry card visibly satisfies all four predeclared structural conditions and the trace is disposed
+  responsibility:
+    - the Supplemental skill owns only its bounded technical result
+    - Prototype retains its full completion criterion
+    - Workflow retains parent coordination
+    - Prototype alone issues the verdict and disposition, while Workflow decides whether the unresolved usability question needs another authorized experiment
+  route:
+    - workflow-to-prototype-to-configured-supplemental-to-prototype-to-workflow
+  state:
+    - integrated-technical-verdict-ready
+rawEvidence:
+  locator: evaluations/evidence/prototype/configured-technical-supplemental-2.txt
+  sha256: 3cdb6a29d3c6c88d9e584d0453487b15d8e1b6561323eb77ae36d25dbfbaa842

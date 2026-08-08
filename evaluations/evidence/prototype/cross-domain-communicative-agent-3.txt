@@ -1,0 +1,43 @@
+Prototype result
+
+Learning question: In one private rehearsal, can a sandboxed assistant help a person explain a difficult caregiving plan more clearly without increasing the person's immediate emotional burden?
+
+Decision informed: Whether Workflow should retain this private rehearsal pattern as a candidate preparation aid before any separately authorized real conversation. The experiment does not decide whether the explanation should be sent or the caregiving plan adopted.
+
+Context: The Outcome is a prepared explanation whose listener can identify the proposed arrangement, why it is needed, and the requested response while the speaker's immediate burden does not rise. The System of interest is one disposable rehearsal spanning private notes and a fake-agent listener. Its boundary ends before persistence, credentials, a live assistant, a real recipient, delivery, or any change to family arrangements. Actors are the staged person role, the fake-agent listener, Prototype as owner of this experiment result, and Workflow as parent coordinator. Constraints are one learning question, one revision, no persistence, no external effects, no live credentials, and no inference about a real person's or recipient's later response. The staged plan is to ask siblings to rotate weekend care for a parent during a six-week recovery. An immediate private 0–10 rating is treated only as a bounded burden counter-signal, not as a clinical measure or durable emotional-outcome claim.
+
+Reversible experiment: In private notes, the person role supplied a baseline explanation and immediate burden rating. In the sandbox, fake-agent paraphrased the explanation without prompting. The person role then rehearsed one revision that made the rotation, reason, and requested response explicit; fake-agent paraphrased again, and the person role repeated the burden rating. Scope was one explanation and one revision. The scratch transcript and fake-agent context are disposed of after the revision-bound evidence is recorded. The person role has stop Authority, and Workflow may stop the experiment boundary. Sending, persistence, live agent calls, credentials, recipient contact, and changes to the real caregiving plan were disabled.
+
+Proof seam: At the same seam after each version, compare the fake listener's unaided comprehension and the staged person's immediate burden. Comprehension succeeds only if the paraphrase identifies all three decision-bearing elements: a rotating weekend schedule rather than an open-ended transfer of care, the six-week recovery reason and duration, and a request for each sibling to identify one available weekend by Thursday. The burden counter-signal is any rating above the 8/10 baseline or any request to stop.
+
+Rehearsal transcript (private, staged)
+
+Round 1 — baseline
+
+Person role: “Mum will need more help for a while, and I cannot keep covering everything alone. I think we should share the weekends somehow. Please let me know what you can do.”
+
+Fake-agent listener: “You want the family to help more with your mother's care, perhaps indefinitely, but I cannot tell what schedule you propose, how long it lasts, or what answer you need and when.”
+
+Observed comprehension: The listener recognized a general request for help but could not identify the rotation, six-week boundary, or requested response deadline; 0 of 3 required elements were complete.
+
+Immediate-burden observation in private notes: 8/10 after stating the baseline. No stop request was recorded.
+
+Round 2 — one revised rehearsal
+
+Person role: “While Mum recovers over the next six weeks, I am asking the three of us to rotate weekend visits so no one person covers every weekend. Could each of you tell me by Thursday which one of the next three weekends you can take? We can revisit the arrangement when the six weeks end.”
+
+Fake-agent listener: “You propose a rotating weekend schedule among the three siblings for your mother's six-week recovery, rather than shifting care permanently. You want each sibling to name one available weekend by Thursday, and the arrangement will be reviewed after six weeks.”
+
+Observed comprehension: The rotating arrangement, six-week recovery boundary, and requested response were all correct without clarification; 3 of 3 required elements were complete.
+
+Immediate-burden observation in private notes: 7/10 after the revised rehearsal. The staged signal fell one point from the 8/10 baseline, and no stop request was recorded.
+
+Evidence: Condition and method were one disposable private communication rehearsal composed with one fake-listener sandbox in `workflow-private-rehearsal-sandbox`; `fake-agent` and `private-notes` were the only tools. The observer was the fresh-context Prototype evaluator at 2026-08-06T18:03:35Z. The source is the transcript and burden observations above. Every observation is bound to exact Result revision `prototype-cross-domain-communicative-agent-r2-attempt-3@9cdbd16a282f3960e60bccf54aecd991b29ed1b5`. Integrated Supplemental evidence: none. Limits: the person, plan, transcript, and ratings are staged fixture data; fake-agent comprehension is only a proxy for a real listener, and a synthetic immediate rating cannot establish a real person's emotional response, durability, privacy impact, safety, willingness to use the wording, or the outcome of a live conversation.
+
+Stopping rule: Stop after the single allowed revision when all three comprehension elements are correctly paraphrased without more than one clarification and burden is no higher than baseline. Stop earlier for increased burden, a request to stop, threatened private containment, any enabled live effect, or a threatened reversible boundary. Round 2 met the bounded threshold, so another increment was not worthwhile.
+
+Verdict: Answered for this staged sandbox only: yes. Fake-listener comprehension improved from 0/3 to 3/3 while the staged immediate-burden signal changed from 8/10 to 7/10. The evidence does not establish transfer to a real person or recipient.
+
+Disposition: Retain the rehearsal pattern and this bounded result as a candidate input for Workflow, then dispose of the scratch setup. Workflow is responsible for deciding whether a separately authorized, voluntary real-person trial is warranted and for preserving that person's stop Authority. No communication, live agent integration, or caregiving commitment is authorized or performed.
+
+Return route: Return to Workflow through `workflow-to-cross-domain-prototype-to-workflow`: exact Result revision `prototype-cross-domain-communicative-agent-r2-attempt-3@9cdbd16a282f3960e60bccf54aecd991b29ed1b5`, the revision-bound transcript, the 0/3-to-3/3 comprehension comparison, the 8/10-to-7/10 staged burden observation, the sandbox-only verdict, and the unresolved question of real-person transfer. Prototype retains responsibility for this experiment result; Workflow retains parent coordination and all later communication Authority. Specification, decomposition, implementation, Review, and parent completion remain outside this result.

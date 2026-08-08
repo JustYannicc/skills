@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: prototype-required-technical-supplemental-unavailable
+title: Required unavailable Supplemental moves Prototype to waiting
+shape: edge
+kind: routing
+skill: prototype
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: "Prototype whether the proposed technical interaction is understandable. Effective configuration requires the technical-prototype Supplemental for this scope, but that skill is unavailable."
+environment:
+  id: workflow-with-required-technical-prototype-gap
+  capabilities:
+    workflow: true
+    persistence: true
+    sandbox: true
+    effects: false
+    technical-prototype: required-unavailable
+  tools: []
+expected:
+  actions: [preserve the learning question and reversible experiment contract, enter visible Degraded mode, move the work to waiting, return the missing capability and exact resumption condition to Workflow]
+  artifacts: [blocked Prototype result, required Supplemental capability gap]
+  effects: []
+  invoked: [workflow, prototype]
+  notInvoked: [technical-prototype Supplemental, substitute technical implementation, Specification, implementation, Review, decomposition, parent completion]
+  proof: [the unavailable capability and exact resumption condition are visible without a fabricated Result revision]
+  responsibility: [Prototype retains the blocked experiment result while Workflow retains parent coordination and Recovery]
+  route: [workflow-to-prototype-to-required-supplemental-gap-to-waiting]
+  state: [waiting-for-required-technical-prototype]
+  forbidden: [pretend the Supplemental skill ran, silently substitute another procedure, claim the learning question was answered or inconclusive, enable live effects]

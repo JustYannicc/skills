@@ -1,0 +1,32 @@
+schemaVersion: 1
+fixtureId: workflow-mid-replacement
+attempt: 2
+contextId: workflow-mid-replacement-1db9f1f-c99cdfe5-sol-high-2
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:24:58Z
+environment:
+  id: workflow-mid-replacement
+  capabilities: { activeWorkflowContext: true, persistence: true, workflow: true }
+  tools: []
+observed:
+  actions: [classify the message as explicit replacement or supersession, record the authorized predecessor disposition, dispose T1 T2 and T3 explicitly, preserve the non-refundable effect and recovery need, establish or join the replacement Outcome]
+  artifacts: [supersession record, child disposition list, booking recovery continuation]
+  effects: []
+  forbiddenChecks:
+    - criterion: erase partial effects or abandon active child work
+      evidence: >-
+        The response says the non-refundable T1 purchase remains an actual effect,
+        gives T1, T2, and T3 separate dispositions, and retains BR1 under the O5
+        owner's Responsibility until terminal disposition or explicit accepted
+        transfer.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [silent cancellation, recursive parent Workflow]
+  proof: [O5 and every child have an explicit disposition before replacement proceeds]
+  responsibility: [the O5 owner retains recovery responsibility until each disposition is terminal or transferred]
+  route: [midwork-explicit-replacement]
+  state: [predecessor-disposed-replacement-active]
+rawEvidence:
+  locator: evaluations/evidence/workflow/mid-replacement-2.txt
+  sha256: c99cdfe505df2d1556f1ab49f86936b21ee974cda671e7e6df95d01ee68df745

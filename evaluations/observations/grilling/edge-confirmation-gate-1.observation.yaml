@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-edge-confirmation-gate
 attempt: 1
 contextId: fresh-grilling-edge-confirmation-gate-v12-1-14db50eb-4630-485a-b566-29ba6056bc4b
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:49:06Z
 environment:

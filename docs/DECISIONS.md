@@ -24,7 +24,7 @@
 
 - Wayfinder should preserve as much useful behavior as possible while removing repository/ticket assumptions and treating persistent fog as a normal operating condition.
 - Research should work across technical, personal, organizational, physical, and agent questions.
-- Prototype should support reversible system/life experiments while delegating software prototypes to the existing code-focused procedure.
+- Prototype should support one-question reversible experiments across supported Systems. A configured skill may own bounded technical construction at the `technical-prototype` Supplemental Extension point, while core Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion.
 - Handoff should cover humans, agents, sessions, and operational systems.
 - Grilling owns design-tree rounds over the complete current frontier, while dependent questions wait and the user retains every decision. Grill With Docs composes that interview with Domain Modeling when plans or designs are grounded in durable records.
 - Domain Modeling preserves the useful upstream method but becomes a universal successor because the upstream storage and code-reference contract is repository-specific.
@@ -68,6 +68,7 @@
 - Supplemental skills run only at configured Extension points. The core phase supplies their inputs, integrates their evidence, and retains its completion criterion under the accepted advisory-versus-required failure rules.
 - Waiting work remains actively owned. Workflow waits directly for short dependencies, arranges durable resumption or monitoring for longer ones when supported, and verifies the result on resumption. Without automatic resumption, it requires an accepted handoff with the exact next check and cannot claim completion.
 - A related request updates or extends the active Outcome. Before switching to unrelated work, Workflow preserves the active Outcome's continuation state so it is not silently abandoned.
+- Every mid-work clause is classified by its contract effect as clarification, extension or Constraint change, correction, authorized override or informed exception, explicit replacement or supersession, or unrelated switch. Material changes revise and impact-analyze only the affected contract slice; corrections preserve history and reopen false completion; interruptions preserve the correct continuous or atomic boundary; and unaffected delegated work and parent ownership persist.
 - Workflow selects the smallest route that can satisfy the Outcome contract. Explicit user constraints and requested phases take precedence without permitting invented prerequisites or false completion.
 - The accepted request defines effect authority. Clear authority permits execution without redundant confirmation; drafts, ambiguity, changed revisions, and consequential effects outside granted authority create an approval gate.
 - Durable work in an existing scope without a current verified map invokes proportionate migration of the materially affected scope; unrelated exhaustive inventory does not block trivial work.
@@ -128,7 +129,7 @@
 - The Outcome owner proves that the Ticket set collectively covers the accepted Specification, dependencies, ownership, authority, and proof seams. Work responsibility attaches when the assigned actor accepts or begins the bounded Ticket.
 - Review has an explicit Reviewer who owns the verdict. The Work owner owns requested changes and the Outcome owner integrates final evidence. One actor may hold multiple roles for low-risk work, but the role-specific decisions remain explicit.
 - Discovery records facts, assumptions, decisions, unknowns, provenance, and confidence. A material unresolved item either blocks Specification or becomes an explicit operating rule for irreducible fog.
-- Accepted Specifications and submitted results are revision-bound. Changing a Specification triggers impact analysis and invalidates only affected Tickets, approvals, evidence, or completed work.
+- Accepted Specifications and submitted results are revision-bound. Changing a Specification triggers impact analysis and invalidates only affected Tickets, Review, approvals, evidence, or completed work.
 - `implement` submits an exact result revision with available effect evidence and moves the Ticket to Review; submission is not Ticket completion.
 - Review produces one integrated verdict: verified permits completion, changes required returns the target to accepted execution, and inconclusive moves it to waiting with missing evidence, owner, and exact next check.
 - Consequential effects may require pre-effect Review and approval. Preparation, Review, approval, effect execution, and real-effect verification remain distinct; the Ticket is non-terminal until its accepted proof seam confirms the effect.

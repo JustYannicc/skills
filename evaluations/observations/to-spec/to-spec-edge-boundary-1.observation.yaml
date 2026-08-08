@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: to-spec-edge-boundary
+attempt: 1
+contextId: fresh-to-spec-edge-boundary-sol-high-20260806-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: workflow-specification-boundary
+  capabilities: { workflow: true, persistence: false, to-spec: true, to-tickets: true, implement: true, scheduler: true }
+  tools: []
+observed:
+  actions: [bind accepted Outcome contract, materialize only the Specification artifact, return decomposition/execution to Workflow]
+  artifacts: [accepted Outcome Specification artifact]
+  effects: []
+  forbiddenChecks:
+    - criterion: create Tickets
+      evidence: The bounded return sends Ticket decomposition to Workflow and creates none.
+      observed: false
+    - criterion: schedule an effect
+      evidence: Reminder scheduling is returned to Workflow and no scheduled effect appears.
+      observed: false
+    - criterion: invent requirements
+      evidence: The artifact carries the supplied Room Cedar contract and its exact facilities source.
+      observed: false
+    - criterion: claim approval
+      evidence: Acceptance is bound to the supplied venue-lead grant in venue-setup-r4.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement, scheduler]
+  proof: [venue-setup-r4 and exact Specification revision are bound, 24 chairs two wheelchair spaces 1.2 m aisle and working microphone are preserved, the 08:20 walk-through and later Workflow route are explicit]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-edge-boundary-1.txt
+  sha256: 691f46dd0918a5563d7ea2a62a97f2af8de82b24cbc52b6756698de478511b6c

@@ -1,0 +1,19 @@
+integration: issue-25 Review branch merged with current origin/main
+merge-commit: e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
+main-parent: 87792533689dba90a7a605e91194b553618d72be
+review-parent: 64761dff20d67318fd00bfa86be4277d2efb8f50
+candidate-identity: git:e3f350d0d9005480a07519ddf4f50b2a44d7a9b0
+
+The normal merge retained all overlay tranche files, fixtures, observations,
+evidence, overlays, validator changes, and tests from current main, plus the
+Review skill, documentation, fixtures, evidence, and metadata from the Review
+branch. The PR diff against current main contains no overlay, validator, or
+test collateral and no deleted or renamed paths.
+
+Every current observation (70 files across foundation, Thinking in Systems,
+batch-grill-me, research, to-questionnaire, and Review) is bound to the exact
+non-evaluation merge candidate above. The regenerated combined report covers
+48 fixtures with 48 passed and zero Critical, Major, or Minor findings. Review
+fixtures remain present, including prepared communication, changed revision,
+and required Supplemental-unavailable behavior. This attestation records the
+integration only; it does not replace the Review verdict or human-review gate.

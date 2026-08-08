@@ -1,0 +1,67 @@
+Context: final-sol-review-prepared-communication-1
+Evaluator: gpt-5.6-sol
+Suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+Fixture: review-prepared-communication
+Attempt: 1
+
+# Review — customer reply
+
+**Verdict:** Verified
+
+**Reason:** `customer-reply@r9` satisfies the supplied Specification and Standards evidence at the prepared-result seam; delivery remains pending.
+
+**Target:** Specification `reply-spec@r4` · result `customer-reply@r9` · standard `customer-comms@2.3` · Proof seam `approved draft before sending` · effect evidence `pending`
+
+**Coverage:** Specification `complete` · Standards `complete` · Supplemental `not configured` · effect `pending`
+
+**Review controls:** depth `Inline` · Reviewer/independence `fresh evaluation pass; authorship relationship not supplied` · evidence matrix `normal recipient flow, disputed-correction recovery, and send boundary; further combinations add no distinct prepared-result behavior` · sources `customer-reply@r9`, `reply-rehearsal@r9-1` · capability gaps `none`
+
+## How the result works
+
+The recipient is told the billing error, corrected amount and date, one required action, and a two-business-day response expectation. If the correction is wrong, the draft provides a reply route for recovery. Sending and delivery occur beyond this reviewed seam and have not happened.
+
+## Evidence
+
+### Specification
+
+| Requirement | Observation | Evidence | Status |
+| --- | --- | --- | --- |
+| Required message content | Exact draft names the error, correction, date, action, reply route, and response expectation in plain language. | `customer-reply@r9`; supplied inspection record, further provenance not supplied | pass |
+| Recovery | Recipient can reply if the correction is wrong. | `customer-reply@r9`; `reply-rehearsal@r9-1` | pass |
+| Prepared-result boundary | Draft is approved and unsent. | Submitted target statement bound to `customer-reply@r9` | pass |
+
+### Standards
+
+| Governing rule | Observation | Evidence | Status |
+| --- | --- | --- | --- |
+| `customer-comms@2.3` | All named Standards items passed recipient rehearsal. | `reply-rehearsal@r9-1` | pass |
+| Interaction quality and feel | Rehearsal found the flow clear, coherent, respectful, low-effort, trustworthy, and recoverable; the draft supplies observable action, timing, and recovery cues. | `reply-rehearsal@r9-1`; `customer-reply@r9` | pass |
+
+## Findings
+
+No findings.
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → complete` for `customer-reply@r9`
+- **Reviewer:** fresh evaluation Reviewer; exact Actor identity not supplied
+- **Work owner:** retains responsibility for the separately governed send effect
+- **Outcome owner:** retains delivery verification and parent Outcome completion
+- **Approver:** exact draft approved; Actor identity not supplied
+
+## Pending effects, limitations, and next check
+
+The reply has not been sent or delivered. Send only through the governed effect route, preserving `customer-reply@r9`; afterward, check delivery evidence at the effect seam. Any draft change creates a new revision requiring review.
+
+## Criterion audit
+
+| Criterion | Result |
+| --- | --- |
+| Result-level Proof seam identified | Pass |
+| Exact prepared revision verified | Pass |
+| Recipient interaction assessed from observable message and rehearsal evidence | Pass |
+| Specification and Standards evidence kept separate | Pass |
+| Pending send effect recorded without claiming delivery | Pass |
+| Verified verdict and `in_review → complete` limited to reviewed result | Pass |
+| Work and Outcome responsibilities preserved | Pass |
+| No message sent and no delivery claimed | Pass |

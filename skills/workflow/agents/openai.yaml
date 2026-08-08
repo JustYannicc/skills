@@ -1,0 +1,5 @@
+interface:
+  display_name: "Workflow"
+  short_description: "Route every request to verified completion"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,39 @@
+schemaVersion: 1
+fixtureId: review-negative-no-spec
+attempt: 1
+contextId: final-sol-review-negative-no-spec-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:15.000Z
+environment:
+  id: discovery-before-review
+  capabilities:
+    workflow: true
+    persistence: false
+    supplementalReview: false
+  tools: []
+observed:
+  actions:
+    - route missing Specification to Workflow discovery
+    - preserve request and responsibility
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: issue review verdict without exact Specification and result
+      evidence: No Review verdict; routed rough idea to Workflow discovery. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - workflow
+  notInvoked:
+    - review
+  proof:
+    - no verdict until exact Specification and result exist
+  responsibility:
+    - Outcome owner and Workflow retain responsibility
+  route:
+    - missing-spec-to-workflow
+  state:
+    - needs-specification
+rawEvidence:
+  locator: evaluations/evidence/review/negative-no-spec-1.txt
+  sha256: 3168fb681680df131200c7721ce862defd7f75f78eae80165ffc0ca441a5b2de

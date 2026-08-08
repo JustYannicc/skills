@@ -1,0 +1,73 @@
+context: final-sol-review-cross-domain-direct-1
+evaluator: gpt-5.6-sol
+suite git: fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: evaluations/fixtures/review/cross-domain-direct.fixture.yaml
+attempt: 1
+
+# Review — checkout rota
+
+**Verdict:** Verified
+
+**Reason:** Signed rehearsal `rehearsal@r14-2` binds every requirement of `checkout-spec@r6` and every applicable rule of `facility-handoff@3.2` to observed normal and unavailable-item paths, with no remaining finding.
+
+**Target:** Specification `checkout-spec@r6` · result `checkout-rota@r14` · standard `facility-handoff@3.2` · Proof seam `staffed checkout-and-return` · effect evidence `rehearsal@r14-2`
+
+**Coverage:** Specification `complete` · Standards `complete` · Supplemental `not configured` · effect `verified for rehearsal only`
+
+**Review controls:** depth `Standard` · Reviewer/independence `independent Review agent, separate from named Work and Outcome owners` · evidence matrix `three representative normal requests plus unavailable-item recovery; stopped because the checklist covers every Material requirement and further combinations add no distinct behavior or risk` · sources `checkout-spec@r6, checkout-rota@r14, facility-handoff@3.2, rehearsal@r14-2` · capability gaps `none`
+
+## How the result works
+
+A volunteer requests equipment; staff confirms eligibility and availability, states the item and due time, waits for confirmation before recording custody, and issues a visible receipt within 45 seconds. This provides clear feedback, preserves volunteer control, limits effort, and makes custody trustworthy. If the item is unavailable, staff retains custody, explains the wait state, offers the next slot, and restores progress when the volunteer accepts it.
+
+## Evidence
+
+| Axis and requirement | Proof-seam observation | Evidence | Status |
+| --- | --- | --- | --- |
+| Specification — eligible, available checkout | Staff confirmed eligibility and availability for three representative volunteers. | Signed `rehearsal@r14-2`; checklist binding to `checkout-spec@r6` | pass |
+| Specification — informed custody transition | Staff named the item and due time and recorded custody only after confirmation. | Signed `rehearsal@r14-2` | pass |
+| Specification — timely visible receipt | Each volunteer received a visible receipt within 45 seconds. | Signed `rehearsal@r14-2` | pass |
+| Specification — degraded-path recovery | Staff explained unavailability, retained custody, offered the next slot, and completed recovery after acceptance. | Signed `rehearsal@r14-2` | pass |
+| Standard — `facility-handoff@3.2` | The bound checklist reports every applicable safety rule satisfied across normal and unavailable-item paths. | Signed `rehearsal@r14-2` | pass |
+| Standard — interaction quality | Observed confirmation, visible feedback, timely completion, custody control, and explicit recovery support clarity, control, low effort, timeliness, and trust. | Signed `rehearsal@r14-2`, observed at the Proof seam—not inferred from rota contents | pass |
+
+## Findings
+
+No findings.
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → complete`
+- **Reviewer:** Independent Review agent
+- **Work owner:** Equipment coordinator retains bounded-result responsibility.
+- **Outcome owner:** Workflow owner retains parent integration and completion responsibility.
+- **Approver:** Not required at this target-level rehearsal seam.
+
+## Pending effects, limitations, and next check
+
+The rehearsal effect is evidenced, but this verdict neither performs a live effect nor completes the parent Outcome. The Workflow owner must integrate this target evidence and separately establish parent completion.
+
+## Criterion audit
+
+| Criterion | Result |
+| --- | --- |
+| Accept exact Specification and result revisions | PASS |
+| Inspect Proof seam and governing standard | PASS |
+| Walk request through feedback, state, effect, and recovery | PASS |
+| Assess clarity, control, effort, timeliness, and trust observably | PASS |
+| Scale independence to the Material change | PASS |
+| Return `Verified` and `in_review → complete` | PASS |
+| Produce a revision-bound Review record | PASS |
+| Perform no external effect | PASS |
+| Invoke Review | PASS |
+| Do not invoke implementation | PASS |
+| Do not execute effects | PASS |
+| Bind every requirement to exact evidence | PASS |
+| Ground interaction quality at the Proof seam | PASS |
+| Separate effect evidence from result verification | PASS |
+| Preserve Work-owner responsibility | PASS |
+| Preserve Outcome-owner parent responsibility | PASS |
+| Route Workflow to Review | PASS |
+| Complete only the reviewed target | PASS |
+| Do not complete the parent Outcome | PASS |
+| Do not infer interaction quality from rota contents alone | PASS |

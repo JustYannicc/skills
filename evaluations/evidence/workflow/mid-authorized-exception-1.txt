@@ -1,0 +1,10 @@
+I classify this as an authorized override / Informed exception within active Outcome O3. The stated policy gives the communications owner Authority to waive the optional second-reader check for one internal draft, so that Authority is sufficient for this bounded exception.
+
+Informed-exception record:
+
+- Skipped protection: the optional second reader's independent wording check.
+- Plausible consequence: a wording defect or ambiguity may remain in the draft.
+- Scope and duration: this draft only, through its immediate Review; the exception does not generalize to later drafts or authorize distribution.
+- Recovery trigger: continue with immediate Review. If it finds ambiguity, restore the second-reader check before distribution.
+
+The second-reader check is skipped only for this draft. Immediate Review, proof, Authority checks, and every other safeguard remain active. No distribution effect occurs here. Workflow retains responsibility for O3 and keeps it active under this exception until the remaining Review and parent completion proof pass.

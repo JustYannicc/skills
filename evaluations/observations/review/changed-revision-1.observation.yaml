@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: review-changed-revision
+attempt: 1
+contextId: final-sol-review-changed-revision-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:00.000Z
+environment:
+  id: changed-result-with-stale-evidence
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - revision-store
+observed:
+  actions:
+    - detect changed result revision
+    - invalidate prior evidence
+    - bind review to r2
+    - return Inconclusive waiting with exact next check
+  artifacts:
+    - revision-mismatch finding
+    - continuation record
+  effects: []
+  forbiddenChecks:
+    - criterion: carry approval from r1 to r2
+      evidence: Inconclusive; rejected r1-bound approval/effect evidence for r2 and recorded owned next check. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - review
+  notInvoked:
+    - reuse prior approval
+    - complete target
+  proof:
+    - prior evidence is visibly bound to r1 and cannot satisfy r2
+  responsibility:
+    - Work owner remains responsible
+    - Outcome owner retains parent responsibility
+  route:
+    - revision-change-to-waiting
+  state:
+    - in_review-to-waiting
+rawEvidence:
+  locator: evaluations/evidence/review/changed-revision-1.txt
+  sha256: d2ffab1633593eedba65932f723679f461baf74ccbb9440e1bbd9239d7789770

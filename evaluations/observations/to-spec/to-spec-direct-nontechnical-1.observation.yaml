@@ -1,0 +1,34 @@
+schemaVersion: 1
+fixtureId: to-spec-direct-nontechnical
+attempt: 1
+contextId: fresh-to-spec-direct-nontechnical-sol-high-20260806-1
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: workflow-nontechnical-specification-ready
+  capabilities: { workflow: true, persistence: false, to-spec: true }
+  tools: []
+observed:
+  actions: [bind accepted Outcome contract, materialize one Specification from the reusable template, preserve the workshop's vocabulary]
+  artifacts: [accepted Outcome Specification artifact]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent missing decisions
+      evidence: Every material value is carried from workshop-welcome-r7 or venue access sheet v3; the artifact adds no new requirement.
+      observed: false
+    - criterion: absorb decomposition or implementation
+      evidence: The result is one Specification and returns later work to Workflow.
+      observed: false
+    - criterion: claim parent completion
+      evidence: The result explicitly says the accepted Specification does not complete the workshop welcome Outcome.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [contract workshop-welcome-r7 and exact Specification revision are bound, the 40 named participants and 18 September boundary are preserved, venue access sheet v3 and representative arrival-journey Proof seam are preserved]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-direct-nontechnical-1.txt
+  sha256: 8519c058516e95e5e4fa4dcd4fe5800d6fd62464cd5e35ab9ca85d6abe465e38

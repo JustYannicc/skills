@@ -1,0 +1,11 @@
+context: final-sol-review-negative-no-spec-1
+evaluator: sol
+suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: negative-no-spec
+attempt: 1
+
+Context: `final-sol-review-negative-no-spec-1`
+
+Route this request to Workflow discovery and preserve the rough idea as input. State: `needs-specification`. The Outcome owner and Workflow retain responsibility until an accepted Specification and exact result exist. No Review verdict is issued.
+
+Audit: **PASS** — all expected routing, state, responsibility, and no-verdict constraints are satisfied.

@@ -67,9 +67,9 @@ parent automatically.
 
 Specifications, results, approvals, and Review verdicts bind to exact
 revisions. Changing an accepted Specification requires an impact analysis over
-affected Tickets, completed work, evidence, approvals, dependencies, and legacy
-state. Invalidate only what the change affects; unrelated accepted work remains
-valid.
+affected Tickets, completed work, evidence, Review, approvals, dependencies,
+and legacy state. Invalidate only what the change affects; unrelated accepted
+work remains valid.
 
 A material result change invalidates its prior Review and approval. Workflow
 rechecks approval immediately before a consequential effect. Expired, revoked,

@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: to-spec-operating-outcome
+title: A recurring Outcome carries its operating contract
+shape: edge
+kind: invocation
+skill: to-spec
+domains: [organizational, communication]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Materialize accepted Outcome contract `volunteer-coverage-r3` with its
+  Operating Outcome branch. Outcome: one trained greeter staffs each Monday
+  17:30-19:00 welcome shift for twelve weeks beginning 7 September. Good enough
+  means a named primary and backup are accepted by Friday 12:00, the greeter
+  opens the desk by 17:25, and every uncovered shift enters same-day recovery.
+  Scope is those twelve shifts, named greeters, backups, and handoff notes;
+  recruitment policy and other events are excluded. Availability sheet
+  `greeters-r10`, the two-person access rule, and the venue hours are accepted
+  hard Constraints with high confidence. The program owner owns the Outcome
+  and approval; the volunteer lead owns the Specification. The volunteer lead
+  may assign or swap an accepted greeter through Sunday 18:00; later changes
+  require program-owner approval. Proof seam: each Monday's desk-open record and
+  attendance handoff. The program owner reviews those records every Tuesday for
+  the twelve-week horizon. Transfer requires a named successor to accept the
+  exact active schedule and recovery state. Cancellation requires program-owner
+  Authority and participant notification. Terminal condition: week twelve's
+  desk-open and handoff evidence passes and all recovery is resolved. No
+  unresolved exception remains; r3 grants exact faithful Durable
+  representation. Workflow's Adapter write returns
+  `outcome:volunteer-coverage/r3`, exact revision `adapter-r73`.
+environment:
+  id: workflow-operating-outcome-specification
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    to-spec: true
+  tools: [selected canonical Adapter]
+expected:
+  actions: [bind accepted Outcome contract, materialize the core Specification, complete the Operating Outcome branch, bind Durable revision]
+  artifacts: [accepted durable Outcome Specification artifact]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement, scheduler]
+  proof: [twelve Mondays beginning 7 September and Tuesday review cadence are preserved, program owner volunteer lead transfer acceptance and cancellation notification are recorded, outcome:volunteer-coverage/r3 and adapter-r73 are bound]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec]
+  state: [Accepted]
+  forbidden: [treat scheduling as completion, omit transfer acceptance, claim parent completion]

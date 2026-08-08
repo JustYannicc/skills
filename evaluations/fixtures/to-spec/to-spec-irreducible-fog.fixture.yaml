@@ -1,0 +1,59 @@
+schemaVersion: 1
+id: to-spec-irreducible-fog
+title: Accepted irreducible fog becomes an explicit operating rule
+shape: edge
+kind: invocation
+skill: to-spec
+domains: [physical, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow supplied accepted Outcome contract `outdoor-workshop-r8` for 30
+  named participants to complete a 90-minute outdoor workshop from 14:00 to
+  15:30 Saturday without avoidable weather harm. Good enough means all 30
+  participants are accounted for, the workshop finishes outdoors or in Hall B,
+  and every threshold crossing and move is recorded. Scope is the named
+  participants, outdoor site, Hall B safe mode, and live weather response;
+  transport and event cancellation policy are excluded. Venue booking
+  `venue-r6`, Hall B access, secured shade structures, and 30-person headcount
+  are Hard Constraints with high confidence. The program owner is Outcome owner
+  and Approver; the site lead is Specification Work owner. The exact local gust
+  level after 14:00 is irreducible Fog of war because the site sensor observes
+  it only live and the forecast range crosses the decision threshold. The
+  program owner accepted exact rule `weather-rule-r3`: proceed outdoors only
+  while no official severe-weather alert exists, live gusts are at most 35
+  km/h, and the shade structures remain secured; otherwise the site lead may
+  move everyone to Hall B. The site lead checks the alert, sensor, structures,
+  and headcount at 13:45 and every 15 minutes. Safe mode is Hall B. On a
+  threshold crossing, pause activity, account for all 30 participants, move to
+  Hall B, verify its access path, and resume there; only the program owner may
+  cancel. The operating horizon is 13:45 until terminal proof; transfer requires
+  a named successor to accept the exact current check, headcount, and move
+  state. Proof seam is the check log, headcounts, Hall B access observation when
+  used, and completion record. Terminal condition: all 30 participants are
+  accounted for, the workshop completes or is authoritatively cancelled, and
+  every move and recovery is verified. No other gap remains. The Approver grants
+  faithful Durable representation. Workflow's Adapter write returns locator
+  `outcome:outdoor-workshop/r8`, exact revision `adapter-r88`. Materialize the
+  Specification with its Operating Outcome and irreducible-fog branches, state
+  `Operating under fog`, and return operation to Workflow without performing an
+  event effect.
+environment:
+  id: workflow-specification-irreducible-fog
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    to-spec: true
+  tools: [selected canonical Adapter]
+expected:
+  actions: [bind accepted Outcome contract, materialize the core Specification, complete the Operating Outcome branch from accepted inputs, complete the irreducible-fog branch from weather-rule-r3, bind Durable revision, return operation to Workflow]
+  artifacts: [durable Outcome Specification operating under fog]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [wayfinder, implement, scheduler]
+  proof: [outdoor-workshop-r8 weather-rule-r3 outcome:outdoor-workshop/r8 and adapter-r88 are bound, 35 km/h threshold Hall B safe mode 15-minute feedback and 30-person headcount recovery are preserved, exact Approver Authority transfer rule and terminal condition are recorded]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec-operating-under-fog-to-workflow]
+  state: [Operating under fog]
+  forbidden: [invent a threshold or Authority, claim the weather uncertainty is resolved, omit safe mode feedback or recovery, perform the workshop effect, claim parent completion]
