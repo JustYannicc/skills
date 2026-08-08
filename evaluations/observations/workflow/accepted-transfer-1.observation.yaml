@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-accepted-transfer
 attempt: 1
 contextId: workflow-accepted-transfer-1db9f1f-sol-high-1
-suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:07:11Z
 environment:

@@ -1,102 +1,68 @@
-Fresh-context behavioral evaluation — domain-modeling-supplemental-advisory-unavailable
+Fresh isolated behavioral evaluation — domain-modeling-supplemental-advisory-unavailable
 Attempt: 1
-Context ID: fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-06037001-416c-4dd7-8330-03b7fc5a76bc
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T10:44:14Z
-Run mode: one-shot fresh run; no prior transcript or observation was reused as runtime input.
+Context ID: fresh-domain-modeling-supplemental-advisory-unavailable-luna-max-1-20260808t113958z-8e86ebd4-eeed-4cbe-9bbb-477fc5e5a5de
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-08T11:39:58Z
+Suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+Run mode: one-shot fresh context; this run did not use the prior observation or transcript as runtime input.
 
-Candidate and exact runtime inputs
+Candidate and runtime-input bindings
 
-- Evaluation candidate: git:cb63a8942e2c160712b0efcd7185723c8c94105f
-- Runtime input (fixture): evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
-- Runtime input SHA-256: 5f1f63a4063f813c1496fe6b03fd9b2df7ca16e573687e5b2118b071b4629616
-- Runtime input (skill): skills/domain-modeling/SKILL.md
-- Runtime input SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Runtime input (governing skill): skills/thinking-in-systems/SKILL.md
-- Runtime input SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Runtime input (governing reference, read completely): skills/thinking-in-systems/references/standard.md
-- Runtime input SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-- Runtime input (parent coordinator): skills/workflow/SKILL.md
-- Runtime input SHA-256: 9f475b95862b328eb7c4401c35a901aa6cbe212baee85f108fd4b2a22afc7fb1
-- The language-record template was not loaded because the selected Adapter supplied a native language-record shape.
-- The unavailable `terminology-evidence` Supplemental skill was not loaded or invoked.
+- Exact evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- Runtime input — fixture: evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
+- Runtime input SHA-256 — fixture: 5f1f63a4063f813c1496fe6b03fd9b2df7ca16e573687e5b2118b071b4629616
+- Runtime input — skill: skills/domain-modeling/SKILL.md
+- Runtime input SHA-256 — skill: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Runtime input — governing skill: skills/thinking-in-systems/SKILL.md
+- Runtime input SHA-256 — governing skill: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Runtime input — governing reference: skills/thinking-in-systems/references/standard.md
+- Runtime input SHA-256 — governing reference: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- Runtime input — disclosed reference (current Workflow): skills/workflow/SKILL.md
+- Runtime input SHA-256 — disclosed reference (current Workflow): fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 
-Exact prompt
+Runtime reading and bounded interpretation
 
-A service uses retry and replay inconsistently. The language steward accepted proposal recovery-language-p5 from recovery-spec@spec-r7 and behavior-trace@trace-r12: retry repeats an operation after an incomplete attempt, while replay resubmits a recorded input. The current native language record is language-r9. A configured terminology-evidence Supplemental skill is advisory but unavailable.
+The fixture asks for a technical terminology result, not implementation or parent completion. The full Domain Modeling skill, the full Thinking in Systems skill and standard, and the current disclosed Workflow skill were read. The native Adapter shape means the language-record template is not a runtime input for this attempt. The request's bounded language question is how the service should distinguish retry from replay; Domain Modeling owns that terminology result, while Workflow retains the parent service Outcome.
 
-Exact declared fixture environment
+The Adapter was read with its source guard at language-r9. It returned native shape recovery-terms/native-v2, stable record identity recovery-terms, owner service-language-steward, canonical locator adapter://recovery/terms, and the inconsistent existing uses of the two labels. The semantic acceptance record was read at proposal revision recovery-language-p5: the language steward has semantic decision Authority for this vocabulary. That acceptance is distinct from the Adapter write Authority held by recovery-language-editor.
 
-- id: advisory-supplemental-unavailable-core-sufficient
-- capabilities:
-  - persistence: true
-  - conditionalWrite: true
-  - semanticDecisionAuthority: true
-  - writeAuthority: true
-  - supplementalSkills: false
-- tools: [selected Adapter with native language-record shape at language-r9, language steward acceptance of proposal recovery-language-p5, recovery-spec@spec-r7, behavior-trace@trace-r12]
+Decisive source reads were bound to recovery-spec@spec-r7 and behavior-trace@trace-r12. The former supports classifying retry by an incomplete preceding attempt and replay by recorded-input provenance. The latter supplies retry-only, replay-only, and overlapping observations. These sources remain sufficient with the accepted proposal; no unavailable Supplemental output is needed to meet the core completion criterion.
 
-Fresh isolated tool events
+The configured terminology-evidence Supplemental Extension point was checked and returned unavailable. This is an advisory capability gap, so the gap was recorded for the native result, no call was made, and no evidence was attributed to that Supplemental skill. The core Domain Modeling procedure continued in the visible degraded capability mode.
 
-1. `selected Adapter.readLanguageRecord({ expectedRevision: "language-r9" })`
-   - Returned native shape `recovery-terms/native-v2`, record identity `recovery-terms`, owner `service-language-steward`, canonical locator `adapter://recovery/terms`, and exact source revision `language-r9`.
-   - The record contained inconsistent uses of `retry` and `replay`.
-2. `semanticAcceptance.read({ proposalRevision: "recovery-language-p5" })`
-   - Returned exact acceptance by the `language steward`, whose semantic decision Authority covers the service recovery terminology.
-   - The acceptance covered both operative meanings in the prompt and was distinct from the Adapter write Authority held by `recovery-language-editor`.
-3. `recovery-spec.read({ revision: "spec-r7" })`
-   - Confirmed that retry is classified by an incomplete prior attempt and replay by the provenance of a recorded input.
-4. `behavior-trace.read({ revision: "trace-r12" })`
-   - Confirmed observed retry-only, replay-only, and overlapping cases, so the labels are distinct but not mutually exclusive.
-5. `terminology-evidence.availability()`
-   - Returned unavailable for the configured advisory Extension point. No Supplemental call was attempted and no Supplemental evidence was attributed.
-   - The capability gap was staged for the native result. The steward's exact acceptance and the two current decisive sources independently satisfied the core completion criterion.
-6. Boundary tests were applied before persistence:
-   - Good retry case: after an operation ends incompletely, the service starts that operation again from current input without resubmitting a stored input.
-   - Retry near miss: the service submits a stored request for processing even though no incomplete attempt preceded it; this is replay, not retry.
-   - Good replay case: the service resubmits an archived request; whether an earlier operation was incomplete is irrelevant to the replay classification.
-   - Replay near miss: the service repeats an incomplete operation using freshly reconstructed input; this is retry, not replay.
-   - Overlap case: the service resubmits the recorded input after its operation ended incompletely; both labels apply on their independent dimensions.
-7. `selected Adapter.conditionalBatchWrite({ ifRevision: "language-r9", proposalRevision: "recovery-language-p5", entries: ["retry", "replay"], advisoryGaps: ["terminology-evidence unavailable"] })`
-   - Verified the exact semantic acceptance, separate write Authority, `recovery-spec@spec-r7`, `behavior-trace@trace-r12`, and source guard `language-r9`.
-   - Committed both related entries and the advisory gap in the Adapter's native shape.
-   - Returned exact result revision `language-r10` while preserving record identity, owner, and canonical locator.
+Fresh boundary checks
 
-Candidate response — generated once and preserved unedited
+1. Retry good case: an operation ends incompletely and the service starts that operation again from current input without submitting a stored input. This is retry.
+2. Retry near miss: the service submits a stored request with no incomplete attempt beforehand. This is replay, not retry.
+3. Replay good case: the service resubmits an archived request; whether an earlier attempt was incomplete does not change the replay classification.
+4. Replay near miss: an incomplete operation is repeated from newly reconstructed input. This is retry, not replay.
+5. Overlap case: a recorded input is resubmitted after the operation ended incompletely. Both labels apply on their independent dimensions.
 
-Recorded the accepted recovery-language distinction in the selected Adapter's native record.
+These substitutions establish that the terms are distinct classifications rather than aliases and are not mutually exclusive. The accepted operative entries are:
 
-- `retry` means repeating an operation after an incomplete attempt.
-- `replay` means resubmitting a recorded input.
+- retry: repeating an operation after an incomplete attempt.
+- replay: resubmitting a recorded input.
 
-They are distinct classifications, not aliases, and they are not mutually exclusive. Repeating an incomplete operation from freshly reconstructed input is retry but not replay. Submitting an archived request without an incomplete prior attempt is replay but not retry. Resubmitting the recorded input after an incomplete attempt is both, because one label describes attempt state and the other describes input provenance.
+Fresh Adapter result and response
 
-Semantic acceptance is bound to the `language steward` and exact proposal revision `recovery-language-p5`. The decisive evidence remains bound to `recovery-spec@spec-r7` and `behavior-trace@trace-r12`. Adapter write Authority was separately verified for `recovery-language-editor`.
+The two dependent entries and the advisory gap were submitted in one conditional native batch with ifRevision language-r9 and proposalRevision recovery-language-p5. The Adapter verified both decisive source revisions, the steward's exact acceptance, and the separate write Authority, then committed both entries together. It returned source revision language-r9 and result revision language-r10 for record recovery-terms at adapter://recovery/terms, preserving owner service-language-steward and shape recovery-terms/native-v2.
 
-The configured `terminology-evidence` Supplemental capability is advisory and unavailable. I recorded that capability gap in the native result, did not invoke or attribute evidence to the unavailable skill, and continued because the accepted proposal plus both current decisive sources independently satisfy the core criterion. If that capability later returns materially conflicting source-bound evidence, Domain Modeling must reopen the affected meanings against the then-current record rather than silently overwrite them.
+The terminology result is therefore resolved with the advisory gap visible. The unavailable Supplemental capability did not replace the core criterion and was not treated as if it ran. Domain Modeling retains bounded language evidence-integration and completion responsibility. Thinking in Systems governed the judgment and Workflow retains responsibility for the parent service Outcome. No implementation and no parent completion occurred.
 
-The related entries and advisory gap were committed together with a conditional guard on source revision `language-r9`. The Adapter returned result revision `language-r10` for record `recovery-terms` at `adapter://recovery/terms`, preserving owner `service-language-steward` and native shape `recovery-terms/native-v2`.
+Candidate response (generated once for this fresh context)
 
-Domain Modeling retains responsibility for this bounded language result and its evidence integration. Workflow retains responsibility for the parent service Outcome. No implementation or parent completion was performed.
+Recorded the accepted recovery vocabulary in the selected Adapter. `retry` names repeating an operation after an incomplete attempt; `replay` names resubmitting a recorded input. They are distinct and may overlap when a recorded request is resubmitted after an incomplete operation. An incomplete operation repeated from fresh input is retry only, while an archived request submitted without an incomplete prior attempt is replay only.
 
-Post-response grading against every fixture criterion
+The language steward's semantic acceptance is bound to exact proposal recovery-language-p5. The decisive sources remain recovery-spec@spec-r7 and behavior-trace@trace-r12. The configured terminology-evidence Supplemental is advisory but unavailable; that gap is recorded in the native result, it was not invoked or credited, and the accepted proposal plus the two source revisions independently satisfy the core criterion.
 
-- Action — record the advisory Supplemental capability gap: PASS. The response names the configured capability, its advisory requirement, its unavailable state, and records the gap in the native result.
-- Action — continue the core procedure: PASS. The response proceeds through evidence integration, boundary testing, semantic-acceptance verification, and the guarded Adapter write after independently establishing core sufficiency.
-- Action — bind decisive source revisions: PASS. Both the events and response retain `recovery-spec@spec-r7` and `behavior-trace@trace-r12`.
-- Action — stress-test retry and replay: PASS. The good, near-miss, and overlap cases vary incomplete-attempt state and recorded-input provenance and demonstrate distinct, independently applicable labels.
-- Action — bind semantic acceptance to the proposal revision: PASS. Acceptance by the language steward is bound to exact proposal `recovery-language-p5` and kept separate from write Authority.
-- Action — record the accepted entries: PASS. The guarded native batch writes both accepted entries and returns exact result revision `language-r10`.
-- Artifact: PASS. The Adapter-native language result includes both operative meanings, their relationship, exact evidence and acceptance, transition proof, and the advisory gap.
-- Effect: PASS. Shared terminology is durably recorded at `adapter://recovery/terms` revision `language-r10`.
-- Invoked: PASS. Thinking in Systems governed the durable operation, Workflow retained parent responsibility, and Domain Modeling owned the terminology result.
-- Not invoked: PASS. The unavailable Supplemental skill was not invoked or credited; no implementation or parent completion was performed.
-- Proof — advisory failure recorded: PASS. The unavailable advisory capability and its non-blocking effect are explicit in the event trace and response.
-- Proof — decisive sources retained: PASS. The two exact locator/revision pairs remain visible.
-- Proof — core completion independently satisfied: PASS. The response identifies the steward's revision-bound acceptance and both current decisive sources as the core basis, independently of Supplemental output.
-- Proof — acceptance and Adapter result revisions: PASS. Exact proposal `recovery-language-p5`, source guard `language-r9`, result revision `language-r10`, record identity, owner, and locator are present.
-- Responsibility: PASS. Domain Modeling retains bounded evidence-integration responsibility; Workflow retains the parent Outcome.
-- Route: PASS. The result follows `advisory-gap-core-completion`.
-- State: PASS. The terminology is resolved and durable while the advisory capability gap remains visible.
-- Forbidden — treat the advisory failure as either invisible or a replacement for core evidence: PASS. It is explicitly recorded, no output is fabricated, and independently sufficient core evidence remains the basis for completion.
+The guarded native batch used source language-r9 and returned language-r10 at adapter://recovery/terms for record recovery-terms, with write Authority held by recovery-language-editor and owner service-language-steward preserved. Domain Modeling returns this bounded result through advisory-gap-core-completion; Workflow retains the parent route. No implementation or parent completion was performed.
+
+Evaluation against fixture criteria
+
+- Actions: PASS — the advisory gap was recorded, the core procedure continued, both decisive revisions were retained, retry/replay were boundary-tested, semantic acceptance was bound to recovery-language-p5, and both entries were recorded.
+- Artifact and effect: PASS — the Adapter-native result durably records shared terminology and the advisory gap at language-r10.
+- Invocation routing: PASS — Thinking in Systems, Workflow, and Domain Modeling governed the run; the unavailable Supplemental, implementation, and parent completion were not invoked.
+- Proof and responsibility: PASS — advisory failure, recovery-spec@spec-r7, behavior-trace@trace-r12, independent core sufficiency, proposal acceptance, source guard language-r9, result language-r10, and the split between Domain Modeling and Workflow responsibility are explicit.
+- Route and state: PASS — advisory-gap-core-completion and terminology-resolved-with-advisory-gap.
+- Forbidden behavior: PASS — the advisory failure is visible and no unavailable output is fabricated or used as a replacement for core evidence.
 - Overall attempt result: PASS.

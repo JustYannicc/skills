@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-supplemental-advisory-unavailable
 attempt: 1
-contextId: fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-06037001-416c-4dd7-8330-03b7fc5a76bc
-suiteRevision: git:cb63a8942e2c160712b0efcd7185723c8c94105f
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T10:44:14Z
+contextId: fresh-domain-modeling-supplemental-advisory-unavailable-luna-max-1-20260808t113958z-8e86ebd4-eeed-4cbe-9bbb-477fc5e5a5de
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:39:58Z
 environment:
   id: advisory-supplemental-unavailable-core-sufficient
   capabilities:
@@ -28,7 +28,7 @@ observed:
     - shared terminology recorded
   forbiddenChecks:
     - criterion: treat the advisory failure as either invisible or a replacement for core evidence
-      evidence: The one-shot response explicitly records the unavailable advisory capability, does not invoke or attribute evidence to it, preserves the independently sufficient `recovery-spec@spec-r7`, `behavior-trace@trace-r12`, and `recovery-language-p5` core evidence, and completes the guarded native Adapter transition from `language-r9` to `language-r10`.
+      evidence: The fresh run records the unavailable advisory capability in the native result, neither invokes nor credits it, and keeps the accepted proposal plus both decisive source revisions as independent core evidence for the guarded write.
       observed: false
   invoked:
     - thinking-in-systems
@@ -52,7 +52,7 @@ observed:
     - terminology-resolved-with-advisory-gap
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-advisory-unavailable-1.txt
-  sha256: 243624bfbe4d61126a26ca309a832e344983d55cdfaa53b2207514c2dc503e2a
+  sha256: 9596809bd1e34edb8632075752acc06dcc16ccfe827b7a62c786abe876cfbe8d
 runtimeInputs:
   - role: fixture
     locator: evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
@@ -68,4 +68,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
   - role: disclosed-reference
     locator: skills/workflow/SKILL.md
-    sha256: 9f475b95862b328eb7c4401c35a901aa6cbe212baee85f108fd4b2a22afc7fb1
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171

@@ -1,43 +1,32 @@
-Fresh-context behavioral evaluation — domain-modeling-edge-technical
+Fresh isolated behavioral evaluation — domain-modeling-edge-technical
 Attempt: 3
-Context ID: fresh-domain-modeling-edge-technical-sol-high-3-2505a517-9fbb-419f-8541-d84e75d552b4
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T09:54:21Z
+Context ID: fresh-domain-modeling-edge-technical-luna-max-3-20260808t112813z-4a4bf0c7-0f56-4b12-8e4a-9a1d5b7f39c2
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-08T11:28:13Z
 
-Candidate and exact runtime locator/hash pairs
+Candidate and runtime-input bindings
 
-- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-- Domain Modeling skill locator: skills/domain-modeling/SKILL.md
-- Domain Modeling skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Fixture locator: evaluations/fixtures/domain-modeling/edge-technical.fixture.yaml
-- Fixture SHA-256: de16cfc724438b22ad1f20572f05bb1a75c5f86938f1c7a34d6e74246891f6fc
-- Governing Thinking in Systems skill locator: skills/thinking-in-systems/SKILL.md
-- Governing Thinking in Systems skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Governing Thinking in Systems standard locator: skills/thinking-in-systems/references/standard.md
-- Governing Thinking in Systems standard SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-- All four runtime inputs above were read completely before this isolated attempt.
-- The selected Adapter supplies an established native language-record shape, so the fallback language-record template was not a runtime input.
+- Exact evaluation candidate / suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- Runtime input: skill — skills/domain-modeling/SKILL.md — SHA-256 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Runtime input: fixture — evaluations/fixtures/domain-modeling/edge-technical.fixture.yaml — SHA-256 de16cfc724438b22ad1f20572f05bb1a75c5f86938f1c7a34d6e74246891f6fc
+- Runtime input: governing-skill — skills/thinking-in-systems/SKILL.md — SHA-256 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Runtime input: governing-reference — skills/thinking-in-systems/references/standard.md — SHA-256 daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The four runtime inputs above were read completely in this fresh context before the prompt was evaluated. No fallback language-record template was read: the selected Adapter exposes a native language-record shape.
 
-Exact prompt
+Fixture prompt
 
 The glossary says Order means a whole purchase, but an API and process support partial cancellation; two contexts also use Account differently. The language steward accepted proposal p3 from API evidence at artifacts-r9, but the API advanced to artifacts-r10 before the native Adapter write.
 
-Exact declared fixture environment
+Declared fixture environment
 
 - id: native-adapter-stale-decisive-evidence
-- capabilities:
-  - persistence: true
-  - conditionalWrite: true
-  - batchWrite: false
-  - semanticDecisionAuthority: true
-  - writeAuthority: true
-  - nativeLanguageRecord: true
-- tools: [selected Adapter with native language-record shape, language steward acceptance for proposal p3, API and process artifacts at r9 and r10]
+- capabilities: persistence=true; conditionalWrite=true; batchWrite=false; semanticDecisionAuthority=true; writeAuthority=true; nativeLanguageRecord=true
+- tools: selected Adapter with native language-record shape; language steward acceptance for proposal p3; API and process artifacts at r9 and r10
 
 Fresh isolated tool declarations
 
-1. selected Adapter with native language-record shape
-   - Fresh test-double instance: commerce-lexicon-et3-2505a517.
+1. Selected Adapter with native language-record shape
+   - Fresh test-double instance: commerce-lexicon-et3-luna-112813.
    - Adapter-managed record identity: commerce-language.
    - Canonical locator: adapter://commerce/language.
    - Owner: commerce-language-owner.
@@ -45,15 +34,15 @@ Fresh isolated tool declarations
    - Exact starting source/result revision: language-r52.
    - Exact starting representation: {"shape":"commerce.lexicon/v6","recordId":"commerce-language","locator":"adapter://commerce/language","owner":"commerce-language-owner","revision":"language-r52","entries":[{"label":"Order","meaning":"A whole purchase."}],"transitions":[]}
    - Exact starting representation SHA-256: 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c.
-   - The test double supports a conditionally guarded single write, rejects stale source guards, counts preflight and write calls, and returns the exact result revision after a commit.
+   - The test double supports a conditionally guarded single write, rejects stale source guards, counts preflight and write calls, and returns the result revision after a commit.
 
-2. language steward acceptance for proposal p3
+2. Language-steward acceptance for proposal p3
    - Accepting Actor: language-steward.
    - Semantic decision Authority: operative commerce terminology in this scope.
    - Exact accepted proposal revision: p3.
    - Acceptance record: decision://commerce/terminology/p3@decision-r14.
    - Decisive mutable evidence bound by the acceptance: artifact://commerce/order-api@artifacts-r9.
-   - Separate Adapter write Authority: commerce-language-recorder.
+   - Separate Adapter write Authority: commerce-language-recorder; acceptance does not grant that Actor semantic decision Authority.
 
 3. API and process artifacts at r9 and r10
    - artifact://commerce/order-api@artifacts-r9: a cancellation request can select order lines while retaining the whole-purchase order identifier.
@@ -62,85 +51,86 @@ Fresh isolated tool declarations
    - artifact://billing/account-context@billing-r7: Account denotes the billing relationship that may include several sign-in identities.
    - artifact://commerce/order-api@artifacts-r10: the canonical API revision now exposes an explicit cancellationTarget structure absent from artifacts-r9.
 
-Exact tool events
+Exact tool events in this one-shot attempt
 
-1. Workflow routed the bounded terminology conflict to Domain Modeling and retained parent responsibility. Thinking in Systems governed the durable recovery branch, Authority split, revision-bound acceptance, stale-evidence guard, proof seam, and preserved resumption state.
+1. Workflow routed the bounded terminology conflict to Domain Modeling and retained parent responsibility. Thinking in Systems governed the recovery branch: it treated the durable language record as paused, kept semantic decision Authority separate from Adapter write Authority, required revision-bound evidence and a pre-effect freshness guard, and preserved a resumable proof seam. Domain Modeling owned only the bounded language result.
 
 2. selected Adapter.readLanguageRecord
    - Read commerce-language at adapter://commerce/language.
-   - Bound owner commerce-language-owner, native representation commerce.lexicon/v6, and exact source revision language-r52.
-   - Returned the exact starting representation and SHA-256 declared above.
-   - Adapter reads after this event: 1.
+   - Bound owner commerce-language-owner, native commerce.lexicon/v6 representation, and exact source revision language-r52.
+   - Returned the exact starting representation and SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c.
+   - Adapter read count after the event: 1.
 
 3. language steward acceptance lookup
-   - Returned language-steward, semantic decision Authority, accepted proposal revision p3, acceptance record decision://commerce/terminology/p3@decision-r14, and its binding to artifact://commerce/order-api@artifacts-r9.
-   - Confirmed separate write Authority for commerce-language-recorder; it did not widen or renew semantic acceptance.
+   - Returned accepting Actor language-steward, semantic decision Authority, accepted proposal revision p3, acceptance record decision://commerce/terminology/p3@decision-r14, and its binding to artifact://commerce/order-api@artifacts-r9.
+   - Confirmed the separate commerce-language-recorder write Authority; it did not widen or renew the semantic acceptance.
 
 4. Source cross-reference and boundary probes
-   - Preserved the current glossary referent Order as the whole purchase and the competing process phrase cancellation order as a selected cancellation target.
-   - Preserved Sign-in Account and Billing Account as different context-qualified referents rather than aliases.
+   - Kept the glossary referent Order as the whole purchase and the competing process phrase cancellation order as a selected cancellation target.
+   - Kept Sign-in Account and Billing Account as context-qualified referents, not aliases.
    - Good case: Order O-81 contains lines A, B, and C; cancelling B leaves whole-purchase Order O-81 with A and C active.
-   - Near miss: calling line B itself the Order outside the cancellation operation substitutes a cancellation target for the purchase.
-   - Account substitution: using Sign-in Account SI-14 where invoicing expects Billing Account BA-6 changes both the relationship and responsible party.
+   - Near miss: calling line B itself the Order outside the cancellation operation replaces the purchase referent with a target referent.
+   - Account substitution case: using Sign-in Account SI-14 where invoicing requires Billing Account BA-6 changes the relationship and responsible party.
 
 5. Pre-effect decisive-source freshness check
-   - Reread the canonical API locator immediately before persistence.
-   - Observed artifact://commerce/order-api@artifacts-r10 rather than accepted artifacts-r9.
-   - The explicit cancellationTarget structure in r10 was not evidence accepted for p3.
-   - Stopped before conditional-write preflight because the exact accepted proposal no longer had current decisive evidence.
+   - Reread the canonical API locator immediately before any persistence preparation.
+   - Found artifact://commerce/order-api@artifacts-r10, while p3 was accepted only against artifact://commerce/order-api@artifacts-r9.
+   - The explicit cancellationTarget structure in r10 is a material advance and was not evidence accepted for p3.
+   - Stopped at the source-freshness gate. No conditional-write preflight was attempted because the exact accepted proposal no longer had current decisive evidence.
 
 6. Post-stop Adapter audit
    - Conditional-write preflight calls: 0.
    - Write calls: 0.
    - Effects: [].
-   - Record identity, owner, locator, native representation, source/result revision language-r52, exact starting representation, and SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c remained unchanged.
+   - Record identity commerce-language, owner commerce-language-owner, locator adapter://commerce/language, native representation commerce.lexicon/v6, source/result revision language-r52, exact representation, and SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c remained unchanged.
 
-Response — generated once and preserved unedited
+Response generated once in this fresh context
 
-The terminology update is blocked before the Adapter write. Proposal p3 was accepted against artifact://commerce/order-api@artifacts-r9, but the canonical API is now artifact://commerce/order-api@artifacts-r10. Because r10 adds a cancellation-target structure that was not part of the accepted evidence, p3 cannot authorize a current durable language change.
+The terminology update is paused before any Adapter guard or write. The language-steward acceptance of proposal p3 is valid only for the decisive source snapshot artifact://commerce/order-api@artifacts-r9. The canonical API now reports artifact://commerce/order-api@artifacts-r10, where cancellationTarget is explicit and was not reviewed by that acceptance. The old approval therefore cannot authorize a current durable language change.
 
-The historical acceptance remains traceable: language-steward accepted exact proposal revision p3 under semantic decision Authority at decision://commerce/terminology/p3@decision-r14. commerce-language-recorder has separate Adapter write Authority, and the Adapter supports conditional writes, but neither fact renews semantic acceptance after decisive evidence changes.
+The historical decision is preserved: language-steward accepted exactly p3 under semantic decision Authority at decision://commerce/terminology/p3@decision-r14, while commerce-language-recorder separately holds Adapter write Authority. The latter cannot renew or reinterpret the former. The meanings stay proposed or conflicted:
 
-The source-bound meanings remain proposed or conflicted:
+- Order — the whole purchase, matching the glossary. In the good case, O-81 contains A, B, and C; cancelling B changes the selected target while O-81 remains the purchase and A/C stay active.
+- Cancellation target — the selected lines acted on by partial cancellation. artifact://commerce/cancellation-process@process-r12 calls the selected subset a cancellation order. Treating B itself as Order outside that operation is the near miss because it changes the referent boundary.
+- Sign-in Account — the credential-bearing identity from artifact://identity/account-context@identity-r15.
+- Billing Account — the billing relationship from artifact://billing/account-context@billing-r7, which can include several sign-in identities. Replacing Billing Account BA-6 with Sign-in Account SI-14 during invoicing changes the relationship and accountable party.
 
-- Order — the whole purchase, matching the current glossary. In the good case, Order O-81 contains lines A, B, and C; cancelling B leaves O-81 with A and C active.
-- Cancellation target — the selected subset acted on by partial cancellation. artifact://commerce/cancellation-process@process-r12 calls that subset a “cancellation order.” Calling B itself the Order outside the cancellation operation is a near miss because it replaces the purchase referent with the target referent.
-- Sign-in Account — the credential-bearing identity in artifact://identity/account-context@identity-r15.
-- Billing Account — the billing relationship in artifact://billing/account-context@billing-r7, which may include several sign-in identities. Substituting Sign-in Account SI-14 for Billing Account BA-6 during invoicing changes the represented relationship and responsible party.
+No canonical persistence occurred. The Adapter-native commerce.lexicon/v6 record commerce-language at adapter://commerce/language remains owned by commerce-language-owner at language-r52, with unchanged representation SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c. The stopped attempt made zero conditional-write preflight calls, zero writes, and no effects. There was no code edit, architecture decision, or representation transition.
 
-No canonical persistence occurred. The Adapter-native commerce.lexicon/v6 record commerce-language at adapter://commerce/language remains owned by commerce-language-owner at source/result revision language-r52, with unchanged representation SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c. There were zero conditional-write preflight calls, zero writes, and no effects. No code edit, architecture decision, or representation change occurred.
+Exact resumption action for Workflow: (1) inspect artifact://commerce/order-api@artifacts-r10 against the four candidate meanings and update p3 wherever the new structure changes a referent, boundary, classification, or relationship; (2) have language-steward accept one exact successor proposal revision with acceptance explicitly bound to artifacts-r10; (3) reread adapter://commerce/language and bind its then-current source revision; (4) only after both checks pass, use commerce-language-recorder Authority for one conditionally guarded native write; and (5) return the Adapter identity, owner, locator, transition, exact source revision, and exact result revision. Workflow retains parent responsibility for integration, resumption, and terminal proof.
 
-Exact resumption action: inspect artifact://commerce/order-api@artifacts-r10 against the four candidate meanings; revise p3 wherever the current evidence changes a referent, boundary, classification, or relationship; have language-steward accept that exact successor proposal revision with acceptance explicitly bound to artifacts-r10; reread adapter://commerce/language and bind its then-current source revision; then, and only then, use commerce-language-recorder Authority for one conditionally guarded native write and return the Adapter-managed identity, owner, locator, transition, exact source revision, and exact result revision.
+Route: terminology-conflict-recovery.
+State: terminology-conflicted-and-waiting-for-current-evidence.
+Domain Modeling returns this bounded conflict-and-recovery result and does not claim the parent Outcome complete.
 
-Route: terminology-conflict-recovery. State: terminology-conflicted-and-waiting-for-current-evidence. Domain Modeling returns only this bounded conflict-and-recovery result; Workflow retains parent responsibility for integration, resumption, and terminal proof.
+Response-generation attestation: this response was generated once in the isolated context above after the six declared events; it was not retried, post-edited, or copied from another attempt.
 
-Response-generation attestation: the response above was generated exactly once in this isolated context after the declared tool events and was preserved verbatim without retry or editing.
+Fixture-criterion grading for this attempt
 
-Grading against every fixture criterion
-
-- Action — bind mutable artifact locators and revisions: PASS. The trace and response bind proposal p3 to artifact://commerce/order-api@artifacts-r9, identify current artifact://commerce/order-api@artifacts-r10, and retain exact process and Account-context locators and revisions.
-- Action — cross-reference the glossary and observed behavior: PASS. The current whole-purchase glossary entry is compared with partial-cancellation API/process behavior and the two Account contexts.
-- Action — detect the decisive source advance: PASS. The pre-effect freshness event observes artifacts-r10 at the same canonical API locator after acceptance against artifacts-r9.
-- Action — invalidate acceptance based on r9: PASS. The response preserves the historical acceptance but correctly refuses to treat it as current authorization for persistence.
-- Action — preserve both contexts as proposed or conflicted: PASS. Whole-purchase Order versus Cancellation target and Sign-in Account versus Billing Account all remain visible; none is collapsed into an accepted durable entry.
-- Action — return exact resumption action to Workflow: PASS. The response names the current source to inspect, the successor proposal and renewed revision-bound acceptance required, the fresh Adapter guard read, the authorized conditional write, and exact result proof.
-- Artifact — source-bound conflict and recovery evidence: PASS. The response includes each candidate, its source, the changed decisive source, boundary scenarios, unchanged native state, and the Authority split.
-- Artifact — continuation action: PASS. A deterministic ordered resumption contract is returned without pretending the blocked work completed.
-- Effects: PASS. The declared effect trace is empty, with zero preflight and write calls.
-- Invoked — thinking-in-systems: PASS. The attempt applies the full standard proportionately: an existing Durable-state recovery branch; an explicit safe-stopping threshold; current-evidence and Authority Constraints; waiting as the least-risk feasible intervention; source, Adapter, Actor, state, interface, degraded/paused, recovery, proof, and change seams; revision-bound evidence; preserved durable state; and no informed exception.
-- Invoked — workflow: PASS. Workflow selects the terminology-recovery route and retains coordination, integration, resumption, and parent completion responsibility.
-- Invoked — domain-modeling: PASS. Domain Modeling bounds the terminology conflict, reads the canonical record, cross-references sources, stress-tests referents, blocks stale persistence, and returns the language result.
+- Action — bind mutable artifact locators and revisions: PASS. Proposal p3 is bound to artifact://commerce/order-api@artifacts-r9; the freshness read binds the same canonical API locator at artifacts-r10; process and Account artifacts retain their exact locators and revisions.
+- Action — cross-reference the glossary and observed behavior: PASS. Whole-purchase Order, partial cancellation behavior, and the two context-qualified Account meanings are compared with good-case and near-miss probes.
+- Action — detect the decisive source advance: PASS. The pre-effect reread finds artifacts-r10 after p3 was accepted against artifacts-r9.
+- Action — invalidate acceptance based on r9: PASS. The historical p3 acceptance remains traceable but is rejected as authorization for a write after the decisive source advanced.
+- Action — preserve both contexts as proposed or conflicted: PASS. Order versus cancellation target and Sign-in Account versus Billing Account remain distinct and non-durable.
+- Action — return exact resumption action to Workflow: PASS. The response specifies r10 review, a successor proposal bound to r10, a fresh Adapter source guard, one conditional native write, and exact returned proof.
+- Artifact — source-bound conflict and recovery evidence: PASS. Candidates, sources, revisions, boundary cases, Authority split, stale-source finding, unchanged record, and stop proof are present.
+- Artifact — continuation action: PASS. Ordered recovery steps and the owner of resumption are explicit.
+- Effects: PASS. Effects are empty; preflight and write call counts are both zero.
+- Invoked — thinking-in-systems: PASS. The recovery branch is governed with Authority boundaries, stale evidence, paused state, proof seam, preservation, and resumption.
+- Invoked — workflow: PASS. Workflow owns routing, coordination, integration, resumption, and parent completion.
+- Invoked — domain-modeling: PASS. Domain Modeling reads the native record, binds sources, distinguishes referents, probes boundaries, and returns the bounded language result.
 - Not invoked — code edit: PASS. No product, API, schema, or code change was attempted.
-- Not invoked — architecture decision: PASS. No architectural trade-off was selected or recorded.
-- Not invoked — canonical Adapter write: PASS. The attempt stopped before preflight; the Adapter recorded zero writes and no revision transition.
-- Proof — proposal p3 remains bound to artifacts-r9: PASS. The accepting Actor, exact proposal revision, acceptance record, and exact decisive evidence binding are explicit.
-- Proof — current evidence revision is artifacts-r10: PASS. The freshness event and response name the exact canonical locator and current revision.
-- Proof — stale acceptance invalidated: PASS. Semantic acceptance from r9 is retained historically but denied as authority for a current write.
-- Proof — both meanings retained: PASS. Both Order-related referents and both context-qualified Account referents remain proposed or conflicted.
-- Proof — native representation unchanged: PASS. The same native shape, record identity, owner, locator, representation, language-r52 revision, and SHA-256 appear before and after the stopped attempt.
-- Proof — exact resumption action: PASS. Recovery requires r10 inspection, acceptance of one exact successor proposal revision bound to r10, a fresh language-record source guard, a conditional native write, and exact returned revisions.
-- Responsibility — workflow retains parent responsibility: PASS. The response expressly leaves integration, resumption, and terminal proof with Workflow.
-- Route — terminology-conflict-recovery: PASS. The response reports the exact expected route.
-- State — terminology-conflicted-and-waiting-for-current-evidence: PASS. The response reports the exact expected state and makes the waiting dependency visible.
-- Forbidden — write the canonical language record from stale decisive evidence: PASS. The freshness guard stopped execution before preflight; zero writes, empty effects, unchanged language-r52, and the unchanged representation hash prove the forbidden behavior was observed false.
-- Overall attempt result: PASS.
+- Not invoked — architecture decision: PASS. No architecture trade-off was chosen or recorded.
+- Not invoked — canonical Adapter write: PASS. Execution stopped before preflight and the Adapter recorded no write or transition.
+- Proof — proposal p3 remains bound to artifacts-r9: PASS. The accepting Actor, exact proposal, acceptance record, and decisive source binding are explicit.
+- Proof — current evidence revision is artifacts-r10: PASS. The pre-effect freshness event and response identify the canonical locator and new revision.
+- Proof — stale acceptance invalidated: PASS. The r9 acceptance is retained as history but cannot authorize the current write.
+- Proof — both meanings retained: PASS. Both Order-related referents and both Account referents remain visible and unresolved for persistence.
+- Proof — native representation unchanged: PASS. Identity, owner, locator, native shape, language-r52, exact representation, and its SHA-256 are unchanged after the stop.
+- Proof — exact resumption action: PASS. r10 inspection, successor acceptance bound to r10, fresh Adapter guard, conditional write, and exact result proof are all named.
+- Responsibility — workflow retains parent responsibility: PASS. The response explicitly leaves integration and terminal proof with Workflow.
+- Route — terminology-conflict-recovery: PASS.
+- State — terminology-conflicted-and-waiting-for-current-evidence: PASS.
+- Forbidden — write the canonical language record from stale decisive evidence: PASS. The freshness gate stopped before preflight; zero calls, zero writes, empty effects, language-r52, and the unchanged representation hash prove the forbidden behavior was not observed.
+
+Overall attempt result: PASS.

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-indirect-workflow
 attempt: 2
 contextId: fresh-gwd-indirect-workflow-v12-2-235bdf6b-0984-4142-98ed-99df5c85c080
-suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:40:05.000Z
 environment:

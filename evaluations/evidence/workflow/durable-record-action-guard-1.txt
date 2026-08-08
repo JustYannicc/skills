@@ -2,7 +2,7 @@ Fresh-context behavioral evaluation
 
 Evaluation identity
 
-- candidate: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+- candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
 - candidate HEAD observed: a00489e8fb239d07dbb1e21c304a1aff9fa51199
 - fixture: workflow-durable-record-action-guard
 - attempt: 1

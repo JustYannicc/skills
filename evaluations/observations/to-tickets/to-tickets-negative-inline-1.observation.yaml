@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-negative-inline
 attempt: 1
 contextId: fresh-to-tickets-negative-inline-20260808-1
-suiteRevision: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:33:00.000Z
 environment:
