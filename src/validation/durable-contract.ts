@@ -98,8 +98,11 @@ export const isDurableTicketInRecovery = (
 
 /**
  * Prove the deterministic part of the #35 System Record action boundary.
- * Narrative quality, semantic ownership, and decision wisdom remain human or
- * LLM judgment; this guard only checks exact formal bindings.
+ * This is a pure prototype/test seam: a production Adapter must pass the
+ * output of its structural validator and must not treat this plain TypeScript
+ * shape as proof that narrative or semantic fields are valid. Narrative
+ * quality, semantic ownership, and decision wisdom remain human or LLM
+ * judgment; this guard only checks exact formal bindings.
  */
 export const guardSystemRecordAction = (
   input: SystemRecordActionGuardInput
@@ -147,12 +150,24 @@ export const guardSystemRecordAction = (
         reason: "approval is bound to another revision",
       };
     }
-    if (
-      input.approval.validUntil &&
-      input.now &&
-      Date.parse(input.approval.validUntil) <= Date.parse(input.now)
-    ) {
-      return { allowed: false, reason: "approval has expired" };
+    if (input.approval.validUntil) {
+      if (!input.now) {
+        return {
+          allowed: false,
+          reason: "approval validity cannot be checked without current time",
+        };
+      }
+      const validUntil = Date.parse(input.approval.validUntil);
+      const now = Date.parse(input.now);
+      if (Number.isNaN(validUntil) || Number.isNaN(now)) {
+        return {
+          allowed: false,
+          reason: "approval validity timestamp is invalid",
+        };
+      }
+      if (validUntil <= now) {
+        return { allowed: false, reason: "approval has expired" };
+      }
     }
   }
 

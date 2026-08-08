@@ -1,21 +1,21 @@
-# HUMAN REVIEW REQUIRED — System Record representation
+# Accepted — System Record representation
 
-**Status:** candidate until the repository maintainer approves the exact PR;
-approval makes this the decision record at that revision.
-**Human decision:** accept, reject, or revise the representation before issue
-#35 can close.
+**Status:** accepted at merged PR #41 (`1ef5bfb24ed0d4ffee99d021836acc285cb5be33`).
+**Human decision:** the maintainer accepted the Markdown + constrained YAML
+representation and its one-writable-authority, structural-validator, and
+action-guard boundaries.
 **Fixed point:** `455541e255b5482235faa65a82bffc2b21415b94`.
 **Disposable proof:**
 [`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1).
 
-> **HUMAN REVIEW REQUIRED:** merging the associated PR accepts the proposed
-> representation changes in this package. The proof and recommendation do not
-> grant an agent authority to approve the representation, merge the PR, or
-> close issue #35.
+> **Decision recorded:** PR #41 merged the reviewed representation and closed
+> issue #35. This acceptance does not make an Adapter canonical without the
+> declared structural-validator and action-guard seams, and it does not waive
+> the repository's separate publication and human-review gates.
 
 ## Decision
 
-### Proposed representation
+### Accepted representation
 
 1. The adapter-neutral System Record is one human-readable canonical record
    with one writable authority. Its structured envelope owns only fields a
@@ -56,18 +56,19 @@ approval makes this the decision record at that revision.
 7. **TOML status: optional generated projection only; not canonical.** No core
    skill or baseline Adapter requires a TOML parser.
 
-### Human choice
+### Decision record
 
-- **Accept:** approve the exact PR revision; the representation becomes accepted
-  only through that human action.
-- **Choose another option:** record the selected tested option and decisive
-  trade-off before changing the governing template.
-- **Request evidence:** name the result that could change the decision and keep
-  the candidate unaccepted.
+- **Accepted option:** Markdown with a constrained YAML envelope and the
+  canonical Section 2 relationship index.
+- **Rejected alternatives:** TOML or JSON as a canonical writable format;
+  generated projections remain optional and read-only.
+- **Decision boundary:** future representation changes require a new explicit
+  decision record and revision-bound proof; this document is not an implicit
+  authority for unrelated Adapter behavior.
 
-Issue #35 remains open until the maintainer records the decision and verifies
-the accepted surfaces. The PR must not be merged by the agent that authored
-this package.
+Issue #35 is closed at the merged PR #41 revision. The representation remains
+separate from the implementation and publication decisions of downstream
+skills and Adapters.
 
 ## Decision frame
 
