@@ -1,0 +1,34 @@
+schemaVersion: 1
+fixtureId: workflow-durable-record-action-guard
+attempt: 2
+contextId: 8c4e1f7a-2d63-49b0-a5e8-3f9c7b1d6a24
+suiteRevision: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T14:20:02Z
+environment:
+  id: workflow-system-record-action-guard
+  capabilities: { persistence: true, systemRecordValidator: true, systemRecordActionGuard: true, approval: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - "load the accepted #35 System Record representation"
+    - "consume validated formal output from the accepted #35 structural validator"
+    - compare current record and Authority revisions
+    - match action target scope and contract
+    - fail the action guard closed
+    - preserve the human-readable narrative and route a fresh Review or approval
+  artifacts: [validator result, blocked action evidence, exact-revision recovery action]
+  effects: []
+  forbiddenChecks:
+    - criterion: "perform the stale or wrong-scope effect"
+      evidence: "The formal record is validated, exact revisions and target scope are matched, and the guard blocks the stale or wrong-target request before any effect. A current Review or approval is required for recovery."
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [perform the stale effect, treat narrative intent as machine Authority, create a second writable projection]
+  proof: [stale or wrong-scope request is blocked while the canonical record remains readable and recoverable]
+  responsibility: [Workflow retains responsibility for the parent effect until a current revision is reviewed and authorized]
+  route: [durable-system-record-action-guard]
+  state: [blocked-stale-revision-recovery]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-record-action-guard-2.txt
+  sha256: 5839e98b6719238a4efcceecb95ffbb5d04bcef60eeae448cfe9ac9028da1390

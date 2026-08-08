@@ -1,0 +1,40 @@
+schemaVersion: 1
+fixtureId: workflow-durable-change-evidence-dimensions
+attempt: 1
+contextId: fresh-workflow-durable-change-evidence-dimensions-20260808t124500z-luna-max-1
+suiteRevision: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T12:45:00Z
+environment:
+  id: workflow-change-evidence-dimensions
+  capabilities: { persistence: true, phasedRollout: true, actorSupport: true, measurement: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - record only decision-relevant evidence dimensions
+    - separate operation and Outcome signals from burden and harm
+    - identify actor support and simultaneous-change capacity limits
+    - set an assurance cadence and sustainment review
+  artifacts:
+    - dimensioned adoption and Outcome evidence
+    - actor-support disposition
+    - assurance cadence
+  effects: []
+  forbiddenChecks:
+    - criterion: declare completion from availability or adoption alone
+      evidence: The response keeps availability and adoption as distinct evidence dimensions, separates operation and Outcome signals from burden and harm, and explicitly leaves the Outcome open under measured rollout until the recovery or taper rule and parent proof seam are satisfied.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked:
+    - collapse all dimensions into one status
+    - treat adoption as Outcome proof
+    - demand ritual measurement without a decision need
+  proof:
+    - the transition decision names what each dimension can change and preserves a recovery or taper rule
+  responsibility:
+    - the parent owner integrates evidence and remains responsible through sustainment or cancellation
+  route: [durable-change-evidence, actor-support, assurance-cadence]
+  state: [operating-under-measured-rollout]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-change-evidence-dimensions-1.txt
+  sha256: daa92e9a1c9cbae37993bb9d975820a1e6c714dce8affc11945106038fa7ce2d

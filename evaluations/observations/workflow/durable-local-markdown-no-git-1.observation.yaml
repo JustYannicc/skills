@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: workflow-durable-local-markdown-no-git
+attempt: 1
+contextId: workflow-durable-local-markdown-no-git-fresh-luna-max-20260808-1
+suiteRevision: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T13:04:00Z
+environment:
+  id: workflow-local-markdown-no-git
+  capabilities: { persistence: true, localMarkdown: true, git: false, github: false, atomicClaim: true, scheduling: false, workflow: true }
+  tools: []
+observed:
+  actions:
+    - select the no-Git Local Markdown Adapter
+    - declare Baseline available
+    - Coordination available only through atomic Claim creation
+    - declare Continuation unavailable
+    - create one Outcome record and two Ticket records
+    - append Claims Evidence and transition history
+  artifacts: [workflow/<outcome-id>/README.md, workflow/<outcome-id>/tickets/<ticket-id>.md, workflow/<outcome-id>/claims/<ticket-id>.md, revision-bound Evidence references]
+  effects: []
+  forbiddenChecks:
+    - criterion: treat a Map as writable authority
+      evidence: The raw evidence identifies the canonical Local Markdown records as the writable authority and says the Work frontier is computed from their state requirements and live Claims.
+      observed: false
+    - criterion: imply scheduling or hosted concurrency
+      evidence: The raw evidence records scheduling as unavailable, invokes no hosted service, and limits Coordination to atomic Claim creation.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [Git initialization, GitHub, hosted tracker, second writable map]
+  proof: [a human can read the canonical records without a parser or network and the Work frontier is computed from state requirements and live Claims]
+  responsibility: [one Outcome owner and one Work owner per Ticket remain explicit]
+  route: [durable-local-markdown-baseline]
+  state: [accepted-tickets-frontier]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-local-markdown-no-git-1.txt
+  sha256: 576b2eb9cbb2d338d81fff387d0f1eaad61dd01b9877b54ca97ef7391898b52b

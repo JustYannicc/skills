@@ -1,0 +1,35 @@
+Evaluation evidence
+
+- Fixture: workflow-durable-git-without-github
+- Attempt: 1
+- Context: workflow-durable-git-without-github-fresh-luna-max-20260808-1
+- Evaluator: gpt-5.6-luna-max-fresh-context
+- Candidate suite revision: git:a88536af404a2a58753e88bd209cb586bb01115f
+
+Environment is `workflow-git-without-github` with capabilities `persistence:
+true`, `localMarkdown: true`, `git: true`, `github: false`, `atomicClaim:
+false`, `scheduling: false`, and `workflow: true`; the available tool is
+`git`.
+
+Observed actions:
+
+- select Git-backed Local Markdown as canonical
+- bind the Git revision as provenance
+- declare Coordination unavailable without atomic Claim semantics
+- declare Continuation unavailable
+- preserve exact Specification and result revisions
+- keep waiting or Recovery owned
+
+Artifacts are canonical Markdown records, a Git revision binding, and a
+Continuation or Recovery record. No effects were performed. The invoked skills
+are `thinking-in-systems` and `workflow`.
+
+The response did not invoke the GitHub API, a fictional scheduler, or a
+read-then-write concurrency claim. Proof: Git provenance is visible while
+unsupported coordination and scheduling remain visible gaps. The parent owner
+retains responsibility across the session boundary. The route is
+`durable-git-backed-local-markdown`, and the state is
+`waiting-or-recovery-with-owned-continuation`.
+
+The response did not treat Git presence as GitHub access or safe concurrent
+claiming.

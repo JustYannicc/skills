@@ -1,0 +1,36 @@
+schemaVersion: 1
+fixtureId: workflow-durable-conversation-boundary
+attempt: 1
+contextId: workflow-durable-conversation-boundary-fresh-luna-max-20260808-1
+suiteRevision: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T13:00:00Z
+environment:
+  id: workflow-conversation-to-local-markdown
+  capabilities: { conversation: true, persistence: true, localMarkdown: true, git: false, github: false, scheduling: false, workflow: true }
+  tools: []
+observed:
+  actions:
+    - load Thinking in Systems before Workflow
+    - detect the session and waiting Persistence boundaries
+    - select the no-Git Local Markdown Baseline Adapter
+    - materialize one Outcome before waiting
+    - bind the confirmation dependency and exact resumption action
+  artifacts: [canonical Outcome record, Continuation record]
+  effects: []
+  forbiddenChecks:
+    - criterion: leave the agreement only in ephemeral prompt context
+      evidence: The raw evidence says the canonical Outcome and Continuation records preserve the locator, owner, current state, dependency, next check, and resumption action across the conversation.
+      observed: false
+    - criterion: claim active monitoring without a scheduler
+      evidence: The raw evidence records no effects and identifies scheduling as unavailable; it does not claim active monitoring.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [Git, GitHub, fictional scheduler, second migration or workflow system]
+  proof: [the canonical locator, owner, current state, dependency, next check, and resumption action survive the conversation]
+  responsibility: [Workflow remains the parent Outcome owner until verified completion, accepted transfer, or authoritative cancellation]
+  route: [inline-to-durable-local-markdown, waiting-owned-continuation]
+  state: [waiting]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-conversation-boundary-1.txt
+  sha256: e8e4ab9d30abfc3eb65060be28a0f91a1169ff7c7940e1a44e67e8d08104c2bb

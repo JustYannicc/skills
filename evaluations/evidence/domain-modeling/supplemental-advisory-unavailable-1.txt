@@ -1,12 +1,13 @@
 Fresh-context behavioral evaluation — domain-modeling-supplemental-advisory-unavailable
 Attempt: 1
-Context ID: fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-41be07be-5495-4010-b070-c1fca23cb1e7
+Context ID: fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-06037001-416c-4dd7-8330-03b7fc5a76bc
 Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T09:58:40Z
+Recorded at (UTC): 2026-08-08T10:44:14Z
+Run mode: one-shot fresh run; no prior transcript or observation was reused as runtime input.
 
 Candidate and exact runtime inputs
 
-- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+- Evaluation candidate: git:cb63a8942e2c160712b0efcd7185723c8c94105f
 - Runtime input (fixture): evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
 - Runtime input SHA-256: 5f1f63a4063f813c1496fe6b03fd9b2df7ca16e573687e5b2118b071b4629616
 - Runtime input (skill): skills/domain-modeling/SKILL.md
@@ -16,7 +17,7 @@ Candidate and exact runtime inputs
 - Runtime input (governing reference, read completely): skills/thinking-in-systems/references/standard.md
 - Runtime input SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 - Runtime input (parent coordinator): skills/workflow/SKILL.md
-- Runtime input SHA-256: 03edaa518317ffaf095c0a11884d5c09ad6336fa2e0b77bbd96274eed703b672
+- Runtime input SHA-256: 9f475b95862b328eb7c4401c35a901aa6cbe212baee85f108fd4b2a22afc7fb1
 - The language-record template was not loaded because the selected Adapter supplied a native language-record shape.
 - The unavailable `terminology-evidence` Supplemental skill was not loaded or invoked.
 

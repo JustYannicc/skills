@@ -1,0 +1,33 @@
+schemaVersion: 1
+fixtureId: workflow-durable-external-adapter
+attempt: 1
+contextId: workflow-durable-external-adapter-fresh-luna-max-20260808-1
+suiteRevision: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T13:01:00Z
+environment:
+  id: workflow-external-adapter-conformance
+  capabilities: { persistence: true, externalAdapter: true, conformanceSuite: true, scheduling: unknown, workflow: true }
+  tools: [external-adapter]
+observed:
+  actions:
+    - run the Adapter conformance boundary
+    - verify Baseline semantics and declared optional levels
+    - map one canonical native record set
+    - record provider and revision
+    - preserve readable state and migration pointers
+  artifacts: [provider capability declaration, canonical native Outcome and Ticket records, conformance Evidence]
+  effects: []
+  forbiddenChecks:
+    - criterion: claim external persistence while identity or continuation semantics are missing
+      evidence: The raw evidence requires the Adapter conformance boundary, preserves readable state and migration pointers, and says the provider is canonical only after conformance; otherwise it remains a derived view with a truthful Local Markdown fallback.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [make the external service canonical from name similarity, maintain bidirectional live synchronization, hide unsupported fields]
+  proof: [the provider either passes conformance and becomes one authority or remains a derived view with a truthful Local Markdown fallback]
+  responsibility: [Workflow retains parent responsibility while conformance or fallback is unresolved]
+  route: [durable-external-adapter-conformance]
+  state: [canonical-after-conformance-or-degraded]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-external-adapter-1.txt
+  sha256: 64616c11e7339fe92d3dcf100d6de0ca3abd22124646d95db2e44d70ce0c00b1

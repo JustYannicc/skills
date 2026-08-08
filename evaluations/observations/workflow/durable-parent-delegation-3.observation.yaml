@@ -1,0 +1,41 @@
+schemaVersion: 1
+fixtureId: workflow-durable-parent-delegation
+attempt: 3
+contextId: fresh-workflow-durable-parent-delegation-luna-max-20260808t120003z-3
+suiteRevision: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T12:00:03Z
+environment:
+  id: workflow-durable-delegation
+  capabilities: { persistence: true, delegation: true, coordination: true, review: true, effects: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - "create child Tickets with accepting Work owners and return routes"
+    - "preserve nested Responsibility"
+    - "record child Claims and result revisions"
+    - "run child Review"
+    - "integrate child Evidence at parent"
+    - "verify authorized real effects"
+    - "run parent Review over the exact integrated state"
+  artifacts: ["parent Outcome record", "two child Ticket records", "revision-bound child Evidence", "parent proof bundle"]
+  effects: ["only authorized effects with real boundary evidence"]
+  forbiddenChecks:
+    - criterion: "treat delegation"
+      evidence: "Delegation remains a bounded responsibility assignment and does not complete O12."
+      observed: false
+    - criterion: "submission"
+      evidence: "A child may submit a result, but a submission does not transition O12."
+      observed: false
+    - criterion: "or child completion as parent completion"
+      evidence: "A child may submit a result, but O12 transitions only after exact integrated parent proof and effect verification."
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: ["transfer parent Ownership to a child", "complete parent from child completion counts", "skip parent Review"]
+  proof: ["child completion returns evidence and the parent terminal transition follows its own proof seam"]
+  responsibility: ["the Outcome owner retains integration and parent terminal responsibility; each child owner retains its bounded duty"]
+  route: [durable-delegation, child-review, parent-review]
+  state: [children-complete-parent-verified-or-reopened]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-parent-delegation-3.txt
+  sha256: 21c1ff12423b61039bfd9a34e5a431ec770beeb4b265010d9263a24ec76cb067
