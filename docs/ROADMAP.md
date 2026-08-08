@@ -20,25 +20,23 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Author `migrate-system` for automatic current-state adoption.
 - Evaluate each skill independently before composing them.
 
-Current state: `thinking-in-systems` is approved. Workflow's Inline route is an
-implemented issue #13 candidate awaiting required human review. Issue #14 now
-has a Durable coordination candidate that extends the same Workflow skill
-through the accepted adapter-neutral work contract and #35 System Record
-representation; its human-review gate remains open.
+Current state: `thinking-in-systems` and Workflow's Inline route are approved.
+Issue #14 has a Durable coordination candidate that extends the same Workflow
+skill through the accepted adapter-neutral work contract and #35 System Record
+representation; its human-review gate remains open. `migrate-system` remains to
+be implemented.
 
 ## Phase 2 — discovery skills
 
-- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Prototype is implemented by issue #19 and remains human-review-required before its Ticket closes.
-- Define and verify the pinned overlays for `research`, `grill-with-docs`, `grilling`, and `to-questionnaire` without copying their full upstream source.
+- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Domain Modeling and Prototype are approved; Wayfinder remains to be implemented.
+- Define and verify the pinned overlays for `research`, `grill-with-docs`, `grilling`, and `to-questionnaire` without copying their full upstream source. The overlay foundation is implemented.
 - Test discovery across technical, personal, organizational, physical, communicative, and agent cases.
 
 ## Phase 3 — delivery and continuity skills
 
 - Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
-- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. `to-spec` is implemented in issue #22's candidate branch and remains human-review-required until explicit maintainer approval.
-- Author universal `review`, including code and configured Supplemental evidence.
-  Issue #25 now has an implementation candidate; its human-review-required
-  gate remains open until the candidate is explicitly accepted.
+- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. To Spec is approved; To Tickets has a human-review-required candidate; Implement and Handoff remain to be implemented.
+- Author universal `review`, including code and configured Supplemental evidence. Review is approved.
 - Prove the lifecycle:
 
 ```text

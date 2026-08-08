@@ -11,13 +11,13 @@ publication remains gated by #32. The validation foundation checks the skill
 against the same deterministic and behavioral proof boundary required for
 every later skill.
 
-Workflow's complete Inline route is implemented as the issue #13 candidate.
+Workflow's complete Inline route is implemented and approved through issue #13.
 It coordinates bounded synchronous work and active mid-work changes through
 immediate Review while preserving exact responsibility, revision, approval,
 effect, interruption, and continuation semantics. Durable coordination is
 implemented as the issue #14 candidate through the same Workflow skill and
-adapter-neutral work contract. Human review of the #13 and #14 candidates
-remains required. Durable System state binds to the accepted #35 System Record
+adapter-neutral work contract. Human review of the #14 candidate remains
+required. Durable System state binds to the accepted #35 System Record
 representation; its one-writable-authority and validator/action-guard boundary
 remains authoritative.
 

@@ -6,8 +6,9 @@ This repository is being built around a simple idea: agents become much more use
 
 ## Skills
 
-No skill has been published yet. Thinking in Systems is approved. Workflow's
-Inline route, To Spec, To Tickets, Review, and Prototype are implemented as candidates.
+No skill has been published yet. Thinking in Systems, Workflow's Inline route,
+To Spec, Domain Modeling, Review, and Prototype are approved. Workflow's
+Durable route and To Tickets are implemented candidates awaiting human review.
 Suite publication remains gated by the composed-suite and clean-install proof
 in #31 and the immutable-release review in #32.
 
@@ -22,7 +23,7 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
 
-### [Workflow](skills/workflow) — Inline and Durable candidate; human review required
+### [Workflow](skills/workflow) — Inline approved; Durable candidate requires human review
 
 Workflow coordinates one parent Outcome from the accepted request through the
 smallest truthful route to verified completion, accepted transfer, or
@@ -44,19 +45,19 @@ authority with constrained YAML formal fields, native Adapter mappings where
 appropriate, and optional read-only projections. The candidate remains
 human-review-required and does not change private or global configuration.
 
-### [To Spec](skills/to-spec) — implementation candidate (human review required)
+### [To Spec](skills/to-spec) — approved
 
-To Spec turns an accepted Outcome contract into a clear Specification artifact for downstream work, or revises it after a material change. It preserves the Outcome's vocabulary, routes material gaps to the capability that owns them, and returns responsibility to Workflow. Issue #22 is still open; this candidate is not published until the human-review gate and composed-suite release proof are complete.
+To Spec turns an accepted Outcome contract into a clear Specification artifact for downstream work, or revises it after a material change. It preserves the Outcome's vocabulary, routes material gaps to the capability that owns them, and returns responsibility to Workflow. Yannic approved issue #22; publication still depends on the composed-suite release proof.
 
 ### [To Tickets](skills/to-tickets) — implementation candidate (human review required)
 
 To Tickets decomposes an accepted Specification into a collectively complete set of bounded, owned, dependency-aware Tickets. It preserves each Result, Authority, Proof seam, containment relationship, and Workflow context; exposes the accepted Work frontier; and returns material Specification or capability gaps without silently changing intent. One bounded Inline unit may remain implicit, while Durable decomposition is reserved for coordination boundaries. Issue #23 remains open until the human-review gate and composed-suite release proof are complete.
 
-### [Review](skills/review) — implementation candidate
+### [Review](skills/review) — approved
 
-Review independently verifies any exact result against its accepted Specification and governing standards at the Proof seam. It shows how the result works, keeps Specification and Standards evidence distinct, checks interaction quality and maintainability across domains, and integrates only configured Supplemental reviewers before returning one revision-bound Verified, Changes required, or Inconclusive verdict. This candidate remains human-review-required before its implementation Ticket can close.
+Review independently verifies any exact result against its accepted Specification and governing standards at the Proof seam. It shows how the result works, keeps Specification and Standards evidence distinct, checks interaction quality and maintainability across domains, and integrates only configured Supplemental reviewers before returning one revision-bound Verified, Changes required, or Inconclusive verdict. Yannic approved issue #25; publication still depends on the composed-suite release proof.
 
-### [Prototype](skills/prototype) — implemented
+### [Prototype](skills/prototype) — approved
 
 Prototype answers one material design question through a reversible experiment.
 Use it when trying, simulating, or rehearsing a candidate can produce evidence
@@ -66,6 +67,15 @@ evidence to the active `'Workflow'` skill. A configured `technical-prototype` Su
 construct a bounded technical result, while Prototype retains evidence
 integration and its completion criterion. Live effects, Specification,
 implementation, Review, and parent completion remain with their owning phases.
+
+### [Domain Modeling](skills/domain-modeling) — approved
+
+Domain Modeling establishes shared, operative terminology for the active scope.
+It traces candidate meanings to authoritative sources, exposes conflicts and
+unknowns, records accepted decisions through the selected Adapter when they
+must persist, and returns the bounded language result to Workflow. Yannic
+approved issue #16; publication still depends on the composed-suite release
+proof.
 
 ## Planned suite
 
