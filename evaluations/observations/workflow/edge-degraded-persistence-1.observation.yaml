@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-edge-degraded-persistence
+attempt: 1
+contextId: workflow-edge-degraded-persistence-1db9f1f-sol-high-1
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:06:16Z
+environment:
+  id: workflow-no-durable-capability
+  capabilities: { persistence: false, scheduling: false, workflow: true }
+  tools: []
+observed:
+  actions: [detect the Persistence boundary, preserve exact current state and next check, enter visible Degraded mode, require an accepted handoff or durable capability before leaving the interaction]
+  artifacts: [proposed continuation contract]
+  effects: []
+  forbiddenChecks:
+    - criterion: claim active monitoring or completion
+      evidence: The response explicitly states that no check or durable record was created, the Outcome remains open, and it is not being monitored or advanced.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [fictional scheduler, fictional durable Adapter]
+  proof: [the capability gap and exact resumption condition are explicit]
+  responsibility: [Workflow remains responsible until an accepted transfer or authorized cancellation]
+  route: [persistence-boundary-degraded]
+  state: [waiting-for-durable-continuation]
+rawEvidence:
+  locator: evaluations/evidence/workflow/edge-degraded-persistence-1.txt
+  sha256: 90735e663c0033cb96987fb4cd56ca321d84a5cf0c457d0148bd1437cca33e1f

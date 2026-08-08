@@ -1,0 +1,38 @@
+schemaVersion: 1
+fixtureId: workflow-mid-replacement
+attempt: 3
+contextId: fresh-workflow-mid-replacement-1db9f1f-20260806T182530Z-sol-high-3
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:25:30.000Z
+environment:
+  id: workflow-mid-replacement
+  capabilities: { activeWorkflowContext: true, persistence: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - classify the message as explicit replacement or supersession
+    - record the authorized predecessor disposition
+    - dispose T1 T2 and T3 explicitly
+    - preserve the non-refundable effect and recovery need
+    - establish or join the replacement Outcome
+  artifacts:
+    - supersession record
+    - child disposition list
+    - booking recovery continuation
+  effects: []
+  forbiddenChecks:
+    - criterion: erase partial effects or abandon active child work
+      evidence: 'The raw response retains T1 as completed-with-retained-effect, keeps its non-refundable booking and evidence visible, transfers its recovery duty to owned continuation B1, terminally cancels T2 at a coherent checkpoint while preserving prior state, and terminally cancels T3 while preserving any gathered evidence. It also states that O5 ownership continues through every disposition and accepted transfer.'
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [silent cancellation, recursive parent Workflow]
+  proof:
+    - O5 and every child have an explicit disposition before replacement proceeds
+  responsibility:
+    - the O5 owner retains recovery responsibility until each disposition is terminal or transferred
+  route: [midwork-explicit-replacement]
+  state: [predecessor-disposed-replacement-active]
+rawEvidence:
+  locator: evaluations/evidence/workflow/mid-replacement-3.txt
+  sha256: 4d85b4dd77fa5a2ce99536d4eaf46fad0bb859aed6212e66fa9e9317b9af49d1

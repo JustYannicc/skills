@@ -1,0 +1,10 @@
+Paused before the door-controller effect boundary. I classified “Pause this and answer a different question first” as an unrelated switch. No door-controller update was performed.
+
+## Continuation for Outcome O8
+
+- **State:** Paused with an accepted continuation; Workflow retains Outcome O8 and its terminal proof.
+- **Continuous inventory work:** The completed range ends before item 14. The exact pickup point is item 14. The first resumption action is to reopen the preserved O8 inventory context at item 14, inspect that item, and continue the inventory from there. The O8 owner remains responsible for completing and reviewing the inventory.
+- **Guarded atomic update:** The exact door-controller proposal approved at revision D3 remains preserved and has not crossed its effect boundary. Its owner remains responsible. Before any later effect, re-read the preserved proposal, confirm the result is still revision D3, and recheck that D3’s approval, preconditions, validity, expiry, and revocation state still hold. If the proposal or a material assumption changed, invalidate the affected approval and route the new revision through Review and approval. Only after a successful D3 recheck may the owner perform the effect, observe its result or failure, and verify it.
+- **Proof still required:** Evidence that inventory resumed at item 14 without reconstruction; evidence that any door-controller effect used the still-valid approval for exact revision D3; effect observation and verification; integrated Review of O8.
+
+The separate question can now be handled as its own Outcome. O8 and the guarded effect remain paused at these explicit resumption points until that switch returns.

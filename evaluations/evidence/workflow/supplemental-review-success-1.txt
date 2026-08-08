@@ -1,0 +1,9 @@
+## Review — Outcome O20
+
+**Reviewed seam:** the accepted O20 Specification revision and the revised public-room-layout result revision supplied at `workflow.review`.
+
+**Supplemental evidence:** The configured advisory mobility-access reviewer reports insufficient turning clearance at the east entrance. Link that finding to the exact reviewed revisions as Review evidence. The Supplemental reviewer owns the finding; it does not issue the universal verdict.
+
+**Universal Review verdict: Changes required.** The current result does not satisfy the mobility-access condition at the east entrance. Revise the entrance clearance, then run universal Review and the configured mobility-access review against the new exact result revision.
+
+Universal Review owns the integrated verdict. Workflow retains parent responsibility and keeps O20 open through revision, verification, integration, and terminal proof. The Supplemental finding neither replaces universal Review nor completes the parent Outcome.

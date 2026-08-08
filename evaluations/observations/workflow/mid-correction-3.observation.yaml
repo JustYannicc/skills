@@ -1,0 +1,35 @@
+schemaVersion: 1
+fixtureId: workflow-mid-correction
+attempt: 3
+contextId: workflow-mid-correction-1db9f1f-sol-high-3
+suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:16:55.000Z
+environment:
+  id: workflow-mid-correction
+  capabilities: { activeWorkflowContext: true, persistence: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - classify the message as correction
+    - append a correction event
+    - invalidate the false effect evidence
+    - reopen O2 at accepted and route recovery from the failed seam
+  artifacts:
+    - correction event linked to M4
+  effects: []
+  forbiddenChecks:
+    - criterion: rewrite transition history or leave the reopened Outcome ownerless
+      evidence: The response explicitly retains the original M4 report and earlier completion transition as historical events, appends a correction, and states that the current owner resumes responsibility for O2 through verified completion.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [new unrelated Outcome, recursive parent Workflow]
+  proof:
+    - the earlier completion remains in history and its invalid evidence is explicit
+  responsibility:
+    - the current owner resumes responsibility for O2
+  route: [midwork-correction-recovery]
+  state: [accepted-reopened]
+rawEvidence:
+  locator: evaluations/evidence/workflow/mid-correction-3.txt
+  sha256: 08948f5363a154acbcc084f196f3b84ca5b4a79eba42fc6d1bf26e3cbfc0d5f2

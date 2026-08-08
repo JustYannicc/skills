@@ -1,0 +1,22 @@
+PR #37 Workflow rewrite — independent adversarial review
+Candidate reviewed: 012c28c6b2498e376e77db5a21e4345b3507aa4e
+Fixed point: origin/main
+Reviewer: independent GPT-5.6 Sol High
+Date: 2026-08-06
+
+Critical findings: 0
+Major findings: 5
+
+1. Workflow observations and the aggregate report were bound to the prior candidate and used Luna Max rather than fresh Sol High evidence for the rewrite.
+2. The executable diagram and operating step made To Spec and To Tickets unconditional, contradicting the accepted Inline semantic Specification and implicit Ticket thresholds.
+3. Workflow described an accepted handoff but did not invoke the separate Handoff capability or show it in the runtime route.
+4. The active-work table did not give failed Authority verification an explicit blocked disposition for an unauthorized override.
+5. The rewritten migration and Supplemental routes lacked focused fixtures; accepted transfer and authoritative cancellation were also uncovered.
+
+Resolution candidate: 1db9f1f39800c2a502cade76d2e36487799d3e2e
+
+- Both Mermaid routes now branch on Specification sufficiency and materialized-Ticket need.
+- Transfer and unsupported automatic resumption invoke Handoff, with an explicit Degraded fallback.
+- Failed Authority preserves the proposal, blocks guarded effects, and enters owned approval or waiting with an observable unblock condition.
+- Focused fixtures now cover current-state migration, Supplemental success, required Supplemental failure, accepted transfer, and authoritative cancellation.
+- Fresh Sol High observations, whole-suite revision binding, report regeneration, and final validation remain the terminal evidence gate.

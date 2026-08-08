@@ -6,7 +6,8 @@ This repository is being built around a simple idea: agents become much more use
 
 ## Skills
 
-No skill has been published yet. Thinking in Systems is approved, but suite
+No skill has been published yet. Thinking in Systems is approved. Workflow's
+Inline route is implemented as a human-review-required candidate. Suite
 publication remains gated by the composed-suite and clean-install proof in #31
 and the immutable-release review in #32.
 
@@ -21,6 +22,23 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
 
+### [Workflow](skills/workflow) — Inline candidate; human review required
+
+Workflow coordinates one parent Outcome from the accepted request through the
+smallest truthful route to verified completion, accepted transfer, or
+authoritative cancellation. Its Inline route keeps the Outcome, Specification,
+Ticket, evidence, and immediate Review in the conversation for bounded
+synchronous work while preserving the same systems method, responsibility,
+Authority, exact revisions, effect proof, and parent terminal check used by
+Durable work.
+
+During active work it classifies clarification, extensions or Constraint
+changes, corrections, authorized exceptions, explicit replacements, and
+unrelated switches before changing state. Material changes invalidate and
+propagate only affected work; parent and unaffected delegated ownership remain
+intact. Durable Adapter coordination is intentionally left to #14 and the
+System Record representation remains undecided in #35.
+
 ### [To Spec](skills/to-spec) — implementation candidate (human review required)
 
 To Spec turns an accepted Outcome contract into a clear Specification artifact for downstream work, or revises it after a material change. It preserves the Outcome's vocabulary, routes material gaps to the capability that owns them, and returns responsibility to Workflow. Issue #22 is still open; this candidate is not published until the human-review gate and composed-suite release proof are complete.
@@ -29,7 +47,7 @@ To Spec turns an accepted Outcome contract into a clear Specification artifact f
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 17 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied. For documented planning and design, Grill With Docs composes Grilling's decision-tree interview with Domain Modeling's shared-language and decision records through the selected Adapter.
 
-The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-04-thinking-in-systems-approved.md).
+The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-06-workflow-rewrite-candidate.md).
 
 Publication evidence, clean-install proof, behavioral evaluation, and the
 separate private-activation gate are defined by the
@@ -37,40 +55,47 @@ separate private-activation gate are defined by the
 
 ## Workflow
 
-Setup runs once and installs the standing entry. After that, every request uses
-Thinking in Systems and the proportional Workflow automatically. The phases are
-universal: implementation may mean sending a reply, changing a routine,
-performing organizational work, modifying a physical environment, or writing
-code. Inline work compresses the artifacts; Durable work records them through
-the selected Adapter.
+Setup runs once and installs the standing entry. After that, every request uses Thinking in Systems and the proportional Workflow automatically. The phases are universal: implementation may mean sending a reply, changing a routine, performing organizational work, modifying a physical environment, or writing code. Inline work compresses the artifacts; Durable work records them through the selected Adapter.
 
 ```mermaid
-flowchart LR
-  SU["Setup System Thinking<br/>run once"] --> TS["Thinking in Systems<br/>every request"]
-  TS --> WF["Workflow<br/>own the Outcome"]
-  WF --> MG{"Existing scope<br/>currently mapped?"}
-  MG -- "no" --> MI["Migrate current state"]
-  MG -- "yes" --> DS["Discover what is missing"]
-  MI --> DS
-  DS --> SP["Specify the Outcome"]
-  SP --> TK["Decompose when useful"]
-  TK --> IM["Implement the work"]
-  IM --> RV["Review the exact result"]
-  RV --> VE["Verify effect and<br/>parent Outcome"]
-  VE --> LC["Learn and propagate change"]
-  LC -. "new evidence or work" .-> WF
-  WF <--> HO["Wait, resume, or hand off"]
+flowchart TD
+  SU["Setup System Thinking<br/>install, configure, teach, verify, remove itself"] --> TS["Thinking in Systems<br/>govern every request"]
+  TS --> WF["Workflow<br/>own the parent Outcome"]
+  WF --> MG{"Current state represented<br/>well enough to proceed?"}
+  MG -- "No, Durable existing scope" --> MI["Migrate System<br/>map current state only"]
+  MI --> F{"Material fog remains?"}
+  MG -- "Yes" --> F
+  F -- "Yes" --> WAY["Wayfinder<br/>strategy and decision frontier"]
+  WAY --> DOC{"Durable plan or<br/>design records?"}
+  DOC -- "Yes" --> GWD["Grill With Docs"]
+  GWD --> GR["Grilling<br/>design-tree decisions"]
+  GWD --> DM["Domain Modeling<br/>shared language"]
+  DOC -- "No" --> GR
+  DOC -- "No" --> DM
+  GR --> SG{"Semantic Specification<br/>already sufficient?"}
+  DM --> SG
+  F -- "No" --> SG
+  SG -- "No" --> SP["To Spec<br/>accepted Outcome contract"]
+  SG -- "Yes" --> TG{"Materialized Tickets<br/>needed?"}
+  SP --> TG
+  TG -- "Yes" --> TK["To Tickets<br/>bounded work contracts"]
+  TG -- "No" --> IM["Implement<br/>execute accepted work"]
+  TK --> IM
+  IM --> RV["Review<br/>verify exact result revision"]
+  RV -- "changes required" --> IM
+  RV -- "inconclusive" --> HO["Wait, resume, or Handoff skill<br/>responsibility persists"]
+  HO --> RV
+  RV -- "verified" --> VE["Perform and verify<br/>authorized effects"]
+  VE --> PR["Parent Review<br/>integrate child evidence"]
+  PR -- "new evidence or material change" --> WF
+  PR --> TC{"Terminal condition"}
+  TC --> DONE["Verified completion"]
+  TC --> HT["Handoff skill"]
+  HT --> TRANSFER["Accepted transfer"]
+  TC --> CANCEL["Authoritative cancellation"]
 ```
 
-The route is not mandatory ceremony or a software pipeline. Workflow chooses
-the smallest path that can satisfy the same responsibility and proof contract.
-The canonical rules are in the [Workflow routing contract](docs/WORKFLOW_ROUTING.md).
-Responsibility across phases, effect gates, parent Review, recovery, and
-terminal proof is defined by the
-[Ownership and completion lifecycle](docs/OWNERSHIP_LIFECYCLE.md).
-Installation, harness-specific instruction changes, Adapter selection,
-verification, rollback, and disposal are defined by the
-[Setup System Thinking contract](docs/SETUP_CONTRACT.md).
+The route is not mandatory ceremony or a software pipeline. Workflow chooses the smallest path that can satisfy the same responsibility and proof contract. The canonical rules are in the [Workflow routing contract](docs/WORKFLOW_ROUTING.md). Responsibility across phases, effect gates, parent Review, recovery, and terminal proof is defined by the [Ownership and completion lifecycle](docs/OWNERSHIP_LIFECYCLE.md). Installation, harness-specific instruction changes, Adapter selection, verification, rollback, and disposal are defined by the [Setup System Thinking contract](docs/SETUP_CONTRACT.md).
 
 ## Distribution
 
