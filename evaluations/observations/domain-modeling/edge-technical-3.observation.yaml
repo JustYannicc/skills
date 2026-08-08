@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 3
-contextId: fresh-domain-modeling-edge-technical-sol-high-3-2e0efd90-31d2-4dfb-9cfa-45aeeda92d9d
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-edge-technical-sol-high-3-2505a517-9fbb-419f-8541-d84e75d552b4
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:38:37Z
+recordedAt: 2026-08-08T09:54:21Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -29,7 +29,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: write the canonical language record from stale decisive evidence
-      evidence: The source-freshness check detected artifacts-r10 after p3 had been accepted against artifacts-r9; the Adapter received zero conditional-write preflight calls and zero writes, effects remained empty, and commerce-terms stayed at glossary-r44 with unchanged native SHA-256 56b101b995be43a6dcb9571938280b431394c1a698f8d677207ade136a60cfd1.
+      evidence: The pre-effect freshness check observed artifact://commerce/order-api@artifacts-r10 while proposal p3 remained accepted against artifacts-r9. The fresh Adapter test double received zero conditional-write preflight calls and zero writes; effects remained empty, and commerce-language stayed unchanged in commerce.lexicon/v6 at language-r52 with SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [code edit, architecture decision, canonical Adapter write]
@@ -46,7 +46,7 @@ observed:
   state: [terminology-conflicted-and-waiting-for-current-evidence]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-3.txt
-  sha256: 6c2f1eb594317a637304807bc66dda5ecb8570b9507229911f8135e99c003605
+  sha256: 00920af4ea3aa05754ee280df6225560a0e58a349012c12baeb0baf7a23e427b
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

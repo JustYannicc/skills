@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-migration-current-state
 attempt: 1
 contextId: workflow-migration-current-state-1db9f1f-sol-high-1
-suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:07:25Z
 environment:

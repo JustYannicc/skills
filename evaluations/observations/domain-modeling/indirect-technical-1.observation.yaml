@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-indirect-technical
 attempt: 1
-contextId: fresh-domain-modeling-indirect-technical-sol-high-1-1df92ce6-3923-40a3-a445-313138e37f8f
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: c66262d2-770d-4b1e-8c11-a66ecea1ae5e
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:41:43.000Z
+recordedAt: 2026-08-08T09:53:32Z
 environment:
   id: adapter-baseline
   capabilities:
@@ -13,7 +13,24 @@ environment:
     delegation: true
     semanticDecisionAuthority: true
     writeAuthority: true
-  tools: [selected Adapter, notification language steward acceptance of proposal notification-language-p4, notification-spec@notifications-r7, recipient-schema@schema-r12]
+  tools:
+    - selected Adapter
+    - notification language steward acceptance of proposal notification-language-p4
+    - notification-spec@notifications-r7
+    - recipient-schema@schema-r12
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/indirect-technical.fixture.yaml
+    sha256: ba9bf831205fba3baeb2304844f63a3445781511913f1740a2b17cb47ba9bc39
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 observed:
   actions:
     - classify the blocker as terminology
@@ -29,10 +46,16 @@ observed:
     - accepted notification language recorded
   forbiddenChecks:
     - criterion: start Specification while the terminology blocker remains
-      evidence: Workflow paused Specification before routing the blocker; the Adapter then committed and reread notification-language-r24, and only the bounded return permits Workflow to resume Specification or discovery.
+      evidence: Specification remained paused throughout routing and persistence; only the bounded return after the guarded commit and confirming reread at language-r62 permits Workflow to choose Specification or discovery.
       observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [to-spec, to-tickets, implement]
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - to-spec
+    - to-tickets
+    - implement
   proof:
     - semantic acceptance distinct from write Authority
     - exact proposal and accepting Actor
@@ -42,21 +65,10 @@ observed:
   responsibility:
     - workflow integrates the result
     - domain-modeling owns the bounded language result
-  route: [workflow-to-domain-modeling]
-  state: [ready-for-specification-or-discovery]
-runtimeInputs:
-  - role: skill
-    locator: skills/domain-modeling/SKILL.md
-    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-  - role: fixture
-    locator: evaluations/fixtures/domain-modeling/indirect-technical.fixture.yaml
-    sha256: ba9bf831205fba3baeb2304844f63a3445781511913f1740a2b17cb47ba9bc39
-  - role: governing-skill
-    locator: skills/thinking-in-systems/SKILL.md
-    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-  - role: governing-reference
-    locator: skills/thinking-in-systems/references/standard.md
-    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  route:
+    - workflow-to-domain-modeling
+  state:
+    - ready-for-specification-or-discovery
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-technical-1.txt
-  sha256: 3afad2ba3ab85cbdd8ed97498f56978be46c5fceee4138e681a41e9f06b9d68f
+  sha256: aa7efc1989f31c7491ff3e86df6e8578405e0a9473da189a7e4ddef651a1d889

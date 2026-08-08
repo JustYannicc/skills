@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-semantic-authority-missing
 attempt: 2
-contextId: fresh-domain-modeling-semantic-authority-missing-20260806t193843z-sol-high-e6eba398
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-semantic-authority-missing-20260808t095739z-sol-high-8a573416
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:38:43Z
+recordedAt: 2026-08-08T09:57:39Z
 environment:
   id: writable-adapter-without-semantic-authority
   capabilities:
@@ -26,7 +26,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: treat Adapter write access as Authority to accept an operative meaning
-      evidence: The response expressly separates records-steward write Authority from the missing semantic decision Authority, leaves resident-member-p2 noncanonical, makes no Adapter write, and claims no result revision.
+      evidence: The response explicitly separates cooperative-records-custodian's guarded write Authority from the absent semantic decision Authority, keeps exact proposal revision resident-member-proposal-a2 noncanonical, makes no Adapter write, and claims no Adapter result revision.
       observed: false
   invoked:
     - thinking-in-systems
@@ -64,4 +64,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/semantic-authority-missing-2.txt
-  sha256: 89bbfbea2cba0ef1302c00d0948ba4b85eb53a0e61ec07ac3906b7421cb98b23
+  sha256: d43cf1bf74cf5ce1b015834d22b5591cd5fc47c9daec0a6a5583d00929f891ea

@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 1
-contextId: fresh-domain-modeling-edge-technical-sol-high-1-bae8ca90-bdec-4dc0-8fbb-b27ed3ee158c
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-edge-technical-sol-high-1-c9f4133b-7bea-4420-9997-94620b5c095d
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:38:09Z
+recordedAt: 2026-08-08T09:54:02Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -29,7 +29,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: write the canonical language record from stale decisive evidence
-      evidence: The pre-write freshness guard found the current decisive API at `artifacts-r10` while proposal `p3` remained accepted against `artifacts-r9`; execution stopped before the effector boundary and left `commerce-language` unchanged at `language-r31` in native shape `native-language/v4`.
+      evidence: The source-freshness guard found artifacts-r10 while p3 remained accepted only against artifacts-r9; the native Adapter recorded zero conditional-write calls, zero write calls, and no effects, while purchase-language-register remained at language-r218 with unchanged native SHA-256 29b03c48794d8dbb472533e8f3f4fc98c684efb7bd6359662778fc2a1abf371c.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [code edit, architecture decision, canonical Adapter write]
@@ -42,13 +42,11 @@ observed:
     - exact resumption action
   responsibility:
     - workflow retains parent responsibility
-  route:
-    - terminology-conflict-recovery
-  state:
-    - terminology-conflicted-and-waiting-for-current-evidence
+  route: [terminology-conflict-recovery]
+  state: [terminology-conflicted-and-waiting-for-current-evidence]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-1.txt
-  sha256: 6fbfd991d0f4560ddaf32f94d01395c246e1c9c10ac5d69c2d48f732d8751d1a
+  sha256: 1c4db0ed257f0a3ba0f9df23ff93d238e84ed286be7266a1b78cb46b658fa2f3
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

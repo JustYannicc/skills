@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 2
-contextId: fresh-domain-modeling-direct-nontechnical-20260806t193734z-sol-high-ffe018f2-0685-44fe-b5b4-6826a8d0b47e
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-direct-nontechnical-20260808t095338z-sol-high-a26aff7e-cc51-4bee-a70c-4e0e4f307d14
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:37:34.000Z
+recordedAt: 2026-08-08T09:53:38.000Z
 environment:
   id: adapter-without-language-shape
   capabilities:
@@ -39,7 +39,7 @@ observed:
     - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The response gives each term a distinct operative boundary, records their overlap conditions, and tests an all-three good case plus near misses that separate Event, Appointment, and Commitment.
+      evidence: The response rejects generic substitution, gives each term a distinct operative boundary, and tests an overlapping good case plus three near misses that separate Event, Appointment, and Commitment.
       observed: false
   invoked:
     - thinking-in-systems
@@ -81,4 +81,4 @@ runtimeInputs:
     sha256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-2.txt
-  sha256: bb155d0251cd4bc1a3d930615026928b659436e2acf0d9701ec7b84499c7a897
+  sha256: 0e1fd7e848ed8849dd3f05cb769fbd995bf074eef8f9c5c3d90d17db222d4fea

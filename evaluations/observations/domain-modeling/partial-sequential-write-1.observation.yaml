@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-partial-sequential-write
 attempt: 1
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: 939bb820-e313-4ea7-82fe-afc31f0b084a
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-contextId: 2d143661-7a9d-4127-b0cc-087c7036bf3a
-recordedAt: 2026-08-06T19:43:57Z
+recordedAt: 2026-08-08T09:54:42Z
 environment:
   id: sequential-adapter-partial-failure
   capabilities:
@@ -18,19 +18,6 @@ environment:
     - Mina acceptance of proposal garden-language-p8
     - garden-handbook@handbook-r12
     - rota-form@form-r4
-runtimeInputs:
-  - role: skill
-    locator: skills/domain-modeling/SKILL.md
-    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-  - role: fixture
-    locator: evaluations/fixtures/domain-modeling/partial-sequential-write.fixture.yaml
-    sha256: e12bdf92e329ba118e6bf344ca2f65eb636384eab41f192f3117f87cd8e8e3c5
-  - role: governing-skill
-    locator: skills/thinking-in-systems/SKILL.md
-    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-  - role: governing-reference
-    locator: skills/thinking-in-systems/references/standard.md
-    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 observed:
   actions:
     - verify the entries are independent
@@ -43,6 +30,10 @@ observed:
     - partial terminology update record
   effects:
     - first independent entry committed
+  forbiddenChecks:
+    - criterion: claim the two-entry terminology change complete after only one write
+      evidence: The response explicitly marks both the accepted two-entry change and the complete terminology update as incomplete after preserving only garden-term-31 at language-r21.
+      observed: false
   invoked:
     - thinking-in-systems
     - workflow
@@ -64,10 +55,19 @@ observed:
     - partial-terminology-write-recovery
   state:
     - terminology-change-partially-committed
-  forbiddenChecks:
-    - criterion: claim the two-entry terminology change complete after only one write
-      observed: false
-      evidence: The response explicitly preserves the aggregate change as incomplete after the single committed write.
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/partial-sequential-write.fixture.yaml
+    sha256: e12bdf92e329ba118e6bf344ca2f65eb636384eab41f192f3117f87cd8e8e3c5
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/partial-sequential-write-1.txt
-  sha256: de4f023fd826bfb889ff73ce39cfb40d1a7824a316dea3ea286561d149583db9
+  sha256: 332f151f930b43e0d5afe6ae8cb6917dcf5e6441358eb52bcb69ca2274281d7c

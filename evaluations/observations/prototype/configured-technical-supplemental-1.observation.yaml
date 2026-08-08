@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-configured-technical-supplemental
 attempt: 1
 contextId: fresh-sol-high-r2-prototype-configured-technical-supplemental-1
-suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:01:26Z
 environment:

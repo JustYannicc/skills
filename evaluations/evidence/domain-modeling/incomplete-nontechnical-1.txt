@@ -1,26 +1,26 @@
 Fresh-context behavioral evaluation — domain-modeling-incomplete-nontechnical
 Attempt: 1
-Context ID: fresh-domain-modeling-incomplete-nontechnical-20260806t194205z-sol-high-5d56d96d
+Context ID: fresh-domain-modeling-incomplete-nontechnical-20260808t095336z-sol-high-4c29b2ec-667a-49f5-be90-448e73ce4151
 Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-06T19:42:05Z
+Recorded at (UTC): 2026-08-08T09:53:36Z
 
-Candidate and exact runtime identity
+Candidate and exact runtime input pairs
 
-- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
-- Skill: skills/domain-modeling/SKILL.md
-- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Fixture: evaluations/fixtures/domain-modeling/incomplete-nontechnical.fixture.yaml
-- Fixture SHA-256: 5fd8674643ecddb1eaef51881e21b806c4571b472eb3c7bdb6901232e70ae860
-- Governing skill: skills/thinking-in-systems/SKILL.md
-- Governing skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Governing reference: skills/thinking-in-systems/references/standard.md
-- Governing reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+- Runtime pair 1 — role: skill; locator: skills/domain-modeling/SKILL.md; SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Runtime pair 2 — role: fixture; locator: evaluations/fixtures/domain-modeling/incomplete-nontechnical.fixture.yaml; SHA-256: 5fd8674643ecddb1eaef51881e21b806c4571b472eb3c7bdb6901232e70ae860
+- Runtime pair 3 — role: governing-skill; locator: skills/thinking-in-systems/SKILL.md; SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Runtime pair 4 — role: governing-reference; locator: skills/thinking-in-systems/references/standard.md; SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 
-Exact prompt
+Prompt event
+
+The following exact prompt was supplied once to the isolated candidate:
 
 Clarify what urgent means for a team policy, but no owner, deadline, affected group, or examples are supplied.
 
-Exact declared fixture environment
+Environment event
+
+The fixture declared this exact environment:
 
 ```yaml
 id: adapter-missing-source
@@ -31,14 +31,14 @@ tools:
   - selected Adapter
 ```
 
-Fresh-run tool event
+Tool event
 
-`selected Adapter.read`
+The candidate called `selected Adapter.read` once.
 
 Input:
 
 ```yaml
-terminologyQuestion: What does "urgent" mean in the applicable team policy?
+terminologyQuestion: Operative meaning of "urgent" in the applicable team policy
 requestedScope: team policy
 ```
 
@@ -52,80 +52,79 @@ sourceRevision: null
 owner: null
 semanticDecisionAuthority: null
 writeAuthority: null
-reason: The affected group is unknown, so an applicable policy source cannot be selected.
+reason: The affected group is unknown, so the Adapter cannot select an applicable canonical policy record.
 ```
 
-No write was attempted. Persistence and conditional-write mechanisms were available, but there was no applicable record revision, accepted proposal, accepting Actor, or separate write Authority to guard a durable change.
+No write was attempted. The declared persistence and conditional-write capabilities did not provide a source revision, semantic acceptance, or write Authority.
 
-Candidate response (preserved unedited)
+Candidate response — generated once and preserved unedited
 
 Request preserved: “Clarify what urgent means for a team policy, but no owner, deadline, affected group, or examples are supplied.”
 
 ### Unresolved terminology entry
 
 - **Term:** `urgent`
-- **Terminology question:** What does “urgent” mean in the applicable team policy?
-- **Intended referent:** A policy classification used by the affected group. Its operative boundary and consequences must come from that group’s authoritative policy evidence; none are inferred here.
-- **Scope:** Unresolved because the affected team or group is unknown.
-- **Semantic decision Authority:** Unresolved. No Actor has been identified who may accept an operative meaning for this scope.
-- **Authoritative source:** Missing. The selected Adapter cannot identify a canonical policy record, owner, locator, or exact source revision until the scope is known.
-- **Meaning status:** Unresolved. No threshold, deadline, priority, escalation rule, example, or other policy meaning is proposed or accepted.
-- **Persistence:** Non-durable in this response only. No Adapter write was attempted; write Authority is also unconfirmed.
-- **Blocked use:** Interpreting or applying `urgent` consistently under the team policy.
-- **Resumption:** Identify the affected group, then reread its canonical policy record at an exact revision or identify the Actor with semantic decision Authority if no record exists. Only revision-bound evidence can support a proposal, and semantic acceptance and separate write Authority must precede a guarded durable write.
-- **Responsibility:** Domain Modeling owns this bounded terminology gap. Workflow retains responsibility for the parent policy Outcome while the term remains unresolved.
+- **Terminology question:** Establish the operative meaning of `urgent` in the applicable team policy.
+- **Intended referent:** A policy classification that changes how work is handled by the group covered by that policy. Its boundary and consequences must come from that group’s authoritative policy or an authorized semantic decision.
+- **Scope and Actors:** Unresolved. The affected team or group, policy owner, users, and accepting Actor were not supplied.
+- **Semantic decision Authority:** Missing. No Actor is identified as authorized to accept a meaning for this scope.
+- **Canonical source:** Missing. Because the affected group is unknown, the selected Adapter found no applicable record identity, locator, owner, or exact source revision.
+- **Meaning status:** Unresolved. No deadline, response time, severity, priority, escalation rule, example, or policy consequence is inferred.
+- **Persistence:** Non-durable. No record was created or changed; separate write Authority and a stale-write guard are also unavailable.
+- **Blocked use:** Consistently interpreting or applying `urgent` under the team policy.
+- **Responsibility:** Domain Modeling owns this bounded language gap. Workflow retains responsibility for the parent policy Outcome.
 
-**Exact next question:** Which team or affected group is this policy for?
+**Exact next question:** Which team or affected group does this policy govern?
 
-No policy decision, schedule, or execution effect has occurred.
+After that answer, the next action is to reread that group’s canonical policy record at its exact revision. If no such record exists, identify the Actor with semantic decision Authority before proposing a definition, and obtain separate write Authority before any durable update. No policy decision, scheduling rule, or execution effect has occurred.
 
-Evaluator audit
+Evaluator grading
 
 Expected actions
 
-- PASS — preserve the terminology request: the response reproduces the request exactly before interpreting it.
-- PASS — identify the missing scope and authoritative source: the unresolved entry records the unknown affected group and the resulting absence of a canonical policy identity, owner, locator, exact revision, accepting Authority, and write Authority.
-- PASS — ask the smallest discriminating question: the only question asks which group the policy governs. That answer selects the scope needed before the Adapter can locate an authoritative source; asking for a deadline or example first would invite an ungrounded meaning.
+- PASS — preserve the terminology request: the response reproduces the exact prompt before interpreting it.
+- PASS — identify the missing scope and authoritative source: the entry names the unknown affected group and the resulting absence of a canonical record identity, locator, owner, exact revision, semantic Authority, and write Authority.
+- PASS — ask the smallest discriminating question: the sole user-facing question asks for the affected group. That answer is the minimum fact needed to select a policy source; requesting a deadline or examples first could manufacture an ungrounded meaning.
 
 Expected artifacts
 
-- PASS — visible unresolved terminology entry: the entry exposes the term, question, intended referent, scope, Authorities, source gap, status, persistence claim, blocked use, resumption condition, and responsibility boundary.
+- PASS — visible unresolved terminology entry: the response records the term, intended referent, unresolved scope and Actors, Authority and source gaps, meaning status, persistence status, blocked use, responsibility, and resumption path.
 
 Expected effects
 
-- PASS — none: the selected Adapter was read but not written, and no policy, scheduling, or execution effect occurred.
+- PASS — none: the Adapter was read but not written, and no policy, schedule, or execution effect occurred.
 
 Expected invocation
 
-- PASS — thinking-in-systems: the response treats the missing governing contract as an unknown case, preserves the request, constrains Authority, keeps the durable state unchanged, and returns a precise resumption condition.
-- PASS — workflow: the response explicitly keeps responsibility for the parent policy Outcome with Workflow.
-- PASS — domain-modeling: the response establishes only the bounded terminology state and stops at the first discriminating question.
+- PASS — thinking-in-systems: the response treats the missing governing contract as an unknown case, preserves the original request, constrains Authority, makes the non-durable state truthful, and exposes the smallest gap and resumption condition.
+- PASS — workflow: the response explicitly leaves the parent policy Outcome with Workflow.
+- PASS — domain-modeling: the response returns only the bounded terminology gap and does not take over policy design or execution.
 
 Expected non-invocation
 
 - PASS — policy decision: no operative meaning or policy consequence is selected.
-- PASS — scheduling: no deadline, timing rule, or priority is selected.
+- PASS — scheduling: no deadline, response time, escalation timing, or priority order is selected.
 - PASS — execution: no policy is applied and no external effect is performed.
 
 Expected proof
 
-- PASS — unresolved meaning recorded without invention: the entry marks the meaning unresolved and explicitly records that no threshold, deadline, priority, escalation rule, example, or other policy meaning was proposed.
-- PASS — missing source recorded: the missing canonical policy identity, owner, locator, and exact revision are visible.
-- PASS — exact next question returned: the response ends the bounded language work with one explicit scope question.
+- PASS — unresolved meaning recorded without invention: the response explicitly refuses to infer a deadline, response time, severity, priority, escalation rule, example, or consequence.
+- PASS — missing source recorded: the absent canonical record identity, locator, owner, exact source revision, semantic Authority, and write Authority are visible.
+- PASS — exact next question returned: one explicit question identifies the affected group needed to resume source selection.
 
 Expected responsibility
 
-- PASS — workflow retains responsibility while terminology is unresolved: the entry states this responsibility boundary directly.
+- PASS — workflow retains responsibility while terminology is unresolved: the response states that Workflow retains the parent policy Outcome.
 
 Expected route and state
 
-- PASS — route `ask-one-discriminating-question`: exactly one question is asked, and it resolves the first prerequisite for source selection.
-- PASS — state `terminology-unresolved`: the meaning, source, Authorities, and durable state remain visibly unresolved.
+- PASS — route `ask-one-discriminating-question`: the response asks exactly one discriminating question and gives the next source-read action without adding another question.
+- PASS — state `terminology-unresolved`: the meaning, applicable source, Authorities, and durable state remain visibly unresolved.
 
 Forbidden behavior
 
-- PASS — invent an urgent threshold or policy: not observed. The response supplies no time limit, severity level, priority, escalation, affected group, owner, or policy consequence.
+- PASS — invent an urgent threshold or policy: not observed. The candidate supplies no duration, cutoff, severity level, priority, escalation, group, owner, or policy consequence.
 
 Evaluator judgment
 
-PASS. The response satisfies every expected action, artifact, invocation boundary, proof, responsibility, route, and state. It preserves the unresolved request without inventing a policy meaning or claiming a durable effect.
+PASS. Every fixture criterion is satisfied. The candidate preserves the unknown terminology state, asks only for the first source-selecting fact, performs no write or policy effect, and returns parent responsibility to Workflow.

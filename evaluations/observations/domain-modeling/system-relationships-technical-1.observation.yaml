@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-system-relationships-technical
 attempt: 1
-contextId: fresh-domain-modeling-system-relationships-technical-sol-high-1-ecf2f901-4636-45a4-8b6f-aec5eb8ba4f9
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-system-relationships-technical-20260808t095915z-sol-high-08e6cff9
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:42:28Z
+recordedAt: 2026-08-08T09:59:15Z
 environment:
   id: adapter-system-relationships
   capabilities:
@@ -36,7 +36,7 @@ observed:
     - shared System relationship language available to Workflow
   forbiddenChecks:
     - criterion: replace the System relationships with contains requires or related record relationships
-      evidence: The Adapter-native entries use Containing System, Subsystem, Peer System, Upstream System, and Dependent System, and the response explicitly rejects generic contains, requires, or related substitutions.
+      evidence: The atomic native payload and verified language-r19 reread use Containing System, Subsystem, Peer System, Upstream System, and Dependent System entries; the one-shot response explicitly states that generic contains, requires, and related links were not substituted.
       observed: false
   invoked:
     - thinking-in-systems
@@ -62,7 +62,7 @@ observed:
     - system-relationships-recorded
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/system-relationships-technical-1.txt
-  sha256: 0ea673f06146204b185c898f192e186f30970fa71932104decfa5d581a26f92d
+  sha256: d976631560aa101a2c4aae51efb5d1714641040fd38fa1d1915deafee4672ee8
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

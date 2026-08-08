@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-direct-nontechnical-20260806t193657z-sol-high-fe0fbc05
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-direct-nontechnical-20260808t095231z-sol-high-2b123f2c
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:36:57.000Z
+recordedAt: 2026-08-08T09:52:31.000Z
 environment:
   id: adapter-without-language-shape
   capabilities:
@@ -34,7 +34,7 @@ observed:
     - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The durable entry gives Event, Appointment, and Commitment distinct operative boundaries, exclusions, domain relationships, and scenario checks rather than preserving their former interchangeable use.
+      evidence: The fresh response records distinct inclusion tests, exclusions, narrower-kind relationships, good cases, near misses, and an overlap case while preserving the former interchangeable meaning only as a superseded conflict.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [schedule change, policy decision, execution]
@@ -68,4 +68,4 @@ runtimeInputs:
     sha256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-1.txt
-  sha256: 7b1bd45aba302c5fd7717d89163c26511122c45bf5345e47495493f85e592df3
+  sha256: e01c47efc24ef47f96fe842867bd67c183ed7e8bd1e852574dc3d9a659a3f236

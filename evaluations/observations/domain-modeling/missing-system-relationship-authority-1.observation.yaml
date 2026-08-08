@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-missing-system-relationship-authority
 attempt: 1
-contextId: fresh-domain-modeling-missing-system-relationship-authority-20260806t194307z-sol-high-e252f820
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-missing-system-relationship-authority-20260808t095453z-sol-high-09b0caaf
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:43:07Z
+recordedAt: 2026-08-08T09:54:53Z
 environment:
   id: thinking-in-systems-relationship-authority-unavailable
   capabilities:
@@ -25,7 +25,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invent a canonical System relationship without the governing definitions
-      evidence: The response preserves only the accepted Catalog and Search System labels, explicitly leaves their relationship unresolved, names every canonical relationship category only to deny classification, performs no relationship write, truthfully reports that Thinking in Systems was not invoked, and returns the exact capability-restoration route.
+      evidence: The one-shot response preserves only the accepted Catalog and Search System labels, explicitly refuses every canonical relationship category, records the relationship as unresolved, performs no write, and requires restoration of the governing relationship authority before classification can resume.
       observed: false
   invoked:
     - workflow
@@ -62,4 +62,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/missing-system-relationship-authority-1.txt
-  sha256: a55430c939b62fdd38d05be8abdf125f33525d587817bf289e2ae9d2aa2884aa
+  sha256: 37bf2f6f5f45b53425fc440fe102ed5af831bcc2575013504a2d845af9226981

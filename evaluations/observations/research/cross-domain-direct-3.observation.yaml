@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-cross-domain-direct
 attempt: 3
 contextId: fresh-research-cross-domain-direct-final-3
-suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:19:10.000Z
 environment:

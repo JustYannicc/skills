@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-incomplete-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-incomplete-nontechnical-20260806t194205z-sol-high-5d56d96d
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-incomplete-nontechnical-20260808t095336z-sol-high-4c29b2ec-667a-49f5-be90-448e73ce4151
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:42:05.000Z
+recordedAt: 2026-08-08T09:53:36.000Z
 environment:
   id: adapter-missing-source
   capabilities:
@@ -21,7 +21,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invent an urgent threshold or policy
-      evidence: The response records that no threshold, deadline, priority, escalation rule, example, or other policy meaning is proposed or accepted.
+      evidence: The response keeps the meaning unresolved and supplies no duration, cutoff, severity level, priority, escalation, affected group, owner, or policy consequence.
       observed: false
   invoked:
     - thinking-in-systems
@@ -56,4 +56,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/incomplete-nontechnical-1.txt
-  sha256: 624e5f8c70024216af753fddc190ef7ba48cc269538bff165881f538946771a7
+  sha256: 8b48444b54e1f92ffb67eb7f361f44adc36a0f94926426945d3aa60bf3c570f7

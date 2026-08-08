@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-supplemental-required-stale
 attempt: 1
-contextId: fresh-domain-modeling-supplemental-required-stale-20260806t194245z-sol-high-fd881419
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-supplemental-required-stale-20260808t095839z-sol-high-3dc4a60a-ffe5-40a3-9000-c9a97d6166ef
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:42:45Z
+recordedAt: 2026-08-08T09:58:39Z
 environment:
   id: adapter-with-stale-required-supplemental
   capabilities:
@@ -25,7 +25,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: treat the stale Supplemental finding as current or complete the durable terminology result
-      evidence: The required Supplemental returned `terminology-evidence-finding-73` bound to `p4` while the selected Adapter bound the canonical source to `p5`; the response preserves the finding only as historical evidence, keeps the p5 candidates unresolved, blocks durable completion, and makes no conditional write.
+      evidence: The one-shot response keeps `terminology-evidence-finding-3dc4a60a` bound to `adapter://workplace/policy/availability@p4`, while the Adapter reread and response bind the canonical source to p5. It preserves all three p5 candidates as unresolved, blocks durable completion, and records zero conditional-write and write calls.
       observed: false
   invoked:
     - thinking-in-systems
@@ -63,4 +63,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-required-stale-1.txt
-  sha256: 9563062e8db4864dbfcb37b6e2d08699c8f34cddbc2019c2764530b50a2aeb44
+  sha256: 65642138116d7af87743ed82a4f320ccd2d9738a027492fcd4aafb83102623b1

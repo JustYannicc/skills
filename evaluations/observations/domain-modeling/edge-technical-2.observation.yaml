@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 2
-contextId: fresh-domain-modeling-edge-technical-sol-high-2-f3862197-d169-4ea1-ac10-b17e879c9481
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-edge-technical-20260808t095411z-sol-high-ba02e61c-c32e-4d73-b665-e77e780f2d94
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:38:25Z
+recordedAt: 2026-08-08T09:54:11Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -29,7 +29,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: write the canonical language record from stale decisive evidence
-      evidence: The fresh Adapter test double received zero conditional-write and write calls; the native representation, content digest, and source/result revision remained unchanged at catalog-language-record/v4, sha256:5280264213355644a12e92b976d2c91b28f4cb113f77bc24ef3ebaf4a08a1724, and language-r44.
+      evidence: The selected Adapter recorded zero conditional-write calls and zero write calls; its commerce-language/native-v5 snapshot, record identity commerce-language, canonical locator adapter://commerce/language, source/result revision language-r52, and SHA-256 23bb7ce00de0da00900955d9d5971773446a270eef595f4a550046cbef7ae594 were unchanged.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [code edit, architecture decision, canonical Adapter write]
@@ -48,7 +48,7 @@ observed:
     - terminology-conflicted-and-waiting-for-current-evidence
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-2.txt
-  sha256: f762e923a04fa662a67a701ba20a0d2df62ec4fe698c3a798b7a81ca0d08ebe1
+  sha256: 243db940ab33126b81fe59ec25b995f79c6955767f4cc204610438a7bab2c55c
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

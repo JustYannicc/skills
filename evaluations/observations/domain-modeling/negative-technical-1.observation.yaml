@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-negative-technical
 attempt: 1
-contextId: fresh-domain-modeling-negative-technical-sol-high-1-797b8b82-f9a7-437e-9a8e-df2a5503e30e
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-negative-technical-sol-high-1-4fdcdc89-4bc2-4faa-a419-a9c507f70b4a
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:42:03Z
+recordedAt: 2026-08-08T09:54:34Z
 environment:
   id: architecture-decision-with-clear-language
   capabilities:
@@ -20,7 +20,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invoke Domain Modeling merely because the System boundary is undecided
-      evidence: The response identifies already-operative terminology, routes the unresolved ownership boundary to Workflow as a System-design decision, and explicitly states that Domain Modeling was not invoked.
+      evidence: The response treats the accepted meanings as unchanged, routes the unresolved ownership allocation to Workflow as a System-design decision, and explicitly reports Domain Modeling as not invoked.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [domain-modeling, glossary update, architecture approval, implement]
@@ -32,7 +32,7 @@ observed:
   state: [waiting-for-authorized-system-design-decision]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/negative-technical-1.txt
-  sha256: a3bacf9b79ca3a5461b9adf72d67c80453ef3be920981336c4ca2782ffcd19b2
+  sha256: 7e3bf506d62fc3db66f68f5d149fbd1f8b0acf1e0cbed3790127b947aa33c120
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

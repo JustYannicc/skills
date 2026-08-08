@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-indirect-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-indirect-nontechnical-sol-high-1-4a4b943a-c73e-4265-8979-463841412bf2
+contextId: fresh-domain-modeling-indirect-nontechnical-sol-high-1-636cb1c6-64ad-4c51-aae3-b48af86e4495
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:43:26Z
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+recordedAt: 2026-08-08T09:58:06Z
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 environment:
   id: adapter-baseline
   capabilities:
@@ -33,7 +33,7 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt
-  sha256: e07cadc67e0bc2d35282cd1002dc5a34b4546e8cf787776006b5601048560126
+  sha256: 5348b7a04cf72fdda6bc1d953774643fe9bb1d9c03729394f99c38ed2e1514f8
 observed:
   actions:
     - classify the blocker as terminology
@@ -72,6 +72,6 @@ observed:
     - criterion: assign volunteers while the terminology blocker remains
       observed: false
       evidence: >-
-        The route disabled assignment effects; the guarded atomic commit and
-        verification reread each reported zero assignment effects; the response
-        returned the recorded language to Workflow without assigning a volunteer.
+        The guarded atomic write and exact result reread completed before the
+        bounded return to Workflow; the effect inspection reported zero
+        volunteer and schedule-assignment effects.

@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-technical
 attempt: 2
-contextId: fresh-domain-modeling-direct-technical-sol-high-2-35477cc4-036b-41a7-8f9a-5d83b8cd3837
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-direct-technical-sol-high-2-5a63c4d6-9625-4649-9fed-b835ef85486a
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:37:15Z
+recordedAt: 2026-08-08T09:52:45Z
 environment:
   id: adapter-with-native-language-shape
   capabilities:
@@ -35,7 +35,7 @@ observed:
     - shared technical language available to Workflow
   forbiddenChecks:
     - criterion: silently collapse Account, User, and Customer
-      evidence: The response, scenario, and Adapter-native concepts keep Account as the settings container, User as the credential-bearing Actor, and Customer as the receiving or paying party, with each conflict explicit.
+      evidence: The unedited response and native result keep Account as a settings container, User as a credential-bearing Actor, and Customer as a receiving or paying party; the good case, role-overlap near miss, and substitutions preserve those boundaries.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [architecture decision, research, implementation]
@@ -53,7 +53,7 @@ observed:
   state: [terminology-resolved-or-conflict-visible]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-technical-2.txt
-  sha256: c8171241dbbe6efc91c6240521bcc3b97a56ce19d742d6ffe1140dfffa4ab63a
+  sha256: 3fe5e3cd63a9552e523cd2857b1dafafd133e6d5fc58123b729d3d0212d84da7
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

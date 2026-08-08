@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 3
-contextId: fresh-domain-modeling-direct-nontechnical-20260806t193731z-sol-high-attempt-3-fd6558ba-5c7e-496b-9423-2b71a471d6a3
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-direct-nontechnical-20260808t095248z-sol-high-attempt-3-91f3634e-14b6-4a63-a154-59013f7c3f62
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:37:31.000Z
+recordedAt: 2026-08-08T09:52:48.000Z
 environment:
   id: adapter-without-language-shape
   capabilities:
@@ -39,7 +39,7 @@ observed:
     - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The generated response explicitly rejects interchangeable aliasing, defines distinct accepted boundaries, and demonstrates their overlap and separation through one good case, one near miss, and two additional separating cases.
+      evidence: The fresh response identifies the labels as overlapping classifications rather than aliases and separates them with an all-three case, an Event-only near miss, an Appointment-without-Commitment case, and a Commitment-without-Appointment case.
       observed: false
   invoked:
     - thinking-in-systems
@@ -65,7 +65,7 @@ observed:
     - terminology-resolved-or-conflict-visible
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-3.txt
-  sha256: bcebfbbf5aba74e8f8ec9c1310e0d2b347e07421615f0e1ccd2209ca6e6367f9
+  sha256: 10416c4b0f5474068ab7e20d99bd495977d9cbfbb0ea716d44ef78735764863c
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

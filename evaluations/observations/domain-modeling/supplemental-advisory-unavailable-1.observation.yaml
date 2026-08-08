@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-supplemental-advisory-unavailable
 attempt: 1
-contextId: fresh-domain-modeling-supplemental-advisory-unavailable-20260806t194236z-sol-high-e7e6ab6f
-suiteRevision: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
+contextId: fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-41be07be-5495-4010-b070-c1fca23cb1e7
+suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
 evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-06T19:42:36Z
+recordedAt: 2026-08-08T09:58:40Z
 environment:
   id: advisory-supplemental-unavailable-core-sufficient
   capabilities:
@@ -28,7 +28,7 @@ observed:
     - shared terminology recorded
   forbiddenChecks:
     - criterion: treat the advisory failure as either invisible or a replacement for core evidence
-      evidence: The response exposes the unavailable advisory capability, declines to invoke or fabricate it, preserves `recovery-spec@spec-r7`, `behavior-trace@trace-r12`, and accepted proposal `recovery-language-p5`, then completes the independently supported native Adapter transition from `language-r9` to `language-r10`.
+      evidence: The one-shot response explicitly records the unavailable advisory capability, does not invoke or attribute evidence to it, preserves the independently sufficient `recovery-spec@spec-r7`, `behavior-trace@trace-r12`, and `recovery-language-p5` core evidence, and completes the guarded native Adapter transition from `language-r9` to `language-r10`.
       observed: false
   invoked:
     - thinking-in-systems
@@ -50,19 +50,22 @@ observed:
     - advisory-gap-core-completion
   state:
     - terminology-resolved-with-advisory-gap
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/supplemental-advisory-unavailable-1.txt
+  sha256: 76607d48d70337889a0da1c3eebb71e9e634de193854176285b671ddb14051d8
 runtimeInputs:
-  - role: skill
-    locator: skills/domain-modeling/SKILL.md
-    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
   - role: fixture
     locator: evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
     sha256: 5f1f63a4063f813c1496fe6b03fd9b2df7ca16e573687e5b2118b071b4629616
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
   - role: governing-skill
     locator: skills/thinking-in-systems/SKILL.md
     sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
   - role: governing-reference
     locator: skills/thinking-in-systems/references/standard.md
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-rawEvidence:
-  locator: evaluations/evidence/domain-modeling/supplemental-advisory-unavailable-1.txt
-  sha256: f4e32f990c456041bd373bded3dee31c8a7422d11891bb6671fc61b6ac5494ec
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: 03edaa518317ffaf095c0a11884d5c09ad6336fa2e0b77bbd96274eed703b672
