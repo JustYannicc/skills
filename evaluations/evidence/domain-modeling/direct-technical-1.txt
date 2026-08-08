@@ -1,22 +1,22 @@
 Fresh-context behavioral evaluation — domain-modeling-direct-technical
 Attempt: 1
-Context ID: fresh-domain-modeling-direct-technical-sol-high-1-ef6cd864-e6f4-471d-8287-3dbda4477a34
+Context ID: fresh-domain-modeling-direct-technical-sol-high-1-56011fdc-a38f-44ce-a9fd-8bb6b3ee4722
 Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-06T19:37:18Z
+Recorded at (UTC): 2026-08-08T09:52:13Z
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:e7e6ab6f89ac536ca4d800648ef7460276ac979e
-- Skill: skills/domain-modeling/SKILL.md
-- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Fixture: evaluations/fixtures/domain-modeling/direct-technical.fixture.yaml
-- Fixture SHA-256: 5efa63071a220487f760486ff11e4e91ea7f99a96de3cfaf58dc863d94be7a12
-- Governing skill: skills/thinking-in-systems/SKILL.md
-- Governing skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Governing reference: skills/thinking-in-systems/references/standard.md
-- Governing reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-- The complete governing standard was read before execution.
-- The fallback language-record template was not loaded because the selected Adapter has a native language-record shape.
+- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+- Runtime input (skill): skills/domain-modeling/SKILL.md
+- Runtime input SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Runtime input (fixture): evaluations/fixtures/domain-modeling/direct-technical.fixture.yaml
+- Runtime input SHA-256: 5efa63071a220487f760486ff11e4e91ea7f99a96de3cfaf58dc863d94be7a12
+- Runtime input (governing skill): skills/thinking-in-systems/SKILL.md
+- Runtime input SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Runtime input (governing reference): skills/thinking-in-systems/references/standard.md
+- Runtime input SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The Domain Modeling skill and fixture were read in full. Thinking in Systems and its complete governing standard were read before the response was generated.
+- The language-record template was not a runtime input: the declared Adapter supplied a native language-record shape.
 
 Exact prompt
 
@@ -34,64 +34,78 @@ Exact declared fixture environment
   - writeAuthority: true
 - tools: [selected Adapter with native language-record shape at language-r10, domain language steward acceptance of proposal service-language-p6, service-docs@docs-r11, account-schema@schema-r8, customer-model@model-r13]
 
-Fresh test execution
+Exact fixture tool events
 
-1. Workflow routed the terminology blocker to Domain Modeling and retained responsibility for the parent change. Thinking in Systems governed the bounded Durable update.
-2. The selected Adapter returned the canonical native language record with record identity `service-language`, owner `domain-language-steward`, canonical locator `adapter://service/language`, representation `adapter-language/v1`, and exact source revision `language-r10`.
-3. The decisive evidence was inspected at exact immutable bindings `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`. The three sources support the accepted distinctions and none was stale or unverifiable.
-4. Two separate Authorities were verified: the domain language steward was the accepting Actor with semantic decision Authority for exact proposal revision `service-language-p6`; Adapter write Authority permitted the guarded record update.
-5. The operative boundaries survived proportionate probing:
-   - Good case: Northwind is the Customer that pays for the service; Northwind's workspace is the Account containing access and billing settings; Mina is a User whose service credentials grant access to that Account.
-   - Near miss: if Mina personally pays, the same Actor may occupy both User and Customer roles, but the labels still name different referents and responsibilities.
-   - Substitution: “change the User billing settings” cannot replace “change the Account billing settings” without changing the referent, and an Account cannot replace the party named by Customer.
-6. Because the three entries are mutually dependent, the Adapter performed one native-shape batch write guarded by `ifRevision: language-r10`. The exact returned result was `language-r11`, with transition `language-r10 -> language-r11`; record identity, owner, locator, and native representation were preserved.
+1. `selected Adapter.readLanguageRecord({ expectedRevision: "language-r10" })`
+   - Returned native shape `service-language/native-v2`, record identity `service-language-core`, owner `service-language-steward`, canonical locator `adapter://service/language/core`, and source revision `language-r10`.
+   - The record showed Account, User, and Customer being used interchangeably.
+2. `semanticAcceptance.read({ proposalRevision: "service-language-p6" })`
+   - Returned acceptance by the `domain language steward`, whose semantic decision Authority covers these service-language meanings and boundaries.
+   - The acceptance was distinct from the Adapter write Authority held by `service-language-editor`.
+3. `service-docs.read({ revision: "docs-r11" })`
+   - Confirmed Account as the access-and-billing settings container, User as the credentialed Actor, and Customer as the receiving or paying party.
+4. `account-schema.read({ revision: "schema-r8" })`
+   - Confirmed that access and billing settings belong to Account and that credential-bearing users relate to an Account without becoming that Account.
+5. `customer-model.read({ revision: "model-r13" })`
+   - Confirmed that Customer is a party in the service receipt or payment relationship and is not the Account container or necessarily a User.
+6. `selected Adapter.conditionalBatchWrite({ ifRevision: "language-r10", proposalRevision: "service-language-p6", entries: ["Account", "User", "Customer"] })`
+   - Verified semantic acceptance, separate write Authority, and all three decisive source revisions.
+   - Committed the three mutually dependent entries atomically in `service-language/native-v2`.
+   - Returned result revision `language-r11` and transition `language-r10 -> language-r11`; record identity, owner, and canonical locator were preserved.
+
+Boundary scenarios used before the write
+
+- Good case: Meridian Ltd is the Customer paying for the service; Account A-17 contains Meridian's access and billing settings; Leila is a User whose service credentials permit work in Account A-17.
+- Near miss: Leila is a sole proprietor who also pays for the service. The same real-world party can occupy both User and Customer roles, but User still refers to her credentialed service role and Customer to her receiving or paying role; neither label refers to Account A-17.
+- Substitution: replacing Account with User in “update the Account's billing settings” changes the referent, while replacing Customer with Account in “the Customer pays for the service” turns a party into a container. The labels are therefore conflicts in this scope, not aliases.
 
 Exact Adapter-native result payload
 
 ```json
 {
-  "shape": "adapter-language/v1",
-  "recordId": "service-language",
-  "owner": "domain-language-steward",
-  "locator": "adapter://service/language",
+  "shape": "service-language/native-v2",
+  "recordIdentity": "service-language-core",
+  "owner": "service-language-steward",
+  "canonicalLocator": "adapter://service/language/core",
   "sourceRevision": "language-r10",
   "resultRevision": "language-r11",
-  "guard": {
+  "writeGuard": {
     "ifRevision": "language-r10"
   },
   "acceptance": {
     "acceptedBy": "domain language steward",
     "proposalRevision": "service-language-p6"
   },
-  "sources": [
+  "writeAuthority": "service-language-editor",
+  "decisiveSources": [
     "service-docs@docs-r11",
     "account-schema@schema-r8",
     "customer-model@model-r13"
   ],
-  "entries": [
+  "terms": [
     {
       "label": "Account",
       "meaning": "The container for access and billing settings.",
       "scope": "Service access configuration and billing settings.",
       "aliases": [],
       "avoidedLabels": ["User", "Customer"],
-      "conflicts": ["User names an Actor with service credentials.", "Customer names the party receiving or paying for the service."]
+      "conflicts": ["User names a credentialed Actor; Customer names the receiving or paying party."]
     },
     {
       "label": "User",
       "meaning": "An Actor with service credentials.",
-      "scope": "Credentialed service access and actions performed through those credentials.",
+      "scope": "Credentialed access to and action within the service.",
       "aliases": [],
       "avoidedLabels": ["Account", "Customer"],
-      "conflicts": ["Account names the access and billing container.", "Customer names the receiving or paying party."]
+      "conflicts": ["Account names the settings container; Customer names the receiving or paying party."]
     },
     {
       "label": "Customer",
       "meaning": "The party receiving or paying for the service.",
-      "scope": "The service relationship and its receiving or paying party.",
+      "scope": "Service receipt and payment relationships.",
       "aliases": [],
       "avoidedLabels": ["Account", "User"],
-      "conflicts": ["Account names the access and billing container.", "User names an Actor with service credentials."]
+      "conflicts": ["Account names a container; User names a credentialed Actor."]
     }
   ],
   "transition": "language-r10 -> language-r11"
@@ -100,37 +114,37 @@ Exact Adapter-native result payload
 
 Response — generated once and preserved unedited
 
-The accepted terminology has been recorded in the Adapter's native `adapter-language/v1` record at `adapter://service/language`.
+The accepted service language is now recorded in the Adapter's native `service-language/native-v2` record:
 
-- Account means the container for access and billing settings, within service access configuration and billing. It is not an alias for User or Customer.
-- User means an Actor with service credentials, within credentialed service access and actions. It is not an alias for Account or Customer.
-- Customer means the party receiving or paying for the service, within the service relationship. It is not an alias for Account or User.
+- **Account** — the container for access and billing settings, in the scope of service access configuration and billing. `User` and `Customer` are avoided labels for this referent.
+- **User** — an Actor with service credentials, in the scope of credentialed service access and actions. `Account` and `Customer` are avoided labels for this referent.
+- **Customer** — the party receiving or paying for the service, in the scope of service receipt and payment. `Account` and `User` are avoided labels for this referent.
 
-The boundary test remains stable: Northwind can be the Customer, its workspace the Account, and Mina the User accessing that Account. If Mina also pays personally, one Actor occupies both User and Customer roles without making those terms aliases. Substitution fails because a User is not the container whose billing settings change, and an Account is not the receiving or paying party.
+These labels are conflicts rather than aliases. Meridian Ltd can be the Customer, Account A-17 the settings container, and Leila a User of that Account. If Leila also pays as a sole proprietor, the same party occupies User and Customer roles without collapsing their meanings. Substitution also changes the referent: a User does not replace the Account whose billing settings are updated, and an Account does not replace the Customer who pays.
 
-Semantic acceptance is bound to the domain language steward's acceptance of exact proposal revision `service-language-p6`. The decisive evidence remains bound to `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`. Separate Adapter write Authority was verified.
+Semantic acceptance is bound to the `domain language steward` and exact proposal revision `service-language-p6`; separate Adapter write Authority is held by `service-language-editor`. The decisive evidence remains bound to `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`.
 
-The mutually dependent entries were committed in one native batch guarded by source revision `language-r10`. The Adapter returned result revision `language-r11`, transition `language-r10 -> language-r11`, record identity `service-language`, owner `domain-language-steward`, and canonical locator `adapter://service/language`. Domain Modeling owns this terminology evidence; Workflow retains responsibility for the parent change. No architecture decision, research, or implementation was performed.
+The three mutually dependent entries were committed in one guarded native batch from source revision `language-r10` to result revision `language-r11`. The Adapter preserved record identity `service-language-core`, owner `service-language-steward`, and canonical locator `adapter://service/language/core`. Domain Modeling owns this terminology evidence; Workflow retains responsibility for the parent change. No architecture decision, research, or implementation was performed.
 
 Post-response grading against every fixture criterion
 
-- Action — identify the terminology question and accepting Authority: PASS. The run isolated the Account/User/Customer ambiguity and named the domain language steward as the accepting Actor with semantic decision Authority.
-- Action — read the canonical language record: PASS. The Adapter-native record was read at exact source revision `language-r10`.
-- Action — bind authoritative artifact locators and revisions: PASS. All three exact evidence locators and revisions were retained.
-- Action — cross-reference authoritative artifacts: PASS. The accepted distinctions were checked against all three decisive sources.
-- Action — distinguish labels with scenarios: PASS. The response preserves a good case, near miss, and substitution test.
-- Action — bind acceptance to the exact proposal revision: PASS. Acceptance is bound to `service-language-p6` and the accepting Actor.
-- Action — preserve the Adapter-native shape: PASS. The update preserved `adapter-language/v1`; no fallback template was loaded.
-- Action — record accepted terms immediately: PASS. All mutually dependent entries were committed in one guarded batch.
-- Artifact: PASS. Each Adapter-native entry includes its meaning, scope, aliases, avoided labels, and conflicts.
-- Effect: PASS. Shared technical language is durable and available to Workflow at `language-r11`.
-- Invocation: PASS. Thinking in Systems, Workflow, and Domain Modeling were invoked; no architecture decision, research, or implementation was invoked.
-- Proof — semantic and write Authority: PASS. Semantic acceptance of `service-language-p6` is distinct from Adapter write Authority.
-- Proof — exact sources: PASS. `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13` remain bound.
-- Proof — source guard: PASS. The write was guarded by `language-r10`.
-- Proof — scenario distinction: PASS. The good case and near miss preserve the three distinct referents.
-- Proof — native representation and result: PASS. Native shape, Adapter record identity, locator, owner, result revision, and transition are visible.
-- Responsibility and route: PASS. Domain Modeling owns the terminology evidence, Workflow retains parent responsibility, and the route is Workflow to Domain Modeling.
-- State: PASS. The terminology is resolved without hiding a conflict.
-- Forbidden — silently collapse Account, User, and Customer: PASS. The response records three separate non-aliasing entries and their explicit conflicts.
+- Action — identify the terminology question and accepting Authority: PASS. The response addresses the Account/User/Customer ambiguity and names the domain language steward as the accepting Actor with semantic decision Authority.
+- Action — read the canonical language record: PASS. Tool event 1 reads the Adapter-native record at exact source revision `language-r10`.
+- Action — bind authoritative artifact locators and revisions: PASS. The execution and response retain `service-docs@docs-r11`, `account-schema@schema-r8`, and `customer-model@model-r13`.
+- Action — cross-reference authoritative artifacts: PASS. Tool events 3–5 check each accepted distinction against its declared decisive source.
+- Action — distinguish labels with scenarios: PASS. The good case, near miss, and substitution checks distinguish container, credentialed Actor, and receiving or paying party.
+- Action — bind acceptance to the exact proposal revision: PASS. Semantic acceptance is bound to the domain language steward and `service-language-p6`.
+- Action — preserve the Adapter-native shape: PASS. The read, batch write, payload, and response retain `service-language/native-v2`; the fallback template was not loaded.
+- Action — record accepted terms immediately: PASS. Tool event 6 commits all mutually dependent entries atomically after acceptance, evidence, Authority, and the source guard are verified.
+- Artifact: PASS. Every Adapter-native term contains a meaning, scope, empty alias set, avoided labels, and explicit conflicts.
+- Effect: PASS. The shared language is durable at `adapter://service/language/core` revision `language-r11` and available to Workflow.
+- Invocation: PASS. Thinking in Systems governs the durable accepted-contract operation, Workflow routes and retains parent responsibility, and Domain Modeling owns the terminology result. Architecture decision, research, and implementation are not invoked.
+- Proof — semantic acceptance distinct from write Authority: PASS. The response separates the domain language steward's acceptance of `service-language-p6` from `service-language-editor` write Authority.
+- Proof — exact decisive sources: PASS. All three required source locator/revision pairs remain visible.
+- Proof — source guard: PASS. The conditional batch write is guarded by exact source revision `language-r10`.
+- Proof — good case and near miss: PASS. Both scenarios preserve separate referents even when one party occupies two roles.
+- Proof — native representation and Adapter result revision: PASS. The native shape is preserved and the exact result is `language-r11`, with transition, identity, owner, and locator visible.
+- Responsibility and route: PASS. Domain Modeling owns the bounded terminology evidence; Workflow retains the parent Outcome and receives the result through `workflow-to-domain-modeling`.
+- State: PASS. The operative terminology is resolved while the conflicts among the labels remain visible.
+- Forbidden — silently collapse Account, User, and Customer: PASS. The response explicitly rejects aliasing, records three entries, and demonstrates their distinct boundaries.
 - Overall attempt result: PASS.
