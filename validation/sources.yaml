@@ -20,3 +20,8 @@ sources:
     revision: 2ab958093e83e0ec752e6c1c5932da465bf23e0c
     commitUrl: https://github.com/mattpocock/skills/commit/2ab958093e83e0ec752e6c1c5932da465bf23e0c
     license: MIT
+  - id: boldsoftware-meat-review-presentation
+    url: https://github.com/boldsoftware/meat
+    revision: f39f41dfe7b5b37a12b35fdfbaecc7e779855bd3
+    commitUrl: https://github.com/boldsoftware/meat/commit/f39f41dfe7b5b37a12b35fdfbaecc7e779855bd3
+    license: Apache-2.0

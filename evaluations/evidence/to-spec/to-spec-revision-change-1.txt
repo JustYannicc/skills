@@ -1,0 +1,113 @@
+Fresh-context To Spec run
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+
+# Delivery window — Specification
+
+- **Specification state:** Proposed
+- **Accepted Outcome source and exact revision:** `delivery-window-v1`, revised by accepted change `change-r4`
+- **Specification revision:** `delivery-window-v2`
+- **Representation mode:** Inline
+- **Canonical locator and Adapter revision, when Durable:** Not applicable; persistence is unavailable and no Durable result is claimed.
+- **Approver, Authority, and acceptance evidence:** The regional director is Approver for Intent and material trade-offs. No acceptance evidence exists for `delivery-window-v2`; `approval-a9` binds v1 and is invalid for the affected v2 scope. Exact next acceptance action: Workflow must present this Inline `delivery-window-v2` artifact and its revision-impact record to the regional director for approval or rejection.
+
+## 1. Intent and Outcome
+
+- **Original request:** Revise accepted Specification `delivery-window-v1` by applying accepted change `change-r4`, compare v1 with proposed v2, preserve unaffected work, and return v2 for regional-director re-approval without executing.
+- **Intent:** Produce an impact-bounded successor Specification that removes South clinic, advances North clinic's deadline, retains the cold-chain Constraint, and does not reuse stale approval or evidence.
+- **Accepted Outcome:** Under accepted change `change-r4`, deliver the weekly supply package to North clinic by Thursday 14:00, keep its temperature at 2-8 C, prove delivery through a signed receipt plus a temperature log, and verify any required remediation. South clinic is no longer part of this Outcome.
+- **Satisficing / good-enough threshold:** For each weekly package, North delivery is completed by Thursday 14:00; the signed receipt and temperature log show delivery and 2-8 C compliance; and any required remediation is verified. No South delivery or stock purchasing is required by this Outcome.
+
+## 2. Scope, exclusions, and Constraints
+
+- **Included Actors, Systems, environments, conditions, time horizon, and boundaries:** North clinic; Operations as Outcome owner; the logistics lead as Specification Work owner and proposed North-delivery arranger; the regional director as Approver; the weekly supply-package cycle; delivery by Thursday 14:00; cold-chain handling at 2-8 C; verification through the signed receipt, temperature log, and any remediation evidence.
+- **Exclusions:** South clinic is removed by `change-r4`. Stock purchasing remains excluded. Unrelated training Ticket `T-TRAIN-r1` remains outside this delivery revision. This invocation excludes delivery or other implementation effects.
+- **Required remediation, propagation, and recovery:** Any required delivery remediation remains inside the Outcome and must be verified before the weekly terminal condition is met. The accepted change must be propagated to `delivery-map-r6` and `calendar-r12`; affected planning, completed work, approval, and evidence must be revised, reassessed, or invalidated as recorded below before execution.
+
+| Constraint or Preference | Hard Constraint, Soft Constraint, or Preference | Source and confidence | Effect on feasible choices |
+| --- | --- | --- | --- |
+| North clinic's weekly package is due Thursday 14:00. | Hard Constraint | Accepted `change-r4`; high confidence | Planning and delivery must target North by Thursday 14:00; the Friday 16:00 v1 deadline cannot govern v2. |
+| Cold-chain temperature remains 2-8 C. | Hard Constraint | `delivery-window-v1`, expressly retained by accepted `change-r4`; high confidence | Transport, handling, proof, and remediation must preserve and demonstrate 2-8 C. |
+| Signed receipt plus temperature log is the delivery Proof seam. | Hard Constraint | Accepted `delivery-window-v1`; unchanged by `change-r4`; high confidence | Delivery cannot be verified from route planning or one evidence type alone. |
+| Stock purchasing is excluded. | Hard Constraint | Accepted `delivery-window-v1`; unchanged by `change-r4`; high confidence | v2 cannot add purchasing work or Authority. |
+| Do not execute while producing and returning v2 for re-approval. | Hard Constraint | Revision request; high confidence | This invocation may revise the artifact and record impacts only; it may not arrange or perform delivery, mutate operational records, or implement Ticket changes. |
+
+## 3. Responsibility and Authority
+
+- **Outcome owner and parent terminal-proof duty:** Operations owns the Outcome and retains integration and parent terminal-proof Responsibility, including verifying North delivery, retained cold-chain evidence, propagation, and any remediation.
+- **Specification Work owner:** The logistics lead owns this bounded `delivery-window-v2` Specification result.
+- **Known Executors, Reviewers, or successor route:** No Executor is invoked. Workflow coordinates the `revision-change-to-spec` route and the regional-director re-approval. Any later Ticket revision, implementation, operational propagation, or Review requires a downstream route after approval.
+- **Approver for Intent and material trade-offs:** Regional director.
+- **Effect Authority:** In accepted v1, the logistics lead was permitted to arrange both deliveries. Because accepted `change-r4` removes South, v2 narrows the proposed arrangement effect to North delivery only, within the Thursday 14:00 deadline and 2-8 C Constraint. No delivery, Ticket mutation, record propagation, cancellation effect, or other execution is requested or performed in this invocation. The regional director must re-approve v2 before its successor representation is relied on for downstream effects.
+
+## 4. Knowledge and decisions
+
+| Kind | Accepted statement or visible gap | Status | Source, exact revision, and confidence | Material consequence |
+| --- | --- | --- | --- | --- |
+| Fact | v1 covers weekly delivery to North and South clinics by Friday 16:00, excludes stock purchasing, requires 2-8 C, authorizes the logistics lead to arrange both deliveries, uses signed receipts plus temperature logs as proof, and ends when both deliveries and any remediation are verified. | Accepted prior meaning | `delivery-window-v1`; high confidence | This is the comparison baseline and remains historical rather than being mutated in place. |
+| Decision | Remove South clinic and change North's deadline to Thursday 14:00 while retaining 2-8 C. | Accepted change | `change-r4`; high confidence | Produces the material successor scope and deadline in v2. |
+| Decision | `T-NORTH-r2` must be revised; `T-SOUTH-r3` must be cancelled; `route-draft-r7` must be reassessed; `approval-a9` and `route-check-e5` are invalid for affected scope; `delivery-map-r6` and `calendar-r12` require propagation. | Accepted impact input | Cited source records and revision request; high confidence | Affected work cannot be reused as if it still represented v2. |
+| Decision | `T-TRAIN-r1` and `cold-chain-e2` remain valid. | Accepted preservation input | Cited source records and revision request; high confidence | Unrelated training work and retained cold-chain evidence are not invalidated. |
+| Fact | No delivery effect has occurred. | Accepted current-state fact | Revision request; high confidence | No effect rollback is required; only planning and record propagation remain. |
+| Inference | Removing South from v2 also removes South from the logistics lead's v2 arrangement scope while retaining North arrangement Authority. | Proposed faithful consequence | `delivery-window-v1` compared with accepted `change-r4`; high confidence | Prevents removed South work from being executed under the successor Specification; regional-director approval remains required. |
+| Unknown | Whether the regional director accepts this exact `delivery-window-v2` representation. | Pending approval | No v2 acceptance evidence; high confidence | Keeps the Specification Proposed and blocks downstream reliance on v2 as Accepted. |
+
+## 5. Accepted behavior
+
+| Actor, condition, or event | Required behavior or policy | Expected visible result | Governing decision or Constraint |
+| --- | --- | --- | --- |
+| Each weekly supply-package cycle | Deliver to North clinic by Thursday 14:00. | North has the weekly package by the successor deadline. | Accepted `change-r4`. |
+| Package handling and delivery | Maintain 2-8 C and capture the temperature log. | The retained cold-chain condition is observable for the delivery. | Retained 2-8 C Hard Constraint. |
+| Delivery verification | Obtain the signed receipt and pair it with the temperature log. | Operations can verify both delivery and temperature at the highest stable Proof seam. | Unchanged proof requirement from `delivery-window-v1`. |
+| A delivery issue requiring remediation | Complete and verify the required remediation before ending the weekly Outcome cycle. | The delivery is not declared terminal while required remediation remains unverified. | Unchanged terminal condition from `delivery-window-v1`, bounded to North by `change-r4`. |
+| South clinic under v2 | Do not plan, arrange, or deliver South as part of this Outcome. | No South work is attributed to v2. | Accepted `change-r4`. |
+| This revision invocation | Compare, revise, record impacts, preserve unaffected items, and request approval; do not execute. | An Inline Proposed v2 and explicit impact record reach the regional director without operational effects. | Revision request. |
+
+## 6. Proof and terminal condition
+
+- **Highest stable Proof seam:** North clinic's signed receipt plus the corresponding temperature log, supplemented by evidence for any required remediation.
+- **Evidence, observer, timing, and relevant limits:** Operations, as Outcome owner, verifies the signed receipt and temperature log for each weekly North delivery by Thursday 14:00 and verifies any required remediation. `cold-chain-e2` remains valid evidence for the unchanged cold-chain concern, but does not by itself prove a particular delivery. `route-check-e5` cannot prove v2's affected route scope because it binds v1.
+- **Terminal condition:** For a weekly cycle, North delivery by Thursday 14:00 is verified through its signed receipt and temperature log, 2-8 C compliance is verified, any required remediation is verified, and required v2 propagation relevant to the performed delivery is current. This Specification invocation ends only when the Proposed v2 and impact record have been returned for regional-director re-approval; that return does not complete the parent Outcome.
+
+## 7. Unresolved items and exceptions
+
+| Item | Impact | Owner or Approver | Next check | Blocks acceptance? |
+| --- | --- | --- | --- | --- |
+| `delivery-window-v2` has no regional-director acceptance evidence. | v2 cannot become Accepted or authorize downstream reliance on its representation. | Regional director, coordinated by Workflow | Review this exact Inline revision and its impact record; record approval or rejection against `delivery-window-v2`. | Yes |
+
+## Operating Outcome
+
+- **Observation horizon or recurrence boundary:** One weekly supply-package cycle at a time, with North due Thursday 14:00; the Outcome recurs weekly.
+- **Review cadence and evidence inspected:** At each weekly terminal check, inspect North's signed receipt, corresponding temperature log, and evidence for any required remediation.
+- **Responsible owner while operating:** Operations.
+- **Valid transfer rule and acceptance evidence:** No ownership transfer is accepted in the supplied sources. Operations remains responsible unless a future transfer is explicitly accepted with evidence by the appropriate Approver.
+- **Cancellation condition and Authority:** No operating-Outcome cancellation condition or cancellation Authority is accepted in the supplied sources; no cancellation action is in scope for this Specification.
+- **Condition that ends a finite stability window, if any:** Each weekly cycle ends at the terminal condition above; ending one cycle does not cancel the recurring weekly Outcome.
+
+## Material revision
+
+- **Prior accepted Specification revision:** `delivery-window-v1`
+- **Successor Specification revision:** `delivery-window-v2` (Proposed)
+- **Accepted change and rationale:** Accepted `change-r4` removes South clinic from scope and changes North clinic's deadline from Friday 16:00 to Thursday 14:00 while retaining the 2-8 C Constraint. No additional rationale is supplied; none is invented.
+
+| Impact area | Affected exact item or revision | Disposition and required recheck | Unaffected accepted work preserved |
+| --- | --- | --- | --- |
+| Tickets and dependencies | `T-NORTH-r2` | Revise it to plan North for Thursday 14:00 under v2 and recheck any dependency that relies on its prior deadline or two-clinic context before execution. It may not be used unchanged for v2. | `T-TRAIN-r1` remains valid and is not revised or invalidated. |
+| Tickets and dependencies | `T-SOUTH-r3` | Cancel it for the successor Outcome and invalidate or close any dependency whose only purpose is South delivery. Preserve it as a historical v1 record; do not execute it under v2. | `T-TRAIN-r1` remains valid. |
+| Completed work | `route-draft-r7` | Reassess the completed draft against North-only scope and Thursday 14:00. Its v1 result cannot be accepted unchanged for v2; retain its historical record and preserve only content that passes the v2 reassessment. | Unrelated training work in `T-TRAIN-r1` remains valid. |
+| Approvals and Review evidence | `approval-a9` | Retain as historical v1 approval, but invalidate it for v2's affected scope and deadline. Obtain new regional-director approval for this exact `delivery-window-v2`. | No unrelated approval is named or invalidated. |
+| Approvals and Review evidence | `route-check-e5` | Retain as historical v1 evidence, but invalidate it for v2's affected route scope and deadline; rerun the route check against the reassessed North-only route before execution. | `cold-chain-e2` remains valid for the unchanged 2-8 C concern. |
+| Effects and current-state records | No delivery effect; `delivery-map-r6` | No effect rollback is needed because no delivery effect occurred. Propagate North-only scope and Thursday 14:00 into a successor current-state delivery map, retain `delivery-map-r6` as history, and verify the propagated record before execution. | The retained 2-8 C condition and `cold-chain-e2` remain valid. |
+| Legacy state | `calendar-r12` | Propagate the Thursday 14:00 North schedule and removal of South into the successor calendar state; retain `calendar-r12` as legacy history and do not rely on it for v2 execution. | Unrelated training state and retained cold-chain evidence remain unchanged. |
+
+## Bounded return
+
+- **Exact Specification revision and mode:** `delivery-window-v2`, Inline.
+- **Acceptance state:** Proposed; the Specification phase remains active pending regional-director re-approval.
+- **Unresolved exceptions:** None. Missing v2 approval is a visible pending approval, not an exception.
+- **Branch records:** The recurring Operating Outcome and Material revision branches are complete above. No material discovery gap or accepted irreducible fog is present. No Supplemental skill was configured or invoked.
+- **Responsibility:** The logistics lead owns the bounded Specification result. Operations retains parent integration and terminal-proof Responsibility. Workflow coordinates the downstream route.
+- **Authority:** No execution occurs in this invocation. Regional-director approval is required for this exact successor representation before downstream reliance.
+- **Proof seam:** North's signed receipt plus temperature log, with any required remediation evidence.
+- **Terminal condition:** This invocation returns the exact Proposed v2 and impact record for approval; it neither executes the change nor completes the parent Outcome.
+- **Next route:** Workflow must route `delivery-window-v2` and this impact record to the regional director for re-approval. Only after acceptance may Workflow coordinate affected Ticket revision, reassessment, propagation, execution, and Review; `to-tickets` and `implement` are not invoked here.

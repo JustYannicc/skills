@@ -1,0 +1,5 @@
+This is an authorized override and Informed exception. Authority is verified by the stated policy, which permits the communications owner who sent this message to waive the optional second-reader check.
+
+I recorded the exception proportionately: the skipped protection is the optional second reader; the plausible consequence is a wording defect; and the scope and duration are this internal draft only, through its distribution decision. The recovery trigger is any ambiguity found by immediate Review, which restores the second-reader check before distribution. The exception does not change the general policy or disable any other Authority, proof, or Review safeguard.
+
+O3 remains active under that exception and proceeds to immediate Review now. The second-reader check is not invoked unless the recovery trigger occurs, no distribution effect has occurred, and Workflow retains responsibility for the parent Outcome through Review and verified completion.

@@ -1,0 +1,42 @@
+schemaVersion: 1
+id: review-cross-domain-direct
+title: Direct Review verifies a cross-domain result at its proof seam
+shape: direct
+kind: invocation
+skill: review
+domains: [organizational-work, physical-environment]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Review exact result `checkout-rota@r14` against accepted Specification
+  `checkout-spec@r6` and safety standard `facility-handoff@3.2` at the staffed
+  checkout-and-return Proof seam before the Workflow owner closes the bounded
+  work. The signed rehearsal record `rehearsal@r14-2` shows three representative
+  volunteers requesting equipment: staff confirmed eligibility and availability,
+  named the item and due time, recorded custody only after the volunteer confirmed,
+  and produced a visible receipt within 45 seconds. In the unavailable-item path,
+  staff retained custody, explained the wait state, offered the next slot, and the
+  volunteer recovered by accepting it. The checklist evidence binds every
+  Specification requirement and applicable safety rule to those observations;
+  no gap or finding remains. The Work owner is the equipment coordinator, the
+  Outcome owner is the Workflow owner, the effect evidence is
+  `rehearsal@r14-2`, and no Supplemental reviewer is configured. Return the exact
+  target-level verdict without completing the parent Outcome.
+environment:
+  id: durable-work-without-supplemental
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools: []
+expected:
+  actions: [accept exact Specification and result revisions, inspect proof seam and governing standards, walk the non-UI human-System checkout and handoff interaction from request through feedback state effect and recovery, assess observable clarity control effort timeliness and trust, scale independence to material change, return Verified verdict and in_review to complete transition]
+  artifacts: [revision-bound Review record]
+  effects: []
+  invoked: [review]
+  notInvoked: [implementation, effect execution]
+  proof: [each requirement bound to exact evidence, observable interaction quality and feel grounded at the proof seam, effect claim separated from result verification]
+  responsibility: [Work owner retains bounded result responsibility, Outcome owner retains parent responsibility]
+  route: [workflow-to-review]
+  state: [in_review-to-complete]
+  forbidden: [complete parent Outcome without parent Review, infer interaction quality from rota contents alone]

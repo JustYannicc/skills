@@ -1,0 +1,5 @@
+Correction recorded in the active Workflow as a correction event linked to M4: M4 was sent only to the internal group, so the original customer-communication Outcome was not satisfied.
+
+The earlier O2 completion transition remains in history. Its supporting claim that M4 reached the customer group is now explicitly invalid evidence; the actual internal-group delivery remains preserved as the truthful effect record. O2 is reopened at `accepted-reopened`, and the current owner resumes responsibility for it.
+
+Recovery returns to the failed customer-delivery proof seam. The next owned action is to confirm the intended customer audience and applicable send Authority, deliver M4 to that audience, verify recipient and delivery evidence, and then re-review O2 before any completion claim. No external effect is performed or claimed here. This correction neither creates an unrelated Outcome nor opens a recursive parent Workflow.

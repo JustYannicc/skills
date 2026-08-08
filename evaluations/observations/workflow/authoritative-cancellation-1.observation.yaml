@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-authoritative-cancellation
+attempt: 1
+contextId: fresh-workflow-authoritative-cancellation-1db9f1f-sol-high-1
+suiteRevision: git:a18d46cd57ddfc871ddbc45a4fce2aa8a618ac6b
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:07:10.000Z
+environment:
+  id: workflow-authoritative-cancellation
+  capabilities: { persistence: true, workflow: true, cancellationAuthority: true }
+  tools: []
+observed:
+  actions: [verify cancellation Authority, record rationale and partial effects, dispose every child Ticket, preserve retained evidence, expose dependency consequences, assign recovery or reversal needs, run parent terminal Review]
+  artifacts: [cancellation transition with material dispositions]
+  effects: []
+  forbiddenChecks:
+    - criterion: treat cancellation as failure or let cancellation silently satisfy the dependent requirement
+      evidence: The response identifies cancellation as an authoritative terminal route rather than failure, removes only O23's edge from the shared Ticket, and explicitly keeps the other Outcome's requirement open pending its own completion and Review.
+      observed: false
+  invoked: [thinking-in-systems, workflow, review]
+  notInvoked: [successor Outcome, fictional reversal]
+  proof: [deposit child dependency evidence and recovery dispositions are all explicit]
+  responsibility: [the Outcome owner ends responsibility only after authoritative cancellation passes the parent terminal condition]
+  route: [authoritative-cancellation]
+  state: [cancelled]
+rawEvidence:
+  locator: evaluations/evidence/workflow/authoritative-cancellation-1.txt
+  sha256: 9fad1420fb5865c8f38711af173c0c9abaa1710280132b59ac88f13882e49e82

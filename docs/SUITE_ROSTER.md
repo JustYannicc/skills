@@ -39,7 +39,7 @@ suite still requires human review before publication.
 | `research` | Establish external facts against high-trust primary evidence. | The research question is answered with cited evidence, uncertainty, and durable state when required. | Direct upstream plus overlay |
 | `prototype` | Answer one design question through a reversible experiment. | The question has a verdict and evidence; the experiment has a disposition. | Universal successor retaining the name |
 | `to-questionnaire` | Obtain missing knowledge asynchronously from another person. | The questionnaire covers every accepted knowledge gap and has a clear return use. | Direct upstream plus overlay |
-| `to-spec` | Synthesize accepted knowledge and decisions into one Outcome Specification. | The Specification is accepted or unresolved decisions are returned to discovery. | Universal successor retaining the name |
+| `to-spec` | Turn one accepted Outcome contract into one clear Specification artifact. | The Specification is accepted or unresolved decisions are returned to discovery. | Universal successor retaining the name |
 | `to-tickets` | Decompose an accepted Specification into bounded, owned, dependency-aware Tickets. | The decomposition and proof conditions are accepted or a Specification gap is returned. | Universal successor retaining the name |
 | `implement` | Carry one accepted Ticket through execution and submit its exact result revision with effect evidence. | The result is ready for Review; neither Review nor parent completion occurs here. | Universal successor retaining the name |
 | `review` | Verify any result, including code, against its Specification and governing standards. | One integrated verdict is recorded against the exact result revision. | New, suite-owned |
@@ -77,10 +77,7 @@ silently continue into Specification or execution.
 
 ### Specification, decomposition, execution, and review
 
-`to-spec` synthesizes what has been accepted. It returns missing decisions to
-discovery rather than inventing them. `to-tickets` decomposes an accepted
-Specification and returns a discovered Specification gap rather than editing
-the authority silently.
+`to-spec` materializes what has been accepted. It returns missing decisions to discovery rather than inventing them. `to-tickets` decomposes an accepted Specification and returns a discovered Specification gap rather than editing the authority silently.
 
 `implement` executes one Ticket and submits evidence. `review` independently
 verifies that exact revision. Changes requested return the Ticket to execution;

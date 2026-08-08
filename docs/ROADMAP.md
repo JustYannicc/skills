@@ -20,6 +20,11 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Author `migrate-system` for automatic current-state adoption.
 - Evaluate each skill independently before composing them.
 
+Current state: `thinking-in-systems` is approved. Workflow's Inline route is an
+implemented issue #13 candidate awaiting required human review; Durable
+coordination remains in #14 and the System Record representation remains in
+#35.
+
 ## Phase 2 — discovery skills
 
 - Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Prototype is implemented by issue #19 and remains human-review-required before its Ticket closes.
@@ -29,8 +34,10 @@ Status: complete when the bootstrap commit and public remote are verified.
 ## Phase 3 — delivery and continuity skills
 
 - Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
-- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors.
+- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. `to-spec` is implemented in issue #22's candidate branch and remains human-review-required until explicit maintainer approval.
 - Author universal `review`, including code and configured Supplemental evidence.
+  Issue #25 now has an implementation candidate; its human-review-required
+  gate remains open until the candidate is explicitly accepted.
 - Prove the lifecycle:
 
 ```text

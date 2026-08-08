@@ -1,0 +1,52 @@
+schemaVersion: 1
+fixtureId: review-supplemental-required
+attempt: 2
+contextId: final-sol-review-supplemental-required-2
+suiteRevision: git:a18d46cd57ddfc871ddbc45a4fce2aa8a618ac6b
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:28.000Z
+environment:
+  id: workflow-with-required-supplemental
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: true
+  tools:
+    - supplemental-reviewer
+observed:
+  actions:
+    - validate the exact selected mapping source version scope required status input evidence and failure behavior
+    - run only that Supplemental at declared supplemental-review Extension point
+    - validate Supplemental finding exact result revision
+    - integrate finding into the applicable axis without replacing core Review
+    - return Changes required transition
+  artifacts:
+    - integrated Review record
+    - Supplemental evidence reference
+  effects: []
+  forbiddenChecks:
+    - criterion: complete when required Supplemental evidence is stale
+      evidence: Changes required; valid r8-bound required evidence integrated while core Reviewer retained verdict. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: invoke an unmapped similar specialist
+      evidence: Changes required; valid r8-bound required evidence integrated while core Reviewer retained verdict. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - workflow
+    - review
+    - configured Supplemental reviewer
+  notInvoked:
+    - Supplemental verdict replacing core
+  proof:
+    - mapping identity and Supplemental finding are bound to exact result r8 and visible in core evidence
+  responsibility:
+    - Reviewer owns integrated verdict
+    - Work owner resolves required changes
+    - Outcome owner retains parent responsibility
+  route:
+    - workflow-to-review-extension
+  state:
+    - in_review-to-accepted
+rawEvidence:
+  locator: evaluations/evidence/review/supplemental-required-2.txt
+  sha256: b4bcd7029db7eae814019d6467627ea189d4d3c756043522cdc9c6a05d30a762

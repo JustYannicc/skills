@@ -1,0 +1,92 @@
+Fresh-context To Spec run
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+
+# Customer update — Specification
+
+- **Specification state:** Accepted
+- **Accepted Outcome source and exact revision:** `customer-update-r6`
+- **Specification revision:** `customer-update-r6-spec-r1`
+- **Representation mode:** Inline
+- **Canonical locator and Adapter revision, when Durable:** Not applicable
+- **Approver, Authority, and acceptance evidence:** The membership lead is the Approver. `customer-update-r6` records completed, accepted discovery and grants Authority for an exact faithful representation; this revision adds no material judgment.
+
+## 1. Intent and Outcome
+
+- **Original request:** Materialize the accepted `customer-update-r6` Outcome as an Inline Specification and return it to Workflow for downstream phases.
+- **Intent:** Ensure the affected members understand the one accepted venue change and retain the unchanged start time before the deadline.
+- **Accepted Outcome:** The 86 affected members understand that Tuesday’s class moves from Hall A to Hall C and know that its start time remains 18:00 before Monday 12:00.
+- **Satisficing / good-enough threshold:** Each of the 86 members receives one plain-language update through their recorded contact channel; the four members who do not use digital messages receive the update by telephone fallback.
+
+## 2. Scope, exclusions, and Constraints
+
+- **Included Actors, Systems, environments, conditions, time horizon, and boundaries:** The 86 affected members; their recorded contact channels in `roster-r11`; Tuesday’s Hall A-to-Hall C venue change; the unchanged 18:00 start; communication completed before Monday 12:00.
+- **Exclusions:** Future schedules and transport.
+- **Required remediation, propagation, and recovery:** Propagation covers all 86 members. The four non-digital members require telephone fallback. Any member without delivery evidence requires an accepted recovery disposition before the Outcome can terminate; no additional retry policy is introduced by this Specification.
+
+| Constraint or Preference | Hard Constraint, Soft Constraint, or Preference | Source and confidence | Effect on feasible choices |
+| --- | --- | --- | --- |
+| Tuesday’s class remains at 18:00 | Hard Constraint | `roster-r11`, high confidence; accepted in `customer-update-r6` | The update must state that 18:00 is unchanged and must not suggest another time. |
+| Use each member’s recorded contact channel, with telephone fallback for the four non-digital members | Hard Constraint | `roster-r11`, high confidence; accepted in `customer-update-r6` | Channel selection must follow the roster; those four members must be contacted by telephone. |
+| Follow privacy rule `member-contact-p4` | Hard Constraint | `roster-r11`, high confidence; accepted in `customer-update-r6` | Preparation, contact, and evidence handling must remain within that privacy rule. |
+| Complete the communication before Monday 12:00 | Hard Constraint | `customer-update-r6`, accepted | Delivery or an accepted recovery disposition must satisfy the stated time boundary. |
+| Limit content and audience to the 86 members and this venue change | Hard Constraint | `customer-update-r6`, accepted | Do not add future-schedule or transport content and do not expand the audience. |
+
+## 3. Responsibility and Authority
+
+- **Outcome owner and parent terminal-proof duty:** The membership lead owns the Outcome, retains integration Responsibility, and retains parent terminal-proof Responsibility.
+- **Specification Work owner:** The communications coordinator. To Spec owns only this bounded Specification result for the current invocation.
+- **Known Executors, Reviewers, or successor route:** The communications coordinator may prepare the update but may not send it in this phase. Workflow coordinates assignment and authorization for downstream work.
+- **Approver for Intent and material trade-offs:** The membership lead.
+- **Effect Authority:** This phase grants the communications coordinator Authority to prepare the update within the stated scope and Constraints. It grants no Actor Authority to send messages or place calls. Any downstream sending effect requires separately bound Authority before execution.
+
+## 4. Knowledge and decisions
+
+| Kind | Accepted statement or visible gap | Status | Source, exact revision, and confidence | Material consequence |
+| --- | --- | --- | --- | --- |
+| Fact | The affected population contains 86 members, including four who do not use digital messages. | Accepted | `roster-r11`, high confidence; accepted by `customer-update-r6` | The audience is exactly 86 and four require telephone fallback. |
+| Decision | Tuesday’s class moves from Hall A to Hall C; its 18:00 start is unchanged. | Accepted | `customer-update-r6`, accepted | Every update must communicate both the venue change and unchanged time. |
+| Decision | Each member receives one plain-language update through the recorded channel before Monday 12:00. | Accepted | `customer-update-r6`, accepted | Defines required behavior and timing. |
+| Decision | Future schedules and transport are excluded. | Accepted | `customer-update-r6`, accepted | Prevents scope and content expansion. |
+| Decision | Proof uses delivery receipts plus a recorded telephone outcome for each of the four fallback recipients. | Accepted | `customer-update-r6`, accepted | Defines the stable evidence boundary. |
+| Decision | This phase may prepare but may not send the update. | Accepted | `customer-update-r6`, accepted | No external communication effect may occur during this Specification phase. |
+
+## 5. Accepted behavior
+
+| Actor, condition, or event | Required behavior or policy | Expected visible result | Governing decision or Constraint |
+| --- | --- | --- | --- |
+| Affected member with a recorded digital contact channel | Prepare one plain-language update for that channel stating that Tuesday’s class moves from Hall A to Hall C and remains at 18:00. | The member receives the bounded update before Monday 12:00, evidenced by a delivery receipt. | Recorded channel, fixed time, deadline, scope, and `member-contact-p4`. |
+| Each of the four members who does not use digital messages | Use telephone fallback to communicate the same bounded update. | A telephone outcome is recorded before Monday 12:00. | Telephone fallback, fixed time, deadline, scope, and `member-contact-p4`. |
+| Any of the 86 members lacking delivery evidence | Preserve the case for an accepted recovery disposition. | The member has either delivery evidence or an accepted recovery disposition at terminal review. | Accepted terminal condition in `customer-update-r6`. |
+| Communications coordinator during this phase | Prepare the update and evidence plan only; do not send a message or place a call. | An Inline Specification is returned without an external communication effect. | Current phase Authority boundary. |
+
+## 6. Proof and terminal condition
+
+- **Highest stable Proof seam:** Delivery receipts plus a recorded telephone outcome for each of the four fallback recipients.
+- **Evidence, observer, timing, and relevant limits:** The membership lead, as Outcome owner with terminal-proof Responsibility, inspects evidence covering all 86 members at the Monday 12:00 boundary. Evidence handling remains subject to `member-contact-p4` and is limited to this venue-change Outcome.
+- **Terminal condition:** All 86 members have delivery evidence or an accepted recovery disposition, including a recorded telephone outcome for each of the four fallback recipients.
+
+## 7. Unresolved items and exceptions
+
+| Item | Impact | Owner or Approver | Next check | Blocks acceptance? |
+| --- | --- | --- | --- | --- |
+| Downstream sending Authority is outside this Specification phase. | No message or telephone call may be executed under this phase’s Authority. | Workflow coordinates; membership lead retains Outcome ownership and approval. | Bind the authorized downstream Actor and effect before execution. | No |
+
+## Branch records
+
+- **Operating Outcome:** Not applicable; this is a finite communication Outcome.
+- **Material revision:** Not applicable; no material Specification change was requested.
+- **Discovery gap:** None; completed discovery supplied accepted behavior and no unresolved exception remains.
+- **Irreducible fog:** Not applicable.
+- **Supplemental evidence:** None configured or requested.
+
+## Bounded return to Workflow
+
+- **Exact Specification revision:** `customer-update-r6-spec-r1`
+- **Representation and state:** Inline; Accepted
+- **Unresolved exceptions:** None
+- **Responsibility:** To Spec owns this bounded Specification result; the membership lead retains Outcome integration and terminal-proof Responsibility; the communications coordinator is the Specification Work owner.
+- **Authority:** Faithful representation and preparation only; no sending effect is authorized in this phase.
+- **Proof seam:** Delivery receipts plus four recorded telephone outcomes.
+- **Terminal condition:** All 86 have delivery evidence or an accepted recovery disposition.
+- **Next route:** Return `customer-update-r6-spec-r1` to Workflow for coordination of downstream phases.

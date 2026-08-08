@@ -1,0 +1,51 @@
+schemaVersion: 1
+fixtureId: review-maintainability-cross-domain
+attempt: 1
+contextId: final-sol-review-maintainability-cross-domain-1
+suiteRevision: git:a18d46cd57ddfc871ddbc45a4fce2aa8a618ac6b
+evaluator: gpt-5.6-sol-high-fresh-context-review
+recordedAt: 2026-08-06T20:15:33.000Z
+environment:
+  id: maintainable-operating-procedure
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools:
+    - procedure-record
+    - rehearsal-notes
+observed:
+  actions:
+    - pin exact target and standards revisions
+    - compare Specification and Standards separately
+    - inspect source of truth boundaries complexity dependencies rationale ownership operating burden degradation recovery and legacy disposition
+    - evaluate from the future responsible Actor perspective
+    - return Changes required for hidden recovery knowledge
+  artifacts:
+    - revision-bound Review record
+    - maintainability finding
+  effects: []
+  forbiddenChecks:
+    - criterion: treat maintainability as software-only
+      evidence: Changes required; future shift lead could not recover without hidden owner knowledge. The final response audit explicitly avoided this behavior.
+      observed: false
+    - criterion: accept current-owner familiarity as future-operability proof
+      evidence: Changes required; future shift lead could not recover without hidden owner knowledge. The final response audit explicitly avoided this behavior.
+      observed: false
+  invoked:
+    - workflow
+    - review
+  notInvoked:
+    - software-only code review
+  proof:
+    - rehearsal evidence shows the next shift lead cannot recover without an unrecorded current-owner intervention
+  responsibility:
+    - Work owner records and retests recovery
+    - Outcome owner retains parent responsibility
+  route:
+    - workflow-to-universal-maintainability-review
+  state:
+    - in_review-to-accepted
+rawEvidence:
+  locator: evaluations/evidence/review/maintainability-cross-domain-1.txt
+  sha256: b6252e6ec128fa4227d233d3b978db6d3c48c292b657270cbfd052ced63b5065

@@ -1,0 +1,62 @@
+context: final-sol-review-supplemental-required-1
+evaluator: gpt-5.6-sol
+suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+fixture: review-supplemental-required
+attempt: 1
+
+# Review — equipment-control result r8
+
+**Verdict:** Changes required
+
+**Reason:** Required Supplemental evidence `safety-review@r8-1`, validly bound to result `r8`, shows recovery releases lockout before safety acknowledgment, violating `equipment-safety@4.1`.
+
+**Target:** Specification `control-spec@r5` · result `r8` · standards `equipment-safety@4.1` · Proof seam `exercised equipment lockout/recovery behavior` · effect evidence `outside this result-level seam`
+
+**Coverage:** Specification `complete for this finding` · Standards `failure found` · Supplemental `integrated` · effect `outside this seam`
+
+**Review controls:** depth `High` · Reviewer/independence `core Reviewer owns the verdict; public-safety-review supplies specialist evidence only` · evidence matrix `normal control path plus degraded lockout/recovery path; stop after the exercised recovery path establishes a Material safety violation because additional combinations cannot change the correction verdict` · sources `control-spec@r5, r8, equipment-safety@4.1, safety-review@r8-1` · capability gaps `none`
+
+## How the result works
+
+During recovery, result `r8` transitions the equipment out of lockout before receiving the required safety acknowledgment. The visible recovery state therefore permits lockout release while acknowledgment remains pending. This degraded-path ordering violates the governing safety rule.
+
+## Evidence
+
+### Specification
+
+No separate Specification-axis finding was established by the supplied exercised-path observation.
+
+### Standards
+
+| Governing rule | Observation at the Proof seam | Exact Evidence reference | Status |
+| --- | --- | --- | --- |
+| `equipment-safety@4.1` — preserve lockout until safety acknowledgment | Exercised recovery releases lockout before acknowledgment | `safety-review@r8-1`; `public-safety-review@4.0.2`; exact result `r8` | fail |
+
+## Findings
+
+### Critical — Recovery releases lockout prematurely
+
+- **Rule:** `equipment-safety@4.1`
+- **Evidence:** `safety-review@r8-1` observes the exercised recovery path on exact result `r8` releasing lockout before safety acknowledgment.
+- **Consequence:** Equipment can leave its protected state before the safety condition is confirmed.
+- **Correction:** Keep lockout asserted until acknowledgment succeeds, then submit a new exact result revision with exercised recovery-path evidence.
+
+## Supplemental reviewers
+
+| Mapping | Scope and status | Exact result binding | Evidence or limitation | Disposition |
+| --- | --- | --- | --- | --- |
+| `public-safety-review`; `public-skills@example.org/public-safety-review`; `4.0.2`; `supplemental-review` | lockout and recovery; required; input `Specification + result + safety standard + proof seam`; expected `revision-bound exercised-path observations`; failure behavior `Inconclusive waiting` | `r8` | Valid `safety-review@r8-1` | integrated |
+
+## Transition and Responsibility
+
+- **Transition:** `in_review → accepted`
+- **Reviewer:** Core Reviewer; independently owns the integrated verdict
+- **Work owner:** Correct the recovery ordering and resubmit an exact revision
+- **Outcome owner:** Retains parent integration and completion Responsibility
+- **Approver:** Not required at this result-level Proof seam
+
+## Pending effects, limitations, and next check
+
+No real effect was performed or authorized. After correction, the Work owner must provide a new exact revision; Review must re-exercise the recovery ordering and invoke the same required mapping against that revision. If the required reviewer or valid revision-bound evidence is unavailable, return `Inconclusive` and wait rather than complete.
+
+**Audit:** Exact mapping identity, source, version, scope, required status, contract, evidence expectation, and failure behavior were validated. Only the declared mapping was used. `safety-review@r8-1` is bound to `r8`; its finding was integrated into the Standards axis, while the core Reviewer retained the verdict and lifecycle transition.

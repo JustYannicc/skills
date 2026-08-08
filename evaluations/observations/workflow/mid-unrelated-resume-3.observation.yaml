@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-mid-unrelated-resume
+attempt: 3
+contextId: fresh-workflow-mid-unrelated-resume-1db9f1f-20260806T182615Z-sol-high-3
+suiteRevision: git:a18d46cd57ddfc871ddbc45a4fce2aa8a618ac6b
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:26:15.000Z
+environment:
+  id: workflow-unrelated-switch-resume
+  capabilities: { activeWorkflowContext: true, persistence: false, workflow: true }
+  tools: []
+observed:
+  actions: [classify the new request as unrelated switch, preserve O6 ledger revision L8 owner pickup point and next action, complete and Review the bounded correction as another Inline Outcome, resume O6 at the electricity entry]
+  artifacts: [Inline continuation for O6]
+  effects: [corrected sentence returned]
+  forbiddenChecks:
+    - criterion: silently replace O6 or lose its continuation
+      evidence: The response explicitly preserves O6, its owner, ledger revision L8, the electricity-entry pickup point, next action, and inactive effect and approval state before switching; it then returns and reviews "We received it." as a separate bounded Inline Outcome and explicitly resumes O6 from preserved rather than reconstructed context at the same revision and pickup point.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [recursive parent Workflow, durable Adapter]
+  proof: [O6 resumes at revision L8 without reconstructed context]
+  responsibility: [the O6 owner remains responsible throughout the switch]
+  route: [midwork-unrelated-switch-and-resume]
+  state: [original-outcome-resumed]
+rawEvidence:
+  locator: evaluations/evidence/workflow/mid-unrelated-resume-3.txt
+  sha256: ba42b2345288fa50d128e21158013a0ad8cb99aa30bb7abeb99b0740ad6631e9

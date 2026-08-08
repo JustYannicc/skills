@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: review-changed-revision
+title: A changed result revision invalidates prior evidence
+shape: edge
+kind: composition
+skill: review
+domains: [software, communication]
+severity: Critical
+requiredAttempts: 1
+prompt: The accepted result changed from revision r1 to r2 after approval, but the available effect evidence is bound only to r1; review the new exact target.
+environment:
+  id: changed-result-with-stale-evidence
+  capabilities:
+    workflow: true
+    persistence: true
+    supplementalReview: false
+  tools: [revision-store]
+expected:
+  actions: [detect changed result revision, invalidate prior evidence, bind review to r2, return Inconclusive waiting with exact next check]
+  artifacts: [revision-mismatch finding, continuation record]
+  effects: []
+  invoked: [review]
+  notInvoked: [reuse prior approval, complete target]
+  proof: [prior evidence is visibly bound to r1 and cannot satisfy r2]
+  responsibility: [Work owner remains responsible, Outcome owner retains parent responsibility]
+  route: [revision-change-to-waiting]
+  state: [in_review-to-waiting]
+  forbidden: [carry approval from r1 to r2]

@@ -1,0 +1,5 @@
+Fresh-context To Spec run
+Evaluator: gpt-5.6-sol (high)
+Candidate: working-tree:18c121ec4319920ce52300d3a252480a50f2f974041a01368331518a2775dd63
+
+The cat sat on the mat.

@@ -110,10 +110,7 @@ capability relationships and retain only the declared patches locally.
 
 ### Automatic operation
 
-Setup writes a small managed standing entry to each selected harness's effective
-instruction surface at the selected project or global scope. Every request
-loads Thinking in Systems and then Workflow. Workflow selects the smallest
-truthful Inline or Durable route and invokes phase skills automatically.
+Setup writes a small managed standing entry to each selected harness's effective instruction surface at the selected project or global scope. Every request loads Thinking in Systems and then Workflow. Workflow selects the smallest truthful Inline or Durable route and invokes phase skills automatically.
 
 Simple bounded work may keep its Outcome, Specification, Ticket, history, and
 Review implicit in the conversation. Persistence, assignment, waiting,

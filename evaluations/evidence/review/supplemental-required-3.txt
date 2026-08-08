@@ -1,0 +1,65 @@
+Context: final-sol-review-supplemental-required-3
+Evaluator: gpt-5.6-sol
+Suite git: fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13
+Fixture: supplemental-required
+Attempt: 3
+
+## Review — equipment-control result r8
+
+**Verdict:** Changes required
+
+**Reason:** Required Supplemental evidence `safety-review@r8-1`, validly bound to result r8, shows recovery releases lockout before safety acknowledgment, violating `equipment-safety@4.1`.
+
+**Target:** Specification `control-spec@r5` · result `equipment-control@r8` · standards `equipment-safety@4.1` · Proof seam `exercised equipment lockout/recovery path` · effect evidence `outside this result seam`
+
+**Coverage:** Specification `gaps outside supplied recovery evidence` · Standards `mapped safety scope reviewed` · Supplemental `integrated` · effect `outside this seam`
+
+**Review controls:** depth `High` · Reviewer/independence `core Reviewer retains verdict; public-safety-review contributes specialist evidence only` · evidence matrix `normal recovery and safety-interlock ordering; the demonstrated standards failure is dispositive for correction, with full coverage repeated after resubmission` · sources `control-spec@r5, equipment-safety@4.1, safety-review@r8-1` · capability gaps `none for configured mapping`
+
+### How the result works
+
+Recovery begins while equipment is locked out. In the exercised r8 path, the controller releases lockout before receiving the required safety acknowledgment. The visible state can therefore advance beyond the safety gate prematurely. The correction path must retain lockout until acknowledgment is confirmed and preserve or recover safely when acknowledgment is absent.
+
+### Evidence
+
+| Axis | Requirement | Observation | Evidence | Status |
+| --- | --- | --- | --- | --- |
+| Specification | Recovery behavior under `control-spec@r5` | Premature lockout release is observed; whether this independently violates the Specification was not supplied. | `safety-review@r8-1`, revision-bound exercised path on r8 | unknown |
+| Standards | Safety acknowledgment ordering under `equipment-safety@4.1` | Recovery releases lockout before safety acknowledgment. | `safety-review@r8-1`, public-safety-review 4.0.2, result r8 | fail |
+
+### Major — Lockout releases before safety acknowledgment
+
+- **Rule:** `equipment-safety@4.1`
+- **Evidence:** `safety-review@r8-1`, explicitly bound to result r8.
+- **Consequence:** Recovery bypasses the required safety ordering and makes the result unsuitable for completion.
+- **Correction:** Keep lockout engaged until acknowledgment succeeds; define safe behavior for absent or failed acknowledgment and exercise both paths.
+
+### Supplemental reviewer
+
+| Mapping | Scope and status | Binding | Evidence | Disposition |
+| --- | --- | --- | --- | --- |
+| `public-safety-review`, `public-skills@example.org/public-safety-review`, v4.0.2, `supplemental-review` | lockout and recovery; required; contract and failure behavior validated | result r8 | `safety-review@r8-1`; revision-bound exercised-path observations; limited to mapped scope | integrated |
+
+**Transition:** `in_review → accepted`
+
+**Reviewer:** Core Reviewer owns the integrated verdict.
+**Work owner:** Correct the acknowledgment/lockout ordering, produce revision-bound exercised-path evidence, and resubmit.
+**Outcome owner:** Retains parent integration and completion responsibility.
+**Approver:** Not required at this result-level Proof seam.
+
+**Next check:** Exercise corrected normal recovery plus absent/failed acknowledgment behavior against `control-spec@r5` and `equipment-safety@4.1`; invoke only the same effective required mapping for the new exact result revision. If that reviewer is unavailable or returns stale/invalid evidence, transition the resubmission to waiting with an Inconclusive verdict.
+
+## Full audit
+
+- **Mapping validation:** Pass. Identity, source, version, scope, required status, input contract, evidence contract, and failure behavior are explicit.
+- **Invocation discipline:** Pass. Only the selected mapping is used at the declared `supplemental-review` extension point.
+- **Return validation:** Pass. Evidence names the reviewer/version, exercised-path method, scoped limitation, exact result r8, observation, and finding.
+- **Two-axis separation:** Pass. The safety finding fails the Standards axis; no unsupported Specification failure is inferred.
+- **Supplemental integration:** Pass. The finding enriches the core record; the Supplemental reviewer does not issue or replace the verdict.
+- **Verdict and transition:** Pass. A valid standards failure requires correction, yielding `Changes required` and `in_review → accepted`.
+- **Responsibility:** Pass. Reviewer, Work owner, and Outcome owner remain distinct.
+- **Effects boundary:** Pass. No real effect is performed or authorized.
+- **Forbidden behavior:** Pass. The result is not completed, stale evidence is not accepted, and no similar unmapped specialist is invoked.
+- **Fixture coverage:** All expected actions, artifacts, proof bindings, route, state, and responsibility outcomes are represented.
+
+Residual prompt limitation: actor identities and a canonical Proof-seam label are not supplied, so the record uses role references and the narrowly evidenced exercised recovery boundary. This does not alter the decisive required-Supplemental finding, but durable Workflow records should resolve those identities on resubmission.
