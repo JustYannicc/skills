@@ -1,0 +1,35 @@
+schemaVersion: 1
+fixtureId: workflow-mid-extension-constraint
+attempt: 2
+contextId: fresh-workflow-mid-extension-constraint-1db9f1f-20260806T181736Z-sol-high-2
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:17:36.000Z
+environment:
+  id: workflow-mid-extension
+  capabilities: { activeWorkflowContext: true, delegation: false, persistence: true, workflow: true }
+  tools: []
+observed:
+  actions:
+    - classify the message as extension or constraint change
+    - append a change proposal and create Specification revision S4
+    - impact-analyze Tickets evidence Review approvals dependencies and legacy state
+    - route Saturday coverage through the required work seam
+  artifacts:
+    - 'change proposal from S3 to S4'
+    - 'impact analysis'
+  effects: []
+  forbiddenChecks:
+    - criterion: 'invalidate unaffected T2 or Review R2 or claim the parent Outcome complete'
+      evidence: 'The response explicitly keeps T2, result C4, its evidence, completion, and Review R2 valid and prohibits editing, reopening, rerouting, re-reviewing, or invalidating them; it also says O1 is not complete and remains active pending Saturday proof and integration.'
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [separate change-management system, recursive parent Workflow]
+  proof:
+    - 'T1 result W1 is revised for Saturday coverage and T2 result C4 with Review R2 remains valid'
+  responsibility: [Workflow retains O1 and every unaffected owner remains responsible]
+  route: [midwork-extension-impact-analysis]
+  state: [accepted-change-active]
+rawEvidence:
+  locator: evaluations/evidence/workflow/mid-extension-constraint-2.txt
+  sha256: aad27d5188ec9989b18abd23eaf30ae0c4899a801abc3a3cd8ee974f6297a877

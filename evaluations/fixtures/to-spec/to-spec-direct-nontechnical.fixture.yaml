@@ -1,0 +1,50 @@
+schemaVersion: 1
+id: to-spec-direct-nontechnical
+title: Nontechnical accepted decisions keep their domain vocabulary
+shape: direct
+kind: invocation
+skill: to-spec
+domains: [organizational, physical]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Materialize accepted Outcome contract `workshop-welcome-r7` as one Inline
+  Specification artifact. Original request: make registration and arrival
+  accessible for the 40 named community-workshop participants by 09:00 on 18
+  September. Intent: each participant can register and reach the welcome desk
+  independently or with requested assistance. Good enough means every named
+  participant receives a confirmation in their requested format, the fixed
+  venue's step-free foyer route and large-print or digital materials are ready,
+  and any arrival failure is recovered before the first session. Scope is the
+  named participants, registration confirmations, foyer route, and welcome
+  desk; speaker scheduling and transport are excluded. The venue, date,
+  step-free route, and accessibility commitments are hard Constraints from
+  venue access sheet v3 with high confidence. The event lead is Outcome owner
+  and Approver; the access coordinator is Specification Work owner. The
+  volunteer coordinator may update welcome materials within those commitments
+  but may not change venue, participants, or schedule. At the Proof seam, the
+  access coordinator observes five representative confirmation-and-arrival
+  journeys and records every exception. Terminal condition: all 40
+  confirmations are delivered, materials and route pass observation, and every
+  exception is resolved or accepted by the event lead. Contract r7 records all
+  decisions and acceptance; the Approver grants exact faithful representation
+  and no unresolved exception remains. Preserve this workshop vocabulary and
+  return later work to Workflow.
+environment:
+  id: workflow-nontechnical-specification-ready
+  capabilities:
+    workflow: true
+    persistence: false
+    to-spec: true
+  tools: []
+expected:
+  actions: [bind accepted Outcome contract, materialize one Specification from the reusable template, preserve the workshop's vocabulary]
+  artifacts: [accepted Outcome Specification artifact]
+  effects: []
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [contract workshop-welcome-r7 and exact Specification revision are bound, the 40 named participants and 18 September boundary are preserved, venue access sheet v3 and representative arrival-journey Proof seam are preserved]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec]
+  state: [Accepted]
+  forbidden: [invent missing decisions, absorb decomposition or implementation, claim parent completion]

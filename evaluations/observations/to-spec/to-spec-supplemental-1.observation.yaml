@@ -1,0 +1,34 @@
+schemaVersion: 1
+fixtureId: to-spec-supplemental
+attempt: 1
+contextId: fresh-to-spec-supplemental-sol-high-20260806-1
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: workflow-specification-supplemental
+  capabilities: { workflow: true, persistence: false, to-spec: true, supplemental-skills: true }
+  tools: [configured plain-language-audit skill]
+observed:
+  actions: [bind accepted Outcome contract, materialize the core Specification, invoke configured Supplemental skill at specification-enrichment, bind Supplemental evidence to exact draft revision, integrate its disposition]
+  artifacts: [accepted Inline Outcome Specification artifact, Supplemental evidence record]
+  effects: []
+  forbiddenChecks:
+    - criterion: let Supplemental evidence replace the core Specification
+      evidence: The complete core template remains present and the audit is one conditional evidence table.
+      observed: false
+    - criterion: transfer acceptance to the Supplemental skill
+      evidence: Visitor Services remains Approver; plain-language-audit owns only audit-r8 evidence.
+      observed: false
+    - criterion: claim parent completion
+      evidence: The result returns downstream work to Workflow and says the parent Outcome is incomplete.
+      observed: false
+  invoked: [to-spec, plain-language-audit]
+  notInvoked: [to-tickets, implement]
+  proof: [visitor-guidance-r5 exact accepted Specification revision and visitor-guidance-spec-d1 are bound, three destinations five-minute threshold 90-word Constraint and five-visitor Proof seam are preserved, audit-r8 proposes no change]
+  responsibility: [to-spec retains the bounded Specification result, Supplemental skill owns only its evidence, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec-supplemental-to-workflow]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-supplemental-1.txt
+  sha256: 94ef4dd1bdd837f6a6d6d080e3a5f03888dfcf5426fc8e0cda2fd17143f457f2

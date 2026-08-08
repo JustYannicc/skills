@@ -11,6 +11,13 @@ publication remains gated by #32. The validation foundation checks the skill
 against the same deterministic and behavioral proof boundary required for
 every later skill.
 
+Workflow's complete Inline route is implemented as the issue #13 candidate.
+It coordinates bounded synchronous work and active mid-work changes through
+immediate Review while preserving exact responsibility, revision, approval,
+effect, interruption, and continuation semantics. Human approval of that
+candidate remains required. Durable Adapter coordination and the unresolved
+System Record representation remain owned by #14 and #35 respectively.
+
 The complete current runtime method and its vocabulary are owned by the Thinking in Systems [governing standard](../skills/thinking-in-systems/references/standard.md) and are read on every invocation. Section pointers in `SKILL.md` provide traceability and fast rereading rather than conditional loading. The installed [source guide](../skills/thinking-in-systems/references/sources.md) links professional concepts to public evidence for optional deeper reading without becoming a second governing authority. [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md) is its stable source-archive pointer, and [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation; neither substitutes for the complete reference. The accepted jobs and source strategy are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md). Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). Private provenance, evidence classification, and maintainer history remain in the [`source` archive](source/README.md), outside the installed agent guidance.
 
 Automatic entry, proportional phase selection, migration, resumption, effects,

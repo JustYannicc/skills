@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: to-spec-revision-change
+attempt: 1
+contextId: fresh-to-spec-revision-change-sol-high-20260806-1
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: workflow-specification-revision
+  capabilities: { workflow: true, persistence: false, to-spec: true }
+  tools: []
+observed:
+  actions: [compare prior and proposed Specification revisions, perform impact analysis, invalidate only affected approvals/evidence/dependencies/Tickets, completed work/current-state records, and legacy state, preserve unaffected work, issue new revision]
+  artifacts: [revised Outcome Specification, revision impact analysis]
+  effects: []
+  forbiddenChecks:
+    - criterion: mutate prior revision in place
+      evidence: delivery-window-v1 is preserved and the successor is proposed as delivery-window-v2.
+      observed: false
+    - criterion: reuse stale approval
+      evidence: approval-a9 is invalidated and regional-director re-approval is required.
+      observed: false
+    - criterion: invalidate unrelated work
+      evidence: T-TRAIN-r1 and cold-chain-e2 remain valid.
+      observed: false
+    - criterion: claim completion
+      evidence: The result is Proposed and returns to Workflow for re-approval without executing.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [delivery-window-v1 proposed v2 and change-r4 are bound, T-NORTH-r2 T-SOUTH-r3 route-draft-r7 approval-a9 route-check-e5 delivery-map-r6 and calendar-r12 receive explicit dispositions, T-TRAIN-r1 and cold-chain-e2 remain valid]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [revision-change-to-spec]
+  state: [Proposed]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-revision-change-1.txt
+  sha256: 1cc44bac0d6dc381ee2b711580423c7b95facfdc24859a58d5e05053243954e7

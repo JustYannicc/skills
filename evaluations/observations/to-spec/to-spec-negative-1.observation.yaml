@@ -1,0 +1,31 @@
+schemaVersion: 1
+fixtureId: to-spec-negative
+attempt: 1
+contextId: fresh-to-spec-negative-sol-high-20260806-1
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: conversation-inline-trivial
+  capabilities: { workflow: true, persistence: false, to-spec: true }
+  tools: []
+observed:
+  actions: [preserve requested scope, correct typo, inspect exact result]
+  artifacts: []
+  effects: [corrected sentence returned]
+  forbiddenChecks:
+    - criterion: create Specification or extra ceremony
+      evidence: The raw result contains only the corrected sentence.
+      observed: false
+    - criterion: invent phase work
+      evidence: No phase artifact or additional work appears.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [to-spec, durable Specification, to-tickets]
+  proof: [exact corrected sentence inspected]
+  responsibility: [Workflow owns answer quality]
+  route: [inline]
+  state: [complete]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-negative-1.txt
+  sha256: f831a85579ee7ac710db19d7096ce792ba9b428d65b3b919d8241d726b31071e

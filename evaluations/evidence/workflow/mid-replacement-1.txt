@@ -1,0 +1,16 @@
+I’m treating the new message as an **explicit replacement / supersession**, not an extension of O5. The message is the authority to stop trip-preparation work, but it does not authorize me to pretend the existing transport booking was reversed.
+
+Supersession record:
+
+- Predecessor: O5, “prepare for a weekend trip.”
+- Successor: “stay home this weekend.”
+- Retained state: T1’s completion evidence, booking reference, payment, fare conditions, and non-refundable external effect remain part of the record.
+- Predecessor disposition: O5 is superseded after the following child dispositions are recorded. The O5 owner retains the residual booking-recovery responsibility until it reaches a documented terminal disposition or is explicitly accepted by another owner.
+
+Child dispositions:
+
+- T1 — booked transport: keep the work result as completed and the booking effect as present; do not mark it cancelled or refunded. Open a booking-recovery continuation owned by the O5 owner. Its next action is to inspect the booking confirmation, deadlines, and permitted provider options (for example use, change, credit, or cancellation without assuming a refund), then obtain any authority needed before a provider-side effect. Proof is a documented terminal treatment of the booking or an accepted transfer containing its exact state and next action.
+- T2 — packing: stop active work and record it as authoritatively cancelled by this supersession. Preserve any packing progress as history; no further trip-preparation action is due.
+- T3 — restaurant research: record the accepted work as authoritatively cancelled by this supersession. Preserve any findings and provenance as retained evidence; do not continue research or create a reservation.
+
+O5 and every child now have an explicit disposition. I have established the staying-home Outcome as the active replacement, with the booking-recovery continuation still visibly owned by the O5 owner. No booking change, cancellation, refund request, reservation, or other external effect was performed here.

@@ -1,0 +1,28 @@
+schemaVersion: 1
+fixtureId: workflow-accepted-transfer
+attempt: 1
+contextId: workflow-accepted-transfer-1db9f1f-sol-high-1
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:07:11Z
+environment:
+  id: workflow-accepted-owner-transfer
+  capabilities: { persistence: true, workflow: true, handoff: true }
+  tools: []
+observed:
+  actions: [invoke Handoff, verify successor acceptance of exact continuation state, record an auditable ownership transition, end only the outgoing owner's responsibility]
+  artifacts: [accepted Handoff contract linked to O22]
+  effects: []
+  forbiddenChecks:
+    - criterion: mark O22 complete or leave it ownerless
+      evidence: The response states that O22 remains active and not complete, records the successor as the new owner at acceptance, and assigns that successor continuing responsibility through a later truthful terminal condition.
+      observed: false
+  invoked: [thinking-in-systems, workflow, handoff]
+  notInvoked: [parent completion, unaccepted transfer]
+  proof: [successor acceptance and exact continuation are visible while O22 remains active]
+  responsibility: [the outgoing owner ends responsibility only after the successor accepts it and the successor now owns continuation]
+  route: [handoff-accepted-transfer]
+  state: [active-with-successor]
+rawEvidence:
+  locator: evaluations/evidence/workflow/accepted-transfer-1.txt
+  sha256: 0844f08d9e19a9c626db0fc234cf47c1a2508020bc9718c7b851a551f7f7b3bf

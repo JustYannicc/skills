@@ -1,0 +1,37 @@
+schemaVersion: 1
+fixtureId: to-spec-direct-technical
+attempt: 1
+contextId: fresh-to-spec-direct-technical-sol-high-20260806-1
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-fresh-context
+recordedAt: 2026-08-06T18:04:13.000Z
+environment:
+  id: workflow-specification-ready
+  capabilities: { workflow: true, persistence: true, adapter: true, to-spec: true }
+  tools: [selected canonical Adapter]
+observed:
+  actions: [bind accepted Outcome contract, materialize one Specification from the reusable template, honor selected Durable mode, bind exact Specification revision]
+  artifacts: [accepted durable Outcome Specification artifact]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent missing decisions
+      evidence: The artifact carries the exact cutover contract and marks inapplicable branches rather than adding behavior.
+      observed: false
+    - criterion: absorb decomposition or implementation
+      evidence: Implementation is returned to Workflow and no deployment or client mutation occurs.
+      observed: false
+    - criterion: claim parent completion
+      evidence: The result keeps integration and terminal-proof Responsibility with the API owner while Workflow coordinates downstream routing.
+      observed: false
+    - criterion: claim durable persistence without Adapter evidence
+      evidence: The artifact binds the supplied Adapter locator outcome:consumer-compat/v1 and exact revision adapter-r42.
+      observed: false
+  invoked: [to-spec]
+  notInvoked: [to-tickets, implement]
+  proof: [consumer-compat-r9 and exact Specification revision are bound, alpha-2 beta-4 mode retryAfterMs optional region 250 ms and 09:00 1 October cutover are preserved, compat-e12 revision e12-r6 is cited, canonical locator outcome:consumer-compat/v1 and adapter-r42 are recorded]
+  responsibility: [to-spec owns the bounded Specification result, named Outcome owner retains integration and terminal-proof responsibility, Workflow coordinates the downstream route]
+  route: [workflow-to-spec]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/to-spec/to-spec-direct-technical-1.txt
+  sha256: 3da2c9c3c341ad14ea5d7c82080d4f2b4d03c89aa0e021f8c25bfdd84029eba5

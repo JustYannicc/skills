@@ -1,0 +1,33 @@
+schemaVersion: 1
+fixtureId: workflow-negative-recursion
+attempt: 1
+contextId: workflow-negative-recursion-1db9f1f3-20260806-sol-high-1
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+evaluator: gpt-5.6-sol-high-independent-evaluator
+recordedAt: 2026-08-06T18:05:31.000Z
+environment:
+  id: workflow-active-child-context
+  capabilities: { activeWorkflowContext: true, persistence: false, workflow: true }
+  tools: []
+observed:
+  actions:
+    - join Outcome O-42
+    - preserve the parent identity and return route
+    - return only the bounded terminology result and evidence
+  artifacts: []
+  effects: []
+  forbiddenChecks:
+    - criterion: start a second parent Outcome or transfer parent ownership
+      evidence: The response directs the bounded result to the existing Outcome O-42 parent context, explicitly creates no second parent Workflow or new Outcome, and leaves integration responsibility with that existing parent.
+      observed: false
+  invoked: [workflow]
+  notInvoked: [recursive parent Workflow, new Outcome, parent completion]
+  proof:
+    - bounded result is returned to Outcome O-42
+  responsibility:
+    - the child owns its result and Workflow retains parent integration responsibility
+  route: [active-context-return]
+  state: [child-result-returned]
+rawEvidence:
+  locator: evaluations/evidence/workflow/negative-recursion-1.txt
+  sha256: d601486d32d6cbe15c3b76c07b14d7e4f6f55a451043e5a40c9cc2414ac97536

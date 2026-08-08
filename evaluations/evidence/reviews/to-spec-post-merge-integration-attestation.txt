@@ -1,0 +1,32 @@
+To Spec post-merge integration attestation
+
+The exact human-approved To Spec head was
+9abfb7acd9ac7cb824805c3587b04a044cb2a618. Current main advanced through the
+approved Workflow integration, so this branch merged that state without a
+rebase or force-push:
+
+- approved To Spec head: 9abfb7acd9ac7cb824805c3587b04a044cb2a618
+- previous To Spec behavior candidate: 19906f804ee8a2de00896793990446f5a3c22b97
+- merged Workflow main: 99427410a7a4374a8543d65df848b9b00a2663e2
+- combined non-evaluation candidate: 484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
+
+The merge preserved all approved To Spec runtime files, fixtures, raw evidence,
+observations, and review records while adding the approved Workflow candidate.
+Shared observation conflicts and the aggregate report were resolved from the
+already-integrated Workflow main before revision rebinding. No observation,
+fixture, or raw transcript was dropped. All 118 observations are rebound to
+`suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704`.
+
+This is an integration identity update, not a claim that behavioral prompts
+were rerun. Observation timestamps, context IDs, raw transcripts, raw SHA-256
+values, fixture contents, and observed behavior remain unchanged.
+
+To Spec runtime and evidence-input equivalence checks:
+
+    git diff --quiet 9abfb7acd9ac7cb824805c3587b04a044cb2a618..484b2d12184c4e5a8b4ea2f6d28eece6fc58a704 -- skills/to-spec
+    git diff --quiet 9abfb7acd9ac7cb824805c3587b04a044cb2a618..484b2d12184c4e5a8b4ea2f6d28eece6fc58a704 -- evaluations/fixtures/to-spec evaluations/evidence/to-spec
+
+Result: both commands exited 0. The combined candidate changes shared workflow
+and documentation surfaces, but it does not alter the approved To Spec runtime
+or its evidence inputs. Any later non-evaluation change requires another exact
+rebind or fresh proof.

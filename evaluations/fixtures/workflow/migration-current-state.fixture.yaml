@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: workflow-migration-current-state
+title: Existing Durable scope maps current state before ordinary change work
+shape: indirect
+kind: routing
+skill: workflow
+domains: [organizational]
+severity: Major
+requiredAttempts: 1
+prompt: |
+  Our long-running community program predates this Workflow. No current system map exists, several people already own active work, and I want to add a second approval stage. Get the change moving without losing what is already happening.
+environment:
+  id: workflow-existing-unmapped-program
+  capabilities: { persistence: true, workflow: true, migrateSystem: true, wayfinder: true }
+  tools: []
+expected:
+  actions: [load Thinking in Systems before Workflow, establish one parent Outcome, invoke Migrate System for bounded current-state mapping, record actual sources actors responsibilities relationships active work evidence waiting state and unknowns, verify the integrated map, route the proposed approval-stage change back to ordinary Workflow]
+  artifacts: [verified current-state map with provenance and visible confidence, separate change proposal]
+  effects: []
+  invoked: [thinking-in-systems, workflow, migrate-system]
+  notInvoked: [separate migration lifecycle, repair during migration]
+  proof: [existing reality is represented well enough for ordinary Workflow and the requested change remains unperformed]
+  responsibility: [the migration Work owner owns the bounded map while Workflow retains parent integration and terminal responsibility]
+  route: [durable-current-state-mapping, ordinary-change-work]
+  state: [mapping-in-review, parent-active]
+  forbidden: [silently redesign the represented program or treat mapping as parent completion]

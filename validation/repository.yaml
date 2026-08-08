@@ -28,3 +28,26 @@ skills:
         - Economics is a bounded design lens; Pareto concentration prioritizes search, Satisficing defines adequacy, Marginal analysis governs further effort, and Constraints, Preferences, Cost structure, substitution effects, and Externalities remain boundary- and evidence-aware.
         - Matched truthful Decision frames expose the stable judgment and frame-sensitive remainder without treating observed selection as stable Preference evidence or using framing to manufacture approval.
         - Activation begins an Assurance cadence whose verification, validation, burden, harm, and sustainment checks taper only after stable evidence or remain continuous when cheap and actionable.
+  - name: workflow
+    provenance:
+      strategy: original
+  - name: to-spec
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/engineering/to-spec/SKILL.md]
+      retainedBehavior:
+        - Synthesize accepted context and decisions without opening a new discovery interview.
+        - Preserve the surrounding domain vocabulary and accepted out-of-scope decisions.
+        - Carry the accepted problem, solution shape, behavior, decisions, Proof seam, and exclusions into one Specification artifact.
+        - Prefer one highest stable Proof seam and return a complete Specification boundary before downstream work.
+      changedAssumptions:
+        - Replace repository, codebase, issue-tracker, PRD, user-story, and test-module assumptions with a universal Outcome Specification template.
+        - Treat a complete accepted low-risk request as an Inline Specification before a Persistence boundary.
+        - Make scope, exclusions, Constraints, Responsibility, Authority, accepted decisions, unresolved exceptions, Proof seam, and terminal condition explicit.
+        - Route material gaps to the discovery or approval capability that owns the uncertainty instead of inventing decisions.
+        - Leave Durable representation to the selected Adapter and bind the resulting locator and exact revision when supplied.
+        - Bind Specifications, approvals, evidence, and material-change impact to exact revisions while preserving unaffected accepted work.
+        - Expose a specification-enrichment Extension point for configured Supplemental evidence while retaining the core Specification and acceptance boundary.

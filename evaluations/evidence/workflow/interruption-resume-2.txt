@@ -1,0 +1,6 @@
+This is an unrelated switch, so Outcome O8 is paused rather than replaced or completed. Workflow retains responsibility for O8, and the guarded-effect owner remains responsible for the door-controller update.
+
+- Inventory continuation: continuous work stopped at its coherent checkpoint. Item 14 is the preserved pickup point. Resume by processing item 14, then complete the remaining inventory proof and parent Review.
+- Guarded-effect continuation: the door-controller update remains before its atomic effect boundary. Its proposal and approval are preserved at exact revision D3; no controller effect has occurred. Immediately before any later effect, recheck the approval's validity, conditions, expiry, revocation status, and exact binding to D3. If the revision or approval changed, do not perform the effect; renew Review and approval first.
+
+What different question should I answer first? After answering it, I will resume O8 from item 14 and cross the door-controller effect boundary only after the D3 recheck passes.
