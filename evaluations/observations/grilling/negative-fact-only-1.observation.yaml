@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-negative-fact-only
 attempt: 1
 contextId: fresh-grilling-negative-fact-only-v12-1-788bff0f-88cf-451b-9be6-7f0fd4241ca8
-suiteRevision: git:a18d46cd57ddfc871ddbc45a4fce2aa8a618ac6b
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:50:37Z
 environment:

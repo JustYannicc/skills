@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-economic-stopping
 attempt: 1
 contextId: fresh-thinking-in-systems-economic-stopping-1
-suiteRevision: git:a18d46cd57ddfc871ddbc45a4fce2aa8a618ac6b
+suiteRevision: git:f89e527e7c06e95d6570112927198c690d30b06f
 evaluator: gpt-5.6-terra-fresh-context-full-standard
 recordedAt: 2026-08-04T15:34:49.000Z
 environment:
