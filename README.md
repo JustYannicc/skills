@@ -7,7 +7,7 @@ This repository is being built around a simple idea: agents become much more use
 ## Skills
 
 No skill has been published yet. Thinking in Systems is approved. Workflow's
-Inline route, To Spec, Review, and Prototype are implemented as candidates.
+Inline route, To Spec, To Tickets, Review, and Prototype are implemented as candidates.
 Suite publication remains gated by the composed-suite and clean-install proof
 in #31 and the immutable-release review in #32.
 
@@ -43,6 +43,10 @@ System Record representation remains undecided in #35.
 
 To Spec turns an accepted Outcome contract into a clear Specification artifact for downstream work, or revises it after a material change. It preserves the Outcome's vocabulary, routes material gaps to the capability that owns them, and returns responsibility to Workflow. Issue #22 is still open; this candidate is not published until the human-review gate and composed-suite release proof are complete.
 
+### [To Tickets](skills/to-tickets) — implementation candidate (human review required)
+
+To Tickets decomposes an accepted Specification into a collectively complete set of bounded, owned, dependency-aware Tickets. It preserves each Result, Authority, Proof seam, containment relationship, and Workflow context; exposes the accepted Work frontier; and returns material Specification or capability gaps without silently changing intent. One bounded Inline unit may remain implicit, while Durable decomposition is reserved for coordination boundaries. Issue #23 remains open until the human-review gate and composed-suite release proof are complete.
+
 ### [Review](skills/review) — implementation candidate
 
 Review independently verifies any exact result against its accepted Specification and governing standards at the Proof seam. It shows how the result works, keeps Specification and Standards evidence distinct, checks interaction quality and maintainability across domains, and integrates only configured Supplemental reviewers before returning one revision-bound Verified, Changes required, or Inconclusive verdict. This candidate remains human-review-required before its implementation Ticket can close.
@@ -62,7 +66,7 @@ implementation, Review, and parent completion remain with their owning phases.
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 17 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied. For documented planning and design, Grill With Docs composes Grilling's decision-tree interview with Domain Modeling's shared-language and decision records through the selected Adapter.
 
-The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-06-workflow-rewrite-candidate.md).
+The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-08-to-tickets-candidate.md).
 
 Publication evidence, clean-install proof, behavioral evaluation, and the
 separate private-activation gate are defined by the

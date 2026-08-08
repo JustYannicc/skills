@@ -15,6 +15,8 @@ This repository-wide inventory routes each source class to its authority. Inclus
 
 The universal `to-spec` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-spec` at the pinned revision above. Its complete retained-behavior and changed-assumption record is [`validation/repository.yaml`](../validation/repository.yaml); representation remains governed by the separate System Record design and the selected Adapter.
 
+The universal `to-tickets` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-tickets` at the same pinned revision. It retains complete tracer-bullet decomposition, dependency edges, frontier visibility, and owner acceptance while replacing codebase and tracker assumptions with the adapter-neutral Ticket contract; the full provenance record is in [`validation/repository.yaml`](../validation/repository.yaml).
+
 ## Thinking in Systems
 
 The installed [Sources and further reading](../skills/thinking-in-systems/references/sources.md) file is the single public concept-to-source map for the standard. It preserves the useful public reference spine—including systems engineering, decision economics, behavioral evidence, resilience, representation, preparation, and evaluation—beside the concepts those sources inform.

@@ -2,7 +2,7 @@
 
 `thinking-in-systems` is approved. `workflow` implements the complete Inline
 route as a human-review-required issue #13 candidate; Durable coordination is
-owned by #14. `to-spec`, `review`, and `prototype` have implementation
+owned by #14. `to-spec`, `to-tickets`, `review`, and `prototype` have implementation
 candidates. Suite
 publication remains gated by the composed-suite and clean-install proof in #31
 and the immutable-release review in #32.
