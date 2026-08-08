@@ -33,13 +33,14 @@ Persistence boundaries with one adapter-neutral Durable contract.
 
 ## Handoff
 
-- **Candidate identity:** `git:3a9d5f2` (full revision to be recorded after the evaluation-only commit).
+- **Candidate identity:** resolve the latest first-parent non-evaluation commit
+  with the repository validator. Evaluation-only commits do not change it.
 - **Evidence counts:** 11 Durable fixtures, 19 revision-bound attempts; the
   action-guard Critical fixture has three fresh contexts per final candidate.
   Raw evidence and observation hashes are recorded with the evaluation commit.
 - **Unresolved human decisions:** accept, revise, or reject this #14 candidate;
   decide whether the concrete Adapter capability matrix is sufficient for each
   claimed provider; retain downstream Adapter conformance as a separate gate.
-- **Coordinator review surfaces:** `git show --stat 3a9d5f2` plus the
+- **Coordinator review surfaces:** the resolved candidate commit plus the
   evaluation-only evidence/observation tranche and its final-candidate
   rebind attestation.
