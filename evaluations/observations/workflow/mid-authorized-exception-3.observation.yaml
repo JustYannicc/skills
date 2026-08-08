@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-authorized-exception
 attempt: 3
 contextId: fresh-workflow-mid-authorized-exception-sol-high-3
-suiteRevision: git:1db9f1f39800c2a502cade76d2e36487799d3e2e
+suiteRevision: git:484b2d12184c4e5a8b4ea2f6d28eece6fc58a704
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:12:43.000Z
 environment:
