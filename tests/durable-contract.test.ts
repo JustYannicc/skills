@@ -8,25 +8,7 @@ import {
 } from "../src/validation/durable-contract.ts";
 
 const makeApprovedGuardInput = () => ({
-  allowedEffects: [
-    {
-      action: "publish",
-      boundary: "site:public",
-      contract: "contract:publish-r2",
-    },
-  ],
-  approval: {
-    authorityRevision: "authority-r3",
-    resultRevision: "record-r7",
-    status: "approved" as const,
-    validUntil: "2026-08-08T10:00:00.000Z",
-  },
-  approvalRequired: true,
-  currentAuthorityRevision: "authority-r3",
-  currentRecordRevision: "record-r7",
-  lifecycleEligible: true,
   now: "2026-08-08T09:59:59.000Z",
-  operatingMode: "normal" as const,
   request: {
     action: "publish",
     authorityRevision: "authority-r3",
@@ -35,10 +17,34 @@ const makeApprovedGuardInput = () => ({
     recordRevision: "record-r7",
     target: "site:public",
   },
+  validation: {
+    record: {
+      allowedEffects: [
+        {
+          action: "publish",
+          boundary: "site:public",
+          contract: "contract:publish-r2",
+        },
+      ],
+      approval: {
+        authorityRevision: "authority-r3",
+        resultRevision: "record-r7",
+        status: "approved" as const,
+        validUntil: "2026-08-08T10:00:00.000Z",
+      },
+      approvalRequired: true,
+      currentAuthorityRevision: "authority-r3",
+      currentRecordRevision: "record-r7",
+      lifecycleEligible: true,
+      operatingMode: "normal" as const,
+    },
+    source: "system-record-structural-validator" as const,
+    status: "valid" as const,
+  },
 });
 
 describe("Durable Workflow deterministic seams", () => {
-  it("keeps blocked work off the frontier and puts stale active work in Recovery", () => {
+  it("keeps blocked work off the frontier", () => {
     expect(
       isDurableTicketBlocked({
         requirements: [{ state: "waiting" }],
@@ -53,10 +59,19 @@ describe("Durable Workflow deterministic seams", () => {
     ).toBeFalsy();
     expect(
       isDurableTicketOnFrontier({
+        liveClaim: null,
         requirements: [{ state: "cancelled", waived: true }],
         state: "accepted",
       })
     ).toBeTruthy();
+    expect(
+      isDurableTicketOnFrontier({
+        state: "accepted",
+      })
+    ).toBeFalsy();
+  });
+
+  it("puts stale active work in Recovery", () => {
     expect(
       isDurableTicketInRecovery({
         liveClaim: false,
@@ -73,17 +88,6 @@ describe("Durable Workflow deterministic seams", () => {
 
   it("fails the System Record action seam closed for stale, ineligible, or wrong-scope requests", () => {
     const base = {
-      allowedEffects: [
-        {
-          action: "publish",
-          boundary: "site:public",
-          contract: "contract:publish-r2",
-        },
-      ],
-      currentAuthorityRevision: "authority-r3",
-      currentRecordRevision: "record-r7",
-      lifecycleEligible: true,
-      operatingMode: "normal" as const,
       request: {
         action: "publish",
         authorityRevision: "authority-r3",
@@ -91,6 +95,23 @@ describe("Durable Workflow deterministic seams", () => {
         mode: "normal" as const,
         recordRevision: "record-r7",
         target: "site:public",
+      },
+      validation: {
+        record: {
+          allowedEffects: [
+            {
+              action: "publish",
+              boundary: "site:public",
+              contract: "contract:publish-r2",
+            },
+          ],
+          currentAuthorityRevision: "authority-r3",
+          currentRecordRevision: "record-r7",
+          lifecycleEligible: true,
+          operatingMode: "normal" as const,
+        },
+        source: "system-record-structural-validator" as const,
+        status: "valid" as const,
       },
     };
 
@@ -108,7 +129,13 @@ describe("Durable Workflow deterministic seams", () => {
       })
     ).toMatchObject({ allowed: false });
     expect(
-      guardSystemRecordAction({ ...base, lifecycleEligible: false })
+      guardSystemRecordAction({
+        ...base,
+        validation: {
+          ...base.validation,
+          record: { ...base.validation.record, lifecycleEligible: false },
+        },
+      })
     ).toMatchObject({ allowed: false });
   });
 
@@ -116,8 +143,14 @@ describe("Durable Workflow deterministic seams", () => {
     const input = makeApprovedGuardInput();
 
     expect(guardSystemRecordAction(input)).toStrictEqual({ allowed: true });
-    const inputWithoutApproval = { ...input };
-    Reflect.deleteProperty(inputWithoutApproval, "approval");
+    const inputWithoutApproval = {
+      ...input,
+      validation: {
+        ...input.validation,
+        record: { ...input.validation.record },
+      },
+    };
+    Reflect.deleteProperty(inputWithoutApproval.validation.record, "approval");
     expect(guardSystemRecordAction(inputWithoutApproval)).toMatchObject({
       allowed: false,
     });
@@ -130,13 +163,31 @@ describe("Durable Workflow deterministic seams", () => {
     expect(
       guardSystemRecordAction({
         ...input,
-        approval: { ...input.approval, resultRevision: "record-r6" },
+        validation: {
+          ...input.validation,
+          record: {
+            ...input.validation.record,
+            approval: {
+              ...input.validation.record.approval,
+              resultRevision: "record-r6",
+            },
+          },
+        },
       })
     ).toMatchObject({ allowed: false });
     expect(
       guardSystemRecordAction({
         ...input,
-        approval: { ...input.approval, status: "revoked" },
+        validation: {
+          ...input.validation,
+          record: {
+            ...input.validation.record,
+            approval: {
+              ...input.validation.record.approval,
+              status: "revoked",
+            },
+          },
+        },
       })
     ).toMatchObject({ allowed: false });
   });
@@ -151,13 +202,50 @@ describe("Durable Workflow deterministic seams", () => {
     expect(
       guardSystemRecordAction({
         ...input,
-        approval: { ...input.approval, validUntil: "not-a-timestamp" },
+        validation: {
+          ...input.validation,
+          record: {
+            ...input.validation.record,
+            approval: {
+              ...input.validation.record.approval,
+              validUntil: "not-a-timestamp",
+            },
+          },
+        },
       })
     ).toMatchObject({ allowed: false });
     expect(
       guardSystemRecordAction({
         ...input,
         now: "not-a-timestamp",
+      })
+    ).toMatchObject({ allowed: false });
+    const inputWithoutValidity = {
+      ...input,
+      validation: {
+        ...input.validation,
+        record: { ...input.validation.record },
+      },
+    };
+    Reflect.deleteProperty(
+      inputWithoutValidity.validation.record.approval,
+      "validUntil"
+    );
+    expect(guardSystemRecordAction(inputWithoutValidity)).toMatchObject({
+      allowed: false,
+    });
+  });
+
+  it("blocks an action when the #35 structural validator is unavailable or rejects the record", () => {
+    const input = makeApprovedGuardInput();
+    expect(
+      guardSystemRecordAction({
+        ...input,
+        validation: {
+          reason: "duplicate envelope key",
+          source: "system-record-structural-validator",
+          status: "invalid",
+        },
       })
     ).toMatchObject({ allowed: false });
   });

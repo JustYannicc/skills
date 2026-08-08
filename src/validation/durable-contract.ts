@@ -24,7 +24,8 @@ export interface DurableRequirement {
 export interface DurableTicketSnapshot {
   readonly state: DurableTicketState;
   readonly requirements?: readonly DurableRequirement[];
-  readonly liveClaim?: boolean;
+  /** `null` is the validator's explicit, claim-free result; `undefined` is unverified. */
+  readonly liveClaim?: boolean | null;
   readonly continuationNeedsIntervention?: boolean;
   readonly ownerNeedsIntervention?: boolean;
   readonly reviewNeedsIntervention?: boolean;
@@ -40,7 +41,7 @@ export interface SystemRecordActionRequest {
   readonly mode: "normal" | "degraded" | "paused" | "recovery";
 }
 
-export interface SystemRecordActionGuardInput {
+export interface ValidatedSystemRecordEnvelope {
   readonly lifecycleEligible: boolean;
   readonly currentRecordRevision: string;
   readonly currentAuthorityRevision: string;
@@ -50,14 +51,35 @@ export interface SystemRecordActionGuardInput {
     readonly contract: string;
   }[];
   readonly operatingMode: "normal" | "degraded" | "paused" | "recovery";
-  readonly request: SystemRecordActionRequest;
   readonly approvalRequired?: boolean;
   readonly approval?: {
     readonly status: "pending" | "approved" | "revoked";
     readonly resultRevision: string;
     readonly authorityRevision: string;
-    readonly validUntil?: string;
+    readonly validUntil: string;
   };
+}
+
+/**
+ * The accepted #35 structural validator is an Adapter boundary. This result
+ * lets the action guard consume only that validator's output, while keeping
+ * parsing and host-specific persistence outside this pure seam.
+ */
+export type SystemRecordStructuralValidation =
+  | {
+      readonly source: "system-record-structural-validator";
+      readonly status: "valid";
+      readonly record: ValidatedSystemRecordEnvelope;
+    }
+  | {
+      readonly source: "system-record-structural-validator";
+      readonly status: "invalid";
+      readonly reason: string;
+    };
+
+export interface SystemRecordActionGuardInput {
+  readonly validation: SystemRecordStructuralValidation;
+  readonly request: SystemRecordActionRequest;
   readonly now?: string;
 }
 
@@ -83,7 +105,7 @@ export const isDurableTicketOnFrontier = (
 ): boolean =>
   ticket.state === "accepted" &&
   !isDurableTicketBlocked(ticket) &&
-  ticket.liveClaim !== true;
+  ticket.liveClaim === null;
 
 /** Stale coordination, continuation, ownership, review, or deadline enters Recovery. */
 export const isDurableTicketInRecovery = (
@@ -98,33 +120,46 @@ export const isDurableTicketInRecovery = (
 
 /**
  * Prove the deterministic part of the #35 System Record action boundary.
- * This is a pure prototype/test seam: a production Adapter must pass the
- * output of its structural validator and must not treat this plain TypeScript
- * shape as proof that narrative or semantic fields are valid. Narrative
- * quality, semantic ownership, and decision wisdom remain human or LLM
- * judgment; this guard only checks exact formal bindings.
+ * The production Adapter must pass the accepted structural validator's
+ * `SystemRecordStructuralValidation` result. This pure seam does not parse
+ * Markdown or YAML and does not treat formal validation as proof that
+ * narrative or semantic fields are valid; those remain human or LLM
+ * judgment. It checks only exact formal bindings.
  */
 export const guardSystemRecordAction = (
   input: SystemRecordActionGuardInput
 ): GuardResult => {
+  if (input.validation.source !== "system-record-structural-validator") {
+    return {
+      allowed: false,
+      reason: "System Record structural validator source is unrecognized",
+    };
+  }
+  if (input.validation.status !== "valid") {
+    return {
+      allowed: false,
+      reason: `System Record structural validation failed: ${input.validation.reason}`,
+    };
+  }
+  const { record } = input.validation;
   const { request } = input;
-  if (!input.lifecycleEligible) {
+  if (!record.lifecycleEligible) {
     return { allowed: false, reason: "record is not lifecycle-eligible" };
   }
-  if (input.operatingMode !== "normal" || request.mode !== "normal") {
+  if (record.operatingMode !== "normal" || request.mode !== "normal") {
     return {
       allowed: false,
       reason: "record or request is not in normal mode",
     };
   }
   if (
-    staleOrMissing(request.recordRevision, input.currentRecordRevision) ||
-    staleOrMissing(request.authorityRevision, input.currentAuthorityRevision)
+    staleOrMissing(request.recordRevision, record.currentRecordRevision) ||
+    staleOrMissing(request.authorityRevision, record.currentAuthorityRevision)
   ) {
     return { allowed: false, reason: "record or Authority revision is stale" };
   }
 
-  const effect = input.allowedEffects.find(
+  const effect = record.allowedEffects.find(
     (candidate) =>
       candidate.action === request.action &&
       candidate.boundary === request.target &&
@@ -134,40 +169,38 @@ export const guardSystemRecordAction = (
     return { allowed: false, reason: "requested action is outside Authority" };
   }
 
-  if (input.approvalRequired && !input.approval) {
+  if (record.approvalRequired && !record.approval) {
     return { allowed: false, reason: "required approval is missing" };
   }
-  if (input.approval) {
-    if (input.approval.status !== "approved") {
+  if (record.approval) {
+    if (record.approval.status !== "approved") {
       return { allowed: false, reason: "approval is not approved" };
     }
     if (
-      input.approval.resultRevision !== request.recordRevision ||
-      input.approval.authorityRevision !== request.authorityRevision
+      record.approval.resultRevision !== request.recordRevision ||
+      record.approval.authorityRevision !== request.authorityRevision
     ) {
       return {
         allowed: false,
         reason: "approval is bound to another revision",
       };
     }
-    if (input.approval.validUntil) {
-      if (!input.now) {
-        return {
-          allowed: false,
-          reason: "approval validity cannot be checked without current time",
-        };
-      }
-      const validUntil = Date.parse(input.approval.validUntil);
-      const now = Date.parse(input.now);
-      if (Number.isNaN(validUntil) || Number.isNaN(now)) {
-        return {
-          allowed: false,
-          reason: "approval validity timestamp is invalid",
-        };
-      }
-      if (validUntil <= now) {
-        return { allowed: false, reason: "approval has expired" };
-      }
+    if (!record.approval.validUntil || !input.now) {
+      return {
+        allowed: false,
+        reason: "approval validity cannot be checked without timestamps",
+      };
+    }
+    const validUntil = Date.parse(record.approval.validUntil);
+    const now = Date.parse(input.now);
+    if (Number.isNaN(validUntil) || Number.isNaN(now)) {
+      return {
+        allowed: false,
+        reason: "approval validity timestamp is invalid",
+      };
+    }
+    if (validUntil <= now) {
+      return { allowed: false, reason: "approval has expired" };
     }
   }
 

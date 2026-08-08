@@ -137,7 +137,7 @@ All four options parsed to normalized semantic SHA-256
 | Parse → serialize → parse semantics | pass | pass | pass | pass at canonical source; projections parse |
 | Deterministic manual-edit simulation reparsed | pass | pass | pass | pass at canonical source |
 | Independent Luna Max edit reparsed without unintended semantic changes | recorded in exact proof revision | recorded in exact proof revision | recorded in exact proof revision | canonical edit recorded; projections remain generated/read-only |
-| Human judgment/readability round trip | **HUMAN REVIEW REQUIRED on this PR** | same required decision comparison | same required decision comparison | same required decision comparison |
+| Human judgment/readability round trip | accepted at merged PR #41; maintainer decision recorded above | same accepted decision comparison | same accepted decision comparison | same accepted decision comparison |
 | Relative link and narrative rationale retained | pass | pass | pass inside TOML string | pass in canonical source |
 | Envelope comment retained by parser serialization | no | no | no | no; JSON has no comment syntax |
 | Narrative HTML comment retained | pass | pass | pass inside narrative string | pass in canonical source; not promised in projections |
@@ -157,8 +157,8 @@ relationship identity/version/boundary/link; provenance value; approval
 validity/revocation field; link; and comment. The exact input revision, model,
 reasoning effort, context ID, raw outputs, and SHA-256 values are retained in the
 proof branch. One LLM trial is behavioral evidence, not a deterministic
-guarantee. Human readability and representation judgment deliberately remain
-the maintainer's PR decision.
+guarantee. Human readability and representation judgment were the maintainer's
+PR decision and are recorded as accepted at merged PR #41 above.
 
 Parser serialization intentionally tests normalized meaning rather than byte
 identity. YAML and TOML comments are not semantic data, so a material operator
@@ -185,8 +185,8 @@ An invalid or unavailable parser produces visible `unverified` or `blocked`
 machine state. The narrative remains available for human reading and editing,
 but no machine-authorized lifecycle change, generated projection, or external
 effect may proceed from an unvalidated envelope. A parser's recovery mode
-cannot authorize an action. This PR specifies the `System Record structural
-validator` and `System Record action guard` contracts and prototypes their
+cannot authorize an action. The accepted #35 representation specifies the
+`System Record structural validator` and `System Record action guard` contracts and prototypes their
 logical schema/action invariants; it does not add a production Adapter or a
 Markdown-table extraction implementation. An Adapter without both proven seams
 therefore has no machine-effect capability.
@@ -264,30 +264,31 @@ claim about downloaded or copied drafts outside it.
 
 ## Exact human review surfaces
 
-The human decision owner must inspect these changed and governing surfaces:
+The human decision owner inspected these changed and governing surfaces before
+the acceptance recorded at merged PR #41:
 
 1. `docs/SYSTEM_RECORD_REPRESENTATION.md` — decision, evidence, trade-offs,
    migration, and authority boundary.
-2. `skills/thinking-in-systems/references/system-record-template.md` — proposed
+2. `skills/thinking-in-systems/references/system-record-template.md` — accepted
    constrained envelope and single relationship-index authority.
 3. `skills/thinking-in-systems/references/standard.md`, especially Sections 4
    and 8 — unchanged semantic authority against which the proposal is checked.
 4. `docs/UNIVERSAL_WORK_CONTRACT.md`, especially Durable records and the Local
    Markdown Adapter — unchanged Adapter contract that the proposal must fit.
 5. `docs/DECISIONS.md` and `docs/requirements/REQUIREMENTS_LEDGER.md` — remain
-   unchanged until the human decision; propagate only the selected option.
+   unchanged governing sources; propagate only the selected option.
 6. Prototype commit
    [`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1)
    — production-shaped shared fixtures, strict envelope/table/action proof,
    forged-projection rejection, raw no-Git recovery, and revision-bound Luna Max
    round-trip evidence.
 
-The reviewer should inspect each raw source/output pair, confirm that rationale
-and links remain naturally readable, and decide whether TOML's explicit syntax
-creates an unmeasured material advantage, whether the envelope is small enough,
-whether the no-parser fail-closed rule is acceptable, and whether optional
-projections are sufficiently bounded. Review approval must bind the exact PR
-revision.
+The recorded decision inspected each raw source/output pair, confirmed that
+rationale and links remain naturally readable, and addressed whether TOML's
+explicit syntax creates an unmeasured material advantage, whether the envelope
+is small enough, whether the no-parser fail-closed rule is acceptable, and
+whether optional projections are sufficiently bounded. The decision binds the
+merged PR #41 revision above.
 
 ## Primary research citations and provenance
 

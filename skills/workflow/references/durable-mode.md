@@ -86,7 +86,12 @@ blocked(t) = any unwaived requires target is not complete
 
 frontier(t) = state(t) is accepted
   and not blocked(t)
-  and no live claim exists
+  and the Adapter has explicitly validated that no live Claim exists
+
+An explicit claim-free result is represented by `liveClaim: null` at this
+validation seam. Missing or unavailable Claim data is unverified, stays off the
+frontier, and enters Degraded or Recovery rather than permitting a concurrent
+claim attempt.
 
 recovery(t) = state(t) is active, waiting, or in_review
   and its claim, continuation, owner, review, or deadline needs intervention

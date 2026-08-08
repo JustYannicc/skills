@@ -71,9 +71,11 @@ The diagram shows every capability; follow only the smallest path needed to sati
 At a Durable boundary, Workflow coordinates one canonical adapter-neutral
 record set: Outcome, Ticket, Claim, Evidence, Continuation, transition history,
 and (when consequence warrants) a Change and Legacy Record. The selected
-Adapter may store those meanings in conversation state, Local Markdown, Git,
-GitHub, or an external native record, but it must declare actual capabilities
-and keep one writable authority. Read [Durable mode](references/durable-mode.md)
+Adapter may store those meanings in Local Markdown, Git, GitHub, or an external
+native record, but it must declare actual capabilities and keep one writable
+authority. Transient Conversation is an Inline representation only; at the
+Persistence boundary it must materialize through a Baseline Adapter or enter a
+visible Degraded continuation. Read [Durable mode](references/durable-mode.md)
 for the materialization sequence, capability matrix, queue and transition
 guards, #35 System Record binding, migration, waiting, Degraded operation,
 effects, and parent proof bundle.
