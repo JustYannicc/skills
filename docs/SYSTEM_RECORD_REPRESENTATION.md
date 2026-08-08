@@ -1,21 +1,21 @@
-# HUMAN REVIEW REQUIRED — System Record representation
+# Accepted — System Record representation
 
-**Status:** candidate until the repository maintainer approves the exact PR;
-approval makes this the decision record at that revision.
-**Human decision:** accept, reject, or revise the representation before issue
-#35 can close.
+**Status:** accepted at merged PR #41 (`1ef5bfb24ed0d4ffee99d021836acc285cb5be33`).
+**Human decision:** the maintainer accepted the Markdown + constrained YAML
+representation and its one-writable-authority, structural-validator, and
+action-guard boundaries.
 **Fixed point:** `455541e255b5482235faa65a82bffc2b21415b94`.
 **Disposable proof:**
 [`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1).
 
-> **HUMAN REVIEW REQUIRED:** merging the associated PR accepts the proposed
-> representation changes in this package. The proof and recommendation do not
-> grant an agent authority to approve the representation, merge the PR, or
-> close issue #35.
+> **Decision recorded:** PR #41 merged the reviewed representation and closed
+> issue #35. This acceptance does not make an Adapter canonical without the
+> declared structural-validator and action-guard seams, and it does not waive
+> the repository's separate publication and human-review gates.
 
 ## Decision
 
-### Proposed representation
+### Accepted representation
 
 1. The adapter-neutral System Record is one human-readable canonical record
    with one writable authority. Its structured envelope owns only fields a
@@ -56,18 +56,19 @@ approval makes this the decision record at that revision.
 7. **TOML status: optional generated projection only; not canonical.** No core
    skill or baseline Adapter requires a TOML parser.
 
-### Human choice
+### Decision record
 
-- **Accept:** approve the exact PR revision; the representation becomes accepted
-  only through that human action.
-- **Choose another option:** record the selected tested option and decisive
-  trade-off before changing the governing template.
-- **Request evidence:** name the result that could change the decision and keep
-  the candidate unaccepted.
+- **Accepted option:** Markdown with a constrained YAML envelope and the
+  canonical Section 2 relationship index.
+- **Rejected alternatives:** TOML or JSON as a canonical writable format;
+  generated projections remain optional and read-only.
+- **Decision boundary:** future representation changes require a new explicit
+  decision record and revision-bound proof; this document is not an implicit
+  authority for unrelated Adapter behavior.
 
-Issue #35 remains open until the maintainer records the decision and verifies
-the accepted surfaces. The PR must not be merged by the agent that authored
-this package.
+Issue #35 is closed at the merged PR #41 revision. The representation remains
+separate from the implementation and publication decisions of downstream
+skills and Adapters.
 
 ## Decision frame
 
@@ -136,7 +137,7 @@ All four options parsed to normalized semantic SHA-256
 | Parse → serialize → parse semantics | pass | pass | pass | pass at canonical source; projections parse |
 | Deterministic manual-edit simulation reparsed | pass | pass | pass | pass at canonical source |
 | Independent Luna Max edit reparsed without unintended semantic changes | recorded in exact proof revision | recorded in exact proof revision | recorded in exact proof revision | canonical edit recorded; projections remain generated/read-only |
-| Human judgment/readability round trip | **HUMAN REVIEW REQUIRED on this PR** | same required decision comparison | same required decision comparison | same required decision comparison |
+| Human judgment/readability round trip | accepted at merged PR #41; maintainer decision recorded above | same accepted decision comparison | same accepted decision comparison | same accepted decision comparison |
 | Relative link and narrative rationale retained | pass | pass | pass inside TOML string | pass in canonical source |
 | Envelope comment retained by parser serialization | no | no | no | no; JSON has no comment syntax |
 | Narrative HTML comment retained | pass | pass | pass inside narrative string | pass in canonical source; not promised in projections |
@@ -156,8 +157,8 @@ relationship identity/version/boundary/link; provenance value; approval
 validity/revocation field; link; and comment. The exact input revision, model,
 reasoning effort, context ID, raw outputs, and SHA-256 values are retained in the
 proof branch. One LLM trial is behavioral evidence, not a deterministic
-guarantee. Human readability and representation judgment deliberately remain
-the maintainer's PR decision.
+guarantee. Human readability and representation judgment were the maintainer's
+PR decision and are recorded as accepted at merged PR #41 above.
 
 Parser serialization intentionally tests normalized meaning rather than byte
 identity. YAML and TOML comments are not semantic data, so a material operator
@@ -184,8 +185,8 @@ An invalid or unavailable parser produces visible `unverified` or `blocked`
 machine state. The narrative remains available for human reading and editing,
 but no machine-authorized lifecycle change, generated projection, or external
 effect may proceed from an unvalidated envelope. A parser's recovery mode
-cannot authorize an action. This PR specifies the `System Record structural
-validator` and `System Record action guard` contracts and prototypes their
+cannot authorize an action. The accepted #35 representation specifies the
+`System Record structural validator` and `System Record action guard` contracts and prototypes their
 logical schema/action invariants; it does not add a production Adapter or a
 Markdown-table extraction implementation. An Adapter without both proven seams
 therefore has no machine-effect capability.
@@ -263,30 +264,31 @@ claim about downloaded or copied drafts outside it.
 
 ## Exact human review surfaces
 
-The human decision owner must inspect these changed and governing surfaces:
+The human decision owner inspected these changed and governing surfaces before
+the acceptance recorded at merged PR #41:
 
 1. `docs/SYSTEM_RECORD_REPRESENTATION.md` — decision, evidence, trade-offs,
    migration, and authority boundary.
-2. `skills/thinking-in-systems/references/system-record-template.md` — proposed
+2. `skills/thinking-in-systems/references/system-record-template.md` — accepted
    constrained envelope and single relationship-index authority.
 3. `skills/thinking-in-systems/references/standard.md`, especially Sections 4
    and 8 — unchanged semantic authority against which the proposal is checked.
 4. `docs/UNIVERSAL_WORK_CONTRACT.md`, especially Durable records and the Local
    Markdown Adapter — unchanged Adapter contract that the proposal must fit.
 5. `docs/DECISIONS.md` and `docs/requirements/REQUIREMENTS_LEDGER.md` — remain
-   unchanged until the human decision; propagate only the selected option.
+   unchanged governing sources; propagate only the selected option.
 6. Prototype commit
    [`dabfca4956e6d07a0cea18d278e75d8726b07ff1`](https://github.com/JustYannicc/skills/commit/dabfca4956e6d07a0cea18d278e75d8726b07ff1)
    — production-shaped shared fixtures, strict envelope/table/action proof,
    forged-projection rejection, raw no-Git recovery, and revision-bound Luna Max
    round-trip evidence.
 
-The reviewer should inspect each raw source/output pair, confirm that rationale
-and links remain naturally readable, and decide whether TOML's explicit syntax
-creates an unmeasured material advantage, whether the envelope is small enough,
-whether the no-parser fail-closed rule is acceptable, and whether optional
-projections are sufficiently bounded. Review approval must bind the exact PR
-revision.
+The recorded decision inspected each raw source/output pair, confirmed that
+rationale and links remain naturally readable, and addressed whether TOML's
+explicit syntax creates an unmeasured material advantage, whether the envelope
+is small enough, whether the no-parser fail-closed rule is acceptable, and
+whether optional projections are sufficiently bounded. The decision binds the
+merged PR #41 revision above.
 
 ## Primary research citations and provenance
 

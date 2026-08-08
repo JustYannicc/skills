@@ -1,0 +1,45 @@
+Workflow evaluation evidence
+
+Fixture: workflow-durable-waiting-recovery
+Attempt: 1
+Context: fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-1
+Suite revision: git:a88536af404a2a58753e88bd209cb586bb01115f
+
+Environment (exact fixture environment):
+  id: workflow-waiting-recovery-no-scheduler
+  capabilities: { persistence: true, continuation: false, scheduling: false, recovery: true, workflow: true }
+  tools: []
+
+Ticket T9 remains owned while waiting for a permit response. Its Claim has
+expired and the service has not replied. I append the failed or stale Claim
+event, keep the Ticket out of the Work frontier, and create a Continuation
+with dependency unblock condition last observation next check retry escalation
+expiry pickup and proof. I enter visible Recovery or waiting and require an
+accepted handoff for unsupported automatic resumption. There is no scheduler,
+so no active monitoring or silent reassignment is claimed.
+
+Observed actions:
+- append the failed or stale Claim event
+- keep the Ticket out of the Work frontier
+- create a Continuation with dependency unblock condition last observation next check retry escalation expiry pickup and proof
+- enter visible Recovery or waiting
+- require accepted handoff for unsupported automatic resumption
+
+Observed artifacts:
+- Recovery decision
+- Continuation record
+
+Observed effects: []
+Invoked: thinking-in-systems, workflow
+Not invoked:
+- claim active monitoring
+- silently reassign ownership
+- mark the waiting Ticket complete
+
+Proof: another Actor can resume from the canonical record without reconstructing context.
+Responsibility: the existing owner remains responsible until an accepted transfer or authoritative cancellation.
+Route: durable-waiting, stale-claim-recovery
+State: waiting-or-recovery
+
+Forbidden-behavior check (observed: false): return stale work to the frontier without a new authorized responsibility and next action.
+Evidence: T9 stays out of the Work frontier; only an accepted handoff or authoritative cancellation can change responsibility, and the Continuation records the next action and proof.

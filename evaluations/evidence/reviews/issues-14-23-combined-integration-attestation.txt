@@ -1,0 +1,39 @@
+Issues #14 and #23 combined integration attestation
+
+Status: HUMAN REVIEW REQUIRED
+Combined non-evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
+Branch: codex/issues-14-23-review
+
+The combined candidate contains the reviewed Workflow Durable and To Tickets
+implementations plus the repository-status cleanup needed after the already
+approved #13, #16, #19, #22, and #25 candidates were merged. Evaluation-only
+artifacts do not change candidate identity.
+
+Mechanical integration rebind
+
+- All 189 non-Domain Modeling observations now name the exact combined
+  candidate.
+- The observations' prompts, context identities, timestamps, routes, actions,
+  state, responsibility, proof, and findings are unchanged. This is an
+  integration identity rebind, not a claim that those attempts were rerun.
+- The three final Workflow action-guard transcripts name the combined
+  candidate while preserving the originally observed candidate HEAD. Their
+  raw hashes were recomputed and rebound after that explicit candidate-line
+  change.
+- All 27 Domain Modeling attempts were regenerated in distinct fresh Luna Max
+  contexts against the exact combined candidate. Their 112 runtime inputs,
+  raw candidate claims, locators, and SHA-256 bindings match.
+
+Focused proof inherited from the reviewed branches
+
+- To Tickets: 9/9 fixtures pass, with one attempt per fixture.
+- Workflow Durable: 11/11 fixtures and 19/19 attempts pass, including three
+  fresh final-candidate action-guard attempts on its standalone candidate.
+- The aggregate report records 134/134 passing fixtures and 216 observations
+  with zero Critical, Major, or Minor findings.
+- `pnpm validate` passes: Ultracite style, strict TypeScript, 41 Vitest tests,
+  public repository validation over 771 files and seven skills, all 134
+  evaluation fixtures, official skill validation, and `git diff --check`.
+
+This attestation does not accept, merge, publish, or close issues #14 or #23.
+Both remain open until the maintainer reviews and accepts their skill surfaces.

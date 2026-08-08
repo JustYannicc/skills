@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-indirect-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-indirect-nontechnical-sol-high-1-636cb1c6-64ad-4c51-aae3-b48af86e4495
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T09:58:06Z
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+contextId: fresh-domain-modeling-indirect-nontechnical-luna-max-20260808t112814z-4186c776-8495-4c71-8b6f-ecbc9787ee60
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:28:14Z
 environment:
   id: adapter-baseline
   capabilities:
@@ -18,22 +18,6 @@ environment:
     - volunteer language steward acceptance of proposal meal-service-language-p6
     - volunteer-handbook@handbook-r5
     - signup-form@form-r9
-runtimeInputs:
-  - role: skill
-    locator: skills/domain-modeling/SKILL.md
-    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-  - role: fixture
-    locator: evaluations/fixtures/domain-modeling/indirect-nontechnical.fixture.yaml
-    sha256: c042a6f550cc4cbabfe88d9672ef2a317d95cf8bae11dcc8ea7080a8abaf1816
-  - role: governing-skill
-    locator: skills/thinking-in-systems/SKILL.md
-    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-  - role: governing-reference
-    locator: skills/thinking-in-systems/references/standard.md
-    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-rawEvidence:
-  locator: evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt
-  sha256: 5348b7a04cf72fdda6bc1d953774643fe9bb1d9c03729394f99c38ed2e1514f8
 observed:
   actions:
     - classify the blocker as terminology
@@ -47,6 +31,10 @@ observed:
     - language result with operative meanings or visible conflicts for Workflow
   effects:
     - accepted meal-service language recorded
+  forbiddenChecks:
+    - criterion: assign volunteers while the terminology blocker remains
+      evidence: The isolated run guarded and reread the accepted language record before returning to Workflow; assignment and schedule effects remained zero.
+      observed: false
   invoked:
     - thinking-in-systems
     - workflow
@@ -68,10 +56,19 @@ observed:
     - workflow-to-domain-modeling
   state:
     - ready-for-assignment-or-discovery
-  forbiddenChecks:
-    - criterion: assign volunteers while the terminology blocker remains
-      observed: false
-      evidence: >-
-        The guarded atomic write and exact result reread completed before the
-        bounded return to Workflow; the effect inspection reported zero
-        volunteer and schedule-assignment effects.
+runtimeInputs:
+  - role: skill
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: fixture
+    locator: evaluations/fixtures/domain-modeling/indirect-nontechnical.fixture.yaml
+    sha256: c042a6f550cc4cbabfe88d9672ef2a317d95cf8bae11dcc8ea7080a8abaf1816
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+rawEvidence:
+  locator: evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt
+  sha256: fdf295d43dc686b30f0a791a7547eebfdafd6e58c83d04e04f3a3dbf5e04d59f

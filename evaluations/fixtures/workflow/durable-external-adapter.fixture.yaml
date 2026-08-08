@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: workflow-durable-external-adapter
+title: An external Adapter is canonical only after universal conformance
+shape: indirect
+kind: adapter
+skill: workflow
+domains: [organizational-work, personal-work]
+severity: Major
+requiredAttempts: 1
+prompt: |
+  Use the selected external coordination service for a recurring community
+  program. Confirm it can preserve identities, ownership, dependencies,
+  evidence, waiting, recovery, readable status, and canonical migration before
+  treating it as authoritative.
+environment:
+  id: workflow-external-adapter-conformance
+  capabilities: { persistence: true, externalAdapter: true, conformanceSuite: true, scheduling: unknown, workflow: true }
+  tools: [external-adapter]
+expected:
+  actions: [run the Adapter conformance boundary, verify Baseline semantics and declared optional levels, map one canonical native record set, record provider and revision, preserve readable state and migration pointers]
+  artifacts: [provider capability declaration, canonical native Outcome and Ticket records, conformance Evidence]
+  effects: []
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [make the external service canonical from name similarity, maintain bidirectional live synchronization, hide unsupported fields]
+  proof: [the provider either passes conformance and becomes one authority or remains a derived view with a truthful Local Markdown fallback]
+  responsibility: [Workflow retains parent responsibility while conformance or fallback is unresolved]
+  route: [durable-external-adapter-conformance]
+  state: [canonical-after-conformance-or-degraded]
+  forbidden: [claim external persistence while identity or continuation semantics are missing]

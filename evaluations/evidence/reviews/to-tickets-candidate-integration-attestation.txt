@@ -1,0 +1,32 @@
+To Tickets candidate integration-gate attestation
+
+Status: HUMAN REVIEW REQUIRED
+Candidate: git:43ed4fb2a92a346ed785d4e25ff00c745010e94b
+Branch: codex/issue-23-to-tickets
+
+The non-evaluation To Tickets candidate is committed at the exact identity
+above. The remaining working-tree changes are evaluation artifacts only; the
+candidate identity therefore remains clean and stable. The candidate contains
+the To Tickets skill, its contract template and OpenAI metadata, public
+catalog/provenance records, and the human-review handoff.
+
+Focused proof completed against this candidate:
+
+- All nine To Tickets fixtures pass the deterministic runner with zero
+  Critical, Major, or Minor findings.
+- Ultracite style, strict TypeScript, 35 Vitest tests, and `git diff --check`
+  pass.
+- One hundred seventy non-Domain observation records are mechanically rebound
+  from the prior working-tree identity to this exact clean candidate. Their
+  raw locators, hashes, context IDs, timestamps, prompts, and observed
+  behavior are unchanged; this is an identity rebind, not a new behavioral
+  claim.
+- The 27 Domain Modeling observations and raw transcripts remain bound to
+  `git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d` and were not mechanically
+  rebound or rewritten.
+
+The composed-suite report and full `pnpm validate` are intentionally pending.
+They must be regenerated at the eventual combined #14+#23 integration
+candidate after one fresh Domain Modeling proof against that exact identity.
+The stale mixed-candidate state is visible and is not presented as a release
+report. This attestation does not accept, merge, publish, or close Issue #23.

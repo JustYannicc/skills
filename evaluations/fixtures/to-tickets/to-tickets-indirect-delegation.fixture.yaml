@@ -1,0 +1,42 @@
+schemaVersion: 1
+id: to-tickets-indirect-delegation
+title: Workflow delegation keeps nested ownership and concurrent frontier work
+shape: indirect
+kind: composition
+skill: to-tickets
+domains: [communication, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow supplies accepted Specification `member-update-r5`. The Outcome is
+  to inform 86 members that Tuesday's class moves from Hall A to Hall C while
+  preserving the 18:00 start time before Monday 12:00. The membership lead
+  owns the Outcome and parent proof; the communications coordinator owns the
+  decomposition. Two independently finishable child Results may be delegated
+  and claimed concurrently: one sends the approved plain-language update on
+  each recorded channel, and one completes telephone fallback for four
+  non-digital members. A parent integration Ticket must verify delivery
+  evidence for all 86 and requires both child Tickets. The coordinator may
+  delegate child ownership but may not transfer parent ownership or send from
+  this phase. Produce the Durable decomposition and return it to Workflow.
+environment:
+  id: workflow-to-tickets-delegation-concurrency
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    atomic-claims: true
+    delegation: true
+    to-tickets: true
+  tools: [selected canonical Adapter]
+expected:
+  actions: [bind Workflow context and accepted Specification, create independently finishable delegated child Results, mark child Tickets concurrently eligible, create parent integration Ticket with two requires edges, return nested ownership]
+  artifacts: [Durable delegated Ticket set, dependency and frontier view]
+  effects: []
+  invoked: [workflow, to-tickets]
+  notInvoked: [implement, send effect, review]
+  proof: [member-update-r5 and exact Ticket-set revision are bound, message and telephone fallback Tickets are independent frontier work, integration Ticket requires both, 86-member delivery evidence is the parent Proof seam]
+  responsibility: [child Work owners retain bounded responsibility, communications coordinator retains decomposition responsibility, membership lead retains parent Outcome ownership and integration]
+  route: [workflow-to-tickets-to-workflow]
+  state: [Accepted]
+  forbidden: [transfer parent ownership to a child, treat delegation or child completion as parent completion, invent a third delivery channel, execute or send the messages, assume concurrency without atomic-claims evidence]

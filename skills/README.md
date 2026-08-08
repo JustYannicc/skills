@@ -1,9 +1,9 @@
 # Skill packages
 
-`thinking-in-systems` is approved. `workflow` implements the complete Inline
-route as a human-review-required issue #13 candidate; Durable coordination is
-owned by #14. `to-spec`, `review`, and `prototype` have implementation
-candidates. Suite
+`thinking-in-systems` is approved. `workflow` implements the approved Inline
+route and the Durable coordination candidate as a human-review-required issue
+#14 result. `to-spec`, `domain-modeling`, `review`, and `prototype` are approved;
+`to-tickets` has an implementation candidate. Suite
 publication remains gated by the composed-suite and clean-install proof in #31
 and the immutable-release review in #32.
 

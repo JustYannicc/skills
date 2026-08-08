@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-missing-system-relationship-authority
 attempt: 1
-contextId: fresh-domain-modeling-missing-system-relationship-authority-20260808t095453z-sol-high-09b0caaf
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T09:54:53Z
+contextId: fresh-domain-modeling-missing-system-relationship-authority-20260808t113141z-luna-max-a47f1c9e
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:31:41Z
 environment:
   id: thinking-in-systems-relationship-authority-unavailable
   capabilities:
@@ -62,4 +62,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/missing-system-relationship-authority-1.txt
-  sha256: 37bf2f6f5f45b53425fc440fe102ed5af831bcc2575013504a2d845af9226981
+  sha256: 3dde0b8e25d45969322190d045303dc7941801094a17ad6069f09bab88f08dc2

@@ -119,6 +119,25 @@ Authority, claims, continuation, reviewers, approvers, evidence, and result
 revisions are conditional sections. They become required when the work crosses
 the corresponding boundary; empty placeholders are not required.
 
+When the Coordination space represents a Durable System, its System Record is
+the same one-writable-authority boundary as the work records. Use the accepted
+representation from [System Record representation](SYSTEM_RECORD_REPRESENTATION.md):
+human-readable Markdown with a constrained YAML envelope for formal identity,
+version, exact revision, locator, states, owner, scoped Authority, provenance,
+and conditional approval; the Section 2 relationship table remains the single
+semantic relationship index. Native Adapters may map these meanings to their
+own fields and bodies. JSON/TOML are optional generated read-only projections
+for a named consumer, never an additional writable record.
+
+An Adapter that authorizes a lifecycle transition, projection, or effect must
+provide the `System Record structural validator` and `System Record action
+guard` seams. The validator rejects malformed or unsupported formal state and
+the guard matches the requested action, target/scope, contract, current record
+and Authority revisions, eligible state, normal mode, and valid unrevoked
+approval. Invalid, stale, unavailable, or unverified records remain readable
+for human recovery but cannot authorize machine action. Syntax validation does
+not assert semantic correctness or grant Authority.
+
 ### Outcome payload
 
 An Outcome record adds:
@@ -386,6 +405,15 @@ The Adapter must respect the host's established meaning. It may use an
 assignee as a Claim only when that Coordination space explicitly defines
 assignees that way. If assignees represent Work ownership, the Adapter uses a
 different native field or guarded record for Claims.
+
+Hosted and external providers declare their actual `Baseline`, `Coordination`,
+and `Continuation` levels for the selected scope. A GitHub connection does not
+by itself provide atomic Claims, executable Continuation, or a valid System
+Record action guard. A provider may become canonical only after the conformance
+operations above preserve identity, state, relationships, Responsibility,
+Authority, Evidence, waiting, Recovery, readable status, and Canonical
+migration. Otherwise it remains a derived view or the work enters visible
+Degraded mode and uses a safe Baseline fallback.
 
 ### Canonical migration
 

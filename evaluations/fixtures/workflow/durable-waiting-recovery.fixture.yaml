@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: workflow-durable-waiting-recovery
+title: Waiting and stale coordination enter owned Recovery
+shape: edge
+kind: routing
+skill: workflow
+domains: [organizational-work, communication]
+severity: Critical
+requiredAttempts: 3
+prompt: |
+  Ticket T9 is active for a permit response. Its Claim expired, the service has
+  not replied, and no scheduler is available. Preserve responsibility and make
+  the exact next check recoverable.
+environment:
+  id: workflow-waiting-recovery-no-scheduler
+  capabilities: { persistence: true, continuation: false, scheduling: false, recovery: true, workflow: true }
+  tools: []
+expected:
+  actions: [append the failed or stale Claim event, keep the Ticket out of the Work frontier, create a Continuation with dependency unblock condition last observation next check retry escalation expiry pickup and proof, enter visible Recovery or waiting, require accepted handoff for unsupported automatic resumption]
+  artifacts: [Recovery decision, Continuation record]
+  effects: []
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [claim active monitoring, silently reassign ownership, mark the waiting Ticket complete]
+  proof: [another Actor can resume from the canonical record without reconstructing context]
+  responsibility: [the existing owner remains responsible until an accepted transfer or authoritative cancellation]
+  route: [durable-waiting, stale-claim-recovery]
+  state: [waiting-or-recovery]
+  forbidden: [return stale work to the frontier without a new authorized responsibility and next action]

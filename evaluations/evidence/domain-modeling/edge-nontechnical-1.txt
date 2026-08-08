@@ -1,12 +1,12 @@
 Fresh-context behavioral evaluation — domain-modeling-edge-nontechnical
 Attempt: 1
-Context ID: fresh-domain-modeling-edge-nontechnical-sol-high-20260808t095258z-67af7a51-d0b3-4e7f-80ad-371628855501
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T09:52:58Z
+Context ID: fresh-domain-modeling-edge-nontechnical-luna-max-20260808t112710z-39962a9f-108a-4274-a2f4-442ba34123af
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-08T11:27:10Z
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+- Evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
 - Skill locator: skills/domain-modeling/SKILL.md
 - Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
 - Fixture locator: evaluations/fixtures/domain-modeling/edge-nontechnical.fixture.yaml
@@ -15,6 +15,7 @@ Candidate and exact runtime identity
 - Governing-skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
 - Governing-reference locator: skills/thinking-in-systems/references/standard.md
 - Governing-reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- Suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
 
 Exact prompt
 
@@ -34,63 +35,62 @@ tools:
   - conversation
 ```
 
-Fresh-run prompt and tool events
+Fresh-run observations
 
-1. The prompt supplied the two source claims already bound to `pickup-policy@policy-r3` and `guardian-message@message-r8`.
-2. The declared environment exposed neither persistent Adapter access nor conditional-write capability. No canonical language record could be read, guarded, created, or updated.
-3. No Adapter operation, policy approval, pickup action, or other external effect was attempted. Effect trace: `[]`.
-4. One candidate response was generated in this context. It was not retried or edited before grading.
+1. The prompt supplied two source-bound candidate meanings and no semantic decision Actor. The response was generated once in the fresh context above and was not retried or edited before grading.
+2. The declared environment had no persistence and no conditional-write capability. No canonical language record could be read, revision-guarded, created, or updated.
+3. No policy approval, pickup action, Adapter write, or other external effect was attempted. Effect trace: `[]`.
 
 Unedited candidate response generated once
 
 ## Non-durable terminology conflict
 
-The terminology question is: **what does `safe` mean in the pickup plan?** The two exact, source-bound candidates remain separate:
+The smallest terminology question is: **which operative boundary should `safe` have in this pickup plan?** The scope is the pickup-plan handoff and every Actor who uses or authorizes that plan. The two source-bound candidates are preserved as separate meanings:
 
-- `pickup-policy@policy-r3`: `safe` means physically safe.
-- `guardian-message@message-r8`: `safe` means authorized by a guardian.
+- `pickup-policy@policy-r3`: `safe` means physically safe, with no identified physical hazard for the pickup.
+- `guardian-message@message-r8`: `safe` means authorized by a guardian, with the guardian's permission for the pickup.
 
-These are conflicting meanings in this scope, not aliases. No Actor has semantic decision Authority to accept either meaning, combine them, or set their operative boundary. Until an authorized decision is bound to an exact proposal revision, use the qualified labels `physically safe` and `guardian-authorized` as a non-durable clarity proposal; do not treat either label as accepted canonical terminology.
+These are a conflict of boundaries, not aliases: a physically safe pickup need not be guardian-authorized, and guardian authorization does not establish the absence of a physical hazard. No Actor with semantic decision Authority is identified, so neither meaning is accepted, merged, or elevated into a policy. Until that Authority is named, the qualified labels `physically safe` and `guardian-authorized` are a non-durable clarity proposal only.
 
-Actor-and-Authority boundary test:
+Actor-and-Authority scenarios:
 
-- Good case for one candidate and near miss for the other: a pickup has no identified physical hazard but lacks guardian authorization. It satisfies the meaning from `pickup-policy@policy-r3` and fails the meaning from `guardian-message@message-r8`.
-- Reversed case: a guardian authorizes a pickup that has an identified physical hazard. It satisfies the meaning from `guardian-message@message-r8` and fails the meaning from `pickup-policy@policy-r3`.
-- Authority boundary: a guardian's Authority to authorize a particular pickup would not, by itself, grant semantic decision Authority to define `safe` for every Actor using the pickup plan.
+- A courier Actor finds no physical hazard, but no guardian has authorized the pickup. The case is physically safe under `pickup-policy@policy-r3` and not guardian-authorized under `guardian-message@message-r8`.
+- A guardian authorizes a pickup, but the courier identifies a physical hazard. The case is guardian-authorized under `guardian-message@message-r8` and not physically safe under `pickup-policy@policy-r3`.
+- The guardian may have Authority to authorize that particular pickup, while the courier may have Authority to report a hazard; neither permission alone grants semantic decision Authority to define `safe` for every Actor using this plan. The missing semantic decision Actor remains the blocker.
 
-The selected Adapter is unavailable, with both persistence and conditional-write capability absent. Therefore no canonical language record was read, revision-guarded, created, or updated. This conversation preserves only a non-durable conflict; it has no Adapter-managed record identity or language-record source or result revision. No policy was approved and no pickup was authorized, scheduled, or performed.
+The selected Adapter is unavailable: `persistence: false` and `conditionalWrite: false`. This response therefore preserves only a non-durable terminology conflict and capability gap. No canonical language record was read, guarded, created, or updated; there is no Adapter-managed record identity, language-record source revision, or result revision. No policy was approved, and no pickup was authorized, scheduled, or performed. Effect trace: `[]`.
 
 Exact next question: **Which Actor has semantic decision Authority to accept the operative meaning and boundary of `safe` for this pickup plan?**
 
-After that Authority is identified, restore an Adapter that supports persistence and stale-write protection, reread the canonical language record at its exact revision, revalidate both cited source revisions, present one exact proposal revision for acceptance, verify separate write Authority, and only then persist the accepted entry.
+Once that Actor is identified, restore an Adapter with persistence and stale-write protection, reread the canonical language record at its exact source revision, revalidate both source locators and revisions, present one exact proposal revision for acceptance, verify separate write Authority, and persist only after acceptance. If the Adapter remains unavailable, keep the proposal explicitly non-durable and preserve this exact resumption action.
 
-Domain Modeling returns this bounded conflict and capability gap. Workflow retains responsibility for the pickup-plan Outcome, integration, resumption, effects, and terminal proof.
+Domain Modeling returns this bounded terminology conflict, its scenarios, the source-bound evidence, and the capability gap. Workflow retains responsibility for the pickup-plan Outcome, integration, resumption, effects, and terminal proof.
 
 Route: `degraded-terminology-conflict`
 State: `terminology-conflicted-and-non-durable`
 
 Post-response grading against every fixture criterion
 
-- Action — preserve both sourced meanings: PASS. The response retains physical safety at `pickup-policy@policy-r3` and guardian authorization at `guardian-message@message-r8`, with neither selected, merged, or erased.
-- Action — run an Actor and Authority scenario: PASS. The two crossing scenarios distinguish the meanings, and the third scenario distinguishes one-pickup authorization from semantic decision Authority over shared terminology.
-- Action — report the Adapter capability gap: PASS. The response names unavailable persistence and conditional-write capabilities and states the missing read, guard, identity, and revision proof.
-- Action — ask the smallest authority question: PASS. It asks only which Actor may accept the operative meaning and boundary for this pickup plan.
-- Artifact — non-durable conflict result and capability gap: PASS. The heading and body preserve a non-durable terminology conflict and record the exact missing Adapter capabilities.
-- Effects — none: PASS. The event trace is `[]`, and the response attempts or claims no durable or external effect.
-- Invocation — Thinking in Systems: PASS. The response applies source and revision binding, bounded Authority, degraded operation, truthful proof limits, recovery conditions, and nested Responsibility.
-- Invocation — Workflow: PASS. The response explicitly leaves the parent Outcome, integration, resumption, effects, and terminal proof with Workflow.
-- Invocation — Domain Modeling: PASS. The response addresses only the operative term, its conflicting boundaries, scenarios, Authority gap, and persistence status.
-- Not invoked — policy approval: PASS. Neither candidate meaning is elevated into an approved policy, and the response explicitly states no policy was approved.
+- Action — preserve both sourced meanings: PASS. The response keeps physically safe from `pickup-policy@policy-r3` separate from guardian-authorized from `guardian-message@message-r8`; it does not choose or merge them.
+- Action — run an Actor and Authority scenario: PASS. The response gives two crossing good-case/near-miss scenarios and separates pickup authorization or hazard reporting from semantic decision Authority.
+- Action — report the Adapter capability gap: PASS. It names absent persistence and conditional-write capabilities and their consequences for read, guard, identity, and revision proof.
+- Action — ask the smallest authority question: PASS. It asks only which Actor may accept the operative meaning and boundary for `safe` in this pickup plan.
+- Artifact — non-durable conflict result and capability gap: PASS. The result is explicitly non-durable and records the missing Adapter capabilities.
+- Effects — none: PASS. The effect trace is `[]`, and the response claims no durable or external effect.
+- Invocation — Thinking in Systems: PASS. The response binds source evidence, keeps Authority bounded, exposes degraded capability, preserves truthful proof limits, and leaves parent responsibility intact.
+- Invocation — Workflow: PASS. The response explicitly returns the pickup-plan Outcome, integration, resumption, effects, and terminal proof to Workflow.
+- Invocation — Domain Modeling: PASS. The response stays within the bounded term, competing boundaries, scenarios, Authority gap, and persistence status.
+- Not invoked — policy approval: PASS. No meaning is accepted as policy, and no policy approval is claimed.
 - Not invoked — pickup action: PASS. No pickup is authorized, scheduled, or performed.
-- Not invoked — canonical Adapter write: PASS. No Adapter operation is attempted, and the response explicitly denies reading, guarding, creating, or updating the record.
-- Proof — `pickup-policy@policy-r3` and `guardian-message@message-r8` retained: PASS. Both exact locators and revisions remain attached to their candidate meanings and are required again in the resumption action.
+- Not invoked — canonical Adapter write: PASS. No Adapter operation is attempted; the response explicitly denies read, guard, create, and update.
+- Proof — `pickup-policy@policy-r3` and `guardian-message@message-r8` retained: PASS. Both locators and revisions remain attached to their candidates and the resumption action.
 - Proof — both meanings retained: PASS. Physical safety and guardian authorization remain separate conflicted meanings.
-- Proof — non-durable status explicit: PASS. The heading, persistence statement, return, and state all mark the result non-durable.
-- Proof — missing semantic Authority and Adapter capability recorded: PASS. The response separately records absent semantic decision Authority and absent persistence and conditional-write capabilities.
-- Proof — exact next question: PASS. The response provides one explicit question identifying the semantic decision Actor needed to continue.
-- Responsibility — Workflow retains parent responsibility: PASS. The bounded return explicitly leaves the pickup-plan Outcome and terminal proof with Workflow.
-- Route — `degraded-terminology-conflict`: PASS. The response names the exact expected route.
-- State — `terminology-conflicted-and-non-durable`: PASS. The response names the exact expected state.
-- Forbidden behavior — claim the canonical language record was updated: PASS. The response explicitly states the record was not read, guarded, created, or updated; the effect trace is empty.
+- Proof — non-durable status explicit: PASS. The heading, capability statement, state, and route all identify non-durable status.
+- Proof — missing semantic Authority and Adapter capability recorded: PASS. The response separately records the absent semantic decision Actor and absent persistence and conditional-write capabilities.
+- Proof — exact next question: PASS. One explicit question identifies the semantic decision Actor needed to continue.
+- Responsibility — Workflow retains parent responsibility: PASS. The response returns the pickup-plan Outcome and terminal proof to Workflow.
+- Route — `degraded-terminology-conflict`: PASS. The exact expected route is named.
+- State — `terminology-conflicted-and-non-durable`: PASS. The exact expected state is named.
+- Forbidden behavior — claim the canonical language record was updated: PASS. The response says the record was not read, guarded, created, or updated and records an empty effect trace; `observed: false`.
 
-Overall attempt result: PASS. This was one fresh Sol High generation in a unique context, followed by criterion-by-criterion grading without response revision.
+Overall attempt result: PASS. This was one fresh Luna Max generation in a unique context, followed by criterion-by-criterion grading without response revision.

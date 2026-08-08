@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-negative-technical
 attempt: 1
-contextId: fresh-domain-modeling-negative-technical-sol-high-1-4fdcdc89-4bc2-4faa-a419-a9c507f70b4a
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T09:54:34Z
+contextId: fresh-domain-modeling-negative-technical-luna-max-20260808t113104z-9bc70469-cd7b-4d54-82a3-e9c1cd5bc5ba
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:31:04Z
 environment:
   id: architecture-decision-with-clear-language
   capabilities:
@@ -20,7 +20,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invoke Domain Modeling merely because the System boundary is undecided
-      evidence: The response treats the accepted meanings as unchanged, routes the unresolved ownership allocation to Workflow as a System-design decision, and explicitly reports Domain Modeling as not invoked.
+      evidence: The response preserves Billing and Ordering's accepted terminology, classifies the unresolved ownership allocation as a System design decision, routes it to Workflow, and explicitly leaves Domain Modeling uninvoked.
       observed: false
   invoked: [thinking-in-systems, workflow]
   notInvoked: [domain-modeling, glossary update, architecture approval, implement]
@@ -32,7 +32,7 @@ observed:
   state: [waiting-for-authorized-system-design-decision]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/negative-technical-1.txt
-  sha256: 7e3bf506d62fc3db66f68f5d149fbd1f8b0acf1e0cbed3790127b947aa33c120
+  sha256: d72264ba3c5f11f564671d64904f95c8288e830caaec9e33cea94fb75555135c
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: workflow-durable-local-markdown-no-git
+title: No-Git Local Markdown preserves canonical Durable work
+shape: direct
+kind: adapter
+skill: workflow
+domains: [organizational-work]
+severity: Major
+requiredAttempts: 1
+prompt: |
+  Track the volunteer rota across sessions without Git or a hosted account.
+  Keep two independently owned Tickets, their dependencies, and evidence.
+environment:
+  id: workflow-local-markdown-no-git
+  capabilities: { persistence: true, localMarkdown: true, git: false, github: false, atomicClaim: true, scheduling: false, workflow: true }
+  tools: []
+expected:
+  actions: [select the no-Git Local Markdown Adapter, declare Baseline available, Coordination available only through atomic Claim creation, declare Continuation unavailable, create one Outcome record and two Ticket records, append Claims Evidence and transition history]
+  artifacts: [workflow/<outcome-id>/README.md, workflow/<outcome-id>/tickets/<ticket-id>.md, workflow/<outcome-id>/claims/<ticket-id>.md, revision-bound Evidence references]
+  effects: []
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [Git initialization, GitHub, hosted tracker, second writable map]
+  proof: [a human can read the canonical records without a parser or network and the Work frontier is computed from state requirements and live Claims]
+  responsibility: [one Outcome owner and one Work owner per Ticket remain explicit]
+  route: [durable-local-markdown-baseline]
+  state: [accepted-tickets-frontier]
+  forbidden: [treat a Map as writable authority, imply scheduling or hosted concurrency]

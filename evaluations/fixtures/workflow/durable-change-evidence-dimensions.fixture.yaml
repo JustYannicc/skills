@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: workflow-durable-change-evidence-dimensions
+title: Change evidence dimensions stay distinct and support actors through rollout
+shape: edge
+kind: composition
+skill: workflow
+domains: [organizational-work, physical-environment]
+severity: Major
+requiredAttempts: 1
+prompt: |
+  During a phased change, collect evidence about availability, adoption, correct
+  use/fidelity, acceptability, feasibility, penetration, Outcome, burden/cost,
+  and sustainment. Treat simultaneous change overload as a support and
+  capacity signal, not as proof that the Outcome is complete.
+environment:
+  id: workflow-change-evidence-dimensions
+  capabilities: { persistence: true, phasedRollout: true, actorSupport: true, measurement: true, workflow: true }
+  tools: []
+expected:
+  actions: [record only decision-relevant evidence dimensions, separate operation and Outcome signals from burden and harm, identify actor support and simultaneous-change capacity limits, set an assurance cadence and sustainment review]
+  artifacts: [dimensioned adoption and Outcome evidence, actor-support disposition, assurance cadence]
+  effects: []
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [collapse all dimensions into one status, treat adoption as Outcome proof, demand ritual measurement without a decision need]
+  proof: [the transition decision names what each dimension can change and preserves a recovery or taper rule]
+  responsibility: [the parent owner integrates evidence and remains responsible through sustainment or cancellation]
+  route: [durable-change-evidence, actor-support, assurance-cadence]
+  state: [operating-under-measured-rollout]
+  forbidden: [declare completion from availability or adoption alone]

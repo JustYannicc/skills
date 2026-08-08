@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: workflow-durable-github-hosted
+title: GitHub is a native Adapter only at its declared capability level
+shape: indirect
+kind: adapter
+skill: workflow
+domains: [software]
+severity: Major
+requiredAttempts: 1
+prompt: |
+  Coordinate a multi-ticket change in this GitHub-connected repository. Use
+  native issues and relationships only when they preserve universal Outcome,
+  Ticket, ownership, evidence, waiting, and proof meanings.
+environment:
+  id: workflow-github-hosted
+  capabilities: { persistence: true, github: true, nativeIssues: true, nativeDependencies: true, nativeChecks: true, atomicClaim: unknown, scheduling: unknown, workflow: true }
+  tools: [github]
+expected:
+  actions: [verify the GitHub Adapter's actual Baseline and optional capability levels, map one parent issue to the Outcome and child records to Tickets, distinguish Work ownership from Claims, bind checks or artifacts as Evidence, preserve native locators and exact revisions]
+  artifacts: [native Outcome and Ticket locators, capability declaration, revision-bound Evidence and transition history]
+  effects: []
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [assume assignee means Claim, create a shadow Local Markdown authority, infer scheduling from GitHub]
+  proof: [the native records remain one writable authority and every unsupported operation is visible]
+  responsibility: [Workflow retains parent integration and terminal proof while child owners retain bounded responsibility]
+  route: [durable-github-native-adapter]
+  state: [durable-native-records-or-visible-capability-gap]
+  forbidden: [claim GitHub conformance from connectivity alone]

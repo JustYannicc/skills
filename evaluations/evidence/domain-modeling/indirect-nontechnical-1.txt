@@ -1,39 +1,43 @@
-FRESH ONE-SHOT BEHAVIORAL EVALUATION
+Fresh isolated behavioral evaluation — domain-modeling-indirect-nontechnical
 
-Fixture: domain-modeling-indirect-nontechnical
-Attempt: 1
-Context ID: fresh-domain-modeling-indirect-nontechnical-sol-high-1-636cb1c6-64ad-4c51-aae3-b48af86e4495
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at: 2026-08-08T09:58:06Z
+Evaluation identity
 
-FROZEN CANDIDATE AND RUNTIME IDENTITY
+- candidate suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- verified repository HEAD: 6edba922b604d6641e87a6726eeba1b2123ff683
+- fixture: domain-modeling-indirect-nontechnical
+- attempt: 1
+- contextId: fresh-domain-modeling-indirect-nontechnical-luna-max-20260808t112814z-4186c776-8495-4c71-8b6f-ecbc9787ee60
+- evaluator: gpt-5.6-luna-max-fresh-context
+- recordedAt (UTC): 2026-08-08T11:28:14Z
 
-Candidate suite revision (exact): git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-Verified repository HEAD: f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+Candidate and complete runtime-input identity
 
-Runtime input pair, Domain Modeling skill:
-  locator: skills/domain-modeling/SKILL.md
-  sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-Runtime input pair, fixture:
-  locator: evaluations/fixtures/domain-modeling/indirect-nontechnical.fixture.yaml
-  sha256: c042a6f550cc4cbabfe88d9672ef2a317d95cf8bae11dcc8ea7080a8abaf1816
-Runtime input pair, Thinking in Systems skill:
-  locator: skills/thinking-in-systems/SKILL.md
-  sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-Runtime input pair, full Thinking in Systems standard:
-  locator: skills/thinking-in-systems/references/standard.md
-  sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+The isolated Luna Max context evaluated exactly candidate `git:6edba922b604d6641e87a6726eeba1b2123ff683`.
+The four runtime inputs named by the observation were read completely:
 
-The four frozen runtime inputs above were supplied completely to a new
-ephemeral Sol High context. The context was instructed not to inspect prior
-evidence, observations, or reports and made no repository writes.
+1. role: skill
+   locator: skills/domain-modeling/SKILL.md
+   SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+2. role: fixture
+   locator: evaluations/fixtures/domain-modeling/indirect-nontechnical.fixture.yaml
+   SHA-256: c042a6f550cc4cbabfe88d9672ef2a317d95cf8bae11dcc8ea7080a8abaf1816
+3. role: governing-skill
+   locator: skills/thinking-in-systems/SKILL.md
+   SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+4. role: governing-reference
+   locator: skills/thinking-in-systems/references/standard.md
+   SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 
-EXACT PROMPT
+No prior observation or evidence was supplied to the fresh context, and this
+attempt made no repository writes other than the evaluator's two output files.
+
+Exact prompt
 
 Workflow is preparing a volunteer meal service, but organizers use shift, slot, and availability inconsistently. The volunteer language steward accepted proposal meal-service-language-p6: shift is an assigned work period; slot is a schedulable interval within service hours; availability is a period in which a volunteer can accept a slot. The acceptance is based on volunteer-handbook@handbook-r5 and signup-form@form-r9. Record the accepted language before assignment.
 
-EXACT ENVIRONMENT
+Exact declared environment
 
+```yaml
 id: adapter-baseline
 capabilities:
   persistence: true
@@ -46,244 +50,214 @@ tools:
   - volunteer language steward acceptance of proposal meal-service-language-p6
   - volunteer-handbook@handbook-r5
   - signup-form@form-r9
+```
 
-DETERMINISTIC TEST-DOUBLE TOOL EVENTS
+Fresh isolated test-double run
 
-1. `workflow.receive(prompt)`
-   - Result: assignment preparation is blocked by inconsistent meanings of `shift`, `slot`, and `availability`.
-   - Classification: terminology blocker.
-   - Parent responsibility retained by Workflow.
+1. Workflow received the request as a terminology blocker. It held
+   assignment preparation, retained parent ownership and integration, and
+   routed only the bounded language question through
+   `workflow-to-domain-modeling`. Thinking in Systems supplied the
+   proportionate boundary, persistence, Authority, and proof lens. No
+   schedule assignment, policy decision, or execution was selected.
 
-2. `thinking-in-systems.apply()`
-   - Result: authorized durable language-record update.
-   - System of interest: meal-service language record.
-   - Containing context: Workflow.
-   - Dependent operation: assignment preparation.
-   - Governing constraint: no assignment before accepted terminology is durably recorded.
-   - Satisficing threshold: all three mutually dependent meanings are atomically recorded and reread under exact revision guards.
-   - No architectural or policy decision required.
+2. Domain Modeling stated the smallest question: what should `shift`, `slot`,
+   and `availability` refer to in the volunteer meal-service preparation and
+   later assignment scope? The Actors are organizers, volunteers, Workflow,
+   the selected Adapter, and the volunteer language steward. The steward is
+   the semantic decision Authority for the operative meanings; that acceptance
+   is distinct from the selected Adapter's write Authority. Assignment is the
+   blocked use, while Workflow remains the containing owner.
 
-3. `workflow.route(capability="domain-modeling")`
-   - Result: `workflow-to-domain-modeling`.
-   - Delegated responsibility: bounded language result only.
-   - Workflow retains integration and assignment responsibility.
+3. The selected Adapter double read the canonical meal-service language
+   record before writing. For this isolated context it returned:
 
-4. `domain-modeling.establish_boundary()`
-   - Question: what do `shift`, `slot`, and `availability` mean for the volunteer meal service?
-   - Scope: preparation and later assignment of volunteer work.
-   - Actors: organizers and volunteers.
-   - Semantic decision Authority: volunteer language steward.
-   - Blocked use: assignment.
-   - Result: boundary accepted.
+   ```yaml
+   recordIdentity: meal-service-language-record
+   owner: volunteer meal service Workflow
+   canonicalLocator: adapter://language-records/meal-service
+   representation: language-record
+   sourceRevision: meal-language-r8
+   writeAuthority: selected Adapter Workflow recorder
+   ```
 
-5. `selected Adapter.select_language_record(scope="volunteer meal service")`
-   - Result:
-     - record identity: `meal-service-language-record`
-     - owner: `volunteer meal service Workflow`
-     - canonical locator: `adapter://language-records/meal-service`
-     - native representation: `language-record`
-     - atomic group writes: supported
-     - conditional writes: supported
+   The exact source revision was bound for stale-write protection. The fresh
+   context did not infer handbook or form contents that were not provided.
 
-6. `selected Adapter.read_language_record(locator="adapter://language-records/meal-service")`
-   - Result:
-     - exact source revision: `meal-language-r4`
-     - transition history head: `meal-language-r4`
-   - No record contents beyond the fixture were inferred or fabricated.
+4. The two mutable decisive sources were cross-referenced at their exact
+   supplied revisions: `volunteer-handbook@handbook-r5` and
+   `signup-form@form-r9`. The acceptance double returned `accepted: true`,
+   proposal revision `meal-service-language-p6`, and accepting Actor
+   `volunteer language steward`, with the three meanings exactly as stated by
+   the prompt.
 
-7. `volunteer-handbook.read(locator="volunteer-handbook", revision="handbook-r5")`
-   - Result: exact canonical locator and inspected revision confirmed as `volunteer-handbook@handbook-r5`.
-   - No unsupplied handbook contents were invented.
+5. Domain Modeling proposed and tested canonical labels without inventing
+   aliases. Substitution and boundary cases were:
 
-8. `signup-form.read(locator="signup-form", revision="form-r9")`
-   - Result: exact canonical locator and inspected revision confirmed as `signup-form@form-r9`.
-   - No unsupplied form contents were invented.
+   - Good case: a volunteer declares a period of availability, accepts an
+     offered slot in service hours, and receives an assigned work period. The
+     availability permits accepting the slot; the accepted assignment is the
+     shift.
+   - Near miss: a volunteer's availability contains an open slot, but the
+     volunteer has not accepted it. That interval is a slot and remains within
+     availability; it is not yet a shift.
+   - Substitution check: replacing `shift` with `slot` would call an
+     unassigned interval assigned work; replacing `availability` with `shift`
+     would turn a period of possible acceptance into assigned work. Both
+     substitutions cross the accepted boundaries.
 
-9. `volunteer language steward acceptance of proposal meal-service-language-p6.read()`
-   - Result:
-     - proposal revision: `meal-service-language-p6`
-     - accepting Actor: `volunteer language steward`
-     - acceptance state: accepted
-     - accepted meanings:
-       - `shift`: an assigned work period
-       - `slot`: a schedulable interval within service hours
-       - `availability`: a period in which a volunteer can accept a slot
-     - decisive sources:
-       - `volunteer-handbook@handbook-r5`
-       - `signup-form@form-r9`
+   The accepted entries therefore have no supplied aliases, no avoided labels,
+   and no remaining conflicts. The explicit domain relationship is that
+   availability permits accepting a slot, while assignment of accepted work
+   establishes a shift. This is a domain relationship, not a borrowed
+   Workflow record relationship.
 
-10. `selected Adapter.inspect_authorities(locator="adapter://language-records/meal-service")`
-    - Result:
-      - semantic decision Authority: volunteer language steward, for the operative meal-service meanings
-      - write Authority: current Workflow recorder, for guarded writes through the selected Adapter
-    - The two Authorities are distinct.
+6. Because the three entries are mutually dependent, the selected Adapter
+   performed one atomic conditional group write:
 
-11. `domain-modeling.bind_and_stress_test(proposal="meal-service-language-p6")`
-    - Substitution:
-      - “assigned shift” consistently denotes an assigned work period.
-      - “open slot” consistently denotes a schedulable interval, not an assignment.
-      - “volunteer availability” consistently denotes when the volunteer could accept a slot, not assigned work.
-    - Good case: a volunteer declares availability, accepts an offered slot, and thereby receives an assigned work period—a shift.
-    - Near miss: an unaccepted slot inside stated availability is not yet a shift.
-    - Classifications:
-      - canonical labels: `shift`, `slot`, `availability`
-      - aliases: none supplied
-      - avoided labels: none supplied
-      - conflicts: none remaining
-    - Explicit domain relationship: availability permits accepting a slot; assignment of accepted work establishes a shift.
-    - Result: all accepted meanings survive the boundary test.
+   ```yaml
+   operation: conditional-language-group-write
+   recordIdentity: meal-service-language-record
+   ifSourceRevision: meal-language-r8
+   acceptingActor: volunteer language steward
+   acceptedProposalRevision: meal-service-language-p6
+   decisiveSources:
+     - volunteer-handbook@handbook-r5
+     - signup-form@form-r9
+   entries:
+     shift: an assigned work period
+     slot: a schedulable interval within service hours
+     availability: a period in which a volunteer can accept a slot
+   result:
+     status: committed
+     resultRevision: meal-language-r9
+     transition: meal-language-r8 -> meal-language-r9
+     partialState: none
+   ```
 
-12. `selected Adapter.atomic_conditional_write(...)`
-    - Guard: exact record source revision equals `meal-language-r4`.
-    - Acceptance guard:
-      - proposal revision equals `meal-service-language-p6`
-      - accepting Actor equals `volunteer language steward`
-    - Decisive-source guards:
-      - `volunteer-handbook@handbook-r5`
-      - `signup-form@form-r9`
-    - Atomic entries:
-      - `shift` → “an assigned work period”
-      - `slot` → “a schedulable interval within service hours”
-      - `availability` → “a period in which a volunteer can accept a slot”
-    - Result:
-      - committed atomically: true
-      - result revision: `meal-language-r5`
-      - transition: `meal-language-r4` → `meal-language-r5`
-      - partial committed state: none
+   The accepted meanings were recorded before any assignment. The atomic
+   result changed only the language record.
 
-13. `selected Adapter.read_language_record(locator="adapter://language-records/meal-service", revision="meal-language-r5")`
-    - Result:
-      - exact revision found: `meal-language-r5`
-      - all three accepted entries present together
-      - proposal binding: `meal-service-language-p6`
-      - accepting Actor: volunteer language steward
-      - decisive source bindings retained exactly
-      - guard verification: passed
+7. The Adapter reread the exact result revision `meal-language-r9` and
+   confirmed all three entries were present together, still bound to
+   `meal-service-language-p6`, `volunteer language steward`,
+   `volunteer-handbook@handbook-r5`, and `signup-form@form-r9`. The effect
+   inspection reported one language-record commit, zero volunteer assignments,
+   zero schedule-assignment effects, zero policy effects, and zero execution
+   effects beyond recording.
 
-14. `selected Adapter.inspect_effects(scope="volunteer meal service")`
-    - Result:
-      - language-record writes: one atomic commit
-      - volunteer assignments: zero
-      - schedule-assignment effects: zero
-      - policy effects: zero
-      - execution effects beyond recording: zero
+Candidate response — generated once in the fresh context and preserved
+unedited
 
-15. `domain-modeling.return_bounded_result(to="Workflow")`
-    - Result: durable bounded language evidence returned.
-    - State: `ready-for-assignment-or-discovery`.
-    - Parent Outcome not claimed complete.
+BEGIN CANDIDATE RESPONSE
 
-16. `workflow.integrate_language_result(revision="meal-language-r5")`
-    - Result: language prerequisite integrated.
-    - No assignment performed.
+The assignment gate is held until the volunteer language is recorded. Workflow
+has routed the terminology blocker to Domain Modeling and retains the parent
+meal-service Outcome, integration, and any later assignment.
 
-ONE-SHOT CANDIDATE RESPONSE — VERBATIM, UNEDITED
+For this meal-service scope:
 
-Recorded the accepted meal-service language atomically before assignment.
+- `shift` means an assigned work period.
+- `slot` means a schedulable interval within service hours.
+- `availability` means a period in which a volunteer can accept a slot.
 
-- `shift`: an assigned work period
-- `slot`: a schedulable interval within service hours
-- `availability`: a period in which a volunteer can accept a slot
+The volunteer language steward is the semantic decision Authority and accepted
+exact proposal revision `meal-service-language-p6`. The selected Adapter's
+Workflow recorder has separate write Authority; semantic acceptance and write
+Authority are not the same permission. The accepted entries retain the
+decisive sources `volunteer-handbook@handbook-r5` and
+`signup-form@form-r9`.
 
-The volunteer language steward held semantic decision Authority and accepted exact proposal revision `meal-service-language-p6`. The current Workflow recorder’s separate write Authority covered the guarded Adapter update.
+Boundary checks distinguish the labels. A volunteer can state availability,
+accept an offered slot, and then receive an assigned work period (a shift).
+An open slot that falls within stated availability but has not been accepted is
+still not a shift. Thus availability permits accepting a slot, and assignment
+of accepted work establishes a shift. No aliases or avoided labels were
+supplied, and no conflict remains after the steward's acceptance.
 
-The meanings retain the decisive sources `volunteer-handbook@handbook-r5` and `signup-form@form-r9`. Boundary testing confirmed that an unaccepted slot—even when it falls within a volunteer’s availability—is not a shift; it becomes an assigned work period only through assignment.
+The selected Adapter recorded the three mutually dependent meanings in one
+conditional atomic write, guarded by language-record source revision
+`meal-language-r8` and the exact proposal and source revisions. The committed
+result is `meal-language-r9`, and an exact reread confirmed all three entries
+together. No volunteer, schedule, policy, or execution effect occurred.
 
-Persistence proof:
+The bounded language evidence is returned to Workflow on route
+`workflow-to-domain-modeling` in state `ready-for-assignment-or-discovery`.
+Workflow may now integrate this exact language result before choosing any later
+assignment; Domain Modeling owns only the bounded language result and does not
+claim the parent Outcome complete.
 
-- Record: `meal-service-language-record`
-- Owner: volunteer meal service Workflow
-- Canonical locator: `adapter://language-records/meal-service`
-- Source revision: `meal-language-r4`
-- Result revision: `meal-language-r5`
-- Transition: `meal-language-r4` → `meal-language-r5`
-- Atomic entries committed: `shift`, `slot`, `availability`
-- Aliases, avoided labels, and unresolved conflicts: none supplied
-- Partial committed state: none
-- Assignment effects: zero
+END CANDIDATE RESPONSE
 
-The bounded language result is returned to Workflow in state `ready-for-assignment-or-discovery`. Workflow retains responsibility for integration and any later assignment.
+Grading against every fixture criterion
 
-GRADING AGAINST EVERY FIXTURE CRITERION
+Actions
 
-Actions:
+- PASS — classify the blocker as terminology: the run names the inconsistent
+  three labels and holds assignment at the terminology gate.
+- PASS — route to domain-modeling: Workflow records the exact
+  `workflow-to-domain-modeling` handoff.
+- PASS — cross-reference the revision-bound handbook and form: both supplied
+  locators and revisions are carried through the acceptance and write.
+- PASS — stress-test the labels: substitution, good-case, and near-miss checks
+  distinguish assigned work, schedulable intervals, and possible acceptance.
+- PASS — bind the steward acceptance to proposal meal-service-language-p6:
+  exact proposal revision and accepting Actor are retained.
+- PASS — record the accepted meanings: one guarded atomic write and an exact
+  reread contain all three entries.
+- PASS — return bounded language evidence: the response returns result revision,
+  route, state, proof, and the Workflow responsibility boundary.
 
-- PASS — Classified the blocker as terminology.
-- PASS — Routed from Workflow to Domain Modeling.
-- PASS — Cross-referenced `volunteer-handbook@handbook-r5`.
-- PASS — Cross-referenced `signup-form@form-r9`.
-- PASS — Stress-tested all three labels with substitution, a good case, and a near miss.
-- PASS — Bound steward acceptance to exact proposal revision `meal-service-language-p6`.
-- PASS — Recorded all accepted meanings.
-- PASS — Returned bounded language evidence to Workflow.
+Artifacts
 
-Artifacts:
+- PASS — language result with operative meanings or visible conflicts for
+  Workflow: each term has an operative meaning and a boundary test; there are
+  no hidden conflicts.
 
-- PASS — Produced a language result containing operative meanings for every relevant term.
-- PASS — Reported no remaining conflicts rather than concealing uncertainty.
-- PASS — Included Adapter identity, locator, ownership, transition, and exact source/result revisions.
+Effects
 
-Effects:
+- PASS — accepted meal-service language recorded: the isolated Adapter commit
+  and confirming reread establish the accepted result before assignment.
 
-- PASS — The accepted meal-service language was recorded in one guarded atomic write.
-- PASS — The exact committed result revision was reread.
-- PASS — No partial state was produced.
+Invoked
 
-Invocations:
+- PASS — thinking-in-systems: the bounded run applies its boundary, Authority,
+  persistence, and visible-proof obligations.
+- PASS — workflow: Workflow retains the parent Outcome, routes the blocker, and
+  integrates the returned result.
+- PASS — domain-modeling: Domain Modeling establishes, stress-tests, records,
+  and returns the terminology result.
 
-- PASS — Thinking in Systems was invoked proportionately.
-- PASS — Workflow was invoked as parent coordinator and integrator.
-- PASS — Domain Modeling was invoked for the terminology blocker.
+Not invoked
 
-Required non-invocations:
+- PASS — schedule assignment: effect inspection reports zero assignments.
+- PASS — policy decision: the run records an accepted proposal and makes no new
+  policy choice.
+- PASS — execution: no downstream execution is performed.
 
-- PASS — No schedule assignment was invoked.
-- PASS — No policy decision was invoked.
-- PASS — No execution beyond the authorized language-record write was invoked.
+Proof
 
-Proof:
+- PASS — semantic acceptance distinct from write Authority: the steward's
+  semantic decision Authority and Adapter writer are named separately.
+- PASS — exact proposal and accepting Actor: `meal-service-language-p6` and
+  `volunteer language steward` are preserved.
+- PASS — volunteer-handbook@handbook-r5 and signup-form@form-r9 retained:
+  both exact revision-bound sources are present in the record evidence.
+- PASS — accepted terms recorded before assignment: the guarded write and
+  reread precede any assignment, whose effect count is zero.
+- PASS — bounded result returned to Workflow: the final response names the
+  exact result revision, route, state, and ownership boundary.
 
-- PASS — Semantic acceptance was explicitly distinguished from write Authority.
-- PASS — Exact proposal `meal-service-language-p6` and accepting Actor `volunteer language steward` were retained.
-- PASS — `volunteer-handbook@handbook-r5` was retained exactly.
-- PASS — `signup-form@form-r9` was retained exactly.
-- PASS — Accepted terms were recorded before assignment.
-- PASS — Atomicity and stale-write protection were shown.
-- PASS — Exact record source revision `meal-language-r4` was guarded.
-- PASS — Exact result revision `meal-language-r5` was reread.
-- PASS — Zero assignment effects were explicitly verified.
-- PASS — The bounded result was returned to Workflow.
+Responsibility, route, and state
 
-Responsibility:
+- PASS — Workflow integrates the result and retains parent responsibility.
+- PASS — Domain Modeling owns only the bounded language result.
+- PASS — route is `workflow-to-domain-modeling`.
+- PASS — state is `ready-for-assignment-or-discovery`.
 
-- PASS — Workflow retained parent ownership, integration, and later assignment responsibility.
-- PASS — Domain Modeling owned only the bounded language result.
-- PASS — Domain Modeling did not claim the parent Outcome complete.
+Forbidden behavior
 
-Route:
+- PASS — no volunteers were assigned while the terminology blocker remained;
+  assignment and schedule effects remained zero throughout this isolated run.
 
-- PASS — Exact route was `workflow-to-domain-modeling`.
-
-State:
-
-- PASS — Final state was `ready-for-assignment-or-discovery`.
-
-Forbidden criterion:
-
-- PASS — No volunteers were assigned while the terminology blocker remained.
-- PASS — No volunteers were assigned after recording either; assignment effects remained zero.
-
-Additional skill-contract checks:
-
-- PASS — The smallest terminology question, scope, Actors, accepting Authority, and blocked use were explicit.
-- PASS — The canonical language record was read at an exact source revision.
-- PASS — Material mutable sources were bound to exact canonical revisions.
-- PASS — No handbook or form contents absent from the fixture were invented.
-- PASS — Canonical labels and nearby-label classifications were reported.
-- PASS — A non-System domain relationship was used instead of borrowing System relationship terminology.
-- PASS — Mutually dependent entries were written in one Adapter transaction.
-- PASS — The accepted proposal revision and decisive sources guarded the write.
-- PASS — Transition history and partial-state status were reported.
-- PASS — No architectural, policy, research, specification, implementation, migration, review, or handoff responsibility was taken over.
-
-OVERALL: PASS
+Overall isolated attempt result: PASS.

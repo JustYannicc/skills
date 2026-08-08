@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: workflow-durable-conversation-boundary
+title: A conversation crosses a Persistence boundary into one canonical Adapter
+shape: edge
+kind: routing
+skill: workflow
+domains: [communication, personal-work]
+severity: Major
+requiredAttempts: 1
+prompt: |
+  We agreed on the household move plan in this conversation. Continue it next
+  week after the transport company confirms the date, and keep the owner and
+  exact next check intact.
+environment:
+  id: workflow-conversation-to-local-markdown
+  capabilities: { conversation: true, persistence: true, localMarkdown: true, git: false, github: false, scheduling: false, workflow: true }
+  tools: []
+expected:
+  actions: [load Thinking in Systems before Workflow, detect the session and waiting Persistence boundaries, select the no-Git Local Markdown Baseline Adapter, materialize one Outcome before waiting, bind the confirmation dependency and exact resumption action]
+  artifacts: [canonical Outcome record, Continuation record]
+  effects: []
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [Git, GitHub, fictional scheduler, second migration or workflow system]
+  proof: [the canonical locator, owner, current state, dependency, next check, and resumption action survive the conversation]
+  responsibility: [Workflow remains the parent Outcome owner until verified completion, accepted transfer, or authoritative cancellation]
+  route: [inline-to-durable-local-markdown, waiting-owned-continuation]
+  state: [waiting]
+  forbidden: [leave the agreement only in ephemeral prompt context, claim active monitoring without a scheduler]

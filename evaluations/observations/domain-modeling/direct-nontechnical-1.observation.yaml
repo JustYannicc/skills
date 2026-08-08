@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-direct-nontechnical-20260808t095231z-sol-high-2b123f2c
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T09:52:31.000Z
+contextId: fresh-domain-modeling-direct-nontechnical-20260808t112636z-luna-max-84d2c0f1-6e3a-4b8c-9a71-5d0e2f4c8b93
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:26:36Z
 environment:
   id: adapter-without-language-shape
   capabilities:
@@ -14,7 +14,12 @@ environment:
     nativeLanguageRecord: false
     semanticDecisionAuthority: true
     writeAuthority: true
-  tools: [selected Adapter at language-r7, household language owner acceptance of proposal household-language-p5, calendar-notes@notes-r14, family-conversation@conversation-r22, disclosed language record template]
+  tools:
+    - selected Adapter at language-r7
+    - household language owner acceptance of proposal household-language-p5
+    - calendar-notes@notes-r14
+    - family-conversation@conversation-r22
+    - disclosed language record template
 observed:
   actions:
     - identify the terminology question and accepting Authority
@@ -34,10 +39,16 @@ observed:
     - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The fresh response records distinct inclusion tests, exclusions, narrower-kind relationships, good cases, near misses, and an overlap case while preserving the former interchangeable meaning only as a superseded conflict.
+      evidence: The fresh response assigns distinct inclusion and exclusion tests to Event, Appointment, and Commitment, preserves a superseded conflict, and uses an overlap case plus independent near misses to show that generic substitution changes classification.
       observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [schedule change, policy decision, execution]
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - schedule change
+    - policy decision
+    - execution
   proof:
     - household language owner acceptance of household-language-p5 distinct from write Authority
     - calendar-notes@notes-r14 and family-conversation@conversation-r22 retained
@@ -48,8 +59,10 @@ observed:
   responsibility:
     - domain-modeling owns terminology evidence
     - workflow retains parent responsibility
-  route: [workflow-to-domain-modeling]
-  state: [terminology-resolved-or-conflict-visible]
+  route:
+    - workflow-to-domain-modeling
+  state:
+    - terminology-resolved-or-conflict-visible
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md
@@ -68,4 +81,4 @@ runtimeInputs:
     sha256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-1.txt
-  sha256: e01c47efc24ef47f96fe842867bd67c183ed7e8bd1e852574dc3d9a659a3f236
+  sha256: 5df5b99397e57ede48896af9726d41dafd14356b7346205b56fa691e88ec046c

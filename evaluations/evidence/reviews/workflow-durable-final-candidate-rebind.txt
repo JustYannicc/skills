@@ -1,0 +1,50 @@
+Workflow Durable final-candidate evidence rebind
+
+Final non-evaluation candidate: git:a00489e8fb239d07dbb1e21c304a1aff9fa51199
+Previous Durable evidence candidate: git:a88536af404a2a58753e88bd209cb586bb01115f
+Previous implementation commit: cb63a8942e2c160712b0efcd7185723c8c94105f
+Final implementation and resolution commits: a88536a, 3a9d5f2, a00489e
+
+The final candidate records #35's accepted PR #41 decision consistently,
+requires the accepted structural-validator result at the Durable action-guard
+seam, fails closed when approval validity is absent or invalid, and treats only
+an explicit validated `liveClaim: null` as claim-free frontier state. The
+Workflow route now keeps Transient Conversation Inline-only at the Persistence
+boundary. Deterministic tests cover these fail-closed cases; the action-guard
+fixture names the validated-output boundary and proves only stale/wrong-scope
+blocking.
+
+Fresh proof
+
+The Critical `workflow-durable-record-action-guard` fixture was rerun in three
+unique fresh Luna Max contexts against the exact final candidate. Each raw
+transcript names the final candidate, exact context, evaluator, and complete
+fixture evidence; all three observations and raw SHA-256 bindings match.
+
+Behaviorally equivalent rebind
+
+The other sixteen new Durable Workflow observations were originally run
+against cb63a89 and do not exercise the changed approval/frontier seams. Their
+raw transcripts, context IDs, timestamps, fixture content, and observed
+evidence are unchanged. Only the candidate revision line was updated through
+the final candidate. This is a mechanical integration rebind, not a claim that
+those responses were rerun.
+
+Domain Modeling remains intentionally outside this standalone report. Its
+historical observations are not mechanically relabeled. The one prior stale
+Workflow disclosed-reference hash was replaced by a fresh advisory-Supplemental
+attempt against cb63a89 before this final guard correction; the combined
+#14+#23 candidate must run the required fresh Domain Modeling proof and report
+before the full `pnpm validate` gate can pass.
+
+Checks at the final candidate:
+
+- `pnpm style`, `pnpm typecheck`, and `pnpm test` pass (41 tests).
+- Focused evaluation passes for all eleven Durable fixtures and nineteen
+  revision-bound attempts, with three fresh final-candidate action-guard
+  attempts.
+- All final Durable raw SHA-256 values match their observations; observations
+  name `git:a00489e8fb239d07dbb1e21c304a1aff9fa51199`.
+- `git diff --check` passes.
+- Full-suite `pnpm evaluations:record`/`pnpm validate` remains pending only
+  for the intentionally preserved Domain Modeling candidate gate.

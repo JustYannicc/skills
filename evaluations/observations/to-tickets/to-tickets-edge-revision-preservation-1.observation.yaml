@@ -1,0 +1,43 @@
+schemaVersion: 1
+fixtureId: to-tickets-edge-revision-preservation
+attempt: 1
+contextId: fresh-to-tickets-edge-revision-preservation-20260808-1
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:38:00.000Z
+environment:
+  id: workflow-to-tickets-revision-preservation
+  capabilities:
+    workflow: true
+    persistence: false
+    to-tickets: true
+  tools: []
+observed:
+  actions: [bind prior and successor Specification revisions, trace affected Ticket dependency and evidence closure, invalidate only affected decomposition, preserve unrelated accepted work, return proposed revision for approval]
+  artifacts: [proposed revised Ticket set, revision impact map]
+  effects: []
+  forbiddenChecks:
+    - criterion: mutate prior Specification or Ticket revision
+      evidence: The prior revision remains immutable and the successor is proposed separately.
+      observed: false
+    - criterion: invalidate unrelated training work
+      evidence: T-TRAIN-r1 remains accepted.
+      observed: false
+    - criterion: reuse stale approval or evidence
+      evidence: Affected approval and evidence are invalidated for re-approval.
+      observed: false
+    - criterion: execute delivery
+      evidence: No delivery effect occurred.
+      observed: false
+    - criterion: claim completion
+      evidence: State is Proposed pending regional-director approval.
+      observed: false
+  invoked: [to-tickets]
+  notInvoked: [implement, delivery effect]
+  proof: [delivery-window-v1 change-r4 and proposed Ticket-set revision are bound, T-NORTH-r2 receives an affected disposition, South scope is removed, T-TRAIN-r1 and cold-chain-e2 remain valid]
+  responsibility: [To Tickets owns the bounded revision result, regional director remains Approver, Outcome owner retains parent integration]
+  route: [to-tickets-revision-to-workflow-approval]
+  state: [Proposed]
+rawEvidence:
+  locator: evaluations/evidence/to-tickets/to-tickets-edge-revision-preservation-1.txt
+  sha256: 164e33fdc75fce63cc6f6c27990c53c7b97431ac5b4e0e8e6fca15d27d31dd2a

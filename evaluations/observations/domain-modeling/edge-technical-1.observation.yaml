@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 1
-contextId: fresh-domain-modeling-edge-technical-sol-high-1-c9f4133b-7bea-4420-9997-94620b5c095d
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T09:54:02Z
+contextId: fresh-domain-modeling-edge-technical-luna-max-1-20260808t112702z-2d607f6e-5faa-460c-beed-35ffecdd6583
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:27:02Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -29,7 +29,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: write the canonical language record from stale decisive evidence
-      evidence: The source-freshness guard found artifacts-r10 while p3 remained accepted only against artifacts-r9; the native Adapter recorded zero conditional-write calls, zero write calls, and no effects, while purchase-language-register remained at language-r218 with unchanged native SHA-256 29b03c48794d8dbb472533e8f3f4fc98c684efb7bd6359662778fc2a1abf371c.
+      evidence: The freshness guard compared accepted artifacts-r9 with current artifacts-r10 and stopped before the effector boundary; the native Adapter recorded zero conditional-write calls, zero write calls, and no effects, while purchase-language-register remained at language-r218 with unchanged native SHA-256 9737a1262f52db3bea046daea3191a50b242205d9d38fe7b30c519e540f6b552.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [code edit, architecture decision, canonical Adapter write]
@@ -46,7 +46,7 @@ observed:
   state: [terminology-conflicted-and-waiting-for-current-evidence]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-1.txt
-  sha256: 1c4db0ed257f0a3ba0f9df23ff93d238e84ed286be7266a1b78cb46b658fa2f3
+  sha256: 47edcbb4f794845c530c278c2a9f8fdb11ad38519f90c29f4faa1a463a86880a
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md
