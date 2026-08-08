@@ -8,7 +8,7 @@ metadata:
 
 # Workflow
 
-Own one parent Outcome from request to verified completion, accepted transfer, or authoritative cancellation. Load and apply the `'Thinking in Systems'` skill first. Workflow chooses the smallest truthful route, coordinates bounded phase results, and remains responsible for their integration and the parent terminal condition.
+Own one parent Outcome from request to verified completion, accepted transfer, or authoritative cancellation in Inline or Durable mode. Load and apply the `'Thinking in Systems'` skill first. Workflow chooses the smallest truthful route, coordinates bounded phase results, and remains responsible for their integration and the parent terminal condition.
 
 ## Follow the route
 
@@ -19,7 +19,9 @@ flowchart TD
   W --> C{"Current state represented<br/>well enough to proceed?"}
   C -- "No, Durable existing scope" --> M["Migrate System<br/>map current state only"]
   M --> F{"Material fog remains?"}
-  C -- "Yes" --> F
+  C -- "Yes, Inline" --> F
+  C -- "Yes, Durable" --> D["Selected Adapter<br/>canonical Outcome/Ticket state"]
+  D --> F
   F -- "Yes" --> WAY["Wayfinder<br/>strategy and decision frontier"]
   WAY --> DOC{"Durable plan or<br/>design records?"}
   DOC -- "Yes" --> GWD["Grill With Docs"]
@@ -53,15 +55,37 @@ flowchart TD
   X --> CANCEL["Authoritative cancellation"]
 ```
 
-The diagram shows every capability; follow only the smallest path needed to satisfy unmet contracts. Inline work may carry the Specification, one Ticket, and Review in the conversation; it still follows the same systems judgment and completion rules.
+The diagram shows every capability; follow only the smallest path needed to satisfy unmet contracts. Inline work may carry the Specification, one Ticket, and Review in the conversation; Durable work materializes the same meanings through one selected Adapter. Both modes follow the same systems judgment and completion rules.
 
-1. **Enter one Workflow context.** Preserve the request. Join a matching open Outcome when one exists; otherwise distinguish new, related, and replacement work before accepting one parent Outcome. Record the Outcome owner, current phase, accepted Authority, result revision, selected Adapter, and return route proportionately. Complete this step when exactly one parent context governs the work or the smallest material ambiguity is visible.
+1. **Enter one Workflow context.** Preserve the request. Join a matching open Outcome when one exists; otherwise distinguish new, related, and replacement work before accepting one parent Outcome. Record the Outcome owner, current phase, accepted Authority, result revision, selected Adapter, capability levels, and return route proportionately. Complete this step when exactly one parent context governs the work or the smallest material ambiguity is visible.
 2. **Choose the representation.** Use Inline mode for bounded synchronous work before a Persistence boundary. Use Durable mode when state, responsibility, waiting, approval, assignment, multiple independently finishable units, or meaningful risk must survive the interaction. Complete this step when the representation can preserve the contract or an exact capability gap and resumption condition are visible.
-3. **Map existing reality when needed.** If Durable work materially depends on an existing scope without a current verified map, invoke the `'Migrate System'` skill for bounded current-state mapping. Record actual sources, Actors, responsibilities, relationships, active work, evidence, waiting state, and unknowns. Independent areas may be delegated, but the migration owner integrates and verifies them. Route persistent Fog of war to the `'Wayfinder'` skill. Route every discovered change to ordinary Workflow; migration does not repair the represented System. Complete this step when the materially affected current state is trustworthy enough for ordinary work.
-4. **Remove only blocking uncertainty.** Select discovery by the uncertainty table below. The `'Wayfinder'` skill begins with the `'Domain Modeling'` and `'Grilling'` skills when their capabilities are available. When durable plans or design records are in scope, it uses the `'Grill With Docs'` skill, which composes both. Independent discovery may run concurrently; dependent questions wait. Complete this step when the remaining uncertainty either permits a truthful Specification or is an explicit operating rule for irreducible Fog of war.
-5. **Specify and decompose proportionately.** A complete bounded request may remain the semantic Specification for one implicit Inline Ticket. Invoke the `'To Spec'` skill when a Specification must persist, cross an approval or assignment boundary, coordinate multiple phases, govern meaningful risk, or is explicitly requested. Invoke the `'To Tickets'` skill when work has independently finishable units, delegation, dependencies, concurrency, cross-session execution, or another Persistence boundary. A direct request for a later phase enters there only after its minimum contract, owner, Authority, exact revision, Proof seam, and return route are present. Complete this step when every executable unit is covered by an accepted contract without invented prerequisites.
-6. **Implement, Review, and integrate.** Each invoked capability joins the active Workflow context, owns its bounded result, and returns evidence. Review every exact result at its accepted Proof seam. Perform only authorized effects, verify their real result, update affected current and legacy state, and run parent Review over the integrated Outcome. Complete this step when all required child dispositions and effects are integrated at the current revisions.
-7. **Reach a truthful terminal condition.** End parent responsibility only on verified parent completion, an accepted transfer with exact continuation, or authoritative cancellation with every material disposition. Delegation, submission, approval, scheduling, waiting, failure, child completion, and an unaccepted handoff are non-terminal.
+3. **Materialize Durable state.** At a Persistence boundary, read [Durable mode](references/durable-mode.md), select one canonical Adapter, declare its `Baseline`, `Coordination`, and `Continuation` capabilities, and create or update the canonical Outcome before child execution or an external effect. Record Tickets, Claims, Evidence references, Continuation, transition history, and exact revisions only through that authority. If Baseline is unavailable, enter visible Degraded mode with complete preserved state and an exact resumption or accepted-handoff condition; never claim fictional storage, monitoring, or completion. Complete this step when the parent and every persistent child have a readable canonical locator or the capability gap is durably visible.
+4. **Map existing reality when needed.** If Durable work materially depends on an existing scope without a current verified map, invoke the `'Migrate System'` skill for bounded current-state mapping. Record actual sources, Actors, responsibilities, relationships, active work, evidence, waiting state, and unknowns. Independent areas may be delegated, but the migration owner integrates and verifies them. Route persistent Fog of war to the `'Wayfinder'` skill. Route every discovered change to ordinary Workflow; migration does not repair the represented System. Complete this step when the materially affected current state is trustworthy enough for ordinary work.
+5. **Remove only blocking uncertainty.** Select discovery by the uncertainty table below. The `'Wayfinder'` skill begins with the `'Domain Modeling'` and `'Grilling'` skills when their capabilities are available. When durable plans or design records are in scope, it uses the `'Grill With Docs'` skill, which composes both. Independent discovery may run concurrently; dependent questions wait. Complete this step when the remaining uncertainty either permits a truthful Specification or is an explicit operating rule for irreducible Fog of war.
+6. **Specify and decompose proportionately.** A complete bounded request may remain the semantic Specification for one implicit Inline Ticket. Invoke the `'To Spec'` skill when a Specification must persist, cross an approval or assignment boundary, coordinate multiple phases, govern meaningful risk, or is explicitly requested. Invoke the `'To Tickets'` skill when work has independently finishable units, delegation, dependencies, concurrency, cross-session execution, or another Persistence boundary. A direct request for a later phase enters there only after its minimum contract, owner, Authority, exact revision, Proof seam, and return route are present. Bind each Durable Specification and Ticket to the selected Adapter's exact revision. Complete this step when every executable unit is covered by an accepted contract without invented prerequisites.
+7. **Implement, Review, and integrate.** Each invoked capability joins the active Workflow context, owns its bounded result, and returns revision-bound Evidence. Review every exact result at its accepted Proof seam. Perform only authorized effects through the Adapter's deterministic transition and effect guards, verify the real result, update affected current and legacy state, and run parent Review over the integrated Outcome. Complete this step when all required child dispositions, Continuations, effects, and propagation are integrated at the current revisions.
+8. **Reach a truthful terminal condition.** End parent responsibility only on a verified parent proof bundle, an accepted transfer with exact continuation, or authoritative cancellation with every material disposition. Delegation, submission, approval, scheduling, waiting, failure, child completion, and an unaccepted handoff are non-terminal.
+
+## Durable coordination boundary
+
+At a Durable boundary, Workflow coordinates one canonical adapter-neutral
+record set: Outcome, Ticket, Claim, Evidence, Continuation, transition history,
+and (when consequence warrants) a Change and Legacy Record. The selected
+Adapter may store those meanings in conversation state, Local Markdown, Git,
+GitHub, or an external native record, but it must declare actual capabilities
+and keep one writable authority. Read [Durable mode](references/durable-mode.md)
+for the materialization sequence, capability matrix, queue and transition
+guards, #35 System Record binding, migration, waiting, Degraded operation,
+effects, and parent proof bundle.
+
+When the represented scope is a Durable System, bind its Outcome and system
+transition to the accepted #35 System Record: one human-readable Markdown
+authority with constrained YAML formal fields, the canonical relationship
+index, native Adapter mappings where applicable, and optional read-only
+projections. A missing or failed `System Record structural validator` or
+`System Record action guard` leaves the record readable but blocks machine
+transitions, projections, and effects. This is a capability boundary inside
+Workflow, not a second System Record or migration skill.
 
 ## Select discovery by uncertainty
 

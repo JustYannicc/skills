@@ -22,22 +22,27 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
 
-### [Workflow](skills/workflow) — Inline candidate; human review required
+### [Workflow](skills/workflow) — Inline and Durable candidate; human review required
 
 Workflow coordinates one parent Outcome from the accepted request through the
 smallest truthful route to verified completion, accepted transfer, or
 authoritative cancellation. Its Inline route keeps the Outcome, Specification,
 Ticket, evidence, and immediate Review in the conversation for bounded
-synchronous work while preserving the same systems method, responsibility,
-Authority, exact revisions, effect proof, and parent terminal check used by
-Durable work.
+synchronous work. Its Durable route materializes the same meanings through one
+selected Adapter as canonical Outcome, Ticket, Claim, Evidence, Continuation,
+history, change, and proof records while preserving the same systems method,
+responsibility, Authority, exact revisions, effect proof, and parent terminal
+check.
 
 During active work it classifies clarification, extensions or Constraint
 changes, corrections, authorized exceptions, explicit replacements, and
 unrelated switches before changing state. Material changes invalidate and
 propagate only affected work; parent and unaffected delegated ownership remain
-intact. Durable Adapter coordination is intentionally left to #14 and the
-System Record representation remains undecided in #35.
+intact. Durable coordination is the issue #14 candidate. Durable Systems bind to
+the accepted #35 System Record representation: one human-readable Markdown
+authority with constrained YAML formal fields, native Adapter mappings where
+appropriate, and optional read-only projections. The candidate remains
+human-review-required and does not change private or global configuration.
 
 ### [To Spec](skills/to-spec) — implementation candidate (human review required)
 

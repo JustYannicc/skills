@@ -17,6 +17,15 @@ The universal `to-spec` successor is an adapted public skill based on Matt Pococ
 
 The universal `to-tickets` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-tickets` at the same pinned revision. It retains complete tracer-bullet decomposition, dependency edges, frontier visibility, and owner acceptance while replacing codebase and tracker assumptions with the adapter-neutral Ticket contract; the full provenance record is in [`validation/repository.yaml`](../validation/repository.yaml).
 
+## Workflow Durable coordination
+
+The issue #14 candidate extends the original `workflow` skill through the
+accepted [Universal work and coordination contract](UNIVERSAL_WORK_CONTRACT.md)
+and the [System Record representation decision package](SYSTEM_RECORD_REPRESENTATION.md).
+These repository authorities define adapter-neutral meanings and the one
+writable System Record boundary; `skills/workflow/references/durable-mode.md`
+contains only the operational branch and capability matrix needed by Workflow.
+
 ## Thinking in Systems
 
 The installed [Sources and further reading](../skills/thinking-in-systems/references/sources.md) file is the single public concept-to-source map for the standard. It preserves the useful public reference spine—including systems engineering, decision economics, behavioral evidence, resilience, representation, preparation, and evaluation—beside the concepts those sources inform.

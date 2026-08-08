@@ -21,9 +21,10 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Evaluate each skill independently before composing them.
 
 Current state: `thinking-in-systems` is approved. Workflow's Inline route is an
-implemented issue #13 candidate awaiting required human review; Durable
-coordination remains in #14 and the System Record representation remains in
-#35.
+implemented issue #13 candidate awaiting required human review. Issue #14 now
+has a Durable coordination candidate that extends the same Workflow skill
+through the accepted adapter-neutral work contract and #35 System Record
+representation; its human-review gate remains open.
 
 ## Phase 2 — discovery skills
 
