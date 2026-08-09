@@ -28,7 +28,7 @@ implemented.
 
 ## Phase 2 — discovery skills
 
-- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Domain Modeling and Prototype are approved; Wayfinder remains to be implemented.
+- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Domain Modeling and Prototype are approved; Wayfinder has an implemented candidate awaiting issue #21 human review.
 - Define and verify the pinned overlays for `research`, `grill-with-docs`, `grilling`, and `to-questionnaire` without copying their full upstream source. The overlay foundation is implemented.
 - Test discovery across technical, personal, organizational, physical, communicative, and agent cases.
 

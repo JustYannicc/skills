@@ -1,0 +1,37 @@
+schemaVersion: 1
+id: wayfinder-direct-reducible
+title: Reducible fog becomes owned decision work without destination execution
+shape: direct
+kind: invocation
+skill: wayfinder
+domains: [technical, organizational]
+severity: Critical
+requiredAttempts: 3
+runtimeReferences: [skills/wayfinder/references/map-and-strategy.md, evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md]
+prompt: "Use Wayfinder for a multi-session replacement of a community center sign-in process. The accepted destination is that visitors register once without staff re-entry. The team only knows that some unknown part of moving visitor data between the kiosk and the existing roster may block that destination; it cannot yet state the decision question. The kiosk provider publishes integration documentation that is available to inspect. Find the next decision route and preserve the map; do not implement the replacement."
+environment:
+  id: durable-center-planning
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: true
+    adapterContinuation: false
+    research: true
+    domainModeling: true
+    grilling: true
+    prototype: true
+    toQuestionnaire: true
+    effects: false
+  tools: [adapter, primary-sources]
+expected:
+  actions: [bind the accepted destination and canonical source revisions, preserve the coarse data-movement uncertainty as reducible fog, use Research to sharpen it from published documentation into one precise export-contract question, create or update the resulting owned research Ticket and its blockers, preserve exact resumption state after the research result]
+  artifacts: [durable Wayfinder Map, operating Strategy, Continuation record]
+  effects: []
+  invoked: [workflow, wayfinder, research]
+  notInvoked: [domain-modeling, grilling, grill-with-docs, prototype, to-questionnaire, implementation, Specification, parent completion]
+  proof: [the Map shows the coarse fog graduating only after source-bound Research into the precise question of whether the export contract exposes a stable per-visitor identifier and update semantics, then exposes destination accepted decisions Strategy frontier blockers Evidence ownership and Continuation at exact result revision center-signin-r5]
+  responsibility: [Wayfinder owns the bounded map and strategy result while Workflow retains the parent Outcome]
+  route: [workflow-to-wayfinder-to-research-to-wayfinder-to-workflow]
+  state: [reducible-fog-routed]
+  forbidden: [implement the replacement, invoke companions without their owned uncertainty, claim all fog disappeared, create a second writable decision store]

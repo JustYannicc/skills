@@ -1,0 +1,32 @@
+schemaVersion: 1
+id: wayfinder-edge-operating-delay
+title: Fog reducible only through bounded operation gets an observation route
+shape: edge
+kind: routing
+skill: wayfinder
+domains: [physical, organizational]
+severity: Major
+requiredAttempts: 1
+runtimeReferences: [skills/wayfinder/references/map-and-strategy.md, evaluations/fixtures/wayfinder/runtime/operating-delay-state.md]
+prompt: "Use Wayfinder for a neighborhood food-pantry pickup route. The destination, owner, authority, safety limit, and initial low-volume route are accepted. The team cannot know whether arrival bunching requires timed pickup until it has operated four pantry events. Preserve a truthful route now without calling the uncertainty permanently irreducible or running the events."
+environment:
+  id: durable-pantry-observation
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: false
+    adapterContinuation: false
+    effects: false
+  tools: [adapter, event-log]
+expected:
+  actions: [classify arrival bunching as fog reducible only after operating, preserve the four-event observation horizon and permitted low-volume route, record the queue observations threshold owner Authority safe mode and recovery, return the item to the decision frontier when the fourth event evidence is accepted]
+  artifacts: [durable Wayfinder Map, operating Strategy, Continuation record]
+  effects: []
+  invoked: [workflow, wayfinder]
+  notInvoked: [research, domain-modeling, grilling, grill-with-docs, prototype, to-questionnaire, event operation, implementation, parent completion]
+  proof: [result revision pantry-pickup-r4 distinguishes operating-delay fog from irreducible fog and binds its horizon evidence protocol decision trigger permitted route safe mode recovery ownership Authority and exact resumption action]
+  responsibility: [Wayfinder owns the observation strategy while the event lead and Workflow retain operation and the parent Outcome]
+  route: [workflow-to-wayfinder-operating-delay-to-workflow]
+  state: [governed-operating-delay]
+  forbidden: [call arrival bunching irreducible, create a speculative immediate decision Ticket, claim the four events ran, claim active monitoring, claim parent completion]

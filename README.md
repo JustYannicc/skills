@@ -76,6 +76,16 @@ must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
 
+### [Wayfinder](skills/wayfinder) — candidate
+
+Wayfinder navigates persistent, multi-session, or irreducible fog through a
+durable decision Map and operating Strategy. It preserves the destination,
+accepted decisions, frontier, blockers, Evidence, ownership, and Continuation
+through the selected Adapter, invokes discovery companions only for their owned
+uncertainty, and completes only when the next route is truthfully specifiable or
+remaining fog has accepted operating rules. Issue #21 still requires human
+review; this candidate does not approve or publish the skill.
+
 ## Planned suite
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 17 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied. For documented planning and design, Grill With Docs composes Grilling's decision-tree interview with Domain Modeling's shared-language and decision records through the selected Adapter.
