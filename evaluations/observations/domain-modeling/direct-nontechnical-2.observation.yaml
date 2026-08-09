@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 2
-contextId: fresh-domain-modeling-direct-nontechnical-20260808t112710z-luna-max-fresh-f27e9398-dd31-4e48-bd7b-b358d858fe4b
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-direct-nontechnical-20260809t105625z-luna-max-2-c4659d7d-ab94-419d-9ceb-950442f9134e
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:27:10.000Z
+recordedAt: 2026-08-09T10:56:25Z
 environment:
   id: adapter-without-language-shape
   capabilities:
@@ -39,7 +39,7 @@ observed:
     - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The fresh response records non-aliasing operative boundaries, an all-three good case, and three near misses that separate Event, Appointment, and Commitment.
+      evidence: The single fresh response records distinct operative boundaries for Event, Appointment, and Commitment, preserves the superseded interchangeable wording as a visible conflict, and gives one all-three case plus three separating near misses.
       observed: false
   invoked:
     - thinking-in-systems
@@ -81,4 +81,4 @@ runtimeInputs:
     sha256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-2.txt
-  sha256: 36ce759ecbda0c13401b0ceeed5edf5220d70aa457313aabd797bf5d166ddd64
+  sha256: f7b7432b08a88161f4dc65545c62454210d5130b5c31ce48d0cede0718c09160

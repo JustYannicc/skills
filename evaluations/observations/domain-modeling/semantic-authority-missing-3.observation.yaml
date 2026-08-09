@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-semantic-authority-missing
 attempt: 3
-contextId: fresh-domain-modeling-semantic-authority-missing-20260808t113243z-luna-max-5323cd0e-3921-44dd-b452-8ba780d51b34
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-semantic-authority-missing-20260809t110601z-luna-max-91b521e7-3d83-4ccb-adac-4f88cdd85887
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:32:43Z
+recordedAt: 2026-08-09T11:06:01Z
 environment:
   id: writable-adapter-without-semantic-authority
   capabilities:
@@ -26,7 +26,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: treat Adapter write access as Authority to accept an operative meaning
-      evidence: The fresh response separates the records custodian's conditional write Authority from the absent semantic decision Authority, keeps resident-member-meaning-lm3 and all candidate meanings noncanonical, performs no write, and claims no Adapter result revision.
+      evidence: The response separates write Authority from absent semantic decision Authority, preserves resident-member-meaning-lm3 and all candidates as noncanonical, performs no write, and claims no Adapter result revision.
       observed: false
   invoked:
     - thinking-in-systems
@@ -64,4 +64,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/semantic-authority-missing-3.txt
-  sha256: d9f7c842f49e289dd69ceef0d8afd0a0bcaf961772f7c7cde51bf8b5393fc1ba
+  sha256: e80e0d9ba7694e459743962d3ed19bb097321cdda2eb9cfa07e16724197f5096

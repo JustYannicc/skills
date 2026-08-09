@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-supplemental-required-stale
 attempt: 1
-contextId: fresh-domain-modeling-supplemental-required-stale-20260808t113304z-luna-max-1369286d-0a34-4065-a16e-993087cd20dd
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-supplemental-required-stale-20260809t110610z-luna-max-2350205a-200c-4467-88af-1fcb4ca6021b
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:33:04Z
+recordedAt: 2026-08-09T11:06:10Z
 environment:
   id: adapter-with-stale-required-supplemental
   capabilities:
@@ -25,7 +25,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: treat the stale Supplemental finding as current or complete the durable terminology result
-      evidence: The fresh response keeps terminology-evidence-finding-1369286d bound to adapter://workplace/policy/availability@p4, keeps the canonical Adapter source at p5, leaves all p5 candidates unresolved, blocks durable completion, and records zero conditional-write and write calls.
+      evidence: The one-shot response keeps terminology-evidence-finding-2350205a bound to adapter://workplace/policy/availability@p4, keeps the canonical source at p5, leaves candidates A–C unresolved, blocks durable completion, and records zero conditional-write and other write calls.
       observed: false
   invoked:
     - thinking-in-systems
@@ -63,4 +63,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-required-stale-1.txt
-  sha256: 9ee9aa76f9a0e5351d30aa5f9f73a6e0409a05c93e842b80fa485429cf007461
+  sha256: fd2ab52cf8fbefb51af2384c9e481e147fcede9d9cffaada2eaea122d393add0

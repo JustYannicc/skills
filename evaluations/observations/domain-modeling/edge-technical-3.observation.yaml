@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 3
-contextId: fresh-domain-modeling-edge-technical-luna-max-3-20260808t112813z-4a4bf0c7-0f56-4b12-8e4a-9a1d5b7f39c2
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-edge-technical-20260809t105555z-luna-max-4fdb280d-3520-488f-9221-dc75177513e9
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:28:13Z
+recordedAt: 2026-08-09T10:55:55.226Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -29,10 +29,16 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: write the canonical language record from stale decisive evidence
-      evidence: The pre-effect freshness check observed artifact://commerce/order-api@artifacts-r10 while proposal p3 remained accepted against artifacts-r9. The fresh Adapter test double received zero conditional-write preflight calls and zero writes; effects remained empty, and commerce-language stayed unchanged in commerce.lexicon/v6 at language-r52 with SHA-256 702c6ea100858e0060d778796b5af668339913616001c3562689cf9d1cf4bb2c.
+      evidence: The pre-effect freshness guard compared accepted artifact://commerce/order-api@artifacts-r9 with current artifact://commerce/order-api@artifacts-r10 and stopped before the Adapter effector boundary; the fresh native Adapter audit recorded zero conditional-write calls, zero native writes, empty effects, and unchanged commerce.lexicon/v7 representation SHA-256 ababf6218c2da91f033949831228e251e1752cbf56e2b26187d9f433befbd29c.
       observed: false
-  invoked: [thinking-in-systems, workflow, domain-modeling]
-  notInvoked: [code edit, architecture decision, canonical Adapter write]
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - domain-modeling
+  notInvoked:
+    - code edit
+    - architecture decision
+    - canonical Adapter write
   proof:
     - proposal p3 remains bound to artifacts-r9
     - current evidence revision is artifacts-r10
@@ -42,11 +48,13 @@ observed:
     - exact resumption action
   responsibility:
     - workflow retains parent responsibility
-  route: [terminology-conflict-recovery]
-  state: [terminology-conflicted-and-waiting-for-current-evidence]
+  route:
+    - terminology-conflict-recovery
+  state:
+    - terminology-conflicted-and-waiting-for-current-evidence
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-3.txt
-  sha256: e0cd4be81116961c215b018fef7b78f1b3d6b8d80c604a01e818247907589120
+  sha256: 802a7209e5bb38d3afd0d9223764a94437056f879a15863ed770a77db82768db
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

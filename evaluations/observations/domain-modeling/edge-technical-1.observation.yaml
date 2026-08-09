@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 1
-contextId: fresh-domain-modeling-edge-technical-luna-max-1-20260808t112702z-2d607f6e-5faa-460c-beed-35ffecdd6583
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-edge-technical-luna-max-1-20260809t105635z-d7ec4e3b-2c09-478f-99bd-af446bc50be7
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:27:02Z
+recordedAt: 2026-08-09T10:56:35.300Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -46,7 +46,7 @@ observed:
   state: [terminology-conflicted-and-waiting-for-current-evidence]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-1.txt
-  sha256: 47edcbb4f794845c530c278c2a9f8fdb11ad38519f90c29f4faa1a463a86880a
+  sha256: 586673745e7704e7b95633c14642c5599220e580552d0ae43734eac7c299b2f5
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

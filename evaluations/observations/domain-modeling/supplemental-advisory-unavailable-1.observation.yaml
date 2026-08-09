@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-supplemental-advisory-unavailable
 attempt: 1
-contextId: fresh-domain-modeling-supplemental-advisory-unavailable-luna-max-1-20260808t113958z-8e86ebd4-eeed-4cbe-9bbb-477fc5e5a5de
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-supplemental-advisory-unavailable-20260809t111935z-luna-max-c2d0c5f2-9ad0-4e10-8d08-595cb21854ad
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:39:58Z
+recordedAt: 2026-08-09T11:19:35Z
 environment:
   id: advisory-supplemental-unavailable-core-sufficient
   capabilities:
@@ -52,7 +52,7 @@ observed:
     - terminology-resolved-with-advisory-gap
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-advisory-unavailable-1.txt
-  sha256: 9596809bd1e34edb8632075752acc06dcc16ccfe827b7a62c786abe876cfbe8d
+  sha256: d92d92b8834b5477a5612666f12312f2939a6bf09dcd5026dd9e11b837d7c1d5
 runtimeInputs:
   - role: fixture
     locator: evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
@@ -66,6 +66,3 @@ runtimeInputs:
   - role: governing-reference
     locator: skills/thinking-in-systems/references/standard.md
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-  - role: disclosed-reference
-    locator: skills/workflow/SKILL.md
-    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171

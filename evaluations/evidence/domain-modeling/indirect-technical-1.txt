@@ -1,29 +1,29 @@
-Fresh isolated behavioral evaluation — domain-modeling-indirect-technical
+Fresh-context behavioral evaluation — domain-modeling-indirect-technical
+Attempt: 1
+Context ID: fresh-domain-modeling-indirect-technical-20260809t105839z-luna-max-e0f63d67-ad62-4d1d-a09e-b9b9b3d7f532
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-09T10:58:39Z
+Suite revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 
-Evaluation identity
+Candidate and exact runtime identity
 
-- candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
-- candidate HEAD independently observed: 6edba922b604d6641e87a6726eeba1b2123ff683
-- fixture: domain-modeling-indirect-technical
-- attempt: 1
-- contextId: fresh-domain-modeling-indirect-technical-20260808t112831z-luna-max-16a3d656-58c7-40e0-839c-32f5cb473887
-- evaluator: gpt-5.6-luna-max-fresh-context
-- recordedAt: 2026-08-08T11:28:31Z
+- Evaluation candidate: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+- Verified repository HEAD: 4233758023b9d47a92b72311ef945d902d1c9d6d
+- Runtime input locator: skills/domain-modeling/SKILL.md
+- Runtime input SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Runtime input locator: evaluations/fixtures/domain-modeling/indirect-technical.fixture.yaml
+- Runtime input SHA-256: ba9bf831205fba3baeb2304844f63a3445781511913f1740a2b17cb47ba9bc39
+- Runtime input locator: skills/thinking-in-systems/SKILL.md
+- Runtime input SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Runtime input locator: skills/thinking-in-systems/references/standard.md
+- Runtime input SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- The Domain Modeling skill, indirect-technical fixture, Thinking in Systems skill, and complete governing standard were read in this isolated context before composing the response. The selected Adapter exposed its native notification-language record shape, so no fallback template or terminology-evidence Supplemental skill was used.
 
-Runtime inputs read for this isolated attempt
-
-- role `skill`; locator `skills/domain-modeling/SKILL.md`; SHA-256 `00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf`
-- role `fixture`; locator `evaluations/fixtures/domain-modeling/indirect-technical.fixture.yaml`; SHA-256 `ba9bf831205fba3baeb2304844f63a3445781511913f1740a2b17cb47ba9bc39`
-- role `governing-skill`; locator `skills/thinking-in-systems/SKILL.md`; SHA-256 `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
-- role `governing-reference`; locator `skills/thinking-in-systems/references/standard.md`; SHA-256 `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
-
-These are the complete runtime inputs for this attempt. I read the complete Domain Modeling skill, the fixture, the complete Thinking in Systems governing skill, and its full standard. The selected Adapter supplied a native language-record representation, so no fallback template or terminology-evidence Supplemental skill was used.
-
-Fixture prompt
+Exact prompt
 
 Workflow is specifying service notifications, but recipient, subscriber, and contact are used inconsistently. The notification language steward accepted proposal notification-language-p4: recipient is the person or role a notification is addressed to; subscriber is an Actor with an active subscription; contact is the reachable address or identifier used for delivery. The acceptance is based on notification-spec@notifications-r7 and recipient-schema@schema-r12. Record the accepted language before Specification.
 
-Declared isolated environment
+Exact declared fixture environment
 
 ```yaml
 id: adapter-baseline
@@ -40,138 +40,103 @@ tools:
   - recipient-schema@schema-r12
 ```
 
-Fresh isolated tool and test-double events
+Fresh isolated test-double run
 
-1. Workflow held Specification at its terminology gate, classified the blocker as terminology, and opened one bounded Domain Modeling result. Workflow retained the parent Outcome, phase choice, integration, and terminal proof; the doubles shared no state with earlier evaluations and had no production effect.
+1. Workflow held Specification at its terminology gate, classified the blocker as terminology, and routed one bounded language result through `workflow-to-domain-modeling`. Workflow retained the parent notification Outcome, phase choice, integration, and terminal proof; the test doubles shared no state with earlier evaluations and no production effect was enabled.
 
-2. Before any write, the selected Adapter read its canonical native notification-language record:
+2. Before writing, the selected Adapter read its canonical native notification-language record:
 
-```yaml
-recordIdentity: service-notification-language
-owner: notification-language-record custodian
-canonicalLocator: adapter://notifications/operative-language
-nativeShape: notification-language/v4
-sourceRevision: language-r88
-writeAuthority:
-  actor: notification-language-record custodian
-  boundary: guarded writes to the operative service-notification language record
-  authorized: true
-```
+   ```yaml
+   recordIdentity: service-notification-language
+   owner: notification-language-record custodian
+   canonicalLocator: adapter://notifications/operative-language
+   nativeShape: notification-language/v4
+   sourceRevision: language-r88
+   writeAuthority:
+     actor: notification-language-record custodian
+     boundary: guarded writes to the operative service-notification language record
+     authorized: true
+   ```
 
-3. Separate semantic-acceptance and source-bound doubles returned the exact decision supplied by the prompt:
+3. Separate semantic-acceptance and source-bound test doubles returned the exact prompt decision:
 
-```yaml
-semanticAcceptance:
-  actor: notification language steward
-  proposalRevision: notification-language-p4
-  accepted: true
-  boundary: operative meanings for service-notification terminology before Specification
-decisiveSources:
-  - notification-spec@notifications-r7
-  - recipient-schema@schema-r12
-sourceStatus: exact revisions available; no unstated source content inferred
-```
+   ```yaml
+   semanticAcceptance:
+     actor: notification language steward
+     proposalRevision: notification-language-p4
+     accepted: true
+     boundary: operative meanings for service-notification terminology before Specification
+   decisiveSources:
+     - notification-spec@notifications-r7
+     - recipient-schema@schema-r12
+   sourceStatus: exact revisions available; no unstated source content inferred
+   ```
 
-4. A fresh terminology evaluator applied substitution plus good-case and near-miss tests. It found three different referents: an addressed person or role, an Actor in active subscription state, and a reachable delivery address or identifier. It found no accepted aliases. The prior inconsistent usage remained visible as historical conflict evidence, not as a reason to merge the labels.
+4. The terminology pass used substitution plus a good-case and near-miss. It identified three different referents—an addressed person or role, an Actor with active subscription state, and a reachable delivery address or identifier—and found no accepted aliases. Earlier inconsistent usage stayed visible as historical conflict evidence rather than being rewritten into aliases.
 
-5. Because the three entries form one mutually dependent boundary, the Adapter double accepted one atomic conditional group write guarded by `language-r88`:
+5. Because the entries form one mutually dependent boundary, the Adapter test double committed one atomic conditional group write guarded by `language-r88`:
 
-```yaml
-operation: conditional-group-write
-recordIdentity: service-notification-language
-ifRevision: language-r88
-acceptedBy: notification language steward
-acceptedProposalRevision: notification-language-p4
-decisiveSources:
-  - notification-spec@notifications-r7
-  - recipient-schema@schema-r12
-entries:
-  - recipient
-  - subscriber
-  - contact
-result:
-  status: committed
-  resultRevision: language-r89
-  transition: language-r88 -> language-r89
-```
+   ```yaml
+   operation: conditional-group-write
+   recordIdentity: service-notification-language
+   ifRevision: language-r88
+   acceptedBy: notification language steward
+   acceptedProposalRevision: notification-language-p4
+   decisiveSources:
+     - notification-spec@notifications-r7
+     - recipient-schema@schema-r12
+   entries: [recipient, subscriber, contact]
+   result:
+     status: committed
+     resultRevision: language-r89
+     transition: language-r88 -> language-r89
+   ```
 
-6. The Adapter reread `service-notification-language@language-r89` using the exact post-commit guard. The reread matched the committed result. No Specification, Ticket decomposition, implementation, architecture decision, or production notification effect was called.
+6. The Adapter reread `service-notification-language@language-r89` with the exact post-commit guard, and the reread matched the committed result. No Specification, Ticket decomposition, implementation, architecture decision, or production notification effect was invoked.
 
-Fresh response — generated once and preserved unedited
+Response — generated once in this fresh context and preserved unedited
 
 BEGIN CANDIDATE RESPONSE
 
-Specification is still paused at its terminology gate. I classified the blocker as terminology and routed one bounded language result from Workflow to Domain Modeling. Workflow retains the parent notification Outcome, integration of this result, the phase choice, and the terminal proof; Domain Modeling owns only this bounded language result.
+Specification remains paused at its terminology gate. I classified the blocker as terminology and routed one bounded language result from Workflow to Domain Modeling. Workflow retains the parent notification Outcome, phase choice, integration, and terminal proof; Domain Modeling owns only this bounded language result.
 
-Language boundary
+Language boundary: in the service-notification scope, `recipient`, `subscriber`, and `contact` must distinguish addressability, subscription state, and delivery information. Workflow is the parent owner and integrator; the notification language steward is the semantic decision Authority; the notification-language-record custodian has separate Adapter write Authority; authors, implementers, and delivery operators consume the result. The steward accepted exact proposal `notification-language-p4`, based on `notification-spec@notifications-r7` and `recipient-schema@schema-r12`; no content beyond those supplied revision-bound sources is inferred. This establishes terminology before Specification and does not choose architecture or policy, create Specifications or Tickets, implement delivery, or complete Workflow's parent Outcome.
 
-- Question: in the service-notification scope, what do `recipient`, `subscriber`, and `contact` refer to so authors and implementers can distinguish addressability, subscription state, and delivery information?
-- Actors and handoff: Workflow is the parent owner and integrator; the notification language steward is the semantic decision Authority; the notification-language-record custodian has separate Adapter write Authority; authors, implementers, and delivery operators consume the result. The blocked handoff is the next Specification/discovery decision.
-- Acceptance evidence: the steward accepted exact proposal `notification-language-p4`, based on `notification-spec@notifications-r7` and `recipient-schema@schema-r12`. I do not infer anything beyond those supplied, revision-bound sources.
-- Scope and non-Outcome: this establishes operative terminology before Specification. It does not choose notification architecture or policy, create a Specification or Tickets, implement delivery, or complete Workflow's parent Outcome.
-
-Accepted entries
+Accepted entries:
 
 - `recipient`: the person or role a notification is addressed to. It excludes the reachable address or identifier used to deliver the notification and does not imply an active subscription.
-- `subscriber`: an Actor with an active subscription. It excludes an Actor without that subscription state and does not, by itself, say that a particular notification is addressed to that Actor.
+- `subscriber`: an Actor with an active subscription. It excludes an Actor without that state and does not by itself say that a particular notification is addressed to that Actor.
 - `contact`: the reachable address or identifier used for delivery. It excludes the addressed person or role and does not establish subscription state.
 
-The three labels are distinct classifications, not aliases or interchangeable synonyms in this scope. The previous inconsistent usage is retained as a conflict/history note so the record does not rewrite what older artifacts said. Each accepted entry avoids substituting the other two labels; an Actor may be both a subscriber and a recipient in one situation, but those referents remain independent.
+The three labels are distinct classifications, not aliases or interchangeable synonyms. Previous inconsistent usage remains visible as conflict/history evidence. An Actor may be both subscriber and recipient in one situation, but those referents remain independent. A good case addresses an outage notice to the on-call role and delivers through `pager:on-call`: the role is `recipient`, the pager address is `contact`, and the role is `subscriber` only with an active subscription. A near miss gives Noor an active subscription while a notice is addressed only to the incident commander: Noor is a `subscriber`, not that notice's `recipient`, and a reachable address for Noor is a `contact` only if used for delivery. Substitution of `contact` for `recipient` or `subscriber` for `recipient` changes the referent and fails.
 
-Boundary tests
-
-- Good case: an outage notice is addressed to the on-call role and delivered through `pager:on-call`. The on-call role is the `recipient`; `pager:on-call` is the `contact`; the role is a `subscriber` only when an active subscription exists.
-- Near miss: Noor has an active subscription, but a particular notice is addressed only to the incident commander. Noor is a `subscriber` and is not that notice's `recipient`; a reachable address for Noor would be a `contact` only if used for delivery.
-- Substitution checks: replacing `contact` with `recipient` changes a delivery address into an addressed person or role; replacing `subscriber` with `recipient` makes subscription state determine who a notice addresses. Both substitutions change the referent and fail. These tests vary only the distinguishing addressability/subscription/delivery dimensions.
-
-Durable language evidence
-
-The selected Adapter read its native record `service-notification-language` at `adapter://notifications/operative-language`, owned by the `notification-language-record custodian`, with source revision `language-r88`. After the steward's semantic acceptance, the custodian's separate write Authority guarded one atomic batch for all three mutually dependent entries. The committed transition was `language-r88 -> language-r89`; an exact reread confirmed `service-notification-language@language-r89`.
-
-```yaml
-nativeShape: notification-language/v4
-recordIdentity: service-notification-language
-owner: notification-language-record custodian
-canonicalLocator: adapter://notifications/operative-language
-sourceRevision: language-r88
-resultRevision: language-r89
-acceptedBy: notification language steward
-acceptedProposalRevision: notification-language-p4
-decisiveSources:
-  - notification-spec@notifications-r7
-  - recipient-schema@schema-r12
-entries:
-  recipient:
-    meaning: person or role a notification is addressed to
-    aliases: []
-    avoidedLabels: [subscriber, contact]
-  subscriber:
-    meaning: Actor with an active subscription
-    aliases: []
-    avoidedLabels: [recipient, contact]
-  contact:
-    meaning: reachable address or identifier used for delivery
-    aliases: []
-    avoidedLabels: [recipient, subscriber]
-transition: language-r88 -> language-r89
-confirmingReread: service-notification-language@language-r89
-```
-
-Bounded return to Workflow: the terminology blocker is resolved and the accepted language is durably recorded at `service-notification-language@language-r89`. State is `ready-for-specification-or-discovery` on route `workflow-to-domain-modeling`. Workflow may integrate that exact result and choose whether to resume Specification or discovery; Domain Modeling claims completion only for this language result. Thinking in Systems governed the source/revision binding, separated semantic acceptance from write Authority, preserved nested responsibility and history, and kept the deterministic write guard and reread visible.
+Durable evidence: the selected Adapter's native record `service-notification-language` at `adapter://notifications/operative-language`, owned by the notification-language-record custodian, advanced from source `language-r88` to result `language-r89` in one guarded atomic batch. Acceptance is by the notification language steward at `notification-language-p4`; write Authority is separate. The decisive sources are `notification-spec@notifications-r7` and `recipient-schema@schema-r12`; an exact reread confirmed `service-notification-language@language-r89`. The bounded return is on route `workflow-to-domain-modeling` with state `ready-for-specification-or-discovery`; Workflow may now choose Specification or discovery, while Domain Modeling stops at this language result.
 
 END CANDIDATE RESPONSE
 
-Fixture-criterion assessment
+Post-response grading against every fixture criterion
 
-- Actions: PASS — the response classifies the blocker as terminology, routes it to Domain Modeling, preserves both revision-bound notification sources, stress-tests all labels with good/near-miss/substitution cases, binds the steward's acceptance to `notification-language-p4`, records all accepted meanings in one guarded write, and returns bounded evidence.
-- Artifact: PASS — the native language result has operative meanings, exclusions, scope, aliases/avoided-label treatment, preserved conflict history, and boundary evidence for Workflow.
-- Effect: PASS — the isolated Adapter commits accepted notification language from `language-r88` to `language-r89` and the confirming reread makes it available to Workflow.
-- Invoked: PASS — `thinking-in-systems`, `workflow`, and `domain-modeling` are all explicit. The governing pass keeps identity, authority, evidence revisions, deterministic guard, proof, and nested responsibility visible.
-- Not invoked: PASS — `to-spec`, `to-tickets`, and `implement` are not called; Specification remains paused until the bounded language result is returned.
-- Proof: PASS — semantic acceptance by the notification language steward is distinct from the notification-language-record custodian's write Authority; exact proposal and Actor, `notification-spec@notifications-r7`, `recipient-schema@schema-r12`, the pre-Specification ordering, atomic revision transition, and confirming reread are all retained.
-- Responsibility: PASS — Workflow integrates the result and retains the parent; Domain Modeling owns only the bounded language result.
-- Route: PASS — `workflow-to-domain-modeling`.
-- State: PASS — `ready-for-specification-or-discovery` only after `language-r89` is durably confirmed.
-- Forbidden check `start Specification while the terminology blocker remains`: NOT OBSERVED. Specification stayed paused through classification, routing, source binding, guarded persistence, and reread; only the final bounded return permits Workflow to choose Specification or discovery.
+- Action — classify the blocker as terminology: PASS. The response holds Specification at its terminology gate and names the smallest terminology question.
+- Action — route to domain-modeling: PASS. The bounded result returns through `workflow-to-domain-modeling` while Workflow retains parent integration.
+- Action — cross-reference the revision-bound notification sources: PASS. Both exact source/revision pairs remain attached to acceptance and the result.
+- Action — stress-test the labels: PASS. Good-case, near-miss, and substitution tests distinguish addressability, subscription state, and delivery address.
+- Action — bind the steward acceptance to proposal notification-language-p4: PASS. The accepting Actor and exact proposal revision are retained.
+- Action — record the accepted meanings: PASS. All three mutually dependent entries are recorded together in one guarded Adapter batch.
+- Action — return bounded language evidence: PASS. The response returns scope, meanings, exclusions, scenarios, durable identity/revisions, route, state, and responsibility.
+- Artifact — language result with operative meanings or visible conflicts for Workflow: PASS. The native result has operative meanings, avoided labels, no aliases, and preserved historical conflict evidence.
+- Effect — accepted notification language recorded: PASS. The isolated Adapter commits `language-r88 -> language-r89` and the confirming reread exposes it to Workflow.
+- Invoked: PASS. `thinking-in-systems`, `workflow`, and `domain-modeling` are explicit and bounded.
+- Not invoked: PASS. `to-spec`, `to-tickets`, and `implement` remain uncalled while Specification is paused.
+- Proof — semantic acceptance distinct from write Authority: PASS. The steward accepts the proposal; the custodian separately holds guarded write Authority.
+- Proof — exact proposal and accepting Actor: PASS. `notification-language-p4` and `notification language steward` are retained.
+- Proof — notification-spec@notifications-r7 and recipient-schema@schema-r12 retained: PASS. Both exact revisions are present.
+- Proof — accepted terms recorded before Specification: PASS. The gate remains paused until the guarded write and confirming reread complete.
+- Proof — bounded result returned to Workflow: PASS. Workflow receives the exact `language-r89` result on `workflow-to-domain-modeling`; the parent Outcome is not claimed complete.
+- Responsibility — workflow integrates the result: PASS. Workflow keeps parent ownership, phase choice, integration, and terminal proof.
+- Responsibility — domain-modeling owns the bounded language result: PASS. Domain Modeling stops after returning terminology evidence.
+- Route — workflow-to-domain-modeling: PASS. The route is explicit in the response and observation.
+- State — ready-for-specification-or-discovery: PASS. This state is returned only after exact reread of `language-r89`.
+- Forbidden check `start Specification while the terminology blocker remains`: NOT OBSERVED. Specification stayed paused through classification, routing, source binding, guarded persistence, and reread; only the bounded return permits Workflow to choose Specification or discovery.
 
 Overall attempt result: PASS.
+Execution count: one isolated generation; the response above was not edited or retried.

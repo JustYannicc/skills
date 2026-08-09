@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-technical
 attempt: 2
-contextId: fresh-domain-modeling-edge-technical-20260808t112749z-luna-max-01ff9326-2627-4dc7-b0db-a490a0e288f1
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-edge-technical-2-20260809t105629z-1337021b-4d5b-420e-8534-b7ba388517e5
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:27:49Z
+recordedAt: 2026-08-09T10:56:29Z
 environment:
   id: native-adapter-stale-decisive-evidence
   capabilities:
@@ -29,7 +29,8 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: write the canonical language record from stale decisive evidence
-      evidence: The fresh Adapter audit recorded zero conditional-write calls and zero write calls; its commerce-language/native-v6 snapshot, record identity commerce-language, canonical locator adapter://commerce/language, source/result revision language-r61, and SHA-256 472453e31ac0a7bd188e5c652f57402a1f1759952f79332a253c76d0945c03b7 were unchanged.
+      evidence: >-
+        The immediate freshness guard compared proposal p3 bound to artifacts-r9 with current artifacts-r10 and stopped before the effector boundary; the fresh native Adapter test double recorded zero conditional-write calls, zero write calls, and no effects, while commerce-language/native-v8 at language-r62 remained byte-for-byte unchanged with snapshot SHA-256 2faa4780daf6f0f2ab9a7d842134fcf93d89d5f5462b892f6406fe29388dc779.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [code edit, architecture decision, canonical Adapter write]
@@ -42,13 +43,11 @@ observed:
     - exact resumption action
   responsibility:
     - workflow retains parent responsibility
-  route:
-    - terminology-conflict-recovery
-  state:
-    - terminology-conflicted-and-waiting-for-current-evidence
+  route: [terminology-conflict-recovery]
+  state: [terminology-conflicted-and-waiting-for-current-evidence]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-technical-2.txt
-  sha256: 66deb4c53ab599caf5aef92b2e79b54743b1bd80b12d7b2a16b817522bcf12eb
+  sha256: 5b94c7d2dace27ef6eb0b61c2c7a7eddfb80f221d3bc55c9bb214819cad9c69f
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

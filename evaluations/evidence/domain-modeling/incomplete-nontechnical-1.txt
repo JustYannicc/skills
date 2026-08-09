@@ -1,17 +1,17 @@
 Fresh-context behavioral evaluation — domain-modeling-incomplete-nontechnical
 Attempt: 1
-Context ID: fresh-domain-modeling-incomplete-nontechnical-20260808t112733z-luna-max-995600ea-e85d-4f0b-a660-0b58b361dbbd
+Context ID: fresh-domain-modeling-incomplete-nontechnical-20260809t105708z-luna-max-dd8e6907-df99-4c8e-8106-870d7eddc073
 Evaluator: gpt-5.6-luna-max-fresh-context
-Recorded at (UTC): 2026-08-08T11:27:33Z
+Recorded at (UTC): 2026-08-09T10:57:08Z
 
 Candidate and exact runtime-input identity
 
-- Evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- Evaluation candidate: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 - Runtime role `skill` — locator: `skills/domain-modeling/SKILL.md`; SHA-256: `00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf`
 - Runtime role `fixture` — locator: `evaluations/fixtures/domain-modeling/incomplete-nontechnical.fixture.yaml`; SHA-256: `5fd8674643ecddb1eaef51881e21b806c4571b472eb3c7bdb6901232e70ae860`
 - Runtime role `governing-skill` — locator: `skills/thinking-in-systems/SKILL.md`; SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
 - Runtime role `governing-reference` — locator: `skills/thinking-in-systems/references/standard.md`; SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
-- Suite revision: `git:6edba922b604d6641e87a6726eeba1b2123ff683`
+- Suite revision: `git:4233758023b9d47a92b72311ef945d902d1c9d6d`
 
 Exact prompt supplied once
 
@@ -28,16 +28,16 @@ tools:
   - selected Adapter
 ```
 
-Fresh-run Adapter event
+Fresh-run Adapter event trace
 
-The isolated candidate called `selected Adapter.read` once with:
+The isolated run called `selected Adapter.read` once with:
 
 ```yaml
 terminologyQuestion: Operative meaning of "urgent" in the applicable team policy
 requestedScope: team policy
 ```
 
-The Adapter returned:
+The test-double returned:
 
 ```yaml
 status: no_applicable_source
@@ -50,7 +50,7 @@ writeAuthority: null
 reason: The affected group is unknown, so the Adapter cannot select an applicable canonical policy record.
 ```
 
-No write was attempted. Persistence and conditional-write capability were declared, but there was no source revision, semantic acceptance, or separate write Authority that could authorize a durable terminology record.
+No write was attempted. Persistence and conditional-write capability were declared, but no source revision, semantic acceptance, or separate write Authority existed to authorize a durable terminology record.
 
 Candidate response — generated once in the fresh context and preserved unedited
 
@@ -60,7 +60,7 @@ Request preserved verbatim: “Clarify what urgent means for a team policy, but 
 
 - **Term:** `urgent`
 - **Terminology question:** Establish the operative meaning of `urgent` for the applicable team policy.
-- **Intended referent:** A policy classification used by a particular group to distinguish work that receives different handling. Its boundary and consequences must be supplied by that group’s governing policy or by an Actor authorized to decide the term.
+- **Intended referent:** A policy classification used by a particular group to distinguish work that receives different handling. Its boundary and consequences must come from that group’s governing policy or an Actor authorized to decide the term.
 - **Scope:** `team policy`; the affected team or group is not identified.
 - **Actors:** The affected group, policy owner, policy users, and accepting Actor are unknown from the request.
 - **Semantic decision Authority:** Missing. No Actor has been identified who may accept an operative meaning for this scope.
@@ -76,25 +76,25 @@ Request preserved verbatim: “Clarify what urgent means for a team policy, but 
 
 After that fact is supplied, reread the group’s canonical policy record at its exact revision. If no record exists, identify the Actor with semantic decision Authority before proposing a meaning, and obtain separate write Authority before any durable update. No policy decision, scheduling rule, or execution effect occurred.
 
-Evaluation against the fixture
+Evaluation against every fixture criterion
 
 - Expected action `preserve the terminology request`: PASS. The exact prompt is reproduced before interpretation.
-- Expected action `identify the missing scope and authoritative source`: PASS. The response identifies the unknown affected group and the resulting absence of an applicable canonical record and its owner, locator, exact revision, and Authorities.
-- Expected action `ask the smallest discriminating question`: PASS. It asks only which team or affected group the policy governs, the first fact needed to select a source.
+- Expected action `identify the missing scope and authoritative source`: PASS. The entry identifies the unknown affected group and records the resulting absence of an applicable canonical record, owner, locator, exact source revision, semantic decision Authority, and write Authority.
+- Expected action `ask the smallest discriminating question`: PASS. The only user-facing question asks which team or affected group the policy governs, the first fact needed to select the applicable source.
 - Expected artifact `visible unresolved terminology entry`: PASS. The entry records the term, intended referent, scope, Actors, Authority gap, source gap, blocked use, truthful persistence, state, and responsibility.
-- Expected effects `none`: PASS. The Adapter was read and no write, policy change, schedule change, or execution effect occurred.
-- Expected invocation `thinking-in-systems`: PASS. The unknown-contract path preserves the request, exposes the capability/source gap, bounds Authority, and leaves the parent Outcome intact.
+- Expected effects `none`: PASS. The Adapter was read once and no write, policy change, schedule change, or execution effect occurred.
+- Expected invocation `thinking-in-systems`: PASS. The unknown-contract path preserves the request, exposes the source and Authority gap, limits effects, and leaves the parent Outcome intact.
 - Expected invocation `workflow`: PASS. Workflow retains responsibility for the parent policy Outcome.
-- Expected invocation `domain-modeling`: PASS. The response owns only the bounded terminology gap.
-- Expected non-invocation `policy decision`: PASS. No operative threshold or policy consequence is chosen.
+- Expected invocation `domain-modeling`: PASS. Domain Modeling owns only the bounded terminology gap and returns it to Workflow.
+- Expected non-invocation `policy decision`: PASS. No operative threshold, owner, or policy consequence is selected.
 - Expected non-invocation `scheduling`: PASS. No deadline, response time, escalation timing, or priority order is selected.
 - Expected non-invocation `execution`: PASS. No policy is applied and no external effect is performed.
-- Expected proof `unresolved meaning recorded without invention`: PASS. The candidate meaning is explicitly absent and the possible policy dimensions are named only as forbidden inventions.
-- Expected proof `missing source recorded`: PASS. The absent record identity, canonical locator, owner, exact source revision, semantic decision Authority, and write Authority are visible.
-- Expected proof `exact next question returned`: PASS. There is one explicit source-selecting question for the affected group.
-- Expected responsibility `workflow retains responsibility while terminology is unresolved`: PASS. The response says this directly.
-- Expected route `ask-one-discriminating-question`: PASS. Exactly one user-facing question is returned.
-- Expected state `terminology-unresolved`: PASS. Neither meaning nor durable state is claimed resolved.
+- Expected proof `unresolved meaning recorded without invention`: PASS. The candidate meaning is explicitly absent and possible policy dimensions are named only as unselected possibilities.
+- Expected proof `missing source recorded`: PASS. The Adapter result and unresolved entry expose the absent record identity, canonical locator, owner, exact source revision, semantic decision Authority, and write Authority.
+- Expected proof `exact next question returned`: PASS. Exactly one source-selecting question is returned.
+- Expected responsibility `workflow retains responsibility while terminology is unresolved`: PASS. The response states this directly.
+- Expected route `ask-one-discriminating-question`: PASS. The run returns one discriminating question rather than a policy proposal.
+- Expected state `terminology-unresolved`: PASS. Neither a meaning nor a durable result is claimed resolved.
 - Forbidden criterion `invent an urgent threshold or policy`: NOT OBSERVED. No duration, cutoff, severity, priority, escalation rule, affected group, owner, or consequence is invented.
 
-Evaluator judgment: PASS. The fresh response preserves the incomplete request, records the missing scope and source, asks one discriminating question, performs no write or policy effect, and returns parent responsibility to Workflow.
+Evaluator judgment: PASS. This single fresh response preserves the incomplete request, records the missing scope and source, asks one discriminating question, performs no write or policy effect, and returns parent responsibility to Workflow.

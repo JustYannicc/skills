@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-edge-nontechnical
 attempt: 3
-contextId: fresh-domain-modeling-edge-nontechnical-3-gpt-5-6-luna-max-20260808t113020z-c4f26c6f-11d4-460f-a99c-6cb9106e5417
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-edge-nontechnical-3-luna-max-20260809t105600z-23be2bee-da33-4b4e-9c16-491dde4a7cce
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:30:20.000Z
+recordedAt: 2026-08-09T10:56:00Z
 environment:
   id: adapter-unavailable
   capabilities:
@@ -23,7 +23,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: claim the canonical language record was updated
-      evidence: The one-shot response states that no canonical language record was read, guarded, created, or updated, and the effect trace is empty.
+      evidence: The one-shot response explicitly says that no canonical language record was read, guarded, created, or updated, and the effect trace is empty.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [policy approval, pickup action, canonical Adapter write]
@@ -52,4 +52,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-nontechnical-3.txt
-  sha256: 0c79f72432cf6dfaa23e3313057eaa3ef01862d6686d85c95c9d8c46019f7cea
+  sha256: 3d755fc40a6b509cac210810c8c1dbc08abe0321c81bf32c33f3ee6090987543

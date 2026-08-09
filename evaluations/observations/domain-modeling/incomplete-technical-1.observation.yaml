@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-incomplete-technical
 attempt: 1
-contextId: fresh-domain-modeling-incomplete-technical-20260808t113059z-luna-max-67c65b25-72cd-4440-96c4-3de2de6b4b4b
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-incomplete-technical-20260809t105627z-luna-max-b7293d2f-53b1-4fc6-9687-19483704949a
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:30:59Z
+recordedAt: 2026-08-09T10:56:27Z
 environment:
   id: adapter-missing-source
   capabilities:
@@ -21,7 +21,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invent an active-session definition
-      evidence: The response explicitly leaves the meaning absent. It adopts no timeout, token status, validity flag, activity threshold, expiration event, database-row condition, or retention period; those mechanisms are named only as unselected possibilities.
+      evidence: The response leaves active session without an operative meaning. It names no timeout, token status, validity flag, activity threshold, expiration event, data-store condition, or retention period as a selected rule.
       observed: false
   invoked:
     - thinking-in-systems
@@ -56,4 +56,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/incomplete-technical-1.txt
-  sha256: fa0945fa7bf3cfa541d5439c6383b4f1903559a31cdb34b0c56efefd58d8e9c6
+  sha256: 338eb843e52e70f38cb0e51f8e1693b1c015c2939d2ff030976ab7caee35e978

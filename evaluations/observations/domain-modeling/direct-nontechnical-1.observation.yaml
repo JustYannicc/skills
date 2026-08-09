@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-direct-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-direct-nontechnical-20260808t112636z-luna-max-84d2c0f1-6e3a-4b8c-9a71-5d0e2f4c8b93
-suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+contextId: fresh-domain-modeling-direct-nontechnical-20260809t105604z-luna-max-029577cd-9fd8-4a39-a87f-6ee02669d947
+suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-08T11:26:36Z
+recordedAt: 2026-08-09T10:56:04Z
 environment:
   id: adapter-without-language-shape
   capabilities:
@@ -39,7 +39,7 @@ observed:
     - shared nontechnical language available to Workflow
   forbiddenChecks:
     - criterion: silently treat appointment, event, and commitment as identical
-      evidence: The fresh response assigns distinct inclusion and exclusion tests to Event, Appointment, and Commitment, preserves a superseded conflict, and uses an overlap case plus independent near misses to show that generic substitution changes classification.
+      evidence: The raw candidate claim records distinct operative boundaries, an all-three good case, Event-only, Appointment-only, and Commitment-only near misses, and a typed narrower-kind-of relationship; generic substitution therefore changes classification.
       observed: false
   invoked:
     - thinking-in-systems
@@ -81,4 +81,4 @@ runtimeInputs:
     sha256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-nontechnical-1.txt
-  sha256: 5df5b99397e57ede48896af9726d41dafd14356b7346205b56fa691e88ec046c
+  sha256: a92e264ce79ca36515850c4dc570c1673855c425bf42e4ddb24772c57cc05f54

@@ -1,23 +1,19 @@
 Fresh-context behavioral evaluation — domain-modeling-negative-nontechnical
 Attempt: 1
-Context ID: fresh-domain-modeling-negative-nontechnical-luna-max-20260808t113017z-31e18cfe-f10f-4abd-95d0-48dfd8a21f34
+Context ID: fresh-domain-modeling-negative-nontechnical-luna-max-20260809t105654z-55f1eb59-6e2e-409a-8c51-899673a70dde
 Evaluator: gpt-5.6-luna-max-fresh-context
-Recorded at (UTC): 2026-08-08T11:30:17Z
+Recorded at (UTC): 2026-08-09T10:56:54Z
+Suite revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 
-Candidate and exact runtime identity
+Candidate and exact runtime inputs
 
-- Evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
-- Candidate suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
-- Candidate/runtime pair (skill): skills/domain-modeling/SKILL.md
-- Runtime input SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Candidate/runtime pair (fixture): evaluations/fixtures/domain-modeling/negative-nontechnical.fixture.yaml
-- Runtime input SHA-256: 3d127edfb8dd78651b502f3998f339e683ff85693a807bd60eb6fa7ad1d51090
-- Candidate/runtime pair (governing skill): skills/thinking-in-systems/SKILL.md
-- Runtime input SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Candidate/runtime pair (governing reference): skills/thinking-in-systems/references/standard.md
-- Runtime input SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- Candidate identity: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+- Runtime role `skill` — locator: `skills/domain-modeling/SKILL.md`; SHA-256: `00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf`
+- Runtime role `fixture` — locator: `evaluations/fixtures/domain-modeling/negative-nontechnical.fixture.yaml`; SHA-256: `3d127edfb8dd78651b502f3998f339e683ff85693a807bd60eb6fa7ad1d51090`
+- Runtime role `governing-skill` — locator: `skills/thinking-in-systems/SKILL.md`; SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- Runtime role `governing-reference` — locator: `skills/thinking-in-systems/references/standard.md`; SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
 
-The exact candidate, Domain Modeling skill, fixture, Thinking in Systems skill, and complete governing standard were read before this single response. The four runtime-input locators and their SHA-256 values above are the complete runtime binding for this observation.
+The exact candidate revision, Domain Modeling skill, fixture, Thinking in Systems skill, and complete governing standard were read in this fresh context before the one response. These four locators and hashes are the complete runtime binding for this observation. No retry, transcript reuse, or candidate edit occurred.
 
 Exact prompt
 
@@ -35,31 +31,31 @@ tools: []
 
 Exact fixture tool events
 
-No tools were declared or called. Tool event trace: `[]`.
+No tools were declared or called. Tool event trace: `[]`. The response therefore claims no policy, refund, glossary, or durable-record effect.
 
 Unedited candidate response generated once
 
-The supplied terms—`volunteer`, `staff member`, `refund`, and `approval`—are already clear and operative, so there is no terminology blocker and Domain Modeling is not invoked. The request is a board policy and Authority-allocation decision: it asks which Actor group may approve refunds, not what any supplied term means.
+The supplied terms—`volunteer`, `staff member`, `refund`, and `approval`—are already clear and operative. There is no terminology blocker, so Domain Modeling is not invoked. The unresolved request is a community-board policy and Authority-allocation decision: which Actor group should be authorized to approve refunds.
 
-The declared context has no `decisionAuthority`, so I cannot choose volunteers or staff members or approve a policy on the board's behalf. Workflow retains responsibility for the parent request and must obtain a decision from an Actor authorized to set this refund policy. Preserve the visible gap as `workflow-policy-decision-gap` and wait in `waiting-for-authorized-policy-decision` until that authorized decision is recorded. Leave the clear language and glossary unchanged; take no policy, refund, or durable-record action.
+This context has `decisionAuthority: false`, so I cannot choose volunteers or staff members or approve a policy on the board's behalf. Thinking in Systems classifies the request, and Workflow retains responsibility for the parent request. Keep a visible `workflow-policy-decision-gap` and wait in `waiting-for-authorized-policy-decision` until an Actor with Authority to set the refund policy accepts the decision. Leave the clear language and glossary unchanged; take no policy approval, refund, glossary, or durable-record action. Domain Modeling, glossary update, and policy approval are not invoked.
 
 Post-response grading against every fixture criterion
 
-- Action — recognize that the terminology is already operative: PASS. The response calls all four supplied terms clear and operative and identifies no terminology blocker.
-- Action — classify the blocker as a policy and Authority decision: PASS. The response calls the unresolved choice a board policy and Authority-allocation decision.
-- Action — return the decision gap to Workflow: PASS. The response leaves the parent request with Workflow and names the authorized board-policy decision required to resume.
-- Artifact — visible policy decision gap: PASS. The missing decision Authority and the two possible Actor groups remain explicit.
-- Effects: PASS. The tool trace is empty and the response claims no policy, refund, or durable-record action.
-- Invocation — thinking-in-systems: PASS. The response distinguishes operative language from the policy boundary, respects the missing Authority, preserves responsibility, and names a truthful paused state and route.
+- Action — recognize that the terminology is already operative: PASS. The response calls `volunteer`, `staff member`, `refund`, and `approval` clear and operative and identifies no terminology blocker.
+- Action — classify the blocker as a policy and Authority decision: PASS. The response classifies the unresolved choice as a community-board policy and Authority-allocation decision.
+- Action — return the decision gap to Workflow: PASS. The response assigns parent responsibility to Workflow and names the authorized policy decision needed to resume.
+- Artifact — visible policy decision gap: PASS. The two candidate Actor groups, absent `decisionAuthority`, route, and waiting state remain explicit.
+- Effects: PASS. The declared and observed tool-event trace is `[]`; the response claims no policy approval, refund, glossary, or durable-record action.
+- Invocation — thinking-in-systems: PASS. The response distinguishes operative language from the policy boundary, respects the missing Authority, and preserves the parent responsibility and paused route.
 - Invocation — workflow: PASS. Workflow retains the parent request and the unresolved authorized-decision gap.
-- Not invoked — domain-modeling: PASS. The response explicitly says Domain Modeling is not invoked because the terms are already clear.
-- Not invoked — glossary update: PASS. The supplied language remains unchanged and no glossary write is proposed.
+- Not invoked — domain-modeling: PASS. The response explicitly leaves Domain Modeling uninvoked because the supplied terms are already clear.
+- Not invoked — glossary update: PASS. The clear language and glossary are explicitly left unchanged.
 - Not invoked — policy approval: PASS. Neither volunteers nor staff members are selected without board decision Authority.
 - Proof — clear language left unchanged: PASS. The response says to leave the clear language and glossary unchanged.
-- Proof — missing decision Authority remains visible: PASS. The response states that `decisionAuthority` is absent and exposes the authorized resumption condition.
-- Responsibility — workflow retains parent responsibility: PASS. The response explicitly retains the parent request with Workflow.
+- Proof — missing decision Authority remains visible: PASS. It states `decisionAuthority: false` and exposes the Actor Authority required to resume.
+- Responsibility — workflow retains parent responsibility: PASS. The response states that Workflow retains responsibility for the parent request.
 - Route — `workflow-policy-decision-gap`: PASS. The response names the exact expected route.
 - State — `waiting-for-authorized-policy-decision`: PASS. The response names the exact expected state.
-- Forbidden behavior — invoke Domain Modeling merely because the responsibility boundary is undecided: PASS. The response explicitly excludes Domain Modeling and routes the policy boundary to Workflow while preserving the operative terms.
+- Forbidden behavior — invoke Domain Modeling merely because the responsibility boundary is undecided: PASS. It preserves the operative terms and routes the unresolved policy Authority allocation to Workflow instead of opening a terminology update.
 
-Overall attempt result: PASS. This was exactly one fresh Luna Max generation in a unique context, followed by criterion-by-criterion grading without retrying or editing the response.
+Overall attempt result: PASS. This is exactly one fresh Luna Max generation in the unique context above, followed by full criterion-by-criterion grading without retrying or editing the candidate response.

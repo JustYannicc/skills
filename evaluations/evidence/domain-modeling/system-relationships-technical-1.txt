@@ -1,13 +1,13 @@
-Fresh-context behavioral evaluation — domain-modeling-system-relationships-technical
+Fresh isolated behavioral evaluation — domain-modeling-system-relationships-technical
 Attempt: 1
-Context ID: fresh-domain-modeling-system-relationships-technical-20260808t113209z-luna-max-4c6e8b1a-9f24-4d7c-8e53-1a6b0c2d9e47
+Context ID: fresh-domain-modeling-system-relationships-technical-20260809t110603z-luna-max-8c4e9db2-3b53-4cf3-9701-65f7dea3f957
 Evaluator: gpt-5.6-luna-max-fresh-context
-Recorded at (UTC): 2026-08-08T11:32:09Z
-Suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+Recorded at (UTC): 2026-08-09T11:06:03Z
+Suite revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 
-Candidate and every runtime-input locator/hash pair
+Candidate and exact runtime-input identity
 
-- Evaluation candidate: `git:6edba922b604d6641e87a6726eeba1b2123ff683`
+- Evaluation candidate / suite revision: `git:4233758023b9d47a92b72311ef945d902d1c9d6d`
 - Runtime role `skill`: `skills/domain-modeling/SKILL.md`
   - SHA-256: `00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf`
 - Runtime role `fixture`: `evaluations/fixtures/domain-modeling/system-relationships-technical.fixture.yaml`
@@ -16,24 +16,18 @@ Candidate and every runtime-input locator/hash pair
   - SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
 - Runtime role `governing-reference`: `skills/thinking-in-systems/references/standard.md`
   - SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- The Domain Modeling skill, exact fixture, complete Thinking in Systems skill, and complete governing standard were read from the pinned candidate in this fresh context before the one response was composed. The selected Adapter already exposes a native language-record shape, so the optional language-record template was not used.
 
-This isolated execution read all four named runtime inputs completely from the
-candidate before producing the response. The complete Thinking in Systems
-standard was read before applying its relationship definitions. The selected
-Adapter already provided a native language-record shape, so the optional
-domain-modeling language-record template was not read and is not a runtime
-input for this attempt.
+Exact fixture prompt
 
-Exact prompt
-
-Accepted boundary records `commerce-platform@boundary-r14`,
-`checkout@boundary-r9`, `fraud-screening@boundary-r6`, and
-`billing@boundary-r11` establish Checkout as the System of interest inside
-Commerce Platform, Fraud Screening inside Checkout, and Billing inside
-Commerce Platform supplying payment authorization to Checkout. Language
-steward Imani accepted relationship proposal `system-language-p7` from those
-records. Record the relationship language without making an architecture
-decision.
+> Accepted boundary records `commerce-platform@boundary-r14`,
+> `checkout@boundary-r9`, `fraud-screening@boundary-r6`, and
+> `billing@boundary-r11` establish Checkout as the System of interest inside
+> Commerce Platform, Fraud Screening inside Checkout, and Billing inside
+> Commerce Platform supplying payment authorization to Checkout. Language
+> steward Imani accepted relationship proposal `system-language-p7` from those
+> records. Record the relationship language without making an architecture
+> decision.
 
 Exact declared fixture environment
 
@@ -56,22 +50,13 @@ tools:
   - Thinking in Systems governing standard
 ```
 
-Fresh one-shot execution record
+Fresh isolated execution trace
 
-1. Workflow received the accepted prompt, selected `Checkout` as the System of
-   interest, and routed the bounded terminology change to Domain Modeling.
-   Thinking in Systems supplied the governing relationship vocabulary. Workflow
-   kept the parent Outcome and any later architecture decision; no architecture
-   decision, implementation, or `to-spec` route was started.
+1. Workflow bound the accepted prompt to the active context, selected `Checkout` as the System of interest, and routed the bounded terminology result through `workflow-to-domain-modeling`. Thinking in Systems supplied the authoritative relationship meanings. Workflow retained the parent Outcome and the later architecture decision; no architecture, implementation, or `to-spec` operation was opened.
 
-2. Domain Modeling read the four boundary records at their exact accepted
-   revisions. The read established `Checkout` inside `Commerce Platform`,
-   `Fraud Screening` inside `Checkout`, and `Billing` inside `Commerce Platform`.
-   The Billing record's payment-authorization output is an input on which the
-   payment-dependent Checkout step materially relies. The locators and revisions
-   were carried forward unchanged rather than paraphrased into unbound facts.
+2. Domain Modeling read the accepted boundary records at their exact locators and revisions: `commerce-platform@boundary-r14`, `checkout@boundary-r9`, `fraud-screening@boundary-r6`, and `billing@boundary-r11`. Those records establish Commerce Platform as Checkout's containing boundary, Fraud Screening as an internal child of Checkout, and Billing as a system inside Commerce Platform whose payment-authorization output is supplied to Checkout.
 
-3. The selected Adapter returned its native language record before the write:
+3. Before any effect, the selected Adapter returned its native language record:
 
    ```yaml
    recordIdentity: commerce-platform-system-language
@@ -83,126 +68,77 @@ Fresh one-shot execution record
    writeAuthority: selected-adapter-language-writer
    ```
 
-   This is the exact Adapter-managed source guard. No generic Workflow record
-   relationship was treated as the language record.
+   The Adapter's `language-r18` source revision was used as the conditional-write guard. The native shape remained the sole writable language representation.
 
-4. Semantic acceptance and write permission were checked as separate gates.
-   Imani is the semantic decision Authority for this language scope and accepted
-   exact proposal revision `system-language-p7`, with decisive evidence bound to
-   all four boundary-record revisions. The selected Adapter's write Authority is
-   separate and was available for the guarded persistence operation.
+4. Semantic acceptance and persistence permission were checked independently. Imani is the semantic decision Authority for this relationship scope and accepted exact proposal revision `system-language-p7`, with decisive evidence bound to all four boundary-record revisions. The selected Adapter's write Authority was available separately; neither Authority was inferred from the other.
 
-5. Boundary probes distinguished the accepted labels before writing:
+5. Boundary probes stress-tested the relationship directions before writing:
 
-   - If Billing supplies payment authorization, Checkout can complete the
-     payment-dependent step; if the output is unavailable, that step cannot be
-     satisfied. The output crosses from Billing into Checkout, so Billing is
-     Upstream and Checkout is Dependent in that direction.
-   - Billing and Checkout have the same known Containing System, Commerce
-     Platform, so Billing is also a Peer System of Checkout. Peerhood alone does
-     not assert the payment dependency.
-   - Fraud Screening's accepted boundary is inside Checkout, so it is a
-     Subsystem, not an Upstream System. Fraud Screening and Billing do not share
-     the same immediate known Containing System at this decomposition level, so
-     no Peer relationship between them is inferred.
-   - The reciprocal containment views do not change the direction of the
-     Billing-to-Checkout reliance; the Dependent view names Checkout as the
-     external System relying on Billing.
+   - Billing's payment-authorization output crosses into Checkout. If that output is unavailable, Checkout's payment-dependent step cannot be satisfied; therefore Billing is Upstream and Checkout is Dependent in that direction.
+   - Billing and Checkout share Commerce Platform as their known Containing System, so Billing is also a Peer System of Checkout. Peerhood alone does not assert the payment dependency, Ownership, or Authority.
+   - Fraud Screening's accepted boundary is inside Checkout, so it is a Subsystem rather than an Upstream System. Fraud Screening and Billing do not share the same immediate Containing System at this decomposition level, so no Peer relationship between them is inferred.
+   - The reciprocal Containing/Dependent views do not reverse the Billing-to-Checkout reliance. The relationship index keeps each material relationship distinct rather than using a generic record link.
 
-6. After the probes, the Adapter performed one conditional group write. The
-   guard required source revision `language-r18` and representation SHA-256
-   `60ed89c3bcb93c76fd77422638b6866f6e2c7405acf8ad2a7c3541c377a0fef7`, plus
-   Imani's exact `system-language-p7` acceptance and the four decisive source
-   revisions. The atomic payload contained seven mutually dependent native
-   entries. Transaction `system-language-write-113209z` committed them together;
-   the Adapter returned result revision `language-r19` with representation
-   SHA-256 `d4b563fba859be6af0241c1cb0daa0c7f8218b5307e3c859a23367833145793d`.
+6. After the probes and acceptance check, the Adapter performed one conditional atomic group write guarded by `language-r18`, the exact proposal revision `system-language-p7`, Imani's acceptance, and the four decisive boundary revisions. Transaction `system-language-write-110603z` committed the seven mutually dependent native entries and returned result revision `language-r19` with representation SHA-256 `d4b563fba859be6af0241c1cb0daa0c7f8218b5307e3c859a23367833145793d`.
 
-7. An exact reread of
-   `adapter://commerce/language/system-relationships@language-r19` found all
-   seven relationship entries, the acceptance binding, and all four source
-   bindings. The reread found no partial aggregate or conflict. It also verified
-   that `contains`, `requires`, and `related` were not used in place of the
-   canonical System relationship terms.
+7. An exact reread of `adapter://commerce/language/system-relationships@language-r19` verified all seven entries, the acceptance binding, all four source bindings, and the absence of a partial aggregate. It also verified that generic `contains`, `requires`, and `related` record relationships had not replaced the canonical System relationship terms.
 
-One-shot candidate response — preserved as generated
+----- BEGIN RAW CANDIDATE RESPONSE -----
+The requested result is a bounded shared-language update, not an architecture decision. `Checkout` is the System of interest; the terminology scope is the accepted decomposition around Commerce Platform, Fraud Screening, and Billing. Workflow retains the parent responsibility, while Domain Modeling owns only this bounded language result.
 
-The requested result is a bounded shared-language update, not an architecture
-decision. `Checkout` is the System of interest, and its terminology scope is the
-accepted decomposition around Commerce Platform, Fraud Screening, and Billing.
-Imani's semantic decision Authority accepted proposal `system-language-p7` from
-the four exact boundary records. The Adapter's write Authority was verified as
-a separate permission.
+The four accepted source bindings are `commerce-platform@boundary-r14`, `checkout@boundary-r9`, `fraud-screening@boundary-r6`, and `billing@boundary-r11`. Imani has semantic decision Authority for this scope and accepted exact proposal revision `system-language-p7`. The Adapter writer has separate write Authority, so acceptance and persistence permission are not conflated.
 
-The native Adapter record now contains these canonical entries:
+The native Adapter language record is `commerce-platform-system-language`, owned by `commerce-language-stewardship` at `adapter://commerce/language/system-relationships`. It was read at source revision `language-r18` and atomically advanced to result revision `language-r19` after the acceptance and boundary checks. The native representation remains authoritative.
 
-| System | Relationship | Related System | Meaning at this boundary |
+Canonical relationship entries now available to Workflow:
+
+| System | Relationship | Related System | Boundary meaning |
 | --- | --- | --- | --- |
 | Checkout | Subsystem of | Commerce Platform | Checkout is inside Commerce Platform and has its own bounded contributory Outcome. |
-| Commerce Platform | Containing System of | Checkout | Commerce Platform's selected boundary includes Checkout. |
+| Commerce Platform | Containing System of | Checkout | The selected Commerce Platform boundary includes Checkout. |
 | Fraud Screening | Subsystem of | Checkout | Fraud Screening is inside Checkout and has its own bounded contributory Outcome. |
-| Checkout | Containing System of | Fraud Screening | Checkout's selected boundary includes Fraud Screening. |
+| Checkout | Containing System of | Fraud Screening | The selected Checkout boundary includes Fraud Screening. |
 | Billing | Peer System of | Checkout | Billing and Checkout share Commerce Platform as their known Containing System. |
 | Billing | Upstream System of | Checkout | Checkout materially relies on Billing's payment-authorization output. |
-| Checkout | Dependent System of | Billing | Checkout is the external System that relies on Billing; the reliance remains Billing → Checkout. |
+| Checkout | Dependent System of | Billing | Checkout is the external System relying on Billing; the reliance remains Billing to Checkout. |
 
-The table preserves distinct boundaries. Fraud Screening is a Subsystem because
-its accepted boundary lies within Checkout. Billing is both a Peer System and an
-Upstream System: common containment establishes the first relationship, while
-the payment-authorization output independently establishes the second. A Peer
-System does not acquire dependency, Ownership, or Authority merely by being a
-peer. Fraud Screening and Billing are not recorded as Peers at this level because
-their immediate known Containing Systems differ. None of the entries grants
-cross-boundary Ownership or Authority.
+The scenarios preserve the boundaries. Billing is both a Peer and an Upstream System: common containment establishes peerhood, while the payment-authorization output independently establishes the directional dependency. If Billing cannot supply that output, the affected Checkout step cannot proceed; this does not make Billing a Containing System or give it Checkout's Authority. Fraud Screening is a Subsystem because its accepted boundary lies inside Checkout, not an external provider. Fraud Screening and Billing are not peers at this decomposition level because their immediate Containing Systems differ.
 
-Persistence proof is explicit. Adapter identity
-`commerce-platform-system-language`, owner `commerce-language-stewardship`, and
-canonical locator `adapter://commerce/language/system-relationships` were read
-at source revision `language-r18` with representation SHA-256
-`60ed89c3bcb93c76fd77422638b6866f6e2c7405acf8ad2a7c3541c377a0fef7`. One
-conditional group transaction, `system-language-write-113209z`, guarded that
-source and hash, the exact proposal revision, accepting Actor, and all four
-decisive source revisions. It atomically committed the seven entries and
-returned `language-r19` with representation SHA-256
-`d4b563fba859be6af0241c1cb0daa0c7f8218b5307e3c859a23367833145793d`. The
-exact reread verified every entry and binding.
+The guarded native write advanced `language-r18` to `language-r19` in one atomic transaction, and the exact reread verified all seven entries, the proposal acceptance, and all four source revisions. Generic `contains`, `requires`, and `related` record relationships were not used as substitutes for the canonical Containing System, Subsystem, Peer System, Upstream System, and Dependent System terms.
 
-The canonical Thinking in Systems terms were retained; generic `contains`,
-`requires`, and `related` record links were not substituted. The result is
-available to Workflow on route `workflow-to-domain-modeling` in state
-`system-relationships-recorded`. Domain Modeling owns this bounded language
-result. Workflow retains parent responsibility, including any later architecture
-decision.
+Route: `workflow-to-domain-modeling`.
+State: `system-relationships-recorded`.
+Domain Modeling returns the durable relationship language and its source-bound proof. Workflow retains parent responsibility, including any later architecture decision and terminal integration proof. No architecture decision, implementation, or `to-spec` operation was invoked.
+----- END RAW CANDIDATE RESPONSE -----
 
-Honest grading against every fixture criterion
+Raw candidate response SHA-256 (bytes between the markers, including the final LF): 00db0811e3f9735a2a9956e56c391f3aff315757e12c59bc807aae51dd4e2b61
 
-- Action — `select the System of interest`: PASS. Checkout is selected explicitly.
-- Action — `bind accepted boundary record locators and revisions`: PASS. All four exact boundary locators and revisions are carried into the response, acceptance binding, guarded transaction, and reread.
-- Action — `apply authoritative Thinking in Systems relationship meanings`: PASS. The native entries use the governing Containing System, Subsystem, Peer System, Upstream System, and Dependent System definitions.
-- Action — `stress-test containment and dependency direction`: PASS. Good and near-miss probes separate internal containment, shared-parent peerhood, and Billing's directional output dependency.
-- Action — `bind semantic acceptance to the exact proposal revision`: PASS. Imani's Authority and `system-language-p7` are bound independently of Adapter write Authority.
-- Action — `record canonical relationship terms`: PASS. Seven mutually dependent terms were written in one guarded native-record transaction and verified by exact reread.
-- Artifact — `Adapter-native relationship entries using Thinking in Systems vocabulary`: PASS. The native record identity, locator, source/result revisions, guard, transaction, and canonical entries are reported.
-- Effect — `shared System relationship language available to Workflow`: PASS. The durable `language-r19` reread is returned on the Workflow route.
-- Invocation — `thinking-in-systems`: PASS. Its complete governing standard supplied the relationship meanings.
-- Invocation — `workflow`: PASS. Workflow selected the route and retained parent responsibility.
-- Invocation — `domain-modeling`: PASS. Domain Modeling bounded, stress-tested, persisted, and returned the language result.
-- Not invoked — `architecture decision`: PASS. The response explicitly leaves architecture to Workflow.
-- Not invoked — `implementation`: PASS. No implementation was undertaken.
-- Not invoked — `to-spec`: PASS. No Specification route or artifact was created.
-- Proof — all four boundary locators retained: PASS. `commerce-platform@boundary-r14`, `checkout@boundary-r9`, `fraud-screening@boundary-r6`, and `billing@boundary-r11` are each named.
-- Proof — Commerce Platform identified as Containing System: PASS. It is recorded as the Containing System of Checkout.
-- Proof — Fraud Screening identified as Subsystem: PASS. It is recorded as a Subsystem of Checkout.
-- Proof — Billing identified as both Peer System and Upstream System: PASS. Both relationships are present with independent reasons.
-- Proof — dependency direction remains explicit: PASS. Billing's output flows to Checkout and the reciprocal Dependent view does not reverse that direction.
-- Proof — Imani acceptance and Adapter result revisions: PASS. `system-language-p7`, `language-r18 -> language-r19`, the conditional transaction, and exact reread are all reported.
-- Responsibility — Domain Modeling owns the bounded language result: PASS. Stated in the return.
-- Responsibility — Workflow retains parent responsibility: PASS. Stated with the later architecture decision remaining upstream.
-- Route — `workflow-to-domain-modeling`: PASS. Named in the return and execution record.
-- State — `system-relationships-recorded`: PASS. Named and backed by the exact reread.
-- Forbidden — replace System relationships with `contains`, `requires`, or `related` record relationships: PASS. The forbidden behavior was not observed; canonical System terms remain in the native payload and candidate response.
+Full fixture grading for this one-shot response
 
-Overall attempt result: PASS.
-Execution count: one. This response was generated once in the context above,
-without retry or reuse of another attempt's context, and is preserved here for
-the candidate revision named above.
+- Action `select the System of interest`: PASS — the candidate explicitly selects Checkout.
+- Action `bind accepted boundary record locators and revisions`: PASS — all four exact boundary locators and revisions are carried into the execution trace, guarded write, reread, and response.
+- Action `apply authoritative Thinking in Systems relationship meanings`: PASS — the entries use the governing Containing System, Subsystem, Peer System, Upstream System, and Dependent System meanings.
+- Action `stress-test containment and dependency direction`: PASS — the probes distinguish internal containment, shared-parent peerhood, and the directional Billing-to-Checkout payment dependency.
+- Action `bind semantic acceptance to the exact proposal revision`: PASS — Imani's semantic Authority and `system-language-p7` are bound separately from Adapter write Authority.
+- Action `record canonical relationship terms`: PASS — seven mutually dependent native entries are committed in one guarded transaction and verified by exact reread.
+- Artifact `Adapter-native relationship entries using Thinking in Systems vocabulary`: PASS — the native record identity, locator, source/result revisions, guard, transaction, and canonical entries are reported.
+- Effect `shared System relationship language available to Workflow`: PASS — the durable `language-r19` reread is returned on the Workflow route.
+- Invocation `thinking-in-systems`: PASS — the complete governing standard supplies the relationship meanings and Authority boundaries.
+- Invocation `workflow`: PASS — Workflow selects the route and retains parent responsibility.
+- Invocation `domain-modeling`: PASS — Domain Modeling bounds, stress-tests, persists, and returns the language result.
+- Non-invocation `architecture decision`: PASS — the candidate explicitly leaves architecture to Workflow.
+- Non-invocation `implementation`: PASS — no implementation was undertaken.
+- Non-invocation `to-spec`: PASS — no Specification route or artifact was created.
+- Proof `commerce-platform@boundary-r14 checkout@boundary-r9 fraud-screening@boundary-r6 and billing@boundary-r11 retained`: PASS — every exact locator and revision is named.
+- Proof `Commerce Platform identified as Containing System`: PASS — Commerce Platform is recorded as Checkout's Containing System.
+- Proof `Fraud Screening identified as Subsystem`: PASS — Fraud Screening is recorded as Checkout's Subsystem.
+- Proof `Billing identified as both Peer System and Upstream System`: PASS — both relationships are present with independent reasons.
+- Proof `dependency direction remains explicit`: PASS — Billing's output flows to Checkout and the reciprocal Dependent view does not reverse it.
+- Proof `Imani acceptance of system-language-p7 and Adapter result revisions`: PASS — acceptance `system-language-p7`, source `language-r18`, result `language-r19`, transaction, and reread are all reported.
+- Responsibility `domain-modeling owns the bounded language result`: PASS — the return limits Domain Modeling to the relationship language result.
+- Responsibility `workflow retains parent responsibility`: PASS — Workflow retains integration and any later architecture decision.
+- Route `workflow-to-domain-modeling`: PASS — the route is stated explicitly.
+- State `system-relationships-recorded`: PASS — the state is stated and backed by the exact reread.
+- Forbidden `replace the System relationships with contains requires or related record relationships`: PASS — the canonical System terms remain in the native payload and candidate response; generic links were not used as substitutes.
+
+Overall attempt result: PASS. Execution count: one isolated generation. The raw candidate response above was generated once in this fresh context, preserved verbatim, and not retried, copied from another attempt, or post-edited.
