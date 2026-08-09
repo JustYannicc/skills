@@ -1,0 +1,43 @@
+schemaVersion: 1
+id: implement-direct-agent-behavior
+title: Agent behavior Result is proved at its routing seam
+shape: direct
+kind: invocation
+skill: implement
+domains: [agent]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow supplies accepted Durable Ticket `triage-agent-policy@t13` under
+  accepted Specification `request-routing@s10`. The agent steward is Work owner.
+  Authority permits updating the isolated triage agent policy but excludes live
+  production deployment and external purchases. Dependencies are Complete. The
+  exact Result is agent behavior revision `triage-agent@r4`: route support,
+  billing, and safety requests to their recorded queues; refuse purchase actions
+  without explicit Authority; preserve request identity. The Proof seam is five
+  replay scenarios observed through the isolated agent runtime. The Adapter
+  supports atomic Claim and Review handoff. Implement, prove, and submit the
+  exact agent behavior Result without deploying or completing anything.
+environment:
+  id: workflow-implement-agent-behavior
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: true
+    adapter: true
+    atomic-claims: true
+    isolated-agent-runtime: true
+    production-deployment: false
+    review: true
+  tools: [selected canonical Adapter, isolated triage agent runtime, Review submission route]
+expected:
+  actions: [bind accepted agent-behavior Ticket and current revisions, acquire live Claim, update only isolated agent policy, replay five routing and refusal scenarios, integrate exact triage-agent@r4, atomically submit release Claim and transition to in_review]
+  artifacts: [exact agent behavior Result, five-scenario replay evidence, revision-bound Review submission]
+  effects: [change isolated agent behavior]
+  invoked: [workflow, implement, isolated triage agent runtime]
+  notInvoked: [production deployment, external purchase, Review verdict, Ticket completion, parent completion]
+  proof: [five replays bind observed routing refusal and identity preservation to triage-agent@r4, Ticket and Specification revisions remain current, atomic Review handoff binds exact r4]
+  responsibility: [agent steward retains agent behavior effects recovery and Ticket Responsibility, Outcome owner retains parent completion]
+  route: [workflow-to-implement-agent-runtime-to-review]
+  state: [In review]
+  forbidden: [treat policy text alone as behavior proof, deploy to production, perform an external purchase, accept stale replay evidence, produce a Review verdict, complete the Ticket or parent Outcome]

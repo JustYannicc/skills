@@ -1,0 +1,39 @@
+schemaVersion: 1
+id: implement-direct-inline-review
+title: Inline execution reaches Review without a Claim or Work frontier
+shape: direct
+kind: composition
+skill: implement
+domains: [communication, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow supplies one accepted Inline Ticket contract in the current
+  conversation: produce exact FAQ reply `faq-reply@r2` from approved answer
+  `faq-answer@a4`, without sending it. The support lead is the conversational
+  Work owner; copy Authority, dependencies, acceptance criteria, and the
+  human-readable Proof seam are complete. No persistence or Adapter is selected.
+  Review is available in the conversation. Execute and submit the exact reply
+  to Review without inventing a Claim, Ticket record, Work frontier, durable
+  transition, verdict, Ticket completion, or parent completion.
+environment:
+  id: workflow-implement-inline-review
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: false
+    adapter: false
+    atomic-claims: false
+    review: true
+  tools: [conversation, Review route]
+expected:
+  actions: [bind accepted Inline contract and conversational Work owner, avoid creating Claim Ticket record or Work frontier, create exact faq-reply@r2, prove human-readable reply at the accepted seam, submit compact exact package to Review]
+  artifacts: [exact Inline reply Result, compact Review submission]
+  effects: []
+  invoked: [workflow, implement, review intake]
+  notInvoked: [canonical Adapter, Claim, durable transition, send effect, Review verdict, Ticket completion, parent completion]
+  proof: [faq-reply@r2 binds approved faq-answer@a4, human-readable seam covers every acceptance criterion, Review intake names exact r2]
+  responsibility: [support lead retains conversational Work-owner Responsibility through verified completion, Outcome owner retains parent completion]
+  route: [workflow-to-inline-implement-to-review]
+  state: [In review]
+  forbidden: [create persistence records, acquire a Claim, send the reply, claim a durable active to in_review transition, produce a Review verdict, complete the Ticket or parent Outcome]

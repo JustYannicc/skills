@@ -1,0 +1,39 @@
+schemaVersion: 1
+id: implement-edge-claim-expiry
+title: Expired Claim blocks a material effect and enters Recovery
+shape: edge
+kind: routing
+skill: implement
+domains: [physical, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Durable Ticket `display-mount@t14` is Active under Claim
+  `display-mount-claim@c1`. Its accepted next action is the authorized physical
+  effect of drilling two marked holes from exact layout `mount-layout@r3`.
+  Authority, dependencies, and the post-mount observation seam are otherwise
+  complete. Immediately before drilling, the canonical Adapter reports that c1
+  expired one minute ago. Persistence is available. Handle the effect boundary
+  without drilling, silently renewing the Claim, submitting to Review, or
+  completing work.
+environment:
+  id: workflow-implement-expired-claim
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: true
+    adapter: true
+    drill-effect: true
+    review: true
+  tools: [selected canonical Adapter, authorized drill capability]
+expected:
+  actions: [reread live Claim immediately before material effect, detect expired Claim, stop effect, enter Recovery, preserve exact layout and create complete canonical Continuation]
+  artifacts: [Claim-expiry failure record, Continuation record]
+  effects: []
+  invoked: [workflow, implement]
+  notInvoked: [drill effect, silent Claim renewal, Review submission, Review verdict, parent completion]
+  proof: [c1 expiry is bound to the last observation, mount-layout@r3 remains unchanged, first resumption action reacquires a fresh authorized Claim after full contract revalidation]
+  responsibility: [facilities Work owner retains effect recovery and Ticket Responsibility, Outcome owner retains parent completion]
+  route: [workflow-to-implement-to-claim-expiry-recovery]
+  state: [Recovery]
+  forbidden: [perform the effect under an expired Claim, infer renewed coordination, discard the exact pickup point, submit an unperformed Result, complete the Ticket or parent Outcome]

@@ -1,7 +1,7 @@
 Evaluation: to-tickets-edge-dependency-recovery
 Attempt: 1
 Context: fresh-to-tickets-edge-dependency-recovery-20260808-1
-Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 Evaluator: deterministic-candidate-observer
 
 The dependency view bound site-opening-r4. T-OPEN requires T-SETUP and the

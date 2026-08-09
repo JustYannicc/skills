@@ -1,0 +1,22 @@
+Evaluation: implement-indirect-delegated-software
+Attempt: 1
+Context: fresh-implement-indirect-delegated-software-20260809-r3-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: sol-high-fresh-context
+
+Workflow bound t4, s8, d2, baseline r1, Complete dependencies, deployment
+exclusion, and the principal Work owner. Claim c7 was acquired atomically and
+rechecked before the delegated write. Bounded implementation and read-only
+proof contracts fixed exact revisions, writable scope, Authority, evidence,
+failure behavior, and return routes.
+
+The principal validated and integrated exact `retry-status@r2`. Independent
+child proof showed the public API preserved interrupted action identity,
+exposed the next legal action, and passed focused and affected-package checks
+against r2. No stale evidence or deployment was accepted; tests remained
+Ticket-seam evidence rather than Review verdict or parent proof.
+
+The Adapter atomically accepted exact submission sub2, released c7, and
+appended active to in_review, with all postconditions verified at r2. The
+principal retains findings, effects, recovery, and Ticket completion;
+Executors own bounded returns; the Outcome owner retains parent completion.

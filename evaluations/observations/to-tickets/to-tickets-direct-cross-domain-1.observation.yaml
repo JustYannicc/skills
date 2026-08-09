@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-direct-cross-domain
 attempt: 1
 contextId: fresh-to-tickets-direct-cross-domain-20260808-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:30:00.000Z
 environment:
@@ -42,4 +42,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-direct-cross-domain-1.txt
-  sha256: ef52ec0b6a11de7f1ea9e7d5b681d02888906bb3ddddf294ce551cc41103ae8a
+  sha256: 9730dfa714405e3ef9e59325a0b9d88a2a29e055ce49080f60fad1e508d90b31

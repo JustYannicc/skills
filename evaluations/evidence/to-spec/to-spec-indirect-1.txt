@@ -1,6 +1,6 @@
 Fresh-context To Spec run
 Evaluator: gpt-5.6-sol (high)
-Candidate: working-tree:9917320c97889cc48da0bdcb0fac086574c70226888f1b68565e9799aadd9d97
+Candidate: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 
 # Customer update — Specification
 

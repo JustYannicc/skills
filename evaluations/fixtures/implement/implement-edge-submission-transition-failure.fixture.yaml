@@ -1,0 +1,40 @@
+schemaVersion: 1
+id: implement-edge-submission-transition-failure
+title: Partial Review handoff reconciles without duplicate submission
+shape: edge
+kind: routing
+skill: implement
+domains: [agent, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Durable Ticket `agent-roster@t15` is Active under live Claim c2. Exact usable
+  Result `agent-roster@r5` and its proof are ready. The Adapter cannot make
+  Review intake, Claim release, and `active → in_review` atomic, so Implement
+  uses immutable idempotency key `agent-roster-review@k1`. Review accepts the
+  exact package, then the operation times out before release or transition is
+  acknowledged. Readback proves the Review receipt exists, Claim c2 is still
+  live, and the Ticket remains Active. Preserve truthful recovery without
+  resubmitting, releasing blindly, claiming In review, or completing work.
+environment:
+  id: workflow-implement-partial-review-transition
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: true
+    adapter: true
+    atomic-review-transition: false
+    idempotency: true
+    review: true
+  tools: [selected canonical Adapter, Review submission route]
+expected:
+  actions: [submit exact Result with immutable idempotency key, read back Review receipt Claim and transition state after timeout, avoid duplicate submission, enter Recovery with partial-state evidence, preserve exact reconciliation action]
+  artifacts: [Review intake receipt, partial-transition recovery record, Continuation record]
+  effects: []
+  invoked: [workflow, implement, review intake]
+  notInvoked: [duplicate Review submission, blind Claim release, active to in_review transition, Review verdict, Ticket completion, parent completion]
+  proof: [receipt binds k1 and agent-roster@r5, c2 remains live and Ticket remains Active, retry begins by reconciling the same idempotency key and all three postconditions]
+  responsibility: [agent-roster Work owner retains reconciliation recovery and Ticket Responsibility, Outcome owner retains parent completion]
+  route: [workflow-to-implement-to-review-handoff-recovery]
+  state: [Active, Recovery]
+  forbidden: [resubmit the exact package under a new key, claim atomic success, release the Claim without reconciliation, claim In review, complete the Ticket or parent Outcome]
