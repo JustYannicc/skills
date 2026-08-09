@@ -12,8 +12,10 @@ Audit record: `evaluations/evidence/reviews/issue-21-writing-for-agents-audit.tx
 - [x] Complete one Sol High adversarial review and one separate Sol High resolution check.
 - [x] Audit every touched authored text artifact with `writing-for-agents` and `SKILL-MECHANICS.md`; record fixes and justified dispositions.
 - [x] Record the initial evaluations, pass `pnpm validate`, and open draft PR #47.
-- [ ] Freeze the corrected candidate and rerun the four affected Wayfinder attempts.
-- [ ] Rebind unchanged attempts, record evaluations, and pass `pnpm validate` at the corrected candidate.
-- [ ] Push the correction commits and update draft PR #47 with the final proof identity.
+- [x] Freeze the corrected candidate and rerun the four affected Wayfinder attempts.
+- [x] Rebind unchanged attempts, record evaluations, and pass `pnpm validate` at the corrected candidate.
+- [x] Prepare the audit record and draft-PR update structure for the final evaluation commit.
 
 Human acceptance remains outside this task. The draft PR must not close issue #21.
+Publication continuation: commit the evaluation artifacts, push the branch, and
+update draft PR #47 with the final candidate and proof results.
