@@ -7,5 +7,5 @@
 - Selected Adapter: records store; Baseline and Coordination verified, Continuation unavailable
 - Accepted decision: the current process will remain live until replacement proof passes
 - Current fog: the team cannot yet state which part of moving visitor data between the kiosk and existing roster may block one-time registration
-- Published Research result to bind: provider integration documentation sharpens the uncertainty into whether the export contract exposes a stable per-visitor identifier and update semantics
+- Published Research Evidence: `provider-integration/export-contract@provider-docs-r12`, disclosed by `direct-reducible-research-evidence.md`
 - Adapter write result to verify: `center-signin-r5`

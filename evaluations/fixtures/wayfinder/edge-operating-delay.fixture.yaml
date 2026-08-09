@@ -20,7 +20,7 @@ environment:
     effects: false
   tools: [adapter, event-log]
 expected:
-  actions: [classify arrival bunching as fog reducible only after operating, preserve the four-event observation horizon and permitted low-volume route, record the queue observations threshold owner Authority safe mode and recovery, return the item to the decision frontier when the fourth event evidence is accepted]
+  actions: [classify arrival bunching as fog reducible only after operating, preserve the four-event observation horizon and permitted low-volume route, record the queue observations threshold owner Authority safe mode and recovery, record the trigger that will return the item to the decision frontier after fourth-event Evidence is accepted]
   artifacts: [durable Wayfinder Map, operating Strategy, Continuation record]
   effects: []
   invoked: [workflow, wayfinder]

@@ -7,7 +7,7 @@ skill: wayfinder
 domains: [technical, organizational]
 severity: Critical
 requiredAttempts: 3
-runtimeReferences: [skills/wayfinder/references/map-and-strategy.md, evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md]
+runtimeReferences: [skills/wayfinder/references/map-and-strategy.md, evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md, evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md]
 prompt: "Use Wayfinder for a multi-session replacement of a community center sign-in process. The accepted destination is that visitors register once without staff re-entry. The team only knows that some unknown part of moving visitor data between the kiosk and the existing roster may block that destination; it cannot yet state the decision question. The kiosk provider publishes integration documentation that is available to inspect. Find the next decision route and preserve the map; do not implement the replacement."
 environment:
   id: durable-center-planning
@@ -30,7 +30,7 @@ expected:
   effects: []
   invoked: [workflow, wayfinder, research]
   notInvoked: [domain-modeling, grilling, grill-with-docs, prototype, to-questionnaire, implementation, Specification, parent completion]
-  proof: [the Map shows the coarse fog graduating only after source-bound Research into the precise question of whether the export contract exposes a stable per-visitor identifier and update semantics, then exposes destination accepted decisions Strategy frontier blockers Evidence ownership and Continuation at exact result revision center-signin-r5]
+  proof: [the Map shows the coarse fog graduating only after Research binds provider-integration/export-contract@provider-docs-r12 and sharpens it into the precise question of whether the export contract exposes a stable per-visitor identifier and update semantics, then exposes destination accepted decisions Strategy frontier blockers Evidence ownership and Continuation at exact result revision center-signin-r5]
   responsibility: [Wayfinder owns the bounded map and strategy result while Workflow retains the parent Outcome]
   route: [workflow-to-wayfinder-to-research-to-wayfinder-to-workflow]
   state: [reducible-fog-routed]
