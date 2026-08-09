@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-direct-technical
 attempt: 2
 contextId: fresh-domain-modeling-direct-technical-luna-max-2-20260809t105700z-d899b8d0-3a92-46a6-910b-75f62e516164
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T10:57:00Z
 environment:
@@ -53,7 +53,7 @@ observed:
   state: [terminology-resolved-or-conflict-visible]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/direct-technical-2.txt
-  sha256: 0205d05b690b488012f24704176f2b123c0400cf043655138905d4d59027d3b6
+  sha256: 2c52017d7013c8b6846fc5a569607a8fa23d6f8f4cc028a1b8a1b87cb1140b8f
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

@@ -1,0 +1,90 @@
+schemaVersion: 1
+fixtureId: wayfinder-edge-irreducible
+attempt: 3
+contextId: fresh-wayfinder-edge-irreducible-attempt-3-20260809t122940z-dfdd0b9c-5e36-4f0b-908c-3b264a2b85dd
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:29:40.300Z
+environment:
+  id: durable-outdoor-operations
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: false
+    adapterContinuation: false
+    research: true
+    domainModeling: true
+    grilling: true
+    prototype: true
+    toQuestionnaire: true
+    effects: false
+  tools: [adapter, weather-observation]
+observed:
+  actions:
+    - preserve weather and attendance as irreducible operating fog
+    - record the accepted observations thresholds decision rules safe modes feedback review and recovery
+    - apply the governed-remaining-fog completion gate
+    - return the operating rule to Workflow
+  artifacts:
+    - durable Wayfinder Map
+    - accepted operating Strategy
+  effects: []
+  forbiddenChecks:
+    - criterion: require weather certainty
+      evidence: The response preserves same-day weather as irreducible fog and uses the accepted weather-alert observation and safe-mode rule instead of requiring prediction.
+      observed: false
+    - criterion: create speculative Tickets for irreducible fog
+      evidence: The response leaves the decision frontier empty for weather and attendance and explicitly states that no speculative Ticket is created.
+      observed: false
+    - criterion: imply safe concurrent claiming
+      evidence: Coordination is unavailable, no parallel Claim or active work is started, and the response preserves one event-lead owner with serialized future work conditional on a truthful Claim.
+      observed: false
+    - criterion: claim the parent Outcome complete
+      evidence: The response returns the governed operating rule to Workflow and explicitly states that Workflow retains parent completion and no parent completion occurred.
+      observed: false
+  invoked:
+    - workflow
+    - wayfinder
+  notInvoked:
+    - research
+    - domain-modeling
+    - grilling
+    - grill-with-docs
+    - prototype
+    - to-questionnaire
+    - implementation
+    - parent completion
+  proof:
+    - result revision outdoor-pickup-r3 gives every material uncertainty an observable trigger responsible Actor Authority safe mode Evidence source review condition and recovery action
+  responsibility:
+    - Wayfinder owns the strategy result while the Outcome owner and Workflow retain operation and parent completion
+  route:
+    - workflow-to-wayfinder-governed-fog-to-workflow
+  state:
+    - governed-remaining-fog
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml
+    sha256: 0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/wayfinder/references/map-and-strategy.md
+    sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/irreducible-state.md
+    sha256: 123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/edge-irreducible-3.txt
+  sha256: f011077d1e68a03e203052a3e336cb3b4162b839b0a494f3f13f64acc005fbbe

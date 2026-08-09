@@ -1,0 +1,87 @@
+schemaVersion: 1
+fixtureId: wayfinder-edge-no-git
+attempt: 1
+contextId: fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:29:28Z
+environment:
+  id: local-markdown-no-git
+  capabilities:
+    workflow: true
+    persistence: true
+    localMarkdown: true
+    git: false
+    github: false
+    adapterCoordination: false
+    adapterContinuation: false
+    scheduling: false
+    effects: false
+  tools: [local-markdown]
+observed:
+  actions:
+    - use Local Markdown as the Baseline Adapter
+    - preserve canonical Outcome Ticket Evidence and Continuation state
+    - render a human-readable derived Map with exact revisions
+    - disclose serial coordination and human-triggered resumption
+  artifacts:
+    - Local Markdown Outcome record
+    - derived Wayfinder Map
+    - Continuation record
+  effects: []
+  forbiddenChecks:
+    - criterion: initialize Git
+      evidence: The declared environment has git disabled; no repository command or initialization was performed.
+      observed: false
+    - criterion: require a hosted account
+      evidence: GitHub and hosted trackers are unavailable; the Local Markdown Baseline is used without a network or account.
+      observed: false
+    - criterion: claim active monitoring
+      evidence: Continuation and scheduling are unavailable, so the record names a human next check and does not claim a monitor.
+      observed: false
+    - criterion: create a second writable Map authority
+      evidence: The Map is explicitly a read-only derived view; canonical locators, revisions, and writes remain in Local Markdown records.
+      observed: false
+  invoked:
+    - workflow
+    - wayfinder
+  notInvoked:
+    - Git initialization
+    - GitHub
+    - hosted tracker
+    - scheduler
+    - implementation
+    - parent completion
+  proof:
+    - human-readable canonical records at result revision household-relocation-r7 and an exact next check survive without Git or network access
+  responsibility:
+    - Wayfinder owns the navigation result while the named household owner and Workflow retain the Outcome
+  route:
+    - workflow-to-wayfinder-local-markdown-to-workflow
+  state:
+    - durable-no-git-continuation
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/edge-no-git.fixture.yaml
+    sha256: b6aa782cb4673df6c94e5304a5147f2f954e92a40a209f7b0e03d8f9a0d621ab
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/wayfinder/references/map-and-strategy.md
+    sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/no-git-state.md
+    sha256: 19d72c738c528774c599310427039bf09e20e738fbfa0742c9f8c0e2f61cef82
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/edge-no-git-1.txt
+  sha256: a1271bd84831524f341271f773008658e51644674c9e2a96480db12954242c1f

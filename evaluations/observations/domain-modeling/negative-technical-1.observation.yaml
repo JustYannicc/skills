@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-negative-technical
 attempt: 1
 contextId: fresh-domain-modeling-negative-technical-luna-max-20260809t105739z-9d0eba88-b37a-4aff-b3e4-dc95ef6dc354
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T10:57:39Z
 environment:
@@ -32,7 +32,7 @@ observed:
   state: [waiting-for-authorized-system-design-decision]
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/negative-technical-1.txt
-  sha256: a3274d0a66f2a8f890ababb204b764099bf47ea30cbb039634c1d4d99325d172
+  sha256: 9c24acd0403ada7e9da2939a4df1edf420fbab6af8b808f83ba49bf4879ccab7
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

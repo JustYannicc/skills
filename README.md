@@ -77,14 +77,15 @@ must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
 
-### [Handoff](skills/handoff) — candidate; human review required
+### [Wayfinder](skills/wayfinder) — candidate
 
-Handoff preserves exact state, Responsibility, Authority, rationale, evidence,
-uncertainty, dependencies, Continuation, and next frontier across humans,
-agents, sessions, services, and operating contexts. It keeps canonical sources
-authoritative through revision-bound references, transfers Responsibility after
-exact fresh acceptance, enters Degraded mode when required capabilities are
-unavailable, and leaves the parent Outcome open.
+Wayfinder navigates persistent, multi-session, or irreducible fog through a
+durable decision Map and operating Strategy. It preserves the destination,
+accepted decisions, frontier, blockers, Evidence, ownership, and Continuation
+through the selected Adapter, invokes discovery companions only for their owned
+uncertainty, and completes only when the next route is truthfully specifiable or
+remaining fog has accepted operating rules. Issue #21 still requires human
+review; this candidate does not approve or publish the skill.
 
 ## Planned suite
 

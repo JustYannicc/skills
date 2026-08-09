@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: wayfinder-negative-bounded-work
+title: Bounded clear work stays in Inline Workflow
+shape: negative
+kind: routing
+skill: wayfinder
+domains: [communicative]
+severity: Major
+requiredAttempts: 1
+prompt: "Change the heading 'Arrival details' to 'Visitor details' in the draft I just pasted, then show me the corrected heading. The source and requested result are clear and this ends in the current interaction."
+environment:
+  id: bounded-inline-edit
+  capabilities:
+    workflow: true
+    persistence: false
+    effects: false
+  tools: []
+expected:
+  actions: [keep the request in Inline Workflow, make and verify only the bounded correction, return the exact result]
+  artifacts: [corrected heading]
+  effects: []
+  invoked: [workflow]
+  notInvoked: [wayfinder, domain-modeling, grilling, grill-with-docs, research, prototype, to-questionnaire, durable Map, Strategy]
+  proof: [the corrected heading is visible in the current interaction]
+  responsibility: [Workflow retains and completes the bounded Inline Outcome]
+  route: [workflow-inline-direct]
+  state: [verified-inline-completion]
+  forbidden: [create a Wayfinder Map, invent persistent fog, ask planning questions]
