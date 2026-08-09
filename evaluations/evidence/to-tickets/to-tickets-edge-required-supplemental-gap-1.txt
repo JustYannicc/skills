@@ -1,0 +1,12 @@
+Evaluation: to-tickets-edge-required-supplemental-gap
+Attempt: 1
+Context: fresh-to-tickets-edge-required-supplemental-gap-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+To Tickets produced a complete proposed draft for lab-access-r6, then detected
+that the configured required safety-review mapping at workflow.decomposition
+was unavailable. It preserved the exact Specification and Ticket-set
+revisions, missing proof, responsible owner, unblock condition, and next
+resumption action. The result remained Waiting; no Ticket was accepted,
+persisted as complete, or executed.

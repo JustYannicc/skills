@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: workflow-durable-parent-delegation
+title: Delegated Durable Tickets return evidence without completing the parent
+shape: indirect
+kind: composition
+skill: workflow
+domains: [software, personal-work]
+severity: Critical
+requiredAttempts: 3
+prompt: |
+  Outcome O12 has two accepted child Tickets. Delegate the accessible-audit
+  Ticket to an analyst and the room-booking Ticket to a coordinator. Integrate
+  their results, review the exact parent revision, and complete only if the
+  parent terminal condition and real effects are proven.
+environment:
+  id: workflow-durable-delegation
+  capabilities: { persistence: true, delegation: true, coordination: true, review: true, effects: true, workflow: true }
+  tools: []
+expected:
+  actions: [create child Tickets with accepting Work owners and return routes, preserve nested Responsibility, record child Claims and result revisions, run child Review, integrate child Evidence at parent, verify authorized real effects, run parent Review over the exact integrated state]
+  artifacts: [parent Outcome record, two child Ticket records, revision-bound child Evidence, parent proof bundle]
+  effects: [only authorized effects with real boundary evidence]
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [transfer parent Ownership to a child, complete parent from child completion counts, skip parent Review]
+  proof: [child completion returns evidence and the parent terminal transition follows its own proof seam]
+  responsibility: [the Outcome owner retains integration and parent terminal responsibility; each child owner retains its bounded duty]
+  route: [durable-delegation, child-review, parent-review]
+  state: [children-complete-parent-verified-or-reopened]
+  forbidden: [treat delegation, submission, or child completion as parent completion]

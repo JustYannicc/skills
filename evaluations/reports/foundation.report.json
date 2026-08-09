@@ -1,6 +1,6 @@
 {
-  "evaluatedAt": "2026-08-08T10:00:03.000Z",
-  "fixtureSetRevision": "05d0f725351299ac7576137a1af44bd1428f9a1e157f85e894e895abc1f4b304",
+  "evaluatedAt": "2026-08-08T14:20:03Z",
+  "fixtureSetRevision": "330b9387587969b5a0bb80bb597870198faa10e593cce103c284f819728e7d65",
   "fixtures": [
     {
       "attempts": [
@@ -9,16 +9,16 @@
         3
       ],
       "contextIds": [
-        "fresh-domain-modeling-direct-nontechnical-20260808t095231z-sol-high-2b123f2c",
-        "fresh-domain-modeling-direct-nontechnical-20260808t095338z-sol-high-a26aff7e-cc51-4bee-a70c-4e0e4f307d14",
-        "fresh-domain-modeling-direct-nontechnical-20260808t095248z-sol-high-attempt-3-91f3634e-14b6-4a63-a154-59013f7c3f62"
+        "fresh-domain-modeling-direct-nontechnical-20260808t112636z-luna-max-84d2c0f1-6e3a-4b8c-9a71-5d0e2f4c8b93",
+        "fresh-domain-modeling-direct-nontechnical-20260808t112710z-luna-max-fresh-f27e9398-dd31-4e48-bd7b-b358d858fe4b",
+        "fresh-domain-modeling-direct-nontechnical-20260808t112659z-luna-max-DF7E128B-9D4D-49A3-A120-06D74362CDCF"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-direct-nontechnical-20260808t095231z-sol-high-2b123f2c",
+          "contextId": "fresh-domain-modeling-direct-nontechnical-20260808t112636z-luna-max-84d2c0f1-6e3a-4b8c-9a71-5d0e2f4c8b93",
           "locator": "evaluations/evidence/domain-modeling/direct-nontechnical-1.txt",
-          "sha256": "e01c47efc24ef47f96fe842867bd67c183ed7e8bd1e852574dc3d9a659a3f236",
+          "sha256": "5df5b99397e57ede48896af9726d41dafd14356b7346205b56fa691e88ec046c",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -49,9 +49,9 @@
         },
         {
           "attempt": 2,
-          "contextId": "fresh-domain-modeling-direct-nontechnical-20260808t095338z-sol-high-a26aff7e-cc51-4bee-a70c-4e0e4f307d14",
+          "contextId": "fresh-domain-modeling-direct-nontechnical-20260808t112710z-luna-max-fresh-f27e9398-dd31-4e48-bd7b-b358d858fe4b",
           "locator": "evaluations/evidence/domain-modeling/direct-nontechnical-2.txt",
-          "sha256": "0e1fd7e848ed8849dd3f05cb769fbd995bf074eef8f9c5c3d90d17db222d4fea",
+          "sha256": "36ce759ecbda0c13401b0ceeed5edf5220d70aa457313aabd797bf5d166ddd64",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -82,9 +82,9 @@
         },
         {
           "attempt": 3,
-          "contextId": "fresh-domain-modeling-direct-nontechnical-20260808t095248z-sol-high-attempt-3-91f3634e-14b6-4a63-a154-59013f7c3f62",
+          "contextId": "fresh-domain-modeling-direct-nontechnical-20260808t112659z-luna-max-DF7E128B-9D4D-49A3-A120-06D74362CDCF",
           "locator": "evaluations/evidence/domain-modeling/direct-nontechnical-3.txt",
-          "sha256": "10416c4b0f5474068ab7e20d99bd495977d9cbfbb0ea716d44ef78735764863c",
+          "sha256": "9e703ca6d8e66e31b67c28af607ef934662f846af59f70ac8bd206a64b1d417d",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -117,7 +117,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-direct-nontechnical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "596ce66ce5393ace376d327e00e6b178139405a6e60842a2dacd925512c33aa8"
     },
     {
@@ -127,16 +127,16 @@
         3
       ],
       "contextIds": [
-        "fresh-domain-modeling-direct-technical-sol-high-1-56011fdc-a38f-44ce-a9fd-8bb6b3ee4722",
-        "fresh-domain-modeling-direct-technical-sol-high-2-5a63c4d6-9625-4649-9fed-b835ef85486a",
-        "fresh-domain-modeling-direct-technical-sol-high-3-7193369a-84db-4a23-82a6-de79a571eb9c"
+        "fresh-domain-modeling-direct-technical-20260808t112701z-luna-max-e0aae6d5-c22d-41ce-a92c-26eb49c76616",
+        "fresh-domain-modeling-direct-technical-luna-max-2-31d93885-8842-4a6d-82f6-5c45d431f2ef",
+        "fresh-domain-modeling-direct-technical-luna-max-3-7cb0c9ab-0921-43b5-959b-9676a5ec777e"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-direct-technical-sol-high-1-56011fdc-a38f-44ce-a9fd-8bb6b3ee4722",
+          "contextId": "fresh-domain-modeling-direct-technical-20260808t112701z-luna-max-e0aae6d5-c22d-41ce-a92c-26eb49c76616",
           "locator": "evaluations/evidence/domain-modeling/direct-technical-1.txt",
-          "sha256": "5f127240ac293c72585113201072be88d67041572a9d8b986017bd2b8a2ea512",
+          "sha256": "bc814e5dd8876a85b0ff66c93165622a041c5e6dda6bb0a8c518d95dabc7a72d",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -162,9 +162,9 @@
         },
         {
           "attempt": 2,
-          "contextId": "fresh-domain-modeling-direct-technical-sol-high-2-5a63c4d6-9625-4649-9fed-b835ef85486a",
+          "contextId": "fresh-domain-modeling-direct-technical-luna-max-2-31d93885-8842-4a6d-82f6-5c45d431f2ef",
           "locator": "evaluations/evidence/domain-modeling/direct-technical-2.txt",
-          "sha256": "3fe5e3cd63a9552e523cd2857b1dafafd133e6d5fc58123b729d3d0212d84da7",
+          "sha256": "19ed942464dec4e701d2791d40162cae1c66e4e22cf306517e47153b4baabc42",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -190,9 +190,9 @@
         },
         {
           "attempt": 3,
-          "contextId": "fresh-domain-modeling-direct-technical-sol-high-3-7193369a-84db-4a23-82a6-de79a571eb9c",
+          "contextId": "fresh-domain-modeling-direct-technical-luna-max-3-7cb0c9ab-0921-43b5-959b-9676a5ec777e",
           "locator": "evaluations/evidence/domain-modeling/direct-technical-3.txt",
-          "sha256": "7446ccf602b7106b78edfba79713cf45a735335bd7f8ae1d1b376225b5f72f0e",
+          "sha256": "fa1b014013736aa2e1be5183123e49cdbc33061d6f53c6d11c9943eddf41773a",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -220,7 +220,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-direct-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "5efa63071a220487f760486ff11e4e91ea7f99a96de3cfaf58dc863d94be7a12"
     },
     {
@@ -230,16 +230,16 @@
         3
       ],
       "contextIds": [
-        "fresh-domain-modeling-edge-nontechnical-sol-high-20260808t095258z-67af7a51-d0b3-4e7f-80ad-371628855501",
-        "fresh-domain-modeling-edge-nontechnical-sol-high-2-12e9a655-6721-4b93-81ce-fd7b4621d542",
-        "fresh-domain-modeling-edge-nontechnical-3-sol-high-9c76d7eb-e9fa-49f6-89e3-5678f119cc95"
+        "fresh-domain-modeling-edge-nontechnical-luna-max-20260808t112710z-39962a9f-108a-4274-a2f4-442ba34123af",
+        "fresh-domain-modeling-edge-nontechnical-luna-max-2-a6e85359-03c2-4511-a3eb-b050a7607844",
+        "fresh-domain-modeling-edge-nontechnical-3-gpt-5-6-luna-max-20260808t113020z-c4f26c6f-11d4-460f-a99c-6cb9106e5417"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-edge-nontechnical-sol-high-20260808t095258z-67af7a51-d0b3-4e7f-80ad-371628855501",
+          "contextId": "fresh-domain-modeling-edge-nontechnical-luna-max-20260808t112710z-39962a9f-108a-4274-a2f4-442ba34123af",
           "locator": "evaluations/evidence/domain-modeling/edge-nontechnical-1.txt",
-          "sha256": "04ba64ece55bcfc82a050f57eccf3735e54cfca802198fcaad40017a3321e336",
+          "sha256": "db5d8fa6f14e0cbad5d1fa47ce34e0ffaf62beb6e8751178ac6f256fdb0b160e",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -265,9 +265,9 @@
         },
         {
           "attempt": 2,
-          "contextId": "fresh-domain-modeling-edge-nontechnical-sol-high-2-12e9a655-6721-4b93-81ce-fd7b4621d542",
+          "contextId": "fresh-domain-modeling-edge-nontechnical-luna-max-2-a6e85359-03c2-4511-a3eb-b050a7607844",
           "locator": "evaluations/evidence/domain-modeling/edge-nontechnical-2.txt",
-          "sha256": "3b7a7933892975eb5b5f7da440a8ca379c2140a8cbcf6da7cc8786dc4f3c2524",
+          "sha256": "0357248599ad7beb28afc4c3f4bb69e15dc65cafb73d4eaa51110a4239491c2d",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -293,9 +293,9 @@
         },
         {
           "attempt": 3,
-          "contextId": "fresh-domain-modeling-edge-nontechnical-3-sol-high-9c76d7eb-e9fa-49f6-89e3-5678f119cc95",
+          "contextId": "fresh-domain-modeling-edge-nontechnical-3-gpt-5-6-luna-max-20260808t113020z-c4f26c6f-11d4-460f-a99c-6cb9106e5417",
           "locator": "evaluations/evidence/domain-modeling/edge-nontechnical-3.txt",
-          "sha256": "e017e767270eecd6ec2c882daf0d4653a8bbbdbb117b862fde865b37628ddeb2",
+          "sha256": "0c79f72432cf6dfaa23e3313057eaa3ef01862d6686d85c95c9d8c46019f7cea",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -323,7 +323,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-edge-nontechnical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "f6cd5125afcfab40b9b0b6bca4a0993a1bc03826215928dc01c4140cf0bb7280"
     },
     {
@@ -333,16 +333,16 @@
         3
       ],
       "contextIds": [
-        "fresh-domain-modeling-edge-technical-sol-high-1-c9f4133b-7bea-4420-9997-94620b5c095d",
-        "fresh-domain-modeling-edge-technical-20260808t095411z-sol-high-ba02e61c-c32e-4d73-b665-e77e780f2d94",
-        "fresh-domain-modeling-edge-technical-sol-high-3-2505a517-9fbb-419f-8541-d84e75d552b4"
+        "fresh-domain-modeling-edge-technical-luna-max-1-20260808t112702z-2d607f6e-5faa-460c-beed-35ffecdd6583",
+        "fresh-domain-modeling-edge-technical-20260808t112749z-luna-max-01ff9326-2627-4dc7-b0db-a490a0e288f1",
+        "fresh-domain-modeling-edge-technical-luna-max-3-20260808t112813z-4a4bf0c7-0f56-4b12-8e4a-9a1d5b7f39c2"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-edge-technical-sol-high-1-c9f4133b-7bea-4420-9997-94620b5c095d",
+          "contextId": "fresh-domain-modeling-edge-technical-luna-max-1-20260808t112702z-2d607f6e-5faa-460c-beed-35ffecdd6583",
           "locator": "evaluations/evidence/domain-modeling/edge-technical-1.txt",
-          "sha256": "1c4db0ed257f0a3ba0f9df23ff93d238e84ed286be7266a1b78cb46b658fa2f3",
+          "sha256": "47edcbb4f794845c530c278c2a9f8fdb11ad38519f90c29f4faa1a463a86880a",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -368,9 +368,9 @@
         },
         {
           "attempt": 2,
-          "contextId": "fresh-domain-modeling-edge-technical-20260808t095411z-sol-high-ba02e61c-c32e-4d73-b665-e77e780f2d94",
+          "contextId": "fresh-domain-modeling-edge-technical-20260808t112749z-luna-max-01ff9326-2627-4dc7-b0db-a490a0e288f1",
           "locator": "evaluations/evidence/domain-modeling/edge-technical-2.txt",
-          "sha256": "243db940ab33126b81fe59ec25b995f79c6955767f4cc204610438a7bab2c55c",
+          "sha256": "66deb4c53ab599caf5aef92b2e79b54743b1bd80b12d7b2a16b817522bcf12eb",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -396,9 +396,9 @@
         },
         {
           "attempt": 3,
-          "contextId": "fresh-domain-modeling-edge-technical-sol-high-3-2505a517-9fbb-419f-8541-d84e75d552b4",
+          "contextId": "fresh-domain-modeling-edge-technical-luna-max-3-20260808t112813z-4a4bf0c7-0f56-4b12-8e4a-9a1d5b7f39c2",
           "locator": "evaluations/evidence/domain-modeling/edge-technical-3.txt",
-          "sha256": "00920af4ea3aa05754ee280df6225560a0e58a349012c12baeb0baf7a23e427b",
+          "sha256": "e0cd4be81116961c215b018fef7b78f1b3d6b8d80c604a01e818247907589120",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -426,7 +426,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-edge-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "de16cfc724438b22ad1f20572f05bb1a75c5f86938f1c7a34d6e74246891f6fc"
     },
     {
@@ -434,14 +434,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-incomplete-nontechnical-20260808t095336z-sol-high-4c29b2ec-667a-49f5-be90-448e73ce4151"
+        "fresh-domain-modeling-incomplete-nontechnical-20260808t112733z-luna-max-995600ea-e85d-4f0b-a660-0b58b361dbbd"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-incomplete-nontechnical-20260808t095336z-sol-high-4c29b2ec-667a-49f5-be90-448e73ce4151",
+          "contextId": "fresh-domain-modeling-incomplete-nontechnical-20260808t112733z-luna-max-995600ea-e85d-4f0b-a660-0b58b361dbbd",
           "locator": "evaluations/evidence/domain-modeling/incomplete-nontechnical-1.txt",
-          "sha256": "8b48444b54e1f92ffb67eb7f361f44adc36a0f94926426945d3aa60bf3c570f7",
+          "sha256": "36c50972d5fc6516b09b0943e5b92d349a3a9432fc76125f005f232444c60a36",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -469,7 +469,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-incomplete-nontechnical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "5fd8674643ecddb1eaef51881e21b806c4571b472eb3c7bdb6901232e70ae860"
     },
     {
@@ -477,14 +477,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-incomplete-technical-20260808t095437z-sol-high-d0554d4c-c6ae-4175-b060-c088258a2912"
+        "fresh-domain-modeling-incomplete-technical-20260808t113059z-luna-max-67c65b25-72cd-4440-96c4-3de2de6b4b4b"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-incomplete-technical-20260808t095437z-sol-high-d0554d4c-c6ae-4175-b060-c088258a2912",
+          "contextId": "fresh-domain-modeling-incomplete-technical-20260808t113059z-luna-max-67c65b25-72cd-4440-96c4-3de2de6b4b4b",
           "locator": "evaluations/evidence/domain-modeling/incomplete-technical-1.txt",
-          "sha256": "415b6fc6271eaefc62ae744d78cf9a067f21d1aecae7c7dc161a60f588a42cac",
+          "sha256": "fa0945fa7bf3cfa541d5439c6383b4f1903559a31cdb34b0c56efefd58d8e9c6",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -512,7 +512,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-incomplete-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "320e0a72b8699117f1408ffa0bbe4156373cc2c13295bc9caeb661bb48657c9b"
     },
     {
@@ -520,14 +520,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-indirect-nontechnical-sol-high-1-636cb1c6-64ad-4c51-aae3-b48af86e4495"
+        "fresh-domain-modeling-indirect-nontechnical-luna-max-20260808t112814z-4186c776-8495-4c71-8b6f-ecbc9787ee60"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-indirect-nontechnical-sol-high-1-636cb1c6-64ad-4c51-aae3-b48af86e4495",
+          "contextId": "fresh-domain-modeling-indirect-nontechnical-luna-max-20260808t112814z-4186c776-8495-4c71-8b6f-ecbc9787ee60",
           "locator": "evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt",
-          "sha256": "5348b7a04cf72fdda6bc1d953774643fe9bb1d9c03729394f99c38ed2e1514f8",
+          "sha256": "fdf295d43dc686b30f0a791a7547eebfdafd6e58c83d04e04f3a3dbf5e04d59f",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -555,7 +555,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-indirect-nontechnical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c042a6f550cc4cbabfe88d9672ef2a317d95cf8bae11dcc8ea7080a8abaf1816"
     },
     {
@@ -563,14 +563,14 @@
         1
       ],
       "contextIds": [
-        "c66262d2-770d-4b1e-8c11-a66ecea1ae5e"
+        "fresh-domain-modeling-indirect-technical-20260808t112831z-luna-max-16a3d656-58c7-40e0-839c-32f5cb473887"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "c66262d2-770d-4b1e-8c11-a66ecea1ae5e",
+          "contextId": "fresh-domain-modeling-indirect-technical-20260808t112831z-luna-max-16a3d656-58c7-40e0-839c-32f5cb473887",
           "locator": "evaluations/evidence/domain-modeling/indirect-technical-1.txt",
-          "sha256": "aa7efc1989f31c7491ff3e86df6e8578405e0a9473da189a7e4ddef651a1d889",
+          "sha256": "06e16d2578f4c258b2b357bd12db864f1a61c131795cecdb51240a229fa65e0a",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -598,7 +598,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-indirect-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "ba9bf831205fba3baeb2304844f63a3445781511913f1740a2b17cb47ba9bc39"
     },
     {
@@ -606,14 +606,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-missing-system-relationship-authority-20260808t095453z-sol-high-09b0caaf"
+        "fresh-domain-modeling-missing-system-relationship-authority-20260808t113141z-luna-max-a47f1c9e"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-missing-system-relationship-authority-20260808t095453z-sol-high-09b0caaf",
+          "contextId": "fresh-domain-modeling-missing-system-relationship-authority-20260808t113141z-luna-max-a47f1c9e",
           "locator": "evaluations/evidence/domain-modeling/missing-system-relationship-authority-1.txt",
-          "sha256": "37bf2f6f5f45b53425fc440fe102ed5af831bcc2575013504a2d845af9226981",
+          "sha256": "3dde0b8e25d45969322190d045303dc7941801094a17ad6069f09bab88f08dc2",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -641,7 +641,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-missing-system-relationship-authority",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "353ef2a4c391dddc816b5ef0a384badcec1284bb9203d81aa0390e559890cbdf"
     },
     {
@@ -649,14 +649,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-negative-nontechnical-sol-high-20260808t095434z-cc9dde67-03c5-445c-bab2-df77f8307184"
+        "fresh-domain-modeling-negative-nontechnical-luna-max-20260808t113017z-31e18cfe-f10f-4abd-95d0-48dfd8a21f34"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-negative-nontechnical-sol-high-20260808t095434z-cc9dde67-03c5-445c-bab2-df77f8307184",
+          "contextId": "fresh-domain-modeling-negative-nontechnical-luna-max-20260808t113017z-31e18cfe-f10f-4abd-95d0-48dfd8a21f34",
           "locator": "evaluations/evidence/domain-modeling/negative-nontechnical-1.txt",
-          "sha256": "90cfb0e5e3b15a7d2f7cf59f9f5bdf161e64cc5d4742a69988ad43d8753c383a",
+          "sha256": "fc111298b4d627e46c955d17581573f8d753c71722eaa3ef33d7784a7023e5ee",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -684,7 +684,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-negative-nontechnical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "3d127edfb8dd78651b502f3998f339e683ff85693a807bd60eb6fa7ad1d51090"
     },
     {
@@ -692,14 +692,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-negative-technical-sol-high-1-4fdcdc89-4bc2-4faa-a419-a9c507f70b4a"
+        "fresh-domain-modeling-negative-technical-luna-max-20260808t113104z-9bc70469-cd7b-4d54-82a3-e9c1cd5bc5ba"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-negative-technical-sol-high-1-4fdcdc89-4bc2-4faa-a419-a9c507f70b4a",
+          "contextId": "fresh-domain-modeling-negative-technical-luna-max-20260808t113104z-9bc70469-cd7b-4d54-82a3-e9c1cd5bc5ba",
           "locator": "evaluations/evidence/domain-modeling/negative-technical-1.txt",
-          "sha256": "7e3bf506d62fc3db66f68f5d149fbd1f8b0acf1e0cbed3790127b947aa33c120",
+          "sha256": "d72264ba3c5f11f564671d64904f95c8288e830caaec9e33cea94fb75555135c",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -727,7 +727,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-negative-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "af9162a0f485cdb927da34c10c15487529c18973dbd4b6837f662040b21f714b"
     },
     {
@@ -735,14 +735,14 @@
         1
       ],
       "contextIds": [
-        "939bb820-e313-4ea7-82fe-afc31f0b084a"
+        "fresh-domain-modeling-partial-sequential-write-20260808t113053z-luna-max-6afd8dc3-4404-4d15-8b6a-2742fc3e96b2"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "939bb820-e313-4ea7-82fe-afc31f0b084a",
+          "contextId": "fresh-domain-modeling-partial-sequential-write-20260808t113053z-luna-max-6afd8dc3-4404-4d15-8b6a-2742fc3e96b2",
           "locator": "evaluations/evidence/domain-modeling/partial-sequential-write-1.txt",
-          "sha256": "332f151f930b43e0d5afe6ae8cb6917dcf5e6441358eb52bcb69ca2274281d7c",
+          "sha256": "876006738ad105e186ca6c1ca989ad9c41b365d6980a900a3f54df51ca808a12",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -770,7 +770,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-partial-sequential-write",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e12bdf92e329ba118e6bf344ca2f65eb636384eab41f192f3117f87cd8e8e3c5"
     },
     {
@@ -780,16 +780,16 @@
         3
       ],
       "contextIds": [
-        "fresh-domain-modeling-semantic-authority-missing-20260808t095752z-sol-high-ebbe6e8d",
-        "fresh-domain-modeling-semantic-authority-missing-20260808t095739z-sol-high-8a573416",
-        "fresh-domain-modeling-semantic-authority-missing-sol-high-3-15702fa3-3aa3-4933-8414-52b5708ac2c5"
+        "fresh-domain-modeling-semantic-authority-missing-20260808t113256z-luna-max-87de96cb-3088-40ee-91c8-87ced7f9b60d",
+        "fresh-domain-modeling-semantic-authority-missing-20260808t113255z-luna-max-536c1988-211a-4827-b6c4-593edf20d009",
+        "fresh-domain-modeling-semantic-authority-missing-20260808t113243z-luna-max-5323cd0e-3921-44dd-b452-8ba780d51b34"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-semantic-authority-missing-20260808t095752z-sol-high-ebbe6e8d",
+          "contextId": "fresh-domain-modeling-semantic-authority-missing-20260808t113256z-luna-max-87de96cb-3088-40ee-91c8-87ced7f9b60d",
           "locator": "evaluations/evidence/domain-modeling/semantic-authority-missing-1.txt",
-          "sha256": "2d4ab601bbe31c4b98ee2ff476762ec0f44522fd5a43a04411860f0b407ca4b6",
+          "sha256": "409ec20122fc913d3cee4ef8f27657f29b1d8c378402c5cb01a9cafa2b183727",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -815,9 +815,9 @@
         },
         {
           "attempt": 2,
-          "contextId": "fresh-domain-modeling-semantic-authority-missing-20260808t095739z-sol-high-8a573416",
+          "contextId": "fresh-domain-modeling-semantic-authority-missing-20260808t113255z-luna-max-536c1988-211a-4827-b6c4-593edf20d009",
           "locator": "evaluations/evidence/domain-modeling/semantic-authority-missing-2.txt",
-          "sha256": "d43cf1bf74cf5ce1b015834d22b5591cd5fc47c9daec0a6a5583d00929f891ea",
+          "sha256": "38ea73a6f17d5fcfd6ee39aae38d03fc3cc92b058a72b69ef5cac7c54b3842b0",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -843,9 +843,9 @@
         },
         {
           "attempt": 3,
-          "contextId": "fresh-domain-modeling-semantic-authority-missing-sol-high-3-15702fa3-3aa3-4933-8414-52b5708ac2c5",
+          "contextId": "fresh-domain-modeling-semantic-authority-missing-20260808t113243z-luna-max-5323cd0e-3921-44dd-b452-8ba780d51b34",
           "locator": "evaluations/evidence/domain-modeling/semantic-authority-missing-3.txt",
-          "sha256": "8b36cc22176b2fd68a9cd23359a92b47da8c58fed6f16b3a15e0184dd9166454",
+          "sha256": "d9f7c842f49e289dd69ceef0d8afd0a0bcaf961772f7c7cde51bf8b5393fc1ba",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -873,7 +873,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-semantic-authority-missing",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "a5bd1770c084e7d1e63a52907792cf97e4d822b2b4d88b09ff2c4aa7c61147d2"
     },
     {
@@ -881,14 +881,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-41be07be-5495-4010-b070-c1fca23cb1e7"
+        "fresh-domain-modeling-supplemental-advisory-unavailable-luna-max-1-20260808t113958z-8e86ebd4-eeed-4cbe-9bbb-477fc5e5a5de"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-supplemental-advisory-unavailable-sol-high-1-41be07be-5495-4010-b070-c1fca23cb1e7",
+          "contextId": "fresh-domain-modeling-supplemental-advisory-unavailable-luna-max-1-20260808t113958z-8e86ebd4-eeed-4cbe-9bbb-477fc5e5a5de",
           "locator": "evaluations/evidence/domain-modeling/supplemental-advisory-unavailable-1.txt",
-          "sha256": "76607d48d70337889a0da1c3eebb71e9e634de193854176285b671ddb14051d8",
+          "sha256": "9596809bd1e34edb8632075752acc06dcc16ccfe827b7a62c786abe876cfbe8d",
           "runtimeInputs": [
             {
               "locator": "evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml",
@@ -912,7 +912,7 @@
             },
             {
               "locator": "skills/workflow/SKILL.md",
-              "sha256": "03edaa518317ffaf095c0a11884d5c09ad6336fa2e0b77bbd96274eed703b672",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
               "role": "disclosed-reference"
             }
           ]
@@ -921,7 +921,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-supplemental-advisory-unavailable",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "5f1f63a4063f813c1496fe6b03fd9b2df7ca16e573687e5b2118b071b4629616"
     },
     {
@@ -929,14 +929,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-supplemental-required-stale-20260808t095839z-sol-high-3dc4a60a-ffe5-40a3-9000-c9a97d6166ef"
+        "fresh-domain-modeling-supplemental-required-stale-20260808t113304z-luna-max-1369286d-0a34-4065-a16e-993087cd20dd"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-supplemental-required-stale-20260808t095839z-sol-high-3dc4a60a-ffe5-40a3-9000-c9a97d6166ef",
+          "contextId": "fresh-domain-modeling-supplemental-required-stale-20260808t113304z-luna-max-1369286d-0a34-4065-a16e-993087cd20dd",
           "locator": "evaluations/evidence/domain-modeling/supplemental-required-stale-1.txt",
-          "sha256": "65642138116d7af87743ed82a4f320ccd2d9738a027492fcd4aafb83102623b1",
+          "sha256": "9ee9aa76f9a0e5351d30aa5f9f73a6e0409a05c93e842b80fa485429cf007461",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -964,7 +964,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-supplemental-required-stale",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "7209d1861651b86d6e2433b5fbd3dc7195c0f75c3ec6d2ae1307771b84d1e447"
     },
     {
@@ -972,14 +972,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-supplemental-required-unavailable-20260808t100003z-sol-high-0f4cf217-72cd-4763-a14d-34185d80e8db"
+        "fresh-domain-modeling-supplemental-required-unavailable-20260808t113323z-luna-max-fea0eca7-6bf2-460e-b574-99db8c6b6642"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-supplemental-required-unavailable-20260808t100003z-sol-high-0f4cf217-72cd-4763-a14d-34185d80e8db",
+          "contextId": "fresh-domain-modeling-supplemental-required-unavailable-20260808t113323z-luna-max-fea0eca7-6bf2-460e-b574-99db8c6b6642",
           "locator": "evaluations/evidence/domain-modeling/supplemental-required-unavailable-1.txt",
-          "sha256": "87d93c1040f30ef4ca90fb29cdf28fb063fa232f5dcfc34bd432acb4978f05dd",
+          "sha256": "fd5e1a9bce4f11aa04339151de0dc8b0a830fe471a8583f4b60432da601eea9e",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -1007,7 +1007,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-supplemental-required-unavailable",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "ab5d1eed74ae274e123bd6113edef6857c81b472152b3b4d2fbc88b51f387bec"
     },
     {
@@ -1015,14 +1015,14 @@
         1
       ],
       "contextIds": [
-        "fresh-domain-modeling-system-relationships-technical-20260808t095915z-sol-high-08e6cff9"
+        "fresh-domain-modeling-system-relationships-technical-20260808t113209z-luna-max-4c6e8b1a-9f24-4d7c-8e53-1a6b0c2d9e47"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-domain-modeling-system-relationships-technical-20260808t095915z-sol-high-08e6cff9",
+          "contextId": "fresh-domain-modeling-system-relationships-technical-20260808t113209z-luna-max-4c6e8b1a-9f24-4d7c-8e53-1a6b0c2d9e47",
           "locator": "evaluations/evidence/domain-modeling/system-relationships-technical-1.txt",
-          "sha256": "d976631560aa101a2c4aae51efb5d1714641040fd38fa1d1915deafee4672ee8",
+          "sha256": "e61d3c2629c55e5e55b6923d89ee0e71ca240013bbe4820a51242ecf96f77f11",
           "runtimeInputs": [
             {
               "locator": "skills/domain-modeling/SKILL.md",
@@ -1050,7 +1050,7 @@
       "findings": [],
       "fixtureId": "domain-modeling-system-relationships-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "83c8fb1ec175b37099de0dc84455ed76f83e7241e882a63ff1e6b20651fbb581"
     },
     {
@@ -1087,7 +1087,7 @@
       "findings": [],
       "fixtureId": "foundation-direct",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c5e69f3d7638b133a80e4c4b668fba7ff94f00d6ebb4f23dd19535c0cc0d0084"
     },
     {
@@ -1124,7 +1124,7 @@
       "findings": [],
       "fixtureId": "foundation-edge",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "1d1236a7147a83dfde0a4d3406ee34305e51103eccc40f589e030e3cfe8ff690"
     },
     {
@@ -1145,7 +1145,7 @@
       "findings": [],
       "fixtureId": "foundation-incomplete",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "12e983c420300304c15a29d27f348fb324c089f8221f84668e87ecc0ac6a4199"
     },
     {
@@ -1166,7 +1166,7 @@
       "findings": [],
       "fixtureId": "foundation-indirect",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "2ab66d7b624b7c69ffbb52be0001300b28dc36319b31265c1edb072270248a04"
     },
     {
@@ -1187,7 +1187,7 @@
       "findings": [],
       "fixtureId": "foundation-negative",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "d94ee5ad712dda6a57c96d0213108bf39f349319e89a72e76d19fe5efd05d2ce"
     },
     {
@@ -1224,7 +1224,7 @@
       "findings": [],
       "fixtureId": "grill-with-docs-direct-composition",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "07647379ea72b546d6ecf045e9d1a2062c35ef24c821acaf7b748c534bb250af"
     },
     {
@@ -1245,7 +1245,7 @@
       "findings": [],
       "fixtureId": "grill-with-docs-edge-missing-domain-modeling",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "127a48e559897587ce84921b19e1c2c49c3e060bf6b8c61cb303870400909d76"
     },
     {
@@ -1266,7 +1266,7 @@
       "findings": [],
       "fixtureId": "grill-with-docs-edge-missing-grilling",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "1eff3df3706faa5f7d26c2ec6703c4ece857523222e1f3717d2f85450db3d5f7"
     },
     {
@@ -1287,7 +1287,7 @@
       "findings": [],
       "fixtureId": "grill-with-docs-incomplete-adapter",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "df95d2589253bacfc841ae2ab0cdd2997832b860c5275b459edc3b94ffa2b2c2"
     },
     {
@@ -1324,7 +1324,7 @@
       "findings": [],
       "fixtureId": "grill-with-docs-indirect-workflow",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "cefc678cb185e593c4e427070a50f1d1d81cf0ea51a21bc548a99673ecd6aee3"
     },
     {
@@ -1345,7 +1345,7 @@
       "findings": [],
       "fixtureId": "grill-with-docs-negative-glossary-read",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "a196cdbbe7200507c2f330282235d1104d50bc8d992c1f2607ac88b3da286fc3"
     },
     {
@@ -1382,7 +1382,7 @@
       "findings": [],
       "fixtureId": "grilling-direct-frontier-format",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "98d30f87c616d67b2044d4aaee3e45d9ece31e54ca156c811d07c8000f01cc0a"
     },
     {
@@ -1419,7 +1419,7 @@
       "findings": [],
       "fixtureId": "grilling-edge-confirmation-gate",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "6ab99efcebceffce4f86301d7b738356ab49822b575d3b3c3d5d55ea3b67b1a7"
     },
     {
@@ -1440,7 +1440,7 @@
       "findings": [],
       "fixtureId": "grilling-edge-delegated-fact",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "9f6bbf92839be82307917e4730702f079819cbfbbdee32736369b5cbc013baf9"
     },
     {
@@ -1461,7 +1461,7 @@
       "findings": [],
       "fixtureId": "grilling-incomplete-first-frontier",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "05f0ed69b3c01ebdf97fb10221a1b282ff4ae8ee9e2c7a12c384511d603fe4d9"
     },
     {
@@ -1498,7 +1498,7 @@
       "findings": [],
       "fixtureId": "grilling-indirect-agent-fact",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "d0d31e62bdbaf390890878dd1b42b4bfd929d4a1c005157bcd66e29e2752c69f"
     },
     {
@@ -1519,7 +1519,7 @@
       "findings": [],
       "fixtureId": "grilling-negative-fact-only",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c99af046be0f0ec3701e8c21155f860c670e64e1a9bc156cdf194026abddc552"
     },
     {
@@ -1540,7 +1540,7 @@
       "findings": [],
       "fixtureId": "prototype-advisory-technical-supplemental-failure",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "a41bb2bfd22bdc55b597cd66a94edd406faed695d529f3a56bb263c2e837ab1e"
     },
     {
@@ -1577,7 +1577,7 @@
       "findings": [],
       "fixtureId": "prototype-configured-technical-supplemental",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "d265e11a2adc642d9361dc30b4cd2cbf9d7913daf878a30abdfe7f91104f7af5"
     },
     {
@@ -1614,7 +1614,7 @@
       "findings": [],
       "fixtureId": "prototype-cross-domain-communicative-agent",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "518eeb270b8d249d59dab86a33ca46459aeccb6bdf03bf11863820d2f9efc321"
     },
     {
@@ -1651,7 +1651,7 @@
       "findings": [],
       "fixtureId": "prototype-direct-technical-logic",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "a703e0b82980e6d4e8438ae4bf66c4c2b52b7f4f2b58d69da644377fcb13e8f1"
     },
     {
@@ -1688,7 +1688,7 @@
       "findings": [],
       "fixtureId": "prototype-edge-physical-irreversible",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c021e5acd9e68ce09f43f4e916039e65b99847cd924dd455f62c69293e3fc074"
     },
     {
@@ -1709,7 +1709,7 @@
       "findings": [],
       "fixtureId": "prototype-incomplete-question",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "748588a2dab244f5bc3da8c78f80a79772b29f06b72135d2f42ed0bfd2746930"
     },
     {
@@ -1746,7 +1746,7 @@
       "findings": [],
       "fixtureId": "prototype-indirect-personal-organizational",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "482306cf52bb899d2efa9e3dbba935456d572910c30bcbeaf0d179923d9a9a84"
     },
     {
@@ -1783,7 +1783,7 @@
       "findings": [],
       "fixtureId": "prototype-negative-production-execution",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "1308c3ea4f614bdca28bc18bc8a8de1547826ce758fa26d6e9de6285e2961d26"
     },
     {
@@ -1820,7 +1820,7 @@
       "findings": [],
       "fixtureId": "prototype-negative-review-request",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "9e2f5dec296c365fe5c43ea7c820b6888f24d334b585bc6b782bea76fcb72b6a"
     },
     {
@@ -1857,7 +1857,7 @@
       "findings": [],
       "fixtureId": "prototype-required-technical-supplemental-unavailable",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "37b8fe866204dcf7a993e22eaa4e7f3d298b6af5df96f0010cb91acae2720854"
     },
     {
@@ -1912,7 +1912,7 @@
       "findings": [],
       "fixtureId": "research-cross-domain-direct",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "32162af6e6142728141fe6cf2acf30c94b0be5fe29a9db8aad916acf708d3fed"
     },
     {
@@ -1933,7 +1933,7 @@
       "findings": [],
       "fixtureId": "research-incomplete-scope",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "dd34c41c6cf54e720944df890c714e4d6fceb0aacab7a89dab5a902c4c63372c"
     },
     {
@@ -1970,7 +1970,7 @@
       "findings": [],
       "fixtureId": "research-indirect-workflow-delegation",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "f3d3cb7e5f0738c6d5c09ff4c118e77e0fce9f9771015556c29d0a1cb5acb3b4"
     },
     {
@@ -1991,7 +1991,7 @@
       "findings": [],
       "fixtureId": "research-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "a7d37a7fc50e38501aa520e92db7f56188458c0f06bb5a2d6a50cbe9aa1bba32"
     },
     {
@@ -2012,7 +2012,7 @@
       "findings": [],
       "fixtureId": "research-negative-prototype-route",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "f1d557adaa48ec8348d6db010b00d05ba072bd6edbbbfa1a4ddd427d944cd67f"
     },
     {
@@ -2039,7 +2039,7 @@
       "findings": [],
       "fixtureId": "research-no-repository-adapter",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "ad6accb9df792e4123e9c002c0ba95a123314dbaebe0af5d45d1fe9fc8a1a566"
     },
     {
@@ -2060,7 +2060,7 @@
       "findings": [],
       "fixtureId": "review-changed-revision",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "35d9a6d5ec56dc5d39b62cf385b650fb85059ddebd081ecc84a6775ba2b8ca15"
     },
     {
@@ -2081,7 +2081,7 @@
       "findings": [],
       "fixtureId": "review-code-medium",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c59668f2d397d2e767d2dc89760a5ae3d945eef87c4d0e7ec4c22c7e4d7d77dd"
     },
     {
@@ -2118,7 +2118,7 @@
       "findings": [],
       "fixtureId": "review-cross-domain-direct",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e839812bd9a1327753bda7d0c6c623ed72f08bfbf69ee17df5c98d7cbbab5d35"
     },
     {
@@ -2139,7 +2139,7 @@
       "findings": [],
       "fixtureId": "review-inconclusive-effect",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "01d8e33b1cf00361ca3e555fb09b417845b7fe9bf8d4b78edf6c83eb90dbefb5"
     },
     {
@@ -2160,7 +2160,7 @@
       "findings": [],
       "fixtureId": "review-inline",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "bda5d848cb04b060ddc0c64ad8e2f25a499a85c93f62ac2d5c720994b44de14f"
     },
     {
@@ -2181,7 +2181,7 @@
       "findings": [],
       "fixtureId": "review-maintainability-cross-domain",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "1dfbfb021aaf4d767fedc9b498e85cce00e5f025944d3ef74ca132e26de037f4"
     },
     {
@@ -2202,7 +2202,7 @@
       "findings": [],
       "fixtureId": "review-negative-no-spec",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "163cb4eb2920fd12defff44680f2e161c661b6dd24a6c163d66a6ec6a23b4a9b"
     },
     {
@@ -2223,7 +2223,7 @@
       "findings": [],
       "fixtureId": "review-prepared-communication",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "cc8892fc4cbf928679282a3f9aa8e696f550cf4f716b4a1c00cd27de11efc7e8"
     },
     {
@@ -2244,7 +2244,7 @@
       "findings": [],
       "fixtureId": "review-readable-evidence",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "72859b0f8b5a0798523e24ab8e8aa6a400e0323ef055232c8970669c9518279d"
     },
     {
@@ -2265,7 +2265,7 @@
       "findings": [],
       "fixtureId": "review-supplemental-advisory-absent",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e7d514d1ea09933d8c8973285723d5b6dd61232d533736dc05532b72523651bd"
     },
     {
@@ -2302,7 +2302,7 @@
       "findings": [],
       "fixtureId": "review-supplemental-required",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e8cbf8d0fff38264703eec60afa13e9bf5cff61624b1239dc95a48e4d31c5a44"
     },
     {
@@ -2323,7 +2323,7 @@
       "findings": [],
       "fixtureId": "review-supplemental-required-missing",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e637a13e19333de2d9d57bd4b4a592e5808bd6ed1368da2a9679bae380bde7f4"
     },
     {
@@ -2344,7 +2344,7 @@
       "findings": [],
       "fixtureId": "review-ui-interaction-quality",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "b0294275bfa6f751ba63920c3057e74874b3a1507bd1379c56f3f7851a3b185f"
     },
     {
@@ -2365,7 +2365,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-assurance-cadence",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "2ddb3bc49b413df82813347ff69c2a0d0fe446e891e8f2a04d6a759e9e91d88b"
     },
     {
@@ -2386,7 +2386,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-authorized-irreversible",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "374f69e642ccbbf578353e0352c29bf6f0ff3416d754430631dcfc416fea1978"
     },
     {
@@ -2423,7 +2423,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-consequential",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "01c9db527c6accd575081a611302102f14a623e199e1f2d8028dac77de91a387"
     },
     {
@@ -2460,7 +2460,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-direct",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "3e9af716ef6b3c3863b51281c2b1223977ff84ce848dacdbe21e49109e52faee"
     },
     {
@@ -2481,7 +2481,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-economic-stopping",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "6e4f5dc6f6c30b53cc3dda8b4fe1518563020cd0672dd17665f27f8494a700d2"
     },
     {
@@ -2502,7 +2502,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-edge",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e98194f50cdc6092746505179f4f445d0e8081144e2dacd746fcf422eab60d80"
     },
     {
@@ -2523,7 +2523,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-framing-effect",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "737f8613bd8e342d6929e757cf39077a3f1c95d6a5776c547f4b0a0b66476213"
     },
     {
@@ -2544,7 +2544,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-incomplete",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "a25331c0b4e974d538bae3b30ad2a37791a8162bebec83a24a5c0aee5291ebb8"
     },
     {
@@ -2565,7 +2565,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-indirect",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "01221cb65d2e566c9063dfab778b1769aa68cf982542ac6d51d487304cdd695e"
     },
     {
@@ -2586,7 +2586,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-negative",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "4893ac43ae7ae76eef130ca03b65522dddbc72073e74fa150bc0d92883f43004"
     },
     {
@@ -2607,7 +2607,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-one-time-handoff",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "5d839049d2947222a850d6696f24d70daf4a355716709371296620f0d16de862"
     },
     {
@@ -2628,7 +2628,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-record-representation",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e64a47c17164ec5fe393d0a3591ac2f5c4b66e0e6d4b2ebd4b02dd7303303f2b"
     },
     {
@@ -2649,7 +2649,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-system-relationships",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "0310ea69cbb8b9cc9ff7529f779669d115469b51c75322a1c5716de8df5d8c71"
     },
     {
@@ -2670,7 +2670,7 @@
       "findings": [],
       "fixtureId": "thinking-in-systems-trivial",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "927e84a2c9b39d55c6fbeeac4bcf0c8bfbc8d3ae26bffb4103fce46213dcff8a"
     },
     {
@@ -2697,7 +2697,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-cross-domain",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35"
     },
     {
@@ -2752,7 +2752,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-direct",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "8648c4e09094d91e5e00a5e5a81450acb3c06695dce9ae15bd1596cc318f624b"
     },
     {
@@ -2773,7 +2773,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-incomplete",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "67ad8e377e31ccbd5ae91ae759b033bbc2e48c0b2fd7dc96bfa4329824348028"
     },
     {
@@ -2828,7 +2828,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-indirect",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c1ab1c0ad65e5021f0c6fd826870db73ecc4d0a45d3446f937c320a581ea0b89"
     },
     {
@@ -2849,7 +2849,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-missing-capability",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "3677af27f161d55b1b6783ee25b05b457e79dee5821e1e5a2158ee50ef4d9466"
     },
     {
@@ -2870,7 +2870,7 @@
       "findings": [],
       "fixtureId": "to-questionnaire-negative",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "ead7c724eba0812b80580200b3064116db5566ba6367eddd0bd5a37c5e2adc9c"
     },
     {
@@ -2891,7 +2891,7 @@
       "findings": [],
       "fixtureId": "to-spec-direct-nontechnical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "1fb7744643a8010b1c56fc6980d49bc135f00f02ac072e1a010037bc084ae3f8"
     },
     {
@@ -2912,7 +2912,7 @@
       "findings": [],
       "fixtureId": "to-spec-direct-technical",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "5bd3c946903403a933355188d289dffec8acfe5e7b949d0970dbf5c417a249a1"
     },
     {
@@ -2933,7 +2933,7 @@
       "findings": [],
       "fixtureId": "to-spec-edge-boundary",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "63b4aaf9c46c2111cda61f11c750794703fa699c02f15d6bcb308975f4ab51f5"
     },
     {
@@ -2954,7 +2954,7 @@
       "findings": [],
       "fixtureId": "to-spec-incomplete-authority",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "cb4d1e39ac21aca51e4f08544ffc7d3cd21b4fd5dd08b497fbd74e55a40a20ab"
     },
     {
@@ -2975,7 +2975,7 @@
       "findings": [],
       "fixtureId": "to-spec-indirect",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "2723c280ba4d22532a6f17aed0769ca93cccb508e362f390d69e7451302d11d3"
     },
     {
@@ -2996,7 +2996,7 @@
       "findings": [],
       "fixtureId": "to-spec-inline-accepted",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "fcbbf186ecce6462dddc4f538c5974c2da4284035514aec4578f08a9b7a8b9fb"
     },
     {
@@ -3017,7 +3017,7 @@
       "findings": [],
       "fixtureId": "to-spec-irreducible-fog",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "f80ef286439344dcf90942700d876d3d961582070b0c89cd523f0877a3a85b44"
     },
     {
@@ -3038,7 +3038,7 @@
       "findings": [],
       "fixtureId": "to-spec-negative",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "1461a072fcd0a68d5077050a804d5ab9345c0b740264f06f33d43ffc130316ef"
     },
     {
@@ -3059,7 +3059,7 @@
       "findings": [],
       "fixtureId": "to-spec-operating-outcome",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "dd6f0ec969448a080b55db30bea141c89f5d717bf3592664d30cb8a2c374c80b"
     },
     {
@@ -3080,7 +3080,7 @@
       "findings": [],
       "fixtureId": "to-spec-revision-change",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "25c8cc70a971951fdbc69cdcb85421431222b61cefa5ce05e8ff7d387e2a22a1"
     },
     {
@@ -3101,8 +3101,197 @@
       "findings": [],
       "fixtureId": "to-spec-supplemental",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "ea51b91aa1ec710ff6ddb1ff510c00a4f2a93aa0d891e7fec56ebbb0f3caaa83"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-direct-cross-domain-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-direct-cross-domain-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-direct-cross-domain-1.txt",
+          "sha256": "ef52ec0b6a11de7f1ea9e7d5b681d02888906bb3ddddf294ce551cc41103ae8a"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-direct-cross-domain",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "b6e885669bd6a2224d85efb4a2eeca1056150370617826cd68e151ef91eb19ca"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-edge-capability-gap-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-edge-capability-gap-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-edge-capability-gap-1.txt",
+          "sha256": "283c772a52c644f8c43edc4d8ad8d95067502921daf2847d983817658663897c"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-edge-capability-gap",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "162b16a1b9c545480db9e70a4a3af3aa5a9460a9a328382c0691020ec4e13bd1"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-edge-dependency-recovery-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-edge-dependency-recovery-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-edge-dependency-recovery-1.txt",
+          "sha256": "16d0f9140cf06b5f15968a7feea842fbd9a3a0db6f789487b9e6c799c178dbfe"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-edge-dependency-recovery",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "70e16a59cb8b5c213e77b23586263f582b7e86454d4c84d9e504bbec17975863"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-edge-required-supplemental-gap-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-edge-required-supplemental-gap-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-edge-required-supplemental-gap-1.txt",
+          "sha256": "8404772f14cee6fa00e3f9f23d9899792b23982b696679ed7a84ff51da3840a0"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-edge-required-supplemental-gap",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "ebb1c9915110c4b5e21b738210efd9b763284f3df40706a60357eef73ea78ae6"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-edge-revision-preservation-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-edge-revision-preservation-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-edge-revision-preservation-1.txt",
+          "sha256": "164e33fdc75fce63cc6f6c27990c53c7b97431ac5b4e0e8e6fca15d27d31dd2a"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-edge-revision-preservation",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "678fd61e1bda68ae8a8342d2971ba04cd502a2fccaca887c084c7d5b905390c6"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-edge-supplemental-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-edge-supplemental-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-edge-supplemental-1.txt",
+          "sha256": "e7247f866efbc1b2bd352123029123326c8595d79683e324326fcbddb9b059d7"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-edge-supplemental",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "24ee876393cfa1321edca544cd631cb629eecc02f725166daf303ce380fa3179"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-incomplete-specification-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-incomplete-specification-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-incomplete-specification-1.txt",
+          "sha256": "fcd2283f818b03c61411e63f88ef3d0fb5f23ec6d79e2fc6ac0d06f4aaaf19c4"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-incomplete-specification",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "c3dd62bdc2081aef82892fc0ea3820ae69854362c879416e7a13e08353ac1af2"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-indirect-delegation-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-indirect-delegation-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-indirect-delegation-1.txt",
+          "sha256": "a2ef0055ab6d3d27009416f924adf448b19cf299a18dc23f26a60dcf5fd04795"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-indirect-delegation",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "22e1f50c94297b1f322923521f36cb198a11c3357cf27de6fef0fd365c5ebb10"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-to-tickets-negative-inline-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-to-tickets-negative-inline-20260808-1",
+          "locator": "evaluations/evidence/to-tickets/to-tickets-negative-inline-1.txt",
+          "sha256": "4688d1744755c2cb57c33df9fe033fe608d6377765f6f4e69eb31e63cdfc89e8"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "to-tickets-negative-inline",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "e014c87d93b88ad469425d6399d2e71c7cd50346fcd1015925e43bb5b80876ac"
     },
     {
       "attempts": [
@@ -3122,7 +3311,7 @@
       "findings": [],
       "fixtureId": "workflow-accepted-transfer",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "fef3e97b74de93666239029f5caa1f2fac2b77635eaf70428d7158e06f7f7f35"
     },
     {
@@ -3159,7 +3348,7 @@
       "findings": [],
       "fixtureId": "workflow-approved-revision-invalidation",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "0efda953e8c965e23898fb8e4b19f515a3c5bea7bbddbd3f8e39179dda4a7471"
     },
     {
@@ -3180,7 +3369,7 @@
       "findings": [],
       "fixtureId": "workflow-authoritative-cancellation",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "0d9bed3d184a99d33da47d524e18ac625f26c3b50db2854bc86024e5c23b0feb"
     },
     {
@@ -3217,7 +3406,7 @@
       "findings": [],
       "fixtureId": "workflow-delegated-change-propagation",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "215b46418ae84c109e37eeef719e55f0f384c28cf9d1bc117e39c6cdcfb5c35a"
     },
     {
@@ -3238,8 +3427,303 @@
       "findings": [],
       "fixtureId": "workflow-direct-inline",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "07aaadf175ae418170ab514ab8670cbdda10c88a338497df88c8193ec665e45b"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-durable-change-evidence-dimensions-20260808t124500z-luna-max-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-durable-change-evidence-dimensions-20260808t124500z-luna-max-1",
+          "locator": "evaluations/evidence/workflow/durable-change-evidence-dimensions-1.txt",
+          "sha256": "daa92e9a1c9cbae37993bb9d975820a1e6c714dce8affc11945106038fa7ce2d"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-change-evidence-dimensions",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "7d92d12d1c6616c02e47186c441ca3006426a45e26722b2f8558462b6de7fa56"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120004z-1",
+        "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120005z-2",
+        "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120006z-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120004z-1",
+          "locator": "evaluations/evidence/workflow/durable-change-legacy-record-1.txt",
+          "sha256": "3a1ff8e1b9bf4b45d54ec4dc891f8fb0a36daf26974eeda7e14a1cce1fb2da4c"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120005z-2",
+          "locator": "evaluations/evidence/workflow/durable-change-legacy-record-2.txt",
+          "sha256": "8ae76881cae6a9a67ce602f47ef0661d445bc667c680155ff48153eff0ac694d"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120006z-3",
+          "locator": "evaluations/evidence/workflow/durable-change-legacy-record-3.txt",
+          "sha256": "fb1e90f57d469a2bda57d01364064d129e83e6f0a5ad47fd3c1d0b255cbe5b96"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-change-legacy-record",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "b10a338a2f727d22aa221b314e77b1286154d690448db46c95a1092cd0213167"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "workflow-durable-conversation-boundary-fresh-luna-max-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "workflow-durable-conversation-boundary-fresh-luna-max-20260808-1",
+          "locator": "evaluations/evidence/workflow/durable-conversation-boundary-1.txt",
+          "sha256": "e8e4ab9d30abfc3eb65060be28a0f91a1169ff7c7940e1a44e67e8d08104c2bb"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-conversation-boundary",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "02cdca41ea20b2bca0c2689d2c33829866c34dee1939879ecabf99dc11d5d335"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "workflow-durable-external-adapter-fresh-luna-max-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "workflow-durable-external-adapter-fresh-luna-max-20260808-1",
+          "locator": "evaluations/evidence/workflow/durable-external-adapter-1.txt",
+          "sha256": "64616c11e7339fe92d3dcf100d6de0ca3abd22124646d95db2e44d70ce0c00b1"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-external-adapter",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "7c44dbe7ddea0900f6bba4ddc39bcdb45b556dcbeaa98f5f5167e20cf2a4fd96"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "workflow-durable-git-without-github-fresh-luna-max-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "workflow-durable-git-without-github-fresh-luna-max-20260808-1",
+          "locator": "evaluations/evidence/workflow/durable-git-without-github-1.txt",
+          "sha256": "9e0061199df2bff283cc3e683cf4698a299c2ba5bb00ea09640530d00e880c09"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-git-without-github",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "c56823064c68e29b4e0c7892629f00f4573239af3acd873eee0ead704df14c11"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "workflow-durable-github-hosted-fresh-luna-max-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "workflow-durable-github-hosted-fresh-luna-max-20260808-1",
+          "locator": "evaluations/evidence/workflow/durable-github-hosted-1.txt",
+          "sha256": "15e6159d800248f04e717a8912a155e6c718dd112638998beccc24f0c78c92a3"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-github-hosted",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "4211af68b562c6d0f55d3d13e52adde443e2530a51fa3204ba5752c547aa2f9f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "workflow-durable-local-markdown-no-git-fresh-luna-max-20260808-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "workflow-durable-local-markdown-no-git-fresh-luna-max-20260808-1",
+          "locator": "evaluations/evidence/workflow/durable-local-markdown-no-git-1.txt",
+          "sha256": "576b2eb9cbb2d338d81fff387d0f1eaad61dd01b9877b54ca97ef7391898b52b"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-local-markdown-no-git",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "05fd6510f8058df990a1bb196f0a42f77c1c6d774ae243f9c272b7a93df7108c"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-durable-parent-delegation-luna-max-20260808t120001z-1",
+        "fresh-workflow-durable-parent-delegation-luna-max-20260808t120002z-2",
+        "fresh-workflow-durable-parent-delegation-luna-max-20260808t120003z-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-durable-parent-delegation-luna-max-20260808t120001z-1",
+          "locator": "evaluations/evidence/workflow/durable-parent-delegation-1.txt",
+          "sha256": "5656df3fcdb807a0758282670cc3f0a5a3ea654b374e7c88db3efe829db472f9"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-durable-parent-delegation-luna-max-20260808t120002z-2",
+          "locator": "evaluations/evidence/workflow/durable-parent-delegation-2.txt",
+          "sha256": "0872a1ef447597f771a91795b713c41ce87ac438611d7de0ce5b4f75fc40955a"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-durable-parent-delegation-luna-max-20260808t120003z-3",
+          "locator": "evaluations/evidence/workflow/durable-parent-delegation-3.txt",
+          "sha256": "21c1ff12423b61039bfd9a34e5a431ec770beeb4b265010d9263a24ec76cb067"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-parent-delegation",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "30c7e176c59cd4b8388a5c92845f05e00b66b8ebd6c34d17638aec11a7f60682"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "f3d1a8c6-5b92-4e70-9d41-2c8f6a7b3e05",
+        "8c4e1f7a-2d63-49b0-a5e8-3f9c7b1d6a24",
+        "d6a2f9b4-7c18-4e53-8b0d-1a6f3c9e5b72"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "f3d1a8c6-5b92-4e70-9d41-2c8f6a7b3e05",
+          "locator": "evaluations/evidence/workflow/durable-record-action-guard-1.txt",
+          "sha256": "b37cc1d8fe055205ec9ef66e45d12e3c7a4a3bd5803f5b2be07aad526f267c3f"
+        },
+        {
+          "attempt": 2,
+          "contextId": "8c4e1f7a-2d63-49b0-a5e8-3f9c7b1d6a24",
+          "locator": "evaluations/evidence/workflow/durable-record-action-guard-2.txt",
+          "sha256": "fc1dab56f9d619a8f73f4527d9f7b6cbc494f9aad964bcf912461fb6139adf7a"
+        },
+        {
+          "attempt": 3,
+          "contextId": "d6a2f9b4-7c18-4e53-8b0d-1a6f3c9e5b72",
+          "locator": "evaluations/evidence/workflow/durable-record-action-guard-3.txt",
+          "sha256": "0f2c013f21ea4acc7ac7c39602c3f1184b89ac64ed67dd5f155a95ec06775bde"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-record-action-guard",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "02f61839859abd5a252d9964fd61cb94cc6302d7dd3456c7b41133fcdd454f23"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-workflow-durable-supplemental-extension-20260808t124600z-luna-max-1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-durable-supplemental-extension-20260808t124600z-luna-max-1",
+          "locator": "evaluations/evidence/workflow/durable-supplemental-extension-1.txt",
+          "sha256": "8d8384b930a3bf031d17983d5898777b33d5c4479c42712f8a1b003586d387b8"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-supplemental-extension",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "c8b80564099f8b366f3fe1cecb9e31b105ad7577e6922cf50c2aa0798162c971"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-1",
+        "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-2",
+        "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-1",
+          "locator": "evaluations/evidence/workflow/durable-waiting-recovery-1.txt",
+          "sha256": "1ad677d1d142b4359c61fb670210fb0ee4897c65220d24b2111889a3c7fa2b5d"
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-2",
+          "locator": "evaluations/evidence/workflow/durable-waiting-recovery-2.txt",
+          "sha256": "cf645e515ca640bc38b343b2953776d77bd3c24c632ff9561f346f5337962d82"
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-3",
+          "locator": "evaluations/evidence/workflow/durable-waiting-recovery-3.txt",
+          "sha256": "ed46dae73683734f727671111d52d0c6f9c465fdb947385f46b9bfd19938fc4c"
+        }
+      ],
+      "findings": [],
+      "fixtureId": "workflow-durable-waiting-recovery",
+      "status": "passed",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
+      "fixtureRevision": "fa2b640d3b278cdc85ef6ceab6987a47b9bd0d7c1451a5f44c6b48d495cf80ac"
     },
     {
       "attempts": [
@@ -3259,7 +3743,7 @@
       "findings": [],
       "fixtureId": "workflow-edge-degraded-persistence",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "8c1696db16be4e6951e5d17c2c558e277539559dde31a9df62fe9ef09f73eafd"
     },
     {
@@ -3280,7 +3764,7 @@
       "findings": [],
       "fixtureId": "workflow-incomplete-context",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "3e8a12c1187514d2cd9f87681cce3c2272701224801b1ed64f0831970f9f7362"
     },
     {
@@ -3301,7 +3785,7 @@
       "findings": [],
       "fixtureId": "workflow-indirect-phase-request",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "e69537b7d448ebe6b1e1b0ea91fb3409b66a8b4dbdef5ff98d8e554025c5a0e9"
     },
     {
@@ -3338,7 +3822,7 @@
       "findings": [],
       "fixtureId": "workflow-interruption-resume",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "8a108b144a0134b0d4b0ea24a5a37d3e18c0ee1fa1c8221f8d955d94ba6f8d70"
     },
     {
@@ -3375,7 +3859,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-authorized-exception",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "3e76c29d0e189a82e5c294eb462a4400b268c2daf3942ef8d97349b2445c3c00"
     },
     {
@@ -3396,7 +3880,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-clarification",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "3161b4092cae2608ede738221677f34e87e90e63ca91d090e00bd26de6e46a07"
     },
     {
@@ -3433,7 +3917,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-correction",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "d1f07cc277690e5e6500c9d8601403aaa3d1d82e342591996b2a88bad7944342"
     },
     {
@@ -3470,7 +3954,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-extension-constraint",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "0d2f1924edf8bd8350f8d727c60bd674e9ce654573f976fee2fd9d8515daf200"
     },
     {
@@ -3507,7 +3991,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-replacement",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "55bdcab509cbdc08c9eff5bbf3b98b4e3fbba0bc3572d4171349cf77040b7db3"
     },
     {
@@ -3544,7 +4028,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-unauthorized-override",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "691012a602921aa0d96b679771a50080bf669f7349163f1c7bb8981a19989b5f"
     },
     {
@@ -3581,7 +4065,7 @@
       "findings": [],
       "fixtureId": "workflow-mid-unrelated-resume",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "fe2c3fd74ac700729810b86041b8f07b35144ddc93cac9f530d78b762693f4fe"
     },
     {
@@ -3602,7 +4086,7 @@
       "findings": [],
       "fixtureId": "workflow-migration-current-state",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "c0ad0d57b2d7169888190e8e44ccb44d3b9d80fb7c9e9b78253e342b7d53254a"
     },
     {
@@ -3623,7 +4107,7 @@
       "findings": [],
       "fixtureId": "workflow-negative-recursion",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "075e404da3c9b90a1497124431004c9641ec907de39cb4343c34fdf82823ad3d"
     },
     {
@@ -3644,7 +4128,7 @@
       "findings": [],
       "fixtureId": "workflow-supplemental-required-failure",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "752df8099318e4317f2fe07a913983475b5f9d06f4309a5ba51913e819324448"
     },
     {
@@ -3665,12 +4149,12 @@
       "findings": [],
       "fixtureId": "workflow-supplemental-review-success",
       "status": "passed",
-      "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+      "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
       "fixtureRevision": "fe2a2d29bb8836eda75f681e25441b1f1c2d15c4bd5222c299ba071ffd5b1196"
     }
   ],
   "schemaVersion": 1,
-  "suiteRevision": "git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d",
+  "suiteRevision": "git:6edba922b604d6641e87a6726eeba1b2123ff683",
   "suiteVersion": "0.0.0",
   "summary": {
     "failed": 0,
@@ -3679,7 +4163,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 114,
-    "passed": 114
+    "fixtures": 134,
+    "passed": 134
   }
 }

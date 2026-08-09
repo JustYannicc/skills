@@ -1,0 +1,23 @@
+Evaluation: to-tickets-direct-cross-domain
+Attempt: 1
+Context: fresh-to-tickets-direct-cross-domain-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+Observed route: Workflow bound community-welcome-r4 and invoked To Tickets for
+Durable decomposition. The coverage map preserved registration confirmation,
+the step-free route, directions, exception recovery, and the five-arrival
+parent seam.
+
+Ticket set:
+- T-ROUTE — facilities owns the observed step-free route; no requirements.
+- T-DIRECTIONS — communications owns registration confirmation and approved
+  large-print and digital directions; no requirements.
+- T-INTEGRATE — event lead owns parent integration and requires T-ROUTE and
+  T-DIRECTIONS.
+
+The exact Ticket-set revision records Result, owner, Authority, Proof seam,
+contains/requires/related context, and the selected Adapter. T-ROUTE and
+T-DIRECTIONS are accepted, unclaimed frontier work. T-INTEGRATE is blocked by
+both requirements. No Ticket was claimed, executed, reviewed, or treated as
+parent completion.

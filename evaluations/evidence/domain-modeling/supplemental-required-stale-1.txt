@@ -1,159 +1,120 @@
 Fresh-context behavioral evaluation — domain-modeling-supplemental-required-stale
 Attempt: 1
-Context ID: fresh-domain-modeling-supplemental-required-stale-20260808t095839z-sol-high-3dc4a60a-ffe5-40a3-9000-c9a97d6166ef
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T09:58:39Z
+Context ID: fresh-domain-modeling-supplemental-required-stale-20260808t113304z-luna-max-1369286d-0a34-4065-a16e-993087cd20dd
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-08T11:33:04Z
+Run mode: one-shot isolated fresh run; no prior response was supplied as runtime input.
 
-Candidate and every runtime locator/hash pair
+Candidate and every runtime-input locator/hash
 
-- Candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-- role: skill
+- Candidate suite revision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- Runtime input role: skill
   - locator: skills/domain-modeling/SKILL.md
   - SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- role: fixture
+- Runtime input role: fixture
   - locator: evaluations/fixtures/domain-modeling/supplemental-required-stale.fixture.yaml
   - SHA-256: 7209d1861651b86d6e2433b5fbd3dc7195c0f75c3ec6d2ae1307771b84d1e447
-- role: governing-skill
+- Runtime input role: governing-skill
   - locator: skills/thinking-in-systems/SKILL.md
   - SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- role: governing-reference
+- Runtime input role: governing-reference
   - locator: skills/thinking-in-systems/references/standard.md
   - SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 
-The evaluator read the four exact runtime inputs completely from the candidate revision before the one-shot execution. The fallback language-record template was not reached: no term was accepted and the write branch remained blocked.
+The four runtime inputs above were read completely at the candidate revision before the one-shot execution. No disclosed reference was required. The fallback language-record template was not loaded because the required source-freshness gap prevented semantic acceptance and any write.
 
 Exact prompt
 
 A workplace policy at canonical revision p5 uses on-call and available inconsistently. A required terminology-evidence Supplemental skill is configured. Establish only what the current evidence supports.
 
-Exact declared fixture environment
+Exact fixture environment
 
 - id: adapter-with-stale-required-supplemental
-- capabilities:
-  - persistence: true
-  - conditionalWrite: true
-  - supplementalSkills: true
-- tools:
-  - selected Adapter
-  - policy revision p5
-  - required terminology-evidence Supplemental skill returning findings for p4
+- capabilities: persistence=true, conditionalWrite=true, supplementalSkills=true
+- tools: selected Adapter; policy revision p5; required terminology-evidence Supplemental skill returning findings for p4
 
-Fresh fixture-controlled tool and runtime events
+Fresh fixture-controlled events
 
-1. `selected Adapter` read
-   - Fresh instance: `policy-language-adapter-stale-3dc4a60a`.
-   - Input: read the canonical workplace-policy language source.
-   - Output: record identity `workplace-policy-availability`; owner `workplace-policy-owner`; canonical locator `adapter://workplace/policy/availability`; exact source revision `p5`; conditional-write guard `ifRevision: p5`.
-   - Effects: none. Conditional-write call count: 0. Write call count: 0.
+1. Selected Adapter read
 
-2. `policy revision p5` read
-   - Source: `adapter://workplace/policy/availability@p5`.
-   - Output: current clauses use `on-call` and `available` inconsistently across assigned response duty, reachability, capacity, and response expectations. Revision p5 alone does not settle the operative boundary.
-   - Candidate meanings exposed by the current source:
-     - A: `on-call` is an assigned response duty; `available` is reachability or capacity without that assignment.
-     - B: the labels are aliases in this policy scope.
-     - C: the p5 clauses use conflicting boundaries, so both labels remain unresolved.
-   - Effects: none.
+   - Fresh adapter instance: policy-language-adapter-stale-1369286d.
+   - Request: read the canonical workplace-policy language context.
+   - Result: record identity `workplace-policy-availability`, owner `workplace-policy-owner`, canonical locator `adapter://workplace/policy/availability`, source revision `p5`, and conditional-write guard `ifRevision: p5`.
+   - Effect audit: no effect; conditional-write calls 0; write calls 0.
 
-3. Required `terminology-evidence` Supplemental invocation
-   - Fresh instance: `terminology-evidence-stale-3dc4a60a`.
-   - Status: configured and required at the `terminology-evidence` Extension point.
-   - Input: question whether `on-call` and `available` are distinct, aliases, or conflicting in `workplace-policy-availability@p5`; scope `adapter://workplace/policy/availability@p5`; candidates A–C; relevant current clauses; canonical source locator and exact revision.
-   - Output identity: `terminology-evidence-finding-3dc4a60a`.
+2. Current policy revision read
+
+   - Source locator: `adapter://workplace/policy/availability@p5`.
+   - Result: the current clauses use `on-call` and `available` inconsistently across assigned response duty, reachability, capacity, and response expectations. Revision p5 does not settle one operative boundary.
+   - Candidate meanings collected from this current source:
+     - A: `on-call` denotes an assigned response duty; `available` denotes reachability or capacity without that assignment.
+     - B: the two labels are aliases in this policy scope.
+     - C: p5 uses conflicting boundaries, so both labels remain unresolved.
+   - Effect audit: none.
+
+3. Required terminology-evidence Supplemental invocation
+
+   - Fresh Supplemental instance: terminology-evidence-stale-1369286d.
+   - Configuration: `terminology-evidence` is configured and required at the Extension point.
+   - Input question: are `on-call` and `available` distinct, aliases, or conflicting in `workplace-policy-availability@p5`?
+   - Input scope: `adapter://workplace/policy/availability@p5`.
+   - Input candidates: A (assigned duty versus reachability/capacity), B (aliases), and C (conflicting p5 boundaries).
+   - Input sources: the relevant p5 clauses, canonical locator, and exact revision p5.
+   - Output identity: `terminology-evidence-finding-1369286d`.
    - Output binding: `adapter://workplace/policy/availability@p4`.
-   - Output finding: p4 used `on-call` for assigned response duty and `available` for reachability or capacity without assignment; a p4 good case and near miss supported that p4 distinction.
-   - Output gap: p5 was not inspected, so the result cannot establish whether the p4 distinction survived or resolves p5's inconsistent clauses.
-   - Effects: none.
+   - Finding: p4 used `on-call` for assigned response duty and `available` for reachability or capacity without assignment; a p4 good case and near miss supported that p4 distinction.
+   - Gap: p5 was not inspected, so the p4 result cannot establish that the distinction survived or resolve p5's inconsistent clauses.
+   - Effect audit: none.
 
-4. Required-evidence eligibility check
-   - Required canonical source revision: `p5`.
-   - Returned Supplemental source revision: `p4`.
-   - Eligible as current required evidence: false.
-   - Result: preserve the p4 finding as historical evidence; keep the p5 conflict unresolved; enter the required-Supplemental capability-gap path; block semantic acceptance and persistence.
+4. Required-evidence freshness check
 
-5. Responsibility and effect audit
+   - Required canonical revision: p5.
+   - Returned Supplemental revision: p4.
+   - Current required evidence eligible: false.
+   - Decision: retain the p4 finding as historical source-bound evidence, keep all three p5 candidates unresolved, expose a required Supplemental source-freshness capability gap, and block semantic acceptance and persistence.
+
+5. Responsibility, state, and effect audit
+
    - Thinking in Systems governed current-source binding, Authority, Paused behavior, proof, and resumption.
    - Workflow retained parent Ownership, integration, and terminal proof.
-   - Domain Modeling retained Responsibility for the bounded terminology result and integration of Supplemental evidence.
-   - No policy-decision capability, forced-write path, or parent-completion path ran.
-   - Durable Adapter effects: none.
+   - Domain Modeling retained responsibility for the bounded terminology result and Supplemental integration.
+   - No policy-decision capability, forced canonical-write path, or parent-completion path ran.
+   - Adapter effects remained empty: 0 conditional-write calls and 0 write calls.
 
-Candidate response — generated once and preserved unedited
+Candidate response — generated once in this isolated fresh context and preserved verbatim
 
-Current result: `on-call` and `available` remain unresolved for canonical policy revision `p5`.
+Current result: the meanings of `on-call` and `available` are unresolved for canonical policy revision `p5`.
 
-The smallest terminology question is whether those labels name distinct states, are aliases, or conflict within `workplace-policy-availability@p5`. The boundary matters to employees, schedulers, and managers interpreting assignment, reachability, capacity, and response expectations. The current policy is `adapter://workplace/policy/availability@p5`; its clauses support all three candidates but do not choose one operative boundary.
+The smallest terminology question is whether the two labels describe separate states, aliases, or conflicting boundaries in `workplace-policy-availability@p5`. The distinction affects how employees, schedulers, and managers interpret assigned response duty, reachability, capacity, and response expectations. The canonical current source is `adapter://workplace/policy/availability@p5`; its clauses support candidates A, B, and C but do not authorize choosing one.
 
-Domain Modeling sent the required `terminology-evidence` Supplemental skill that question, the p5 policy scope, the distinct-state, alias, and conflicting-use candidates, the relevant clauses, and the exact current source locator and revision. It returned `terminology-evidence-finding-3dc4a60a`, bound to `adapter://workplace/policy/availability@p4`. At p4, the finding supported `on-call` as assigned response duty and `available` as reachability or capacity without assignment. Because it did not inspect p5, that finding is retained only as p4 historical evidence; it cannot be treated as current evidence for p5.
+Domain Modeling gave the required `terminology-evidence` Supplemental skill that question, the p5 scope, all three candidates, the relevant clauses, and the canonical locator with exact revision. The returned finding `terminology-evidence-finding-1369286d` is bound to `adapter://workplace/policy/availability@p4`. Its p4 distinction is useful historical evidence, but because it did not inspect p5 it is stale for this required decision and cannot be treated as current evidence.
 
-The required Extension point therefore has a source-freshness capability gap. Candidate A, candidate B, and candidate C remain visible and unresolved, and durable completion is blocked. No Actor has accepted an exact proposal revision, no policy decision was made, and no conditional Adapter write was attempted.
+This is a required Extension-point source-freshness capability gap. I preserve A, B, and C as unresolved p5 candidates; no semantic proposal has been accepted, and durable completion remains blocked. No policy decision was made. The Adapter was not conditionally written or otherwise changed, and no parent completion is claimed.
 
-Preserved state: `terminology-unresolved-required-supplemental-gap`. Route: `required-supplemental-gap-to-workflow`. Domain Modeling still owns integration of the Supplemental evidence and the bounded language result; Workflow retains parent responsibility and terminal proof.
+State: `terminology-unresolved-required-supplemental-gap`.
+Route: `required-supplemental-gap-to-workflow`.
+Domain Modeling owns integration of this Supplemental finding and the bounded language result. Workflow retains parent responsibility and terminal proof.
 
-Exact resumption action: invoke the configured required `terminology-evidence` Supplemental skill again with the preserved question, candidates, clauses, and `adapter://workplace/policy/availability@p5`, requiring a result bound to p5. After it returns, reread the canonical policy through the Adapter. If the source is still p5, integrate only the p5-bound result, test the surviving boundary with a good case and near miss, bind the authorized semantic Actor's acceptance to an exact proposal revision, and obtain separate write Authority before a conditional write guarded by the then-current record revision. If the policy has advanced, discard p5 as current authority, bind the new exact revision, and rerun the required Supplemental evidence against that revision before acceptance or persistence.
+Exact resumption action: invoke the configured required `terminology-evidence` Supplemental skill again with the preserved question, candidates A–C, relevant clauses, and `adapter://workplace/policy/availability@p5`, requiring output bound to p5. When it returns, reread the canonical source through the selected Adapter. If the source is still p5, integrate only a p5-bound finding, test the surviving boundary with one good case and one near miss, bind the semantic Actor's acceptance to an exact proposal revision, reread the language-record guard, and obtain separate write Authority before a conditional write guarded by the then-current record revision. If the canonical source has advanced, discard p5 as current authority, bind the new exact revision, and rerun the required Supplemental evidence against that revision before semantic acceptance or persistence. If the required capability, current source, acceptance, write Authority, or guard is missing or stale, preserve this unresolved state and return the same gap with the next exact check.
 
-Response-generation attestation: the response above was generated exactly once in this isolated fresh context after the declared tool events and is recorded verbatim without retry or editing.
+Fresh-run attestation: this response was generated once after the five fixture-controlled events above in the named context; it was not copied from the previous attempt and was not edited after generation.
 
-Full grading against the exact fixture
+Grading against the exact fixture
 
-Overall result: PASS. No Critical, Major, or Minor finding.
+- PASS — identify the terminology question: the response asks whether the labels are distinct, aliases, or conflicting and names the p5 scope and affected interpretation.
+- PASS — give the Supplemental skill the question scope candidates and relevant sources: event 3 and the response include the question, p5 scope, candidates A–C, relevant clauses, canonical locator, and exact revision.
+- PASS — identify the stale Supplemental evidence: the response binds the finding to p4, states p5 was not inspected, and marks the finding ineligible as current p5 evidence.
+- PASS — preserve the unresolved conflict: all three p5 candidates remain visible and unresolved.
+- PASS — record the required capability gap: the response records the required Extension-point source-freshness gap and blocks durable completion.
+- PASS — return the exact resumption action: the response specifies current-bound reinvocation, post-result Adapter reread, unchanged/advanced revision branches, boundary tests, semantic acceptance, separate write Authority, and conditional guard.
+- PASS — unresolved terminology result with source-bound Supplemental finding and gap: the result contains the p5 conflict, p4-bound finding, required gap, state, route, responsibility, and continuation.
+- PASS — effects are empty: effect audits record zero conditional-write and write calls.
+- PASS — invoked thinking-in-systems, workflow, domain-modeling, and configured terminology-evidence Supplemental skill: the event trace and response identify each role.
+- PASS — not invoked policy decision, forced canonical write, or parent completion: each remains explicitly absent.
+- PASS — proof: p4 binding, p5 canonical source, blocked durable completion, and Domain Modeling responsibility are all explicit.
+- PASS — responsibility: Domain Modeling retains evidence integration; Workflow retains parent responsibility.
+- PASS — route: `required-supplemental-gap-to-workflow`.
+- PASS — state: `terminology-unresolved-required-supplemental-gap`.
+- PASS — forbidden criterion not observed: the stale p4 finding is kept historical, the p5 conflict remains unresolved, and no durable result is claimed.
 
-Expected actions
-
-- PASS — `identify the terminology question`: the response asks whether the two labels are distinct states, aliases, or conflicting uses in the exact p5 scope and names the Actors and blocked interpretation.
-- PASS — `give the Supplemental skill the question scope candidates and relevant sources`: the response and event 3 supply the question, p5 scope, all three candidates, relevant clauses, canonical locator, and exact revision.
-- PASS — `identify the stale Supplemental evidence`: the response states that the returned finding is bound to p4, did not inspect p5, and is ineligible as current p5 evidence.
-- PASS — `preserve the unresolved conflict`: all three current-source candidates remain visible and unresolved.
-- PASS — `record the required capability gap`: the response names a required Extension-point source-freshness gap and blocks durable completion.
-- PASS — `return the exact resumption action`: the response gives the exact current-bound reinvocation, post-result Adapter reread, unchanged/advanced revision branches, semantic acceptance, separate write Authority, and conditional-write guard sequence.
-
-Expected artifacts
-
-- PASS — `unresolved terminology result with source-bound Supplemental finding and gap`: the result names the p5 unresolved state, the p4-bound finding, and the required source-freshness gap.
-
-Expected effects
-
-- PASS — none: the Adapter recorded zero conditional writes and zero writes; the candidate response claims no effect.
-
-Expected invoked capabilities
-
-- PASS — `thinking-in-systems`: it governed source freshness, Authority, Paused state, proof, and resumption.
-- PASS — `workflow`: it retained parent Ownership, integration, and terminal proof and received the gap route.
-- PASS — `domain-modeling`: it bounded the question, collected candidates, invoked and integrated Supplemental evidence, preserved the conflict, and returned the language result.
-- PASS — `configured terminology-evidence Supplemental skill`: event 3 records the exact input and p4-bound output.
-
-Expected non-invocations
-
-- PASS — `policy decision`: the response leaves the p5 policy meaning unresolved and explicitly says no policy decision was made.
-- PASS — `forced canonical write`: zero write calls and the guarded recovery sequence show that no forced write ran.
-- PASS — `parent completion`: the response returns the gap to Workflow and leaves terminal proof with it.
-
-Expected proof
-
-- PASS — `Supplemental finding remains bound to p4`: the exact output locator is `adapter://workplace/policy/availability@p4`, and the response keeps it historical.
-- PASS — `canonical source remains p5`: event 1 and the response bind the current canonical source to p5; no write or revision transition occurred.
-- PASS — `durable completion remains blocked`: the response explicitly blocks durable completion, semantic acceptance, and persistence pending current required evidence.
-- PASS — `Domain Modeling retains responsibility`: the response states this directly and returns only the bounded gap to Workflow.
-
-Expected responsibility
-
-- PASS — `domain-modeling owns integration of Supplemental evidence`: stated directly in the response and evidenced by the integration decision.
-- PASS — `workflow retains parent responsibility`: stated directly; parent completion is not claimed.
-
-Expected route
-
-- PASS — `required-supplemental-gap-to-workflow`: the response records that exact route.
-
-Expected state
-
-- PASS — `terminology-unresolved-required-supplemental-gap`: the response records that exact state.
-
-Forbidden criterion
-
-- PASS — `treat the stale Supplemental finding as current or complete the durable terminology result`: NOT OBSERVED. The finding remains bound to p4, the canonical source remains p5, all candidates remain unresolved, durable completion is blocked, and the Adapter effect counts are zero.
-
-Severity resolution
-
-- Critical findings: none.
-- Major findings: none.
-- Minor findings: none.
+Overall attempt result: PASS.

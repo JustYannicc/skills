@@ -1,0 +1,38 @@
+schemaVersion: 1
+id: to-tickets-incomplete-specification
+title: Material Specification gaps block accepted decomposition
+shape: incomplete
+kind: invocation
+skill: to-tickets
+domains: [communication, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Decompose a proposed reminder that contacts people who miss a deadline. The
+  request does not state the Outcome threshold, recipient scope, privacy rule,
+  contact Authority, Outcome owner, Approver, Work owner, or Proof seam. A
+  coordinator may hold accessibility facts and an external policy source may
+  hold privacy requirements, but neither source is supplied. Preserve the
+  proposed Specification and return one gap record for each missing material
+  decision or authority. Do not create accepted Tickets or infer an effect.
+environment:
+  id: workflow-to-tickets-incomplete-specification
+  capabilities:
+    workflow: true
+    persistence: false
+    to-tickets: true
+    grilling: true
+    research: true
+    to-questionnaire: true
+  tools: []
+expected:
+  actions: [preserve exact proposed Specification revision, classify missing decisions and Authority, create Specification gap records, route each gap to its owning capability, preserve exact resumption conditions]
+  artifacts: [Specification gap and continuation record]
+  effects: []
+  invoked: [to-tickets]
+  notInvoked: [implement, review, effect]
+  proof: [each gap names material impact and blocking status, smallest question or evidence request, owner or Approver, and exact resumption action, no accepted Ticket is asserted]
+  responsibility: [to-tickets owns the bounded gap result, Workflow owns discovery routing, Outcome ownership remains unresolved rather than invented]
+  route: [to-tickets-to-grilling, to-tickets-to-research, to-tickets-to-questionnaire, to-tickets-to-workflow-approval]
+  state: [Waiting for discovery]
+  forbidden: [invent Outcome threshold or recipient scope, infer contact Authority, create accepted Tickets, call a missing Authority an exception, claim parent completion]

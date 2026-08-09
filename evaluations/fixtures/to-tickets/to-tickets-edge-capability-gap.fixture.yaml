@@ -1,0 +1,39 @@
+schemaVersion: 1
+id: to-tickets-edge-capability-gap
+title: A single unit crossing a session and approval boundary needs Durable state
+shape: edge
+kind: invocation
+skill: to-tickets
+domains: [communication, organizational]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Decompose accepted Specification `permit-request-r2`. Its one bounded Result
+  is an exact access-request draft that a coordinator prepares today, a
+  director approves in a later session, and an administrator submits only after
+  the approval is rechecked. The coordinator owns the Ticket and may prepare
+  the draft but cannot approve or submit it. The director is Approver; the
+  Proof seam is the exact approved revision and the service's acceptance of the
+  submission. Durable persistence is required across the session and approval
+  boundary, but the selected Adapter is unavailable. Preserve the complete
+  proposed one-Ticket decomposition and continuation without claiming a
+  durable write or performing the request.
+environment:
+  id: workflow-to-tickets-required-durable-gap
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: false
+    to-tickets: true
+  tools: []
+expected:
+  actions: [recognize session and approval Persistence boundaries, create one proposed Ticket contract, preserve Result owner Authority and Proof seam, record missing Adapter and exact resumption action]
+  artifacts: [proposed Ticket contract, capability-gap continuation]
+  effects: []
+  invoked: [to-tickets]
+  notInvoked: [implement, submit effect, review]
+  proof: [permit-request-r2 and proposed Ticket-set revision are preserved, coordinator preparation director approval and administrator submission remain distinct, no durable locator is claimed]
+  responsibility: [coordinator retains proposed Ticket responsibility, director remains Approver, Workflow owns the capability gap and resumption]
+  route: [to-tickets-to-workflow-capability-gap]
+  state: [Waiting]
+  forbidden: [leave the unit implicit despite a Persistence boundary, invent an Adapter write, infer approval Authority, submit the request, claim completion]

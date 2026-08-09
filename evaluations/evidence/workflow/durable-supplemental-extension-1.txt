@@ -1,0 +1,19 @@
+Workflow durable evaluation evidence
+
+Fixture: workflow-durable-supplemental-extension
+Environment: workflow-durable-supplemental-review
+Suite revision: git:a88536af404a2a58753e88bd209cb586bb01115f
+
+At the configured Workflow review Extension point, load the configured
+Supplemental mapping for the advisory accessibility reviewer. Supply the exact
+parent Specification revision S14 and result revision R9, and record the
+Supplemental identity, pinned scope, reviewed revisions, finding, and evidence
+in the canonical record. The mapping is the configured supplemental-reviewer
+capability in this environment; no unconfigured skill is invoked.
+
+Return the advisory finding to the core Reviewer and integrate it into one
+revision-bound Review record. The core Reviewer returns one integrated verdict,
+and Workflow retains the parent terminal proof, parent responsibility, and core
+completion criterion. The advisory finding enriches Review but cannot replace
+universal Review, become an independent terminal verdict, or transfer parent
+Responsibility.

@@ -1,0 +1,41 @@
+schemaVersion: 1
+fixtureId: workflow-durable-supplemental-extension
+attempt: 1
+contextId: fresh-workflow-durable-supplemental-extension-20260808t124600z-luna-max-1
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T12:46:00Z
+environment:
+  id: workflow-durable-supplemental-review
+  capabilities: { persistence: true, supplementalSkills: true, supplementalReview: true, workflow: true }
+  tools: [supplemental-reviewer]
+observed:
+  actions:
+    - load the configured Extension mapping
+    - supply exact Specification and result revisions
+    - record Supplemental identity scope and evidence
+    - integrate advisory findings into the core Review
+    - preserve the core completion criterion
+  artifacts:
+    - Extension-point mapping
+    - Supplemental Evidence
+    - integrated Review record
+  effects: []
+  forbiddenChecks:
+    - criterion: let advisory findings become an independent terminal verdict
+      evidence: The response binds the configured Supplemental evidence to exact Specification and result revisions, returns it to the core Reviewer for one integrated revision-bound verdict, and keeps Workflow responsible for the parent terminal proof; the advisory finding cannot independently complete or cancel the parent Outcome.
+      observed: false
+  invoked: [thinking-in-systems, workflow, configured-supplemental-reviewer]
+  notInvoked:
+    - replace universal Review
+    - invoke an unconfigured skill
+    - transfer parent Responsibility
+  proof:
+    - the core Reviewer returns one integrated revision-bound verdict and Workflow retains parent responsibility
+  responsibility:
+    - Workflow remains responsible for integration and parent terminal proof
+  route: [durable-supplemental-review-extension]
+  state: [in_review-with-integrated-supplemental-evidence]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-supplemental-extension-1.txt
+  sha256: 8d8384b930a3bf031d17983d5898777b33d5c4479c42712f8a1b003586d387b8

@@ -1,0 +1,12 @@
+Evaluation: to-tickets-incomplete-specification
+Attempt: 1
+Context: fresh-to-tickets-incomplete-specification-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+To Tickets preserved the proposed reminder request and did not accept it as a
+decomposition source. The gap record names missing Outcome threshold,
+recipient scope, privacy rule, contact Authority, Outcome owner, Approver,
+Work owner, and Proof seam. Each row records impact, blocking status, the
+smallest question or evidence request, its owning capability, and the exact
+resumption action through Workflow. No Ticket or effect was invented.

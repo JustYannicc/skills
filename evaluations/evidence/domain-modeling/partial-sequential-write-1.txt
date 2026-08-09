@@ -1,26 +1,22 @@
 Fresh-context behavioral evaluation — domain-modeling-partial-sequential-write
 Attempt: 1
-Context ID: 939bb820-e313-4ea7-82fe-afc31f0b084a
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T09:54:42Z
+Context ID: fresh-domain-modeling-partial-sequential-write-20260808t113053z-luna-max-6afd8dc3-4404-4d15-8b6a-2742fc3e96b2
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-08T11:30:53Z
 
-Candidate and exact runtime identity
+Candidate and exact runtime-input provenance
 
-- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-- Skill locator: skills/domain-modeling/SKILL.md
-- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Fixture locator: evaluations/fixtures/domain-modeling/partial-sequential-write.fixture.yaml
-- Fixture SHA-256: e12bdf92e329ba118e6bf344ca2f65eb636384eab41f192f3117f87cd8e8e3c5
-- Governing-skill locator: skills/thinking-in-systems/SKILL.md
-- Governing-skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Governing-reference locator: skills/thinking-in-systems/references/standard.md
-- Governing-reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- Evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- Runtime role skill — locator: skills/domain-modeling/SKILL.md; SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Runtime role fixture — locator: evaluations/fixtures/domain-modeling/partial-sequential-write.fixture.yaml; SHA-256: e12bdf92e329ba118e6bf344ca2f65eb636384eab41f192f3117f87cd8e8e3c5
+- Runtime role governing-skill — locator: skills/thinking-in-systems/SKILL.md; SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Runtime role governing-reference — locator: skills/thinking-in-systems/references/standard.md; SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 
-Exact prompt
+I read the candidate Domain Modeling skill, the fixture, the complete Thinking in Systems skill, and the complete governing standard before this isolated run. The fixture's named inputs are the selected Adapter, Mina's acceptance of exact proposal garden-language-p8, garden-handbook@handbook-r12, and rota-form@form-r4. No language-record template was needed because the selected Adapter exposed a language record.
 
-Garden language steward Mina accepted two independent entries in proposal garden-language-p8 from garden-handbook@handbook-r12 and rota-form@form-r4. The Adapter cannot batch. The first write guarded at language-r20 succeeds as entry garden-term-31 at language-r21; an external update advances the record to language-r22 before the second write. Preserve exact partial state and recovery.
+Prompt and declared environment
 
-Exact declared fixture environment
+Prompt: Garden language steward Mina accepted two independent entries in proposal garden-language-p8 from garden-handbook@handbook-r12 and rota-form@form-r4. The Adapter cannot batch. The first write guarded at language-r20 succeeds as entry garden-term-31 at language-r21; an external update advances the record to language-r22 before the second write. Preserve exact partial state and recovery.
 
 ```yaml
 id: sequential-adapter-partial-failure
@@ -37,17 +33,11 @@ tools:
   - rota-form@form-r4
 ```
 
-Fresh isolated tool events
+Fresh isolated event history
 
-1. `selected Adapter.readLanguageRecord`
+1. The workflow context routed this bounded language result to Domain Modeling. Thinking in Systems supplied the exact-revision, Authority, stale-state, partial-effect, and recovery constraints; Workflow retained parent responsibility.
 
-Input:
-
-```yaml
-expectedCurrentRevision: language-r20
-```
-
-Test-double result:
+2. The selected Adapter was read before any write. Its result was:
 
 ```yaml
 recordIdentity: garden-language-record
@@ -58,15 +48,9 @@ batchWrite: false
 writeAuthority: garden-language-writer
 ```
 
-The isolated semantic-decision double separately bound garden language steward
-Mina's acceptance to exact proposal `garden-language-p8`. The two source doubles
-exposed `garden-handbook@handbook-r12` and `rota-form@form-r4`. Comparing the
-accepted entries showed no mutual dependency, so sequential guarded writes were
-permitted even though an atomic batch was unavailable.
+Mina's semantic decision Authority was bound to proposal garden-language-p8. The two accepted entries were compared against garden-handbook@handbook-r12 and rota-form@form-r4 and had no dependency on one another. Because the Adapter lacks batchWrite but has conditionalWrite and write Authority, independent sequential writes were feasible.
 
-2. `selected Adapter.conditionalWrite`
-
-Input:
+3. The first conditional write was issued once with the exact record guard and acceptance/source bindings:
 
 ```yaml
 recordIdentity: garden-language-record
@@ -80,7 +64,7 @@ decisiveSources:
   - rota-form@form-r4
 ```
 
-Test-double result:
+The Adapter returned:
 
 ```yaml
 status: committed
@@ -89,24 +73,9 @@ sourceRevision: language-r20
 resultRevision: language-r21
 ```
 
-3. Fixture-controlled external update
+4. The fixture-controlled external update then advanced the same durable record from language-r21 to language-r22 before the required guard reread. This update was not a candidate effect.
 
-Immediately after the first commit and before the required guard reread, the
-isolated Adapter double advanced the durable record from `language-r21` to
-`language-r22`. This was the fixture's named concurrent update, not a candidate
-effect.
-
-4. `selected Adapter.readLanguageRecord`
-
-Input:
-
-```yaml
-recordIdentity: garden-language-record
-afterCommittedEntry: garden-term-31
-expectedRevisionAbsentInterference: language-r21
-```
-
-Test-double result:
+5. The Adapter guard was reread after the first commit. It returned:
 
 ```yaml
 recordIdentity: garden-language-record
@@ -114,92 +83,50 @@ currentRevision: language-r22
 interveningUpdateDetected: true
 ```
 
-5. Stop boundary
+The second-write double was armed to fail the run if called; it received zero calls. The run therefore stopped at the stale guard. It retained garden-term-31 at language-r21 as committed, retained entry 2 of proposal garden-language-p8 as uncommitted with no invented Adapter identity or result revision, recorded current guard language-r22, and left the aggregate terminology change incomplete. No rollback or replay of the committed entry occurred.
 
-The second-write double was armed to fail the evaluation if called. It received
-zero calls. The run preserved `garden-term-31@language-r21` as committed,
-preserved entry 2 of exact proposal `garden-language-p8` as uncommitted, recorded
-the current guard `language-r22`, and kept the two-entry aggregate incomplete.
-No rollback or replay of the committed entry was attempted.
+Candidate response — generated once in the isolated context and preserved unedited
 
-6. One-shot generation
-
-The response below was generated exactly once from the isolated event history.
-It is preserved without editing.
-
-BEGIN UNEDITED CANDIDATE RESPONSE
 Partial terminology update record
 
-Status: `terminology-change-partially-committed` on route `partial-terminology-write-recovery`. The accepted two-entry change is incomplete.
+State: `terminology-change-partially-committed`; route: `partial-terminology-write-recovery`. Mina, the garden language steward, supplied semantic decision Authority for exact proposal `garden-language-p8`; the selected Adapter's `garden-language-writer` supplied separate write Authority. The accepted change remains incomplete.
 
-- Authority and evidence: garden language steward Mina is the semantic decision Authority for exact proposal `garden-language-p8`; the selected Adapter has separate write Authority. The decisive sources remain bound as `garden-handbook@handbook-r12` and `rota-form@form-r4`.
-- Independence and write path: the accepted entries are independent. Because the Adapter cannot batch, the first entry was written conditionally against exact guard `language-r20`.
-- Committed portion: that write succeeded as Adapter entry `garden-term-31`, with source revision `language-r20` and result revision `language-r21`. This entry remains committed; there is no rollback claim.
-- Guard reread: the mandatory reread after the commit returned current revision `language-r22`, exposing an intervening external update and making the post-first-write `language-r21` baseline stale.
-- Uncommitted portion: the second accepted entry from `garden-language-p8` has not been written and has no claimed Adapter identity or result revision. No second or forced write was attempted.
-- Aggregate state: only the first independent entry is durable. The complete two-entry terminology update is not complete.
+- Question and scope: preserve the two accepted garden-language entries and their source bindings while recording the Adapter's partial result. The entries are independent, so sequential guarded writes are allowed when the record guard is current.
+- Decisive sources: `garden-handbook@handbook-r12` and `rota-form@form-r4` remain attached to proposal `garden-language-p8`.
+- Committed entry: conditional write number one was guarded by exact `language-r20` and returned Adapter entry `garden-term-31`, source revision `language-r20`, and result revision `language-r21`. That entry remains committed; no rollback is claimed.
+- Stale guard: the mandatory reread after that commit returned `language-r22`, with an intervening external update. The `language-r21` baseline is stale for the remaining write.
+- Uncommitted entry: proposal entry two has not been written. It has no Adapter identity or result revision, and no forced or speculative second write was attempted.
+- Aggregate proof: only the first independent entry is durable, so the accepted two-entry terminology change and the complete terminology update are both incomplete.
 
-Exact recovery action: read the external change between `language-r21` and current guard `language-r22`; reconcile its effect against only the uncommitted second entry; and revalidate that Mina's acceptance of exact proposal `garden-language-p8` and decisive sources `garden-handbook@handbook-r12` and `rota-form@form-r4` still support that remaining entry. If they do and `language-r22` is still current, conditionally write only the second entry with guard `language-r22`, then reread and record the Adapter's returned revision. If the record has advanced, stop again and repeat reconciliation from the newly observed exact guard. Do not replay `garden-term-31`.
+Exact recovery action: inspect and reconcile the external change between `language-r21` and current guard `language-r22` against only the uncommitted second entry. Revalidate Mina's acceptance of exact proposal `garden-language-p8` and both decisive source revisions `garden-handbook@handbook-r12` and `rota-form@form-r4`. Reread the language record; if `language-r22` is still current and the acceptance remains valid, conditionally write only entry two with `ifSourceRevision: language-r22`, then reread and record the Adapter's returned result revision. If the guard has advanced, stop and repeat the reconciliation from that newly observed exact guard. Never replay `garden-term-31`.
 
-`Domain Modeling` owns this bounded partial-write recovery and remaining terminology persistence. `Workflow` retains parent responsibility, integration, and terminal proof; this result does not complete the parent Outcome. `Thinking in Systems` governs the deterministic guard, truthful partial state, and safe recovery boundary.
-END UNEDITED CANDIDATE RESPONSE
+Domain Modeling owns this bounded partial-write recovery and remaining terminology persistence. Workflow retains parent responsibility, integration, and terminal proof; this partial result does not complete the parent Outcome. Thinking in Systems governs deterministic guard checking, truthful partial state, and the safe recovery boundary.
 
-Full grading against the fixture
+Fixture grading for this one-shot response
 
-Actions
+- Action `verify the entries are independent`: PASS — the event history compares the two accepted entries and records no dependency before selecting sequential writes.
+- Action `write the first entry with an exact guard`: PASS — the first Adapter write uses `ifSourceRevision: language-r20` and returns `garden-term-31@language-r21`.
+- Action `reread the language-record guard`: PASS — the post-commit reread returns exact current revision `language-r22`.
+- Action `stop when the second guard is stale`: PASS — the second-write double receives zero calls after the `language-r22` reread invalidates the `language-r21` guard.
+- Action `preserve committed and uncommitted entries separately`: PASS — entry one has its returned identity/revisions; entry two remains uncommitted without invented identity or revision.
+- Action `return exact recovery action`: PASS — the response names the changed revision range, remaining entry, acceptance/source revalidation, exact new guard, post-write reread, repeated-staleness stop, and non-replay rule.
+- Artifact `partial terminology update record`: PASS — the response is headed with that artifact and records state, proof, and recovery.
+- Effect `first independent entry committed`: PASS — the isolated Adapter returns committed entry `garden-term-31` at `language-r21`.
+- Invoked `thinking-in-systems`: PASS — deterministic guards, Authority, truthful state, and recovery are applied.
+- Invoked `workflow`: PASS — parent responsibility, integration, and terminal proof remain with Workflow.
+- Invoked `domain-modeling`: PASS — the independent-entry and partial-write contract is applied.
+- Not invoked `forced second write`: PASS — zero second-write calls.
+- Not invoked `aggregate completion`: PASS — both the accepted change and complete update are marked incomplete.
+- Not invoked `rollback claim`: PASS — the first commit is retained and no rollback is asserted.
+- Proof `garden-term-31 committed at language-r21`: PASS.
+- Proof `second entry remains uncommitted`: PASS.
+- Proof `current language-r22 guard recorded`: PASS.
+- Proof `garden-handbook@handbook-r12 and rota-form@form-r4 retained`: PASS.
+- Proof `aggregate change remains incomplete`: PASS.
+- Responsibility `domain-modeling owns partial-write recovery`: PASS.
+- Responsibility `workflow retains parent responsibility`: PASS.
+- Route `partial-terminology-write-recovery`: PASS.
+- State `terminology-change-partially-committed`: PASS.
+- Forbidden criterion `claim the two-entry terminology change complete after only one write`: NOT OBSERVED — the response explicitly calls both the accepted two-entry change and complete terminology update incomplete.
 
-- PASS — `verify the entries are independent`: event 1 verifies independence before choosing sequential guarded writes, and the response records that classification.
-- PASS — `write the first entry with an exact guard`: event 2 uses `ifSourceRevision: language-r20` and returns `garden-term-31@language-r21`.
-- PASS — `reread the language-record guard`: event 4 is the mandatory reread and returns exact current revision `language-r22`.
-- PASS — `stop when the second guard is stale`: event 5 confirms the second-write double received zero calls after the `language-r22` reread made `language-r21` stale.
-- PASS — `preserve committed and uncommitted entries separately`: the response has distinct committed and uncommitted portions with no invented identity for entry 2.
-- PASS — `return exact recovery action`: the response specifies the comparison range, remaining entry, acceptance and source revalidation, exact conditional guard, post-write reread, repeated-staleness behavior, and non-replay rule.
-
-Artifacts
-
-- PASS — `partial terminology update record`: the unedited response is explicitly headed with that artifact name and carries the partial state and recovery contract.
-
-Effects
-
-- PASS — `first independent entry committed`: event 2 returns committed entry `garden-term-31` at `language-r21`.
-
-Invoked
-
-- PASS — `thinking-in-systems`: the response applies exact Authority, deterministic guarded state, safe stopping, recovery, and truthful proof boundaries.
-- PASS — `workflow`: the response operates inside Workflow and explicitly returns parent responsibility, integration, and terminal proof to it.
-- PASS — `domain-modeling`: the run follows the skill's independent sequential-write and partial-recovery contract for accepted terminology.
-
-Not invoked
-
-- PASS — `forced second write`: the second-write double received zero calls.
-- PASS — `aggregate completion`: the response explicitly says the accepted two-entry change is incomplete.
-- PASS — `rollback claim`: the response preserves the first commit and explicitly states that no rollback is claimed.
-
-Proof
-
-- PASS — `garden-term-31 committed at language-r21`: tool event 2 and the committed-portion field bind the exact identity and result revision.
-- PASS — `second entry remains uncommitted`: the response assigns no Adapter identity or result revision to entry 2.
-- PASS — `current language-r22 guard recorded`: tool event 4 and the guard-reread field record it exactly.
-- PASS — `garden-handbook@handbook-r12 and rota-form@form-r4 retained`: both source-revision locators remain in the event input, response, and recovery action.
-- PASS — `aggregate change remains incomplete`: the response preserves the aggregate as incomplete after one commit.
-
-Responsibility
-
-- PASS — `domain-modeling owns partial-write recovery`: the response assigns the bounded recovery and remaining terminology persistence to Domain Modeling.
-- PASS — `workflow retains parent responsibility`: the response retains parent integration and terminal proof with Workflow.
-
-Route
-
-- PASS — `partial-terminology-write-recovery`: the exact route is returned.
-
-State
-
-- PASS — `terminology-change-partially-committed`: the exact state is returned.
-
-Forbidden behavior
-
-- PASS — `claim the two-entry terminology change complete after only one write`: the response says both that the accepted change and complete two-entry update are incomplete.
-
-Evaluation result: PASS. Every expected action, artifact, effect, invocation,
-non-invocation, proof item, responsibility, route, state, and forbidden-behavior
-check is evidenced by this fresh run.
+Evaluation result: PASS. One fresh isolated candidate response satisfies every expected action, artifact, effect, invocation, non-invocation, proof, responsibility, route, state, and forbidden-behavior check.

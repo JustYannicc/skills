@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-supplemental-required
 attempt: 2
 contextId: final-sol-review-supplemental-required-2
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:28.000Z
 environment:

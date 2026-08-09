@@ -81,6 +81,31 @@ unit is semantically a Ticket. `to-tickets` materializes Tickets when work has
 multiple independently finishable units, delegation, dependencies,
 concurrency, cross-session execution, or another persistence requirement.
 
+At the boundary, Workflow declares the selected Adapter's `Baseline`,
+`Coordination`, and `Continuation` capability levels and materializes the
+Outcome before child execution or external effects. The canonical Durable
+record set is the Outcome, Tickets, Claims, Evidence references, Continuation,
+transition history, and (when consequence warrants) a Change and Legacy Record.
+Maps, dashboards, projections, and activity views remain derived. Read the
+[Durable mode reference](../skills/workflow/references/durable-mode.md) for the
+adapter matrix, deterministic queue and transition guards, Degraded behavior,
+waiting, migration, delegation, effects, and parent proof bundle.
+
+When the represented scope is a Durable System, Workflow binds its state and
+system transitions to the accepted #35 representation: one human-readable
+Markdown authority with a constrained YAML envelope, the canonical Section 2
+relationship index, and optional read-only projections for named consumers.
+Native hosted Adapters may map the same logical fields without requiring YAML.
+An Adapter that authorizes lifecycle transitions, projections, or effects must
+prove both the `System Record structural validator` and `System Record action
+guard`; malformed, stale, unverified, unavailable, or wrong-revision records
+remain human-readable but cannot authorize machine action. TOML is not a
+baseline dependency and no second writable System Record is created.
+
+If a Baseline Adapter is unavailable, Workflow preserves the complete proposed
+state and exact resumption or accepted-handoff condition in visible Degraded
+mode. It does not claim durable storage, monitoring, scheduling, or completion.
+
 ## Adoption of existing scopes
 
 An existing project, organization, routine, workspace, or other operating scope
@@ -153,8 +178,8 @@ dependency closure, invalidate and propagate only affected evidence, Review,
 approval, completion, and child contracts, preserve parent and unaffected
 ownership, and link a Durable system transition to its Change and Legacy Record
 when material. Durable serialization and Adapter operations remain governed by
-their accepted contracts; the System Record representation remains owned by
-#35.
+their accepted contracts; Durable mode binds system state to the accepted #35
+System Record representation through the selected Adapter.
 
 ## Authority and effects
 

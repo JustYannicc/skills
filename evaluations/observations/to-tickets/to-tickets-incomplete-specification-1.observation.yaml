@@ -1,0 +1,46 @@
+schemaVersion: 1
+fixtureId: to-tickets-incomplete-specification
+attempt: 1
+contextId: fresh-to-tickets-incomplete-specification-20260808-1
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:32:00.000Z
+environment:
+  id: workflow-to-tickets-incomplete-specification
+  capabilities:
+    workflow: true
+    persistence: false
+    to-tickets: true
+    grilling: true
+    research: true
+    to-questionnaire: true
+  tools: []
+observed:
+  actions: [preserve exact proposed Specification revision, classify missing decisions and Authority, create Specification gap records, route each gap to its owning capability, preserve exact resumption conditions]
+  artifacts: [Specification gap and continuation record]
+  effects: []
+  forbiddenChecks:
+    - criterion: invent Outcome threshold or recipient scope
+      evidence: Both remain named missing decisions in the gap record.
+      observed: false
+    - criterion: infer contact Authority
+      evidence: Missing Authority is blocking and routed to approval.
+      observed: false
+    - criterion: create accepted Tickets
+      evidence: No Ticket identity or accepted decomposition is asserted.
+      observed: false
+    - criterion: call a missing Authority an exception
+      evidence: The record classifies it as an unresolved gap.
+      observed: false
+    - criterion: claim parent completion
+      evidence: Workflow retains the unresolved Outcome and discovery responsibility.
+      observed: false
+  invoked: [to-tickets]
+  notInvoked: [implement, review, effect]
+  proof: [each gap names material impact and blocking status, smallest question or evidence request, owner or Approver, and exact resumption action, no accepted Ticket is asserted]
+  responsibility: [to-tickets owns the bounded gap result, Workflow owns discovery routing, Outcome ownership remains unresolved rather than invented]
+  route: [to-tickets-to-grilling, to-tickets-to-research, to-tickets-to-questionnaire, to-tickets-to-workflow-approval]
+  state: [Waiting for discovery]
+rawEvidence:
+  locator: evaluations/evidence/to-tickets/to-tickets-incomplete-specification-1.txt
+  sha256: fcd2283f818b03c61411e63f88ef3d0fb5f23ec6d79e2fc6ac0d06f4aaaf19c4

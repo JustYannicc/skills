@@ -1,0 +1,43 @@
+schemaVersion: 1
+id: to-tickets-direct-cross-domain
+title: Durable cross-domain work has collective coverage and a visible frontier
+shape: direct
+kind: invocation
+skill: to-tickets
+domains: [organizational, physical, communication]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Decompose accepted Specification `community-welcome-r4` into Durable
+  Tickets. Outcome: 40 first-time participants can register, enter the
+  step-free foyer, and find the welcome desk by 09:00 on 18 September. The
+  accepted scope includes registration confirmation, the foyer route, large
+  print and digital directions, and the welcome desk; transport and speaker
+  scheduling are excluded. The event lead owns the Outcome and approves the
+  exact behavior; the access coordinator owns decomposition. Three complete
+  Results are needed: facilities prepares and observes the route, communications
+  prepares the approved directions, and the event lead integrates the two
+  Results and observes five representative arrivals. Route and material
+  constraints are from `venue-access-v3`; every exception must enter recovery
+  before the event. The selected Durable Adapter supports atomic claims. Return
+  the accepted Ticket set, coverage map, and Work frontier without executing.
+environment:
+  id: workflow-to-tickets-cross-domain-durable
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    atomic-claims: true
+    to-tickets: true
+  tools: [selected canonical Adapter]
+expected:
+  actions: [bind accepted Specification revision, build collective coverage map, create three bounded Results, type contains and requires relationships, expose Work frontier]
+  artifacts: [accepted Durable Ticket set, Specification coverage map]
+  effects: []
+  invoked: [to-tickets]
+  notInvoked: [implement, review, scheduler]
+  proof: [community-welcome-r4 and exact Ticket-set revision are bound, route directions and five-arrival Proof seam are covered, facilities and communications Tickets are on the Work frontier, event-lead integration Ticket is blocked by both requirements]
+  responsibility: [each Ticket has one Work owner, access coordinator owns decomposition, event lead retains Outcome integration and terminal-proof Responsibility]
+  route: [workflow-to-tickets]
+  state: [Accepted]
+  forbidden: [invent new participant or venue requirements, treat contains as an execution blocker, create ownerless Tickets, execute or review a Ticket, claim parent completion]

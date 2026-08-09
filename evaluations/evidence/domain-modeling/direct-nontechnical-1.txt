@@ -1,28 +1,33 @@
 Fresh-context behavioral evaluation — domain-modeling-direct-nontechnical
 Attempt: 1
-Context ID: fresh-domain-modeling-direct-nontechnical-20260808t095231z-sol-high-2b123f2c
-Evaluator: gpt-5.6-sol-high-fresh-context
-Recorded at (UTC): 2026-08-08T09:52:31Z
+Context ID: fresh-domain-modeling-direct-nontechnical-20260808t112636z-luna-max-84d2c0f1-6e3a-4b8c-9a71-5d0e2f4c8b93
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-08T11:26:36Z
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-- Skill locator: skills/domain-modeling/SKILL.md
-- Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
-- Fixture locator: evaluations/fixtures/domain-modeling/direct-nontechnical.fixture.yaml
-- Fixture SHA-256: 596ce66ce5393ace376d327e00e6b178139405a6e60842a2dacd925512c33aa8
-- Governing-skill locator: skills/thinking-in-systems/SKILL.md
-- Governing-skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
-- Governing-reference locator: skills/thinking-in-systems/references/standard.md
-- Governing-reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
-- Disclosed-reference locator: skills/domain-modeling/references/language-record-template.md
-- Disclosed-reference SHA-256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
+- Evaluation candidate: git:6edba922b604d6641e87a6726eeba1b2123ff683
+- Role `skill` locator: skills/domain-modeling/SKILL.md
+  - SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+- Role `fixture` locator: evaluations/fixtures/domain-modeling/direct-nontechnical.fixture.yaml
+  - SHA-256: 596ce66ce5393ace376d327e00e6b178139405a6e60842a2dacd925512c33aa8
+- Role `governing-skill` locator: skills/thinking-in-systems/SKILL.md
+  - SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- Role `governing-reference` locator: skills/thinking-in-systems/references/standard.md
+  - SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- Role `disclosed-reference` locator: skills/domain-modeling/references/language-record-template.md
+  - SHA-256: 42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342
+
+All five named runtime inputs were read completely for this isolated run. The
+full Thinking in Systems standard was read before applying its proportional
+systems lens; the disclosed template was read because the Adapter advertises
+nativeLanguageRecord: false.
 
 Exact prompt
 
 A household calendar uses appointment, event, and commitment interchangeably. The household language owner accepted proposal household-language-p5 from calendar-notes@notes-r14 and family-conversation@conversation-r22: event is any calendar entry, appointment is an event arranged with another Actor, and commitment is an event an Actor has agreed to attend. The current language record is language-r7, and the selected Adapter has no native language-record shape. Record the accepted language without changing the schedule.
 
-Exact declared fixture environment
+Exact declared environment
 
 ```yaml
 id: adapter-without-language-shape
@@ -41,191 +46,213 @@ tools:
   - disclosed language record template
 ```
 
-Fresh-run tool events
+Fresh one-shot execution record
 
-1. `selected Adapter.readLanguageContext`
+1. The request was framed as a bounded durable terminology update: preserve the
+   household schedule, make the three labels usable by the shared-calendar
+   Workflow, and keep the prior interchangeable wording visible as history.
+   Thinking in Systems supplied the boundary, Authority, persistence, and proof
+   lens. Workflow routed the terminology blocker to Domain Modeling and retained
+   responsibility for the parent household-calendar Outcome. No schedule,
+   policy, or downstream execution operation was selected.
 
-Input:
+2. The selected Adapter read the canonical language record before any write:
 
-```yaml
-context: household calendar
-sourceRevision: language-r7
-```
+   ```yaml
+   recordIdentity: household-calendar-language-record
+   owner: household language owner
+   canonicalLocator: selected-adapter://household/calendar/language
+   representation: ordinary-note
+   nativeLanguageRecord: false
+   sourceRevision: language-r7
+   writeAuthority: household-record-writer
+   body: Appointment, event, and commitment are used as interchangeable labels.
+   ```
 
-Test-double result:
+   This bound the exact `language-r7` source revision and preserved the
+   Adapter-managed identity, owner, locator, representation, and history.
 
-```yaml
-recordIdentity: household-calendar-language-record
-owner: household language owner
-canonicalLocator: selected-adapter://household/calendar/language
-nativeRepresentation: ordinary-note
-nativeLanguageRecord: false
-sourceRevision: language-r7
-writeAuthority: household-record-writer
-transitionHistory:
-  - revision: language-r7
-    event: current record inspected
-body: Appointment, event, and commitment are used as interchangeable labels.
-```
+3. The accepted semantic decision was checked separately from the write
+   permission. The household language owner accepted exact proposal revision
+   `household-language-p5`; the Adapter's `household-record-writer` was the
+   separate Actor allowed to write the selected record. The decisive mutable
+   sources were retained at `calendar-notes@notes-r14` and
+   `family-conversation@conversation-r22`.
 
-2. `selected Adapter.conditionalBatchWrite`
+4. Domain Modeling adapted `skills/domain-modeling/references/language-record-template.md`
+   to the Adapter's ordinary-note body. It left record identity, owner,
+   canonical locator, transition history, accepting Authority, write Authority,
+   and exact source/result revisions in Adapter-managed metadata rather than
+   duplicating those fields in the note.
 
-The three entries depend on the shared `Event` boundary, so the write used one
-guarded batch. The disclosed language-record template was adapted to the
-Adapter's ordinary-note representation; record identity, owner, locator,
-history, and revisions stayed in Adapter-managed metadata.
+5. Substitution and boundary tests were run before the guarded write:
 
-Input:
+   - A clinic visit entered in the calendar, arranged with the clinic, and
+     accepted by the attending household Actor is a good case for all three
+     labels: Event, Appointment, and Commitment.
+   - A public-holiday entry is a good Event but a near miss for both narrower
+     labels when no household Actor arranged it with another Actor and no Actor
+     agreed to attend.
+   - A repair visit arranged with a plumber but still awaiting the household
+     Actor's agreement is an Event and Appointment, not a Commitment.
+   - A private study block that an Actor agreed to attend is an Event and
+     Commitment, not an Appointment when it was not arranged with another Actor.
 
-```yaml
-recordIdentity: household-calendar-language-record
-canonicalLocator: selected-adapter://household/calendar/language
-ifSourceRevision: language-r7
-writeAuthority: household-record-writer
-templateUsed: skills/domain-modeling/references/language-record-template.md
-semanticDecision:
-  acceptingActor: household language owner
-  acceptedProposalRevision: household-language-p5
-decisiveSources:
-  - locator: calendar-notes
-    inspectedRevision: notes-r14
-  - locator: family-conversation
-    inspectedRevision: conversation-r22
-writes:
-  - representation: ordinary-note
-    body: |
-      # Household calendar language
+   These vary arrangement and accepted attendance independently and show why
+   the labels cannot be interchangeable. `Appointment` and `Commitment` were
+   recorded with the explicit domain relationship `narrower-kind-of Event`,
+   allowing the first case to overlap without collapsing the meanings.
 
-      This language applies when household Actors classify and discuss entries
-      in the shared calendar. It changes terminology only, not calendar entries.
+6. Because the three accepted entries depend on the shared Event boundary, the
+   selected Adapter received one conditional batch write:
 
-      ## Language
+   ```yaml
+   recordIdentity: household-calendar-language-record
+   canonicalLocator: selected-adapter://household/calendar/language
+   ifSourceRevision: language-r7
+   writeAuthority: household-record-writer
+   templateUsed: skills/domain-modeling/references/language-record-template.md
+   acceptingActor: household language owner
+   acceptedProposalRevision: household-language-p5
+   decisiveSources:
+     - calendar-notes@notes-r14
+     - family-conversation@conversation-r22
+   representation: ordinary-note
+   writes:
+     - term: Event
+       meaning: Any entry in the shared household calendar; an intention not entered is outside this scope.
+       scope: Shared household calendar classification and discussion
+       aliases: none accepted
+       avoid: Appointment or Commitment as a generic label for every Event
+       conflicts: supersedes the interchangeable usage at language-r7
+       relationships: none; this is the shared broad term
+       status: resolved
+     - term: Appointment
+       meaning: An Event arranged with another Actor; an Event without that arrangement is outside this meaning.
+       scope: Shared household calendar classification and discussion
+       aliases: none accepted
+       avoid: Appointment for every Event or as a synonym for Commitment
+       conflicts: arrangement with another Actor is not the same boundary as accepted attendance
+       relationships: narrower-kind-of Event
+       status: resolved
+     - term: Commitment
+       meaning: An Event an Actor has agreed to attend; tentative or informational Events are outside this meaning until agreement exists.
+       scope: Shared household calendar classification and discussion
+       aliases: none accepted
+       avoid: Commitment for every Event or as a synonym for Appointment
+       conflicts: accepted attendance is not the same boundary as arrangement with another Actor
+       relationships: narrower-kind-of Event; may overlap Appointment
+       status: resolved
+   ```
 
-      **Event**:
-      Any entry in the shared household calendar. Something discussed or intended
-      but not entered in that calendar is outside this meaning.
+   Test-double result:
 
-      - **Scope:** classification and discussion of shared household calendar entries
-      - **Avoid:** Appointment or Commitment as an interchangeable label for every Event
-      - **Conflicts:** supersedes the interchangeable usage recorded at language-r7
-      - **Relationships:** Appointment and Commitment are each `narrower-kind-of` Event
-      - **Status:** resolved
-      - **Accepted by:** household language owner at household-language-p5
-      - **Evidence:** calendar-notes@notes-r14; family-conversation@conversation-r22
+   ```yaml
+   status: committed
+   recordIdentity: household-calendar-language-record
+   owner: household language owner
+   canonicalLocator: selected-adapter://household/calendar/language
+   sourceRevision: language-r7
+   resultRevision: language-r8
+   transition: guarded terminology batch from language-r7 to language-r8
+   calendarEntriesChanged: 0
+   languageEntriesChanged: 3
+   ```
 
-      **Appointment**:
-      An Event arranged with another Actor. An Event with no such arrangement is
-      outside this meaning.
+7. The Adapter reread the exact result revision and returned
+   `recordIdentity: household-calendar-language-record`,
+   `sourceRevision: language-r8`, and terms `[Event, Appointment, Commitment]`.
+   The reread again reported `calendarEntriesChanged: 0`. The accepted shared
+   language was therefore returned to Workflow as durable evidence; the
+   schedule remained unchanged.
 
-      - **Scope:** classification and discussion of shared household calendar entries
-      - **Avoid:** Commitment when the Actor has not agreed to attend
-      - **Conflicts:** supersedes the interchangeable usage recorded at language-r7
-      - **Relationships:** `narrower-kind-of` Event
-      - **Status:** resolved
-      - **Accepted by:** household language owner at household-language-p5
-      - **Evidence:** calendar-notes@notes-r14; family-conversation@conversation-r22
+Unedited fresh response
 
-      **Commitment**:
-      An Event an Actor has agreed to attend. Tentative or informational Events,
-      and Events that Actor has not agreed to attend, are outside this meaning.
+Recorded the accepted household-calendar vocabulary as an adapted ordinary
+note at `selected-adapter://household/calendar/language`, guarded by
+`language-r7` and committed at result revision `language-r8`. The write
+changed three language entries and zero calendar entries.
 
-      - **Scope:** classification and discussion of shared household calendar entries
-      - **Avoid:** Appointment when the Event was not arranged with another Actor
-      - **Conflicts:** supersedes the interchangeable usage recorded at language-r7
-      - **Relationships:** `narrower-kind-of` Event; may overlap Appointment
-      - **Status:** resolved
-      - **Accepted by:** household language owner at household-language-p5
-      - **Evidence:** calendar-notes@notes-r14; family-conversation@conversation-r22
-```
+**Event** means any entry in the shared household calendar. An intention or
+conversation that never became a calendar entry is outside this scope. There
+are no accepted aliases. Avoid using Appointment or Commitment as a generic
+replacement for every Event. The interchangeable wording at `language-r7` is
+kept as a superseded conflict. Appointment and Commitment are domain-level
+`narrower-kind-of` relationships to Event.
 
-Test-double result:
+**Appointment** means an Event arranged with another Actor. A calendar entry
+that has no arrangement with another Actor is not an Appointment, even when a
+household Actor intends to attend. There are no accepted aliases; avoid using
+Appointment for every Event or as a synonym for Commitment. Its conflict note
+records that arrangement and accepted attendance are distinct boundaries.
 
-```yaml
-status: committed
-recordIdentity: household-calendar-language-record
-owner: household language owner
-canonicalLocator: selected-adapter://household/calendar/language
-sourceRevision: language-r7
-resultRevision: language-r8
-transitionHistory:
-  - from: language-r7
-    to: language-r8
-    event: guarded terminology batch committed
-calendarEntriesChanged: 0
-languageEntriesChanged: 3
-```
+**Commitment** means an Event an Actor has agreed to attend. A tentative or
+informational Event, or one the Actor has not agreed to attend, is not that
+Actor's Commitment. There are no accepted aliases; avoid using Commitment for
+every Event or as a synonym for Appointment. Its conflict note records that
+accepted attendance and arrangement are distinct boundaries; it may overlap an
+Appointment.
 
-3. `selected Adapter.readLanguageContext`
+The household language owner is the semantic decision Authority for exact
+proposal revision `household-language-p5`; `household-record-writer` is a
+separate Adapter write Authority. The durable entry retains
+`calendar-notes@notes-r14` and `family-conversation@conversation-r22`, the
+`language-r7` stale-write guard, and the Adapter result revision `language-r8`.
+Domain Modeling owns this terminology evidence, while Workflow retains the
+parent household-calendar responsibility. No schedule change, policy decision,
+or execution occurred.
 
-Input:
+Grading against the fixture
 
-```yaml
-recordIdentity: household-calendar-language-record
-expectedRevision: language-r8
-```
+- Action — identify the terminology question and accepting Authority: PASS;
+  the run names the three labels, household-calendar scope, household Actors,
+  household language owner, and distinct Adapter writer.
+- Action — read the canonical language record: PASS; the Adapter read returns
+  the canonical locator and exact source revision `language-r7` before writing.
+- Action — bind mutable evidence revisions: PASS; both exact source locators and
+  revisions are retained.
+- Action — distinguish labels with boundary scenarios: PASS; the clinic overlap,
+  public holiday, awaiting-agreement repair, and private study cases separate
+  the relevant dimensions.
+- Action — bind acceptance to the exact proposal revision: PASS;
+  `household-language-p5` is attached to the accepting household language owner.
+- Action — adapt the disclosed template: PASS; the named template is adapted to
+  an ordinary note because nativeLanguageRecord is false.
+- Action — record the accepted entry immediately: PASS; the three mutually
+  dependent entries are committed together after the required checks.
+- Artifact — adapted language entry with meaning, scope, aliases, avoided
+  labels, and conflicts as applicable: PASS; all fields are present for each
+  term.
+- Effect — shared nontechnical language available to Workflow: PASS; the
+  Adapter commit and reread expose Event, Appointment, and Commitment at
+  `language-r8`.
+- Invoked — thinking-in-systems: PASS; its boundary, Authority, durable-state,
+  and proof obligations govern the bounded change.
+- Invoked — workflow: PASS; Workflow routes the blocker and keeps parent
+  responsibility.
+- Invoked — domain-modeling: PASS; the run establishes, tests, and records the
+  bounded terminology.
+- Not invoked — schedule change: PASS; the Adapter reports zero calendar-entry
+  changes.
+- Not invoked — policy decision: PASS; the run records an already accepted
+  proposal and chooses no new policy.
+- Not invoked — execution: PASS; no downstream action was performed.
+- Proof — household language owner acceptance of household-language-p5 distinct
+  from write Authority: PASS.
+- Proof — calendar-notes@notes-r14 and family-conversation@conversation-r22
+  retained: PASS.
+- Proof — language-r7 source guard: PASS.
+- Proof — good case and near-miss scenario: PASS.
+- Proof — template adapted to the Adapter: PASS.
+- Proof — Adapter result revision: PASS; `language-r8` was committed and
+  reread.
+- Responsibility — domain-modeling owns terminology evidence: PASS.
+- Responsibility — workflow retains parent responsibility: PASS.
+- Route — workflow-to-domain-modeling: PASS.
+- State — terminology-resolved-or-conflict-visible: PASS; entries are resolved
+  and the superseded interchangeable conflict remains visible.
+- Forbidden behavior — silently treat appointment, event, and commitment as
+  identical: PASS; distinct tests, exclusions, typed relationships, and
+  separating scenarios make such substitution visibly incorrect.
 
-Test-double result:
-
-```yaml
-recordIdentity: household-calendar-language-record
-canonicalLocator: selected-adapter://household/calendar/language
-sourceRevision: language-r8
-terms: [Event, Appointment, Commitment]
-calendarEntriesChanged: 0
-```
-
-Unedited candidate response generated once
-
-Recorded the accepted shared language without changing the household schedule.
-
-The guarded write updated `household-calendar-language-record` at `selected-adapter://household/calendar/language` from source revision `language-r7` to Adapter result revision `language-r8`. Because the Adapter has no native language-record shape, I adapted the disclosed template into its ordinary-note representation and wrote the three mutually dependent entries in one conditional batch.
-
-The operative entries are:
-
-- **Event** — any entry in the shared household calendar. A plan or intention that has not been entered is outside the term.
-- **Appointment** — an Event arranged with another Actor. A calendar Event with no arrangement involving another Actor is not an Appointment.
-- **Commitment** — an Event an Actor has agreed to attend. A tentative or informational Event is not a Commitment until that Actor agrees to attend.
-
-These labels have no accepted aliases in this scope. `Appointment` and `Commitment` must not be used as generic replacements for every `Event`; when arrangement or agreed attendance is material, the corresponding narrower label should be used. The interchangeable usage found at `language-r7` is retained as a superseded conflict, not silently treated as equivalence. `Appointment` and `Commitment` are each recorded with the domain relationship `narrower-kind-of` `Event`; one entry can be both when both tests are true.
-
-Boundary checks make the distinctions concrete:
-
-- A school-holiday entry is a good `Event`, but is neither an `Appointment` nor a `Commitment` when nobody arranged it with another Actor and nobody agreed to attend it.
-- A plumber visit arranged with the plumber is a good `Appointment`; a private “replace the filter” reminder is the near miss because it was not arranged with another Actor.
-- A neighbourhood meeting that an Actor accepted is a good `Commitment`; the same meeting entered while the invitation is still awaiting a response is the near miss.
-- A clinic visit that was arranged with the clinic and accepted by the household member is both an `Appointment` and a `Commitment`, showing that the narrower categories can overlap without becoming identical.
-
-Semantic acceptance came from the household language owner for exact proposal revision `household-language-p5`. That decision Authority is separate from the `household-record-writer` write Authority used by the Adapter. The durable entry retains decisive mutable sources `calendar-notes@notes-r14` and `family-conversation@conversation-r22`, and the conditional write was guarded by exact source revision `language-r7` before the result was reread at `language-r8`.
-
-`Thinking in Systems` governed the bounded durable terminology change inside the active `Workflow`; `Domain Modeling` owns this language evidence, while `Workflow` retains responsibility for the parent household-calendar Outcome. The Adapter reported `calendarEntriesChanged: 0`, so no schedule change, policy decision, or downstream execution occurred.
-
-Post-response grading against every fixture criterion
-
-- Action — identify the terminology question and accepting Authority: PASS. The response identifies the classification problem, its shared-household-calendar scope and use, the household Actors, the household language owner as semantic decision Authority, and the distinct Adapter writer.
-- Action — read the canonical language record: PASS. Tool event 1 reads the selected Adapter's canonical record at exact revision `language-r7` before any write.
-- Action — bind mutable evidence revisions: PASS. The tool event and response preserve `calendar-notes@notes-r14` and `family-conversation@conversation-r22` exactly.
-- Action — distinguish labels with boundary scenarios: PASS. School holiday, plumber visit versus private reminder, accepted versus unanswered meeting, and the overlapping clinic visit exercise the category boundaries and near misses.
-- Action — bind acceptance to the exact proposal revision: PASS. The household language owner's semantic acceptance is bound to `household-language-p5` in the guarded write and response.
-- Action — adapt the disclosed template: PASS. The transcript names `skills/domain-modeling/references/language-record-template.md` and shows it adapted to the Adapter's ordinary-note representation because no native language-record shape exists.
-- Action — record the accepted entry immediately: PASS. After the canonical read and validation of exact acceptance, evidence, guard, and separate write Authority, tool event 2 commits all three dependent entries in one conditional batch.
-- Artifact — adapted language entry with meaning, scope, aliases, avoided labels, and conflicts as applicable: PASS. Each entry has its bounded meaning and common scope; the response explicitly records that there are no aliases, identifies avoided substitutions, and preserves the superseded `language-r7` conflict.
-- Effect — shared nontechnical language available to Workflow: PASS. The Adapter commits and rereads all three resolved entries at `language-r8`, and the response returns them to Workflow.
-- Invoked — thinking-in-systems: PASS. The response applies bounded Authority, persistence, guarded state, visible proof, and strict non-effects proportionately.
-- Invoked — workflow: PASS. The response names the active Workflow and returns parent responsibility to it.
-- Invoked — domain-modeling: PASS. The run isolates the terminology question, stress-tests boundaries, adapts the language record, and persists the accepted meanings.
-- Not invoked — schedule change: PASS. Both the Adapter result and reread report `calendarEntriesChanged: 0`.
-- Not invoked — policy decision: PASS. The run records the already accepted proposal and does not choose new household policy.
-- Not invoked — execution: PASS. No calendar action or downstream household action is performed.
-- Proof — household language owner acceptance of household-language-p5 distinct from write Authority: PASS. The response and write input distinguish the accepting Actor from `household-record-writer`.
-- Proof — calendar-notes@notes-r14 and family-conversation@conversation-r22 retained: PASS. Both exact mutable evidence bindings appear in the write and final response.
-- Proof — language-r7 source guard: PASS. `ifSourceRevision: language-r7` guards the conditional batch.
-- Proof — good case and near-miss scenario: PASS. The response supplies good cases, near misses, and an overlap case that makes every operative boundary usable.
-- Proof — template adapted to the Adapter: PASS. The transcript names the disclosed template and the ordinary-note target representation.
-- Proof — Adapter result revision: PASS. The commit returns `language-r8`, which is then reread.
-- Responsibility — domain-modeling owns terminology evidence: PASS. The response states this bounded ownership explicitly.
-- Responsibility — workflow retains parent responsibility: PASS. The response explicitly returns parent household-calendar responsibility to Workflow.
-- Route — workflow-to-domain-modeling: PASS. Workflow routes the terminology blocker to Domain Modeling and receives the bounded evidence back.
-- State — terminology-resolved-or-conflict-visible: PASS. All three entries are resolved at `language-r8`, while the prior interchangeable meaning remains visible as a superseded conflict.
-- Forbidden behavior — silently treat appointment, event, and commitment as identical: PASS. The candidate gives distinct inclusion tests, exclusions, narrower-kind relationships, good cases, near misses, and an overlap case; it does not preserve interchangeability.
-
-Overall attempt result: PASS.
+Overall isolated attempt result: PASS.

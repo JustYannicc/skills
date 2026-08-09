@@ -70,6 +70,27 @@ skills:
         - Leave Durable representation to the selected Adapter and bind the resulting locator and exact revision when supplied.
         - Bind Specifications, approvals, evidence, and material-change impact to exact revisions while preserving unaffected accepted work.
         - Expose a specification-enrichment Extension point for configured Supplemental evidence while retaining the core Specification and acceptance boundary.
+  - name: to-tickets
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/engineering/to-tickets/SKILL.md]
+      retainedBehavior:
+        - Gather the accepted plan or Specification before decomposing work.
+        - Prefer narrow, complete tracer-bullet or vertical-slice Tickets with an independently verifiable result.
+        - Declare dependency edges so unblocked work forms a visible frontier.
+        - Treat broad mechanical changes as an expand-migrate-contract sequence when a vertical slice cannot stay coherent.
+        - Present granularity and dependency choices for the responsible owner to accept before publication.
+      changedAssumptions:
+        - Replace codebase, schema/API/UI/test-layer, issue-tracker, triage-label, and local-file assumptions with universal cross-domain Ticket contracts.
+        - Start only from an accepted Specification and carry Result, owner, Authority, Proof seam, containment, requirements, and Workflow context in every Ticket.
+        - Materialize Tickets only when delegation, dependencies, concurrency, cross-session work, meaningful risk, or another Persistence boundary warrants Durable coordination; a bounded Inline unit may remain implicit.
+        - Use adapter-neutral `contains`, `requires`, and `related` relationships, with external dependencies represented by Continuation records rather than ownerless Tickets.
+        - Prove collective coverage of accepted Specification requirements and return material gaps to Workflow without editing accepted intent.
+        - Compute and expose the accepted Work frontier and Recovery queue without claiming, executing, reviewing, or completing the parent Outcome.
+        - Add the configured `workflow.decomposition` (decomposition-enrichment) Supplemental Extension point with revision-bound evidence and advisory-versus-required failure behavior.
   - name: domain-modeling
     provenance:
       strategy: adapted

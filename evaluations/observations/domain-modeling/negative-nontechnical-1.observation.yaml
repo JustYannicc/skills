@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-negative-nontechnical
 attempt: 1
-contextId: fresh-domain-modeling-negative-nontechnical-sol-high-20260808t095434z-cc9dde67-03c5-445c-bab2-df77f8307184
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T09:54:34Z
+contextId: fresh-domain-modeling-negative-nontechnical-luna-max-20260808t113017z-31e18cfe-f10f-4abd-95d0-48dfd8a21f34
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:30:17Z
 environment:
   id: policy-decision-with-clear-language
   capabilities:
@@ -21,7 +21,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invoke Domain Modeling merely because the responsibility boundary is undecided
-      evidence: The unedited one-shot response says the terms are already operative, classifies the unresolved choice as policy, explicitly excludes Domain Modeling, and leaves the glossary unchanged.
+      evidence: The one-shot response preserves all four operative terms, identifies the unresolved choice as a board policy and Authority allocation, explicitly excludes Domain Modeling, and leaves the gap visible for Workflow.
       observed: false
   invoked:
     - thinking-in-systems
@@ -42,7 +42,7 @@ observed:
 grading:
   verdict: pass
   retry: false
-  rationale: The one-shot response preserved the operative language, exposed the unauthorized policy choice, returned the decision gap to Workflow, and performed no policy, refund, glossary, or durable-record effect.
+  rationale: The single fresh response recognized that the supplied terms are operative, routed the unresolved refund-approval Authority allocation to Workflow, preserved the missing decision Authority visibly, and made no policy, refund, glossary, or durable-record effect.
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md
@@ -58,4 +58,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/negative-nontechnical-1.txt
-  sha256: 90cfb0e5e3b15a7d2f7cf59f9f5bdf161e64cc5d4742a69988ad43d8753c383a
+  sha256: fc111298b4d627e46c955d17581573f8d753c71722eaa3ef33d7784a7023e5ee

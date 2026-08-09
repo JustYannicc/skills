@@ -1,0 +1,33 @@
+schemaVersion: 1
+fixtureId: workflow-durable-github-hosted
+attempt: 1
+contextId: workflow-durable-github-hosted-fresh-luna-max-20260808-1
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T13:03:00Z
+environment:
+  id: workflow-github-hosted
+  capabilities: { persistence: true, github: true, nativeIssues: true, nativeDependencies: true, nativeChecks: true, atomicClaim: unknown, scheduling: unknown, workflow: true }
+  tools: [github]
+observed:
+  actions:
+    - verify the GitHub Adapter's actual Baseline and optional capability levels
+    - map one parent issue to the Outcome and child records to Tickets
+    - distinguish Work ownership from Claims
+    - bind checks or artifacts as Evidence
+    - preserve native locators and exact revisions
+  artifacts: [native Outcome and Ticket locators, capability declaration, revision-bound Evidence and transition history]
+  effects: []
+  forbiddenChecks:
+    - criterion: claim GitHub conformance from connectivity alone
+      evidence: The raw evidence requires verification of the GitHub Adapter's actual Baseline and optional capability levels and keeps every unsupported operation visible.
+      observed: false
+  invoked: [thinking-in-systems, workflow]
+  notInvoked: [assume assignee means Claim, create a shadow Local Markdown authority, infer scheduling from GitHub]
+  proof: [the native records remain one writable authority and every unsupported operation is visible]
+  responsibility: [Workflow retains parent integration and terminal proof while child owners retain bounded responsibility]
+  route: [durable-github-native-adapter]
+  state: [durable-native-records-or-visible-capability-gap]
+rawEvidence:
+  locator: evaluations/evidence/workflow/durable-github-hosted-1.txt
+  sha256: 15e6159d800248f04e717a8912a155e6c718dd112638998beccc24f0c78c92a3

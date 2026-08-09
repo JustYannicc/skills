@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: domain-modeling-supplemental-required-unavailable
 attempt: 1
-contextId: fresh-domain-modeling-supplemental-required-unavailable-20260808t100003z-sol-high-0f4cf217-72cd-4763-a14d-34185d80e8db
-suiteRevision: git:f9e8d3c94f8f13fef156aa3e4695fbde2e4ed02d
-evaluator: gpt-5.6-sol-high-fresh-context
-recordedAt: 2026-08-08T10:00:03.000Z
+contextId: fresh-domain-modeling-supplemental-required-unavailable-20260808t113323z-luna-max-fea0eca7-6bf2-460e-b574-99db8c6b6642
+suiteRevision: git:6edba922b604d6641e87a6726eeba1b2123ff683
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-08T11:33:23.300Z
 environment:
   id: required-supplemental-unavailable
   capabilities:
@@ -26,7 +26,7 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: complete the durable terminology result without the required Supplemental evidence
-      evidence: The one-shot response pauses before semantic acceptance or persistence, preserves three unresolved candidates against `care-policy@policy-r8` and `contact-register@register-r11`, reports no accepted proposal or result revision, and records that no conditional Adapter write was called.
+      evidence: The fresh response pauses before semantic acceptance or persistence, keeps three candidates bound to `care-policy@policy-r8` and `contact-register@register-r11`, reports no accepted proposal or result revision, and records that the conditional Adapter write was not called.
       observed: false
   invoked: [thinking-in-systems, workflow, domain-modeling]
   notInvoked: [unavailable Supplemental skill, canonical Adapter write, parent completion]
@@ -54,4 +54,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-required-unavailable-1.txt
-  sha256: 87d93c1040f30ef4ca90fb29cdf28fb063fa232f5dcfc34bd432acb4978f05dd
+  sha256: fd5e1a9bce4f11aa04339151de0dc8b0a830fe471a8583f4b60432da601eea9e

@@ -1,0 +1,14 @@
+Evaluation: to-tickets-edge-supplemental
+Attempt: 1
+Context: fresh-to-tickets-edge-supplemental-20260808-1
+Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Evaluator: deterministic-candidate-observer
+
+To Tickets built draft revision tickets-d1 from inventory-cutover-r3, then
+Workflow invoked the configured advisory risk-audit at the
+workflow.decomposition decomposition-enrichment Extension point. The input
+included the exact Specification revision, warehouse constraints, dependency
+graph, and Proof obligations. The returned evidence audit-r7 proposed no
+change. To Tickets recorded the source/version, inspected revision, evidence,
+limitations, and disposition while retaining collective acceptance and doing
+no migration work.
