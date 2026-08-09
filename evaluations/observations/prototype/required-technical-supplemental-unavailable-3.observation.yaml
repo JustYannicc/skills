@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-required-technical-supplemental-unavailable
 attempt: 3
 contextId: fresh-sol-high-r2-prototype-required-technical-supplemental-unavailable-3
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:03:08Z
 environment:
@@ -39,4 +39,4 @@ observed:
   state: [waiting-for-required-technical-prototype]
 rawEvidence:
   locator: evaluations/evidence/prototype/required-technical-supplemental-unavailable-3.txt
-  sha256: 3ff20fcad8661396f29a54d530600a41515c43aab936226e7d32d9c5dd447967
+  sha256: 51c7d5bbf8ddc386af8d2eef87a0b7c414ebcb17e5ede5cf8c1121ce77575de9

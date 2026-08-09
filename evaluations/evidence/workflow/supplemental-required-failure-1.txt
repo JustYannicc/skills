@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Outcome O21 is not verified, and the public notice will not be issued.
 
 Review is incomplete at `workflow.review`. The exact pending notice revision remains unchanged in its canonical record; this interaction neither reconstructs nor modifies it. Required evidence is missing because the configured legal-language Supplemental review is unavailable. The work is therefore in visible Degraded mode, `waiting-for-required-review`. No public-notice effect has occurred.

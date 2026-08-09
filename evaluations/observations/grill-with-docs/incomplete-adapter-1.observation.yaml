@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-incomplete-adapter
 attempt: 1
 contextId: fresh-grill-with-docs-incomplete-adapter-1-k7m4qx
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:43:16Z
 environment:
@@ -40,4 +40,4 @@ observed:
   state: [waiting-for-record-access]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/incomplete-adapter-1.txt
-  sha256: 76b048a8d547b8cda1e2ce049647f9a64ca04a7b507fc309a7d89016a65f57d1
+  sha256: 0f7517eca6774d1ec263074cfa3ef2faba8a40841a2195e5a564845bba9f3490

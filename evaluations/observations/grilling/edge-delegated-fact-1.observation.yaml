@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-edge-delegated-fact
 attempt: 1
 contextId: fresh-grilling-edge-delegated-fact-v12-1-b29b368c-01b3-4a0d-9eb6-18b4c3d232d7
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 contractRevision: git:7e5b067bc0de2b0ded0841a243950717602be535
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:47:26Z
@@ -65,4 +65,4 @@ grading:
   rationale: The bounded delegation and current frontier satisfy every expected action and proof requirement without triggering a forbidden behavior.
 rawEvidence:
   locator: evaluations/evidence/grilling/edge-delegated-fact-1.txt
-  sha256: a3120780b35451b91ddd1e014b24f957a1396bc5d101cb6d059888f136e7d4ca
+  sha256: 01145ee325f096d01f6dbfd5fa18bfa8df076f0eb3281eeb565f2ddfa3bd51c9

@@ -1,1 +1,2 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 I can’t review or approve the rollout yet because there is no accepted Outcome or Specification to review against and no rollout-plan revision to inspect. Please provide the accepted Outcome, including its acceptance criteria or proof obligations, and the exact rollout-plan revision. If approval Authority is not already established there, identify the approver. I’ll keep this request at the Review prerequisite gate and resume Review against those exact revisions; no approval or external effect has occurred.

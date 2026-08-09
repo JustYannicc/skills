@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-irreducible-fog
 attempt: 1
 contextId: fresh-to-spec-irreducible-fog-sol-high-20260806-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -37,4 +37,4 @@ observed:
   state: [Operating under fog]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-irreducible-fog-1.txt
-  sha256: 9fd50c826e20b4bc0b6297a0bb5f7e2d049ce8d3eb221ebbe9c9515d61355f18
+  sha256: f384de52e1fb06c80418447c52f522b39448e2d124a4dfe6ec9ac99e794d397b

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-supplemental-required-missing
 attempt: 1
 contextId: final-sol-review-supplemental-required-missing-resolution-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:30:00.000Z
 environment:
@@ -49,4 +49,4 @@ observed:
     - in_review-to-waiting
 rawEvidence:
   locator: evaluations/evidence/review/supplemental-required-missing-1.txt
-  sha256: 113ec2d4d195a665541c68e9abb69e710f9d891108959bab182781b4fbff6276
+  sha256: 5020195a197d8720baa78351ee94af5e86e1e0ac6180e4f41a17d20a06d2f72e

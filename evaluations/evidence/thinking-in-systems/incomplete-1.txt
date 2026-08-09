@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 ## Governance assessment — waiting for authority
 
 **Preserved request:** “Change the team's reminder system so it automatically contacts anyone who misses a deadline.”

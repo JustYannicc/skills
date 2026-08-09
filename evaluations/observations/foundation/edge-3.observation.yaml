@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-edge
 attempt: 3
 contextId: fresh-edge-3
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: deterministic-foundation
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [awaiting-handoff-acceptance]
 rawEvidence:
   locator: evaluations/evidence/foundation/edge-3.txt
-  sha256: 1089b0309225620c478c13a47faa50ffda3bb470ae72a7c88f0fa586c0278e87
+  sha256: 0722511b53eb1991e81e8f471ef0b90193e01c768c55c8c2b1df9d06f8dcdc4f

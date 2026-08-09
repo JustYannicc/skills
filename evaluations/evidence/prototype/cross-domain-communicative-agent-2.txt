@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 # Prototype result — private explanation rehearsal
 
 **Learning question:** Can one private rehearsal with a sandboxed assistant make a difficult-plan explanation clearer without increasing the speaker's immediate emotional burden?

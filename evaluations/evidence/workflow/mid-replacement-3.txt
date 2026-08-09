@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Replacement recorded on route `midwork-explicit-replacement`. I applied Thinking in Systems inside the existing Workflow context; I did not create a second parent Workflow.
 
 ## Supersession record

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-configured-technical-supplemental
 attempt: 1
 contextId: fresh-sol-high-r2-prototype-configured-technical-supplemental-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:01:26Z
 environment:
@@ -39,4 +39,4 @@ observed:
   state: [integrated-technical-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/configured-technical-supplemental-1.txt
-  sha256: 84efa4e54285ba5b7a8246932730da2ce354c7e5882092a99afa1491f856a69d
+  sha256: 235dc635f81d524a0924614b7fd612eb0f9d381dfff6d17ac79a691e7cec9884

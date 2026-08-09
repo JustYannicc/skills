@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 **Workflow → Research**
 
 - **External uncertainty:** the factual claim needed to make the next decision has not been established from an authoritative source.

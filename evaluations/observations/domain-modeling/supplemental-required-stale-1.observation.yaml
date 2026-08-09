@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-supplemental-required-stale
 attempt: 1
 contextId: fresh-domain-modeling-supplemental-required-stale-20260809t110610z-luna-max-2350205a-200c-4467-88af-1fcb4ca6021b
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T11:06:10Z
 environment:
@@ -63,4 +63,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-required-stale-1.txt
-  sha256: fd2ab52cf8fbefb51af2384c9e481e147fcede9d9cffaada2eaea122d393add0
+  sha256: ebecdd075108e041924d70c147b27972858e2715eddcc3a91de12ab8bf8f5743

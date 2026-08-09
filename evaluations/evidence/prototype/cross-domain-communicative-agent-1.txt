@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Prototype result
 
 Learning question: In one private rehearsal, can a sandboxed assistant help a person make a difficult explanation easier to understand without increasing the person's immediate emotional burden?

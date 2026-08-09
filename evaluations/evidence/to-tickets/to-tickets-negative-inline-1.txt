@@ -1,11 +1,7 @@
-Evaluation: to-tickets-negative-inline
-Attempt: 1
-Context: fresh-to-tickets-negative-inline-20260808-1
-Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
-Evaluator: deterministic-candidate-observer
-
-Thinking in Systems and Workflow classified the typo correction as one bounded
-synchronous unit. The conversation carried its implicit Ticket, exact Result,
-owner, Authority, Proof seam, and immediate Review. No To Tickets invocation,
-Adapter write, durable record, or frontier was created. The corrected sentence
-was returned and inspected.
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Evaluation
+Attempt 1
+Context fresh-to-tickets-negative-inline-editorial-20260809-1
+Observed candidate
+Evaluator gpt-5.6-luna-max-fresh-context
+The cat sat on the mat.

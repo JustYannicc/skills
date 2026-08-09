@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Candidate suite revision: git:a88536af404a2a58753e88bd209cb586bb01115f
 Fixture: workflow-durable-change-legacy-record
 Attempt: 2

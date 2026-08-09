@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Constraint C2 is a material Constraint change inside the existing Workflow for Outcome O7. It changes access eligibility, so S5 remains preserved as history and the active Specification advances to revision S6. This does not create a new parent Workflow or transfer O7 ownership.
 
 ## S5 → S6 change proposal

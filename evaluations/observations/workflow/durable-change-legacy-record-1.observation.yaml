@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-change-legacy-record
 attempt: 1
 contextId: fresh-workflow-durable-change-legacy-record-luna-max-20260808t120004z-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T12:00:04Z
 environment:
@@ -38,4 +38,4 @@ observed:
   state: [change-proposed-awaiting-authority-or-pilot]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-change-legacy-record-1.txt
-  sha256: 3a1ff8e1b9bf4b45d54ec4dc891f8fb0a36daf26974eeda7e14a1cce1fb2da4c
+  sha256: e9071906dab18718767ee0fc93a6929a01d8222ab8cfab5bd81f21a163913292

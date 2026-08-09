@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-indirect
 attempt: 1
 contextId: fresh-to-spec-indirect-sol-high-20260806-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-indirect-1.txt
-  sha256: 1eeda6f10b314b38d1d11e5a340b5db7fe56be41122ef6b45c8a3e0788a78052
+  sha256: 456fdd7ea700e53d3c95672dd2b7374a45e6eb5ab4619e1ad4d23a72940148f7

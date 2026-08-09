@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-unrelated-resume
 attempt: 3
 contextId: fresh-workflow-mid-unrelated-resume-1db9f1f-20260806T182615Z-sol-high-3
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:26:15.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [original-outcome-resumed]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-unrelated-resume-3.txt
-  sha256: ba42b2345288fa50d128e21158013a0ad8cb99aa30bb7abeb99b0740ad6631e9
+  sha256: c66fdd1d9bffa42c5be57ef5c623297179e452515577c2ef61b5b465508090f5

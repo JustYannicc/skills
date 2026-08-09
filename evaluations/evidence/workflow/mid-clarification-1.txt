@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Clarification recorded in the active evidence trail: here, “warm” means friendly and concise. This resolves an ambiguity only; the accepted Outcome, audience, scope, Constraints, Authority, proof seam, and treatment of existing state are unchanged.
 
 Specification S1 and the current result revision remain in force, with Workflow retaining the same parent Outcome owner. I’ll continue the two-sentence welcome-note rewrite from S1. No external effect has occurred.

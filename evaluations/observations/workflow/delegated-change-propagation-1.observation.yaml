@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-delegated-change-propagation
 attempt: 1
 contextId: workflow-delegated-change-propagation-1db9f1f-sol-high-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:10:43Z
 environment:
@@ -30,4 +30,4 @@ observed:
   state: [affected-child-revised-unaffected-child-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/delegated-change-propagation-1.txt
-  sha256: 26a1584a05c8e12025ecf6639c62cb9c6493e201da2960f926118f4290d5fb64
+  sha256: ca3678d00ff0a72d64d9b2fc2458867ab1d0f784e489962e5e2668276355a72e

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-edge-boundary
 attempt: 1
 contextId: fresh-to-spec-edge-boundary-sol-high-20260806-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -34,4 +34,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-edge-boundary-1.txt
-  sha256: 691f46dd0918a5563d7ea2a62a97f2af8de82b24cbc52b6756698de478511b6c
+  sha256: f2908cebc97a3f763f48a8e2d78aa02c61565637324547d491279b23a85b83a3

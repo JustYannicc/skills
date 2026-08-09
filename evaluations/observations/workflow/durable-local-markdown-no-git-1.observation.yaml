@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-local-markdown-no-git
 attempt: 1
 contextId: workflow-durable-local-markdown-no-git-fresh-luna-max-20260808-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T13:04:00Z
 environment:
@@ -34,4 +34,4 @@ observed:
   state: [accepted-tickets-frontier]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-local-markdown-no-git-1.txt
-  sha256: 576b2eb9cbb2d338d81fff387d0f1eaad61dd01b9877b54ca97ef7391898b52b
+  sha256: 27ee93ff84175dfdd09514278aeeb4792c6035d5efad021cb9856cb683b0306c

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-ui-interaction-quality
 attempt: 1
 contextId: final-sol-review-ui-interaction-quality-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:30.000Z
 environment:
@@ -53,4 +53,4 @@ observed:
     - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/ui-interaction-quality-1.txt
-  sha256: d6c08444e2e66322402aba88616554018cb03dff4c89b8381ff0c0595826b024
+  sha256: d1dbc43c1141d46366e187ab55845f2880371074d20c2c92057f02414a6f3545

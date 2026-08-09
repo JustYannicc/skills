@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Fresh-context behavioral evaluation — grilling-direct-frontier-format
 Attempt: 2
 Context ID: fresh-grilling-direct-frontier-format-sol-high-2-caca5c66-a73a-4ee6-9483-0124492446cf

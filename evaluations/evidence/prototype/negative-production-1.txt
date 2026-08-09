@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Learning question: Can the reminder policy's trigger, recipient selection, notice clarity, and recipient burden be evaluated without activating the policy for employees or sending live notices?
 
 Blocked status: Prototype is boundedly invoked only to evaluate the experiment boundary and preserve the blocked result. Enabling the policy for every employee and sending notices today are live production effects outside Prototype. I did not call policy administration or messaging tools, mutate the live policy, send a notice, or run a simulation.

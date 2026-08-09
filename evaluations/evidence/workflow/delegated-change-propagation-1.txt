@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Classify C2 as a material Constraint change within the existing O7 Workflow. It changes the accepted access-eligibility contract, so preserve S5 as history and propose Specification S6; do not open a new parent Workflow.
 
 ## S5 → S6 change proposal

@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-edge-revision-preservation
 attempt: 1
-contextId: fresh-to-tickets-edge-revision-preservation-20260808-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
-evaluator: deterministic-candidate-observer
-recordedAt: 2026-08-08T12:38:00.000Z
+contextId: fresh-to-tickets-edge-revision-preservation-editorial-20260809-1
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:50:00.000Z
 environment:
   id: workflow-to-tickets-revision-preservation
   capabilities:
@@ -40,4 +40,4 @@ observed:
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-revision-preservation-1.txt
-  sha256: 164e33fdc75fce63cc6f6c27990c53c7b97431ac5b4e0e8e6fca15d27d31dd2a
+  sha256: 6bf5850ac3b159d276e13b30df75348af8abcf721cb0105df03fc900407fc06c

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-authoritative-cancellation
 attempt: 1
 contextId: fresh-workflow-authoritative-cancellation-1db9f1f-sol-high-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:07:10.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [cancelled]
 rawEvidence:
   locator: evaluations/evidence/workflow/authoritative-cancellation-1.txt
-  sha256: 9fad1420fb5865c8f38711af173c0c9abaa1710280132b59ac88f13882e49e82
+  sha256: 84f57c1376818a27165472599ce52701f4619cb7afe41b542e57f878ae096798

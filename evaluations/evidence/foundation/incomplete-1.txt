@@ -1,1 +1,2 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 The message has not been sent: the recipient and approved text are missing. Please provide the recipient and exact message you approve for sending; the workflow remains responsible and will resume once both are supplied.

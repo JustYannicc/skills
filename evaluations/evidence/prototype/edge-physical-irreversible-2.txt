@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Blocked Prototype result
 
 Learning question: Can a reversible staged trial show that hypothetical disposal of the suspected batch clears the storage risk, without handling or destroying the live batch?

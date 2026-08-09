@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 I can’t actively monitor this: this environment has no monitoring or scheduling capability.
 
 **Continuation record — awaiting handoff acceptance**

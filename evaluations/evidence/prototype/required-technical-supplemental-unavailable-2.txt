@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Learning question: Is the proposed technical interaction understandable to its intended user?
 
 Status: Degraded and blocked before setup. Workflow state is `waiting-for-required-technical-prototype`; the learning question remains unanswered.

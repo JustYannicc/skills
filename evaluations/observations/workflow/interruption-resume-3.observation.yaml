@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-interruption-resume
 attempt: 3
 contextId: workflow-interruption-resume-1db9f1f-sol-high-3
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:11:45Z
 environment:
@@ -30,4 +30,4 @@ observed:
   state: [paused-with-continuation]
 rawEvidence:
   locator: evaluations/evidence/workflow/interruption-resume-3.txt
-  sha256: 9c0ce5bc471b4929cece63872b8bca32d7cf0f96981dc7bbcffae4bcef4bd2dc
+  sha256: 4c0d17f799bcffabb9461379d5a5d0d4079e3a5b5fe6c2215d3ea02e11f6d678

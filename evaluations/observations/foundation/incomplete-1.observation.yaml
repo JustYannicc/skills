@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-incomplete
 attempt: 1
 contextId: fresh-incomplete-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: deterministic-foundation
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-input]
 rawEvidence:
   locator: evaluations/evidence/foundation/incomplete-1.txt
-  sha256: f03b477690daf303f8789733a62dc4badfe7e2a56b7832a3f19e5c54af2bbd1b
+  sha256: 31986558ffcaa06c2b7ffd44a95050c64d63e424f7c8f2d01d2fa0bca92d1473

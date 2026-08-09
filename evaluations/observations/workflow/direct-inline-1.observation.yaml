@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-direct-inline
 attempt: 1
 contextId: workflow-direct-inline-1db9f1f-sol-high-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:05:01Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [verified-complete]
 rawEvidence:
   locator: evaluations/evidence/workflow/direct-inline-1.txt
-  sha256: f57d8375b74fdd66817772b8ee55b8ea04b9692e0717c8fa87f2770bc20fe2ce
+  sha256: 5bc3d5f7fb43214cb4a3128d25e609e7036be089aba883ee5c0602451ea9239f

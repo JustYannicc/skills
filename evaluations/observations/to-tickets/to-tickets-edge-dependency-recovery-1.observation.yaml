@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-edge-dependency-recovery
 attempt: 1
-contextId: fresh-to-tickets-edge-dependency-recovery-20260808-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
-evaluator: deterministic-candidate-observer
-recordedAt: 2026-08-08T12:37:00.000Z
+contextId: fresh-to-tickets-edge-dependency-recovery-editorial-20260809-1
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:50:00.000Z
 environment:
   id: workflow-to-tickets-dependency-recovery
   capabilities:
@@ -42,4 +42,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-dependency-recovery-1.txt
-  sha256: 16d0f9140cf06b5f15968a7feea842fbd9a3a0db6f789487b9e6c799c178dbfe
+  sha256: 940d95a3a12ebac07488c702e9f5bb4bc7c6547d7b1ed8f0b992bc52afac40ae

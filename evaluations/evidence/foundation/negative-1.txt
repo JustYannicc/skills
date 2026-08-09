@@ -1,1 +1,2 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 A feedback loop is a cycle where a system’s output influences its next input: the result of an action changes what happens afterward. In a positive feedback loop, change reinforces itself—like a viral post gaining visibility and attracting more shares—while in a negative feedback loop, change triggers a correction that stabilizes the system—like a thermostat turning heat off once a room reaches its set temperature.

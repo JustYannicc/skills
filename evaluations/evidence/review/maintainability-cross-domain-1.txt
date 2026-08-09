@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 context: final-sol-review-maintainability-cross-domain-1
 evaluator: gpt-5.6-sol
 suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13

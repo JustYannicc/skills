@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-supplemental-required
 attempt: 2
 contextId: final-sol-review-supplemental-required-2
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:28.000Z
 environment:
@@ -49,4 +49,4 @@ observed:
     - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/supplemental-required-2.txt
-  sha256: b4bcd7029db7eae814019d6467627ea189d4d3c756043522cdc9c6a05d30a762
+  sha256: 704809e9402dbeb0ee351d592917cdaccdac23d88ca75f99c3649a59e1278cea

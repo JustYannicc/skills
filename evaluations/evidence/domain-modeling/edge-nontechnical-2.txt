@@ -6,7 +6,7 @@ Recorded at (UTC): 2026-08-09T10:56:57Z
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+- Evaluation candidate: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 - Skill locator: skills/domain-modeling/SKILL.md
 - Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
 - Fixture locator: evaluations/fixtures/domain-modeling/edge-nontechnical.fixture.yaml

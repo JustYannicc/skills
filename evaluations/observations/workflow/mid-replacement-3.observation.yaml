@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-replacement
 attempt: 3
 contextId: fresh-workflow-mid-replacement-1db9f1f-20260806T182530Z-sol-high-3
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:25:30.000Z
 environment:
@@ -35,4 +35,4 @@ observed:
   state: [predecessor-disposed-replacement-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-replacement-3.txt
-  sha256: 4d85b4dd77fa5a2ce99536d4eaf46fad0bb859aed6212e66fa9e9317b9af49d1
+  sha256: 38283eb6ffa7ae9c83ba7e3cd8ed51026dfacb9e47f736aca60cd4bf0aab2a52

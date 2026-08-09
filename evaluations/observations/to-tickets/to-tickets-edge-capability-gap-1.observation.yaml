@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-edge-capability-gap
 attempt: 1
-contextId: fresh-to-tickets-edge-capability-gap-20260808-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
-evaluator: deterministic-candidate-observer
-recordedAt: 2026-08-08T12:34:00.000Z
+contextId: fresh-to-tickets-edge-capability-gap-editorial-20260809-1
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:50:00.000Z
 environment:
   id: workflow-to-tickets-required-durable-gap
   capabilities:
@@ -41,4 +41,4 @@ observed:
   state: [Waiting]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-capability-gap-1.txt
-  sha256: 283c772a52c644f8c43edc4d8ad8d95067502921daf2847d983817658663897c
+  sha256: 1d37236c23c027e51e6e16d603e6355ea23ad622a38ded343d436a1faa35bb1c

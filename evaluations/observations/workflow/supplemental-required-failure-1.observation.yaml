@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-supplemental-required-failure
 attempt: 1
 contextId: fresh-workflow-supplemental-required-failure-sol-high-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:06:36.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-required-review]
 rawEvidence:
   locator: evaluations/evidence/workflow/supplemental-required-failure-1.txt
-  sha256: 176d3afe0e5d58c82bf796f40ef69f49c1fcc5950a90d82b3a8debfba4a1be00
+  sha256: 9ed3191457725a8d6b223b6c8aeee5cecb9c3aca6888bd17e4d06a6c079035c5

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-negative-review-request
 attempt: 2
 contextId: fresh-sol-high-r2-prototype-negative-review-request-2
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:00:41.000Z
 environment:
@@ -35,4 +35,4 @@ observed:
   state: [review-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/negative-review-request-2.txt
-  sha256: 67c8dddc16e985609747bc8e3e9959cb144248c17fca66ab2da8ce339625919c
+  sha256: 9ed3dd4ce3487d3cb4287e2e897fa89592b2d5b84f70572942f1bb37dbc9e8c2

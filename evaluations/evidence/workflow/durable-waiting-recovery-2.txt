@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 Workflow evaluation evidence
 
 Fixture: workflow-durable-waiting-recovery

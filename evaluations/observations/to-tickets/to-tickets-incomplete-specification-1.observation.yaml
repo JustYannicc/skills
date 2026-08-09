@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-incomplete-specification
 attempt: 1
-contextId: fresh-to-tickets-incomplete-specification-20260808-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
-evaluator: deterministic-candidate-observer
-recordedAt: 2026-08-08T12:32:00.000Z
+contextId: fresh-to-tickets-incomplete-specification-editorial-20260809-1
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:50:00.000Z
 environment:
   id: workflow-to-tickets-incomplete-specification
   capabilities:
@@ -43,4 +43,4 @@ observed:
   state: [Waiting for discovery]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-incomplete-specification-1.txt
-  sha256: fcd2283f818b03c61411e63f88ef3d0fb5f23ec6d79e2fc6ac0d06f4aaaf19c4
+  sha256: 458aaf9e868c42253c006b6da419c30c4ae5c99f17d29ef270f924edc22bca61

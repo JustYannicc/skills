@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 I’m opening one parent Outcome: add a second approval stage to the long-running community program without losing, overwriting, or silently reassigning existing work. Workflow retains responsibility for that Outcome through integration and terminal proof.
 
 Because this is Durable work in an existing scope with no verified map, I am invoking Migrate System first for bounded current-state mapping. The approval-stage request is recorded separately as change proposal `C1`; it has not been designed, approved, or performed.

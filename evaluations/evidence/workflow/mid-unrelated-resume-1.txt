@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 I’m treating this as an unrelated switch, not a replacement of the active budget Outcome.
 
 Inline continuation preserved before switching: O6 remains owned by its current owner at ledger revision L8; its completed work is unchanged; the pickup point and next action are to check the electricity entry; no effect or approval is active; and the remaining proof is a reconciled household budget at L8.

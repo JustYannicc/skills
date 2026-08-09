@@ -1,3 +1,4 @@
+Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 This is an unrelated switch, so Outcome O8 is paused rather than replaced or completed. Workflow retains responsibility for O8, and the guarded-effect owner remains responsible for the door-controller update.
 
 - Inventory continuation: continuous work stopped at its coherent checkpoint. Item 14 is the preserved pickup point. Resume by processing item 14, then complete the remaining inventory proof and parent Review.

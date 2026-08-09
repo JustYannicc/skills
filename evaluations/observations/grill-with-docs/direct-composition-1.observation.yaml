@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-direct-composition
 attempt: 1
 contextId: fresh-grill-with-docs-direct-composition-sol-high-1-20260806t164016z
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:40:16Z
 environment:
@@ -45,4 +45,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/direct-composition-1.txt
-  sha256: 5d4867339cee162fe80798fb0c8d5410641ad83667d2daa5634a57c26a8b753b
+  sha256: 33e937fd123c22d77ea578554f5ec7c563f063bdc13ff11779e3cbc5dfdd85fe

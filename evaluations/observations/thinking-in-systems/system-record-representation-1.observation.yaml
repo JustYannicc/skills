@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-system-record-representation
 attempt: 1
 contextId: fresh-issue-35-system-record-representation-resolution-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-luna-fresh-context-full-standard-max
 recordedAt: 2026-08-04T19:00:20Z
 environment:
@@ -44,4 +44,4 @@ observed:
   state: [candidate, machine-action-blocked]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/system-record-representation-1.txt
-  sha256: a854433e37a64554a879e1dee28a045b4fe2c01f2f3ec06934b320b577ea41e6
+  sha256: 2e08a484ec7872e3d16dfbf3e12cc603506615fd03aa2601da71ecefca2b514e

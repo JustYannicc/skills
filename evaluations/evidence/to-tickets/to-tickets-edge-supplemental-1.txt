@@ -1,14 +1,101 @@
-Evaluation: to-tickets-edge-supplemental
-Attempt: 1
-Context: fresh-to-tickets-edge-supplemental-20260808-1
-Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
-Evaluator: deterministic-candidate-observer
+Evaluation
+Attempt 1
+Context fresh-to-tickets-edge-supplemental-editorial-20260809-1
+Observed candidate git:befffd9a73bd95c3fe2362057c8affaa60031f76 (corrected fixture)
+Evaluator gpt-5.6-luna-max-fresh-context
 
-To Tickets built draft revision tickets-d1 from inventory-cutover-r3, then
-Workflow invoked the configured advisory risk-audit at the
-workflow.decomposition decomposition-enrichment Extension point. The input
-included the exact Specification revision, warehouse constraints, dependency
-graph, and Proof obligations. The returned evidence audit-r7 proposed no
-change. To Tickets recorded the source/version, inspected revision, evidence,
-limitations, and disposition while retaining collective acceptance and doing
-no migration work.
+Runtime boundary
+
+- This fresh run used `skills/to-tickets/SKILL.md` and the supplied runtime scenario. It did not consult prior evaluations, docs, history, or prior outputs.
+- Selected isolated Baseline Adapter: `.scratch/runtime-adapters/final-supplemental/transactional-r2/`, Adapter revision `baseline-adapter-tx-r1`.
+- Adapter capability manifest: `.scratch/runtime-adapters/final-supplemental/transactional-r2/adapter.json`; SHA-256 `49430cb5b96c54e3a398d5234538c149534344c05d82d9c049ff3859f9015cf6`.
+- The Adapter truthfully declares `completeSetAndParentAtomicTransaction: true`, `exactRevisionReread: true`, and `atomicClaimCoordination: false`. These are separate capabilities: the complete Ticket set plus the parent `contains` relationship is committed atomically, while no atomic Claim coordination is available or used.
+- Transaction method: stage one complete canonical state containing all Ticket records, all typed edges, and the parent relationship, then atomically publish the staged state directory with one rename. The transaction has no migration effect, Claim, Review, or parent-completion effect.
+
+1. Bind the accepted Specification
+
+- Specification: `spec:inventory-cutover`, accepted revision `inventory-cutover-r3`.
+- Supplied migration verification: `.scratch/runtime-adapters/final-supplemental/transactional-r2/input/migration-verification-two-warehouses.json`, SHA-256 `a278d9280619aa98cfd3cf14bc3ad8542b0c9a4409d6c700e433fc33eae5e173` in the scenario input. It verifies `warehouse-1` and `warehouse-2`, `stockLossUnits: 0` for each, and total stock loss `0`; it is prior supplied evidence and was not executed by this decomposition.
+- Parent Outcome: `outcome:inventory-cutover`; Outcome owner and semantic acceptance Authority: `inventory-lead` acting through Workflow.
+- To Tickets owns decomposition, collective coverage, and decision-recording responsibility. To Tickets does not hold semantic acceptance Authority; it cannot accept the Outcome or authorize the canonical write.
+- Bound terminal condition: return one accepted Durable Ticket set at an exact revision after atomic persistence and exact reread of canonical records, edges, and the parent relationship, with the accepted frontier and blocked/Recovery dispositions exposed. No migration effect, Review, Claim, or parent completion is part of this invocation.
+- Durable representation is required because the four Tickets have dependencies, an explicit acceptance boundary, a Supplemental mapping, a multi-record persistence boundary, and a reread/frontier boundary.
+
+2. Immutable draft and collective coverage
+
+- Draft Ticket-set identity: `ticket-set:tickets-d1`, exact revision `tickets-d1`.
+- Immutable draft locator: `.scratch/runtime-adapters/final-supplemental/transactional-r2/draft/tickets-d1.json`; SHA-256 `3c035d05b62ea1fb39be01aabeaad077532bef186a229dadea9d417f1b6002a3`.
+- The draft is complete before advisory dispatch, `status: proposed`, `immutable: true`, and `execution.migrationExecutionStarted: false`.
+
+Ticket contracts:
+
+| Ticket | Result | Work owner | Authority | Proof seam | Terminal condition | Requires |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ticket:supply-r3` (Supply r3) | A cutover-ready supply contract carrying `inventory-cutover-r3` behavior through warehouse constraints. | `supply-lead` | Prepare the contract; no migration effects. | Contract references warehouse constraints and remains pinned to `inventory-cutover-r3`. | Contract accepted and references reread at `tickets-d1`. | `ticket:warehouse-constraints` |
+| `ticket:warehouse-constraints` (Warehouse constraints) | A bounded, verified constraint set for `warehouse-1` and `warehouse-2` preserving accepted scope. | `warehouse-operations` | Document and verify constraints; no migration effects. | Constraint record plus two-warehouse/no-stock-loss readback. | Both warehouse constraint records verified against `inventory-cutover-r3` and evidence. | none |
+| `ticket:dependency-graph` (Dependency graph) | An acyclic graph with typed `contains` and `requires` edges. | `inventory-lead` | Bind decomposition relationships under Outcome authority. | Canonical edge pointer reread at `tickets-d1`, with no cycle. | Every typed edge is atomically persisted and reread unchanged. | `ticket:warehouse-constraints`, `ticket:supply-r3` |
+| `ticket:proof-obligations` (Proof obligations) | Obligations covering behavior, no-stock-loss evidence, constraints, dependencies, and terminal review. | `inventory-lead` | Integrate through Workflow; accept only as Outcome owner. | Atomic canonical-state, audit, and migration-verification readback. | Every obligation has an evidence locator and Workflow receives the frontier; no execution inferred. | `ticket:dependency-graph` |
+
+All Tickets exclude migration execution and stock mutation. Recovery for any Ticket is an exact-locator reconciliation through Workflow; no ownerless external dependency is invented. Every Ticket is accepted in the canonical state only after the Outcome-owner acceptance below; before that boundary the draft remains non-executable.
+
+Coverage map, with every row pinned to `inventory-cutover-r3`:
+
+- `inventory-cutover-r3#behavior` -> covered by `ticket:supply-r3` and `ticket:proof-obligations`.
+- `inventory-cutover-r3#scope-and-exclusions` -> covered by `ticket:warehouse-constraints`, `ticket:supply-r3`, and `ticket:proof-obligations`; migration execution and stock mutation are excluded.
+- `inventory-cutover-r3#constraints-and-authority` -> covered by `ticket:warehouse-constraints` and `ticket:dependency-graph`.
+- `inventory-cutover-r3#dependencies` -> covered by `ticket:dependency-graph`.
+- `inventory-cutover-r3#remediation-propagation-recovery` -> covered by `ticket:proof-obligations`.
+- `inventory-cutover-r3#proof-seam` -> covered by `ticket:proof-obligations`.
+- `inventory-cutover-r3#terminal-condition` -> covered by `ticket:proof-obligations`.
+- `inventory-cutover-r3#approval` -> covered by the Workflow-routed Outcome-owner acceptance record and `ticket:proof-obligations`.
+
+Draft graph rows (all revision `tickets-d1`) are: `edge:outcome-contains-tickets-d1`; `edge:tickets-d1-contains-supply-r3`; `edge:tickets-d1-contains-warehouse-constraints`; `edge:tickets-d1-contains-dependency-graph`; `edge:tickets-d1-contains-proof-obligations`; `edge:supply-r3-requires-warehouse-constraints`; `edge:dependency-graph-requires-warehouse-constraints`; `edge:dependency-graph-requires-supply-r3`; and `edge:proof-obligations-requires-dependency-graph`. The `contains` and `requires` relationships are typed and acyclic.
+
+3. Configured Supplemental evidence
+
+- Mapping: `risk-audit`, configured at extension point `workflow.decomposition`, mode `advisory`.
+- Supplied audit identity/version: `risk-audit-r7` / `audit-r7`.
+- Input: accepted Specification revision `inventory-cutover-r3`, immutable draft revision `tickets-d1`, dependency context, and proof obligations for coverage, typed acyclic edges, Authority, atomic persistence, exact reread, and no migration effect.
+- Audit locator: `.scratch/runtime-adapters/final-supplemental/transactional-r2/evidence/risk-audit-r7.json`; SHA-256 `54621d6fbf7116da618e9d9b3731306b6084112f62abd560eb0e38e17bfe9f74`.
+- Simulated audit recommendation: `no changes`.
+- Limitations retained: advisory only; it does not accept the Ticket set, authorize persistence, create Claims, perform Review, or cause effects.
+- Disposition: `integrated-unchanged`. Integrated envelope locator `.scratch/runtime-adapters/final-supplemental/transactional-r2/integrated/tickets-d1.json`; SHA-256 `4c0a7c9be76cbcf01d66fca9ad84755c12da73302f0a1f5beb84b8c112521f5f`. It preserves the draft SHA-256, exact revision `tickets-d1`, all coverage rows, and `unchangedIntegration: true`; collective coverage remains complete.
+
+4. Exact acceptance through Workflow
+
+- The draft and unchanged advisory evidence are presented through Workflow with Ticket names, Results, owners, `requires` relationships, and preview frontier.
+- `inventory-lead`, as Outcome owner, explicitly accepts exact Ticket-set revision `tickets-d1` through Workflow after the unchanged integration and authorizes the canonical write.
+- Acceptance locator `.scratch/runtime-adapters/final-supplemental/transactional-r2/acceptance/tickets-d1.json`; SHA-256 `6f832ae658db63884fd6856ac7a153ecabfef1db2c98211b331d955e83d5f133`.
+- The record binds `ticketSetRevision: tickets-d1`, `specificationRevision: inventory-cutover-r3`, `route: Workflow`, `decision: accepted`, `unchangedIntegration: true`, `semanticAcceptanceAuthority: inventory-lead through Workflow`, and `authorizesCanonicalWrite: true`.
+- The same record states that To Tickets retains decomposition, coverage, and decision-recording responsibility and is not semantic acceptance Authority. Advisory evidence and any parent label are not substitutes for this explicit acceptance.
+
+5. Atomic canonical persistence
+
+- After exact acceptance, the selected Adapter staged and atomically published the complete canonical state in one transaction: `tx:inventory-cutover:tickets-d1`.
+- Atomic canonical-state locator: `.scratch/runtime-adapters/final-supplemental/transactional-r2/canonical/tickets-d1.state.json`; file SHA-256 `25205673c8e947350df473259291426c16622fc7bdf1f44c890e11f3674f3388`.
+- The committed state contains all four canonical Ticket records, all nine typed edges, and the parent `contains` relationship in one complete-set-and-parent atomic commit. Ticket JSON-pointer locators are `.scratch/runtime-adapters/final-supplemental/transactional-r2/canonical/tickets-d1.state.json#/records/ticket:supply-r3`, `...#/records/ticket:warehouse-constraints`, `...#/records/ticket:dependency-graph`, and `...#/records/ticket:proof-obligations`.
+- The staging directory was absent after publish, and no partial canonical state was observable; the published state was the complete four-record/nine-edge/parent commit.
+- Canonical edge locator is `.scratch/runtime-adapters/final-supplemental/transactional-r2/canonical/tickets-d1.state.json#/edges`; parent locator is `.scratch/runtime-adapters/final-supplemental/transactional-r2/canonical/tickets-d1.state.json#/parent`.
+- Parent relationship transition advances parent record revision to `outcome-r3+contains-tickets-d1`, points to `ticket-set:tickets-d1` through `edge:outcome-contains-tickets-d1`, and preserves accepted Specification intent; it is not a Specification edit.
+- Transaction receipt: `.scratch/runtime-adapters/final-supplemental/transactional-r2/transaction/tx-inventory-cutover-tickets-d1.json`; SHA-256 `08694a9fbb8aa56b7acd26a80db3ec25ae8acfc14743be5cf9811dedcae077af`. The receipt records `atomic: true`, `completeSetAndParent: true`, and `atomicClaimCoordination: false`.
+- No atomic Claim coordination was assumed or required for this persistence transaction. No Claim was created.
+
+6. Exact-revision reread and reconciliation
+
+- Readback locator `.scratch/runtime-adapters/final-supplemental/transactional-r2/readback/tickets-d1.json`; SHA-256 `47a6e4866354d4294427d4b06de125de7cbab5194e608b74a536fa5980730cd8`.
+- Adapter revision on readback: `baseline-adapter-tx-r1`; Ticket-set revision: `tickets-d1`; Specification revision: `inventory-cutover-r3`.
+- All four Ticket pointers reread with `revision: tickets-d1` and `match: true`.
+- Edge pointer reread with `revision: tickets-d1`, `match: true`, and these nine exact IDs: `edge:outcome-contains-tickets-d1`, `edge:tickets-d1-contains-supply-r3`, `edge:tickets-d1-contains-warehouse-constraints`, `edge:tickets-d1-contains-dependency-graph`, `edge:tickets-d1-contains-proof-obligations`, `edge:supply-r3-requires-warehouse-constraints`, `edge:dependency-graph-requires-warehouse-constraints`, `edge:dependency-graph-requires-supply-r3`, and `edge:proof-obligations-requires-dependency-graph`.
+- Parent pointer reread with revision `outcome-r3+contains-tickets-d1`, `contains: ticket-set:tickets-d1`, `containsEdge: edge:outcome-contains-tickets-d1`, and `match: true`.
+- The readback found no partial commit, conflicting revision, stale Claim, overdue Review, or Recovery item. Recovery queue is empty.
+
+7. Accepted Work frontier
+
+- Accepted frontier, computed only after the atomic commit and exact reread: `ticket:warehouse-constraints` (accepted; no unwaived `requires` target; no live Claim).
+- Blocked: `ticket:supply-r3` requires `ticket:warehouse-constraints`; `ticket:dependency-graph` requires `ticket:warehouse-constraints` and `ticket:supply-r3`; `ticket:proof-obligations` requires `ticket:dependency-graph`.
+- In-review/waiting: none. Recovery: none.
+- Readback execution flags: `migrationEffect: false`, `claims: false`, `review: false`, and `parentCompletion: false`. No migration effect, Claim, Review, or parent completion occurred, and no frontier item was started.
+
+Return route
+
+Return to Workflow the accepted Durable Ticket set at exact revision `tickets-d1`, complete coverage map, typed graph, advisory `risk-audit-r7` evidence and limitations, Outcome-owner acceptance record, atomic transaction receipt, canonical JSON-pointer locators, exact-revision reread, accepted frontier, blocked set, and empty Recovery disposition. To Tickets retains decomposition, coverage, and decision recording; Workflow and the Outcome owner retain acceptance, integration, execution, Review, effects, Recovery, and parent terminal proof. This invocation ends at the Durable completion boundary without migration execution or parent completion.

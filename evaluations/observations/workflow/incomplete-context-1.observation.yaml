@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-incomplete-context
 attempt: 1
 contextId: fresh-workflow-incomplete-context-1db9f1f-sol-high-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:05:44.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [proposed]
 rawEvidence:
   locator: evaluations/evidence/workflow/incomplete-context-1.txt
-  sha256: 680a1202c9f4c55f5cb253c094b988a33097a2007f36a3e1c3bb708e61a1478a
+  sha256: c8da3db0ade928712fbc47656a05eee2530080fd803a9caa6e0e225a64c6f703
