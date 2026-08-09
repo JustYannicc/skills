@@ -66,8 +66,13 @@ the published audit revision. The count includes this record:
 - C8 positive Responsibility and freshness rules — resolved.
 - C9 public README summary — resolved with `Degraded` and parent-open leading
   words.
-- C10 checklist pointer — resolved by this inventory and disposition record;
-  exact-revision proof is recorded separately below.
+- C10 checklist pointer — resolved: the three unchecked items in
+  `docs/handoffs/2026-08-09-handoff-candidate.md` preserve candidate-time,
+  pre-audit state. Editing that non-evaluation artifact would change the
+  candidate identity and invalidate the exact-revision proof. The Completion
+  checklist, Exact proof, and Publication map in this record are the sole live
+  completion authority and supersede those three markers. Human review remains
+  open.
 - C11 Waiting Recovery scope — resolved: Waiting alone triggers the additional
   dependency and resumption fields.
 - C12 Step 3 completion — resolved: every material contract field is populated,
