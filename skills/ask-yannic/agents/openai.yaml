@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Yannic"
+  short_description: "Explain a Workflow route without running it"
+policy:
+  allow_implicit_invocation: false

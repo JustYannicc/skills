@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-indirect-technical
 attempt: 1
 contextId: fresh-domain-modeling-indirect-technical-20260809t105839z-luna-max-e0f63d67-ad62-4d1d-a09e-b9b9b3d7f532
-suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T10:58:39Z
 environment:
@@ -71,4 +71,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-technical-1.txt
-  sha256: 7b96a10f1ee608c97f80d05dfa32422dfcb39e68ed5796986dea9a30427503d3
+  sha256: a15a16f178659c4ef434afeeb5325db4898db635ee53cc7a6649a969c51f7a57

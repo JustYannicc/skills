@@ -289,3 +289,19 @@ Full fixture-criterion grading
   assignment and schedule effects remained zero.
 
 Overall isolated attempt result: PASS.
+
+Issue #27 candidate rebind (not a rerun)
+
+- Original run candidate: `git:4233758023b9d47a92b72311ef945d902d1c9d6d`.
+- Rebound candidate: `working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1`.
+- Central attestation: `evaluations/evidence/reviews/issue-27-candidate-rebind-attestation.txt`.
+- The original transcript above is preserved unedited. This footer records an
+  integration applicability decision only; the attempt was not rerun.
+
+Issue #27 final candidate rebind (not a rerun)
+
+- Reviewed run or integration candidate: `working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1`.
+- Final non-evaluation candidate: `git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255`.
+- Central attestation: `evaluations/evidence/reviews/issue-27-final-candidate-rebind-attestation.txt`.
+- The evaluated runtime bytes and fixture are unchanged. This footer records
+  final commit applicability only; the attempt was not rerun.

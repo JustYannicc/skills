@@ -77,15 +77,14 @@ must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
 
-### [Wayfinder](skills/wayfinder) — candidate
+### [Ask Yannic](skills/ask-yannic) — candidate
 
-Wayfinder navigates persistent, multi-session, or irreducible fog through a
-durable decision Map and operating Strategy. It preserves the destination,
-accepted decisions, frontier, blockers, Evidence, ownership, and Continuation
-through the selected Adapter, invokes discovery companions only for their owned
-uncertainty, and completes only when the next route is truthfully specifiable or
-remaining fog has accepted operating rules. Issue #21 still requires human
-review; this candidate does not approve or publish the skill.
+Ask Yannic is an explicit route guide for choosing the smallest applicable
+Workflow route. It reads Workflow's canonical routing source at the active
+suite revision, explains the recommendation and its trade-offs, exposes stale
+sources or missing capabilities, and stops before invoking any route. It does
+not maintain its own routing model or represent Yannic's personal judgment for
+coworkers; that separate capability remains deferred.
 
 ## Planned suite
 

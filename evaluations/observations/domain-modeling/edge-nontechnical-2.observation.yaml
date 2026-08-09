@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-edge-nontechnical
 attempt: 2
 contextId: fresh-domain-modeling-edge-nontechnical-luna-max-20260809t105657z-63c683e0-c2b7-440d-9aeb-74b946e9ef44
-suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T10:56:57Z
 environment:
@@ -52,4 +52,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/edge-nontechnical-2.txt
-  sha256: 9ef73331975f1016767cb01a0518b9593c5456e366304f49b971654976ac0032
+  sha256: f3ca5a52dbefdd78f695f87622da46f200b7a3f2c41e7200ec97e646078fd0ed

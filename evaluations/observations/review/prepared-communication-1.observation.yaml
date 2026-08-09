@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-prepared-communication
 attempt: 1
 contextId: final-sol-review-prepared-communication-1
-suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:18.000Z
 environment:

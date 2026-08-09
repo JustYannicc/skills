@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-indirect-delegation
 attempt: 1
-contextId: fresh-to-tickets-indirect-delegation-editorial-20260809-1
-suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
-evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-09T12:50:00.000Z
+contextId: fresh-to-tickets-indirect-delegation-20260808-1
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+evaluator: deterministic-candidate-observer
+recordedAt: 2026-08-08T12:31:00.000Z
 environment:
   id: workflow-to-tickets-delegation-concurrency
   capabilities:

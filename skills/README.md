@@ -1,11 +1,9 @@
 # Skill packages
 
 `thinking-in-systems`, `workflow`, `to-spec`, `to-tickets`, `domain-modeling`,
-`review`, and `prototype` are approved. `handoff` has an implementation
-candidate awaiting required human review. The approved Workflow Durable route and
-To Tickets implementation merged through PR #45 and closed issues #14 and #23.
-`wayfinder` is an implemented candidate awaiting the human review required by
-issue #21.
+`review`, and `prototype` are approved. `ask-yannic` is an explicit-only route
+guide candidate under issue #27. The approved Workflow Durable route and To
+Tickets implementation merged through PR #45 and closed issues #14 and #23.
 Suite publication remains gated by the composed-suite and clean-install proof
 in #31 and the immutable-release review in #32.
 
@@ -19,9 +17,9 @@ Establishes shared terminology through the selected Adapter. Use it when words
 or boundaries block shared understanding; see the [suite roster](../docs/SUITE_ROSTER.md)
 for its completion boundary and Workflow handoff.
 
-## `wayfinder`
+## `ask-yannic`
 
-Navigates persistent, multi-session, or irreducible fog through a durable
-decision Map and operating Strategy. It returns a truthfully specifiable next
-route or governed remaining fog without executing the destination or requiring
-Git.
+Explains the smallest applicable route from Workflow's canonical routing
+source, including trade-offs and capability gaps, then stops before execution.
+It is invoked only when the user explicitly requests it and does not represent
+Yannic's personal judgment for coworkers.

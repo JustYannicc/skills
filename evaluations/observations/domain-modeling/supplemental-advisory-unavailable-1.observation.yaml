@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-supplemental-advisory-unavailable
 attempt: 1
 contextId: fresh-domain-modeling-supplemental-advisory-unavailable-20260809t111935z-luna-max-c2d0c5f2-9ad0-4e10-8d08-595cb21854ad
-suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T11:19:35Z
 environment:
@@ -52,7 +52,7 @@ observed:
     - terminology-resolved-with-advisory-gap
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-advisory-unavailable-1.txt
-  sha256: 78cefe062eccf2072343e8d65b4d372fe6ad0af7a944a6ee6f30a061e66fe547
+  sha256: f3eee952cb40468248c4792eda7f2678a066084d552412405d0a9836d72c9644
 runtimeInputs:
   - role: fixture
     locator: evaluations/fixtures/domain-modeling/supplemental-advisory-unavailable.fixture.yaml
