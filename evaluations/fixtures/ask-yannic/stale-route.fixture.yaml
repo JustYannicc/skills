@@ -30,7 +30,7 @@ expected:
   effects: []
   invoked: [ask-yannic]
   notInvoked: [to-spec, to-tickets, workflow execution, edit message]
-  proof: [the recommendation is bound to the current source, the stale note is rejected, and the available edit-file effect remains unused]
+  proof: [the recommendation is bound to the current source, the stale note is rejected, the available edit-file effect remains unused]
   responsibility: [the user retains the choice to run the Inline correction]
   route: [ask-yannic-to-inline-recommendation-only]
   state: [guidance-complete]

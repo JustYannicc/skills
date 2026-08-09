@@ -59,7 +59,7 @@ observed:
   proof:
     - the recommendation is bound to the current source
     - the stale note is rejected
-    - and the available edit-file effect remains unused
+    - the available edit-file effect remains unused
   responsibility:
     - the user retains the choice to run the Inline correction
   route:
@@ -72,10 +72,10 @@ runtimeInputs:
     sha256: a0dc16a2d51866c6b88e47b3349cf8b15835c5deb090fd69e0a249c645d94be0
   - role: fixture
     locator: evaluations/fixtures/ask-yannic/stale-route.fixture.yaml
-    sha256: d8f177cc2ab5e956bc5f75b4855ce3c40492ea5f8d9cbda5d305ec86e3ae5fc4
+    sha256: 2d913785e653a74cff26ccdc05d60e896d07e2e3b41723dbab44a40507a663e1
   - role: disclosed-reference
     locator: docs/WORKFLOW_ROUTING.md
     sha256: 61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/stale-route-2.txt
-  sha256: cfca54896260b41781b818a19bbfc61c1974a50c2888af566f0c02451bfbb812
+  sha256: 0c48f1189bf2a393ce890bfac3d0c0fd7e4fc88e32b5d9e250caf3ffa7b6fb5b

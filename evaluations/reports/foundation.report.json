@@ -1,6 +1,6 @@
 {
   "evaluatedAt": "2026-08-09T12:46:17Z",
-  "fixtureSetRevision": "20c91df40f618f13e442b5ef28af43baf7016a65e795ed4351e52184ea98dfdc",
+  "fixtureSetRevision": "97419fc2b6f03d5c5c1f5794022e9f40b725cf8818af657a6b2cd1073324d86f",
   "fixtures": [
     {
       "attempts": [
@@ -396,7 +396,7 @@
           "attempt": 1,
           "contextId": "fresh-ask-yannic-stale-route-sol-high-1-38791740-086c-4ccc-8b19-c6f117ae8573",
           "locator": "evaluations/evidence/ask-yannic/stale-route-1.txt",
-          "sha256": "e5fbb280c43f79dc7c367c30c863a9d6c8c324a20414084d32ee798bbb41cfe9",
+          "sha256": "dba856bb3026d9e6c9668f667008d66c1f9a3bddad90196219a76c71357d42d6",
           "runtimeInputs": [
             {
               "locator": "skills/ask-yannic/SKILL.md",
@@ -405,7 +405,7 @@
             },
             {
               "locator": "evaluations/fixtures/ask-yannic/stale-route.fixture.yaml",
-              "sha256": "d8f177cc2ab5e956bc5f75b4855ce3c40492ea5f8d9cbda5d305ec86e3ae5fc4",
+              "sha256": "2d913785e653a74cff26ccdc05d60e896d07e2e3b41723dbab44a40507a663e1",
               "role": "fixture"
             },
             {
@@ -419,7 +419,7 @@
           "attempt": 2,
           "contextId": "fresh-ask-yannic-stale-route-sol-high-2-e527eb67-1d0a-41d5-b1d9-4ca4bd1b87c3",
           "locator": "evaluations/evidence/ask-yannic/stale-route-2.txt",
-          "sha256": "cfca54896260b41781b818a19bbfc61c1974a50c2888af566f0c02451bfbb812",
+          "sha256": "0c48f1189bf2a393ce890bfac3d0c0fd7e4fc88e32b5d9e250caf3ffa7b6fb5b",
           "runtimeInputs": [
             {
               "locator": "skills/ask-yannic/SKILL.md",
@@ -428,7 +428,7 @@
             },
             {
               "locator": "evaluations/fixtures/ask-yannic/stale-route.fixture.yaml",
-              "sha256": "d8f177cc2ab5e956bc5f75b4855ce3c40492ea5f8d9cbda5d305ec86e3ae5fc4",
+              "sha256": "2d913785e653a74cff26ccdc05d60e896d07e2e3b41723dbab44a40507a663e1",
               "role": "fixture"
             },
             {
@@ -442,7 +442,7 @@
           "attempt": 3,
           "contextId": "fresh-ask-yannic-stale-route-sol-high-3-0004711d-355d-4165-a886-875a8456ec3b",
           "locator": "evaluations/evidence/ask-yannic/stale-route-3.txt",
-          "sha256": "198262fc2995569b23b40fc26a1f93eff0edf2d3b27bba4987ab3cf063e9ee65",
+          "sha256": "0989000b2c62323da3ce1c97f3f1bd619e97d4f5cc5f54a22abc39e3b020892d",
           "runtimeInputs": [
             {
               "locator": "skills/ask-yannic/SKILL.md",
@@ -451,7 +451,7 @@
             },
             {
               "locator": "evaluations/fixtures/ask-yannic/stale-route.fixture.yaml",
-              "sha256": "d8f177cc2ab5e956bc5f75b4855ce3c40492ea5f8d9cbda5d305ec86e3ae5fc4",
+              "sha256": "2d913785e653a74cff26ccdc05d60e896d07e2e3b41723dbab44a40507a663e1",
               "role": "fixture"
             },
             {
@@ -466,7 +466,7 @@
       "fixtureId": "ask-yannic-stale-route",
       "status": "passed",
       "suiteRevision": "git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255",
-      "fixtureRevision": "d8f177cc2ab5e956bc5f75b4855ce3c40492ea5f8d9cbda5d305ec86e3ae5fc4"
+      "fixtureRevision": "2d913785e653a74cff26ccdc05d60e896d07e2e3b41723dbab44a40507a663e1"
     },
     {
       "attempts": [
