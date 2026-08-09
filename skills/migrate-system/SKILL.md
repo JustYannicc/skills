@@ -31,6 +31,11 @@ phase, accepted scope and Authority, selected Adapter and its `Baseline`,
 `Coordination`, and `Continuation` capabilities, exact current revisions, Proof
 seam, and return route.
 
+Record each capability as available, unavailable, or unknown from inspected
+evidence. An omitted or uninspected capability is unknown, never implicitly
+available. Do not substitute the current agent host's capabilities for the
+selected Adapter or declared operating environment.
+
 Run Conformance migration when all of these are true:
 
 - an existing operating scope is material to the accepted Outcome;
