@@ -10,8 +10,7 @@ metadata:
 
 Handoff preserves enough exact state for work to continue safely across a
 boundary. It owns one revision-bound Handoff result and its acceptance evidence.
-It does not perform the continued work, Review the result, or complete the
-parent Outcome.
+It does not perform the continued work or Review the result.
 
 Join the active `'Workflow'` context when one exists. The outgoing owner remains
 responsible until an identifiable successor accepts the exact transfer. A
@@ -154,10 +153,11 @@ Continuity does not use a Responsibility transition. On pickup, the same owner
 rereads the canonical work, checks the Handoff for staleness, records the
 resumption evidence when Durable, and continues only from the current state.
 
-**Done when:** Transfer has exact accepted-transition evidence or a named
-non-transfer disposition with current owner and next action; Continuity has a
-verified current pickup point; Dispatch has exact delivery evidence and its
-retained owner.
+**Done when:** the current disposition has its required evidence and retained
+owner: Transfer has accepted-transition evidence or a named non-transfer
+disposition and next action; Continuity is Prepared, Waiting, or Degraded with
+its trigger, or Resumed with pickup evidence; Dispatch is Prepared or Degraded
+with its next action, or Delivered or Acknowledged with delivery evidence.
 
 ### 6. Return Handoff state to Workflow
 

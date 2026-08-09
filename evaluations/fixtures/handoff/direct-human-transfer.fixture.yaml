@@ -14,9 +14,12 @@ prompt: >-
   there. The venue approval remains pending, the accessibility walkthrough is
   blocked on it, and the next unblocked work is to confirm volunteer arrival
   windows. I may coordinate and request confirmations but cannot approve venue
-  changes. Priya can accept coordination responsibility but has not accepted
-  this exact handoff yet. Prepare the handoff, obtain or record her explicit
-  response if the available return route supports it, and report the state.
+  changes. Exact Handoff `open-day-ho-r1` has already been delivered through
+  Priya's verified response route. The signed response says: “I, Priya Shah,
+  accept `open-day-ho-r1`, its bounded coordination Responsibility, existing
+  Authority limits, uncertainty, dependencies, Continuation, and first
+  volunteer-confirmation action.” A current-state read still shows
+  `open-day-plan-r8`. Record the Handoff state.
 environment:
   id: handoff-human-accepted-transfer
   capabilities:
@@ -29,7 +32,7 @@ environment:
 expected:
   actions: [bind active Workflow context and canonical sources, materialize one exact Handoff revision, request successor acceptance, distinguish proposal from acceptance, record accepted ownership transition only after exact acceptance, return transfer evidence to Workflow]
   artifacts: [revision-bound Handoff contract, append-only acceptance transition]
-  effects: [acceptance request, accepted responsibility transfer when Priya explicitly accepts]
+  effects: [accepted responsibility transfer recorded from the supplied exact response]
   invoked: [workflow, handoff]
   notInvoked: [implement, review, parent completion]
   proof: [open-day-plan-r8 and canonical evidence are referenced, Priya acceptance names the exact Handoff revision, outgoing responsibility ends only after acceptance, volunteer confirmation remains the next frontier]

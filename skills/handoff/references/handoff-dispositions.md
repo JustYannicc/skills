@@ -22,21 +22,15 @@ tool, location, or operating context changed.
 | --- | --- |
 | `Draft` | Exact transfer package exists but has not been delivered. The outgoing owner remains responsible. |
 | `Offered` | Delivery to the identified successor is verified. The outgoing owner remains responsible. |
-| `Accepted` | The identified successor explicitly accepted the exact fresh revision, bounded Responsibility, available Authority, uncertainty, dependencies, Continuation, and first action. Record the append-only Responsibility transition. |
+| `Accepted` | The Step 5 exact-acceptance and freshness gate passed. Record its append-only Responsibility transition evidence. |
 | `Rejected` | The successor rejected the exact offer. Preserve the response, current owner, reason or gap, and recovery action. |
 | `Stale` | A material canonical change invalidated the offered revision or response. Preserve the response as evidence, refresh the package, and request acceptance of the successor revision. |
 | `Withdrawn` | An authorized Actor withdrew an unaccepted offer. Preserve the rationale and current owner. |
 | `Degraded` | Recipient identity, response route, persistence, communication, or another required capability is missing. Preserve the proposed package and exact unblock action. |
 
-Transfer requires a response from the identified successor or its authorized
-mechanism that binds the exact Handoff revision. Delivery, silence, prior
-assignment, capability, a claim, conditional acceptance that changes the
-contract, or an acceptance of a stale revision leaves the outgoing owner
-responsible. Acceptance creates no Authority.
-
-An accepted Transfer changes only the exact accepted Responsibility. Record an
-Outcome ownership transition only when the parent Outcome itself is the accepted
-scope. Every Transfer disposition leaves the parent Outcome open.
+Use the ordered Transfer gate in `SKILL.md` as the acceptance authority. This
+table owns only the resulting branch disposition and evidence. Record an Outcome
+ownership transition only when the parent Outcome itself is the accepted scope.
 
 ## Dispatch
 
@@ -66,6 +60,5 @@ For every `Rejected`, `Stale`, `Waiting`, or `Degraded` disposition, record:
 - retry, revision, escalation, replacement, expiry, or recovery rule; and
 - exact next action and responsible Actor.
 
-Recovery never silently transfers Responsibility, returns stale work to a
-frontier, or completes or cancels the parent Outcome.
-
+Recovery never silently transfers Responsibility or returns stale work to a
+frontier.

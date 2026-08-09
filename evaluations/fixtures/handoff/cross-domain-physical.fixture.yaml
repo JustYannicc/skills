@@ -13,7 +13,12 @@ prompt: >-
   isolated after a leak, the isolation photo and valve reading are evidence
   `isolation-r6`, maintenance arrival is the external dependency, and the next
   safe frontier is humidity logging in Bays 1 and 2. Elise may operate unaffected
-  bays but cannot reopen Bay 3. A signed shift log can carry her response.
+  bays but cannot reopen Bay 3. Exact Handoff `greenhouse-ho-r2` was delivered
+  through the signed shift log. Elise signed that she accepts
+  `greenhouse-ho-r2`, evening-operations Responsibility, the Bay 3 restriction,
+  maintenance Continuation, uncertainty, and the Bay 1 and 2 humidity-log first
+  action. A freshness read still shows `greenhouse-shift-r15` and
+  `isolation-r6`.
 environment:
   id: handoff-physical-shift-transfer
   capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: true}

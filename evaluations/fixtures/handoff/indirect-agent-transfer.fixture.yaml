@@ -13,8 +13,11 @@ prompt: >-
   work is to resolve three source conflicts listed in `evidence-index-r9`.
   Transfer only that Ticket to agent `mapper-9`, whose stable host identity and
   response route are available. `mapper-9` has read access but no Authority to
-  alter source records. Materialize and offer the exact Handoff. Do not assume
-  the agent accepts merely because the task message is delivered.
+  alter source records. Exact Handoff `inventory-ho-r3` was delivered, and the
+  authenticated response from `mapper-9` says it accepts `inventory-ho-r3`, the
+  bounded Ticket Responsibility, read-only Authority, three conflicts,
+  Continuation, and first conflict-resolution action. A freshness read still
+  shows `outcome-r12`, `map-r4`, and `evidence-index-r9`. Record the Transfer.
 environment:
   id: handoff-agent-bounded-transfer
   capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, agent-messaging: true}
@@ -22,7 +25,7 @@ environment:
 expected:
   actions: [bind exact parent and Ticket revisions, preserve nested Responsibility, offer one exact Handoff to mapper-9, gate Ticket transfer on explicit acceptance, return transition evidence to Workflow]
   artifacts: [agent Handoff contract, acceptance or waiting record]
-  effects: [agent Handoff offer]
+  effects: [accepted bounded agent Responsibility transfer recorded from the supplied response]
   invoked: [workflow, handoff]
   notInvoked: [implement, review, parent completion]
   proof: [map-r4 and evidence-index-r9 remain canonical references, mapper-9 accepts the exact bounded Ticket and read-only Authority before transfer, Workflow retains catalog-recovery ownership]
