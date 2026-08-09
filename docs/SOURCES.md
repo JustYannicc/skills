@@ -19,8 +19,8 @@ The universal `to-tickets` successor is an adapted public skill based on Matt Po
 
 ## Workflow Durable coordination
 
-The issue #14 candidate extends the original `workflow` skill through the
-accepted [Universal work and coordination contract](UNIVERSAL_WORK_CONTRACT.md)
+The approved issue #14 implementation extends the original `workflow` skill
+through the accepted [Universal work and coordination contract](UNIVERSAL_WORK_CONTRACT.md)
 and the [System Record representation decision package](SYSTEM_RECORD_REPRESENTATION.md).
 These repository authorities define adapter-neutral meanings and the one
 writable System Record boundary; `skills/workflow/references/durable-mode.md`

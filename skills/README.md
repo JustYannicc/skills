@@ -1,11 +1,10 @@
 # Skill packages
 
-`thinking-in-systems` is approved. `workflow` implements the approved Inline
-route and the Durable coordination candidate as a human-review-required issue
-#14 result. `to-spec`, `domain-modeling`, `review`, and `prototype` are approved;
-`to-tickets` has an implementation candidate. Suite
-publication remains gated by the composed-suite and clean-install proof in #31
-and the immutable-release review in #32.
+`thinking-in-systems`, `workflow`, `to-spec`, `to-tickets`, `domain-modeling`,
+`review`, and `prototype` are approved. The approved Workflow Durable route and
+To Tickets implementation merged through PR #45 and closed issues #14 and #23.
+Suite publication remains gated by the composed-suite and clean-install proof
+in #31 and the immutable-release review in #32.
 
 Each package uses `skills/<skill-name>/SKILL.md` with supporting `references/`, `assets/`, `scripts/`, and `agents/openai.yaml` only where they serve that skill's single job.
 

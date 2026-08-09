@@ -14,12 +14,12 @@ every later skill.
 Workflow's complete Inline route is implemented and approved through issue #13.
 It coordinates bounded synchronous work and active mid-work changes through
 immediate Review while preserving exact responsibility, revision, approval,
-effect, interruption, and continuation semantics. Durable coordination is
-implemented as the issue #14 candidate through the same Workflow skill and
-adapter-neutral work contract. Human review of the #14 candidate remains
-required. Durable System state binds to the accepted #35 System Record
-representation; its one-writable-authority and validator/action-guard boundary
-remains authoritative.
+effect, interruption, and continuation semantics. The approved Durable route
+extends the same Workflow skill through the adapter-neutral work contract.
+Yannic approved issue #14, and PR #45 merged it into `main`. Durable System
+state binds to the accepted #35 System Record representation; its
+one-writable-authority and validator/action-guard boundary remains
+authoritative.
 
 The complete current runtime method and its vocabulary are owned by the Thinking in Systems [governing standard](../skills/thinking-in-systems/references/standard.md) and are read on every invocation. Section pointers in `SKILL.md` provide traceability and fast rereading rather than conditional loading. The installed [source guide](../skills/thinking-in-systems/references/sources.md) links professional concepts to public evidence for optional deeper reading without becoming a second governing authority. [`source/THINKING_IN_SYSTEMS_STANDARD.md`](source/THINKING_IN_SYSTEMS_STANDARD.md) is its stable source-archive pointer, and [`THINKING_IN_SYSTEMS.md`](THINKING_IN_SYSTEMS.md) is a compact orientation; neither substitutes for the complete reference. The accepted jobs and source strategy are owned by [`SUITE_ROSTER.md`](SUITE_ROSTER.md). Repository- and suite-specific requirements are owned by [`requirements/REQUIREMENTS_LEDGER.md`](requirements/REQUIREMENTS_LEDGER.md). Private provenance, evidence classification, and maintainer history remain in the [`source` archive](source/README.md), outside the installed agent guidance.
 

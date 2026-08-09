@@ -6,11 +6,10 @@ This repository is being built around a simple idea: agents become much more use
 
 ## Skills
 
-No skill has been published yet. Thinking in Systems, Workflow's Inline route,
-To Spec, Domain Modeling, Review, and Prototype are approved. Workflow's
-Durable route and To Tickets are implemented candidates awaiting human review.
-Suite publication remains gated by the composed-suite and clean-install proof
-in #31 and the immutable-release review in #32.
+No skill has been published yet. Thinking in Systems, Workflow's Inline and
+Durable routes, To Spec, To Tickets, Domain Modeling, Review, and Prototype are
+approved. Suite publication remains gated by the composed-suite and
+clean-install proof in #31 and the immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved
 
@@ -23,7 +22,7 @@ Installing a skill is not a substitute for understanding it. Read the method, pr
 Yannic approved the skill's governing behavior in issue #12. That approval is
 distinct from publishing the complete suite, which still requires #31 and #32.
 
-### [Workflow](skills/workflow) — Inline approved; Durable candidate requires human review
+### [Workflow](skills/workflow) — approved
 
 Workflow coordinates one parent Outcome from the accepted request through the
 smallest truthful route to verified completion, accepted transfer, or
@@ -39,19 +38,19 @@ During active work it classifies clarification, extensions or Constraint
 changes, corrections, authorized exceptions, explicit replacements, and
 unrelated switches before changing state. Material changes invalidate and
 propagate only affected work; parent and unaffected delegated ownership remain
-intact. Durable coordination is the issue #14 candidate. Durable Systems bind to
-the accepted #35 System Record representation: one human-readable Markdown
-authority with constrained YAML formal fields, native Adapter mappings where
-appropriate, and optional read-only projections. The candidate remains
-human-review-required and does not change private or global configuration.
+intact. Durable Systems bind to the accepted #35 System Record representation:
+one human-readable Markdown authority with constrained YAML formal fields,
+native Adapter mappings where appropriate, and optional read-only projections.
+Yannic approved the Durable route in issue #14, and PR #45 merged it into
+`main`. This approval does not change private or global configuration.
 
 ### [To Spec](skills/to-spec) — approved
 
 To Spec turns an accepted Outcome contract into a clear Specification artifact for downstream work, or revises it after a material change. It preserves the Outcome's vocabulary, routes material gaps to the capability that owns them, and returns responsibility to Workflow. Yannic approved issue #22; publication still depends on the composed-suite release proof.
 
-### [To Tickets](skills/to-tickets) — implementation candidate (human review required)
+### [To Tickets](skills/to-tickets) — approved
 
-To Tickets decomposes an accepted Specification into a collectively complete set of bounded, owned, dependency-aware Tickets. It preserves each Result, Authority, Proof seam, containment relationship, and Workflow context; exposes the accepted Work frontier; and returns material Specification or capability gaps without silently changing intent. One bounded Inline unit may remain implicit, while Durable decomposition is reserved for coordination boundaries. Issue #23 remains open until the human-review gate and composed-suite release proof are complete.
+To Tickets decomposes an accepted Specification into a collectively complete set of bounded, owned, dependency-aware Tickets. It preserves each Result, Authority, Proof seam, containment relationship, and Workflow context; exposes the accepted Work frontier; and returns material Specification or capability gaps without silently changing intent. One bounded Inline unit may remain implicit, while Durable decomposition is reserved for coordination boundaries. Yannic approved issue #23, and PR #45 merged the skill into `main`; publication still depends on the composed-suite release proof.
 
 ### [Review](skills/review) — approved
 
@@ -81,7 +80,7 @@ proof.
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 17 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied. For documented planning and design, Grill With Docs composes Grilling's decision-tree interview with Domain Modeling's shared-language and decision records through the selected Adapter.
 
-The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [current handoff](docs/handoffs/2026-08-08-workflow-durable-candidate.md).
+The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [historical Workflow Durable candidate handoff](docs/handoffs/2026-08-08-workflow-durable-candidate.md).
 
 Publication evidence, clean-install proof, behavioral evaluation, and the
 separate private-activation gate are defined by the

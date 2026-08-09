@@ -20,11 +20,11 @@ Status: complete when the bootstrap commit and public remote are verified.
 - Author `migrate-system` for automatic current-state adoption.
 - Evaluate each skill independently before composing them.
 
-Current state: `thinking-in-systems` and Workflow's Inline route are approved.
-Issue #14 has a Durable coordination candidate that extends the same Workflow
-skill through the accepted adapter-neutral work contract and #35 System Record
-representation; its human-review gate remains open. `migrate-system` remains to
-be implemented.
+Current state: `thinking-in-systems` and both Workflow routes are approved.
+Issue #14's Durable coordination route extends the same Workflow skill through
+the accepted adapter-neutral work contract and #35 System Record
+representation; PR #45 merged it into `main`. `migrate-system` remains to be
+implemented.
 
 ## Phase 2 — discovery skills
 
@@ -35,7 +35,7 @@ be implemented.
 ## Phase 3 — delivery and continuity skills
 
 - Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
-- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. To Spec is approved; To Tickets has a human-review-required candidate; Implement and Handoff remain to be implemented.
+- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. To Spec and To Tickets are approved; Implement and Handoff remain to be implemented.
 - Author universal `review`, including code and configured Supplemental evidence. Review is approved.
 - Prove the lifecycle:
 
