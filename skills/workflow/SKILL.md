@@ -68,26 +68,7 @@ The diagram shows every capability; follow only the smallest path needed to sati
 
 ## Durable coordination boundary
 
-At a Durable boundary, Workflow coordinates one canonical adapter-neutral
-record set: Outcome, Ticket, Claim, Evidence, Continuation, transition history,
-and (when consequence warrants) a Change and Legacy Record. The selected
-Adapter may store those meanings in Local Markdown, Git, GitHub, or an external
-native record, but it must declare actual capabilities and keep one writable
-authority. Transient Conversation is an Inline representation only; at the
-Persistence boundary it must materialize through a Baseline Adapter or enter a
-visible Degraded continuation. Read [Durable mode](references/durable-mode.md)
-for the materialization sequence, capability matrix, queue and transition
-guards, #35 System Record binding, migration, waiting, Degraded operation,
-effects, and parent proof bundle.
-
-When the represented scope is a Durable System, bind its Outcome and system
-transition to the accepted #35 System Record: one human-readable Markdown
-authority with constrained YAML formal fields, the canonical relationship
-index, native Adapter mappings where applicable, and optional read-only
-projections. A missing or failed `System Record structural validator` or
-`System Record action guard` leaves the record readable but blocks machine
-transitions, projections, and effects. This is a capability boundary inside
-Workflow, not a second System Record or migration skill.
+At a Durable boundary, read [Durable mode](references/durable-mode.md) completely. It is the single authority for record meanings, materialization, Adapter capabilities, transition guards, System Record binding, migration, waiting, Degraded operation, effects, and the parent proof bundle.
 
 ## Select discovery by uncertainty
 

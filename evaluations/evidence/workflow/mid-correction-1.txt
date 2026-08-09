@@ -1,8 +1,0 @@
-Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
-Thinking in Systems is applied within the existing Workflow context. The new message is a Correction: it establishes that M4's earlier customer-delivery claim and O2 completion assertion were false under O2's original contract. It is not a new Outcome, replacement, or extension.
-
-Append durable correction event `O2-correction-M4-1`, linked to result M4 and the source message: M4 was sent only to the internal group, not the customer group. Preserve the earlier M4 report and O2 completion transition in history, but mark the customer-delivery evidence invalid; the actual internal-only send remains historical evidence and does not satisfy O2.
-
-Append the state transition `O2: complete -> accepted (reopened)`. The current O2 owner resumes responsibility for the communication Outcome and its terminal proof. No external effect is performed in this interaction, and O2 is not complete.
-
-Route `midwork-correction-recovery` from the failed audience/delivery proof seam: confirm the intended customer group and current send Authority, prepare or reuse the correct message revision, perform the customer send only when authorized, verify the actual audience and delivery, then repeat parent Review before any completion claim. Also inspect whether the internal-only send creates a containment or notification duty; keep any such duty owned and visible.

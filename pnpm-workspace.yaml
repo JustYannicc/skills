@@ -1,5 +1,0 @@
-allowBuilds:
-  esbuild: true
-minimumReleaseAgeExclude:
-  - tsx@4.23.4
-  - ultracite@7.10.0

@@ -1,9 +1,0 @@
-Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
-Learning question: missing; the request names neither the uncertainty nor the decision it should inform.
-Status: blocked before setup.
-Disposition: pause.
-Missing safe prerequisite: one material learning question tied to one design decision.
-
-What single design decision are you trying to make, and what uncertainty should this prototype resolve for it?
-
-Exact resumption condition: resume at step 1 when the caller supplies that decision and uncertainty as one material learning question. Workflow—or the caller when no Workflow is active—retains responsibility until then.

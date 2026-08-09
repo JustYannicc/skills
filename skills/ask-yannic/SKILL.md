@@ -13,7 +13,7 @@ Give one source-derived route recommendation. This skill is guidance only: the u
 
 ## Bind the routing authority
 
-Read the current [canonical Workflow routing source](../../docs/WORKFLOW_ROUTING.md) completely from the same pinned suite revision as the active `'Workflow'` skill. Use the installation manifest, source checkout, or exact-revision public locator to establish the source locator and freshness. Treat summaries, prior answers, copied route lists, skill descriptions, and memory as non-authoritative candidates.
+Read the active `'Workflow'` skill's `SKILL.md` completely from the same pinned suite revision as this guide. Follow every context pointer that governs a materially plausible route for the request. Use the installation manifest, installed skill metadata, source checkout, or exact-revision public locator to establish both skill revisions and freshness. Treat summaries, prior answers, copied route lists, descriptions, and memory as non-authoritative candidates.
 
 If the canonical source is unavailable, its revision cannot be matched to the active Workflow revision, or available copies conflict, stop route selection. Report the missing or stale source, the evidence needed to establish the current revision, and the exact source-access or update condition that would resume guidance. A remembered route is not a safe equivalent.
 

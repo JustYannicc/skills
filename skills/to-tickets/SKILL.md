@@ -67,7 +67,7 @@ Use the [Ticket contract template](references/ticket-contract-template.md) for e
 
 **Govern concurrency.** Run independent Tickets concurrently only when their requirements, Authority, writable sources, and Proof seams do not conflict. Shared state, ordering, or integration creates an explicit requirement or integration Ticket. A read-then-write Adapter does not prove concurrency safety. When the Adapter does not declare atomic-claim coordination, disable parallel claiming, state that safe concurrent coordination cannot be guaranteed, and use sequential claiming or an explicit handoff or Recovery path. This contract-preserving fallback keeps Durable representation available.
 
-**Preserve continuation.** When the companion Workflow skill is available, hand waiting state through its shared [Continuation contract](../workflow/references/continuation-template.md). Otherwise use the template's standalone projection with the same dependency, unblock, resumption, retry, and Recovery fields.
+**Preserve continuation.** When the companion `'Workflow'` skill is available, hand waiting state through its Continuation contract at the matching suite revision. Otherwise retain an equivalent standalone projection with the same dependency, unblock, resumption, retry, and Recovery fields.
 
 **Done when:** every Ticket has one owner and feasible Authority; `contains` and `requires` are typed and acyclic; and delegation, concurrency, external dependencies, waiting, and Recovery behavior are explicit.
 
@@ -85,7 +85,7 @@ Use only Supplemental skills configured at the `workflow.decomposition` decompos
 
 **Stop on required gaps.** When a required mapping is blocked, preserve the complete proposed draft and required-Supplemental gap in Waiting state, return them to Workflow through Step 7, and skip acceptance and persistence until valid evidence returns.
 
-When the companion Workflow skill is available, hand mappings through its shared [Extension-point contract](../workflow/references/extension-point-template.md). Otherwise retain the equivalent Ticket-set revision and evidence fields in the decomposition envelope.
+When the companion `'Workflow'` skill is available, hand mappings through its Extension-point contract at the matching suite revision. Otherwise retain the equivalent Ticket-set revision and evidence fields in the decomposition envelope.
 
 **Done when:** every configured mapping is integrated, advisory-unavailable, required-blocked, or not configured, and the core coverage and Ticket-shape criteria still pass.
 

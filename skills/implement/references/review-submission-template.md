@@ -1,10 +1,6 @@
 # Review submission template
 
-Use this record after the integrated Result has passed the Ticket's pre-Review
-proof. Keep canonical Ticket and Specification detail linked at exact
-revisions; repeat only what Review needs to admit and inspect this submission.
-In Inline mode, compress the record without dropping required meaning. Omit an
-empty conditional section instead of emitting placeholder rows.
+Use this record after the integrated Result has passed the Ticket's pre-Review proof. Keep canonical Ticket and Specification detail linked at exact revisions; repeat only what Review needs to admit and inspect this submission. In Inline mode, compress the record without dropping required meaning. Omit an empty conditional section instead of emitting placeholder rows.
 
 # Review submission — [Result label]
 
@@ -48,8 +44,7 @@ empty conditional section instead of emitting placeholder rows.
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-Record configured `workflow.implementation` Supplemental returns in this table
-and identify the governing mapping revision.
+Record configured `workflow.implementation` Supplemental returns in this table and identify the governing mapping revision.
 
 ## Failures, waiting, and limitations
 
@@ -61,17 +56,10 @@ and identify the governing mapping revision.
 ## Submission transition
 
 - **Review route acceptance evidence:**
-- **Transition:** [Durable `active → in_review` after atomic acceptance, Inline
-  claim-free Review handoff, or unchanged]
+- **Transition:** [Durable `active → in_review` after atomic acceptance, Inline claim-free Review handoff, or unchanged]
 - **Transition actor, Authority, rationale, and time:**
-- **Current Work-owner Responsibility:** [resolve findings, perform later
-  authorized effects, recover, and carry the Ticket through verified
-  completion]
+- **Current Work-owner Responsibility:** [resolve findings, perform later authorized effects, recover, and carry the Ticket through verified completion]
 - **Outcome-owner Responsibility:** [integrate child evidence and prove parent]
 - **Explicit non-claims:** [no Review verdict; Ticket and parent remain open]
 
-If Review cannot accept this exact package, preserve it as ready state and
-record an owned Continuation using Workflow's canonical
-[Continuation template](../../workflow/references/continuation-template.md). A
-local file, message, queue entry, or label is a submission only when the
-configured Review route identifies and accepts the same immutable revision.
+If Review cannot accept this exact package, preserve it as ready state and record an owned Continuation using the active `'Workflow'` skill's Continuation contract at the matching suite revision. A local file, message, queue entry, or label is a submission only when the configured Review route identifies and accepts the same immutable revision.

@@ -4,7 +4,7 @@ Use this contract to create, resume, or update a Wayfinder Map through the selec
 
 ## Canonical relationship
 
-The [Universal work and coordination contract](../../../docs/UNIVERSAL_WORK_CONTRACT.md#outcome-ticket-and-map) owns Outcome, Ticket, Map, Evidence, and Continuation meanings. The selected Adapter owns their native serialization.
+The active `'Workflow'` skill's Durable mode owns Outcome, Ticket, Evidence, and Continuation meanings. This contract owns the derived Map and Strategy shape; the selected Adapter owns their native serialization.
 
 For Wayfinder, render a low-resolution Map over those canonical sources. Identify their exact revisions and freshness. Carry only a one-line decision gist and named context pointer for navigation; keep full reasoning, Evidence, and Continuation at their authoritative records.
 
@@ -91,7 +91,7 @@ Satisficing threshold.>
 - State: <active/waiting/recovery/ready for next route>
 - Exact resumption action: <first action against current canonical state>
 
-The canonical record follows the shared [Continuation contract](../../workflow/references/continuation-template.md); the Map does not copy it.
+The canonical record follows the active `'Workflow'` skill's Continuation contract at the matching suite revision; the Map does not copy it.
 
 ## Transition history
 

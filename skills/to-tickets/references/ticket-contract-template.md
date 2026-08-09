@@ -1,6 +1,6 @@
 # Ticket contract template
 
-Use the Ticket and envelope projection after binding the accepted Specification. When binding fails, use only the Specification-gaps section. The Universal Work Contract remains the canonical meaning of shared Ticket, relationship, Claim, Continuation, frontier, and Recovery fields; the selected Adapter may render them natively.
+Use the Ticket and envelope projection after binding the accepted Specification. When binding fails, use only the Specification-gaps section. The active `'Workflow'` skill's Durable mode at the matching suite revision owns shared Ticket, relationship, Claim, Continuation, frontier, and Recovery meanings; the selected Adapter may render them natively. When that capability is unavailable, keep the equivalent fields visible without claiming canonical persistence.
 
 ## Rendering rules
 
