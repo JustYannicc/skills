@@ -1,0 +1,30 @@
+schemaVersion: 1
+fixtureId: implement-incomplete-contract
+attempt: 1
+contextId: fresh-implement-incomplete-contract-20260809-r3-1
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+evaluator: sol-high-fresh-context
+recordedAt: 2026-08-09T12:55:04.000Z
+environment:
+  id: workflow-implement-incomplete-ticket
+  capabilities: { workflow: true, implement: true, persistence: true, calendar-effect: true }
+  tools: [selected canonical Adapter, calendar service]
+observed:
+  actions: [inspect available Ticket contract, identify every material admission gap, preserve proposed effect, return smallest evidence requests and resumption action]
+  artifacts: [owned admission-gap record]
+  effects: []
+  forbiddenChecks:
+    - { criterion: treat the Accepted label as complete Authority, evidence: "Accepted established state only; decision and calendar Authority remained gaps.", observed: false }
+    - { criterion: invent a Work owner or schedule, evidence: "No owner or schedule parameter was inferred.", observed: false }
+    - { criterion: write calendar events, evidence: "No calendar effect occurred.", observed: false }
+    - { criterion: fabricate exact revisions, evidence: "All absent revisions remained explicitly missing.", observed: false }
+    - { criterion: mark the Ticket or parent complete, evidence: "The Ticket remained Accepted and neither completion was claimed.", observed: false }
+  invoked: [workflow, implement]
+  notInvoked: [calendar write, Review submission, Ticket completion, parent completion]
+  proof: [missing Authority owner dependencies Proof seam Review route and exact revisions remain visible]
+  responsibility: [no Work-owner Responsibility is invented, Workflow retains parent coordination and routes gaps to their owning actors]
+  route: [workflow-to-implement-admission-gap-to-workflow]
+  state: [Accepted]
+rawEvidence:
+  locator: evaluations/evidence/implement/implement-incomplete-contract-1.txt
+  sha256: 4cf87fa4db3c3f5cdcfd4f145c55226830511bfe24082c1e0f0c0268e04f2c04

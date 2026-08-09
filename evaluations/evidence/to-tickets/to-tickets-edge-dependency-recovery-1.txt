@@ -1,8 +1,8 @@
 Evaluation: to-tickets-edge-dependency-recovery
 Attempt: 1
-Context: fresh-to-tickets-edge-dependency-recovery-editorial-20260809-1
-Observed candidate: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
-Evaluator: gpt-5.6-luna-max-fresh-context
+Context: fresh-to-tickets-edge-dependency-recovery-20260808-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: deterministic-candidate-observer
 
 Runtime command: `node .scratch/runtime-adapters/final-recovery/run.mjs`
 Adapter path: `.scratch/runtime-adapters/final-recovery/canonical-records.json`

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-supplemental
 attempt: 1
 contextId: fresh-to-spec-supplemental-sol-high-20260806-1
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-supplemental-1.txt
-  sha256: c17830189ed6b70b7e64ae11226a8221e67a7fa8a68c787254a0ac74eb03c1c2
+  sha256: d7f4cc57937724e87a05add37279717e7311f7fb17a6a34434d6177898b25a43

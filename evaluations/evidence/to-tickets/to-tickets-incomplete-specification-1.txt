@@ -1,9 +1,8 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
-Evaluation
-Attempt 1
-Context fresh-to-tickets-incomplete-specification-editorial-20260809-1
-Observed candidate d835d4f1d82be3f531c3df309b97a8ebdcfe4f0663d041998d8523afc0e3ad51
-Evaluator gpt-5.6-luna-max-fresh-context
+Evaluation: to-tickets-incomplete-specification
+Attempt: 1
+Context: fresh-to-tickets-incomplete-specification-20260808-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: deterministic-candidate-observer
 
 ## Result
 

@@ -35,7 +35,9 @@ implemented.
 ## Phase 3 — delivery and continuity skills
 
 - Implement the accepted [Ownership and completion lifecycle](OWNERSHIP_LIFECYCLE.md).
-- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff` successors. To Spec and To Tickets are approved; Handoff has an implementation candidate awaiting required human review; Implement remains to be implemented.
+- Author the universal `to-spec`, `to-tickets`, `implement`, and `handoff`
+  successors. To Spec and To Tickets are approved; Implement has a
+  human-review candidate; Handoff remains to be implemented.
 - Author universal `review`, including code and configured Supplemental evidence. Review is approved.
 - Prove the lifecycle:
 

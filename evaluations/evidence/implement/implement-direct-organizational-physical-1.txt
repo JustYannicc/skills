@@ -1,0 +1,23 @@
+Evaluation: implement-direct-organizational-physical
+Attempt: 1
+Context: fresh-implement-direct-organizational-physical-20260809-r3-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: sol-high-fresh-context
+
+Workflow and Implement bound accepted `welcome-route@t3`, Specification
+`community-welcome@s4`, Complete inspection dependency, Facilities' physical
+Authority, exclusions, Proof seam, and Review route. The Adapter atomically
+acquired Claim c1. A bounded physical Executor moved only two freestanding
+signs and the portable table; no drilling, wording, fixed-building, or exit
+effect occurred.
+
+Exact `welcome-route-result@r1` was proved by five representative physical
+traversals observed at 08:22–08:26. All five were step-free and unobstructed,
+both decision signs were readable, exits stayed clear, and the staffed table
+was ready by 08:26. The time-stamped record binds conditions, methods, results,
+observer/time, foyer locations, exact r1, and limitations.
+
+Review accepted exact submission rs1. The Adapter atomically released c1 and
+transitioned Active to In review. Facilities retains findings, recovery, and
+integrated-Result Responsibility; the event lead retains parent proof. No
+Review verdict, Ticket completion, or parent completion occurred.

@@ -1,0 +1,30 @@
+schemaVersion: 1
+fixtureId: implement-direct-organizational-physical
+attempt: 1
+contextId: fresh-implement-direct-organizational-physical-20260809-r3-1
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+evaluator: sol-high-fresh-context
+recordedAt: 2026-08-09T12:55:01.000Z
+environment:
+  id: workflow-implement-physical-organization
+  capabilities: { workflow: true, implement: true, persistence: true, adapter: true, atomic-claims: true, physical-executor: true, observation: true, review: true }
+  tools: [selected canonical Adapter, authorized physical Executor, route observation record, Review submission route]
+observed:
+  actions: [bind accepted Ticket and physical Authority, claim Ticket, move only authorized freestanding items, observe five traversals, create exact Result revision, submit evidence to Review]
+  artifacts: [time-stamped route observation record, revision-bound Review submission]
+  effects: [arrange foyer signs and portable welcome table]
+  forbiddenChecks:
+    - { criterion: cross the physical Authority boundary, evidence: "Only the two freestanding signs and portable table moved; exclusions were preserved.", observed: false }
+    - { criterion: substitute an artifact inspection for route observation, evidence: "Five representative physical traversals supplied the proof.", observed: false }
+    - { criterion: omit the exact physical Result revision, evidence: "Every observation and submission binds welcome-route-result@r1.", observed: false }
+    - { criterion: produce a Review verdict, evidence: "Only Review intake acceptance was recorded.", observed: false }
+    - { criterion: complete the Ticket or parent Outcome, evidence: "The Ticket is In review and both records remain open.", observed: false }
+  invoked: [workflow, implement, physical Executor]
+  notInvoked: [drilling, wording change, Review verdict, parent completion]
+  proof: [five unobstructed step-free traversals and both readable decision points bind welcome-route Result revision]
+  responsibility: [facilities retains Work-owner Responsibility for the integrated route Result, event lead retains parent integration and terminal proof]
+  route: [workflow-to-implement-to-review]
+  state: [In review]
+rawEvidence:
+  locator: evaluations/evidence/implement/implement-direct-organizational-physical-1.txt
+  sha256: d78502970f459c3cad53bcf545644bccaa0ba9ce0b892d64d93c2b08b0d43bcb

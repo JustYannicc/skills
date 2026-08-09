@@ -1,11 +1,11 @@
 # Skill packages
 
 `thinking-in-systems`, `workflow`, `to-spec`, `to-tickets`, `domain-modeling`,
-`review`, and `prototype` are approved. `ask-yannic` is an explicit-only route
-guide candidate under issue #27. The approved Workflow Durable route and To
-Tickets implementation merged through PR #45 and closed issues #14 and #23.
-Suite publication remains gated by the composed-suite and clean-install proof
-in #31 and the immutable-release review in #32.
+`review`, and `prototype` are approved. `implement` has a human-review
+candidate. The approved Workflow Durable route and To Tickets implementation
+merged through PR #45 and closed issues #14 and #23. Suite publication remains
+gated by the composed-suite and clean-install proof in #31 and the
+immutable-release review in #32.
 
 Each package uses `skills/<skill-name>/SKILL.md` with supporting `references/`, `assets/`, `scripts/`, and `agents/openai.yaml` only where they serve that skill's single job.
 
@@ -17,9 +17,9 @@ Establishes shared terminology through the selected Adapter. Use it when words
 or boundaries block shared understanding; see the [suite roster](../docs/SUITE_ROSTER.md)
 for its completion boundary and Workflow handoff.
 
-## `ask-yannic`
+## `implement`
 
-Explains the smallest applicable route from Workflow's canonical routing
-source, including trade-offs and capability gaps, then stops before execution.
-It is invoked only when the user explicitly requests it and does not represent
-Yannic's personal judgment for coworkers.
+Executes one accepted Ticket to an exact usable Result, integrates bounded
+Executor and configured `workflow.implementation` Supplemental evidence, and
+submits the revision to Review without completing the Ticket or parent Outcome.
+Issue #24 still requires explicit human review.

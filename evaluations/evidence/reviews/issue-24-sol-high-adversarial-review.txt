@@ -1,0 +1,46 @@
+Issue #24 independent Sol High adversarial review
+
+Fixed point: e2f92efaa253793c01ec33cd711b27417c0da424
+Reviewed tree: pre-resolution working tree compared with the fixed point; the
+reviewer's raw return did not state a candidate-identity hash
+Resolution target: git:fd4a6732c00faa703eb563fefe8f08a647ba4804,
+content-equivalent to the resolved working tree
+Reviewer: independent gpt-5.6-sol, high reasoning
+Date: 2026-08-09
+Scope: issue #24, repository standards, the Implement skill and reference,
+fixtures, observations, evidence, provenance, and public boundaries.
+
+The single adversarial pass reported five Major findings and one Minor finding.
+All six are resolved:
+
+1. **Inline Claim contradiction — resolved.** Implement now gives Inline work a
+   claim-free conversational route and Review handoff. Durable Claim mechanics
+   no longer apply to Inline execution.
+2. **Claim expiry and partial submission — resolved.** Every material Durable
+   effect and submission rechecks the live Claim. Review intake, Claim release,
+   and `active → in_review` are atomic or use one immutable idempotency key with
+   explicit partial-state Recovery. Dedicated expiry and transition-failure
+   fixtures prove both boundaries.
+3. **Supplemental evidence placement — resolved.** Configured
+   `workflow.implementation` returns are recorded under Delegation and
+   integration with their mapping revision; only actual effects appear under
+   Effects and Authority.
+4. **Agent-domain proof — resolved.** A dedicated fixture executes and proves
+   an exact agent-behavior Result rather than labeling a software or physical
+   Result as agent-domain work.
+5. **Unverifiable Implement rebind — resolved.** All 18 Implement attempts are
+   fresh Sol High contexts after the review fixes. The separate candidate
+   attestation identifies the later documentation-only identity rebind.
+6. **Provenance ordering — resolved.** Provenance now distinguishes upstream
+   intentional versioning from this adaptation's immutable pre-Review Result
+   revision instead of attributing that order to upstream.
+
+Post-resolution deterministic proof at the reviewed content boundary:
+
+- `git diff --check`: pass
+- `pnpm evaluations:record`: pass
+- `pnpm validate`: pass — 830 files, 8 skills, 150 fixtures, 41 tests
+
+This record reports review findings and their dispositions. It is not a second
+adversarial pass, a human approval, a Review verdict for issue #24, or a Ticket
+or parent-Outcome completion claim.

@@ -1,0 +1,46 @@
+schemaVersion: 1
+id: implement-indirect-delegated-software
+title: Delegated software execution returns one integrated Result
+shape: indirect
+kind: composition
+skill: implement
+domains: [software, agent]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow supplies accepted Ticket `retry-status@t4`, Specification
+  `retry-contract@s8`, and Ticket set `retry-work@d2`. The Result is that the
+  public retry-status API preserves the interrupted action identity and returns
+  the next legal action. The principal agent is Work owner with Authority to
+  modify the named API module and its focused tests only; deployment is
+  excluded. All requirements are Complete, the Proof seam is the public API
+  exercised by the focused test plus the affected package checks, and the
+  current baseline is `retry-status@r1`. The Adapter supports atomic Claims,
+  delegated agents are available, and Review accepts exact repository
+  revisions. Delegate the bounded implementation and independent proof work
+  where useful, integrate child evidence, and submit one exact Result revision
+  to Review without producing a verdict or completing the parent.
+environment:
+  id: workflow-implement-delegated-software
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: true
+    adapter: true
+    atomic-claims: true
+    delegation: true
+    repository: true
+    test-runner: true
+    review: true
+  tools: [selected canonical Adapter, delegated agent executor, repository, test runner, Review submission route]
+expected:
+  actions: [bind accepted Ticket and baseline revision, claim Ticket, delegate bounded child contracts, validate child Result and proof revisions, integrate one repository Result, submit exact revision to Review]
+  artifacts: [bounded Executor contracts, integrated software Result, revision-bound Review submission]
+  effects: [modify named API module and focused tests]
+  invoked: [workflow, implement, delegated Executors]
+  notInvoked: [deployment, Review verdict, parent completion]
+  proof: [public retry-status API preserves action identity and exposes next legal action, focused and affected package checks bind the integrated Result revision]
+  responsibility: [principal agent retains Work-owner integration and recovery Responsibility, Executors own only bounded returns, Outcome owner retains parent completion]
+  route: [workflow-to-implement-to-review]
+  state: [In review]
+  forbidden: [delegate an unbounded Ticket, let child completion transfer Work-owner Responsibility, accept stale child evidence, deploy the change, claim tests are the Review verdict or parent proof]

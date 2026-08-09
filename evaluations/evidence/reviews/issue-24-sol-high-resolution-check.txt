@@ -1,0 +1,44 @@
+Issue #24 separate Sol High resolution check
+
+Verified content identity: working-tree:9753eba503036120e09e1bc4de566dfeebb76e401c0c860989d2e23dde0a5223
+Git-bound candidate: git:fd4a6732c00faa703eb563fefe8f08a647ba4804;
+the non-evaluation commit contains the exact checked content
+Checker: independent gpt-5.6-sol, high reasoning; neither author nor prior
+adversarial reviewer
+Date: 2026-08-09
+Verdict: PASS — no remaining material findings
+
+Verified resolutions:
+
+1. Inline execution and Review remain claim-free.
+2. Claim expiry and partial Review submission preserve safe Recovery and one
+   idempotent retry path.
+3. Configured Supplemental returns bind their mapping and exact child evidence
+   under Delegation and integration.
+4. Agent-domain proof exercises an agent-behavior Result at its observable
+   seam.
+5. Candidate rebinding is exact: 16 Implement fixtures, 18 unique fresh Sol
+   High attempts, 234 total observations, and matching raw-evidence hashes.
+6. Provenance distinguishes retained upstream behavior from the universal
+   pre-Review immutable Result adaptation.
+
+Acceptance proof:
+
+- Required communication, organizational, physical, agent, software, failure,
+  waiting, delegation, missing-capability, negative, Inline, pre-effect,
+  incomplete, revision-change, Claim-expiry, and partial-transition behavior:
+  pass.
+- Public boundary, pinned MIT provenance, links, `agents/openai.yaml`, and
+  implicit invocation: pass.
+- Writing-for-agents hierarchy, context pointers, co-location, completion
+  criteria, leading words, progressive disclosure, one source of truth,
+  relevance, and no-ops across every touched authored text artifact: pass.
+- Five historical review records restored byte-for-byte to task-start content:
+  pass.
+- `git diff --check`: pass.
+- `pnpm evaluations:record`: pass.
+- `pnpm validate`: pass — 831 files, 8 skills, 150 fixtures, 41 tests.
+
+Issue #24 remains open and human-review-required; dependency #23 remains
+closed. This check is not human approval, a Review verdict, a merge, Ticket
+completion, parent-Outcome completion, or issue closure.

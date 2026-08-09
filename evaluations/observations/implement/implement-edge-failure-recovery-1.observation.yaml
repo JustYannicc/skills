@@ -1,0 +1,30 @@
+schemaVersion: 1
+fixtureId: implement-edge-failure-recovery
+attempt: 1
+contextId: fresh-implement-edge-failure-recovery-20260809-r3-1
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+evaluator: sol-high-fresh-context
+recordedAt: 2026-08-09T12:55:02.000Z
+environment:
+  id: workflow-implement-delegated-failure
+  capabilities: { workflow: true, implement: true, persistence: true, adapter: true, delegation: true, printer: false, scheduler: false, review: true }
+  tools: [selected canonical Adapter, child return record]
+observed:
+  actions: [validate child partial Result, record printer failure event, preserve 12 badge effects and remaining 28, retain Work-owner recovery, release or disposition Claim, create owned Continuation]
+  artifacts: [failure and partial-effect record, Continuation record]
+  effects: [preserve 12 verified printed badges]
+  forbiddenChecks:
+    - { criterion: discard or duplicate the 12 printed effects, evidence: "The 12 verified badges are inventoried and excluded from remaining work.", observed: false }
+    - { criterion: treat failure as cancellation or completion, evidence: "The open Ticket transitioned to Waiting with Continuation.", observed: false }
+    - { criterion: leave the Ticket ownerless, evidence: "The volunteer coordinator retained recovery and integration.", observed: false }
+    - { criterion: submit 12 badges as the complete Result, evidence: "The 12 badges remained partial and no Review submission occurred.", observed: false }
+    - { criterion: claim active monitoring without a scheduler, evidence: "A human or later-session trigger replaced unsupported monitoring.", observed: false }
+  invoked: [workflow, implement]
+  notInvoked: [backup printer, Review submission, Review verdict, parent completion]
+  proof: [12 of 40 badges bind names@n6 and remain partial, unreachable child and missing printer are visible, exact pickup point is remaining 28 badges]
+  responsibility: [volunteer coordinator retains Ticket recovery and integration Responsibility, unreachable Executor does not receive parent Responsibility, event owner retains parent completion]
+  route: [workflow-to-implement-to-waiting-recovery]
+  state: [Waiting]
+rawEvidence:
+  locator: evaluations/evidence/implement/implement-edge-failure-recovery-1.txt
+  sha256: 660afbb9057519ab4abf1d04757bfc7a2acfbef2ce499009a2486859231ee0c8

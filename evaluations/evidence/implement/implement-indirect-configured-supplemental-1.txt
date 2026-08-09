@@ -1,0 +1,45 @@
+Evaluation: implement-indirect-configured-supplemental
+Attempt: 1
+Context: fresh-implement-indirect-configured-supplemental-20260809-r2-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: sol-high-fresh-context
+
+Workflow bound accepted Ticket `sensor-calibration@t6`, accepted Specification
+`cold-room@s9`, the current Ticket-set revision, and effective configuration
+`workflow-config@cfg6`. The configured `workflow.implementation` mapping selects
+required Supplemental `calibration-runner@v2`; no similarly named capability is
+mapped. The facilities technician remains Work owner for the whole Ticket
+Result. Authority permits the recorded calibration procedure and excludes
+sensor replacement.
+
+The selected Adapter atomically acquired live Claim
+`sensor-calibration-claim@c1`. The Extension-point contract bound `t6`, `s9`,
+`cfg6`, the sensor input revision, the authorized procedure, child Result
+`calibration-run@cr4`, traceable readings and procedure evidence, failure
+behavior, and return to the facilities technician. The Claim and Authority were
+current immediately before the material effect. The runner performed only the
+calibration procedure.
+
+The facilities technician validated `cr4` against its exact inputs and mapping:
+sensor identity matched, the readings were traceable, the procedure record was
+complete, and the child revision was current. The Work owner then integrated
+`cr4` into immutable Ticket Result `sensor-calibration@r2`; the runner retained
+responsibility only for its bounded child return.
+
+Comparison-seam evidence binds `r2` to the accepted criteria and records a
+pass. Effect evidence binds the performed calibration to the granted Authority
+and records that replacement did not occur. Each evidence reference identifies
+its condition, observation, result, observer, time, location, exact Result
+revision, and limitation. No pending effect or material limitation remains
+before Review.
+
+After rereading the canonical Ticket and Specification and rechecking the live
+Claim, Implement submitted exact `r2` and its integrated evidence through the
+configured Review route. Review intake accepted
+`sensor-calibration-review@sub1`; the same atomic Adapter operation released
+the Claim and recorded `active → in_review` against `r2`.
+
+The facilities technician retains Responsibility for findings, later effects,
+recovery, and verified Ticket completion. The Outcome owner retains parent
+integration and terminal proof. Review has issued no verdict. The Ticket and
+parent Outcome remain open.

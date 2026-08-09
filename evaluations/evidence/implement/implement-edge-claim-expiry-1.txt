@@ -1,0 +1,20 @@
+Evaluation: implement-edge-claim-expiry
+Attempt: 1
+Context: fresh-implement-edge-claim-expiry-20260809-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: sol-high-fresh-context
+
+The drilling effect stopped when the Adapter reported Claim c1 expired one
+minute before the material boundary. No hole was drilled and no renewal was
+inferred. The Claim-expiry record binds t14, the exact timestamp, no partial
+effect, unchanged `mount-layout@r3`, Recovery disposition, and retained owners.
+
+The canonical Continuation records the parent, Recovery state, accepted
+Specification, r3, Authority without coordination, Adapter location, expired
+Claim, fresh-Claim dependency, observable unblock, last observation, Work-owner
+next check, retry/escalation/expiry rules, no monitor, pickup before the first
+hole, first full revalidation and fresh atomic Claim, remaining effect proof,
+owner, route, and Adapter acceptance.
+
+No drill, Review submission, verdict, Ticket completion, or parent completion
+occurred.

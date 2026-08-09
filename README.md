@@ -8,9 +8,9 @@ This repository is being built around a simple idea: agents become much more use
 
 No skill has been published yet. Thinking in Systems, Workflow's Inline and
 Durable routes, To Spec, To Tickets, Domain Modeling, Review, and Prototype are
-approved. Handoff has an implementation candidate awaiting the issue #26 human
-review gate. Suite publication remains gated by the composed-suite and
-clean-install proof in #31 and the immutable-release review in #32.
+approved. Implement has a human-review candidate. Suite publication remains
+gated by the composed-suite and clean-install proof in #31 and the
+immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved
 
@@ -56,6 +56,18 @@ To Tickets decomposes an accepted Specification into a collectively complete set
 ### [Review](skills/review) — approved
 
 Review independently verifies any exact result against its accepted Specification and governing standards at the Proof seam. It shows how the result works, keeps Specification and Standards evidence distinct, checks interaction quality and maintainability across domains, and integrates only configured Supplemental reviewers before returning one revision-bound Verified, Changes required, or Inconclusive verdict. Yannic approved issue #25; publication still depends on the composed-suite release proof.
+
+### [Implement](skills/implement) — candidate; human review required
+
+Implement carries one accepted, unblocked Ticket through authorized execution
+to an exact usable Result and submits that revision with available effect
+evidence to Review. It verifies Authority, dependencies, Proof seam, and
+current revisions before action; permits bounded delegated Executors while the
+Work owner retains integration and recovery Responsibility; integrates only
+Supplemental skills configured at `workflow.implementation`; and preserves
+truthful waiting when a required capability or external dependency is absent.
+Submission moves only the Ticket to In review. Review, Ticket completion,
+parent integration, and parent Outcome completion remain outside this phase.
 
 ### [Prototype](skills/prototype) — approved
 

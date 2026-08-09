@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-revision-change
 attempt: 1
 contextId: fresh-to-spec-revision-change-sol-high-20260806-1
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -34,4 +34,4 @@ observed:
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-revision-change-1.txt
-  sha256: b8f2b9622c4e8f57c59f67d751f58f0fbb8fc11c9edfea0be6f804bdfadc9a2f
+  sha256: edbce2cc72131e030d850f00226214ed1b078da73c2f6e1f8b2adfe1390816b8

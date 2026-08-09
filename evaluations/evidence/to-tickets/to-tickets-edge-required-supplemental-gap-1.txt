@@ -1,5 +1,8 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
-Evaluation
+Evaluation: to-tickets-edge-required-supplemental-gap
+Attempt: 1
+Context: fresh-to-tickets-edge-required-supplemental-gap-20260808-1
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Evaluator: deterministic-candidate-observer
 
 Attempt 1
 

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-incomplete-specification
 attempt: 1
 contextId: fresh-to-tickets-incomplete-specification-20260808-1
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:32:00.000Z
 environment:
@@ -43,4 +43,4 @@ observed:
   state: [Waiting for discovery]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-incomplete-specification-1.txt
-  sha256: 7ddc762432d8c7c03eecf453b7359fd8a85a17b6eb42fc24a339904693d8871d
+  sha256: fc341639d904587cec87082645cfd60de48861ef254556d5565940166b167afa

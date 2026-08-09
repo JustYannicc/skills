@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-supplemental
 attempt: 1
 contextId: fresh-to-tickets-edge-supplemental-20260808-1
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:35:00.000Z
 environment:
@@ -43,4 +43,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-supplemental-1.txt
-  sha256: 141104f0e768558746ab79b5256930fa334b8e08571904663170b2e40a0d449f
+  sha256: a77cdf839a20bb44a1ffa0bb730864d64f5c76eafab3038746b4bee36c23534f

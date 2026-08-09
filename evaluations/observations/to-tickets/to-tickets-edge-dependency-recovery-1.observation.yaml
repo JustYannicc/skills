@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-dependency-recovery
 attempt: 1
 contextId: fresh-to-tickets-edge-dependency-recovery-20260808-1
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:37:00.000Z
 environment:
@@ -42,4 +42,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-dependency-recovery-1.txt
-  sha256: 9381cf6db52f0377caa7fc179b8d6677ab3b3064e1d94bd07c4bd1f7da4aaab5
+  sha256: 0359e3cfdb1a4cec50c69b0c68757e724db61f96d9753fc70a600bc3cf59dfd9

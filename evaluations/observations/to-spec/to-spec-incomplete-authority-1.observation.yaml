@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-incomplete-authority
 attempt: 1
 contextId: fresh-to-spec-incomplete-authority-sol-high-20260806-1
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -37,4 +37,4 @@ observed:
   state: [Waiting for discovery]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt
-  sha256: cc1cbc9f00b2a7d4a8371b71ccd384857faf82edcf863dffebdf5b703edb17c9
+  sha256: ee2b057fbbd9816ef86a9961724b5cfa2df62eb9ec4dc9156078b83a712da407

@@ -17,7 +17,14 @@ The universal `to-spec` successor is an adapted public skill based on Matt Pococ
 
 The universal `to-tickets` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-tickets` at the same pinned revision. It retains complete tracer-bullet decomposition, dependency edges, frontier visibility, and owner acceptance while replacing codebase and tracker assumptions with the adapter-neutral Ticket contract; the full provenance record is in [`validation/repository.yaml`](../validation/repository.yaml).
 
-The universal `wayfinder` successor is an adapted public skill based on Matt Pocock's [`skills/engineering/wayfinder`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e/skills/engineering/wayfinder) at the same MIT-licensed pinned revision. It retains destination-first mapping, a low-resolution decision index, blockers, a visible frontier, fog graduation, and cross-session continuity while replacing repository and tracker assumptions with the selected Adapter and an operating Strategy for reducible, operating-delay, or irreducible fog; the full retained-behavior and changed-assumption record is in [`validation/repository.yaml`](../validation/repository.yaml).
+The universal `implement` successor is an adapted public skill based on Matt
+Pocock's `skills/engineering/implement` at the same pinned revision. It retains
+accepted-work execution, pre-agreed seam proof, Review submission,
+and an intentional exact result revision while replacing software-only tests,
+typechecking, code review, and commit assumptions with the universal Ticket,
+Authority, Evidence, waiting, delegation, effect, and Result-revision contract.
+The full retained-behavior and changed-assumption record is in
+[`validation/repository.yaml`](../validation/repository.yaml).
 
 ## Workflow Durable coordination
 
