@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-revision-preservation
 attempt: 1
 contextId: fresh-to-tickets-edge-revision-preservation-20260808-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:38:00.000Z
 environment:
@@ -40,4 +40,4 @@ observed:
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-revision-preservation-1.txt
-  sha256: 645315406d684249ac3a5ba33b3f3e9cc1072fbd7d8ade87742cdb252ee56f34
+  sha256: 9e3ae9b8c47ac3163b5f22acd32d62dbf7c547c4f203fa11b78855598b4ee2d5

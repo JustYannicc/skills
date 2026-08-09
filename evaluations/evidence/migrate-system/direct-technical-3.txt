@@ -4,7 +4,7 @@
 
 - Fixture: `migrate-system-direct-technical`
 - Attempt: `3`
-- Candidate suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Candidate suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 - Context: `fresh-migrate-system-direct-technical-attempt-3`
 - Evaluator: `gpt-5.6-luna-max-fresh-context`
 - Recorded at (UTC): `2026-08-09T16:00:00Z`

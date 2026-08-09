@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-direct-inline-review
 attempt: 1
 contextId: fresh-implement-direct-inline-review-20260809-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:07.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-direct-inline-review-1.txt
-  sha256: cf60713d075d1c3421d0108997e74a0c28c5ac4d855ea7f2c8ed259f85cbc149
+  sha256: 7e26ee968ba1cbeb30d0b14643e9ef5602ba262407b4e4d2a3aae286bfa23526

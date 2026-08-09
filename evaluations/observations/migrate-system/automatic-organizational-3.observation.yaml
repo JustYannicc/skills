@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-automatic-organizational
 attempt: 3
 contextId: fresh-migrate-system-automatic-organizational-attempt-3-20260809t143500z-public
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: '2026-08-09T14:35:00Z'
 environment:
@@ -66,7 +66,7 @@ observed:
       observed: false
 rawEvidence:
   locator: evaluations/evidence/migrate-system/automatic-organizational-3.txt
-  sha256: 5bc1bd939b8c085ac8dbecba1b3dcc4316d4b215556d38a84be0b6debc715c4c
+  sha256: ddf179ff567f6af2c9b0c76f7d78936145cb36d75a377c1ebe8aa74fe6a82e36
 runtimeInputs:
   - role: skill
     locator: skills/migrate-system/SKILL.md

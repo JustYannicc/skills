@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-cross-domain-communicative-agent
 attempt: 1
 contextId: fresh-sol-high-r2-prototype-cross-domain-communicative-agent-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:00:50Z
 environment:
@@ -35,4 +35,4 @@ observed:
   state: [cross-domain-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/cross-domain-communicative-agent-1.txt
-  sha256: 140071d3cddd832d984efc4f2c55af1dd69b6438719e6e2df9e38bf9109c787c
+  sha256: e27975936aa8d3c7c4b9241e7c4c94a0ecd814f19fc8996a016091ca016c5220

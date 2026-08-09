@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-stale-context
 attempt: 1
 contextId: fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:34:24Z
 environment:
@@ -80,4 +80,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/handoff/stale-context-1.txt
-  sha256: 1f151542cb2cc39640fddb11ba855d026079705942d28c6e9bb003eb3b2548ab
+  sha256: 3a3aebe6c601100187c1bfb36f377e3594fc9d9e3f6adc25d0a93a390bc1ce71

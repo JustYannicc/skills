@@ -6,7 +6,7 @@
 - **Attempt:** `3`
 - **Context ID:** `fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a`
 - **Evaluator:** `gpt-5.6-luna-max-fresh-evaluator`
-- **Candidate and suite revision:** `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+- **Candidate and suite revision:** `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 - **Recorded at (UTC):** `2026-08-09T13:30:58Z`
 - **Fixture environment:** `handoff-human-accepted-transfer`; `workflow=true`, `persistence=true`, `adapter=true`, `handoff=true`, `recipient-response-route=true`; tools are `selected canonical Adapter` and `recipient response route`.
 

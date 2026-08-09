@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-cross-domain-physical
 attempt: 1
 contextId: fresh-migrate-system-cross-domain-physical-20260809t134147z-luna-019fe6b7
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-runtime-only
 recordedAt: 2026-08-09T13:41:47Z
 environment:
@@ -85,4 +85,4 @@ runtimeInputs:
     sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
 rawEvidence:
   locator: evaluations/evidence/migrate-system/cross-domain-physical-1.txt
-  sha256: 4d6703d39230811806c2f014310a4cc0e225c5c513f7a1f9e8da3816334f0f98
+  sha256: 2e316b569a8a7a6361ccc15fd1e5b59c4b1836b3d69197ee9fc21c07f3f08014

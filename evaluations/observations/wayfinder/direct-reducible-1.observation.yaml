@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-direct-reducible
 attempt: 1
 contextId: fresh-wayfinder-direct-reducible-20260809t132205z-luna-max-attempt-1-bafe1981-defe-437d-a4a4-4db86a40dcc2
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T13:22:05Z
 environment:
@@ -56,7 +56,7 @@ observed:
   state: [reducible-fog-routed]
 rawEvidence:
   locator: evaluations/evidence/wayfinder/direct-reducible-1.txt
-  sha256: 44ac9a3cdd17e039cc76e8dec28a96abb93928fe8cf27631544d06304f0349f9
+  sha256: cb6a143d491e3dd57a955d280696283ad0f9bcfc0662831c33d8441e73bf954b
 runtimeInputs:
   - role: disclosed-reference
     locator: AGENTS.md

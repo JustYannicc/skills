@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-indirect-workflow-delegation
 attempt: 3
 contextId: fresh-research-indirect-final-3
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:19:06.300Z
 environment:
@@ -47,4 +47,4 @@ observed:
     - ready-for-workflow
 rawEvidence:
   locator: evaluations/evidence/research/indirect-workflow-delegation-3.txt
-  sha256: 883762e3ee839c5c3bb9f990fa3dbf93703c40dbc17af5ebe4e346277fe3a822
+  sha256: c5b2cafe071f4dcec5b9b98bc64d562a9fef72ebe066e855d2e8704abda7df68

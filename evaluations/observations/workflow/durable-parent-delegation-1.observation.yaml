@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-parent-delegation
 attempt: 1
 contextId: fresh-workflow-durable-parent-delegation-luna-max-20260808t120001z-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T12:00:01Z
 environment:
@@ -38,4 +38,4 @@ observed:
   state: [children-complete-parent-verified-or-reopened]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-parent-delegation-1.txt
-  sha256: 3adaf5cf27f2f31c29c84f57716a806cfc30134540f44fe781cef98c33b8d0f0
+  sha256: 26fda024efb6fdff8de51d6293c30541cac49e6cf694f022e7a9f4ed24924271

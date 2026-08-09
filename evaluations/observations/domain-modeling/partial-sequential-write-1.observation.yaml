@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-partial-sequential-write
 attempt: 1
 contextId: fresh-domain-modeling-partial-sequential-write-20260809t105806z-luna-max-13a938f7-2753-4d41-a246-6a00c4519cf9
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: '2026-08-09T10:58:06Z'
 environment:
@@ -70,4 +70,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/partial-sequential-write-1.txt
-  sha256: c50da1abb857cfb1281e13ae6519e9846ebaf1f7b0ad1c6252841f5c5fe4557e
+  sha256: 31d585f8465475299222b002de50c5792264908483b7a25f58e0a26481f0392f

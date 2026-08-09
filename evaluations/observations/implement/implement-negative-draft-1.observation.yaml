@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-negative-draft
 attempt: 1
 contextId: fresh-implement-negative-draft-20260809-r4-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T13:19:58.000Z
 environment:
@@ -30,4 +30,4 @@ observed:
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-negative-draft-1.txt
-  sha256: a8977260101bf8275b08533a0251f4ec1ce88e0e0f410e308a919dd14d98e50d
+  sha256: 64ca63ab738b44bfc6cf6044b4b363f4bf82bc2362e9665a4851355e0d426696

@@ -3,7 +3,7 @@ Attempt: 3
 Context ID: fresh-ask-yannic-missing-capability-sol-high-3-adfa1e4e-6a6e-4a59-8c0a-40917ba59ce6
 Evaluator: codex-sol-high
 Recorded at (UTC): 2026-08-09T12:23:18Z
-Suite revision: working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 
 Runtime inputs
 

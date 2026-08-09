@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-negative
 attempt: 1
 contextId: fresh-to-spec-negative-sol-high-20260806-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-negative-1.txt
-  sha256: d9beb0f91b96565d1cb894d1b0b868ee095577e4440ac0f911fc73cbe3f20ec1
+  sha256: dfa6b2e4acf3f5ade3d8afecdc6004337cada17b8362211343a36b7a7c24d457

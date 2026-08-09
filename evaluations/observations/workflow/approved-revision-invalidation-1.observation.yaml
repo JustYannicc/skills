@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-approved-revision-invalidation
 attempt: 1
 contextId: workflow-approved-revision-invalidation-1db9f1f-sol-high-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:10:24Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-review-and-approval]
 rawEvidence:
   locator: evaluations/evidence/workflow/approved-revision-invalidation-1.txt
-  sha256: aa6dbad70d62e397c6eec45e9098d694cc27e6c40fef4fcd42c0741903e05c09
+  sha256: 49c3f68c01bfae7444f316d9d05abe8e28bb2462a76b82ab07e9cda1089f2362

@@ -3,7 +3,7 @@ Attempt: 2
 Context ID: fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac
 Evaluator: gpt-5.6-luna-max-fresh-evaluator
 Recorded at (UTC): 2026-08-09T13:32:31Z
-Suite revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 
 Candidate and runtime bindings
 

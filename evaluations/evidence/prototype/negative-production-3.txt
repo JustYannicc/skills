@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Learning question: Can we evaluate whether the reminder policy selects the intended recipients and produces clear, proportionate notices without changing live employee policy or delivering messages?
 
 Blocked status: Prototype stops before setup. Organization-wide activation and same-day delivery are production effects outside this reversible experiment's Authority. I did not use the administration or messaging capabilities, alter policy state, send a notice, or exercise a rehearsal.

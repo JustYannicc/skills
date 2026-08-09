@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-indirect-agent-transfer
 attempt: 1
 contextId: fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:31:29Z
 environment:
@@ -84,4 +84,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/handoff/indirect-agent-transfer-1.txt
-  sha256: 638bd1532f6eb1ce20ff0388ceb2b27b17d73dacfcc8c11c54a46bf0e072b6bc
+  sha256: 6a2325ae768f228f32d9d284b56f2d5c6393dcf437ddeead11e44d86ec6def7a

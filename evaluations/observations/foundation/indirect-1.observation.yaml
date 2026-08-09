@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-indirect
 attempt: 1
 contextId: fresh-indirect-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: deterministic-foundation
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [ready-for-decision]
 rawEvidence:
   locator: evaluations/evidence/foundation/indirect-1.txt
-  sha256: f3f9ed970274d54060f5948de780e2e067fddfb518d210ccd6803c55965bcc80
+  sha256: f44e7f6281d0082d86ae4d2d36688ddbbe2ac9d0fa138694d3ec3d68bfa9bfbb

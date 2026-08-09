@@ -5,7 +5,7 @@ are not part of the frozen response.
 
 Identity and input hashes
 
-- Candidate revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Candidate revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 - Candidate skill SHA-256 (raw UTF-8 bytes): `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
 - Fixture locator: `evaluations/fixtures/migrate-system/delegated-mapping.fixture.yaml`
 - Fixture SHA-256 (raw UTF-8 bytes): `fb330909171fd84fa4dff5ff1c59a8ccb2fcdf6f74ad03d7920c263dccadc4cb`

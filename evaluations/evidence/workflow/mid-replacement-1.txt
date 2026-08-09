@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 I’m treating the new message as an **explicit replacement / supersession**, not an extension of O5. The message is the authority to stop trip-preparation work, but it does not authorize me to pretend the existing transport booking was reversed.
 
 Supersession record:

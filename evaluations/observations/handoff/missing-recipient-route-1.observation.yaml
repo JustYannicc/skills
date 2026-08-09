@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-missing-recipient-route
 attempt: 1
 contextId: fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:43:16Z
 environment:
@@ -76,4 +76,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/handoff/missing-recipient-route-1.txt
-  sha256: 648c241f5a07b6001ee8abf244412cbd2d6f5e349dff02c192b2fd13d99a6759
+  sha256: b9b6311d9b07ed766329e8bc35f5afec2f3559c8ceb4f7be5315e77a9a814e43

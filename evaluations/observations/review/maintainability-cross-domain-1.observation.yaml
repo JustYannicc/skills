@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-maintainability-cross-domain
 attempt: 1
 contextId: final-sol-review-maintainability-cross-domain-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:33.000Z
 environment:
@@ -48,4 +48,4 @@ observed:
     - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/maintainability-cross-domain-1.txt
-  sha256: 9235217127eadf9c321965484462abb2da0f4bc0f643da6f8191bf6706c320e3
+  sha256: f7cbcb3f21ffeaa40c8b56fd762a57555e5e02567feca2d229cfd0837929d7b0

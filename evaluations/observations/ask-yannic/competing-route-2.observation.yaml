@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-competing-route
 attempt: 2
 contextId: fresh-ask-yannic-competing-route-sol-high-2-20c8c14e-8e00-4b03-b07f-73209e7909eb
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:22:41Z
 environment:
@@ -78,4 +78,4 @@ runtimeInputs:
     sha256: 61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/competing-route-2.txt
-  sha256: 9485e14031c682d7186620d70fc0512947eb56b634c28f54bd35cc590c3b58ec
+  sha256: d164638c8debd83691c6d432e72e9ca88a783824fff9a113dbeb70273d72c005

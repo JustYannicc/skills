@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-required-supplemental-unavailable
 attempt: 1
 contextId: fresh-implement-edge-required-supplemental-unavailable-20260809-2
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T13:07:34.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [Accepted, Degraded]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-required-supplemental-unavailable-1.txt
-  sha256: 04fb9581ee118f4eb27e267bd6167ad6766265addc024e6b9ca356363d9215ae
+  sha256: 51df3b29de41c7368d85f5d7ee3ed5425aae44c6af859691fea4f017fe40ca48

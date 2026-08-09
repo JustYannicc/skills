@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-default-non-invocation
 attempt: 1
 contextId: fresh-ask-yannic-default-non-invocation-sol-high-1-258c14e4-63dc-4e3a-8b47-30c6cab8951e
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:40:23Z
 environment:
@@ -43,7 +43,7 @@ observed:
   state: [ordinary-work-request]
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/default-non-invocation-1.txt
-  sha256: fcb4c96aef8d886107efdaf752dc9c34b3f36de220633859e2a1e58a2e177a2a
+  sha256: cbf967b3ec26595245f6f854ed89c6a62082f2b6978546704e296fba1b54041f
 runtimeInputs:
   - role: fixture
     locator: evaluations/fixtures/ask-yannic/default-non-invocation.fixture.yaml

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-claim-expiry
 attempt: 1
 contextId: fresh-implement-edge-claim-expiry-20260809-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:08.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [Recovery]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-claim-expiry-1.txt
-  sha256: 32f4aabc3db4f20672a8ced6e8b67891c3169209351fec2c160c529db78a29b0
+  sha256: 380d771c3e5fac6847d551ad312e5e4d1e7dd2a7a41f21fa4e5ffaa7568432fa

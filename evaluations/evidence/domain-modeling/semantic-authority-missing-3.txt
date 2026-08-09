@@ -1,4 +1,4 @@
-Validation rebind: git:ce2b02e6249d229d7d88b10bec58171b4bac6621. The byte-identity proof for the bound Domain Modeling runtime inputs is authoritative in evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt; the original evaluation context and revision remain recorded in this evidence.
+Validation rebind: git:5bd2224944aaa7129c7d651b1b9925afad0520ce. The byte-identity proof for the bound Domain Modeling runtime inputs is authoritative in evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt; the original evaluation context and revision remain recorded in this evidence.
 
 Fresh isolated behavioral evaluation — domain-modeling-semantic-authority-missing
 Attempt: 3 of 3

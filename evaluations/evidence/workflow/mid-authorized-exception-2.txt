@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 This is an authorized override and Informed exception. Authority is verified by the stated policy, which permits the communications owner who sent this message to waive the optional second-reader check.
 
 I recorded the exception proportionately: the skipped protection is the optional second reader; the plausible consequence is a wording defect; and the scope and duration are this internal draft only, through its distribution decision. The recovery trigger is any ambiguity found by immediate Review, which restores the second-reader check before distribution. The exception does not change the general policy or disable any other Authority, proof, or Review safeguard.

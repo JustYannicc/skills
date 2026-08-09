@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-incomplete-sources
 attempt: 1
 contextId: fresh-migrate-system-incomplete-sources-20260809t132825z-luna-max-frozen-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T13:28:25Z
 environment:
@@ -83,4 +83,4 @@ runtimeInputs:
     sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
 rawEvidence:
   locator: evaluations/evidence/migrate-system/incomplete-sources-1.txt
-  sha256: 8311e10c8543dc259a7d5638015d60f34b936efeefc37d230b7eb964b7eb44a9
+  sha256: 371c397a045da208d2c3dab0373b6c18a93164c276047c39abda800514b8de8d

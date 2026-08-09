@@ -1,7 +1,7 @@
 Fresh isolated behavioral evaluation — wayfinder-direct-reducible
 Attempt: 3
 Executed behavioral candidate: git:7019eb4323cf1ecae9461428b4205fe344ba3111
-Rebound suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+Rebound suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Context ID: fresh-wayfinder-direct-reducible-20260809t132232z-luna-max-attempt-3-ac57129e-e545-49af-baa0-aee3f917ed09
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T13:22:32Z

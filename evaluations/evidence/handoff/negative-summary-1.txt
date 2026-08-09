@@ -3,7 +3,7 @@ Behavioral evaluation: handoff-negative-summary
 Attempt: 1
 Context ID: fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3
 Evaluator: gpt-5.6-luna-max-fresh-evaluator
-Candidate/suite revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Candidate/suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 
 Runtime bindings:
 1. skill — `skills/handoff/SKILL.md` — SHA-256 `6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2`

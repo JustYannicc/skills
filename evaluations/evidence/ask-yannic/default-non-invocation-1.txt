@@ -3,7 +3,7 @@ Attempt: 1
 Context ID: fresh-ask-yannic-default-non-invocation-sol-high-1-258c14e4-63dc-4e3a-8b47-30c6cab8951e
 Evaluator: codex-sol-high
 Recorded at (UTC): 2026-08-09T12:40:23Z
-Suite revision: working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Runtime input [fixture]: evaluations/fixtures/ask-yannic/default-non-invocation.fixture.yaml
 Runtime input [fixture] SHA-256: 99819b564565e432b91b1e0b4ff85db48db4bf615367d0c3b7da5f463a67b776
 Runtime input [skill]: skills/ask-yannic/SKILL.md

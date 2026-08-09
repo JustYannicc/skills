@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-incomplete-question
 attempt: 1
 contextId: fresh-sol-high-r2-prototype-incomplete-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:01:01.000Z
 environment:
@@ -32,4 +32,4 @@ observed:
   state: [waiting-for-question]
 rawEvidence:
   locator: evaluations/evidence/prototype/incomplete-1.txt
-  sha256: f784550f6a3412c1e4d046ead12588f3d4cce9964ce2aedcd8b5a4eb872c90ef
+  sha256: eb12018f1daacee7ef5dfb4407158a65af773c74eb0c37d06cbc7933751465ed

@@ -1,5 +1,5 @@
 PUBLIC EVIDENCE WRAPPER — migrate-system delegated mapping attempt 2
-Candidate: git:d78dff812af6a69a1995980a4bc30829a298a997
+Candidate: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Context: fresh-migrate-system-delegated-mapping-attempt-2-20260809t134239z
 Execution: one-shot; no retries; the response below was frozen before any writing-for-agents audit.
 rawResponseSha256: eda86286c836d82767df0be179d98c7afb482744323b1e543ba37ed2b712b820

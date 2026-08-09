@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-missing-capability
 attempt: 2
 contextId: fresh-ask-yannic-missing-capability-sol-high-2-63e74870-125c-47db-aef7-2653e23870e2
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:23:43Z
 environment:
@@ -57,7 +57,7 @@ observed:
   state: [guidance-complete-with-gap]
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/missing-capability-2.txt
-  sha256: 41220acd92202983ed80c4d8bab881648c22303b9991d46fbf2500a9a2c97ba0
+  sha256: ccfd44077f10c504e3729d6f21896a30d27ea5fb375e72d2342a16083dbd35d5
 runtimeInputs:
   - role: skill
     locator: skills/ask-yannic/SKILL.md

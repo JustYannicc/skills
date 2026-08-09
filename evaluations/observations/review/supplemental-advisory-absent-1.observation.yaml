@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-supplemental-advisory-absent
 attempt: 1
 contextId: final-sol-review-supplemental-advisory-absent-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:21.000Z
 environment:
@@ -43,4 +43,4 @@ observed:
     - in_review-to-complete
 rawEvidence:
   locator: evaluations/evidence/review/supplemental-advisory-absent-1.txt
-  sha256: bc6d68e0c2c6c124193cbd3babb73a98c8185ae40395dbb916f746b6e6eee965
+  sha256: 77215c92e9088b1ff490448191c08f77e6ba122347cb75b5d0dd80a47dfc2bb4

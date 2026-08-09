@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-change-evidence-dimensions
 attempt: 1
 contextId: fresh-workflow-durable-change-evidence-dimensions-20260808t124500z-luna-max-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T12:45:00Z
 environment:
@@ -37,4 +37,4 @@ observed:
   state: [operating-under-measured-rollout]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-change-evidence-dimensions-1.txt
-  sha256: 2df19fbf798ac744a4041be0a61248f599c9ecef1aaefdb5b95ffa4893ca9476
+  sha256: 02a9c361168a6c1547efdf49bc6d034f05a40ccb3325abdcb1ccac52ab2a23c8

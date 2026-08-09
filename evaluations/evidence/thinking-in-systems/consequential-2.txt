@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 ## Governance assessment — proposed intake-classification change
 
 **Branch and state:** This is a material change to a Durable system, not an intake-rule operation. It changes a decision rule and state transition for all future cases and reinterprets existing cases. The system is ready for a Workflow decision; no rule has changed and no case has been reclassified.

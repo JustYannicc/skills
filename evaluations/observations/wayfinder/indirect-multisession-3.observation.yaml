@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-indirect-multisession
 attempt: 3
 contextId: fresh-wayfinder-indirect-multisession-luna-max-3-20260809t122939z-76d164c1-8100-493b-9ce1-f16425850c40
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:39.300Z
 environment:
@@ -55,7 +55,7 @@ observed:
   state: [durable-wayfinding-continuation]
 rawEvidence:
   locator: evaluations/evidence/wayfinder/indirect-multisession-3.txt
-  sha256: be999540b48710ad60bee13bea7568d59c02475087ed4b2416ec74800c09b555
+  sha256: 39d85614f87e0d4ffcc19daa136ead3927f7b1e91625b02fb434d2087a51dd96
 runtimeInputs:
   - role: skill
     locator: skills/wayfinder/SKILL.md

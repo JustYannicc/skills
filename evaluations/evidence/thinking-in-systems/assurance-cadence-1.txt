@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 ## Post-activation assurance assessment
 
 No. The successful verification is initial operation evidence, not final assurance that the maintained System is settled. The System owner retains responsibility for its Outcome and sustainment.

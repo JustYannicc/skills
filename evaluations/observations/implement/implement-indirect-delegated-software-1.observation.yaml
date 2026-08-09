@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-indirect-delegated-software
 attempt: 1
 contextId: fresh-implement-indirect-delegated-software-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:05.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-indirect-delegated-software-1.txt
-  sha256: 63e28dd659286b4d2da7db0d03e5320966bc36a62ac9801a7bd663a1b5e3d9cc
+  sha256: 979b47c498d511d633fad401b4f37e0f84724e39918031a030a2640f444bcb52

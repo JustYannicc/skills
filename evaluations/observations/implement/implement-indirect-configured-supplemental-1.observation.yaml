@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-indirect-configured-supplemental
 attempt: 1
 contextId: fresh-implement-indirect-configured-supplemental-20260809-r2-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T13:07:01.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-indirect-configured-supplemental-1.txt
-  sha256: 56dce18ad48004f5bf8df0c6af722816b96a5134e1950c9ed67a1569cbd7c20f
+  sha256: 8ea5842a3804e6d9f05b68ab50d96861401b921d34547153cf9b76cd61635f23

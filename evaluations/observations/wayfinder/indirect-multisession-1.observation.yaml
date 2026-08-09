@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-indirect-multisession
 attempt: 1
 contextId: fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:58.300Z
 environment:
@@ -102,4 +102,4 @@ runtimeInputs:
     sha256: dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e
 rawEvidence:
   locator: evaluations/evidence/wayfinder/indirect-multisession-1.txt
-  sha256: 9157bfafea98000552beb828e30238dec06c464185e7ea6a3864442a546c6857
+  sha256: 043445336bc0b1dc17b8e6a43f92b5b1e4a7644ca12e23a8a51d2c8698901d28

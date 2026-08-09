@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-stale-route
 attempt: 1
 contextId: fresh-ask-yannic-stale-route-sol-high-1-38791740-086c-4ccc-8b19-c6f117ae8573
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:40:53Z
 environment:
@@ -69,7 +69,7 @@ observed:
     - guidance-complete
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/stale-route-1.txt
-  sha256: dba856bb3026d9e6c9668f667008d66c1f9a3bddad90196219a76c71357d42d6
+  sha256: 7b83de5e8f32f587f1b8fdd22e8e10937fa5bfffeebaa65e7747b61e6df59114
 runtimeInputs:
   - role: skill
     locator: skills/ask-yannic/SKILL.md

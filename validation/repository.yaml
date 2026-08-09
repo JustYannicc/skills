@@ -1,5 +1,28 @@
 schemaVersion: 2
 skills:
+  - name: ask-yannic
+    provenance:
+      strategy: original
+  - name: handoff
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/productivity/handoff/SKILL.md]
+      retainedBehavior:
+        - Compact the current context so a fresh recipient can continue without reconstructing the conversation.
+        - Reference canonical plans, decisions, issues, commits, diffs, and other existing artifacts instead of duplicating their content.
+        - Tailor the continuation to the next session or operating focus and suggest the capabilities the successor should use.
+        - Redact credentials, secrets, and unnecessary personal information from the Handoff artifact.
+      changedAssumptions:
+        - Replace a user-invoked agent-only conversation summary with a model-invoked cross-domain Handoff for humans, agents, sessions, services, and operating contexts.
+        - Replace mandatory operating-system temporary-directory output with Inline or selected-Adapter representation at the actual Persistence boundary.
+        - Bind exact state, Responsibility, Authority, rationale, evidence, uncertainty, dependencies, Continuation, next frontier, and canonical revisions.
+        - Distinguish Continuity, Transfer, and Dispatch so a session or service boundary cannot silently transfer ownership.
+        - End outgoing Responsibility only after an identifiable successor explicitly accepts the exact fresh Handoff revision and bounded contract.
+        - Preserve parent Outcome state and return bounded Handoff evidence to Workflow without executing continued work, Review, or parent completion.
+        - Degrade visibly when recipient identity, return route, persistence, communication, scheduling, or another required capability is unavailable.
   - name: implement
     provenance:
       strategy: adapted

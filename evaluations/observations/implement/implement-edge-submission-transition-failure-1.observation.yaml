@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-submission-transition-failure
 attempt: 1
 contextId: fresh-implement-edge-submission-transition-failure-20260809-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:09.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [Active, Recovery]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-submission-transition-failure-1.txt
-  sha256: e810363cbe4036de86ea23887b16e6e2b27a754103264c5c932085ce8ed54aa5
+  sha256: b0cee0837af09b70a00c7a0a230289bba898b9b7785bfeab9e294ce09059b243

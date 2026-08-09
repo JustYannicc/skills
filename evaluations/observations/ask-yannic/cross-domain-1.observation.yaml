@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-cross-domain
 attempt: 1
 contextId: fresh-ask-yannic-cross-domain-sol-high-1-35755939-4e24-42fd-99b3-8ec66dcbb5f7
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:25:28Z
 environment:
@@ -61,7 +61,7 @@ observed:
     - guidance-complete
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/cross-domain-1.txt
-  sha256: a1689c1e756c78226443c4ea4b18fee6604ea9771786cef1bd262340bf8020f4
+  sha256: 479c807b9231afbdfa687af8031a137e2b8ffb8bbc815372386e19f9572d1b05
 runtimeInputs:
   - role: skill
     locator: skills/ask-yannic/SKILL.md

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-waiting-recovery
 attempt: 1
 contextId: fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T12:03:00Z
 environment:
@@ -30,4 +30,4 @@ observed:
   state: [waiting-or-recovery]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-waiting-recovery-1.txt
-  sha256: 069f004344a241e37b5203ecf8f1a2f6d3637d1ed29bfc1aa87c7e119daa6e73
+  sha256: 33d2bb4c0c300e39bed14b5c3eaa7dc012bd0db0f98b56439bc4864c13ca7e3c

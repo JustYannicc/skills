@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-capability-gap
 attempt: 1
 contextId: fresh-to-tickets-edge-capability-gap-20260808-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:34:00.000Z
 environment:
@@ -41,4 +41,4 @@ observed:
   state: [Waiting]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-capability-gap-1.txt
-  sha256: bbbbc0d408731da9bbeee764505e3989f05521fb8d02855d3519748b4e0fe396
+  sha256: ab3cc3b30cee6b1d7c2800b3ebdca96b5b947b8cf8761af7f0d5fa07690e6a0e

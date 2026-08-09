@@ -1,4 +1,4 @@
-Candidate: git:d78dff812af6a69a1995980a4bc30829a298a997
+Candidate: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Fixture: migrate-system-automatic-organizational
 Fixture SHA-256: 93b4dbd4bf448d65f704203dbe46f8626e42d50cd82a278057ccade30436cd3d
 Attempt: 1

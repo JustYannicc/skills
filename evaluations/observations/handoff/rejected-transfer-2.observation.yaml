@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-rejected-transfer
 attempt: 2
 contextId: fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:33:14Z
 environment:
@@ -82,4 +82,4 @@ runtimeInputs:
     sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/rejected-transfer-2.txt
-  sha256: 38f8b93e57b7ecd05ca26c78ce8d30606f36c6610bfbe5c2357a5b9b69937534
+  sha256: 9b3d3e5c70fd230a6d1b4457abca748109900cbee4cafdd816c8b41b460f5d71

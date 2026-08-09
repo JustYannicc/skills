@@ -1,7 +1,7 @@
 NEUTRAL PUBLIC EVIDENCE WRAPPER
 fixture_id: migrate-system-delegated-mapping
 attempt: 3
-suite_revision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suite_revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 candidate_revision: git:d78dff812af6a69a1995980a4bc30829a298a997
 candidate_skill_sha256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
 runtime_reference: skills/migrate-system/references/current-state-mapping.md

@@ -3,7 +3,7 @@ Attempt: 1
 Context ID: fresh-domain-modeling-partial-sequential-write-20260809t105806z-luna-max-13a938f7-2753-4d41-a246-6a00c4519cf9
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T10:58:06Z
-Suite revision: git:d78dff812af6a69a1995980a4bc30829a298a997
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 
 Candidate and exact runtime-input identity
 

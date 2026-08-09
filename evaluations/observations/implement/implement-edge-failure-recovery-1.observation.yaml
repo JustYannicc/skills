@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-failure-recovery
 attempt: 1
 contextId: fresh-implement-edge-failure-recovery-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:02.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [Waiting]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-failure-recovery-1.txt
-  sha256: 660afbb9057519ab4abf1d04757bfc7a2acfbef2ce499009a2486859231ee0c8
+  sha256: 4ca74cbf999199710025272330a3c089df227fd24108ac865653d6595a48f9f2

@@ -6,7 +6,7 @@ Fresh-context behavioral evaluation — `handoff-rejected-transfer` — attempt 
 - **Attempt:** `3`
 - **Context ID:** `fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c`
 - **Evaluator:** `gpt-5.6-luna-max-fresh-evaluator`
-- **Candidate and suite revision:** `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+- **Candidate and suite revision:** `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 - **Recorded at (UTC):** `2026-08-09T13:44:00Z`
 - **Fixture path:** `evaluations/fixtures/handoff/rejected-transfer.fixture.yaml`
 - **Fixture SHA-256:** `2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef`

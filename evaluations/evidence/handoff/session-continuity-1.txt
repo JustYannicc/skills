@@ -5,7 +5,7 @@ Attempt: 1
 Context ID: `fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6`
 Evaluator: `gpt-5.6-luna-max-fresh-evaluator`
 Recorded at (UTC): `2026-08-09T13:41:21Z`
-Candidate and suite revision: `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+Candidate and suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 
 Run mode: one-shot, isolated fresh evaluator context with no prior observation or
 transcript supplied as runtime input. The evaluator read the Handoff skill, its

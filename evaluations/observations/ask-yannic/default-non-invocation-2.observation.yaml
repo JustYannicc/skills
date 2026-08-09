@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-default-non-invocation
 attempt: 2
 contextId: fresh-ask-yannic-default-non-invocation-2-a234668a-dc39-40a0-8632-e7792388e27d
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:41:47Z
 environment:
@@ -61,4 +61,4 @@ runtimeInputs:
     sha256: d0886e8af6d744b6c23e4c85e87fc36603b4d03c8f8e6122a7a54cf02e86e069
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/default-non-invocation-2.txt
-  sha256: 83181f6a983ee153facc012868bf3684e722e884ccce698c0a0c20d54794e3ad
+  sha256: 157a9e45a62a108950319a1d5a3ded1f39abf5d1a190a42068fe7469eda59903

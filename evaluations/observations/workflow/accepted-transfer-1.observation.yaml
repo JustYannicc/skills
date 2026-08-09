@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-accepted-transfer
 attempt: 1
 contextId: workflow-accepted-transfer-1db9f1f-sol-high-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:07:11Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [active-with-successor]
 rawEvidence:
   locator: evaluations/evidence/workflow/accepted-transfer-1.txt
-  sha256: 7e5d9297d8f9fdc89e7c704119728777db644effe2f56cf46e6dc1b5b23fd4d4
+  sha256: e327077f215a6a4decdc696e74d328edcde4ce1b14a705cb8909688b1df8bfa5

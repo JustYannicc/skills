@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-direct-technical
 attempt: 3
 contextId: fresh-migrate-system-direct-technical-attempt-3
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T16:00:00Z
 environment:
@@ -68,7 +68,7 @@ observed:
     - ownership-conflict-visible
 rawEvidence:
   locator: evaluations/evidence/migrate-system/direct-technical-3.txt
-  sha256: c37d4e6220b458fba6636f91d939972cd5f3c1ceeacbb4b9a75a5b3c1f47a7a0
+  sha256: ebb1a7e68eb97047c07ca996f7f1b662a1f2344986f7167502ca5622baef9937
 runtimeInputs:
   - role: skill
     locator: skills/migrate-system/SKILL.md

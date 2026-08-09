@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-missing-write-authority
 attempt: 1
 contextId: fresh-migrate-system-missing-write-authority-20260809t132707z-luna-max-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T13:27:07Z
 environment:
@@ -63,7 +63,7 @@ observed:
     - write-authority-waiting
 rawEvidence:
   locator: evaluations/evidence/migrate-system/missing-write-authority-1.txt
-  sha256: ce9485468e84df6b02bbac0ea8f097c3475a5a68b193e57970ddcbf24f69a759
+  sha256: 9e1b1759697167e523cc443c04a2fc100a2f7f502b0fc53a12e20441c91bf7c6
 runtimeInputs:
   - role: skill
     locator: skills/migrate-system/SKILL.md

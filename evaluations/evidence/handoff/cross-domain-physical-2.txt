@@ -1,7 +1,7 @@
 Fresh-context Handoff evaluation — cross-domain physical transfer — attempt 2
 
 Candidate revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
-Suite revision (repository content identity; evaluation artifacts excluded): git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Suite revision (repository content identity; evaluation artifacts excluded): git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Fixture: handoff-cross-domain-physical
 Attempt: 2 of 3
 Context ID: fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-delegated-mapping
 attempt: 3
 contextId: fresh-migrate-system-delegated-mapping-3-neutral-public-20260809t170000z
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: neutral-public-runtime-wrapper
 recordedAt: 2026-08-09T17:00:00Z
 environment:
@@ -74,4 +74,4 @@ runtimeInputs:
     sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
 rawEvidence:
   locator: evaluations/evidence/migrate-system/delegated-mapping-3.txt
-  sha256: d1cebc4e1a50a62e6b187f70f9a02df17f54107802c075655704d2fe091fb525
+  sha256: cbc4f7774e81fed41bad1ee01e3dc67ff305bd86b9f9cf3232f1ae4c4f289915
