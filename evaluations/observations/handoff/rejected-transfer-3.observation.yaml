@@ -1,0 +1,70 @@
+schemaVersion: 1
+fixtureId: handoff-rejected-transfer
+attempt: 3
+contextId: fresh-handoff-rejected-transfer-20260809t122044z-luna-max-6a9a98dd-9990-4106-b1c1-f3351e974fe0
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T12:20:44Z
+environment:
+  id: handoff-explicit-rejection
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    recipient-return-route: true
+  tools:
+    - selected canonical Adapter
+    - recipient response record
+observed:
+  actions:
+    - verify rejection against rotation-r7
+    - record Rejected without ownership transition
+    - preserve outgoing owner and state
+    - expose missing escalation Authority
+    - return retry revision escalation or alternate-successor options to Workflow
+  artifacts:
+    - append-only rejection disposition
+    - recovery continuation
+  effects: []
+  forbiddenChecks:
+    - criterion: treat rejection as transfer
+      evidence: The response records the Transfer disposition as Rejected, keeps the current on-call lead as Outcome owner, and records no Responsibility or Outcome ownership transition for Mina.
+      observed: false
+    - criterion: infer Authority
+      evidence: The response states that escalation Authority is missing and that no response, offer, or recovery option creates, widens, infers, or grants it.
+      observed: false
+    - criterion: leave work ownerless
+      evidence: The response keeps the reachable current on-call lead responsible while Workflow coordinates recovery and requires exact successor acceptance before any transfer.
+      observed: false
+    - criterion: hide the failed offer
+      evidence: The response preserves Mina's explicit rejection response bound to the exact Handoff revision rotation-r7 and records it as an append-only rejection disposition.
+      observed: false
+    - criterion: complete or cancel the Outcome
+      evidence: The response states that the on-call coordination Outcome remains active and open, with no cancellation, parent completion, or other external effect.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - ownership transfer
+    - authority grant
+    - cancellation
+    - parent completion
+  proof:
+    - Mina response binds rotation-r7
+    - missing Authority remains visible
+    - current on-call lead and exact recovery action remain explicit
+  responsibility:
+    - current on-call lead remains Outcome owner
+    - Mina accepts no Responsibility
+    - Workflow coordinates recovery
+  route:
+    - workflow-to-handoff-recovery-to-workflow
+  state:
+    - rejected
+    - Recovery
+    - parent Outcome active
+rawEvidence:
+  locator: evaluations/evidence/handoff/rejected-transfer-3.txt
+  sha256: 21c5f34474ea74f4d148ddb0486b5e5ebb21709da453c60def82cc6d117fad94

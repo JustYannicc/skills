@@ -1,0 +1,132 @@
+Fresh-context behavioral evaluation — handoff-rejected-transfer
+Attempt: 3
+Context ID: fresh-handoff-rejected-transfer-20260809t122044z-luna-max-6a9a98dd-9990-4106-b1c1-f3351e974fe0
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Recorded at (UTC): 2026-08-09T12:20:44Z
+Candidate and suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Fixture: evaluations/fixtures/handoff/rejected-transfer.fixture.yaml
+Fixture SHA-256: 2073bf1f96e72d6e665f126ebd10f5942c812077b3a929c7e43cd4cb620edcee
+Runtime source: skills/handoff/SKILL.md (SHA-256 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b)
+Runtime reference: skills/handoff/references/handoff-contract-template.md (SHA-256 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472)
+Runtime reference: skills/handoff/references/handoff-dispositions.md (SHA-256 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc182960)
+
+Declared environment (copied from the fixture)
+
+```yaml
+id: handoff-explicit-rejection
+capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: true}
+tools: [selected canonical Adapter, recipient response record]
+```
+
+Prompt read before applying the Handoff contract
+
+> I offered Handoff `rotation-r7` for the on-call coordination Outcome to Mina.
+> Mina explicitly rejected it because the escalation Authority is missing. The
+> current on-call lead is still reachable. Record the correct Handoff state and
+> recovery path.
+
+Observed response (verbatim)
+
+The exact Transfer Handoff `rotation-r7` is **Rejected** and enters **Recovery**.
+Mina's explicit response is evidence of rejection of that exact offer; it is not
+acceptance, an Authority grant, or a parent Outcome transition.
+
+## Handoff contract: `rotation-r7`
+
+- **Kind and disposition:** Transfer, Rejected.
+- **Operational mode:** Recovery.
+- **Source:** The on-call coordination Outcome supplied by the prompt. The
+  prompt does not provide an Outcome record locator or a canonical state
+  revision, so neither is invented; the missing source revision remains visible
+  for the recovery read.
+- **Current responsible owner:** The current on-call lead remains the Outcome
+  owner and is still reachable. The prompt supplies the role but not a personal
+  identifier; that identity gap is preserved rather than guessed.
+- **Proposed successor:** Mina, who explicitly rejected `rotation-r7`.
+- **Recipient evidence:** The supplied recipient response record binds Mina's
+  rejection to the exact Handoff revision `rotation-r7`. Delivery/response
+  evidence is kept distinct from acceptance evidence.
+- **Boundary and non-ownership:** The offer covered the exact bounded
+  on-call-coordination Responsibility. Mina accepted no Responsibility. No
+  Responsibility or Outcome ownership transition is recorded.
+- **Return route:** `workflow-to-handoff-recovery-to-workflow`.
+
+### Continuation and recovery spine
+
+- **Current state:** The on-call coordination Outcome remains active and open.
+  Its canonical state and revision were not supplied, so the current on-call
+  lead's ownership is preserved as the supplied state without inventing a
+  record revision.
+- **Rejection event:** Mina rejected `rotation-r7` because the escalation
+  Authority is missing. No operational or parent effect was performed.
+- **Responsibility:** The current on-call lead remains responsible for the
+  Outcome. Mina accepts no bounded or parent Responsibility. Workflow retains
+  coordination of recovery and parent integration.
+- **Authority:** Escalation Authority is missing. Nothing in Mina's response or
+  in the offer creates, widens, infers, or grants that Authority.
+- **Evidence:** Mina's response record, bound to `rotation-r7`, is the exact
+  rejection evidence. The canonical Outcome locator and state revision are
+  unresolved source gaps, not silently replaced by a summary.
+- **Uncertainty and impact:** The holder and scope of escalation Authority, the
+  current canonical Outcome revision, and the current lead's exact Actor
+  identity are not supplied. Until the Authority is identified and the current
+  state is reread, no successor can truthfully accept this transfer.
+- **Recovery dependency and unblock condition:** Workflow must identify the
+  Actor and exact scope that can authorize escalation, then reread the current
+  Outcome. The dependency unblocks when that Authority and current revision
+  are recorded and available for a new exact offer.
+- **Continuation record:** An append-only rejection disposition for
+  `rotation-r7` and a recovery continuation are preserved through the selected
+  canonical Adapter. The continuation keeps the current on-call lead as owner,
+  retains the missing-Authority gap, and records the next check and pickup
+  action below.
+- **Recovery options returned to Workflow:**
+  1. Identify and resolve the missing escalation Authority, create a successor
+     Handoff revision that names the available Authority, and request Mina's
+     exact acceptance again.
+  2. If the Authority or current state changes, create a new revision and
+     request acceptance of that successor revision; `rotation-r7` cannot be
+     reused as acceptance evidence for changed state.
+  3. Identify an alternate successor who can accept the exact bounded
+     Responsibility and its available Authority, then deliver a new exact
+     Handoff and verify acceptance.
+- **Next action and responsible Actor:** Workflow coordinates the canonical
+  read, Authority identification, and revision choice. The current on-call
+  lead remains responsible while that recovery occurs. No retry, escalation,
+  alternate successor, approval, or external effect is claimed yet.
+- **Frontier and recovery queue:** The rejected Handoff is in Recovery; the
+  parent Outcome remains active. Work does not silently return to an unowned
+  frontier.
+- **Sensitive-data disposition:** Only the supplied Actor label Mina and the
+  current on-call-lead role are retained; no unnecessary personal data,
+  credentials, or secrets are copied.
+
+### Delivery, response, and return
+
+- **Delivery Authority and channel:** The fixture supplies a recipient response
+  record and a verified recipient-response capability. The exact channel,
+  delivery time, and Adapter locator are not supplied, so they remain explicit
+  unknowns.
+- **Delivered revision:** `rotation-r7` was the offered revision to Mina. The
+  response record proves rejection of that revision, not acceptance.
+- **Successor response:** Mina explicitly rejected `rotation-r7` because the
+  escalation Authority is missing. No conditional acceptance is inferred.
+- **Freshness check:** No canonical state revision or material post-offer
+  change is supplied. A complete comparison therefore cannot be claimed; a
+  fresh canonical read is required before any retry. This uncertainty does not
+  change the explicit disposition from Rejected to Accepted or Stale.
+- **Responsibility transition:** None. The current on-call lead remains the
+  responsible owner.
+- **Outcome ownership transition:** None. The on-call coordination Outcome
+  remains open and active.
+- **Exact recovery action returned to Workflow:** Read the current Outcome and
+  Authority records, identify the escalation-Authority holder, choose retry
+  revision, escalation, or alternate-successor recovery, materialize that exact
+  revision, and request exact acceptance. Keep the current on-call lead
+  responsible until a successor accepts the successor revision.
+
+Result: PASS. The rejection is bound to `rotation-r7`, the missing escalation
+Authority remains visible, the current on-call lead and active parent state are
+preserved, and the recovery continuation returns exact next actions to
+Workflow. No ownership transfer, Authority grant, cancellation, parent
+completion, or other external effect occurred.

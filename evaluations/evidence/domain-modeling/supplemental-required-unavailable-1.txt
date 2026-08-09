@@ -1,3 +1,5 @@
+Validation rebind: git:d47a6c37af08be941c0061ea6cab3ebacadbc690. The bound Domain Modeling runtime inputs are byte-identical to git:4233758023b9d47a92b72311ef945d902d1c9d6d; the original evaluation context and revision remain recorded in this evidence.
+
 Fresh-context behavioral evaluation — domain-modeling-supplemental-required-unavailable
 Attempt: 1
 Context ID: fresh-domain-modeling-supplemental-required-unavailable-20260809t110549z-luna-max-87eb4d0b-a7ba-487e-b87c-37cf8706ffbc

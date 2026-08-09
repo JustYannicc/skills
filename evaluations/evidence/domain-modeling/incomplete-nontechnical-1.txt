@@ -12,6 +12,7 @@ Candidate and exact runtime-input identity
 - Runtime role `governing-skill` — locator: `skills/thinking-in-systems/SKILL.md`; SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
 - Runtime role `governing-reference` — locator: `skills/thinking-in-systems/references/standard.md`; SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
 - Suite revision: `git:4233758023b9d47a92b72311ef945d902d1c9d6d`
+Validation rebind: git:d47a6c37af08be941c0061ea6cab3ebacadbc690. The bound Domain Modeling runtime inputs are byte-identical to git:4233758023b9d47a92b72311ef945d902d1c9d6d; the original evaluation context and revision remain recorded above.
 
 Exact prompt supplied once
 

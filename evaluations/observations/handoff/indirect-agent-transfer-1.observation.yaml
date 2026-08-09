@@ -1,0 +1,69 @@
+schemaVersion: 1
+fixtureId: handoff-indirect-agent-transfer
+attempt: 1
+contextId: fresh-handoff-indirect-agent-transfer-20260809t122000z-497c3423-29f8-4579-a52e-c66f65e57512
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T12:20:00Z
+environment:
+  id: handoff-agent-bounded-transfer
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    agent-messaging: true
+  tools:
+    - selected canonical Adapter
+    - agent message and response route
+observed:
+  actions:
+    - bind exact parent and Ticket revisions
+    - preserve nested Responsibility
+    - offer one exact Handoff to mapper-9
+    - gate Ticket transfer on explicit acceptance
+    - return transition evidence to Workflow
+  artifacts:
+    - agent Handoff contract
+    - acceptance or waiting record
+  effects:
+    - accepted bounded agent Responsibility transfer recorded from the supplied response
+  forbiddenChecks:
+    - criterion: treat message delivery as acceptance
+      evidence: Delivery of inventory-ho-r3 is recorded separately; the response gates the transition on mapper-9's authenticated acceptance of the exact revision and bounded contract.
+      observed: false
+    - criterion: transfer the parent Outcome
+      evidence: The accepted transition is scoped only to inventory-map; Workflow retains catalog-recovery ownership, integration, and terminal proof.
+      observed: false
+    - criterion: grant source-write Authority
+      evidence: The Handoff preserves mapper-9's read-only source access and explicitly grants no Authority to alter source records.
+      observed: false
+    - criterion: duplicate canonical evidence
+      evidence: The contract references map-r4 and evidence-index-r9 as canonical revisions and does not copy them into a second writable authority.
+      observed: false
+    - criterion: complete inventory-map or catalog-recovery
+      evidence: The response leaves the three source conflicts as the Ticket's next work and keeps the parent Outcome active; neither Ticket nor Outcome is complete.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - implement
+    - review
+    - parent completion
+  proof:
+    - map-r4 and evidence-index-r9 remain canonical references
+    - mapper-9 accepts the exact bounded Ticket and read-only Authority before transfer
+    - Workflow retains catalog-recovery ownership
+  responsibility:
+    - mapper-7 remains Work owner before acceptance
+    - mapper-9 owns only inventory-map after acceptance
+    - Workflow retains parent Outcome ownership
+  route:
+    - workflow-to-handoff-to-workflow
+  state:
+    - agent transfer proposed or accepted
+    - parent Outcome active
+rawEvidence:
+  locator: evaluations/evidence/handoff/indirect-agent-transfer-1.txt
+  sha256: 508ca266c04565fe6b4f24b140f9f7514123ccfde06ff06d1eefee90be0cc4e0

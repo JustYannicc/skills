@@ -1,0 +1,79 @@
+schemaVersion: 1
+fixtureId: handoff-service-dispatch
+attempt: 1
+contextId: fresh-handoff-service-dispatch-20260809t122001z-luna-max-2ac30e65-3b2c-40d6-95c5-c7af79be8e74
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T12:20:01Z
+environment:
+  id: handoff-service-dispatch-boundary
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    service-dispatch: true
+  tools:
+    - selected canonical Adapter
+    - notification service
+observed:
+  actions:
+    - classify Dispatch
+    - bind exact approved revision and service contract
+    - record service acceptance and receipt as execution evidence
+    - retain owner through recipient delivery verification
+    - return dispatch continuation
+  artifacts:
+    - Dispatch Handoff contract
+    - service receipt reference
+  effects:
+    - authorized dispatch of notice-r11
+  forbiddenChecks:
+    - criterion: treat service receipt as ownership acceptance
+      evidence: The response identifies relay-prod as only the contracted dispatch executor, records no Responsibility or Outcome ownership transition, and retains the current owner.
+      observed: false
+    - criterion: treat queued or accepted dispatch as recipient delivery
+      evidence: The response limits the relay receipt to accepted-job evidence, leaves delivery to all 240 recipients pending, and preserves the recipient-delivery continuation.
+      observed: false
+    - criterion: send a changed revision
+      evidence: The only dispatched input is exact message notice-r11 under approval-r11; no changed message or target is used.
+      observed: false
+    - criterion: complete the parent Outcome
+      evidence: The parent remains active and open, Workflow retains terminal verification, and completion is blocked until all 240 recipients are verified.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - ownership transfer
+    - parent completion
+  proof:
+    - notice-r11 matches approval-r11
+    - relay receipt proves only accepted dispatch
+    - 240-recipient delivery remains the proof seam
+  responsibility:
+    - current owner retains Outcome Responsibility
+    - relay-prod owns only its contracted dispatch duty
+    - Workflow retains terminal verification
+  route:
+    - workflow-to-handoff-dispatch-to-workflow
+  state:
+    - dispatch accepted
+    - delivery verification pending
+    - parent Outcome active
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+  - role: fixture
+    locator: evaluations/fixtures/handoff/service-dispatch.fixture.yaml
+    sha256: 6d44c86d550a604b4160176dc4e1918e351635e166ec5c5fe805bab67893c93e
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+rawEvidence:
+  locator: evaluations/evidence/handoff/service-dispatch-1.txt
+  sha256: 7e4af9e01d4c2220a8506cedd574a9bcdc6588fd76b1697be5b0bb4916a05169

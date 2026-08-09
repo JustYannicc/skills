@@ -1,3 +1,5 @@
+Validation rebind: git:d47a6c37af08be941c0061ea6cab3ebacadbc690. The bound Domain Modeling runtime inputs are byte-identical to git:4233758023b9d47a92b72311ef945d902d1c9d6d; the original evaluation context and revision remain recorded in this evidence.
+
 Fresh isolated behavioral evaluation — domain-modeling-semantic-authority-missing
 Attempt: 1 of 3
 Context ID: fresh-domain-modeling-semantic-authority-missing-20260809t110205z-luna-max-d5f7224c-1acb-4ae0-bd38-ff6f4494c74c

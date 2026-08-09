@@ -1,0 +1,72 @@
+schemaVersion: 1
+fixtureId: handoff-direct-human-transfer
+attempt: 1
+contextId: handoff-direct-human-transfer-2e10e56c-cbd1-42c9-ab84-9bcc11c53586
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T12:20:57Z
+environment:
+  id: handoff-human-accepted-transfer
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    recipient-return-route: true
+  tools:
+    - selected canonical Adapter
+    - recipient return route
+observed:
+  actions:
+    - bind active Workflow context and canonical sources
+    - materialize one exact Handoff revision
+    - request successor acceptance
+    - distinguish proposal from acceptance
+    - record accepted ownership transition only after exact acceptance
+    - return transfer evidence to Workflow
+  artifacts:
+    - revision-bound Handoff contract
+    - append-only acceptance transition
+  effects:
+    - accepted responsibility transfer recorded from the supplied exact response
+  forbiddenChecks:
+    - criterion: infer acceptance from delivery or silence
+      evidence: The response says delivery alone is not acceptance and binds acceptance to Priya's supplied signed response naming open-day-ho-r1 exactly.
+      observed: false
+    - criterion: transfer responsibility before exact acceptance
+      evidence: The response keeps the outgoing coordinator responsible before acceptance and places the transition at the exact signed acceptance boundary.
+      observed: false
+    - criterion: duplicate canonical plan or evidence as new authority
+      evidence: The response references open-day-plan-r8 and its linked records as canonical and explicitly says no new copy or authority is created.
+      observed: false
+    - criterion: widen either actor Authority
+      evidence: The response preserves the prohibition on approving venue changes, says acceptance does not widen Authority, and limits Priya to coordination and confirmation requests.
+      observed: false
+    - criterion: complete or cancel the parent Outcome
+      evidence: The response states community-open-day remains active, open, unfinished, and neither complete nor cancelled.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - implement
+    - review
+    - parent completion
+  proof:
+    - open-day-plan-r8 and canonical evidence are referenced
+    - Priya acceptance names the exact Handoff revision
+    - outgoing responsibility ends only after acceptance
+    - volunteer confirmation remains the next frontier
+  responsibility:
+    - outgoing coordinator remains responsible before acceptance
+    - Priya becomes Outcome owner only on exact acceptance
+    - Workflow retains parent integration and terminal proof
+  route:
+    - workflow-to-handoff-to-workflow
+  state:
+    - proposed Handoff
+    - accepted transfer
+    - parent Outcome active
+rawEvidence:
+  locator: evaluations/evidence/handoff/direct-human-transfer-1.txt
+  sha256: 871f0ebd05daf907ba788d4f97a111128e1a3cab2503fd8c3ca5d4df17e6ec4b

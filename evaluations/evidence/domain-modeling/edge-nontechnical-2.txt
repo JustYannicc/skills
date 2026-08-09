@@ -1,3 +1,5 @@
+Validation rebind: git:d47a6c37af08be941c0061ea6cab3ebacadbc690. The bound Domain Modeling runtime inputs are byte-identical to git:4233758023b9d47a92b72311ef945d902d1c9d6d; the original evaluation context and revision remain recorded in this evidence.
+
 Fresh-context behavioral evaluation — domain-modeling-edge-nontechnical
 Attempt: 2
 Context ID: fresh-domain-modeling-edge-nontechnical-luna-max-20260809t105657z-63c683e0-c2b7-440d-9aeb-74b946e9ef44

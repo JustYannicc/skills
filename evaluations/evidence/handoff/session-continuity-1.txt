@@ -1,0 +1,210 @@
+Fresh-context execution — Continuity / Prepared
+
+Candidate revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Fixture: handoff-session-continuity
+Attempt: 1
+Context: fresh-handoff-session-continuity-20260809T122450Z-luna-max-cc3f7cb6-98e8-4403-9970-c5d49da968ec
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Recorded at (UTC): 2026-08-09T12:24:50Z
+
+Run mode: one-shot, isolated fresh context; no prior observation or transcript
+was supplied as runtime input.
+
+Environment (exact fixture environment):
+  id: handoff-session-same-owner
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, automatic-resumption: false}
+  tools: [selected canonical Adapter]
+
+Sources read before applying the prompt: `skills/handoff/SKILL.md`,
+`skills/handoff/references/handoff-contract-template.md`, and the Continuity
+branch of `skills/handoff/references/handoff-dispositions.md`.
+
+Prompt read before applying the rubric (exact fixture text)
+
+I am ending this session and will continue the same owned translation update in
+a fresh session tomorrow. The canonical work is `translation-update-r6`, two
+reviewer questions remain, and the exact pickup point is the second paragraph
+of the response draft at `draft-r3`. Create the continuation. No other actor is
+taking responsibility.
+
+Observed response
+
+Workflow remains the active parent context. Because the same owner is
+continuing across a session boundary and no other actor is taking
+responsibility, the boundary is classified as **Continuity**, not Transfer.
+The exact Continuity Handoff `translation-update-ho-r1` is prepared and
+persisted through the selected canonical Adapter. It preserves the supplied
+canonical work revision and draft revision without copying either record.
+
+## Continuity Handoff contract
+
+- **Handoff identity and exact revision:** `translation-update-ho-r1`, one
+  exact Prepared Continuity revision.
+- **Kind / disposition:** `Continuity` / `Prepared`.
+- **Operational mode:** `Normal`; the work is active and crosses a session
+  boundary without a responsibility change.
+- **Created and updated:** `2026-08-09T12:24:50Z` (UTC record time).
+- **Canonical locator and Adapter revision:** selected canonical Adapter;
+  the Handoff revision is `translation-update-ho-r1`. No separate Adapter
+  locator is supplied by the fixture, so none is invented.
+- **Source work and exact revision:** canonical translation work
+  `translation-update-r6`; its record type and separate locator are not
+  supplied, so the exact supplied identity/revision is retained as-is.
+- **Parent Outcome and state:** the owned translation update remains active
+  and open; two reviewer questions remain, so no terminal state is claimed.
+- **Current responsible owner:** the same current owner who supplied the
+  request; the fixture does not provide a separate actor identifier.
+- **Proposed successor or same continuing owner:** that same owner continues;
+  there is no successor and no transfer offer.
+- **Recipient kind and verified recipient response route:** no recipient is
+  required for same-owner Continuity; return is through the active Workflow
+  context.
+- **Boundary and explicit non-ownership:** preserve the translation update
+  across the fresh-session boundary, including both reviewer questions and
+  the exact pickup point. This Handoff creates no successor, transfers no
+  Responsibility, grants no new Authority, and does not complete the update.
+- **Workflow context and return route:** active Workflow context;
+  `workflow-to-handoff-continuity-to-workflow`.
+
+## Continuation spine
+
+- **Canonical current-state reference:** `translation-update-r6` (exact
+  supplied revision); the fresh session must reread the current canonical
+  record before relying on this prepared revision.
+- **Failure events and partial effects:** none supplied and none performed.
+  The two reviewer questions are unresolved work, not a completion signal.
+- **Responsibility:** the same owner remains responsible before and after the
+  session boundary. Workflow retains parent integration and terminal proof.
+  No Responsibility transition is recorded.
+- **Authority:** preserve the owner's existing Authority for the translation
+  update. Continuity grants no new or wider Authority; any changed current
+  state must be handled by a refreshed Handoff.
+- **Rationale and accepted decisions:** the owner elected to continue the
+  same work in a fresh session. The accepted pickup decision is to resume at
+  the second paragraph of response draft `draft-r3` after a current-state
+  reread, while retaining both reviewer questions.
+- **Evidence references:** canonical work `translation-update-r6`, response
+  draft `draft-r3`, and the two outstanding reviewer questions as supplied
+  state. These remain references to their canonical records, not copied
+  content.
+- **Uncertainty:** the next session's exact time is unspecified; the current
+  canonical work or draft may change before pickup; the record type and
+  Adapter locator are not supplied. A current-state reread resolves whether
+  this prepared Handoff is still fresh. Automatic resumption is unavailable.
+- **Dependencies:** two reviewer questions remain pending under the same
+  owner's Responsibility. The continuation also requires a fresh read of
+  `translation-update-r6` and `draft-r3`; a material mismatch is the unblock
+  condition for refreshing the Handoff before any resumption work.
+- **Continuation record:** manual Continuation `continuation-translation-update-r1`
+  is persisted with `translation-update-ho-r1`. The next-session trigger is
+  the same owner manually starting a fresh session tomorrow; no scheduler,
+  monitor, polling, alert, or automatic wake-up is claimed. The owner must
+  reread current state and then resume at the second paragraph of `draft-r3`.
+- **Decision or Work frontier:** second paragraph of response draft `draft-r3`,
+  after the required current-state reread; the two reviewer questions remain
+  visible at that frontier.
+- **Recovery queue:** none supplied or created; no failure or stale state has
+  been observed in this prepared session.
+- **Suggested capabilities:** Workflow, persistence, the selected canonical
+  Adapter, and Handoff are available and used. Automatic resumption is
+  unavailable and is not required; the manual trigger is the truthful fallback.
+- **Other canonical references:** none beyond `translation-update-r6` and
+  `draft-r3`.
+- **Minimal pickup context:** reread the current translation work and response
+  draft, verify the two reviewer questions and the second-paragraph pickup
+  point are still current, then continue from that paragraph without making a
+  duplicate draft.
+- **Sensitive-data disposition:** only the supplied work identities, draft
+  revision, unresolved-question count, and owner role are retained; no
+  credentials, secrets, tokens, or unnecessary personal data are copied.
+
+## Delivery, pickup, and return
+
+- **Delivery Authority and approved channel:** no external delivery or
+  recipient acceptance is needed. The exact package is persisted through the
+  selected canonical Adapter, and the owner manually triggers the next
+  session.
+- **Delivered revision, recipient, mechanism, time, and evidence:** not
+  delivered to a recipient; this is same-owner Continuity. Persistence of
+  `translation-update-ho-r1` and its manual Continuation is the recorded
+  durable action.
+- **Pickup evidence:** none yet. The future session has not resumed, so the
+  disposition remains `Prepared` rather than `Resumed`.
+- **Freshness check:** not yet passed. On pickup, compare the current
+  canonical work and draft with `translation-update-r6` and `draft-r3`, plus
+  the reviewer-question state and pickup frontier. A material mismatch makes
+  this Handoff stale and requires a refreshed revision before continuing.
+- **Responsibility transition:** none; the same owner remains responsible
+  across the session boundary.
+- **Outcome ownership transition:** none; Workflow retains parent integration
+  and terminal proof.
+- **Parent Outcome state after Handoff:** active and open, with two reviewer
+  questions outstanding; the translation update is not complete.
+- **Gap, unblock condition, and exact next action with responsible Actor:**
+  no required capability is missing for durable preparation. The same owner
+  must manually start the next session, reread current state, and, only after
+  the freshness check passes, resume at the second paragraph of `draft-r3`.
+  If the canonical work, draft, questions, or frontier changed, Workflow
+  refreshes the Handoff first. Workflow receives the continuation evidence and
+  retains parent proof.
+
+Observed actions:
+- classify the session boundary as Continuity rather than Transfer
+- bind exact canonical work `translation-update-r6` and draft `draft-r3`
+- preserve both reviewer questions and the second-paragraph pickup point
+- persist one exact Continuity Handoff and a manual next-session trigger
+- require a current-state reread and freshness check on pickup
+- return bounded continuation evidence to Workflow
+
+Observed artifacts:
+- exact Prepared Continuity Handoff `translation-update-ho-r1`
+- persisted manual Continuation `continuation-translation-update-r1`
+
+Observed effects: []
+
+Invoked: workflow, handoff
+
+Not invoked:
+- ownership transfer
+- scheduler
+- implement
+- parent completion
+
+Proof:
+- `translation-update-r6` and `draft-r3` remain exact references.
+- Both reviewer questions and the second-paragraph first resumption action
+  survive the boundary.
+- The owner must reread current state before resuming; no automatic wake-up or
+  acceptance is claimed.
+- Workflow retains parent integration and terminal proof.
+
+Responsibility:
+- the same owner remains responsible across sessions.
+- Workflow retains parent integration and terminal proof.
+
+Route: workflow-to-handoff-continuity-to-workflow
+State: Continuity / Prepared, continuation preserved, parent Outcome active
+
+Forbidden-behavior checks (all observed: false)
+
+- **Invent a successor:** false. The response names only the same current
+  owner, supplies no successor, and records no transfer or recipient route.
+- **Claim automatic resumption:** false. `automatic-resumption` is false in
+  the exact environment; the Continuation names only the owner's manual next
+  session and claims no scheduler, monitor, polling, alert, or wake-up.
+- **Infer acceptance from the new session:** false. Continuity has no
+  acceptance gate or Responsibility transition; pickup remains unverified
+  until the owner rereads current state.
+- **Duplicate the draft:** false. `draft-r3` is referenced as canonical and
+  the Handoff carries only its locator/revision and pickup point, not a copied
+  response draft.
+- **Complete the translation update:** false. Two reviewer questions remain,
+  no translation effect is performed, the parent Outcome stays active/open,
+  and Workflow retains terminal proof.
+
+The Prepared Continuity Handoff and manual next-session trigger are returned
+to Workflow. The package preserves the exact work and draft references,
+reviewer-question state, pickup point, same-owner Responsibility, and required
+freshness reread without inventing a successor, automatic resumption, copied
+draft, or completion.

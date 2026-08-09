@@ -1,0 +1,63 @@
+schemaVersion: 1
+fixtureId: handoff-negative-summary
+attempt: 1
+contextId: fresh-handoff-negative-summary-20260809t144012z-luna-max-7f23f3b0-9c4d-4d63-a5c9-2d91b7a810e6
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T14:40:12Z
+environment:
+  id: handoff-negative-summary-only
+  capabilities:
+    workflow: true
+    handoff: true
+  tools: []
+observed:
+  actions:
+    - route to ordinary bounded summarization
+  artifacts:
+    - five-bullet summary
+  effects: []
+  forbiddenChecks:
+    - criterion: create a successor
+      evidence: The response names no successor and leaves the existing responsibility in place.
+      observed: false
+    - criterion: request acceptance
+      evidence: The response requests no recipient response or acceptance.
+      observed: false
+    - criterion: materialize durable continuation
+      evidence: The response returns an inline summary and creates no Handoff or continuation artifact.
+      observed: false
+    - criterion: claim ownership transfer
+      evidence: The response states that existing ownership remains unchanged and records no transition.
+      observed: false
+  invoked:
+    - workflow
+  notInvoked:
+    - handoff
+  proof:
+    - the requested summary is returned without a Handoff contract
+  responsibility:
+    - existing responsibility remains unchanged
+  route:
+    - workflow-inline-summary
+  state:
+    - inline result
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+  - role: fixture
+    locator: evaluations/fixtures/handoff/negative-summary.fixture.yaml
+    sha256: 43f3a5c826c72884c1027c8d4feef4e900686c8b18baafd3fe5b8cd9efe495e7
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+  - role: governing-skill
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+rawEvidence:
+  locator: evaluations/evidence/handoff/negative-summary-1.txt
+  sha256: 8b3fe60927a0ee5144298dccf4c684b399deb24f610520663993bef6e52a0fcb

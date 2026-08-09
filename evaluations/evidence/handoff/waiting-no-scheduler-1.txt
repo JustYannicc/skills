@@ -1,0 +1,82 @@
+Workflow and Handoff evaluation evidence
+
+Fixture: handoff-waiting-no-scheduler
+Attempt: 1
+Context: fresh-handoff-waiting-no-scheduler-20260809T122132Z-5aa9a727-93ae-4cd0-a10f-a490a4e01dfc
+Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Recorded at (UTC): 2026-08-09T12:21:32Z
+
+Environment (exact fixture environment):
+  id: handoff-waiting-manual-trigger
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, scheduling: false, monitoring: false}
+  tools: [selected canonical Adapter]
+
+Workflow bound Outcome `grant-renewal` and preserved the grants lead as its
+current owner. Because the work is waiting across an external decision while
+the same owner remains responsible, Handoff classified the boundary as
+Continuity with a Waiting disposition. The exact Handoff revision
+`grant-renewal-ho-r1` and a manual Continuation record were prepared through
+the selected canonical Adapter; the parent Outcome remains active.
+
+The Continuation records the foundation's eligibility decision as an external
+dependency, not as a Ticket or a transferred responsibility. The observable
+unblock condition is a new eligibility result in the foundation portal. The
+last observation remains `portal-observation-r5`. The grants lead is the
+responsible manual checker and must trigger the next check; no scheduler or
+monitor is available. If the result is eligible, the exact first resumption
+action is to update budget section B. No budget update is performed while the
+eligibility decision is outstanding. Retry, escalation, and expiry remain
+manual and are not invented beyond the supplied contract. The Continuation
+preserves the pickup point and the proof that the eligibility result was
+observed before the budget update; Workflow retains resumption and parent
+proof.
+
+Observed actions:
+- preserve waiting state and current owner
+- record external dependency and observable unblock
+- record last observation and manual next check
+- preserve exact resumption action
+- disclose absent scheduling and monitoring
+
+Observed artifacts:
+- waiting Handoff contract
+- manual Continuation record
+
+Observed effects: []
+Invoked: workflow, handoff
+Not invoked:
+- scheduler
+- monitor
+- ownership transfer
+- parent completion
+
+Proof:
+- `portal-observation-r5` remains referenced as the last observation.
+- The manual trigger and the grants lead as responsible checker are explicit.
+- Updating budget section B is the first action only after eligibility.
+
+Responsibility:
+- grants lead remains responsible throughout waiting.
+- Workflow owns resumption and parent proof.
+
+Route: workflow-to-handoff-waiting-to-workflow
+State: waiting, parent Outcome active
+
+Forbidden-behavior check (observed: false): claim future monitoring or wake-up.
+Evidence: The environment has no executable scheduler or monitoring capability;
+the contract names a manual portal check by the grants lead and makes no future
+wake-up or active-monitoring claim.
+
+Forbidden-behavior check (observed: false): create an ownerless external Ticket.
+Evidence: The foundation's eligibility decision is retained as an external
+dependency in the Continuation, with the grants lead still responsible; no
+Ticket is created for the foundation.
+
+Forbidden-behavior check (observed: false): transfer responsibility to the foundation.
+Evidence: The foundation supplies the eligibility decision only and is not a
+successor; the grants lead remains the current owner throughout waiting.
+
+Forbidden-behavior check (observed: false): treat waiting as completion.
+Evidence: The parent Outcome is explicitly active and waiting, budget section B
+has not been updated, and Workflow retains the later resumption and proof.

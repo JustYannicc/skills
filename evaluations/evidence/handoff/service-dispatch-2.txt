@@ -1,0 +1,109 @@
+Evaluation suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Context: fresh-handoff-service-dispatch-attempt-2-20260809T122054Z-9bb2aad8-f807-4f71-aa87-2c3714bd574d
+
+Dispatch `notice-r11` to `relay-prod` under send approval `approval-r11`.
+The approved message revision is bound exactly: the payload is `notice-r11`,
+the approval is `approval-r11`, and no changed or regenerated message may be
+sent.  `relay-prod` is the notification service named by the supplied service
+contract and is an executor for this dispatch, not the owner of the parent
+Outcome.
+
+## Dispatch Handoff contract
+
+- **Handoff identity and exact revision:** `handoff-service-dispatch/notice-r11`
+  (the exact dispatch package for message `notice-r11` under
+  `approval-r11`; the message revision is not widened or replaced).
+- **Kind:** Dispatch.
+- **Kind-specific disposition:** Acknowledged after `relay-prod` accepted the
+  exact delivery job and returned its receipt.
+- **Operational mode:** Normal.
+- **Canonical persistence:** Persist this one exact contract through the
+  selected canonical Adapter after the Persistence boundary.  The supplied
+  prompt does not provide a parent Outcome locator, current-owner identity, or
+  adapter locator, so those references remain an explicit Workflow-owned gap;
+  no locator is invented here.
+- **Source and parent Outcome:** The source is the approved dispatch of
+  `notice-r11` under `approval-r11`.  The linked parent Outcome remains active;
+  its canonical identity and current owner are the current Workflow records
+  and must be reread by Workflow before terminal proof.
+- **Current responsible owner:** The current Workflow/Outcome owner retains
+  Outcome Responsibility.  `relay-prod` owns only its contracted duty to
+  accept and execute this notification dispatch.  Workflow retains integration
+  and terminal verification.
+- **Proposed successor:** None.  A service acknowledgment is not a proposed
+  successor and does not create a Responsibility Transfer.
+- **Recipient route:** the verified notification-service route for
+  `relay-prod`; the service response is the receipt for this exact dispatch.
+- **Boundary and explicit non-ownership:** `relay-prod` receives the approved
+  input and performs its contracted dispatch work.  Its acceptance and receipt
+  prove execution evidence only; they do not prove ownership acceptance,
+  recipient delivery, or parent completion.
+- **Workflow/caller return route:** return this exact Dispatch Handoff state
+  to Workflow for recipient-delivery verification.
+
+## Continuation spine
+
+- **Canonical current-state reference:** Workflow's current parent Outcome
+  record (identity, locator, and revision were not supplied; reread before
+  relying on this package).
+- **Responsibility:** current owner retains Outcome Responsibility; `relay-prod`
+  has only the contracted dispatch duty; Workflow retains integration,
+  terminal verification, and any recovery.
+- **Authority:** send only `notice-r11` under `approval-r11` to `relay-prod`.
+  Do not alter the payload, approval, recipient scope, or service contract.
+- **Evidence references:** exact message revision `notice-r11`; send approval
+  `approval-r11`; `relay-prod` acceptance and its receipt for the accepted
+  delivery job.  The receipt is execution evidence for this dispatch.
+- **Uncertainty:** no recipient-level delivery proof is present yet.  The
+  service receipt may establish accepted dispatch only; it cannot be treated
+  as proof that all 240 recipients received the message.
+- **Dependencies:** `relay-prod` must execute the accepted job and expose
+  recipient-level delivery results; Workflow owns the dependency and its
+  recovery.  The unblock condition is verifiable delivery evidence for all
+  240 recipients.
+- **Continuation record:** retain the exact Dispatch Handoff and service
+  receipt reference through the selected canonical Adapter.  The next check is
+  the recipient-level result for all 240 recipients; the first action is for
+  Workflow to inspect that result, reconcile it with `notice-r11`, and keep the
+  parent Outcome open until the proof seam passes.
+- **Decision or Work frontier:** recipient delivery verification for all 240
+  recipients; this is the next frontier, not completion.
+- **Suggested capabilities:** Workflow and Handoff are invoked; the selected
+  canonical Adapter and notification service are available in the supplied
+  environment.
+- **Minimal pickup context:** dispatch is accepted and delivery verification
+  is pending.  Resume at Workflow's recipient-delivery check, with the current
+  owner still responsible.
+- **Sensitive-data disposition:** no credentials, tokens, or recipient
+  personal data are copied into this contract; retain only authorized protected
+  references needed for delivery verification.
+
+## Delivery, pickup, and return
+
+- **Delivery Authority and approved channel:** `approval-r11` authorizes the
+  exact `notice-r11` payload on the verified `relay-prod` notification route.
+- **Delivered revision, recipient, mechanism, time, and evidence:** exact
+  `notice-r11` delivered to `relay-prod` through the notification-service
+  route; the service acceptance and returned receipt are recorded as delivery
+  and execution evidence for the dispatch job.
+- **Pickup/service response:** `relay-prod` accepted the exact job and returned
+  its receipt.  This is a service response, not successor acceptance.
+- **Freshness check:** before any reliance or terminal action, Workflow must
+  compare the current message, `approval-r11`, service contract, parent state,
+  dependencies, and frontier with this exact Handoff revision.  A material
+  mismatch makes it stale and requires a refreshed revision.
+- **Responsibility transition:** none.  The service receipt does not transfer
+  Responsibility.
+- **Outcome ownership transition:** none.  The parent Outcome remains owned by
+  the current owner.
+- **Parent Outcome state after Handoff:** open and active; recipient delivery
+  verification is pending.
+- **Gap, unblock condition, and exact next action:** recipient-level delivery
+  proof for all 240 recipients is the unresolved proof gap.  Workflow must
+  obtain and verify that evidence, record the result against `notice-r11`, and
+  only then decide the parent Outcome's terminal state.  Until that occurs,
+  retain the current owner and return this Dispatch continuation to Workflow.
+
+This records the authorized dispatch effect for `notice-r11`, but keeps the
+parent proof seam open.  A queued or accepted job, and its receipt, is not
+recipient delivery and is not Outcome ownership acceptance.

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-semantic-authority-missing
 attempt: 3
 contextId: fresh-domain-modeling-semantic-authority-missing-20260809t110601z-luna-max-91b521e7-3d83-4ccb-adac-4f88cdd85887
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T11:06:01Z
 environment:
@@ -64,4 +64,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/semantic-authority-missing-3.txt
-  sha256: e80e0d9ba7694e459743962d3ed19bb097321cdda2eb9cfa07e16724197f5096
+  sha256: 8fdf1d34d1ba79c9220f45e775f2585932da45ac1741c50af675ef14af24cccf

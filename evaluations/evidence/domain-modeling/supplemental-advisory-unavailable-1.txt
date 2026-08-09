@@ -4,6 +4,7 @@ Context ID: fresh-domain-modeling-supplemental-advisory-unavailable-20260809t111
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T11:19:35Z
 Suite revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+Validation rebind: git:d47a6c37af08be941c0061ea6cab3ebacadbc690. The bound Domain Modeling runtime inputs are byte-identical to git:4233758023b9d47a92b72311ef945d902d1c9d6d; the original evaluation context and revision remain recorded above.
 Run mode: one-shot isolated fresh context. The prior observation and transcript were not runtime inputs; the candidate response below was generated once and retained verbatim without retry or post-edit.
 
 Candidate and exact runtime-input bindings

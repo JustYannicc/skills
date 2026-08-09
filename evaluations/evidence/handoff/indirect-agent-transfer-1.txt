@@ -1,0 +1,71 @@
+Fresh-context execution
+
+Candidate: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Context: fresh-handoff-indirect-agent-transfer-20260809t122000z-497c3423-29f8-4579-a52e-c66f65e57512
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Installed sources read: `skills/handoff/SKILL.md`,
+`skills/handoff/references/handoff-contract-template.md`, and
+`skills/handoff/references/handoff-dispositions.md`.
+Environment (fixture exact): `handoff-agent-bounded-transfer`; capabilities=
+{workflow: true, persistence: true, adapter: true, handoff: true,
+agent-messaging: true}; tools=[selected canonical Adapter, agent message and
+response route].
+
+Prompt:
+
+Workflow owns Outcome `catalog-recovery` at `outcome-r12`. Agent `mapper-7`
+owns Ticket `inventory-map` and has produced result `map-r4`; its remaining
+work is to resolve three source conflicts listed in `evidence-index-r9`.
+Transfer only that Ticket to agent `mapper-9`, whose stable host identity and
+response route are available. `mapper-9` has read access but no Authority to
+alter source records. Exact Handoff `inventory-ho-r3` was delivered, and the
+authenticated response from `mapper-9` says it accepts `inventory-ho-r3`, the
+bounded Ticket Responsibility, read-only Authority, three conflicts,
+Continuation, and first conflict-resolution action. A freshness read still
+shows `outcome-r12`, `map-r4`, and `evidence-index-r9`. Record the Transfer.
+
+Expected boundary:
+
+- Join the existing Workflow context and transfer only the bounded
+  `inventory-map` Responsibility.
+- Keep `catalog-recovery` and its parent proof with Workflow.
+- Use one exact Handoff revision, gate the append-only Ticket transition on
+  authenticated acceptance, and preserve the read-only Authority boundary.
+- Return the transition evidence and next action to Workflow without doing the
+  conflict-resolution work or completing either parent or Ticket.
+
+Observed response:
+
+The response classified this as a `Transfer` of a bounded child Ticket, with
+`Accepted` disposition in `Normal` mode. It joined the active Workflow context
+and bound the supplied canonical revisions: parent Outcome
+`catalog-recovery@outcome-r12`; Ticket `inventory-map` with its current result
+`map-r4`; evidence index `evidence-index-r9`; and exact Handoff
+`inventory-ho-r3`. `mapper-7` is the outgoing Work owner, while Workflow
+retains parent Outcome ownership and integration responsibility.
+
+The one Handoff contract records that the bounded scope is resolving the three
+listed source conflicts. `mapper-9` is identified by stable host identity and
+the verified agent response route. Its Authority is exactly read-only source
+access: the contract grants no permission to alter source records. The
+Handoff references `map-r4` and `evidence-index-r9` rather than copying them,
+and names the first conflict-resolution action and Continuation.
+
+Delivery evidence for `inventory-ho-r3` is kept separate from acceptance. The
+authenticated response from `mapper-9` explicitly accepts the exact Handoff
+revision, bounded Ticket Responsibility, read-only Authority, all three
+conflicts, Continuation, and the first conflict-resolution action. The
+immediately preceding freshness read still reports `outcome-r12`, `map-r4`,
+and `evidence-index-r9`, so the exact offer is current.
+
+The response records an append-only Responsibility transition at that
+acceptance boundary: `mapper-7` remains responsible until acceptance, then
+`mapper-9` owns only `inventory-map`. Workflow continues to own
+`catalog-recovery`, its integration, and its terminal proof. The resulting
+state is an accepted agent Handoff with the parent Outcome active; the Ticket
+still has three conflicts to resolve and is not complete. The transition
+evidence, current responsible owner (`mapper-9`), normal operating mode,
+freshness result, and first conflict-resolution action are returned to
+Workflow. No implementation, Review, source-record write, parent completion,
+or Ticket completion is performed.

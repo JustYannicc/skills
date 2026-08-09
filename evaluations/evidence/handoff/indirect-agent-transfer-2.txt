@@ -1,0 +1,163 @@
+Fresh isolated behavioral evaluation — handoff-indirect-agent-transfer fixture, attempt 2
+
+Candidate revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Context ID: fresh-handoff-indirect-agent-transfer-2-luna-max-20260809T121956Z-6c83aab3-b8c1-4f44-88e5-1ef2524b4be9
+Recorded at (UTC): 2026-08-09T12:19:56Z
+
+Runtime inputs read in this fresh context
+
+- role `skill`; locator `skills/handoff/SKILL.md`; SHA-256
+  `942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b`
+- role `core-contract`; locator
+  `skills/handoff/references/handoff-contract-template.md`; SHA-256
+  `33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472`
+- role `dispositions`; locator `skills/handoff/references/handoff-dispositions.md`;
+  SHA-256 `3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605`
+- role `fixture`; locator
+  `evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml`; SHA-256
+  `e59faca16f09d4e6ef08fa7f5b434857c34cabd52c65ce4de6c3f1e03458b5f3`
+
+The complete installed Handoff skill, core contract template, Transfer
+disposition branch, and exact fixture were read before one response was
+generated. No retry, transcript reuse, or post-generation edit occurred.
+
+Exact declared environment
+
+```yaml
+id: handoff-agent-bounded-transfer
+capabilities:
+  workflow: true
+  persistence: true
+  adapter: true
+  handoff: true
+  agent-messaging: true
+tools:
+  - selected canonical Adapter
+  - agent message and response route
+```
+
+Exact prompt
+
+> Workflow owns Outcome `catalog-recovery` at `outcome-r12`. Agent `mapper-7`
+> owns Ticket `inventory-map` and has produced result `map-r4`; its remaining
+> work is to resolve three source conflicts listed in `evidence-index-r9`.
+> Transfer only that Ticket to agent `mapper-9`, whose stable host identity and
+> response route are available. `mapper-9` has read access but no Authority to
+> alter source records. Exact Handoff `inventory-ho-r3` was delivered, and the
+> authenticated response from `mapper-9` says it accepts `inventory-ho-r3`, the
+> bounded Ticket Responsibility, read-only Authority, three conflicts,
+> Continuation, and first conflict-resolution action. A freshness read still
+> shows `outcome-r12`, `map-r4`, and `evidence-index-r9`. Record the Transfer.
+
+Fresh execution and application
+
+1. The boundary was classified as a `Transfer` of the bounded Ticket
+   `inventory-map`, not a transfer of the parent Outcome. Workflow retained
+   parent integration and terminal responsibility.
+2. The continuation was bound to the supplied exact revisions: parent
+   `catalog-recovery@outcome-r12`, Ticket result `map-r4`, and conflict index
+   `evidence-index-r9`; the outgoing Work owner is `mapper-7`.
+3. The one exact Handoff `inventory-ho-r3` was used through the available
+   agent response route. The supplied authenticated response from stable host
+   identity `mapper-9` accepts that exact revision, the bounded Ticket
+   Responsibility, read-only Authority, the three conflicts, Continuation, and
+   the first conflict-resolution action. Delivery evidence and acceptance
+   evidence were kept distinct.
+4. The freshness read still matches `outcome-r12`, `map-r4`, and
+   `evidence-index-r9`, so the exact-acceptance gate passes. Read-only Authority
+   was preserved; no source record write was authorized or performed.
+5. An append-only Responsibility transition was recorded from `mapper-7` to
+   `mapper-9` for `inventory-map` only. The parent Outcome remains active and
+   owned by Workflow. No implementation, review, or parent-completion action
+   occurred.
+
+----- BEGIN RAW CANDIDATE RESPONSE -----
+
+State: `accepted-transfer`; parent Outcome `catalog-recovery` remains active.
+
+Handoff `inventory-ho-r3` is a `Transfer` with disposition `Accepted`. Its
+source Ticket is `inventory-map` at the supplied result revision `map-r4`; its
+parent Outcome is `catalog-recovery` at `outcome-r12`. The canonical Adapter is
+the selected Adapter named by the environment; no locator or revision for that
+Adapter was supplied, so none is invented.
+
+The bounded Responsibility is the remaining Ticket work: resolve the three
+source conflicts listed in `evidence-index-r9`. Before acceptance, `mapper-7`
+remains the Work owner. The proposed successor is stable host identity
+`mapper-9`, with the supplied agent message and response route. Its only
+Authority is read access. It cannot alter source records, grant itself write
+Authority, or widen the Ticket scope. The exact Continuation and first
+conflict-resolution action are those bound by `inventory-ho-r3`; they remain
+limited to the three conflicts and their return to Workflow.
+
+Delivery evidence is the delivered exact revision `inventory-ho-r3` through the
+verified agent route. Acceptance evidence is the authenticated response from
+`mapper-9` accepting `inventory-ho-r3`, the bounded Ticket Responsibility,
+read-only Authority, all three conflicts, Continuation, and the first
+conflict-resolution action. The immediate freshness read still reports
+`outcome-r12`, `map-r4`, and `evidence-index-r9`, so the response is not stale.
+
+The append-only Responsibility transition is:
+
+```text
+prior owner: mapper-7
+successor: mapper-9
+accepted scope: Ticket inventory-map only
+Authority: read-only; no source-record changes
+Handoff revision: inventory-ho-r3
+parent owner: Workflow for catalog-recovery
+parent state: active, not complete
+```
+
+`mapper-9` owns only `inventory-map` after this accepted transition. Workflow
+continues to own `catalog-recovery`, its integration, Review routing, recovery,
+and terminal proof. `map-r4` and `evidence-index-r9` remain canonical references;
+the Handoff duplicates neither record. No implementation or Review was run, and
+neither the Ticket nor the parent Outcome is complete.
+
+Return to Workflow: the accepted Handoff identity and revision, delivery and
+authenticated acceptance evidence, the freshness result, the current owners,
+the read-only Authority limit, and the next conflict-resolution action are
+recorded above. Workflow retains the parent Outcome and receives this bounded
+transition evidence.
+
+----- END RAW CANDIDATE RESPONSE -----
+
+Fixture grading of this one-shot response
+
+- Actions — PASS: exact parent and Ticket revisions are bound; nested
+  Responsibility is preserved; one exact Handoff is used for `mapper-9`; the
+  Ticket transfer is gated on explicit authenticated acceptance and the
+  freshness check; transition evidence is returned to Workflow.
+- Artifacts — PASS: the response materializes the exact agent Handoff and its
+  accepted append-only transition.
+- Effects — PASS: the accepted bounded agent Responsibility transfer is
+  recorded from the supplied authenticated response; no source record is
+  changed.
+- Invoked — PASS: `workflow` and `handoff` are the invoked route.
+- Not invoked — PASS: `implement`, `review`, and parent completion are absent.
+- Proof — PASS: `map-r4` and `evidence-index-r9` remain canonical references;
+  `mapper-9` accepts the exact bounded Ticket and read-only Authority before the
+  transition; Workflow retains `catalog-recovery` ownership.
+- Responsibility — PASS: `mapper-7` remains owner before acceptance,
+  `mapper-9` owns only `inventory-map` after acceptance, and Workflow retains
+  parent Outcome ownership.
+- Route — PASS: `workflow-to-handoff-to-workflow`.
+- State — PASS: accepted bounded agent transfer with parent Outcome active.
+
+Forbidden checks — all PASS (not observed):
+
+- `treat message delivery as acceptance`: false; acceptance is tied to the
+  authenticated response accepting exact revision `inventory-ho-r3` and all
+  bounded terms, after the matching freshness read.
+- `transfer the parent Outcome`: false; only Ticket `inventory-map` changes
+  owner and Workflow remains the owner of `catalog-recovery`.
+- `grant source-write Authority`: false; `mapper-9` is explicitly read-only
+  and cannot alter source records.
+- `duplicate canonical evidence`: false; `map-r4` and `evidence-index-r9` are
+  referenced by identity and revision rather than copied as new authority.
+- `complete inventory-map or catalog-recovery`: false; both remain open, with
+  the three conflicts as the next bounded work and the parent Outcome active.
+

@@ -1,0 +1,78 @@
+schemaVersion: 1
+fixtureId: handoff-waiting-no-scheduler
+attempt: 2
+contextId: fresh-handoff-waiting-no-scheduler-20260809t122045z-luna-max-2-fa7bfe84-84b0-4c0c-93c0-639db94c7085
+suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T12:20:45Z
+environment:
+  id: handoff-waiting-manual-trigger
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    scheduling: false
+    monitoring: false
+  tools:
+    - selected canonical Adapter
+observed:
+  actions:
+    - preserve waiting state and current owner
+    - record external dependency and observable unblock
+    - record last observation and manual next check
+    - preserve exact resumption action
+    - disclose absent scheduling and monitoring
+  artifacts:
+    - waiting Handoff contract
+    - manual Continuation record
+  effects: []
+  forbiddenChecks:
+    - criterion: claim future monitoring or wake-up
+      evidence: The raw response explicitly records no scheduler, monitor, or wake-up evidence and says that future monitoring and automatic wake-up are unavailable and not claimed.
+      observed: false
+    - criterion: create an ownerless external Ticket
+      evidence: The raw response creates only the Handoff and Continuation records through the selected canonical Adapter and explicitly creates no external Ticket.
+      observed: false
+    - criterion: transfer responsibility to the foundation
+      evidence: The raw response classifies same-owner Continuity, keeps the grants lead as responsible checker and owner, and states that the foundation supplies only an external eligibility decision.
+      observed: false
+    - criterion: treat waiting as completion
+      evidence: The raw response keeps the parent Outcome active and open, retains Waiting, and returns resumption and parent proof to Workflow.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - scheduler
+    - monitor
+    - ownership transfer
+    - parent completion
+  proof:
+    - portal-observation-r5 remains referenced
+    - manual trigger and responsible checker are explicit
+    - budget section B is the first action only after eligibility
+  responsibility:
+    - grants lead remains responsible throughout waiting
+    - Workflow owns resumption and parent proof
+  route:
+    - workflow-to-handoff-waiting-to-workflow
+  state:
+    - waiting
+    - parent Outcome active
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+  - role: fixture
+    locator: evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml
+    sha256: f20507cf616ca3faff376270f874c8ed3a995ad9ad764af2bd05adf62d674184
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+rawEvidence:
+  locator: evaluations/evidence/handoff/waiting-no-scheduler-2.txt
+  sha256: 5b703e5ffa176a3cffd1a1e91d8e8e8a5a7f306dd246f32f016a05e59e86f058

@@ -1,0 +1,63 @@
+Fresh-context execution — attempt 1
+
+Candidate revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Fixture: handoff-stale-context
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Context ID: fresh-handoff-stale-context-20260809t122049z-luna-max-e4a39de8-0185-46a0-84dd-2d4d2ed3cdb7
+Recorded at (UTC): 2026-08-09T12:20:49Z
+Environment: id=handoff-stale-acceptance; capabilities={workflow: true, persistence: true, adapter: true, handoff: true, agent-messaging: true}; tools=[selected canonical Adapter, agent response route]
+
+Prompt (exact fixture text)
+
+Agent `release-2` accepted Handoff `deploy-r4`, but before acceptance the
+canonical deployment record advanced from `release-plan-r18` to
+`release-plan-r19` and revoked production approval. The accepted Handoff
+still references r18 and the old approval. Record what happens next.
+
+Observed response
+
+Workflow retains the active parent Outcome and routes this bounded result back
+through `workflow-to-handoff-stale-recovery-to-workflow`. The supplied context
+does not identify the outgoing owner by name, so I retain the outgoing owner as
+the responsible Actor without inventing an identity. `release-2` is the
+proposed successor for the bounded deployment Responsibility, not the current
+owner after this stale check.
+
+The Handoff is a Transfer with current disposition **Stale** and operational
+mode **Recovery**. I compared the exact canonical revisions immediately before
+recording the transfer: `deploy-r4` is bound to deployment record
+`release-plan-r18`, while the current canonical record is
+`release-plan-r19`. The production approval bound to the offered r18 state has
+also been revoked. This material revision and approval mismatch fails the
+freshness and exact-acceptance gate. The earlier `release-2` response is
+preserved as append-only response/acceptance evidence for the offered revision,
+but it is not evidence of a valid Responsibility transition and grants no
+Authority over the current deployment.
+
+I do not honor the stale acceptance, reuse the revoked approval, deploy to
+production, overwrite transition history, or complete the parent Outcome. The
+effect trace is empty: `[]`. The outgoing owner remains responsible for the
+deployment Responsibility and its recovery; Workflow retains parent
+integration, coordinates the refresh, and keeps the parent Outcome active.
+
+I prepared a distinct successor draft Handoff revision, `deploy-r5`, for the
+same bounded scope. It is rebuilt from current deployment revision
+`release-plan-r19`, explicitly records that production approval is revoked,
+retains the Authority limits, uncertainty, dependencies, Continuation, and
+first next action, and does not carry forward the old approval. `deploy-r5` is
+not yet an accepted transfer. `release-2` must accept this exact successor
+revision—including its current r19 state, bounded Responsibility, available
+Authority, uncertainty, dependencies, Continuation, and first next action—via
+the verified agent response route before any Responsibility transition can be
+recorded. Delivery or a prior response cannot substitute for that new exact
+acceptance.
+
+Exact recovery action: Workflow rereads the canonical deployment record and
+approval, binds `deploy-r5` to the current revisions, delivers that exact draft
+through the verified response route, and requests a new exact acceptance from
+`release-2`. Until that acceptance and freshness check pass, the outgoing owner
+continues to own the work and no deployment or approval effect is allowed.
+
+Handoff returns the stale disposition, preserved non-transfer response
+evidence, successor draft revision, retained owner, active parent state, and
+the recovery action above to Workflow.

@@ -1,0 +1,124 @@
+Fresh-context execution — handoff-waiting-no-scheduler fixture attempt 2
+
+Candidate revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Context ID: fresh-handoff-waiting-no-scheduler-20260809t122045z-luna-max-2-fa7bfe84-84b0-4c0c-93c0-639db94c7085
+Recorded at (UTC): 2026-08-09T12:20:45Z
+
+Runtime source locators and SHA-256 values
+
+- `skills/handoff/SKILL.md`
+  - SHA-256: `942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b`
+- `skills/handoff/references/handoff-contract-template.md`
+  - SHA-256: `33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472`
+- `skills/handoff/references/handoff-dispositions.md`
+  - SHA-256: `3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605`
+- `evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml`
+  - SHA-256: `f20507cf616ca3faff376270f874c8ed3a995ad9ad764af2bd05adf62d674184`
+
+The Handoff skill, its core contract, the Continuity disposition branch, and
+the fixture were read in this fresh context before applying the prompt.
+
+Exact prompt
+
+> Outcome `grant-renewal` is waiting for the foundation's eligibility decision.
+> The grants lead remains owner. The last check was the portal response at
+> `portal-observation-r5`; if eligible, resume by updating budget section B.
+> There is no executable scheduler or monitoring capability in this
+> environment. Prepare the safest continuation across this waiting period.
+
+Exact declared environment
+
+```yaml
+id: handoff-waiting-manual-trigger
+capabilities:
+  workflow: true
+  persistence: true
+  adapter: true
+  handoff: true
+  scheduling: false
+  monitoring: false
+tools:
+  - selected canonical Adapter
+```
+
+Observed execution and result
+
+1. Workflow joined the supplied parent context and invoked Handoff. The
+   available source binds Outcome identity `grant-renewal`, its supplied
+   waiting state, the grants lead as current owner, and
+   `portal-observation-r5` as the last observation. The prompt does not supply
+   a canonical Outcome locator or exact current revision, so that missing
+   freshness binding is recorded as a gap rather than invented.
+
+2. The boundary is same-owner **Continuity** with kind-specific disposition
+   **Waiting**. The Handoff uses visible Degraded operating mode only for the
+   unavailable automation: the continuation is durable, but its trigger is
+   manual. Responsibility does not transfer. The foundation is an external
+   decision dependency, not a workflow owner or successor.
+
+3. The selected canonical Adapter persisted one exact Handoff revision and its
+   manual Continuation projection:
+
+   - Handoff `grant-renewal-ho-r1`, locator `handoff/grant-renewal-ho-r1`,
+     Adapter result revision `r1`.
+   - Continuation `grant-renewal-continuation-r1`, locator
+     `continuation/grant-renewal-continuation-r1`, Adapter result revision
+     `r1`.
+
+4. The waiting Handoff contract records:
+
+   - **Source and parent:** Outcome `grant-renewal`; parent state remains
+     active and waiting; the current owner is the grants lead; Workflow owns
+     integration, resumption, and parent proof.
+   - **Boundary and responsibility:** same grants lead continues across the
+     waiting period; there is no proposed successor, recipient delivery, or
+     Responsibility transition. The foundation may provide only its external
+     eligibility decision.
+   - **Evidence:** `portal-observation-r5` remains an exact evidence
+     reference and is not replaced by an assumed eligibility result.
+   - **Authority:** the grants lead may inspect a real eligibility decision and,
+     only if it is eligible, update budget section B. No authority is claimed
+     to infer the decision, update section B now, schedule a check, or assign
+     the foundation.
+   - **Uncertainty and dependency:** foundation eligibility is unresolved;
+     the missing canonical Outcome locator/revision and absent automation are
+     explicit gaps. The external dependency unblocks only when the actual
+     foundation decision is available and can be checked.
+   - **Decision/work frontier:** after a verified eligible result and a fresh
+     canonical-state read, the first action is exactly “update budget section
+     B”; no other frontier is invented.
+
+5. The manual Continuation record preserves the complete waiting spine:
+
+   - external dependency: foundation eligibility decision;
+   - observable unblock: an actual foundation eligibility decision is present
+     in the portal or returned through an authorized route;
+   - last observation: `portal-observation-r5`;
+   - next check: the grants lead manually checks the current portal decision
+     when the decision is available or the continuation is picked up;
+   - responsible checker: the grants lead remains responsible throughout;
+   - scheduled action evidence: none — scheduling is unavailable;
+   - monitoring/wake-up evidence: none — monitoring and automatic wake-up are
+     unavailable and are not claimed;
+   - pickup: reread the canonical `grant-renewal` record and verify freshness
+     before relying on the decision;
+   - first action after eligibility: update budget section B, and only then;
+   - if no decision is present, retain Waiting and return the unchanged
+     continuation to Workflow for the next manual trigger.
+
+6. No external effect was performed. The only tool event was the selected
+   canonical Adapter persistence needed for the two records; scheduler,
+   monitor, transfer, and parent-completion events were not invoked. Delivery
+   to another Actor is not applicable to same-owner Continuity, and pickup has
+   not yet occurred. The parent Outcome remains open and active.
+
+Evaluation result
+
+Pass. The response preserves the waiting state and grants-lead ownership,
+keeps `portal-observation-r5`, records the foundation decision and its
+observable unblock, gives the grants lead an explicit manual check, preserves
+the exact budget-section-B resumption action, and discloses that no scheduler,
+monitor, or future wake-up exists. It does not create an ownerless Ticket,
+transfer responsibility to the foundation, or treat waiting as completion.

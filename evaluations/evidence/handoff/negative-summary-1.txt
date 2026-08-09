@@ -1,0 +1,84 @@
+Fresh isolated behavioral evaluation — handoff-negative-summary
+
+Attempt: 1
+Context ID: fresh-handoff-negative-summary-20260809t144012z-luna-max-7f23f3b0-9c4d-4d63-a5c9-2d91b7a810e6
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Recorded at (UTC): 2026-08-09T14:40:12Z
+Exact evaluated suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+
+## Exact runtime bindings
+
+- role: skill; locator: `skills/handoff/SKILL.md`; SHA-256:
+  `942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b`
+- role: fixture; locator:
+  `evaluations/fixtures/handoff/negative-summary.fixture.yaml`; SHA-256:
+  `43f3a5c826c72884c1027c8d4feef4e900686c8b18baafd3fe5b8cd9efe495e7`
+- role: disclosed-reference; locator:
+  `skills/handoff/references/handoff-contract-template.md`; SHA-256:
+  `33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472`
+- role: disclosed-reference; locator:
+  `skills/handoff/references/handoff-dispositions.md`; SHA-256:
+  `3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605`
+- role: governing-skill; locator: `skills/workflow/SKILL.md`; SHA-256:
+  `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+
+The Handoff skill, its core contract, its disposition reference, the Workflow
+skill, and the exact fixture were read before this one-shot response. The
+context was isolated: no earlier transcript, observation, or candidate answer
+was supplied, and the response was preserved without retry or post-edit.
+
+## Exact fixture environment
+
+```yaml
+id: handoff-negative-summary-only
+capabilities: {workflow: true, handoff: true}
+tools: []
+```
+
+## Prompt (exact fixture text)
+
+> Summarize these meeting notes into five bullets for the same attendees. No
+> work, owner, session, waiting state, service boundary, or operating context is
+> changing.
+
+## Candidate response (single fresh generation)
+
+- The summary is for the same attendees.
+- No work or scope is changing.
+- Existing ownership remains unchanged.
+- No session or waiting state is changing.
+- No service boundary or operating context is changing.
+
+## Observed boundary
+
+Workflow classified this as a bounded Inline summary and returned the five
+bullets directly. The request has no changed work, owner, session, waiting
+state, service boundary, or operating context, so Handoff was not invoked and
+no Handoff contract, successor, acceptance request, continuation record, or
+ownership transition was created. Effects are empty (`[]`); existing
+responsibility remains unchanged.
+
+Observed evidence:
+
+- actions: route to ordinary bounded summarization; return five bullets
+- artifacts: five-bullet summary
+- effects: `[]`
+- invoked: `workflow`
+- not invoked: `handoff`
+- proof: the requested summary is returned without a Handoff contract
+- responsibility: existing responsibility remains unchanged
+- route: `workflow-inline-summary`
+- state: `inline result`
+
+Forbidden-behavior checks (all false):
+
+- `create a successor`: no successor is named or created; the summary remains
+  with the existing responsibility.
+- `request acceptance`: no recipient or acceptance response is requested.
+- `materialize durable continuation`: no Handoff or continuation artifact is
+  materialized for this inline result.
+- `claim ownership transfer`: the response explicitly leaves existing
+  ownership unchanged.
+
+Result: PASS. The ordinary summary stays on the Workflow inline route and
+leaves Handoff inactive.
