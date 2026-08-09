@@ -39,4 +39,4 @@ observed:
   state: [waiting-for-shared-understanding-confirmation]
 rawEvidence:
   locator: evaluations/evidence/grilling/edge-confirmation-gate-1.txt
-  sha256: f47b6bce90b3a17731803ced0974bc9e8792fd169ea46315fa93ec8811751760
+  sha256: c438083f514b220df451c5500e7d49aad4aad86dd7e9c66ceab2bc24a9f6ee1a

@@ -1,0 +1,94 @@
+schemaVersion: 1
+fixtureId: handoff-service-dispatch
+attempt: 1
+contextId: fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T13:31:40Z
+environment:
+  id: handoff-service-dispatch-boundary
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    service-dispatch: true
+  tools:
+    - selected canonical Adapter
+    - notification service
+observed:
+  actions:
+    - classify Dispatch
+    - bind exact approved revision and service contract
+    - record service acceptance and receipt as execution evidence
+    - retain owner through recipient delivery verification
+    - return dispatch continuation
+  artifacts:
+    - Dispatch Handoff contract
+    - service receipt reference
+  effects:
+    - authorized dispatch of notice-r11
+  forbiddenChecks:
+    - criterion: treat service receipt as ownership acceptance
+      evidence: >-
+        relay-prod remains the contracted dispatch executor; the current owner
+        retains Outcome Responsibility and Workflow retains terminal
+        verification, so the receipt is scoped to the service duty.
+      observed: false
+    - criterion: treat queued dispatch as recipient delivery
+      evidence: >-
+        The Handoff records the service's accepted dispatch job and keeps a
+        separate Continuation for delivery evidence counted across all 240
+        recipients; recipient delivery remains pending.
+      observed: false
+    - criterion: treat accepted dispatch as recipient delivery
+      evidence: >-
+        The Acknowledged disposition scopes
+        relay-prod/receipt/notice-r11@r1 to accepted service execution while
+        the 240-recipient delivery condition remains the open proof seam.
+      observed: false
+    - criterion: send a changed revision
+      evidence: >-
+        The sent input is exactly message notice-r11 under matching approval
+        approval-r11, addressed to the approved target relay-prod.
+      observed: false
+    - criterion: complete the parent Outcome
+      evidence: >-
+        The parent Outcome remains active and open with recipient delivery
+        verification pending; Workflow retains terminal proof and the
+        Continuation names the next verification action.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked: []
+  proof:
+    - notice-r11 matches approval-r11
+    - relay receipt proves only accepted dispatch
+    - 240-recipient delivery remains the proof seam
+  responsibility:
+    - current owner retains Outcome Responsibility
+    - relay-prod owns only its contracted dispatch duty
+    - Workflow retains terminal verification
+  route:
+    - workflow-to-handoff-dispatch-to-workflow
+  state:
+    - Acknowledged
+    - recipient delivery verification pending
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/service-dispatch.fixture.yaml
+    sha256: df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+rawEvidence:
+  locator: evaluations/evidence/handoff/service-dispatch-1.txt
+  sha256: 837ce0560b9ddc11c1acc25c0fd1cd2b7e0b7df0c7a46bfabaecd451e16042bd

@@ -1,16 +1,118 @@
-Evaluation: to-tickets-indirect-delegation
-Attempt: 1
-Context: fresh-to-tickets-indirect-delegation-20260808-1
-Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
-Evaluator: deterministic-candidate-observer
+Evaluation
+Attempt 1
+Context fresh-to-tickets-indirect-delegation-editorial-20260809-1
+Observed candidate git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Evaluator gpt-5.6-luna-max-fresh-context
 
-Workflow passed member-update-r5 and the parent context to To Tickets. The
-decomposition returned two bounded delegated Results: the recorded-channel
-message and four-member telephone fallback. Their Work owners are distinct,
-their requirements do not overlap, and atomic claims make both eligible for
-the Work frontier concurrently. The parent integration Ticket requires both
-and its Proof seam is the 86-member delivery record.
+Runtime boundary
 
-The communications coordinator remains decomposition owner. Child ownership is
-nested; the membership lead remains Outcome owner and parent integrator. No
-messages were sent and no child or parent was marked complete.
+Workflow supplied one accepted Specification revision and its active context:
+
+- Specification identity and exact revision: member-update-r5.
+- Accepted behavior: inform all 86 members that Tuesday's location changes from Hall A to Hall C; keep 18:00; have the update ready before Monday noon.
+- Parent Outcome owner and parent proof owner: membership-lead.
+- Decomposition Work owner: communications-coordinator.
+- Parent integration Result: membership-lead verifies coverage for all 86 members and requires both delegated child Results before parent completion.
+- Effects explicitly outside this invocation: sending the update and making telephone calls. No send or call was performed.
+- Delegation limit: communications-coordinator may delegate child ownership only; it may not delegate the parent Outcome, parent integration proof, or an effect.
+
+The work requires independent child units, delegation, concurrency, dependency-aware integration, and durable persistence, so the representation is Durable. The isolated faithful Baseline+Coordination Adapter is `.scratch/runtime-adapters/final-delegation`; no external system was contacted.
+
+Binding and decomposition transcript
+
+[Workflow -> To Tickets]
+accepted Specification `member-update-r5`; Outcome owner `membership-lead`; decomposition owner `communications-coordinator`; return route is Workflow execution/Review. Bind exactly this revision and preserve the parent Result and terminal condition.
+
+[To Tickets]
+The accepted Specification is complete for decomposition. The Result, 86-member scope, Tuesday/Hall A to Hall C/18:00 behavior, Monday-noon readiness, parent proof, child Results, authority limits, dependency rule, proof seams, and no-send/no-call exclusions are bound without editing accepted intent.
+
+[To Tickets -> draft]
+Draft Ticket-set identity is `ticket-set-r1` for Specification revision `member-update-r5`. Collective coverage is:
+
+1. Plain-language child Result: an approved plain-language update containing Tuesday, Hall A to Hall C, 18:00, and Monday-noon readiness, plus the recorded channels. Work owner is `communications-editor`, delegated by `communications-coordinator` within this child only. It cannot accept the parent or send the update.
+2. Telephone-fallback child Result: an approved telephone fallback script and four-member list for the four non-digital members, with the same Tuesday/Hall C/18:00/Monday-noon facts. Work owner is `member-services-coordinator`, delegated by `communications-coordinator` within this child only. It cannot accept the parent or make calls.
+3. Parent integration Result: `membership-lead` verifies an all-86 coverage matrix and requires both child Results. `communications-coordinator` does not own or delegate this parent integration Ticket; parent responsibility remains with `membership-lead`.
+
+The two child Tickets have disjoint Results, writable sources, and proof seams. With Coordination available they are safe concurrent frontier candidates. The integration Ticket has explicit unwaived `requires` edges to both children and is not independently executable until both complete. No child is executed or claimed in this decomposition invocation.
+
+[Membership lead -> To Tickets]
+Explicit acceptance received for exact Specification revision `member-update-r5` and exact Ticket-set revision `ticket-set-r1`. `membership-lead`, acting as Outcome owner within Authority, authorizes the canonical write. This decision does not authorize sending the update, making calls, starting execution, or inferring parent completion.
+
+Canonical persistence transcript
+
+The isolated Adapter was initialized with:
+
+- Adapter locator: `.scratch/runtime-adapters/final-delegation/adapter.json`.
+- Adapter revision: `baseline-coordination-r1`.
+- Baseline: available.
+- Coordination: available, including atomic set write and claim coordination.
+- Effects: `send=forbidden`, `call=forbidden`.
+
+After the explicit acceptance above, the canonical set and parent relationship were written at one Adapter revision. The write contains these records:
+
+- `.scratch/runtime-adapters/final-delegation/records/outcome-member-update-r5.json`: Outcome `member-update-r5`, revision `outcome-r5`, state Accepted, owner `membership-lead`.
+- `.scratch/runtime-adapters/final-delegation/records/ticket-set-r1.json`: TicketSet `ticket-set-r1`, exact Specification `member-update-r5`, state Accepted, decomposition owner `communications-coordinator`, acceptance actor `membership-lead`, `authorizes_canonical_write=true`.
+- `.scratch/runtime-adapters/final-delegation/records/ticket-plain-language-r1.json`: child Ticket `member-update-r5-plain-language-r1`, state Accepted, work owner `communications-editor`.
+- `.scratch/runtime-adapters/final-delegation/records/ticket-telephone-fallback-r1.json`: child Ticket `member-update-r5-telephone-fallback-r1`, state Accepted, work owner `member-services-coordinator`.
+- `.scratch/runtime-adapters/final-delegation/records/ticket-integration-r1.json`: parent integration Ticket `member-update-r5-integration-r1`, state Accepted, work owner `membership-lead`, requires both child IDs.
+
+The typed relationship write contains:
+
+- `contains`: `member-update-r5 -> ticket-set-r1`.
+- `contains`: `ticket-set-r1 -> member-update-r5-plain-language-r1`.
+- `contains`: `ticket-set-r1 -> member-update-r5-telephone-fallback-r1`.
+- `contains`: `ticket-set-r1 -> member-update-r5-integration-r1`.
+- `requires`: `member-update-r5-integration-r1 -> member-update-r5-plain-language-r1`, unwaived.
+- `requires`: `member-update-r5-integration-r1 -> member-update-r5-telephone-fallback-r1`, unwaived.
+
+Every edge is state Accepted, has `adapter_revision=baseline-coordination-r1`, and is acyclic. The parent `contains` transition is recorded as a relationship update; the accepted Specification and Outcome behavior remain immutable.
+
+Reread and verification proof
+
+The Adapter records and edges were reread after the write. All 13 JSON documents (adapter metadata, six records, six edges) parsed successfully. The reread assertions were:
+
+```
+adapter_id                         adapter_revision             Baseline    Coordination
+final-delegation                   baseline-coordination-r1     available   available
+
+ticket_set       kind       revision        state     acceptance_actor   spec_revision   accepted_set   canonical_write
+ticket-set-r1    TicketSet  ticket-set-r1    accepted  membership-lead    member-update-r5 ticket-set-r1  true
+
+ticket                                      state     work_owner                    requires                                                        live_claims effects
+member-update-r5-plain-language-r1          accepted  communications-editor         (none)                                                         0           0
+member-update-r5-telephone-fallback-r1      accepted  member-services-coordinator   (none)                                                         0           0
+member-update-r5-integration-r1             accepted  membership-lead               plain-language-r1,telephone-fallback-r1                         0           0
+
+edge type      from                                  to                                      state
+contains       member-update-r5                      ticket-set-r1                           accepted
+contains       ticket-set-r1                         member-update-r5-plain-language-r1      accepted
+contains       ticket-set-r1                         member-update-r5-telephone-fallback-r1  accepted
+contains       ticket-set-r1                         member-update-r5-integration-r1         accepted
+requires       member-update-r5-integration-r1      member-update-r5-plain-language-r1      accepted
+requires       member-update-r5-integration-r1      member-update-r5-telephone-fallback-r1  accepted
+```
+
+The reread also confirms each record and edge carries `adapter_revision=baseline-coordination-r1`; the TicketSet carries `revision=ticket-set-r1`; the accepted Specification reference remains `member-update-r5`; and the parent Outcome remains owned by `membership-lead`. No partial write or conflicting revision was observed. No claim was created, no execution started, and no effect record exists.
+
+Accepted Work frontier transcript
+
+The deterministic frontier record is `.scratch/runtime-adapters/final-delegation/records/frontier-ticket-set-r1.json`, reread at `ticket-set-r1` / `baseline-coordination-r1`:
+
+- Accepted frontier (accepted, all unwaived `requires` complete, no live claim):
+  - `member-update-r5-plain-language-r1`.
+  - `member-update-r5-telephone-fallback-r1`.
+- Blocked: `member-update-r5-integration-r1`, requiring both child IDs above. It is accepted but not frontier-ready.
+- Waiting or in-review: none.
+- Recovery queue: empty at this boundary.
+- Live claims: none; claims created: none.
+- Execution started: false.
+- Effects: none; specifically no member update was sent and no telephone call was made.
+
+The frontier is an availability projection only. It does not complete either child, complete the parent integration, or complete the parent Outcome.
+
+Return transcript
+
+[To Tickets -> Workflow]
+Return the accepted Durable Ticket set `ticket-set-r1` for exact Specification `member-update-r5`, with canonical records and typed edges reread at Adapter revision `baseline-coordination-r1`. The two delegated child Tickets are the accepted frontier and may be executed concurrently under the Adapter's Coordination capability. The integration Ticket is blocked until both child Results complete. `membership-lead` retains parent integration, acceptance, canonical-write authority, and parent terminal proof; `communications-coordinator` retains decomposition and may delegate only child ownership. Workflow owns execution, Review, any separately authorized send/call effect, Recovery, and parent completion. This runtime attempt performed no sends or calls.
+
+Result: accepted Durable decomposition, persisted and reread; accepted frontier exposed; returned to Workflow at the decomposition completion boundary.

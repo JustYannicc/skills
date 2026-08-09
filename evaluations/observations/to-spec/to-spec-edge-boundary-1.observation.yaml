@@ -34,4 +34,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-edge-boundary-1.txt
-  sha256: 691f46dd0918a5563d7ea2a62a97f2af8de82b24cbc52b6756698de478511b6c
+  sha256: fa40ac9f309948324263436430424899939ca2874652d4830fea03c9814d9f8a

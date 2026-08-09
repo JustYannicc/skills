@@ -25,4 +25,4 @@ observed:
   state: [awaiting-handoff-acceptance]
 rawEvidence:
   locator: evaluations/evidence/foundation/edge-1.txt
-  sha256: 97d307f42504c2491361c171013dbe19388a891c360f7e1305723d39e62753de
+  sha256: a6194aad5ba73eae366a086892658de412a66c636bb24a37128f8169c5323109

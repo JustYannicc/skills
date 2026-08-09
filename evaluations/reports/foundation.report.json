@@ -1530,19 +1530,19 @@
           "attempt": 1,
           "contextId": "fresh-direct-1",
           "locator": "evaluations/evidence/foundation/direct-1.txt",
-          "sha256": "30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af"
+          "sha256": "2eb903fabe5611a0c91783c090e9b61fa9796300c89751be0be94f6eb69db9f3"
         },
         {
           "attempt": 2,
           "contextId": "fresh-direct-2",
           "locator": "evaluations/evidence/foundation/direct-2.txt",
-          "sha256": "30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af"
+          "sha256": "2eb903fabe5611a0c91783c090e9b61fa9796300c89751be0be94f6eb69db9f3"
         },
         {
           "attempt": 3,
           "contextId": "fresh-direct-3",
           "locator": "evaluations/evidence/foundation/direct-3.txt",
-          "sha256": "30fdf783ab09430f99b977ffa6ee82365a0c42f45e76897bf1828fa9565093af"
+          "sha256": "2eb903fabe5611a0c91783c090e9b61fa9796300c89751be0be94f6eb69db9f3"
         }
       ],
       "findings": [],
@@ -1567,19 +1567,19 @@
           "attempt": 1,
           "contextId": "fresh-edge-1",
           "locator": "evaluations/evidence/foundation/edge-1.txt",
-          "sha256": "97d307f42504c2491361c171013dbe19388a891c360f7e1305723d39e62753de"
+          "sha256": "a6194aad5ba73eae366a086892658de412a66c636bb24a37128f8169c5323109"
         },
         {
           "attempt": 2,
           "contextId": "fresh-edge-2",
           "locator": "evaluations/evidence/foundation/edge-2.txt",
-          "sha256": "85af2624a50249e1576d994cdad6a4a0a91485558ddf6e3d3dc1442beb78a98a"
+          "sha256": "9d7e0954b6ef5e6090f9800c064cc284bc9a3177f7fbae372e6489801a505aab"
         },
         {
           "attempt": 3,
           "contextId": "fresh-edge-3",
           "locator": "evaluations/evidence/foundation/edge-3.txt",
-          "sha256": "1089b0309225620c478c13a47faa50ffda3bb470ae72a7c88f0fa586c0278e87"
+          "sha256": "9d097f305d1e88a44ad86f74967510147b8c690133aad7d5e9f2926ca1a8c0db"
         }
       ],
       "findings": [],
@@ -1600,7 +1600,7 @@
           "attempt": 1,
           "contextId": "fresh-incomplete-1",
           "locator": "evaluations/evidence/foundation/incomplete-1.txt",
-          "sha256": "f03b477690daf303f8789733a62dc4badfe7e2a56b7832a3f19e5c54af2bbd1b"
+          "sha256": "ccd0769478e64a5abdb5d2968d8020214f391675766095a1fb2d56491919a7f3"
         }
       ],
       "findings": [],
@@ -1621,7 +1621,7 @@
           "attempt": 1,
           "contextId": "fresh-indirect-1",
           "locator": "evaluations/evidence/foundation/indirect-1.txt",
-          "sha256": "d6a48ddcd7e10c5c2f7c3945530d1d6da0bb982a7a5b08a263a3a19c5941ad37"
+          "sha256": "f3f9ed970274d54060f5948de780e2e067fddfb518d210ccd6803c55965bcc80"
         }
       ],
       "findings": [],
@@ -1642,7 +1642,7 @@
           "attempt": 1,
           "contextId": "fresh-negative-1",
           "locator": "evaluations/evidence/foundation/negative-1.txt",
-          "sha256": "d25388bab446d078136553fabc5625a8c482ceb32a010185e40aa0372554637d"
+          "sha256": "4f0933d733e9dbfda50b914904c6f838f7a5a1f0ebf6f67acfc7496ba98f8208"
         }
       ],
       "findings": [],
@@ -1667,19 +1667,19 @@
           "attempt": 1,
           "contextId": "fresh-grill-with-docs-direct-composition-sol-high-1-20260806t164016z",
           "locator": "evaluations/evidence/grill-with-docs/direct-composition-1.txt",
-          "sha256": "5d4867339cee162fe80798fb0c8d5410641ad83667d2daa5634a57c26a8b753b"
+          "sha256": "a4f854cd8d84d9b2b79e5d99dfd6e39cb6d9eb8de3739c71e1fef46e8d9b153c"
         },
         {
           "attempt": 2,
           "contextId": "fresh-grill-with-docs-direct-composition-sol-high-2-keGlgR",
           "locator": "evaluations/evidence/grill-with-docs/direct-composition-2.txt",
-          "sha256": "1a2aab7a6ff18a4de163ae62c74d772419a2287528ee8cb9d37a31ff19829dc8"
+          "sha256": "ae86a5fcc368ede65ff4590d0b3e848b7db5a1991daa4d166898a6322e423094"
         },
         {
           "attempt": 3,
           "contextId": "fresh-grill-with-docs-direct-composition-3-6wZMVf",
           "locator": "evaluations/evidence/grill-with-docs/direct-composition-3.txt",
-          "sha256": "854c26136fa99999203d576d4955fe26fcfa986acd885a99731fb590226809a3"
+          "sha256": "d19997130efcb20c484302ae502f8becbed5ce8b3cf856f5de8151356c53cb01"
         }
       ],
       "findings": [],
@@ -1700,7 +1700,7 @@
           "attempt": 1,
           "contextId": "fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7",
           "locator": "evaluations/evidence/grill-with-docs/edge-missing-domain-modeling-1.txt",
-          "sha256": "1731461315bd8e62bd6f2fb86ca3b257286f1033a9713b9bcd51436e7efbd344"
+          "sha256": "d07b58dc8dc8d58f7c2d59439fc0118fa7989db0ae88d8482e76b21a4ad138fc"
         }
       ],
       "findings": [],
@@ -1721,7 +1721,7 @@
           "attempt": 1,
           "contextId": "fresh-gwd-edge-missing-grilling-1-egxl9qnx",
           "locator": "evaluations/evidence/grill-with-docs/edge-missing-grilling-1.txt",
-          "sha256": "3548c19da68c0b645971e5cc7cf9f9be85ef8420bff99f168f608ca6cc648ebb"
+          "sha256": "31f96a8a7c2810f34e75b9435b82e064afb803194fd98f7741a4cbbfcc4d4c6f"
         }
       ],
       "findings": [],
@@ -1742,7 +1742,7 @@
           "attempt": 1,
           "contextId": "fresh-grill-with-docs-incomplete-adapter-1-k7m4qx",
           "locator": "evaluations/evidence/grill-with-docs/incomplete-adapter-1.txt",
-          "sha256": "76b048a8d547b8cda1e2ce049647f9a64ca04a7b507fc309a7d89016a65f57d1"
+          "sha256": "d1ce9bf33ff82b5f453a319f290409ceac8aad2910a22122f55ca3b1b533d258"
         }
       ],
       "findings": [],
@@ -1767,19 +1767,19 @@
           "attempt": 1,
           "contextId": "fresh-gwd-indirect-workflow-1-5b4d64ba-234e-439e-8406-5516ce5eff62",
           "locator": "evaluations/evidence/grill-with-docs/indirect-workflow-1.txt",
-          "sha256": "382415eb5865bc117d606b1f06cf5fe81edc652257a3ff395c4426240007c6af"
+          "sha256": "ec930ec2b968e994ad7a60e28be2faca41c96efc3b11b981ea39053c78b9d0bf"
         },
         {
           "attempt": 2,
           "contextId": "fresh-gwd-indirect-workflow-v12-2-235bdf6b-0984-4142-98ed-99df5c85c080",
           "locator": "evaluations/evidence/grill-with-docs/indirect-workflow-2.txt",
-          "sha256": "341c196cabcbde14df26619ba64c4b96e5889491e7dbec077b859a917c299797"
+          "sha256": "a6094da84e04a9d920bdf6f0917f563e337bd9faada9a044f23d380c668ac9ea"
         },
         {
           "attempt": 3,
           "contextId": "fresh-gwd-indirect-workflow-sol-high-3-20260806T164152Z",
           "locator": "evaluations/evidence/grill-with-docs/indirect-workflow-3.txt",
-          "sha256": "4651aee45fe3dcab3cef03e50f4875044a7c268ed9afc32631c753372d488a61"
+          "sha256": "37663155173d1e3b04a813fcd7fea7ead72e722c08dcdf4130cf57a34f4fbfb0"
         }
       ],
       "findings": [],
@@ -1800,7 +1800,7 @@
           "attempt": 1,
           "contextId": "fresh-gwd-negative-glossary-v12-1-febad68b-dd72-490b-b1eb-c69c2bd17ef9",
           "locator": "evaluations/evidence/grill-with-docs/negative-glossary-read-1.txt",
-          "sha256": "eaad84019e358b5af16391473877cb82a85fa4e7c2e161766e940af5c282da3d"
+          "sha256": "e34e07a5e1fdfc20028da6deaf84776fd1f91ba0f52683b1a37de1b87f2606e6"
         }
       ],
       "findings": [],
@@ -1825,19 +1825,19 @@
           "attempt": 1,
           "contextId": "fresh-grilling-direct-frontier-format-v12-1-95e382ed-cd64-486b-946a-dad1d89b255e",
           "locator": "evaluations/evidence/grilling/direct-frontier-format-1.txt",
-          "sha256": "589736cf87925374e291a862587581cbb438750197f298a7ed36c6363c5ebcda"
+          "sha256": "35002444ad8fe7f03c639d416ce8d9fcf3e5f044895cad39cbeaf3267eb32d05"
         },
         {
           "attempt": 2,
           "contextId": "fresh-grilling-direct-frontier-format-sol-high-2-caca5c66-a73a-4ee6-9483-0124492446cf",
           "locator": "evaluations/evidence/grilling/direct-frontier-format-2.txt",
-          "sha256": "f65b292342db3cdff5d84bbb73c632ff1c6448ca8601075b13dd7d07963cc100"
+          "sha256": "bf36295387548ec50a934058f8443b192927adb353a147dbfddce792a02e6c4b"
         },
         {
           "attempt": 3,
           "contextId": "fresh-grilling-direct-frontier-format-sol-high-3-3e166a19-21a6-4c72-9a1d-964aea7862ff",
           "locator": "evaluations/evidence/grilling/direct-frontier-format-3.txt",
-          "sha256": "e09e59c4bdb08bf279c8218fb5bd9162d7a63de2b68f28ed6f0a960e5b74318e"
+          "sha256": "6f4a40177758d093ca06647def1718d83d771742b41b22a5627188a45c145d73"
         }
       ],
       "findings": [],
@@ -1862,19 +1862,19 @@
           "attempt": 1,
           "contextId": "fresh-grilling-edge-confirmation-gate-v12-1-14db50eb-4630-485a-b566-29ba6056bc4b",
           "locator": "evaluations/evidence/grilling/edge-confirmation-gate-1.txt",
-          "sha256": "f47b6bce90b3a17731803ced0974bc9e8792fd169ea46315fa93ec8811751760"
+          "sha256": "c438083f514b220df451c5500e7d49aad4aad86dd7e9c66ceab2bc24a9f6ee1a"
         },
         {
           "attempt": 2,
           "contextId": "fresh-grilling-edge-confirmation-gate-v12-2-b92894e0-38ca-4323-ba38-8aa3d9a093a3",
           "locator": "evaluations/evidence/grilling/edge-confirmation-gate-2.txt",
-          "sha256": "f158789fb3ec6b01f9ca325cd21a9263e698bfe8fa0407976811acc21349fba9"
+          "sha256": "7a239f6e28b4d032c05fb9e1b407d439606d3e67d4e558cb85c2a41f3fd2c3fb"
         },
         {
           "attempt": 3,
           "contextId": "fresh-grilling-edge-confirmation-gate-v12-3-12c675d9-be22-42ca-a65d-b788ec6c88d1",
           "locator": "evaluations/evidence/grilling/edge-confirmation-gate-3.txt",
-          "sha256": "cf0e73af773fa5ba6fba355956ebe94ab0e82a0a2480c662ea5c1bbfb81f470e"
+          "sha256": "e7e09c45ed59cf4e54348adbfd5d8087e00b5cf6d09ace2340c575b5bd64c14d"
         }
       ],
       "findings": [],
@@ -1895,7 +1895,7 @@
           "attempt": 1,
           "contextId": "fresh-grilling-edge-delegated-fact-v12-1-b29b368c-01b3-4a0d-9eb6-18b4c3d232d7",
           "locator": "evaluations/evidence/grilling/edge-delegated-fact-1.txt",
-          "sha256": "a3120780b35451b91ddd1e014b24f957a1396bc5d101cb6d059888f136e7d4ca"
+          "sha256": "e4d8af378a5ba302d6e38bda5e81076c1ecb97e72d3a46c7c5a82e9f4d98bf1a"
         }
       ],
       "findings": [],
@@ -1916,7 +1916,7 @@
           "attempt": 1,
           "contextId": "fresh-grilling-incomplete-first-frontier-v12-1-33c9147d-d64b-4e2f-9efb-db4450ec9420",
           "locator": "evaluations/evidence/grilling/incomplete-first-frontier-1.txt",
-          "sha256": "9cbd9f7ec04497533e9ef1cd2b6545ff1adb3147d6baa950ff21a3e3d6602328"
+          "sha256": "70880fff09f641e01bffe0caab1e83ec85d30316932f50b7ba5ae56d65ca94d9"
         }
       ],
       "findings": [],
@@ -1941,19 +1941,19 @@
           "attempt": 1,
           "contextId": "fresh-grilling-indirect-agent-fact-v12-1-57a39dc9-0217-4c87-8e23-2974e85bbd83",
           "locator": "evaluations/evidence/grilling/indirect-agent-fact-1.txt",
-          "sha256": "861b39f017434b70ce097da0073563b483098bf3830de5e4a6dd4c212f317e09"
+          "sha256": "bdd2918ebeb5af55b15e223dc81391b9b3511881476f8bb6fe0032af452127bf"
         },
         {
           "attempt": 2,
           "contextId": "fresh-grilling-indirect-agent-fact-v12-2-sol-high-20260806T164746Z",
           "locator": "evaluations/evidence/grilling/indirect-agent-fact-2.txt",
-          "sha256": "b4256628f65b639a2477f01cabc86bfeb52d788b26753ae5533b2ca0b9ed1d07"
+          "sha256": "bab678ec4490bb6546e89b49c78a466e88f3fe293a63a393758f7677ec83a702"
         },
         {
           "attempt": 3,
           "contextId": "A15B04AC-B428-48A5-B719-59BF88147373",
           "locator": "evaluations/evidence/grilling/indirect-agent-fact-3.txt",
-          "sha256": "3bdb6f49f9c4794839688e2e6c45afab8c92bc202b641350ba8d883cb161737d"
+          "sha256": "5df8e395bd48c0832c0458470ae3fc3d6e4d931207b4cb7f8000f23219f449af"
         }
       ],
       "findings": [],
@@ -1974,7 +1974,7 @@
           "attempt": 1,
           "contextId": "fresh-grilling-negative-fact-only-v12-1-788bff0f-88cf-451b-9be6-7f0fd4241ca8",
           "locator": "evaluations/evidence/grilling/negative-fact-only-1.txt",
-          "sha256": "270991468a93cd325060e6f38e83f82707a32d720f9774f2a0ab49c61cb5a687"
+          "sha256": "f1481c35a9ffefb3b683cc0f8b1722d502dfba5ba703f746d8064b681c0620ab"
         }
       ],
       "findings": [],
@@ -1982,6 +1982,929 @@
       "status": "passed",
       "suiteRevision": "git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255",
       "fixtureRevision": "c99af046be0f0ec3701e8c21155f860c670e64e1a9bc156cdf194026abddc552"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-cross-domain-physical-1-20260809t133200z-luna-max",
+        "fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a",
+        "fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-cross-domain-physical-1-20260809t133200z-luna-max",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-1.txt",
+          "sha256": "0f851b646076f1dc1beb7aea8d6fce21dcb2564e85c2c90a78fbaca21555c686",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-2.txt",
+          "sha256": "2a41fc2ec9432665ee656d5498eeeb48c1a7807bd921d6824191b542347d543a",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-3.txt",
+          "sha256": "552d370c690274bd50713109f387c2564ca1702569d8ffa0d3ba88f83cb7e434",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-cross-domain-physical",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564",
+        "fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543",
+        "fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-1.txt",
+          "sha256": "82172bbbdf7705bcf8045550bc452a4d1dd7ae5e5acec47b163d30ffe5c5d4d3",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-2.txt",
+          "sha256": "19a4f8313f70223fdea9f0b9f748d7baecfba22aa87e4596435b86229ad84884",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-3.txt",
+          "sha256": "5b5157b79ca912fef13ceb95bf710872fbd448581fa674c54093e24898cdb594",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-direct-human-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4",
+        "fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e",
+        "fresh-handoff-indirect-agent-transfer-3-luna-max-20260809t133116z-5366777a-d295-44e9-8a7b-15342c7c8a34"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-1.txt",
+          "sha256": "638bd1532f6eb1ce20ff0388ceb2b27b17d73dacfcc8c11c54a46bf0e072b6bc",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-2.txt",
+          "sha256": "399ba3e19e90581d00f5579e8e4ca36ff70f3b1f5933a3852ffaf3af784834c4",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-indirect-agent-transfer-3-luna-max-20260809t133116z-5366777a-d295-44e9-8a7b-15342c7c8a34",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-3.txt",
+          "sha256": "c9c0109d0492219ebe06028a3b65b575040fdb8949049aa8708e6e8d8e151aea",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-indirect-agent-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e",
+          "locator": "evaluations/evidence/handoff/missing-capability-1.txt",
+          "sha256": "4297cfd047123b8af8fbd9304baba17c4df868ed8d60c4ff6a8cb2cd2acdcb1d",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/missing-capability.fixture.yaml",
+              "sha256": "c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf",
+          "locator": "evaluations/evidence/handoff/missing-recipient-route-1.txt",
+          "sha256": "648c241f5a07b6001ee8abf244412cbd2d6f5e349dff02c192b2fd13d99a6759",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/missing-recipient-route.fixture.yaml",
+              "sha256": "f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-missing-recipient-route",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3",
+          "locator": "evaluations/evidence/handoff/negative-summary-1.txt",
+          "sha256": "3c997545eb830ff3e3e360d969ed14fe95b359c904f12283d58fcb81add394fc",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/negative-summary.fixture.yaml",
+              "sha256": "23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-negative-summary",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-rejected-transfer-20260809t133402z-luna-max-fresh-cb8a79a7-c1f5-4c4d-b884-f05298d5971b",
+        "fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c",
+        "fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-rejected-transfer-20260809t133402z-luna-max-fresh-cb8a79a7-c1f5-4c4d-b884-f05298d5971b",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-1.txt",
+          "sha256": "66810e1a332d602e5a5fac2c2b56026732212525e10bc921deb2ff8c0fb01699",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-2.txt",
+          "sha256": "38f8b93e57b7ecd05ca26c78ce8d30606f36c6610bfbe5c2357a5b9b69937534",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-3.txt",
+          "sha256": "1fac2f532b1fa95ac716653596e8c21999a273c6e79b7e92816f4e534ab3eb1c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-rejected-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57",
+        "fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac",
+        "fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57",
+          "locator": "evaluations/evidence/handoff/service-dispatch-1.txt",
+          "sha256": "837ce0560b9ddc11c1acc25c0fd1cd2b7e0b7df0c7a46bfabaecd451e16042bd",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac",
+          "locator": "evaluations/evidence/handoff/service-dispatch-2.txt",
+          "sha256": "3ec31f229d560220917d1f06ddcceb68ce434179795b062ad6795d8828a9de2a",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a",
+          "locator": "evaluations/evidence/handoff/service-dispatch-3.txt",
+          "sha256": "1c4d104ec2c47db118c915d558426bc08ed3a31800f8c48fda839ee91d7920fa",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-service-dispatch",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6",
+          "locator": "evaluations/evidence/handoff/session-continuity-1.txt",
+          "sha256": "55ab350366bd39bfb69d6c9a3a768431c37b77563ac074d3e07829c0bcf5179c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/session-continuity.fixture.yaml",
+              "sha256": "d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-session-continuity",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0",
+        "fresh-handoff-stale-context-attempt-2-20260809t133500z-luna-max-213dbfe8-64a4-4c06-9e5a-cfb608007b7b",
+        "fresh-handoff-stale-context-attempt-3-20260809t133637z-luna-max-c7f34f09-57e0-4b88-a8f7-23e0f4261d2"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0",
+          "locator": "evaluations/evidence/handoff/stale-context-1.txt",
+          "sha256": "1f151542cb2cc39640fddb11ba855d026079705942d28c6e9bb003eb3b2548ab",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-stale-context-attempt-2-20260809t133500z-luna-max-213dbfe8-64a4-4c06-9e5a-cfb608007b7b",
+          "locator": "evaluations/evidence/handoff/stale-context-2.txt",
+          "sha256": "1af61ce09deb0923a187d0e1499e6e26122f7af32bddb56590187c3dab0caecb",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-stale-context-attempt-3-20260809t133637z-luna-max-c7f34f09-57e0-4b88-a8f7-23e0f4261d2",
+          "locator": "evaluations/evidence/handoff/stale-context-3.txt",
+          "sha256": "48361f42b1506f8f1337b96ebd0c7b7b6e3c7d2c15f4cf94cf4c9f63424720b2",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-stale-context",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-waiting-no-scheduler-20260809t133257z-luna-max-9b6d9e77-4a8b-4f14-8b58-199273f6b2bf",
+        "fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402",
+        "fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809t133257z-luna-max-9b6d9e77-4a8b-4f14-8b58-199273f6b2bf",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-1.txt",
+          "sha256": "9f9cb522d0b6c40cc567076d2c49a526082ebee235ea33061844f15241a36525",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-2.txt",
+          "sha256": "d40808e8dc23317a55e85466c7664118161c79fab2842409ba05fca9c9cc2c42",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-3.txt",
+          "sha256": "5b1d85c9582c0acccc664e6d494e8b7fbbb5895c1a05a9dbb82b1ac99287922d",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-waiting-no-scheduler",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe"
     },
     {
       "attempts": [
@@ -1995,7 +2918,7 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-advisory-technical-supplemental-failure-1",
           "locator": "evaluations/evidence/prototype/advisory-technical-supplemental-failure-1.txt",
-          "sha256": "c6cb56fb5ff8baa928696203e709ce03f16e7a2e0e470fb5d159277c1c390b9f"
+          "sha256": "c6fe0fc9a4fc61cfaf40107203de02dde9ce36ec3bc3b403ebd334479d8fa357"
         }
       ],
       "findings": [],
@@ -2020,19 +2943,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-configured-technical-supplemental-1",
           "locator": "evaluations/evidence/prototype/configured-technical-supplemental-1.txt",
-          "sha256": "84efa4e54285ba5b7a8246932730da2ce354c7e5882092a99afa1491f856a69d"
+          "sha256": "23c01b1dffb8f2a8269eb6d0d7868aed34308130c6feeb92a7b5c912af23bc93"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-configured-technical-supplemental-2",
           "locator": "evaluations/evidence/prototype/configured-technical-supplemental-2.txt",
-          "sha256": "3cdb6a29d3c6c88d9e584d0453487b15d8e1b6561323eb77ae36d25dbfbaa842"
+          "sha256": "7abca8b8d3454697557f84555fdcc71dd2d248e936534f01c60d85b483eb4c9c"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-configured-technical-supplemental-3",
           "locator": "evaluations/evidence/prototype/configured-technical-supplemental-3.txt",
-          "sha256": "8441534c53ccdfc9d0bb228c534ff317d90c5bca319185b74baeae7a8012f904"
+          "sha256": "470897d05a955a025ef356015932d82da70b08b7e29c704f4036c0973d584f95"
         }
       ],
       "findings": [],
@@ -2057,19 +2980,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-cross-domain-communicative-agent-1",
           "locator": "evaluations/evidence/prototype/cross-domain-communicative-agent-1.txt",
-          "sha256": "9f94979789a32593fc3fa1456a03431f108c32c21715a3a1df4c65057970443c"
+          "sha256": "140071d3cddd832d984efc4f2c55af1dd69b6438719e6e2df9e38bf9109c787c"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-cross-domain-communicative-agent-2",
           "locator": "evaluations/evidence/prototype/cross-domain-communicative-agent-2.txt",
-          "sha256": "c597b43bda838d15d6fa8bd12e8ec7a20950951dcb4b3f5d0ce7053a2c350a6a"
+          "sha256": "09ca26e6a62c7648bfe9ab4a3193d6850e1fbf4c7dd1965d269010a5f5ae7d05"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-cross-domain-communicative-agent-3",
           "locator": "evaluations/evidence/prototype/cross-domain-communicative-agent-3.txt",
-          "sha256": "7bca7ae43d117dff6e42529fcf6722b25e855969887dca8de7d6e6f545705742"
+          "sha256": "f2b2d7b3a19570e675aad0e1035baac0c7242c63c9f499860f434e7b61ff0794"
         }
       ],
       "findings": [],
@@ -2094,19 +3017,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-direct-technical-1",
           "locator": "evaluations/evidence/prototype/direct-technical-1.txt",
-          "sha256": "b98bdbaa08245e9e7919f45ad3e15b7af9622cfb73b7138025f831335a263ca5"
+          "sha256": "ff49e4f2a6ee02bb752963b45f98c281c15615895913fa432c18ec2157f123af"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-direct-technical-2",
           "locator": "evaluations/evidence/prototype/direct-technical-2.txt",
-          "sha256": "9f8594143835e7a85aad0f019d61a4f9ae25b0a1a316df25a84d0c24679a6967"
+          "sha256": "ba2ed10015b939939e91593fe41758bb0b1df710559369c91bd3ac989121930a"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-direct-technical-3",
           "locator": "evaluations/evidence/prototype/direct-technical-3.txt",
-          "sha256": "521e8d44ad2291135f051cce91fda7b309833504e48d23cba8142994c9a2fe7e"
+          "sha256": "a0f208be407494d475babdfc190cf01801ed0afd2a04a7cb782e71322e1755b3"
         }
       ],
       "findings": [],
@@ -2131,19 +3054,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-edge-physical-irreversible-1",
           "locator": "evaluations/evidence/prototype/edge-physical-irreversible-1.txt",
-          "sha256": "947722ebfa2c77212fa44d39d66646196b156d02811ef749bd0632eaf5a13e76"
+          "sha256": "be7a73160a2087723a8442008df4149bc1c3c71789abea03ac6da43a6832b5e2"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-edge-physical-irreversible-2",
           "locator": "evaluations/evidence/prototype/edge-physical-irreversible-2.txt",
-          "sha256": "2b6acd46af0c5b3751452bde03e3b46586cf6ec0d9335c4ee2a4c719f1615f20"
+          "sha256": "fbcaf4ec67f6c8db19d0dc82b1b5a4f15b2f40725ad1c352f4cd35282af49bb0"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-edge-physical-irreversible-3",
           "locator": "evaluations/evidence/prototype/edge-physical-irreversible-3.txt",
-          "sha256": "424267ec4a08e84fe8e1ebce753ccf7144a69dcd53f6a2f6dc3953397699fa42"
+          "sha256": "5f8726d6499e6ec55fcf0281af60be7bf0675ec6ed9c810e78e3d1741e61b5c9"
         }
       ],
       "findings": [],
@@ -2164,7 +3087,7 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-incomplete-1",
           "locator": "evaluations/evidence/prototype/incomplete-1.txt",
-          "sha256": "b6efdf276428d803d5f87b3d9036fb38ddc7943ba57d9d29415d8fdbb1c4a47b"
+          "sha256": "f784550f6a3412c1e4d046ead12588f3d4cce9964ce2aedcd8b5a4eb872c90ef"
         }
       ],
       "findings": [],
@@ -2189,19 +3112,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r3-prototype-live-pilot-1",
           "locator": "evaluations/evidence/prototype/indirect-personal-organizational-1.txt",
-          "sha256": "f33ba1e5d47390098bf2933e26b4dc7069ac49de0f7ebd661b597e44b788e63d"
+          "sha256": "a8ba83911cc8cb3cf5e11822d027c2d8e060b653fa06304fcbbc103b4ee51dda"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r3-prototype-live-pilot-2",
           "locator": "evaluations/evidence/prototype/indirect-personal-organizational-2.txt",
-          "sha256": "fff5b28f32e3e851bd3d7eefd232b4d2187b7cc1b1904cfb276ef89ff6f0abeb"
+          "sha256": "6706b1b22ba12d9039074861ab68e0bd42bbcd68227956f3c12bd9287a9fbb0e"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r3-prototype-live-pilot-3",
           "locator": "evaluations/evidence/prototype/indirect-personal-organizational-3.txt",
-          "sha256": "eec2dcb1842b1021a21b6caefcc1132e7f9d1c608d468fec6546c4aa44c579c5"
+          "sha256": "0f2adf20f5e454b82445bafddf1b4efba4d62b6ecf5acef3e32df2e95ba6a366"
         }
       ],
       "findings": [],
@@ -2226,19 +3149,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-negative-production-1",
           "locator": "evaluations/evidence/prototype/negative-production-1.txt",
-          "sha256": "f2bd60d5593ba505d6bc3fc230ea74b17ff3975c66a8d02a701de11b2eaf3eb1"
+          "sha256": "e8580914271938ca8ec099f3ef9d58b3d2b4150715ce255b034dbe30aad2d9dd"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-negative-production-2",
           "locator": "evaluations/evidence/prototype/negative-production-2.txt",
-          "sha256": "cb0841f203cd3168781e106c66e3cd30e365477041e49048797acc7ddfba5dae"
+          "sha256": "c308edbaceb7efde862d4fa7ae9a8d8c94aab5f44fd470f3391cd3b3168bd2d2"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-negative-production-3",
           "locator": "evaluations/evidence/prototype/negative-production-3.txt",
-          "sha256": "77c705f8b561919bdacfbde0ffbc43c8db358729292bc1917e515e025ea1d0bc"
+          "sha256": "1a3608958ea194331ad06f3650a9227cb03f5b369e9251a68f9a65026722c610"
         }
       ],
       "findings": [],
@@ -2263,19 +3186,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-negative-review-request-1",
           "locator": "evaluations/evidence/prototype/negative-review-request-1.txt",
-          "sha256": "339ece8e8f813c83688d0690750dfa1ea36dba92690f468fe1cbfcfd7e154ead"
+          "sha256": "a0602e301ce4e3507ea488834c492cfd6aa52f58318621d236f958ef7aa7fbb1"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-negative-review-request-2",
           "locator": "evaluations/evidence/prototype/negative-review-request-2.txt",
-          "sha256": "67c8dddc16e985609747bc8e3e9959cb144248c17fca66ab2da8ce339625919c"
+          "sha256": "d8661e7b4be68a1207bfb24a42dbf2181edea96f06898019788b2910810da006"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-negative-review-request-3",
           "locator": "evaluations/evidence/prototype/negative-review-request-3.txt",
-          "sha256": "203deba158a2f204795ab27dcc0fa212b80f51db340712e2e076d20de5145bc1"
+          "sha256": "b38684af525f0be788fac3252985dd272a956f1ada66a424e1d033ebe9189235"
         }
       ],
       "findings": [],
@@ -2300,19 +3223,19 @@
           "attempt": 1,
           "contextId": "fresh-sol-high-r2-prototype-required-technical-supplemental-unavailable-1",
           "locator": "evaluations/evidence/prototype/required-technical-supplemental-unavailable-1.txt",
-          "sha256": "5eb16afa6688069c81d04d87c69171f1ed0035edeb130a876c34fd28ca60bec0"
+          "sha256": "9b5b5a6d3dc52509e58a67a60e383c8786189721977c0705f4f5c053d14ca5b1"
         },
         {
           "attempt": 2,
           "contextId": "fresh-sol-high-r2-prototype-required-technical-supplemental-unavailable-2",
           "locator": "evaluations/evidence/prototype/required-technical-supplemental-unavailable-2.txt",
-          "sha256": "e3b110221cf2cb0d279bd0a1baa16088d7ca936525a2e2d0011dfcdc7835110e"
+          "sha256": "837df94739c90867785dd19137b052910f7aa628e05b7551953dd3d66bddfb2a"
         },
         {
           "attempt": 3,
           "contextId": "fresh-sol-high-r2-prototype-required-technical-supplemental-unavailable-3",
           "locator": "evaluations/evidence/prototype/required-technical-supplemental-unavailable-3.txt",
-          "sha256": "3ff20fcad8661396f29a54d530600a41515c43aab936226e7d32d9c5dd447967"
+          "sha256": "bca7f9c902bd6c2948774ad7cf5c94a0003d4962fdeefa17ce25a18ca8484b9a"
         }
       ],
       "findings": [],
@@ -2343,7 +3266,7 @@
           "attempt": 1,
           "contextId": "fresh-research-cross-domain-direct-final-1",
           "locator": "evaluations/evidence/research/cross-domain-direct-1.txt",
-          "sha256": "56bcce6faf4fa210318e43a4633c1cbfd4c980937bcc2db398260d16ec20302c"
+          "sha256": "d5f3dcd235ae7c87649c3b456a9609379723400556cb2fc872d98d7d148114c0"
         },
         {
           "artifacts": [
@@ -2355,7 +3278,7 @@
           "attempt": 2,
           "contextId": "fresh-research-cross-domain-direct-final-2",
           "locator": "evaluations/evidence/research/cross-domain-direct-2.txt",
-          "sha256": "187044cfcfabbcf409449401cc94d5af369c60a8437a8542b88ae5a968f93b18"
+          "sha256": "f7dc235e46e0f2c7f6fa5c25ebce072600bc5d47d1bbdc377f7e522daaf3d92f"
         },
         {
           "artifacts": [
@@ -2367,7 +3290,7 @@
           "attempt": 3,
           "contextId": "fresh-research-cross-domain-direct-final-3",
           "locator": "evaluations/evidence/research/cross-domain-direct-3.txt",
-          "sha256": "4a94945aeb0ccf9368c338a7a21e03e83fb9cda289d59b1e47445900e2ca7446"
+          "sha256": "7225bc779460fad59bf91869b6b9d3f508ecf435ae12c0567c80b605fd3a6cf3"
         }
       ],
       "findings": [],
@@ -2388,7 +3311,7 @@
           "attempt": 1,
           "contextId": "fresh-research-incomplete-final-1",
           "locator": "evaluations/evidence/research/incomplete-scope-1.txt",
-          "sha256": "10fe72ce4b2b945b1b11e5f14f0ce1ac006356afd0e9a8fb2a222960170510d1"
+          "sha256": "b7c6ef474b5d5cd61fb3e9828a81f6a89db61f20a1e08ad33ae20f1fd87abeb7"
         }
       ],
       "findings": [],
@@ -2413,19 +3336,19 @@
           "attempt": 1,
           "contextId": "fresh-research-indirect-final-1",
           "locator": "evaluations/evidence/research/indirect-workflow-delegation-1.txt",
-          "sha256": "32f960751353e49d97f6861e3722b7afc85c2ff79ff67f21fa11506e9919d109"
+          "sha256": "af2df7536763c19cd916384929997332699140dc075fdacffa83a3703537eda0"
         },
         {
           "attempt": 2,
           "contextId": "fresh-research-indirect-final-2",
           "locator": "evaluations/evidence/research/indirect-workflow-delegation-2.txt",
-          "sha256": "1f0fc88cc4f12bd3a0fa47c88535669e1b05724d50c8cb1b852d2f8a5841e14a"
+          "sha256": "b9383fc77e7019a4e0f4cc6a603c5da1b255942f666983968a991293738645ad"
         },
         {
           "attempt": 3,
           "contextId": "fresh-research-indirect-final-3",
           "locator": "evaluations/evidence/research/indirect-workflow-delegation-3.txt",
-          "sha256": "9464736809d75270c910ca792bf8d9cbaa3f4b335cd6e55de3c143f1b837627b"
+          "sha256": "883762e3ee839c5c3bb9f990fa3dbf93703c40dbc17af5ebe4e346277fe3a822"
         }
       ],
       "findings": [],
@@ -2446,7 +3369,7 @@
           "attempt": 1,
           "contextId": "fresh-research-missing-final-1",
           "locator": "evaluations/evidence/research/missing-capability-1.txt",
-          "sha256": "598ec1d5bf38257db0c809b683136acc3aa379e4d6193e8f1f0c47b9ec25806d"
+          "sha256": "1a3fafcce09ab7ee1e0fa011a4ea5d8b987cc35d68f3cb5e935133822b694c85"
         }
       ],
       "findings": [],
@@ -2467,7 +3390,7 @@
           "attempt": 1,
           "contextId": "fresh-research-negative-final-1",
           "locator": "evaluations/evidence/research/negative-prototype-route-1.txt",
-          "sha256": "310ff041cc6327b6459c49ba6099278f022078e990f756adb07b5180d0998bae"
+          "sha256": "ca9322d1a6f91b36a597532c1ee4a2dd8cfe8b194c1ddb35d4a29909df15ebba"
         }
       ],
       "findings": [],
@@ -2494,7 +3417,7 @@
           "attempt": 1,
           "contextId": "fresh-research-no-repo-final-1",
           "locator": "evaluations/evidence/research/no-repository-adapter-1.txt",
-          "sha256": "d53a805f1a72bc413aa23638da8c92295144ae5cf1b19a47bb516575087be2a6"
+          "sha256": "f0c9359945ff3e097058183026e7bcf845d6342126c6cfe6c72391488c4600eb"
         }
       ],
       "findings": [],
@@ -2515,7 +3438,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-changed-revision-1",
           "locator": "evaluations/evidence/review/changed-revision-1.txt",
-          "sha256": "d2ffab1633593eedba65932f723679f461baf74ccbb9440e1bbd9239d7789770"
+          "sha256": "a513b91dd9c95dea7407c2ea9157d8563168a5934377af424484749c7dc3c4c9"
         }
       ],
       "findings": [],
@@ -2536,7 +3459,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-code-medium-1",
           "locator": "evaluations/evidence/review/code-medium-1.txt",
-          "sha256": "464d2e7efe0f1bec19a78c324d51bc8d0827d9389cd53cff770906e94f610387"
+          "sha256": "c29da3c5be5bb1ac3535de5f394533a318ac87b473fbda75404fd0aeef8b96d5"
         }
       ],
       "findings": [],
@@ -2561,19 +3484,19 @@
           "attempt": 1,
           "contextId": "final-sol-review-cross-domain-direct-1",
           "locator": "evaluations/evidence/review/cross-domain-direct-1.txt",
-          "sha256": "eaf0fb304fabc26e2f80ebe857a06a7d2b23c7bda4f539106d3ffc14ae89d90b"
+          "sha256": "453deb0428434977558a7eec1871db8fdc3a381c82e5cb83bbb850aad5ba7031"
         },
         {
           "attempt": 2,
           "contextId": "final-sol-review-cross-domain-direct-2",
           "locator": "evaluations/evidence/review/cross-domain-direct-2.txt",
-          "sha256": "9ac3da515cc676b0e5670fdf5f79c35c38acd1c01c30e5d756a1dce4c005a615"
+          "sha256": "0ff1f3191ce97675bff8f079a4184de9f83bf03585cb43e8dc5293f72c13a910"
         },
         {
           "attempt": 3,
           "contextId": "final-sol-review-cross-domain-direct-3",
           "locator": "evaluations/evidence/review/cross-domain-direct-3.txt",
-          "sha256": "916940d10bfdedd810e211e8c0e2b1cde268c927f63a4184230662fada5c7de6"
+          "sha256": "e51e9ad347fdb474e1230205a287b66f93ab137758162a8adb1f951a2f6fa5e8"
         }
       ],
       "findings": [],
@@ -2594,7 +3517,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-inconclusive-effect-1",
           "locator": "evaluations/evidence/review/inconclusive-effect-1.txt",
-          "sha256": "032a5b3299b4a44cb74843400d6c0815e0451d6666275517ffe4d587aa10b1b8"
+          "sha256": "0c3daf3602c6170f8a3252ff6627e34bed1100bb0acd994c6ddffafe5efcc9bb"
         }
       ],
       "findings": [],
@@ -2615,7 +3538,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-inline-1",
           "locator": "evaluations/evidence/review/inline-1.txt",
-          "sha256": "c97e352901d64b2e872056208672056bea8d3abb3c9741f10898cbef76b502c5"
+          "sha256": "eaae8304b67362104f00846835997b3d97e210758b1b4a08497687ca700c2b30"
         }
       ],
       "findings": [],
@@ -2636,7 +3559,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-maintainability-cross-domain-1",
           "locator": "evaluations/evidence/review/maintainability-cross-domain-1.txt",
-          "sha256": "b6252e6ec128fa4227d233d3b978db6d3c48c292b657270cbfd052ced63b5065"
+          "sha256": "9235217127eadf9c321965484462abb2da0f4bc0f643da6f8191bf6706c320e3"
         }
       ],
       "findings": [],
@@ -2657,7 +3580,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-negative-no-spec-1",
           "locator": "evaluations/evidence/review/negative-no-spec-1.txt",
-          "sha256": "3168fb681680df131200c7721ce862defd7f75f78eae80165ffc0ca441a5b2de"
+          "sha256": "1a6b54e09068d1a61d429ca82c7a2ff5f25a4b0c991c467e88001cf9b8a7e66b"
         }
       ],
       "findings": [],
@@ -2678,7 +3601,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-prepared-communication-1",
           "locator": "evaluations/evidence/review/prepared-communication-1.txt",
-          "sha256": "8d69bb4415f380ea8abadb02ad396aa41d26e397e058f04a16e56b14bdcd1869"
+          "sha256": "6bf9f9bdf9a303fa6e9ca3411e81a3b2243f6b4a844f67586535ab71ac971373"
         }
       ],
       "findings": [],
@@ -2699,7 +3622,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-readable-evidence-1",
           "locator": "evaluations/evidence/review/readable-evidence-1.txt",
-          "sha256": "ef1808a9f4f849e6c6b9d4976292839582d0d6d9b48c96705ecf0821e0e3d5e2"
+          "sha256": "7dc599bc4901a93f72854d7b8b4bace5db3a15a36c6ce3e469079b99442774ae"
         }
       ],
       "findings": [],
@@ -2720,7 +3643,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-supplemental-advisory-absent-1",
           "locator": "evaluations/evidence/review/supplemental-advisory-absent-1.txt",
-          "sha256": "4c86e53ea5bcc1bb1a25d19e4979fd7c3e6d561279c692d4ef8b6762d05cb6ae"
+          "sha256": "bc6d68e0c2c6c124193cbd3babb73a98c8185ae40395dbb916f746b6e6eee965"
         }
       ],
       "findings": [],
@@ -2745,19 +3668,19 @@
           "attempt": 1,
           "contextId": "final-sol-review-supplemental-required-1",
           "locator": "evaluations/evidence/review/supplemental-required-1.txt",
-          "sha256": "67d1c9a34804030f7c65213d43b1308662bc46a2816788938a0cabe62df168f4"
+          "sha256": "6bdb3e53727f8e4a90d4b60fddfc091f983ba145e2b1b7a0118b999a9afca710"
         },
         {
           "attempt": 2,
           "contextId": "final-sol-review-supplemental-required-2",
           "locator": "evaluations/evidence/review/supplemental-required-2.txt",
-          "sha256": "b4bcd7029db7eae814019d6467627ea189d4d3c756043522cdc9c6a05d30a762"
+          "sha256": "1232567e1da3ef60e2443c40c9cd999d9ebcdb11052834ebe9d5f27f0c00c540"
         },
         {
           "attempt": 3,
           "contextId": "final-sol-review-supplemental-required-3",
           "locator": "evaluations/evidence/review/supplemental-required-3.txt",
-          "sha256": "d39846f372a0f573da4aa3be739805ea376aa9bc4483a9ec8e255fe13b2af083"
+          "sha256": "60fe96cb1af90d36bc7e0889d1f7958acc320d37b360c6e620e6d411bf499f82"
         }
       ],
       "findings": [],
@@ -2778,7 +3701,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-supplemental-required-missing-resolution-1",
           "locator": "evaluations/evidence/review/supplemental-required-missing-1.txt",
-          "sha256": "113ec2d4d195a665541c68e9abb69e710f9d891108959bab182781b4fbff6276"
+          "sha256": "3d218bc7cf3adaec553a824fb13cb5f98887ec7dcb612f81fecf4c6248ac1a22"
         }
       ],
       "findings": [],
@@ -2799,7 +3722,7 @@
           "attempt": 1,
           "contextId": "final-sol-review-ui-interaction-quality-1",
           "locator": "evaluations/evidence/review/ui-interaction-quality-1.txt",
-          "sha256": "d6c08444e2e66322402aba88616554018cb03dff4c89b8381ff0c0595826b024"
+          "sha256": "b5a600766e0c9b68353c13068a632a3cab656b67f6992c69af5d11519e6e5985"
         }
       ],
       "findings": [],
@@ -2820,7 +3743,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-assurance-cadence-1",
           "locator": "evaluations/evidence/thinking-in-systems/assurance-cadence-1.txt",
-          "sha256": "b0a8f72be789aee0da98532644e1f69bc6540e8c5ef5b41ddb71a3c852280ece"
+          "sha256": "dc779f231e6f10ae3fe10bc4464260d64c6644533c47f14f28612cd84ce24598"
         }
       ],
       "findings": [],
@@ -2841,7 +3764,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-authorized-irreversible-1",
           "locator": "evaluations/evidence/thinking-in-systems/authorized-irreversible-1.txt",
-          "sha256": "c7451cd1b340f4c7e72bf87a8b5a4e4d30a26c0ab5249fda5928d9d650d69cf1"
+          "sha256": "236ea7e2f9904870da72ee9627f7b9418f7b7f1f3ef7d9aeb926666ab7fc4386"
         }
       ],
       "findings": [],
@@ -2866,19 +3789,19 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-consequential-1",
           "locator": "evaluations/evidence/thinking-in-systems/consequential-1.txt",
-          "sha256": "db08ec2e93c20778f7a493149bc71a78126872ac497527914b6dead652143596"
+          "sha256": "9e53551a4bb7cee485df9c236026c0b4c02aa233ce7f370c8ad6a4c1d135d11a"
         },
         {
           "attempt": 2,
           "contextId": "fresh-thinking-in-systems-consequential-2",
           "locator": "evaluations/evidence/thinking-in-systems/consequential-2.txt",
-          "sha256": "81ddeb8ab9b3e68c6665ff8e6a260ebdb089c9014700314a7bd99a38fb22c10f"
+          "sha256": "07014d86c4b3e5068e1b0bc0e4619d734a958ce3253ebbc0ecf6fc8895a58c0d"
         },
         {
           "attempt": 3,
           "contextId": "fresh-thinking-in-systems-consequential-3",
           "locator": "evaluations/evidence/thinking-in-systems/consequential-3.txt",
-          "sha256": "852c1fe34a742dc21766390849884fc5a2c0157fb6f52c256ce9bd40b60ae2af"
+          "sha256": "1d726d946ced8be6e8e3faa9a45dc4502a13b917ff62051b8a23f0aa56882755"
         }
       ],
       "findings": [],
@@ -2903,19 +3826,19 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-direct-1",
           "locator": "evaluations/evidence/thinking-in-systems/direct-1.txt",
-          "sha256": "77d9f996daa132c8c7094585cb13983576567e860e8df7759d30d5c7140ae15d"
+          "sha256": "873c1f1d0ee1a63bac3700c79b64b49af2b7e5ef7cf00a5696b4e2c995214429"
         },
         {
           "attempt": 2,
           "contextId": "fresh-thinking-in-systems-direct-2",
           "locator": "evaluations/evidence/thinking-in-systems/direct-2.txt",
-          "sha256": "8bcef5db99647174505fa1b988920f5e946902fe8e1d19342dd3577cdf177c73"
+          "sha256": "3d88ffb6aaf3b13caf1fe5a44fb482cf77828f9cd1a3284680ae01ff2e9a7146"
         },
         {
           "attempt": 3,
           "contextId": "fresh-thinking-in-systems-direct-3",
           "locator": "evaluations/evidence/thinking-in-systems/direct-3.txt",
-          "sha256": "c53e640a53cc28b2634d183908b3430a87c662e60ac1548fd73776f0f02d85d3"
+          "sha256": "9ad05514d1f156b9cbae5c928b9c647fefd167d5fae00931a007c3fe26a5cb4c"
         }
       ],
       "findings": [],
@@ -2936,7 +3859,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-economic-stopping-1",
           "locator": "evaluations/evidence/thinking-in-systems/economic-stopping-1.txt",
-          "sha256": "5170c303ca98a20c275bdb7069e96c99bfa75a09538226ee74f6fb25ed601534"
+          "sha256": "d62f5e968125542b9f67a5546f6304471f630de99ddb0d64fd07b9188495fb3c"
         }
       ],
       "findings": [],
@@ -2957,7 +3880,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-edge-1",
           "locator": "evaluations/evidence/thinking-in-systems/edge-1.txt",
-          "sha256": "4c45bff3bb4247daea5f1d4a5fc200d156dd23461ef506c6cacd96d770bca863"
+          "sha256": "4ed4a7790f10362c65eb0b4a08df61e6382837c796f7d7d365047ce9ef9c16ff"
         }
       ],
       "findings": [],
@@ -2978,7 +3901,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-framing-effect-1",
           "locator": "evaluations/evidence/thinking-in-systems/framing-effect-1.txt",
-          "sha256": "a7c193dad75d96274824f56a2b138490a77b86a8f06bc36b319f2ef1bca607b9"
+          "sha256": "85e86bc8cdd6978d92d44f031ec69368fd385ef6ca512ec7dceb9d9b17fcee29"
         }
       ],
       "findings": [],
@@ -2999,7 +3922,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-incomplete-1",
           "locator": "evaluations/evidence/thinking-in-systems/incomplete-1.txt",
-          "sha256": "0a8b3ed78798a7011edeb3f835e520d3977fdaee16112c374da1cc930c63f705"
+          "sha256": "cef4b640af37dd78c1a2afcadf4539657a4dffcf1811c6dc9bd63479a35baf54"
         }
       ],
       "findings": [],
@@ -3020,7 +3943,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-indirect-1",
           "locator": "evaluations/evidence/thinking-in-systems/indirect-1.txt",
-          "sha256": "9691b740f393cef5e00051192fb90b47f598df431b45d1f8095e005b74f95b5c"
+          "sha256": "e8c8491e7085a88911b33b6259ab7c324dcd2463e4f12d7bf31a7bc624ba5d37"
         }
       ],
       "findings": [],
@@ -3041,7 +3964,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-negative-1",
           "locator": "evaluations/evidence/thinking-in-systems/negative-1.txt",
-          "sha256": "9afc4b2602422c8e0a7f7886a4023f53a7a3af2859a97a74ac0a5bad47071ca9"
+          "sha256": "3a4b9a67f8acf4fb021f3f5d503876f0dede44d87c3865b348f16fb14d13cd8f"
         }
       ],
       "findings": [],
@@ -3062,7 +3985,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-one-time-handoff-1",
           "locator": "evaluations/evidence/thinking-in-systems/one-time-handoff-1.txt",
-          "sha256": "ee63dca55e6dd9c76a6a5cc6a460e52d370e4dd59e9ce94dc085c1020fe7e541"
+          "sha256": "80cf334819599e3b4efbf65f3c4bef5ccb38944f96cad8d7b2e26d2ac9b9a805"
         }
       ],
       "findings": [],
@@ -3083,7 +4006,7 @@
           "attempt": 1,
           "contextId": "fresh-issue-35-system-record-representation-resolution-1",
           "locator": "evaluations/evidence/thinking-in-systems/system-record-representation-1.txt",
-          "sha256": "a854433e37a64554a879e1dee28a045b4fe2c01f2f3ec06934b320b577ea41e6"
+          "sha256": "460e004d774fa5530c47fce70540574b5f73e3c11886a90b095ee200fa029d19"
         }
       ],
       "findings": [],
@@ -3104,7 +4027,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-system-relationships-1",
           "locator": "evaluations/evidence/thinking-in-systems/system-relationships-1.txt",
-          "sha256": "d69082831d4dfec89876dac8c304963674b0a0d5cc31e89697d7f3a4dae78eed"
+          "sha256": "5b021eb8eb8d3bd67447dc20915e06b780f399cbfead19fa631ae8591c72e33f"
         }
       ],
       "findings": [],
@@ -3125,7 +4048,7 @@
           "attempt": 1,
           "contextId": "fresh-thinking-in-systems-trivial-1",
           "locator": "evaluations/evidence/thinking-in-systems/trivial-1.txt",
-          "sha256": "e4193366b60556c86268fda13b00617b7f8fa100efd283af4262c5ec9d1c3c22"
+          "sha256": "8e561031de4d2fb502b75346fdfe8c39218ab5c85119ab54c1c639be2a48e991"
         }
       ],
       "findings": [],
@@ -3152,7 +4075,7 @@
           "attempt": 1,
           "contextId": "fresh-questionnaire-cross-final-1",
           "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.txt",
-          "sha256": "a9379bc1db8444ef4111631c12f3876b3acce6e36057cc9fcc73601562a11f17"
+          "sha256": "234c35125c3fc10ea4b8d444ec8f14fcd04eda45c4b1ab4877757b0a25a8d272"
         }
       ],
       "findings": [],
@@ -3183,7 +4106,7 @@
           "attempt": 1,
           "contextId": "fresh-questionnaire-direct-final-1",
           "locator": "evaluations/evidence/to-questionnaire/direct-1.txt",
-          "sha256": "58c144d4868804d3a0df485f787ea0821428e55c8d86b0b0472013cf82851ac2"
+          "sha256": "296092f4bbddbd895e1eeb188f242e4f51839178b6b542a93be4a22bf139bf61"
         },
         {
           "artifacts": [
@@ -3195,7 +4118,7 @@
           "attempt": 2,
           "contextId": "fresh-questionnaire-direct-final-2",
           "locator": "evaluations/evidence/to-questionnaire/direct-2.txt",
-          "sha256": "3d9c90645892258e455b34f59c9dc4be54ef72708dd67b169ad4d72e74948554"
+          "sha256": "514ecb7a62024f64d9ed4aaf6279d3701e4a2e6ec65c5b32076882b017884982"
         },
         {
           "artifacts": [
@@ -3207,7 +4130,7 @@
           "attempt": 3,
           "contextId": "fresh-questionnaire-direct-final-3",
           "locator": "evaluations/evidence/to-questionnaire/direct-3.txt",
-          "sha256": "a85df4820b298d75e39c981d4da41c59766f764c85063f62bea06e2c52aca08c"
+          "sha256": "ac8dea644ee414526e0ff8ed9a94973a05c7890696e83d1f55683c917bd9fbf8"
         }
       ],
       "findings": [],
@@ -3228,7 +4151,7 @@
           "attempt": 1,
           "contextId": "fresh-questionnaire-incomplete-final-1",
           "locator": "evaluations/evidence/to-questionnaire/incomplete-1.txt",
-          "sha256": "5e9ece8f27c36e5555a6f13743936b338bc9476e726cf55e00ae94586b58418a"
+          "sha256": "2a5d2e44b8a91f33d2df1c9542481867ed04070570777db7d2fcbebf3dc909aa"
         }
       ],
       "findings": [],
@@ -3259,7 +4182,7 @@
           "attempt": 1,
           "contextId": "fresh-questionnaire-indirect-final-1",
           "locator": "evaluations/evidence/to-questionnaire/indirect-1.txt",
-          "sha256": "947b8560af806a94090ece713d82ef40246b6b33736dcf313e64408ac0453b45"
+          "sha256": "454507146a9b99f8d8bf1b545669f4b4d41ac7b71c3eb5eccd8994efd05d286e"
         },
         {
           "artifacts": [
@@ -3271,7 +4194,7 @@
           "attempt": 2,
           "contextId": "fresh-questionnaire-indirect-final-2",
           "locator": "evaluations/evidence/to-questionnaire/indirect-2.txt",
-          "sha256": "49d0dc7037e9aa9d712216b260661d8cbaba7780635e58312d38cb5c9e3299dd"
+          "sha256": "6e90cf55a17d87a6fcb708c0010af7c851c2d1397616e348a7835dffd72b21ba"
         },
         {
           "artifacts": [
@@ -3283,7 +4206,7 @@
           "attempt": 3,
           "contextId": "fresh-questionnaire-indirect-final-3",
           "locator": "evaluations/evidence/to-questionnaire/indirect-3.txt",
-          "sha256": "e6f57163c7bb46e012d751c10ecbd64e4fd18780a852306c4437ce396d6cbe93"
+          "sha256": "a5770654f1be2ef4a39f282b6cf474683fd87f1c7db45087393fafc44d7ae084"
         }
       ],
       "findings": [],
@@ -3304,7 +4227,7 @@
           "attempt": 1,
           "contextId": "fresh-questionnaire-missing-final-1",
           "locator": "evaluations/evidence/to-questionnaire/missing-capability-1.txt",
-          "sha256": "917e98e4e50f6e18cf9f54a03ecd2d27d667f142b6074640f888d5440a8bd78e"
+          "sha256": "104fa35a4be92b3c32d67183a103aec48ffe5fc1dfd25fb0ac710066d0d51512"
         }
       ],
       "findings": [],
@@ -3325,7 +4248,7 @@
           "attempt": 1,
           "contextId": "fresh-questionnaire-negative-final-1",
           "locator": "evaluations/evidence/to-questionnaire/negative-1.txt",
-          "sha256": "f26b6fc9d75469e741b20240782e7a70253222bd18a384924e3f2261bd10b9c6"
+          "sha256": "83729e68d92fa9a592686b35d2d1aef4f21508134d565b358c6de428463cc68d"
         }
       ],
       "findings": [],
@@ -3346,7 +4269,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-direct-nontechnical-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-direct-nontechnical-1.txt",
-          "sha256": "8519c058516e95e5e4fa4dcd4fe5800d6fd62464cd5e35ab9ca85d6abe465e38"
+          "sha256": "36ae8c265dd493e7724bfb8727c4425df10ac0033c54293ca8a88096ab66bb55"
         }
       ],
       "findings": [],
@@ -3367,7 +4290,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-direct-technical-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-direct-technical-1.txt",
-          "sha256": "3da2c9c3c341ad14ea5d7c82080d4f2b4d03c89aa0e021f8c25bfdd84029eba5"
+          "sha256": "9dd6cda2eb39bfed0784037c1b3e1d4cfbc78d46428d74cd634ec61cfd863940"
         }
       ],
       "findings": [],
@@ -3388,7 +4311,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-edge-boundary-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-edge-boundary-1.txt",
-          "sha256": "691f46dd0918a5563d7ea2a62a97f2af8de82b24cbc52b6756698de478511b6c"
+          "sha256": "fa40ac9f309948324263436430424899939ca2874652d4830fea03c9814d9f8a"
         }
       ],
       "findings": [],
@@ -3409,7 +4332,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-incomplete-authority-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt",
-          "sha256": "f89560eee576d9c01983fda7bcbb44c1d2889a23743e35e88276af212e0a0e98"
+          "sha256": "cc1cbc9f00b2a7d4a8371b71ccd384857faf82edcf863dffebdf5b703edb17c9"
         }
       ],
       "findings": [],
@@ -3430,7 +4353,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-indirect-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-indirect-1.txt",
-          "sha256": "1eeda6f10b314b38d1d11e5a340b5db7fe56be41122ef6b45c8a3e0788a78052"
+          "sha256": "cda088bc4751a3b9819560cb035ed26ff58b55373df02b15532afebe62f98195"
         }
       ],
       "findings": [],
@@ -3451,7 +4374,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-inline-accepted-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-inline-accepted-1.txt",
-          "sha256": "73f60ef89d22d76cfd81574284209834e6160f7885b177255b91c24cdc2ea9af"
+          "sha256": "d19c670d552cf11580783544ab222b420b1963504ff4497bc716a066dbf39054"
         }
       ],
       "findings": [],
@@ -3472,7 +4395,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-irreducible-fog-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-irreducible-fog-1.txt",
-          "sha256": "9fd50c826e20b4bc0b6297a0bb5f7e2d049ce8d3eb221ebbe9c9515d61355f18"
+          "sha256": "90eb28ca0ef1a39f2482437691a5060db97e0cfa86b467c3ad7c117fe9a7cdc0"
         }
       ],
       "findings": [],
@@ -3493,7 +4416,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-negative-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-negative-1.txt",
-          "sha256": "f831a85579ee7ac710db19d7096ce792ba9b428d65b3b919d8241d726b31071e"
+          "sha256": "76e4208ee9b1a487e399e8a868636d0c960137a888d52aebeb415fa90a83e59c"
         }
       ],
       "findings": [],
@@ -3514,7 +4437,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-operating-outcome-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-operating-outcome-1.txt",
-          "sha256": "acb620809d85c91e450a646b61557e00a2377be77d711e2aac92e8711da62c46"
+          "sha256": "4083956bfdf3f303f9313eaf0071c4c347a58f4d24f3f80d6fbd6feb2795727e"
         }
       ],
       "findings": [],
@@ -3535,7 +4458,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-revision-change-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-revision-change-1.txt",
-          "sha256": "1cc44bac0d6dc381ee2b711580423c7b95facfdc24859a58d5e05053243954e7"
+          "sha256": "b8f2b9622c4e8f57c59f67d751f58f0fbb8fc11c9edfea0be6f804bdfadc9a2f"
         }
       ],
       "findings": [],
@@ -3556,7 +4479,7 @@
           "attempt": 1,
           "contextId": "fresh-to-spec-supplemental-sol-high-20260806-1",
           "locator": "evaluations/evidence/to-spec/to-spec-supplemental-1.txt",
-          "sha256": "94ef4dd1bdd837f6a6d6d080e3a5f03888dfcf5426fc8e0cda2fd17143f457f2"
+          "sha256": "c17830189ed6b70b7e64ae11226a8221e67a7fa8a68c787254a0ac74eb03c1c2"
         }
       ],
       "findings": [],
@@ -3570,14 +4493,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-direct-cross-domain-20260808-1"
+        "fresh-to-tickets-direct-cross-domain-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-direct-cross-domain-20260808-1",
+          "contextId": "fresh-to-tickets-direct-cross-domain-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-direct-cross-domain-1.txt",
-          "sha256": "ef52ec0b6a11de7f1ea9e7d5b681d02888906bb3ddddf294ce551cc41103ae8a"
+          "sha256": "95ca58a8e71168fa9fd62a4a9e9abb785f018c338bd73378b0eda2ff93c7f24d"
         }
       ],
       "findings": [],
@@ -3591,14 +4514,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-edge-capability-gap-20260808-1"
+        "fresh-to-tickets-edge-capability-gap-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-edge-capability-gap-20260808-1",
+          "contextId": "fresh-to-tickets-edge-capability-gap-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-edge-capability-gap-1.txt",
-          "sha256": "283c772a52c644f8c43edc4d8ad8d95067502921daf2847d983817658663897c"
+          "sha256": "168b100b6fc2abea8842b7156473d15ec4e7e31e5f70d75f0e82c1ad04a637a7"
         }
       ],
       "findings": [],
@@ -3612,14 +4535,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-edge-dependency-recovery-20260808-1"
+        "fresh-to-tickets-edge-dependency-recovery-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-edge-dependency-recovery-20260808-1",
+          "contextId": "fresh-to-tickets-edge-dependency-recovery-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-edge-dependency-recovery-1.txt",
-          "sha256": "16d0f9140cf06b5f15968a7feea842fbd9a3a0db6f789487b9e6c799c178dbfe"
+          "sha256": "9381cf6db52f0377caa7fc179b8d6677ab3b3064e1d94bd07c4bd1f7da4aaab5"
         }
       ],
       "findings": [],
@@ -3633,14 +4556,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-edge-required-supplemental-gap-20260808-1"
+        "fresh-to-tickets-edge-required-supplemental-gap-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-edge-required-supplemental-gap-20260808-1",
+          "contextId": "fresh-to-tickets-edge-required-supplemental-gap-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-edge-required-supplemental-gap-1.txt",
-          "sha256": "8404772f14cee6fa00e3f9f23d9899792b23982b696679ed7a84ff51da3840a0"
+          "sha256": "bdcf5313d7425966548dcc9a13a526ba4aba4b988d93a2e69f52bfdde437e9c0"
         }
       ],
       "findings": [],
@@ -3654,14 +4577,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-edge-revision-preservation-20260808-1"
+        "fresh-to-tickets-edge-revision-preservation-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-edge-revision-preservation-20260808-1",
+          "contextId": "fresh-to-tickets-edge-revision-preservation-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-edge-revision-preservation-1.txt",
-          "sha256": "164e33fdc75fce63cc6f6c27990c53c7b97431ac5b4e0e8e6fca15d27d31dd2a"
+          "sha256": "b7fe8f2b1f2258d0ae2d308f89e50d0a08f926ed339968890160ce97597cd83d"
         }
       ],
       "findings": [],
@@ -3675,14 +4598,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-edge-supplemental-20260808-1"
+        "fresh-to-tickets-edge-supplemental-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-edge-supplemental-20260808-1",
+          "contextId": "fresh-to-tickets-edge-supplemental-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-edge-supplemental-1.txt",
-          "sha256": "e7247f866efbc1b2bd352123029123326c8595d79683e324326fcbddb9b059d7"
+          "sha256": "141104f0e768558746ab79b5256930fa334b8e08571904663170b2e40a0d449f"
         }
       ],
       "findings": [],
@@ -3696,14 +4619,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-incomplete-specification-20260808-1"
+        "fresh-to-tickets-incomplete-specification-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-incomplete-specification-20260808-1",
+          "contextId": "fresh-to-tickets-incomplete-specification-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-incomplete-specification-1.txt",
-          "sha256": "fcd2283f818b03c61411e63f88ef3d0fb5f23ec6d79e2fc6ac0d06f4aaaf19c4"
+          "sha256": "7ddc762432d8c7c03eecf453b7359fd8a85a17b6eb42fc24a339904693d8871d"
         }
       ],
       "findings": [],
@@ -3717,14 +4640,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-indirect-delegation-20260808-1"
+        "fresh-to-tickets-indirect-delegation-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-indirect-delegation-20260808-1",
+          "contextId": "fresh-to-tickets-indirect-delegation-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-indirect-delegation-1.txt",
-          "sha256": "a2ef0055ab6d3d27009416f924adf448b19cf299a18dc23f26a60dcf5fd04795"
+          "sha256": "9f6500941644c510b807407cf6dc890e13620044b421879726f77c76f0d5cf5c"
         }
       ],
       "findings": [],
@@ -3738,14 +4661,14 @@
         1
       ],
       "contextIds": [
-        "fresh-to-tickets-negative-inline-20260808-1"
+        "fresh-to-tickets-negative-inline-editorial-20260809-1"
       ],
       "evidence": [
         {
           "attempt": 1,
-          "contextId": "fresh-to-tickets-negative-inline-20260808-1",
+          "contextId": "fresh-to-tickets-negative-inline-editorial-20260809-1",
           "locator": "evaluations/evidence/to-tickets/to-tickets-negative-inline-1.txt",
-          "sha256": "4688d1744755c2cb57c33df9fe033fe608d6377765f6f4e69eb31e63cdfc89e8"
+          "sha256": "cc3fa0ad181b60d068a4f03f828e42477e2f936848f880da765f7c0c6a7105a2"
         }
       ],
       "findings": [],
@@ -3759,6 +4682,1008 @@
         1
       ],
       "contextIds": [
+        "fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b",
+          "locator": "evaluations/evidence/wayfinder/cross-domain-questionnaire-1.txt",
+          "sha256": "61e712269181fbf528e89d2d58c44113d0a6142fa4a12060417ff791db6cd481",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/cross-domain-questionnaire.fixture.yaml",
+              "sha256": "c600ddcdc55db3bf4ff172805a5de43dc3e70b2946d460ff5aa165403f09e6bc",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/cross-domain-state.md",
+              "sha256": "0f3065368ee3a7978709f12b6f737e2925cb4c5875c57d3e58f9e8696d3f373a",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "docs/THINKING_IN_SYSTEMS.md",
+              "sha256": "7f0741f97ba5bd47dac86279916b2c37f7e4c8ae5b110121d80bbeecda2e0aa9",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/source/THINKING_IN_SYSTEMS_STANDARD.md",
+              "sha256": "58f8aa6c335a5cc3c1bf889653ce47beb16f26db28e44d97c5b52060f3c6225a",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/WORKFLOW_ROUTING.md",
+              "sha256": "61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/to-questionnaire/cross-domain.fixture.yaml",
+              "sha256": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.txt",
+              "sha256": "a9379bc1db8444ef4111631c12f3876b3acce6e36057cc9fcc73601562a11f17",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.questionnaire.md",
+              "sha256": "5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/observations/to-questionnaire/cross-domain-1.observation.yaml",
+              "sha256": "d0d5ade94dbb1dec1a40d48bf4c3e7dd0a527e5a5701ca7c42a1969cfd78cced",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-cross-domain-questionnaire",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "c600ddcdc55db3bf4ff172805a5de43dc3e70b2946d460ff5aa165403f09e6bc"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-wayfinder-direct-reducible-20260809t132205z-luna-max-attempt-1-bafe1981-defe-437d-a4a4-4db86a40dcc2",
+        "fresh-wayfinder-direct-reducible-20260809t132159z-luna-max-attempt-2-b5e1cfa3-23a9-462c-99a0-b77e0457477d",
+        "fresh-wayfinder-direct-reducible-20260809t132232z-luna-max-attempt-3-ac57129e-e545-49af-baa0-aee3f917ed09"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-direct-reducible-20260809t132205z-luna-max-attempt-1-bafe1981-defe-437d-a4a4-4db86a40dcc2",
+          "locator": "evaluations/evidence/wayfinder/direct-reducible-1.txt",
+          "sha256": "44ac9a3cdd17e039cc76e8dec28a96abb93928fe8cf27631544d06304f0349f9",
+          "runtimeInputs": [
+            {
+              "locator": "AGENTS.md",
+              "sha256": "6d0af27a5f865d548236c6a86847609d602e679c7d469e8bc04a6d56531135da",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml",
+              "sha256": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db",
+              "role": "fixture"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md",
+              "sha256": "ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md",
+              "sha256": "3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/research/SKILL.md.patch",
+              "sha256": "1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-wayfinder-direct-reducible-20260809t132159z-luna-max-attempt-2-b5e1cfa3-23a9-462c-99a0-b77e0457477d",
+          "locator": "evaluations/evidence/wayfinder/direct-reducible-2.txt",
+          "sha256": "83eca04a308471327e434ec8d71c67446b9df98531f8b7b4d6db18d0c6ef5649",
+          "runtimeInputs": [
+            {
+              "locator": "AGENTS.md",
+              "sha256": "6d0af27a5f865d548236c6a86847609d602e679c7d469e8bc04a6d56531135da",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml",
+              "sha256": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db",
+              "role": "fixture"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md",
+              "sha256": "ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md",
+              "sha256": "3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/WORKFLOW_ROUTING.md",
+              "sha256": "61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/research/SKILL.md.patch",
+              "sha256": "1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-wayfinder-direct-reducible-20260809t132232z-luna-max-attempt-3-ac57129e-e545-49af-baa0-aee3f917ed09",
+          "locator": "evaluations/evidence/wayfinder/direct-reducible-3.txt",
+          "sha256": "108d7cc95de4e84ab21f31f4bd2b9d506e9f81873d61aaada8b2d795add293f8",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml",
+              "sha256": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md",
+              "sha256": "ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md",
+              "sha256": "3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/research/SKILL.md.patch",
+              "sha256": "1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-direct-reducible",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-irreducible-20260809t122924z-luna-max-989532be-f088-490d-bd92-9b1022fa35c9",
+        "fresh-wayfinder-edge-irreducible-2-20260809t122942z-7f3c",
+        "fresh-wayfinder-edge-irreducible-attempt-3-20260809t122940z-dfdd0b9c-5e36-4f0b-908c-3b264a2b85dd"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-irreducible-20260809t122924z-luna-max-989532be-f088-490d-bd92-9b1022fa35c9",
+          "locator": "evaluations/evidence/wayfinder/edge-irreducible-1.txt",
+          "sha256": "1a716ae0dae3313263755a1b21edcbdbba0a78c627de36a6bcbbd6cbb29cb107",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml",
+              "sha256": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/irreducible-state.md",
+              "sha256": "123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-wayfinder-edge-irreducible-2-20260809t122942z-7f3c",
+          "locator": "evaluations/evidence/wayfinder/edge-irreducible-2.txt",
+          "sha256": "8eed81ea3fb463a99f534881bd31c8c5253b41b4279e69c69ea9fcb86a8c8d93",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml",
+              "sha256": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/irreducible-state.md",
+              "sha256": "123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-wayfinder-edge-irreducible-attempt-3-20260809t122940z-dfdd0b9c-5e36-4f0b-908c-3b264a2b85dd",
+          "locator": "evaluations/evidence/wayfinder/edge-irreducible-3.txt",
+          "sha256": "f011077d1e68a03e203052a3e336cb3b4162b839b0a494f3f13f64acc005fbbe",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml",
+              "sha256": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/irreducible-state.md",
+              "sha256": "123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-irreducible",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-missing-companion-20260809t123041z-luna-max-fe633d75-3e70-4333-b8ea-c6286d1d2ac3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-missing-companion-20260809t123041z-luna-max-fe633d75-3e70-4333-b8ea-c6286d1d2ac3",
+          "locator": "evaluations/evidence/wayfinder/edge-missing-companion-1.txt",
+          "sha256": "0744716cfbf6d52abcf17ce71ef35df6a9a8e78a520986c98cedef64de2eb299",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-missing-companion.fixture.yaml",
+              "sha256": "dbfdc7af032ed97665545a98496107207f361492e4c6cbd548d7ad07142528b8",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/missing-companion-state.md",
+              "sha256": "42232e30a96c87b79455c632c6108f08186399a6773cdef060ef2634cf3ae73f",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-missing-companion",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "dbfdc7af032ed97665545a98496107207f361492e4c6cbd548d7ad07142528b8"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21",
+          "locator": "evaluations/evidence/wayfinder/edge-no-git-1.txt",
+          "sha256": "a1271bd84831524f341271f773008658e51644674c9e2a96480db12954242c1f",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-no-git.fixture.yaml",
+              "sha256": "b6aa782cb4673df6c94e5304a5147f2f954e92a40a209f7b0e03d8f9a0d621ab",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/no-git-state.md",
+              "sha256": "19d72c738c528774c599310427039bf09e20e738fbfa0742c9f8c0e2f61cef82",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-no-git",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "b6aa782cb4673df6c94e5304a5147f2f954e92a40a209f7b0e03d8f9a0d621ab"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-operating-delay-luna-max-20260809t132208z-0a19c6ee-cc2c-4bda-a5bc-7c1f86b06ad1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-operating-delay-luna-max-20260809t132208z-0a19c6ee-cc2c-4bda-a5bc-7c1f86b06ad1",
+          "locator": "evaluations/evidence/wayfinder/edge-operating-delay-1.txt",
+          "sha256": "4470be1d546d92cba955dce8c847cb23f200cd4fb953c970254d87023d5c3d9f",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-operating-delay.fixture.yaml",
+              "sha256": "ee6a557dfe81ccbca14b58e088a72aa92937751c6d9d991c2a722c444a189cdf",
+              "role": "fixture"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/operating-delay-state.md",
+              "sha256": "e0828c67173e8afc88674cb1c2be7b5026db03c12465dc18c6f0b78c3fdcecd1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-operating-delay",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "ee6a557dfe81ccbca14b58e088a72aa92937751c6d9d991c2a722c444a189cdf"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551",
+          "locator": "evaluations/evidence/wayfinder/incomplete-1.txt",
+          "sha256": "40260d885c281c85fb4578eb3629cb5416e7ab2023634b482fd3b778fad5a38c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/incomplete.fixture.yaml",
+              "sha256": "0be748eb1d0b9ee516269a21f992bdcd326028de51be1124164c1abe2b4159e2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-incomplete",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "0be748eb1d0b9ee516269a21f992bdcd326028de51be1124164c1abe2b4159e2"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a",
+        "fresh-wayfinder-indirect-multisession-luna-max-20260809t123230z-2-9e9057d0-7ed6-4b64-ad81-1b5bd8bcde9f",
+        "fresh-wayfinder-indirect-multisession-luna-max-3-20260809t122939z-76d164c1-8100-493b-9ce1-f16425850c40"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a",
+          "locator": "evaluations/evidence/wayfinder/indirect-multisession-1.txt",
+          "sha256": "9157bfafea98000552beb828e30238dec06c464185e7ea6a3864442a546c6857",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml",
+              "sha256": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md",
+              "sha256": "2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/SKILL.md",
+              "sha256": "00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-wayfinder-indirect-multisession-luna-max-20260809t123230z-2-9e9057d0-7ed6-4b64-ad81-1b5bd8bcde9f",
+          "locator": "evaluations/evidence/wayfinder/indirect-multisession-2.txt",
+          "sha256": "887e7ea11d0f1ed3f2399261a22b66e84b9e4492aad1446f2f658f134adcb7e6",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml",
+              "sha256": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md",
+              "sha256": "2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/extension-point-template.md",
+              "sha256": "51da2d791afadac8623b848273d255bc50ba59b035897540e726745b72f9e704",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/material-change-template.md",
+              "sha256": "70fa21dbcd590add8a75e269a49b2cfe38d873313ce994e990689d79832ddf1a",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/SKILL.md",
+              "sha256": "00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/references/language-record-template.md",
+              "sha256": "42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/WORKFLOW_ROUTING.md",
+              "sha256": "61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-wayfinder-indirect-multisession-luna-max-3-20260809t122939z-76d164c1-8100-493b-9ce1-f16425850c40",
+          "locator": "evaluations/evidence/wayfinder/indirect-multisession-3.txt",
+          "sha256": "be999540b48710ad60bee13bea7568d59c02475087ed4b2416ec74800c09b555",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml",
+              "sha256": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md",
+              "sha256": "2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/SKILL.md",
+              "sha256": "00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/references/language-record-template.md",
+              "sha256": "42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/grill-with-docs/SKILL.md.patch",
+              "sha256": "a4715db7287b15aea4ed528afb9b78d355d04a8e5dddc3348c89bfc65b20bdd6",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/grill-with-docs/agents-openai.yaml.patch",
+              "sha256": "a051ae6dbabc7a5e74dfe2f84b1019472e80906880becc4f130b5f91415a017b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/grilling/SKILL.md.patch",
+              "sha256": "c64184935d266ddf481c9fed6dc3b84aee641fd3325a8352c7a36e5a7084559b",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-indirect-multisession",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-negative-bounded-inline-luna-max-20260809t122947z-95a47082-1b8f-47ef-af6b-b200605dad59"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-negative-bounded-inline-luna-max-20260809t122947z-95a47082-1b8f-47ef-af6b-b200605dad59",
+          "locator": "evaluations/evidence/wayfinder/negative-1.txt",
+          "sha256": "6f3d0aa549b048902e44d05e22ed0e3b63d07ff929d321d5db24a4b777df0935",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/negative.fixture.yaml",
+              "sha256": "72343d7fce569b156f02384f504cf7e6cb66325d015e7ffb0c693a18a07865f1",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-negative-bounded-work",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "72343d7fce569b156f02384f504cf7e6cb66325d015e7ffb0c693a18a07865f1"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
         "workflow-accepted-transfer-1db9f1f-sol-high-1"
       ],
       "evidence": [
@@ -3766,7 +5691,7 @@
           "attempt": 1,
           "contextId": "workflow-accepted-transfer-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/accepted-transfer-1.txt",
-          "sha256": "0844f08d9e19a9c626db0fc234cf47c1a2508020bc9718c7b851a551f7f7b3bf"
+          "sha256": "7e5d9297d8f9fdc89e7c704119728777db644effe2f56cf46e6dc1b5b23fd4d4"
         }
       ],
       "findings": [],
@@ -3791,19 +5716,19 @@
           "attempt": 1,
           "contextId": "workflow-approved-revision-invalidation-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/approved-revision-invalidation-1.txt",
-          "sha256": "842f957cb1fa36fa3cfddb88de8a9c2f18e106a9a3f6cba57aec998f7354e3c5"
+          "sha256": "aa6dbad70d62e397c6eec45e9098d694cc27e6c40fef4fcd42c0741903e05c09"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-approved-revision-invalidation-sol-high-2",
           "locator": "evaluations/evidence/workflow/approved-revision-invalidation-2.txt",
-          "sha256": "54301bfe91482b891dcaaca35ff46129a54f6d5447ba0173eaa4ca57df2e147c"
+          "sha256": "aac21b56a77d2db34385bc559c1c2f54e3268fce1426605db3675d0db974dc72"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-approved-revision-invalidation-sol-high-3",
           "locator": "evaluations/evidence/workflow/approved-revision-invalidation-3.txt",
-          "sha256": "3383b5c76282303295258eaef7c332660447d334b2d34b6ae41c941e142ae018"
+          "sha256": "504986eb4f638e0170a046e3c5ca5e622d51434452a0e9d0998b4ce378be0a44"
         }
       ],
       "findings": [],
@@ -3824,7 +5749,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-authoritative-cancellation-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/authoritative-cancellation-1.txt",
-          "sha256": "9fad1420fb5865c8f38711af173c0c9abaa1710280132b59ac88f13882e49e82"
+          "sha256": "df886a526c92e94ddfe0fea976d8a0e1a05086163d2bae81bc88a4823e8cd150"
         }
       ],
       "findings": [],
@@ -3849,19 +5774,19 @@
           "attempt": 1,
           "contextId": "workflow-delegated-change-propagation-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/delegated-change-propagation-1.txt",
-          "sha256": "26a1584a05c8e12025ecf6639c62cb9c6493e201da2960f926118f4290d5fb64"
+          "sha256": "6ae0332b61c34a62b70d5bf9211b2cde97a8b27f5d826c45015cda1f481b572f"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-delegated-change-propagation-sol-high-2",
           "locator": "evaluations/evidence/workflow/delegated-change-propagation-2.txt",
-          "sha256": "cf8728ed99f66a5c11ffcb48e27529dc03bd6af7a39dd8de558ea20b05a65217"
+          "sha256": "53063bf0003ad958fadcbcd8169821990617d5c8bf758f0df43190bb5779c225"
         },
         {
           "attempt": 3,
           "contextId": "workflow-delegated-change-propagation-1db9f1f-sol-high-3",
           "locator": "evaluations/evidence/workflow/delegated-change-propagation-3.txt",
-          "sha256": "1aaae8f682b6f7cbb18bd0be9f2ed644239895155b31da661086e9f5fb3a2da0"
+          "sha256": "7314be3811a6fe1af1d5cd60fa78a6bca2bdf812d473da2e82ab2041efd1810b"
         }
       ],
       "findings": [],
@@ -3882,7 +5807,7 @@
           "attempt": 1,
           "contextId": "workflow-direct-inline-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/direct-inline-1.txt",
-          "sha256": "f57d8375b74fdd66817772b8ee55b8ea04b9692e0717c8fa87f2770bc20fe2ce"
+          "sha256": "c9975bfb3fc200457ffca510a8facaa868fa7fca171c605b0f8c8ba4fd57ed33"
         }
       ],
       "findings": [],
@@ -3903,7 +5828,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-durable-change-evidence-dimensions-20260808t124500z-luna-max-1",
           "locator": "evaluations/evidence/workflow/durable-change-evidence-dimensions-1.txt",
-          "sha256": "daa92e9a1c9cbae37993bb9d975820a1e6c714dce8affc11945106038fa7ce2d"
+          "sha256": "2df19fbf798ac744a4041be0a61248f599c9ecef1aaefdb5b95ffa4893ca9476"
         }
       ],
       "findings": [],
@@ -3928,19 +5853,19 @@
           "attempt": 1,
           "contextId": "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120004z-1",
           "locator": "evaluations/evidence/workflow/durable-change-legacy-record-1.txt",
-          "sha256": "3a1ff8e1b9bf4b45d54ec4dc891f8fb0a36daf26974eeda7e14a1cce1fb2da4c"
+          "sha256": "00576fa7c01f30e6594647a01e9eac9f02a66053d0605287b6b2f65ec59ba84e"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120005z-2",
           "locator": "evaluations/evidence/workflow/durable-change-legacy-record-2.txt",
-          "sha256": "8ae76881cae6a9a67ce602f47ef0661d445bc667c680155ff48153eff0ac694d"
+          "sha256": "c55b9b2de14fab00220260f8844fb4940b30710bd6def9faf82530bd05e7ac9d"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-durable-change-legacy-record-luna-max-20260808t120006z-3",
           "locator": "evaluations/evidence/workflow/durable-change-legacy-record-3.txt",
-          "sha256": "fb1e90f57d469a2bda57d01364064d129e83e6f0a5ad47fd3c1d0b255cbe5b96"
+          "sha256": "20f0f44012fbd5f328170828ecdc86474e105385010866595d1aa64d3e4b4551"
         }
       ],
       "findings": [],
@@ -3961,7 +5886,7 @@
           "attempt": 1,
           "contextId": "workflow-durable-conversation-boundary-fresh-luna-max-20260808-1",
           "locator": "evaluations/evidence/workflow/durable-conversation-boundary-1.txt",
-          "sha256": "e8e4ab9d30abfc3eb65060be28a0f91a1169ff7c7940e1a44e67e8d08104c2bb"
+          "sha256": "fbfe5585a588fc120b87a6c21ca5bf844b0d91be21a9428f9ffd01c88a67ad9d"
         }
       ],
       "findings": [],
@@ -3982,7 +5907,7 @@
           "attempt": 1,
           "contextId": "workflow-durable-external-adapter-fresh-luna-max-20260808-1",
           "locator": "evaluations/evidence/workflow/durable-external-adapter-1.txt",
-          "sha256": "64616c11e7339fe92d3dcf100d6de0ca3abd22124646d95db2e44d70ce0c00b1"
+          "sha256": "f8b6a2094ad40d907ea6b9a79ef118f97c6745f35fbdd0c3381e086f654a4049"
         }
       ],
       "findings": [],
@@ -4003,7 +5928,7 @@
           "attempt": 1,
           "contextId": "workflow-durable-git-without-github-fresh-luna-max-20260808-1",
           "locator": "evaluations/evidence/workflow/durable-git-without-github-1.txt",
-          "sha256": "9e0061199df2bff283cc3e683cf4698a299c2ba5bb00ea09640530d00e880c09"
+          "sha256": "a4f9240b05eeea0ffe98d457109ce7a07a5caead446347fea60cae4c92d081ad"
         }
       ],
       "findings": [],
@@ -4024,7 +5949,7 @@
           "attempt": 1,
           "contextId": "workflow-durable-github-hosted-fresh-luna-max-20260808-1",
           "locator": "evaluations/evidence/workflow/durable-github-hosted-1.txt",
-          "sha256": "15e6159d800248f04e717a8912a155e6c718dd112638998beccc24f0c78c92a3"
+          "sha256": "f0ba4e3ece9f8eb73f7f78e7bac3ef7f22410b2c20a22214615a17b8b1c4fe2b"
         }
       ],
       "findings": [],
@@ -4045,7 +5970,7 @@
           "attempt": 1,
           "contextId": "workflow-durable-local-markdown-no-git-fresh-luna-max-20260808-1",
           "locator": "evaluations/evidence/workflow/durable-local-markdown-no-git-1.txt",
-          "sha256": "576b2eb9cbb2d338d81fff387d0f1eaad61dd01b9877b54ca97ef7391898b52b"
+          "sha256": "e22775fa13c7b4b1a4dc4ebbe59c736e831273a9b72d88b43b7a817f0a99f0d2"
         }
       ],
       "findings": [],
@@ -4070,19 +5995,19 @@
           "attempt": 1,
           "contextId": "fresh-workflow-durable-parent-delegation-luna-max-20260808t120001z-1",
           "locator": "evaluations/evidence/workflow/durable-parent-delegation-1.txt",
-          "sha256": "5656df3fcdb807a0758282670cc3f0a5a3ea654b374e7c88db3efe829db472f9"
+          "sha256": "3adaf5cf27f2f31c29c84f57716a806cfc30134540f44fe781cef98c33b8d0f0"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-durable-parent-delegation-luna-max-20260808t120002z-2",
           "locator": "evaluations/evidence/workflow/durable-parent-delegation-2.txt",
-          "sha256": "0872a1ef447597f771a91795b713c41ce87ac438611d7de0ce5b4f75fc40955a"
+          "sha256": "059004f25e9f367a214b56f0b31c061a2d5d2a45055f6d3750271089e26475fb"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-durable-parent-delegation-luna-max-20260808t120003z-3",
           "locator": "evaluations/evidence/workflow/durable-parent-delegation-3.txt",
-          "sha256": "21c1ff12423b61039bfd9a34e5a431ec770beeb4b265010d9263a24ec76cb067"
+          "sha256": "e40b2538065177e63a8e3a7692f2781705fabb5c97e819135f097991d908d34e"
         }
       ],
       "findings": [],
@@ -4107,19 +6032,19 @@
           "attempt": 1,
           "contextId": "f3d1a8c6-5b92-4e70-9d41-2c8f6a7b3e05",
           "locator": "evaluations/evidence/workflow/durable-record-action-guard-1.txt",
-          "sha256": "b37cc1d8fe055205ec9ef66e45d12e3c7a4a3bd5803f5b2be07aad526f267c3f"
+          "sha256": "60a572083da1f5b27ee5b0628b8d4d5d9cef997907165217734a938b05b194da"
         },
         {
           "attempt": 2,
           "contextId": "8c4e1f7a-2d63-49b0-a5e8-3f9c7b1d6a24",
           "locator": "evaluations/evidence/workflow/durable-record-action-guard-2.txt",
-          "sha256": "fc1dab56f9d619a8f73f4527d9f7b6cbc494f9aad964bcf912461fb6139adf7a"
+          "sha256": "35b6d200233bfb2813dae37f788c783e121e4f83a36e3ae494c3fb9bc08ceb9d"
         },
         {
           "attempt": 3,
           "contextId": "d6a2f9b4-7c18-4e53-8b0d-1a6f3c9e5b72",
           "locator": "evaluations/evidence/workflow/durable-record-action-guard-3.txt",
-          "sha256": "0f2c013f21ea4acc7ac7c39602c3f1184b89ac64ed67dd5f155a95ec06775bde"
+          "sha256": "662f6208b69822c46caa7851537851f84706ca1ba790832bbb0c140747574c0b"
         }
       ],
       "findings": [],
@@ -4140,7 +6065,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-durable-supplemental-extension-20260808t124600z-luna-max-1",
           "locator": "evaluations/evidence/workflow/durable-supplemental-extension-1.txt",
-          "sha256": "8d8384b930a3bf031d17983d5898777b33d5c4479c42712f8a1b003586d387b8"
+          "sha256": "4b7a5d4cb31f6b01239dca6231f2e671bf1ebde555edc437738523fb524c2014"
         }
       ],
       "findings": [],
@@ -4165,19 +6090,19 @@
           "attempt": 1,
           "contextId": "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-1",
           "locator": "evaluations/evidence/workflow/durable-waiting-recovery-1.txt",
-          "sha256": "1ad677d1d142b4359c61fb670210fb0ee4897c65220d24b2111889a3c7fa2b5d"
+          "sha256": "069f004344a241e37b5203ecf8f1a2f6d3637d1ed29bfc1aa87c7e119daa6e73"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-2",
           "locator": "evaluations/evidence/workflow/durable-waiting-recovery-2.txt",
-          "sha256": "cf645e515ca640bc38b343b2953776d77bd3c24c632ff9561f346f5337962d82"
+          "sha256": "1530be9e96323d861f01a16740a987151ccaa6c28dda85050a179ba6eef1bc13"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-durable-waiting-recovery-candidate-t9-attempt-3",
           "locator": "evaluations/evidence/workflow/durable-waiting-recovery-3.txt",
-          "sha256": "ed46dae73683734f727671111d52d0c6f9c465fdb947385f46b9bfd19938fc4c"
+          "sha256": "7bebd949eb5500cf518b8abfa1925559cda69b023fe310f4a3f7018c2f2b0e74"
         }
       ],
       "findings": [],
@@ -4198,7 +6123,7 @@
           "attempt": 1,
           "contextId": "workflow-edge-degraded-persistence-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/edge-degraded-persistence-1.txt",
-          "sha256": "90735e663c0033cb96987fb4cd56ca321d84a5cf0c457d0148bd1437cca33e1f"
+          "sha256": "c8101e6fb5d90a66b1ff9f8751fe7ba96dca2c145e9ce1f5c45e23a0297ed796"
         }
       ],
       "findings": [],
@@ -4219,7 +6144,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-incomplete-context-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/incomplete-context-1.txt",
-          "sha256": "680a1202c9f4c55f5cb253c094b988a33097a2007f36a3e1c3bb708e61a1478a"
+          "sha256": "af18445743c5d0fe3c8cd7661889da54f3ed0b1e73a46ad6c232b19c624ee866"
         }
       ],
       "findings": [],
@@ -4240,7 +6165,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-indirect-phase-request-20260806-sol-high-1",
           "locator": "evaluations/evidence/workflow/indirect-phase-request-1.txt",
-          "sha256": "009b5f0b56ae4905f00cf948ea97442f3ae81115c40a9e8e85409e4c845afa71"
+          "sha256": "f50ad6a3bb49b3e0356ef2eae0343c5e231d635b7b303ee6c35c86c42a3195a1"
         }
       ],
       "findings": [],
@@ -4265,19 +6190,19 @@
           "attempt": 1,
           "contextId": "workflow-interruption-resume-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/interruption-resume-1.txt",
-          "sha256": "badf5662a3e222701de8b59e489b44c4307238591ff6d525e098c846d7047399"
+          "sha256": "954638210f42b254f34b0c388beebbb328e4110870760f0c46cdd09c399260ea"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-interruption-resume-sol-high-2",
           "locator": "evaluations/evidence/workflow/interruption-resume-2.txt",
-          "sha256": "3f9a4d2e481ef3e03ba90fa80dd8cc953b4c9d8c0658aa5fd02d30034cda393d"
+          "sha256": "a491476f4f292b50d981b743ff173dafd677138ec31076e6f0e1a254d4774f92"
         },
         {
           "attempt": 3,
           "contextId": "workflow-interruption-resume-1db9f1f-sol-high-3",
           "locator": "evaluations/evidence/workflow/interruption-resume-3.txt",
-          "sha256": "9c0ce5bc471b4929cece63872b8bca32d7cf0f96981dc7bbcffae4bcef4bd2dc"
+          "sha256": "3548454d67fa1bf9b1ac6d2bf01b3d4ea810b4f0fb5c16b3ff6fbb5723f42bcd"
         }
       ],
       "findings": [],
@@ -4302,19 +6227,19 @@
           "attempt": 1,
           "contextId": "fresh-workflow-mid-authorized-exception-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-authorized-exception-1.txt",
-          "sha256": "cfb9d115a8a9df5b129e9ce8e18939ceaf0fe48a3756db958a9e77e4c3fa7853"
+          "sha256": "06ec5dcbf9dfcbac07146bc75f03d5e99fe00175d132fffe7df51e668625e85d"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-mid-authorized-exception-sol-high-2",
           "locator": "evaluations/evidence/workflow/mid-authorized-exception-2.txt",
-          "sha256": "2693e24fc494f66da7f4c8e45473a027c8c940a6736d9788e83a391407f078b6"
+          "sha256": "315bb0027e2bd38c430e53b3dce65050e867a973e4da9fb16117a8e3596175e3"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-mid-authorized-exception-sol-high-3",
           "locator": "evaluations/evidence/workflow/mid-authorized-exception-3.txt",
-          "sha256": "57b7b0d25f6230d0fa95e45685c387d86e4552702649e14853d40a41c5f43420"
+          "sha256": "6839a6108c7eae9a253ecdb444e0a3b19c08a0138e0c51db945d811c0dca9a5f"
         }
       ],
       "findings": [],
@@ -4335,7 +6260,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-mid-clarification-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-clarification-1.txt",
-          "sha256": "69137257c461f7c8c24d59018e19a61f73e29c6ce69453486821cb98f26d39f2"
+          "sha256": "0438e81d4068585ea9a782945ecc2a3f11bf4355e75848d69895905621a3ec74"
         }
       ],
       "findings": [],
@@ -4360,19 +6285,19 @@
           "attempt": 1,
           "contextId": "workflow-mid-correction-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-correction-1.txt",
-          "sha256": "5f23c903d10660223a694c68589d03c2648bd18bde2d38699e31ff0396583e3b"
+          "sha256": "ab2335816a778aba9a6f334799aeae13085331829f84d8592dd3c2160465d67d"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-mid-correction-sol-high-2",
           "locator": "evaluations/evidence/workflow/mid-correction-2.txt",
-          "sha256": "70e77cbaf6d0f8cae44cdc1497c6a9bd1b173fe862cd6b6e7a07dc251008d67f"
+          "sha256": "57bd7df2df8c39541296c706bcbc42b2f943d4ef3f667762f8465b7d8897821b"
         },
         {
           "attempt": 3,
           "contextId": "workflow-mid-correction-1db9f1f-sol-high-3",
           "locator": "evaluations/evidence/workflow/mid-correction-3.txt",
-          "sha256": "08948f5363a154acbcc084f196f3b84ca5b4a79eba42fc6d1bf26e3cbfc0d5f2"
+          "sha256": "e49b0484327d67d72b33a859f53f8624f68520625c8b99166a7f52ee95f3ac2d"
         }
       ],
       "findings": [],
@@ -4397,19 +6322,19 @@
           "attempt": 1,
           "contextId": "fresh-workflow-mid-extension-constraint-1db9f1f-8f0a2d1c-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-extension-constraint-1.txt",
-          "sha256": "08b58aba14efa973172b62b49fd6b8dde6419a400dfa3e010d1979202c8a5b9a"
+          "sha256": "2895155d85687d12141a1c6dcd6e0af0f1cedf29f5cd15485e618100f608dddf"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-mid-extension-constraint-1db9f1f-20260806T181736Z-sol-high-2",
           "locator": "evaluations/evidence/workflow/mid-extension-constraint-2.txt",
-          "sha256": "aad27d5188ec9989b18abd23eaf30ae0c4899a801abc3a3cd8ee974f6297a877"
+          "sha256": "73f53bd7031cfd2dc9a1d567bdaae278d8dbcd88574cfd55afdc7cbf7ade024b"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-mid-extension-constraint-1db9f1f-20260806T181910Z-sol-high-3",
           "locator": "evaluations/evidence/workflow/mid-extension-constraint-3.txt",
-          "sha256": "92ee1076b52354d7f30144bd17da4836f2b57475b17791551173fa6a586f3e5e"
+          "sha256": "b09f032c4e21cabbe9df459c09ba53ca417d3c139999d2d11bf73c44f09a61a6"
         }
       ],
       "findings": [],
@@ -4434,19 +6359,19 @@
           "attempt": 1,
           "contextId": "workflow-mid-replacement-1db9f1f-20260806T181937Z-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-replacement-1.txt",
-          "sha256": "2dea785246caa0c5c76ce19d9752ab67ceaf3e7b037f00e55cc012365906ac45"
+          "sha256": "53d85fd5183f3612a3802f6609dc941d5dae0de2763cb1a90299b175b26a16b2"
         },
         {
           "attempt": 2,
           "contextId": "workflow-mid-replacement-1db9f1f-c99cdfe5-sol-high-2",
           "locator": "evaluations/evidence/workflow/mid-replacement-2.txt",
-          "sha256": "c99cdfe505df2d1556f1ab49f86936b21ee974cda671e7e6df95d01ee68df745"
+          "sha256": "9f4e2285b9544ca4326da452bade9612f0ceb590601ef4abae5d0c7e0c5bc028"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-mid-replacement-1db9f1f-20260806T182530Z-sol-high-3",
           "locator": "evaluations/evidence/workflow/mid-replacement-3.txt",
-          "sha256": "4d85b4dd77fa5a2ce99536d4eaf46fad0bb859aed6212e66fa9e9317b9af49d1"
+          "sha256": "ef52e3bc0070a0ef81480c429678c29c78293fc6d79c2e90f55b69eb33c29ba7"
         }
       ],
       "findings": [],
@@ -4471,19 +6396,19 @@
           "attempt": 1,
           "contextId": "workflow-mid-unauthorized-override-1db9f1f-20260806T182536Z-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-unauthorized-override-1.txt",
-          "sha256": "c64b451486deb82301f3c86e8ae37488636d1b28ce6e34fad944a4f1faf83d47"
+          "sha256": "93d16f967c2cb4f883a08e20b7b6ab1c1ebb1cba661905562faa40733b8f9b79"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-mid-unauthorized-override-20260806T182543Z-bc36174a-sol-high-2",
           "locator": "evaluations/evidence/workflow/mid-unauthorized-override-2.txt",
-          "sha256": "bc36174ab5b458c5189d49e5c6a2cc8a3c790dd1f8e32f11611339f2f0639f36"
+          "sha256": "d226f3ffd7c9655ecb221a7b4d0e1a5337454721f6ba75675f597bca7c35c348"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-mid-unauthorized-override-1db9f1f-8d56bed2-sol-high-3",
           "locator": "evaluations/evidence/workflow/mid-unauthorized-override-3.txt",
-          "sha256": "8d56bed257f8f6b84ef1c58ab8793a3ef69120e39705f983f0963911c35b9563"
+          "sha256": "745489605f51405a5a432c20bfade5445d1bd742ccb98bf541d1b2d4ce37e315"
         }
       ],
       "findings": [],
@@ -4508,19 +6433,19 @@
           "attempt": 1,
           "contextId": "workflow-mid-unrelated-resume-1db9f1f-20260806T182607Z-sol-high-1",
           "locator": "evaluations/evidence/workflow/mid-unrelated-resume-1.txt",
-          "sha256": "137c7881326c79bca93c4d8187fd25796da1b1cc878f87e9e8ba154b45e1dd13"
+          "sha256": "1ee09d3f516470df07753854ef82c64c5ec5327101294d6c680c3be05e2310fe"
         },
         {
           "attempt": 2,
           "contextId": "fresh-workflow-mid-unrelated-resume-1db9f1f-20260806T182547Z-sol-high-2",
           "locator": "evaluations/evidence/workflow/mid-unrelated-resume-2.txt",
-          "sha256": "ca33098f1d90bcefc645834330aa56672a0278969c7c8dec2a93402729b01041"
+          "sha256": "08b85d91fb8170a34e929ca07c1adaefb6dc39064e5bd8d303ab384861aef0eb"
         },
         {
           "attempt": 3,
           "contextId": "fresh-workflow-mid-unrelated-resume-1db9f1f-20260806T182615Z-sol-high-3",
           "locator": "evaluations/evidence/workflow/mid-unrelated-resume-3.txt",
-          "sha256": "ba42b2345288fa50d128e21158013a0ad8cb99aa30bb7abeb99b0740ad6631e9"
+          "sha256": "9bbbcc712cbfe9a9f4aa2a1d6a7914b0cf8f09447368073b8dcdedc09942ec98"
         }
       ],
       "findings": [],
@@ -4541,7 +6466,7 @@
           "attempt": 1,
           "contextId": "workflow-migration-current-state-1db9f1f-sol-high-1",
           "locator": "evaluations/evidence/workflow/migration-current-state-1.txt",
-          "sha256": "e21fc3f31f32ca80076df69be8b0198ddc4a5bca2529d9a5ee835447d58c1b07"
+          "sha256": "6b9bca9d819b0712d684e0d07388b7dbac68d05fa8dc9ff2ea9de1838b08ff8c"
         }
       ],
       "findings": [],
@@ -4562,7 +6487,7 @@
           "attempt": 1,
           "contextId": "workflow-negative-recursion-1db9f1f3-20260806-sol-high-1",
           "locator": "evaluations/evidence/workflow/negative-recursion-1.txt",
-          "sha256": "d601486d32d6cbe15c3b76c07b14d7e4f6f55a451043e5a40c9cc2414ac97536"
+          "sha256": "9f75083e67131db695691428ece50e0b62ca505190537d2128ba79c53f76e2e9"
         }
       ],
       "findings": [],
@@ -4583,7 +6508,7 @@
           "attempt": 1,
           "contextId": "fresh-workflow-supplemental-required-failure-sol-high-1",
           "locator": "evaluations/evidence/workflow/supplemental-required-failure-1.txt",
-          "sha256": "176d3afe0e5d58c82bf796f40ef69f49c1fcc5950a90d82b3a8debfba4a1be00"
+          "sha256": "7a65992c275c3cb3f386c2f242958285acdd27bcb226bec0a769299bace8e9df"
         }
       ],
       "findings": [],
@@ -4604,7 +6529,7 @@
           "attempt": 1,
           "contextId": "workflow-supplemental-review-success-1db9f1f3-20260806-sol-high-1",
           "locator": "evaluations/evidence/workflow/supplemental-review-success-1.txt",
-          "sha256": "3b1d77e7656f5bfd3a8c8f8e3f074a648771aa6363536b6d149cd060be454182"
+          "sha256": "544095f6008bb52d32c22091b2c1077a5a79f12edd26fbe3bac7a621ad674ba2"
         }
       ],
       "findings": [],

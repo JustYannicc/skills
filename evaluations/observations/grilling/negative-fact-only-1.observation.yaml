@@ -36,4 +36,4 @@ observed:
   state: [answered]
 rawEvidence:
   locator: evaluations/evidence/grilling/negative-fact-only-1.txt
-  sha256: 270991468a93cd325060e6f38e83f82707a32d720f9774f2a0ab49c61cb5a687
+  sha256: f1481c35a9ffefb3b683cc0f8b1722d502dfba5ba703f746d8064b681c0620ab

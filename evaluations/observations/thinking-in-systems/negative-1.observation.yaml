@@ -25,4 +25,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/negative-1.txt
-  sha256: 9afc4b2602422c8e0a7f7886a4023f53a7a3af2859a97a74ac0a5bad47071ca9
+  sha256: 3a4b9a67f8acf4fb021f3f5d503876f0dede44d87c3865b348f16fb14d13cd8f

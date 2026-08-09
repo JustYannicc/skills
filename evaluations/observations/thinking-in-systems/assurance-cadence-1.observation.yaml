@@ -37,4 +37,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/assurance-cadence-1.txt
-  sha256: b0a8f72be789aee0da98532644e1f69bc6540e8c5ef5b41ddb71a3c852280ece
+  sha256: dc779f231e6f10ae3fe10bc4464260d64c6644533c47f14f28612cd84ce24598

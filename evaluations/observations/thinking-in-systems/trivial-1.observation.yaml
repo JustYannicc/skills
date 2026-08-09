@@ -25,4 +25,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/trivial-1.txt
-  sha256: e4193366b60556c86268fda13b00617b7f8fa100efd283af4262c5ec9d1c3c22
+  sha256: 8e561031de4d2fb502b75346fdfe8c39218ab5c85119ab54c1c639be2a48e991

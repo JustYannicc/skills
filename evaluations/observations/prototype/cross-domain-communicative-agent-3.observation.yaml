@@ -35,4 +35,4 @@ observed:
   state: [cross-domain-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/cross-domain-communicative-agent-3.txt
-  sha256: 7bca7ae43d117dff6e42529fcf6722b25e855969887dca8de7d6e6f545705742
+  sha256: f2b2d7b3a19570e675aad0e1035baac0c7242c63c9f499860f434e7b61ff0794

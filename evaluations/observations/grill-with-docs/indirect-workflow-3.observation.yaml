@@ -53,4 +53,4 @@ observed:
     - waiting-for-frontier-answers
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/indirect-workflow-3.txt
-  sha256: 4651aee45fe3dcab3cef03e50f4875044a7c268ed9afc32631c753372d488a61
+  sha256: 37663155173d1e3b04a813fcd7fea7ead72e722c08dcdf4130cf57a34f4fbfb0

@@ -25,4 +25,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/consequential-3.txt
-  sha256: 852c1fe34a742dc21766390849884fc5a2c0157fb6f52c256ce9bd40b60ae2af
+  sha256: 1d726d946ced8be6e8e3faa9a45dc4502a13b917ff62051b8a23f0aa56882755

@@ -39,4 +39,4 @@ observed:
   state: [ready-for-workflow]
 rawEvidence:
   locator: evaluations/evidence/research/indirect-workflow-delegation-2.txt
-  sha256: 1f0fc88cc4f12bd3a0fa47c88535669e1b05724d50c8cb1b852d2f8a5841e14a
+  sha256: b9383fc77e7019a4e0f4cc6a603c5da1b255942f666983968a991293738645ad

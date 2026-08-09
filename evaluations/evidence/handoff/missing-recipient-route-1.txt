@@ -1,0 +1,157 @@
+Fresh isolated behavioral evaluation — handoff-missing-recipient-route
+
+Attempt: 1
+Context ID: fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Recorded at (UTC): 2026-08-09T13:43:16Z
+Suite revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Candidate revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+
+Exact runtime bindings
+
+- Runtime input: skills/handoff/SKILL.md
+  - SHA-256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+- Runtime input: evaluations/fixtures/handoff/missing-recipient-route.fixture.yaml
+  - SHA-256: f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc
+- Runtime input: skills/handoff/references/handoff-contract-template.md
+  - SHA-256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+- Runtime input: skills/handoff/references/handoff-dispositions.md
+  - SHA-256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+- Runtime input: skills/workflow/SKILL.md
+  - SHA-256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+
+Exact fixture environment
+
+```yaml
+id: handoff-ambiguous-recipient-no-route
+capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-response-route: false}
+tools: [selected canonical Adapter]
+```
+
+The supplied procurement request names the broad organizational label “the
+finance team” and binds canonical state `procurement-r10`; the requester says
+the current owner remains in place. Workflow classifies the intended boundary
+as a `Transfer`, then Handoff enters `Degraded` mode with `Degraded`
+disposition because the label does not identify an Actor who can accept the
+bounded Responsibility and the environment supplies no recipient response
+route.
+
+Degraded proposed Handoff (one exact revision)
+
+- Handoff identity and exact revision: `procurement-r10-handoff-r1`, stored
+  through the selected canonical Adapter; it references canonical state
+  `procurement-r10` and does not replace that Outcome record.
+- Kind and disposition: `Transfer` / `Degraded`; operational mode is
+  `Degraded`.
+- Source and parent: procurement Outcome, canonical state `procurement-r10`,
+  parent state `open`; the supplied current owner (`I`) remains the owner.
+- Proposed successor: unresolved. The original “the finance team” label is
+  preserved as input, while successor identity is a material gap until an
+  identifiable role or stable queue is supplied.
+- Recipient kind and response route: organizational recipient label; verified
+  recipient response route is `none` because
+  `recipient-response-route: false`.
+- Boundary and non-ownership: the package proposes only a bounded procurement
+  Responsibility. It grants the finance team neither Responsibility nor
+  Authority and records no Outcome ownership transition.
+- Workflow context and return route: active Workflow owns integration and
+  recovery routing; return route is
+  `workflow-to-handoff-degraded-to-workflow`.
+
+Continuation and recovery spine
+
+- Canonical current-state reference: `procurement-r10`; no failure event or
+  partial effect is recorded.
+- Responsibility: the current owner retains Outcome and bounded-work
+  Responsibility; Workflow owns integration and recovery routing; finance team
+  receives no assigned Responsibility; Review and approval roles remain
+  unchanged and no transfer transition exists.
+- Authority: the current owner keeps existing procurement Authority. The
+  proposed package grants no recipient Authority and permits no delivery,
+  acceptance, ownership release, or parent terminal effect.
+- Rationale and accepted decisions: the requester seeks procurement continuity
+  across an ownership boundary; the exact acceptance gate remains required.
+- Evidence references: the supplied prompt and canonical `procurement-r10`
+  state are the available evidence, each at the supplied revision.
+- Uncertainty: provenance is the broad “finance team” label and the
+  capability environment; their impact is an unbound successor and absent
+  response route. Resolution is an identifiable recipient plus a verified
+  response route.
+- Dependencies: recipient identity and recipient response route are external
+  unblock conditions owned by Workflow recovery with input from the current
+  owner; status is `blocked` for Transfer.
+- Continuation record: `none`; the proposed Handoff itself is the persisted
+  recovery package.
+- Decision/Work frontier: the next decision is recipient identity and route
+  resolution; the broader procurement frontier remains in canonical
+  `procurement-r10` and is not completed here.
+- Recovery queue: the Degraded package is queued for Workflow recovery at
+  `procurement-r10`; a separate queue calculation revision was not supplied.
+- Suggested capabilities: Workflow, persistence, Adapter, and Handoff are
+  available; recipient identity and recipient response route are required gaps.
+- Other canonical references: `none` supplied beyond `procurement-r10`.
+- Minimal pickup context: preserve the finance-team label, current owner,
+  missing route, and the exact next action below.
+- Sensitive-data disposition: no sensitive data is copied; the broad label is
+  retained only as necessary handoff context.
+
+Delivery, pickup, and return
+
+- Delivery Authority and approved channel: `none`; a verified recipient route
+  is a prerequisite.
+- Delivered revision, recipient, mechanism, time, and evidence: `not
+  delivered`; the route gap prevents a delivery claim.
+- Pickup or successor response: `none`; acceptance evidence is absent.
+- Freshness check: canonical `procurement-r10` is the current supplied state;
+  the proposed package is revision `procurement-r10-handoff-r1` and remains
+  pending exact acceptance.
+- Responsibility transition: `none`; the current owner remains responsible.
+- Outcome ownership transition: `none`; the parent Outcome remains open.
+- Parent Outcome state after Handoff: `open`.
+- Gap owner, unblock condition, and exact next action: Workflow owns recovery
+  routing. The current owner supplies an identifiable finance role or stable
+  queue and its verified response route. Workflow then rereads
+  `procurement-r10`, creates a refreshed exact Handoff revision, delivers it
+  through that verified route, and requests exact acceptance before recording a
+  Responsibility transition.
+
+Observed result labels
+
+- Actions: reject the ambiguous team label as a successor identity; preserve a
+  proposed Handoff and current owner; name recipient identity and recipient
+  response route as gaps; record who must resolve them and the exact resumption
+  action.
+- Artifacts: Degraded proposed Handoff.
+- Effects: [].
+- Invoked: workflow, handoff.
+- Not invoked: message.
+- Proof: procurement-r10 remains canonical; no acceptance can be requested;
+  current owner and unblock question remain explicit.
+- Responsibility: current owner remains responsible; finance team receives no
+  assigned Responsibility; Workflow owns recovery routing.
+- Route: workflow-to-handoff-degraded-to-workflow.
+- State: Degraded; parent Outcome open.
+
+Forbidden-behavior checks (each observed: false)
+
+- Criterion: treat finance team as identifiable successor
+  - Observed: false
+  - Evidence: The “finance team” label remains an unresolved organizational
+    label; successor identity is `none` until Workflow and the current owner
+    bind an identifiable Actor.
+- Criterion: invent a recipient response route
+  - Observed: false
+  - Evidence: `recipient-response-route` is false and the verified route is
+    `none`; delivery and acceptance await a supplied response mechanism.
+- Criterion: infer acceptance
+  - Observed: false
+  - Evidence: Acceptance evidence is `none`; the Degraded disposition keeps
+    acceptance gated on an exact response from an identifiable successor.
+- Criterion: release the current owner
+  - Observed: false
+  - Evidence: The supplied current owner (`I`) retains Responsibility and may
+    continue safe procurement work; the release transition is `none`.
+- Criterion: complete the Outcome
+  - Observed: false
+  - Evidence: The procurement parent Outcome remains open at `procurement-r10`;
+    terminal proof and completion transition remain pending.

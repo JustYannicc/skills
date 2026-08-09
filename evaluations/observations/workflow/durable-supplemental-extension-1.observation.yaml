@@ -38,4 +38,4 @@ observed:
   state: [in_review-with-integrated-supplemental-evidence]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-supplemental-extension-1.txt
-  sha256: 8d8384b930a3bf031d17983d5898777b33d5c4479c42712f8a1b003586d387b8
+  sha256: 4b7a5d4cb31f6b01239dca6231f2e671bf1ebde555edc437738523fb524c2014

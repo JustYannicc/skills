@@ -30,4 +30,4 @@ observed:
   state: [canonical-after-conformance-or-degraded]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-external-adapter-1.txt
-  sha256: 64616c11e7339fe92d3dcf100d6de0ca3abd22124646d95db2e44d70ce0c00b1
+  sha256: f8b6a2094ad40d907ea6b9a79ef118f97c6745f35fbdd0c3381e086f654a4049

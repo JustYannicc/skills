@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 schemaVersion: 1
 fixtureId: grilling-negative-fact-only
 attempt: 1

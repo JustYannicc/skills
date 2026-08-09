@@ -1,0 +1,94 @@
+Fresh-context Handoff evaluation — cross-domain physical transfer — attempt 3
+
+Candidate revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Suite revision (repository content identity; evaluation artifacts excluded): git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Fixture: handoff-cross-domain-physical
+Attempt: 3
+Context ID: fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Recorded at (UTC): 2026-08-09T13:31:38Z
+
+Exact fixture environment
+
+- id: `handoff-physical-shift-transfer`
+- capabilities: `workflow=true`, `persistence=true`, `adapter=true`, `handoff=true`, `recipient-response-route=true`
+- tools: `signed shift log`
+
+The prompt was applied once in this fresh context. The bounded accepted effect is
+the evening-operations Responsibility transition supplied by Elise's signed
+response. Maintenance remains an external dependency, Bay 3 remains isolated,
+and the greenhouse evening-operations Outcome remains open.
+
+Prompt applied exactly:
+
+Transfer greenhouse evening operations from shift lead Rowan to shift lead
+Elise. The operating record is `greenhouse-shift-r15`. Bay 3 irrigation is
+isolated after a leak, the isolation photo and valve reading are evidence
+`isolation-r6`, maintenance arrival is the external dependency, and the next
+safe frontier is humidity logging in Bays 1 and 2. Elise may operate
+unaffected bays but cannot reopen Bay 3. Exact Handoff `greenhouse-ho-r2` was
+delivered through the signed shift log. Elise signed that she accepts
+`greenhouse-ho-r2`, evening-operations Responsibility, the Bay 3 restriction,
+maintenance Continuation, uncertainty, and the Bay 1 and 2 humidity-log first
+action. A freshness read still shows `greenhouse-shift-r15` and `isolation-r6`.
+
+Runtime sources read before applying Handoff:
+
+- `skills/handoff/SKILL.md` — sha256 `6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2`.
+- `skills/handoff/references/handoff-contract-template.md` — sha256 `4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151`.
+- `skills/handoff/references/handoff-dispositions.md` (Transfer branch) — sha256 `a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee`.
+- `evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml` — sha256 `d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a`.
+
+## Applied Handoff result
+
+### Identity and boundary
+
+- **Handoff identity and exact revision:** `greenhouse-ho-r2`.
+- **Kind and disposition:** `Transfer` / `Accepted`.
+- **Operational mode:** `Normal`, with the Bay 3 irrigation isolation as an explicit Authority limit.
+- **Created and updated:** exact Handoff identity is supplied; creation and update times are not supplied.
+- **Canonical locator and Adapter revision:** the `greenhouse-ho-r2` entry in the signed shift log; its delivery and Elise's signed response are the supplied revision-bound evidence.
+- **Source Outcome or Ticket:** operating record `greenhouse-shift-r15` at the supplied exact current revision.
+- **Parent Outcome:** greenhouse evening operations remain active/open. This invocation records a bounded shift Responsibility transition and returns parent integration and terminal proof to Workflow.
+- **Current responsible owner:** Rowan remains responsible through the pre-acceptance boundary; Elise owns the accepted evening-operations scope after her exact signed acceptance.
+- **Proposed successor:** identifiable shift lead Elise.
+- **Recipient kind and verified response route:** human successor Elise, responding through the signed shift log.
+- **Boundary and explicit non-ownership:** Elise may operate unaffected bays and perform the first humidity log in Bays 1 and 2. Bay 3 remains isolated under its Authority limit. Maintenance owns its external arrival duty. This Handoff owns neither maintenance execution nor parent Outcome completion.
+- **Workflow/caller return route:** `workflow-to-handoff-to-workflow`.
+
+### Continuation spine
+
+- **Canonical current-state reference:** operating record `greenhouse-shift-r15`; the supplied freshness read returns that exact revision.
+- **Failure event and partial effects:** the Bay 3 irrigation leak led to isolation. The isolation photo and valve reading are evidence `isolation-r6`; the supplied result carries the isolation state forward.
+- **Responsibility:** Rowan owns the bounded evening-operations Responsibility until Elise's response. Elise accepts that exact scope at the signed response boundary. Maintenance owns only its external maintenance-arrival duty; Workflow retains parent integration and terminal proof.
+- **Authority:** Elise can operate unaffected bays and log humidity in Bays 1 and 2. Bay 3 stays isolated, and changing or reopening that isolation lies outside the offered Authority. Acceptance preserves this limit.
+- **Rationale and accepted decisions:** preserve the leak isolation and `isolation-r6` while maintenance arrival is outstanding; continue at the safe humidity-logging frontier in Bays 1 and 2.
+- **Evidence references:** operating record `greenhouse-shift-r15`; isolation photo and valve reading `isolation-r6`; signed-log delivery and Elise's signed acceptance for Handoff `greenhouse-ho-r2`.
+- **Uncertainty:** maintenance arrival and the later Bay 3 safety state remain unresolved. Elise's response accepts the supplied uncertainty and Continuation; no clearance state is supplied.
+- **Dependencies:** maintenance arrival is a waiting external dependency owned by maintenance. Its unblock condition is maintenance arrival followed by an authorized verification of the isolation boundary; the dependency remains preserved after acceptance.
+- **Continuation record:** `greenhouse-ho-r2` carries the maintenance waiting Continuation; no separate Continuation locator is supplied. Elise's first safe action is humidity logging in Bays 1 and 2 while Bay 3 remains isolated.
+- **Decision or Work frontier:** humidity logging in Bays 1 and 2 is the next safe frontier under `greenhouse-shift-r15`.
+- **Recovery queue:** none supplied; the maintenance dependency remains visible in the Continuation.
+- **Suggested capabilities:** Workflow, Handoff, persistence, the selected Adapter, and the signed shift-log response route are available. Maintenance work is outside this invocation.
+- **Other canonical references:** none beyond `greenhouse-shift-r15`, `isolation-r6`, and `greenhouse-ho-r2`.
+- **Minimal pickup context:** Elise continues unaffected-bay operations, keeps Bay 3 isolated, awaits maintenance arrival and its authorized boundary verification, then performs the Bays 1 and 2 humidity log.
+- **Sensitive-data disposition:** only supplied role identities and operational references are carried; credentials, secrets, tokens, and unnecessary personal data are absent.
+
+### Delivery, acceptance, and return
+
+- **Delivery Authority and approved channel:** the supplied signed shift log is the approved channel for exact Handoff `greenhouse-ho-r2` to Elise; the response route is the same signed log.
+- **Delivered revision, recipient, mechanism, time, and evidence:** `greenhouse-ho-r2` was delivered to Elise through the signed shift log; delivery time is not supplied. Delivery evidence is kept separate from acceptance evidence.
+- **Pickup, service response, or successor response:** Elise's signed response names `greenhouse-ho-r2` and accepts the exact evening-operations Responsibility, Bay 3 restriction, maintenance Continuation, uncertainty, and Bays 1 and 2 humidity-log first action.
+- **Freshness check:** passed. The current reads still show `greenhouse-shift-r15` and `isolation-r6`, matching the offered Handoff; the supplied state, evidence, Authority limit, dependency, Continuation, and frontier remain aligned.
+- **Responsibility transition:** append-only transition at Elise's exact acceptance: Rowan → Elise for the bounded evening-operations Responsibility, retaining the Bay 3 Authority limit, `isolation-r6`, maintenance dependency, Continuation, and first action.
+- **Outcome ownership transition:** none. The parent greenhouse evening-operations Outcome remains active/open.
+- **Parent Outcome state after Handoff:** `Accepted`, with maintenance dependency waiting and the parent Outcome open.
+- **Gap, unblock condition, and exact next action:** maintenance arrival plus authorized verification of the Bay 3 isolation boundary is the unblock condition for later Bay 3 reassessment. Elise's exact next action is to log humidity in Bays 1 and 2; maintenance remains responsible for its arrival duty.
+
+The Transfer gate passes only after Elise's exact signed response and the
+matching freshness read. The accepted contract preserves the isolation,
+Authority boundary, maintenance Continuation, safe frontier, current owner,
+and parent-open state. Return the accepted Handoff identity and revision,
+`Transfer/Accepted` disposition, transition evidence, freshness result,
+preserved dependency, and first safe action to Workflow on
+`workflow-to-handoff-to-workflow`.

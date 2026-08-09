@@ -28,4 +28,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-indirect-1.txt
-  sha256: 1eeda6f10b314b38d1d11e5a340b5db7fe56be41122ef6b45c8a3e0788a78052
+  sha256: cda088bc4751a3b9819560cb035ed26ff58b55373df02b15532afebe62f98195

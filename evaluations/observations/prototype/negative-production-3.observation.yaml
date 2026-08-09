@@ -35,4 +35,4 @@ observed:
   state: [blocked-at-workflow-effect-gate]
 rawEvidence:
   locator: evaluations/evidence/prototype/negative-production-3.txt
-  sha256: 77c705f8b561919bdacfbde0ffbc43c8db358729292bc1917e515e025ea1d0bc
+  sha256: 1a3608958ea194331ad06f3650a9227cb03f5b369e9251a68f9a65026722c610

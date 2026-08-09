@@ -8,9 +8,11 @@ domains: [organizational, physical]
 severity: Major
 requiredAttempts: 1
 prompt: >-
-  Decompose accepted Specification `site-opening-r4`. Ticket `T-SETUP` prepares
-  an internal room and Ticket `T-PERMIT` waits for an external building permit
-  that no Workflow Actor owns. Ticket `T-OPEN` requires both. The permit is
+  Decompose accepted Specification `site-opening-r4`. The existing canonical
+  Ticket set `site-opening-r4/ticket-set-r1` is already accepted. Ticket
+  `T-SETUP` prepares an internal room and the permit condition waits for an
+  external building permit that no Workflow Actor owns. Ticket `T-OPEN`
+  requires both. The permit is
   currently waiting, and the internal setup Claim is stale; the Adapter cannot
   guarantee atomic concurrent claims. Show `T-OPEN` blocked, represent the
   permit as a Continuation rather than a fake Ticket, place stale setup work in

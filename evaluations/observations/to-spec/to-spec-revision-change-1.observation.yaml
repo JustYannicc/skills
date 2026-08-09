@@ -34,4 +34,4 @@ observed:
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-revision-change-1.txt
-  sha256: 1cc44bac0d6dc381ee2b711580423c7b95facfdc24859a58d5e05053243954e7
+  sha256: b8f2b9622c4e8f57c59f67d751f58f0fbb8fc11c9edfea0be6f804bdfadc9a2f

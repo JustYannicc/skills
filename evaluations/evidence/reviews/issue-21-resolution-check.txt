@@ -1,0 +1,50 @@
+Issue #21 independent resolution check
+Checker: gpt-5.6-sol, high reasoning
+Checked candidate: git:b94315c3acd25414cea7f2b861633ed9b181e504
+Original verdict: PASS
+
+This is the sole independent resolution check. The later acceptance correction
+did not run another independent check or alter the skill procedure reviewed.
+
+Resolved content findings
+
+- Active Ticket work requires a recorded Claim. Without verified Coordination,
+  the skill disables parallel execution and uses serialized claiming while
+  keeping ownership distinct from the Claim.
+- Operating-delay fog is separate from irreducible fog and retains its horizon,
+  permitted route, Evidence protocol, trigger, safe mode, recovery, owner, and
+  Authority.
+- Reducible fog begins coarse and graduates through source-bound Research into
+  a precise owned Ticket.
+
+Original behavioral and deterministic proof
+
+- The checker verified all fifteen Wayfinder attempts, all 231 observations,
+  the candidate rebind attestations, the nested Questionnaire hash, the
+  deterministic report, and `pnpm validate` at the checked candidate.
+- The checker corrected one 63-character Map-contract hash in irreducible
+  attempt 1 and verified the resulting raw-evidence hash.
+- No Critical or Major adversarial-review finding remained.
+
+Acceptance-correction addendum
+
+The writing-for-agents audit later found that transcript rebinding had
+conflated executed behavioral candidates with suite revisions. It also found
+two proof-input defects outside the skill procedure: missing immutable Research
+Evidence and a future operating-delay transition phrased as current action.
+
+- Four affected attempts were freshly rerun against
+  `git:7019eb4323cf1ecae9461428b4205fe344ba3111`.
+- Eleven unaffected transcripts retain
+  `git:6b809baa082875b45b5895d471d6ab63a499f399` as the executed behavioral
+  candidate and name the final candidate only as the rebound suite revision.
+- The final candidate is
+  `git:916aa0e0d5889cf30401823c7d502871da5f0513`; its only delta from the
+  corrected-input candidate is the completed handoff checklist.
+- `issue-21-final-candidate-rebind-attestation.txt` owns the exact runtime
+  equivalence and mechanical-rebind proof.
+
+The correction preserves the checker's resolution of every adversarial-review
+finding while removing the overstated execution claim. Current deterministic
+results are recorded by the final report and validation run. Human acceptance
+remains outside this check.

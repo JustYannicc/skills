@@ -43,4 +43,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grilling/indirect-agent-fact-2.txt
-  sha256: b4256628f65b639a2477f01cabc86bfeb52d788b26753ae5533b2ca0b9ed1d07
+  sha256: bab678ec4490bb6546e89b49c78a466e88f3fe293a63a393758f7677ec83a702

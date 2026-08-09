@@ -1,0 +1,36 @@
+schemaVersion: 1
+id: handoff-cross-domain-physical
+title: Physical operating Handoff preserves safety and next frontier
+shape: direct
+kind: invocation
+skill: handoff
+domains: [physical, organizational]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Transfer greenhouse evening operations from shift lead Rowan to shift lead
+  Elise. The operating record is `greenhouse-shift-r15`. Bay 3 irrigation is
+  isolated after a leak, the isolation photo and valve reading are evidence
+  `isolation-r6`, maintenance arrival is the external dependency, and the next
+  safe frontier is humidity logging in Bays 1 and 2. Elise may operate unaffected
+  bays but cannot reopen Bay 3. Exact Handoff `greenhouse-ho-r2` was delivered
+  through the signed shift log. Elise signed that she accepts
+  `greenhouse-ho-r2`, evening-operations Responsibility, the Bay 3 restriction,
+  maintenance Continuation, uncertainty, and the Bay 1 and 2 humidity-log first
+  action. A freshness read still shows `greenhouse-shift-r15` and
+  `isolation-r6`.
+environment:
+  id: handoff-physical-shift-transfer
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-response-route: true}
+  tools: [signed shift log]
+expected:
+  actions: [bind operating and evidence revisions, preserve Bay 3 isolation Authority limit, offer exact Handoff through signed log, transfer only after Elise accepts, retain maintenance Continuation and safe frontier]
+  artifacts: [physical shift Handoff contract, signed acceptance transition]
+  effects: [accepted evening-operations Responsibility transition recorded]
+  invoked: [workflow, handoff]
+  notInvoked: [maintenance work]
+  proof: [greenhouse-shift-r15 and isolation-r6 remain exact references, Elise accepts the exact restriction and next action, Bay 3 stays isolated]
+  responsibility: [Rowan remains responsible before acceptance, Elise owns evening operations after acceptance, maintenance owns only its external duty]
+  route: [workflow-to-handoff-to-workflow]
+  state: [Accepted, maintenance dependency waiting, parent Outcome open]
+  forbidden: [reopen Bay 3, treat signed delivery as acceptance without response, drop maintenance dependency, widen Elise Authority, complete the operating Outcome]

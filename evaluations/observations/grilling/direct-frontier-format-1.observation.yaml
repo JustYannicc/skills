@@ -39,4 +39,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grilling/direct-frontier-format-1.txt
-  sha256: 589736cf87925374e291a862587581cbb438750197f298a7ed36c6363c5ebcda
+  sha256: 35002444ad8fe7f03c639d416ce8d9fcf3e5f044895cad39cbeaf3267eb32d05

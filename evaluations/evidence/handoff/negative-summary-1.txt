@@ -1,0 +1,66 @@
+Behavioral evaluation: handoff-negative-summary
+
+Attempt: 1
+Context ID: fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
+Candidate/suite revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+
+Runtime bindings:
+1. skill — `skills/handoff/SKILL.md` — SHA-256 `6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2`
+2. fixture — `evaluations/fixtures/handoff/negative-summary.fixture.yaml` — SHA-256 `23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1`
+3. disclosed reference — `skills/handoff/references/handoff-contract-template.md` — SHA-256 `4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151`
+4. disclosed reference — `skills/handoff/references/handoff-dispositions.md` — SHA-256 `a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee`
+5. governing skill — `skills/workflow/SKILL.md` — SHA-256 `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+
+The evaluator used a fresh isolated context with the exact fixture environment
+and read the Handoff skill, its two disclosed references, the Workflow skill,
+and the fixture before evaluating the response.
+
+Fixture environment:
+
+```yaml
+id: handoff-negative-summary-only
+capabilities: {workflow: true, handoff: true}
+tools: []
+```
+
+Prompt (exact fixture text):
+
+> Summarize these meeting notes into exactly five bullets.
+
+Candidate response (the Inline result contains exactly five bullets):
+
+- Meeting-note text was not included in the supplied request.
+- No decisions are present in the supplied material.
+- No action items are present in the supplied material.
+- No owners or deadlines are present in the supplied material.
+- The Inline summary covers the supplied input.
+
+Observed route and proof: Workflow selected ordinary bounded summarization in
+Inline mode and returned the five-bullet summary directly. The response has
+exactly five bullet lines, so the expected five-bullet artifact is present;
+effects are empty, and existing Responsibility remains unchanged. Handoff was
+not invoked, so no Handoff contract, successor, acceptance request,
+continuation record, or ownership transition was produced. The route is
+`workflow-inline-summary`, and the state is `Inline`.
+
+Observed labels: actions `route to ordinary bounded summarization`; artifacts
+`five-bullet summary`; effects `[]`; invoked `workflow`; notInvoked `handoff`;
+proof `exactly five bullets are returned Inline`; responsibility `existing
+Responsibility remains unchanged`; route `workflow-inline-summary`; state
+`Inline`.
+
+Forbidden-behavior checks (each observed false):
+
+1. Criterion `create a successor`: Inline summarization preserves existing
+   Responsibility; the five-bullet result names no successor.
+2. Criterion `request acceptance`: Inline summarization returns the five
+   bullets directly, with no recipient or acceptance step.
+3. Criterion `materialize durable continuation`: The result stays Inline with
+   its five bullets; no Handoff or continuation record is materialized.
+4. Criterion `claim ownership transfer`: Existing Responsibility remains
+   unchanged throughout the Inline result; no ownership transition is
+   recorded.
+
+Result: PASS. The exact five-bullet summary completed on the Workflow Inline
+route while Handoff remained inactive.

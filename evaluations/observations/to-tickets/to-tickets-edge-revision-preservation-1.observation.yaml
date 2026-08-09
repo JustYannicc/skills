@@ -40,4 +40,4 @@ observed:
   state: [Proposed]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-revision-preservation-1.txt
-  sha256: 164e33fdc75fce63cc6f6c27990c53c7b97431ac5b4e0e8e6fca15d27d31dd2a
+  sha256: b7fe8f2b1f2258d0ae2d308f89e50d0a08f926ed339968890160ce97597cd83d

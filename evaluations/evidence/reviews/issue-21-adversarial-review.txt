@@ -1,0 +1,52 @@
+Issue #21 independent adversarial skill-content review
+Reviewer: gpt-5.6-sol, high reasoning
+Scope: task-start e2f92efaa253793c01ec33cd711b27417c0da424 through the pre-evaluation Wayfinder candidate
+Reviewed identity: working-tree:678d20c54383bf087856f3063c064f16fc5fe0b713dd1f5dc5db3b6e257a04a3
+Disposition: one adversarial pass; read-only reviewer
+
+The reviewer did not record complete reviewed-file hashes. The identity binds
+the non-evaluation working tree, but it does not cryptographically bind exact
+fixture bytes. The later writing-for-agents fixture audit independently checks
+the corrected current fixtures; it is an acceptance audit, not another
+adversarial review.
+
+Critical
+
+1. Required behavioral proof was absent. No Wayfinder observation was bound to
+   the candidate, and the deterministic report and validation were pending.
+   Resolution criterion: record every required fresh-context attempt with
+   fixture/runtime hashes and raw evidence against the final candidate identity,
+   run `pnpm evaluations:record`, and pass `pnpm validate` at that identity.
+
+Major
+
+1. `skills/wayfinder/SKILL.md` allowed an explicit Work owner and serial
+   execution to substitute for a recorded Claim when Coordination was absent.
+   Ownership and Claims are distinct, while Baseline Adapters still provide
+   serialized claim operations. Resolution criterion: require a recorded Claim
+   before active work; without Coordination disable parallel execution, and if
+   no truthful claim can be recorded, expose a capability gap.
+
+2. The skill and Map contract combined operating-delay and irreducible fog even
+   though architecture and provenance require the case reducible only after
+   operating. Resolution criterion: define operating-delay fog separately,
+   preserve its horizon, operating route, Evidence protocol, decision trigger,
+   safe mode, recovery, ownership, and Authority, include it in completion, and
+   add behavioral proof.
+
+3. The reducible fixture began with an already precise external-fact question,
+   so it could not prove graduation from fog into an owned frontier item.
+   Resolution criterion: begin with genuinely coarse in-scope uncertainty,
+   require source-bound Research to sharpen it, and prove the resulting precise
+   Ticket and revision-bound transition.
+
+Checked with no finding
+
+- Public boundary; upstream pin, license, provenance, model invocation, and
+  agents metadata.
+- Adapter neutrality, no-Git operation, derived-Map authority, conditional and
+  missing-companion routing, destination/decision/blocker/Evidence/ownership/
+  Authority/Continuation preservation, negative and cross-domain intent, and
+  parent-completion boundary.
+
+Human acceptance remains outside this review.

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Handoff"
+  short_description: "Preserve exact state for safe continuation"
+policy:
+  allow_implicit_invocation: true

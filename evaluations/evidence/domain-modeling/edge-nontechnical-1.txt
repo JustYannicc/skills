@@ -1,3 +1,5 @@
+Validation rebind: git:ce2b02e6249d229d7d88b10bec58171b4bac6621. The byte-identity proof for the bound Domain Modeling runtime inputs is authoritative in evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt; the original evaluation context and revision remain recorded in this evidence.
+
 Fresh-context behavioral evaluation — domain-modeling-edge-nontechnical
 Attempt: 1
 Context ID: fresh-domain-modeling-edge-nontechnical-luna-max-20260809t105531z-4b6113a2-7c4b-4e0d-a756-a31587a8a978
@@ -6,7 +8,7 @@ Recorded at (UTC): 2026-08-09T10:55:31Z
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+- Evaluation candidate: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 - Skill locator: skills/domain-modeling/SKILL.md
 - Skill SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
 - Fixture locator: evaluations/fixtures/domain-modeling/edge-nontechnical.fixture.yaml

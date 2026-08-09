@@ -38,4 +38,4 @@ observed:
     - answered
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/negative-glossary-read-1.txt
-  sha256: eaad84019e358b5af16391473877cb82a85fa4e7c2e161766e940af5c282da3d
+  sha256: e34e07a5e1fdfc20028da6deaf84776fd1f91ba0f52683b1a37de1b87f2606e6

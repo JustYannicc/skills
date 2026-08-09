@@ -53,4 +53,4 @@ observed:
     - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/ui-interaction-quality-1.txt
-  sha256: d6c08444e2e66322402aba88616554018cb03dff4c89b8381ff0c0595826b024
+  sha256: b5a600766e0c9b68353c13068a632a3cab656b67f6992c69af5d11519e6e5985

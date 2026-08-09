@@ -1,0 +1,28 @@
+schemaVersion: 1
+id: wayfinder-incomplete
+title: Incomplete wayfinding request exposes the smallest material gap
+shape: incomplete
+kind: invocation
+skill: wayfinder
+domains: [technical, personal, organizational, physical, communicative, agent]
+severity: Major
+requiredAttempts: 1
+prompt: "Use Wayfinder for this."
+environment:
+  id: conversation-without-wayfinding-context
+  capabilities:
+    workflow: true
+    persistence: false
+    effects: false
+  tools: []
+expected:
+  actions: [identify the missing destination and active Outcome context, ask the smallest discriminating question, preserve any proposal as explicitly non-durable, name the exact resumption condition]
+  artifacts: [incomplete Wayfinder result]
+  effects: []
+  invoked: [wayfinder]
+  notInvoked: [domain-modeling, grilling, grill-with-docs, research, prototype, to-questionnaire, Adapter write, Specification, implementation, parent completion]
+  proof: [the missing destination and exact resumption condition are visible without fabricated map state]
+  responsibility: [Workflow or the caller retains the Outcome while Wayfinder waits for an accepted destination]
+  route: [wayfinder-waiting-for-destination]
+  state: [incomplete-destination]
+  forbidden: [invent a destination, create durable state without an Adapter, invoke companions before classifying uncertainty, claim a Map revision]

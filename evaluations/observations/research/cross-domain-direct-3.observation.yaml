@@ -53,4 +53,4 @@ rawEvidence:
     - locator: evaluations/evidence/research/cross-domain-direct-3.record.md
       sha256: dd838c8c28df798ad3f114626c2a7ca2039337e5e6592fff098c8e360fe7786b
   locator: evaluations/evidence/research/cross-domain-direct-3.txt
-  sha256: 4a94945aeb0ccf9368c338a7a21e03e83fb9cda289d59b1e47445900e2ca7446
+  sha256: 7225bc779460fad59bf91869b6b9d3f508ecf435ae12c0567c80b605fd3a6cf3

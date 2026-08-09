@@ -29,4 +29,4 @@ observed:
   state: [waiting-for-review-and-approval]
 rawEvidence:
   locator: evaluations/evidence/workflow/approved-revision-invalidation-2.txt
-  sha256: 54301bfe91482b891dcaaca35ff46129a54f6d5447ba0173eaa4ca57df2e147c
+  sha256: aac21b56a77d2db34385bc559c1c2f54e3268fce1426605db3675d0db974dc72

@@ -39,4 +39,4 @@ observed:
   state: [integrated-technical-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/configured-technical-supplemental-1.txt
-  sha256: 84efa4e54285ba5b7a8246932730da2ce354c7e5882092a99afa1491f856a69d
+  sha256: 23c01b1dffb8f2a8269eb6d0d7868aed34308130c6feeb92a7b5c912af23bc93

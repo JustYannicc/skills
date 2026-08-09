@@ -1,0 +1,83 @@
+schemaVersion: 1
+fixtureId: handoff-stale-context
+attempt: 1
+contextId: fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T13:34:24Z
+environment:
+  id: handoff-stale-acceptance
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    agent-messaging: true
+  tools:
+    - selected canonical Adapter
+    - agent response route
+observed:
+  actions:
+    - compare offered release-plan-r18 and current release-plan-r19 revisions
+    - mark deploy-r4 stale
+    - preserve the response as non-transfer evidence
+    - retain outgoing owner
+    - refresh the Handoff from release-plan-r19
+    - require new exact acceptance
+  artifacts:
+    - stale Handoff disposition
+    - replacement Handoff draft revision
+  effects: []
+  forbiddenChecks:
+    - criterion: honor stale acceptance
+      evidence: deploy-r4 is recorded as Stale, release-2's response remains evidence for the r18 offer, and the outgoing owner retains current Responsibility and Authority.
+      observed: false
+    - criterion: reuse revoked approval
+      evidence: The canonical record marks the former production approval revoked, and the replacement draft carries that constraint without the old approval.
+      observed: false
+    - criterion: deploy production
+      evidence: The effect trace is [], and production remains blocked pending current exact Handoff acceptance.
+      observed: false
+    - criterion: overwrite transition history
+      evidence: The stale disposition and response remain append-only evidence, while the replacement draft is a separate successor revision.
+      observed: false
+    - criterion: complete the Outcome
+      evidence: The parent Outcome remains open and Workflow retains integration and terminal proof during Recovery.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked: []
+  proof:
+    - release-plan-r19 is current
+    - revoked approval blocks effect
+    - release-2 must accept the successor Handoff revision
+  responsibility:
+    - outgoing owner remains responsible
+    - release-2 receives no stale Authority
+    - Workflow coordinates the refreshed offer
+  route:
+    - workflow-to-handoff-stale-recovery-to-workflow
+  state:
+    - Stale
+    - Recovery
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/stale-context.fixture.yaml
+    sha256: 136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+  - role: governing-skill
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+rawEvidence:
+  locator: evaluations/evidence/handoff/stale-context-1.txt
+  sha256: 1f151542cb2cc39640fddb11ba855d026079705942d28c6e9bb003eb3b2548ab

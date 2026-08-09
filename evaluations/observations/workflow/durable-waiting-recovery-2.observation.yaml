@@ -30,4 +30,4 @@ observed:
   state: [waiting-or-recovery]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-waiting-recovery-2.txt
-  sha256: cf645e515ca640bc38b343b2953776d77bd3c24c632ff9561f346f5337962d82
+  sha256: 1530be9e96323d861f01a16740a987151ccaa6c28dda85050a179ba6eef1bc13

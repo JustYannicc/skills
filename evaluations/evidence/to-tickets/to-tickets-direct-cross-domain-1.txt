@@ -1,23 +1,72 @@
-Evaluation: to-tickets-direct-cross-domain
-Attempt: 1
-Context: fresh-to-tickets-direct-cross-domain-20260808-1
-Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
-Evaluator: deterministic-candidate-observer
+Evaluation: to-tickets-direct-cross-domain-1
+Attempt 1
+Context: fresh-to-tickets-direct-cross-domain-editorial-20260809-1
+Observed candidate: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Evaluator: gpt-5.6-luna-max-fresh-context
 
-Observed route: Workflow bound community-welcome-r4 and invoked To Tickets for
-Durable decomposition. The coverage map preserved registration confirmation,
-the step-free route, directions, exception recovery, and the five-arrival
-parent seam.
+Accepted Durable decomposition
 
-Ticket set:
-- T-ROUTE — facilities owns the observed step-free route; no requirements.
-- T-DIRECTIONS — communications owns registration confirmation and approved
-  large-print and digital directions; no requirements.
-- T-INTEGRATE — event lead owns parent integration and requires T-ROUTE and
-  T-DIRECTIONS.
+Accepted Specification: community-welcome-r4
+Exact Ticket-set revision: community-welcome-r4/ticket-set-r1
+Representation: Durable. Three independently finishable Results, an explicit dependency boundary, Outcome-owner acceptance, and canonical persistence require work to survive the persistence boundary.
+Parent Outcome: community-welcome, owned by event-lead. Decomposition Work owner: access-coordinator.
+Authority: event-lead owns the Outcome, approves exact behavior, explicitly accepts this exact Ticket-set revision, and authorizes the canonical write. venue-access-v3 governs constraints; every exception enters Recovery.
+Supplemental evidence: none configured at workflow.decomposition.
 
-The exact Ticket-set revision records Result, owner, Authority, Proof seam,
-contains/requires/related context, and the selected Adapter. T-ROUTE and
-T-DIRECTIONS are accepted, unclaimed frontier work. T-INTEGRATE is blocked by
-both requirements. No Ticket was claimed, executed, reviewed, or treated as
-parent completion.
+Accepted Ticket set (exactly three Results)
+
+1. `community-welcome-r4/ticket-facilities-route-observation` — Facilities route observation
+
+   Result: A facilities observation records a venue-access-v3-compliant, step-free route from participant registration/arrival through the foyer to the welcome desk for the 09:00 18 September readiness boundary.
+
+   Work owner: facilities-lead. Reviewer/Approver: event-lead. Authority: facilities-lead may observe and record within venue-access-v3; event-lead approves exact behavior and exception disposition. Scope: registration-to-foyer route, welcome desk location, step-free observations, and route constraints. Exclusions: transport scheduling and speaker scheduling. Requires: none.
+
+   Proof seam: a human-visible route observation with the step-free path, foyer, welcome desk, readiness boundary, and venue-access-v3 checks. Terminal condition: event-lead can review the complete observation and constraint evidence. A constraint exception or unavailable observation enters Recovery with an owner, next check, and exact resumption action.
+
+2. `community-welcome-r4/ticket-communications-approved-directions` — Communications approved directions
+
+   Result: Large-print and digital directions communicate the approved step-free foyer route and welcome-desk location in a form usable by first-time participants.
+
+   Work owner: communications-lead. Reviewer/Approver: event-lead. Authority: communications-lead may prepare and maintain the directions; event-lead approves the exact behavior and published wording. Scope: large-print directions, digital directions, route communication, and welcome desk location. Exclusions: transport scheduling and speaker scheduling. Requires: none; no blocking edge is asserted.
+
+   Proof seam: event-lead-approved large-print and digital artifacts visibly identify the step-free route and welcome desk and introduce no venue-access-v3 exception. Terminal condition: event-lead can review both artifacts and approval evidence. A route mismatch, constraint exception, or unavailable approval enters Recovery with an owner, next check, and exact resumption action.
+
+3. `community-welcome-r4/ticket-event-lead-integration` — Event-lead integration
+
+   Result: Event lead integrates registration confirmation, step-free foyer entry, approved large-print/digital directions, and welcome desk behavior for 40 first-time participants, with five representative arrivals exercising the integrated path by 09:00 18 September.
+
+   Work owner: event-lead. Executors: event-lead and access-coordinator. Reviewer/Approver: event-lead. Authority: event-lead owns the Outcome and approves exact behavior within venue-access-v3; exceptions enter Recovery. Scope: registration confirmation, foyer entry, both direction forms, welcome desk, five representative arrivals, and 40-participant readiness. Exclusions: transport scheduling and speaker scheduling. Requires: `ticket-facilities-route-observation` and `ticket-communications-approved-directions`.
+
+   Proof seam: an integration record links both prerequisite Results and records five representative arrivals completing registration, entering the step-free foyer, using the directions, and finding the welcome desk by 09:00 18 September. Terminal condition: event-lead reviews the prerequisite and five-arrival evidence; Workflow retains execution, Review, Recovery handling, and parent terminal proof. Missing prerequisite evidence, a failed representative arrival, or a venue-access-v3 exception blocks this Ticket and enters Recovery with an owner, next check, and exact resumption action.
+
+Collective coverage
+
+| Specification item | Accepted disposition and evidence |
+| --- | --- |
+| Accepted behavior: 40 first-time participants can register, enter a step-free foyer, and find the welcome desk by 09:00 18 September | Event-lead integration, with five representative arrivals as the proof seam and 40-participant readiness in the Result. |
+| Registration confirmation | Event-lead integration scope and acceptance criteria. |
+| Step-free foyer route | Facilities route observation, linked again by event-lead integration. |
+| Large-print and digital directions | Communications approved directions, linked again by event-lead integration. |
+| Welcome desk | Route observation, approved directions, and integration each expose the desk location. |
+| Exclusions: transport and speaker scheduling | Explicitly excluded from all three Tickets; no Ticket owns either concern. |
+| Constraint and Authority: venue-access-v3; event-lead exact-behavior approval; access-coordinator decomposition ownership | Authority and constraint checks are present on every Ticket and in the envelope. |
+| Dependency rule | Two canonical `requires` edges from event-lead integration to the facilities and communications Results. |
+| Recovery, proof, and terminal conditions | Each Ticket has a proof seam, terminal condition, and Recovery behavior; no exception is silently accepted. |
+
+Canonical persistence and readback proof
+
+- Adapter: `final-direct`, revision `final-direct/baseline+coordination-r1` (Baseline canonical records/edges, atomic persistence, readback, and Coordination atomic claims).
+- Accepted set record locator: `.scratch/runtime-adapters/final-direct/records/community-welcome-r4--ticket-set-r1.json`; reread record revision `community-welcome-r4/ticket-set-r1`, state `Accepted`, three Tickets, and no live Claims.
+- Parent record locator: `.scratch/runtime-adapters/final-direct/records/community-welcome--outcome.json`; reread revision `community-welcome/outcome-r1`, owner `event-lead`, containing `community-welcome-r4/ticket-set-r1`.
+- Edge record locator: `.scratch/runtime-adapters/final-direct/edges/community-welcome-r4--ticket-set-r1.json`; reread edge revision `community-welcome-r4/ticket-set-r1/edges-r1`, five committed edges: three `contains` and two `requires`.
+- The reread verified the same adapter revision and exact Ticket-set revision before the frontier was exposed. Atomic transition status: `committed`.
+
+Frontier (calculated after readback; no Tickets executed)
+
+- Accepted Tickets: all three Tickets above.
+- Work frontier (accepted, unblocked, unclaimed): `ticket-facilities-route-observation`; `ticket-communications-approved-directions`.
+- Blocked: `ticket-event-lead-integration`, by its two unwaived `requires` targets: facilities route observation and communications approved directions.
+- Waiting or in review: none.
+- Recovery queue: empty. No claims were created; Coordination supports atomic claims when execution begins.
+
+Return route: Workflow / event-lead for execution, Review, Recovery handling, and parent terminal proof. This decomposition return does not execute Tickets or complete the parent Outcome.

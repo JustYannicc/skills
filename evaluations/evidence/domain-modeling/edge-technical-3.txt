@@ -1,3 +1,5 @@
+Validation rebind: git:ce2b02e6249d229d7d88b10bec58171b4bac6621. The byte-identity proof for the bound Domain Modeling runtime inputs is authoritative in evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt; the original evaluation context and revision remain recorded in this evidence.
+
 Fresh isolated behavioral evaluation — domain-modeling-edge-technical
 Attempt: 3
 Context ID: fresh-domain-modeling-edge-technical-20260809t105555z-luna-max-4fdb280d-3520-488f-9221-dc75177513e9
@@ -6,7 +8,7 @@ Recorded at (UTC): 2026-08-09T10:55:55.226Z
 
 Candidate and exact runtime-input provenance
 
-- Evaluation candidate: `git:4233758023b9d47a92b72311ef945d902d1c9d6d`
+- Evaluation candidate: `git:d1dc0ee086f56865b8da57a71deae10bacc543e6`
 - Runtime role `skill`: `skills/domain-modeling/SKILL.md`
   - SHA-256: `00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf`
 - Runtime role `fixture`: `evaluations/fixtures/domain-modeling/edge-technical.fixture.yaml`
