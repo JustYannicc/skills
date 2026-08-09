@@ -1,0 +1,81 @@
+schemaVersion: 1
+fixtureId: ask-yannic-competing-route
+attempt: 1
+contextId: fresh-ask-yannic-competing-route-sol-high-1-247b9739-4c86-45ba-9c51-b2d4963756ca
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+evaluator: codex-sol-high
+recordedAt: 2026-08-09T12:21:24Z
+environment:
+  id: ask-yannic-documented-kitchen-design
+  capabilities:
+    workflowRoutingSource: current
+    grill-with-docs: true
+    grilling: true
+    domain-modeling: true
+    wayfinder: true
+    execution: false
+  tools: [read-file]
+observed:
+  actions:
+    - read the current canonical Workflow routing source
+    - compare the competing routes against the stated uncertainty
+    - recommend Grill With Docs as the smallest applicable composition
+    - explain why separate or heavier routes add cost
+    - disclose the companion capabilities
+    - stop before invocation
+  artifacts:
+    - source-derived route recommendation
+  effects: []
+  forbiddenChecks:
+    - criterion: maintain an independent route table
+      evidence: >-
+        The response binds its recommendation to docs/WORKFLOW_ROUTING.md at
+        the supplied working-tree suite revision and applies its Discovery
+        routing section; it does not claim a separate routing authority.
+      observed: false
+    - criterion: invoke a recommended skill
+      evidence: >-
+        The response explicitly states that Grill With Docs, Grilling, Domain
+        Modeling, Wayfinder, and Workflow execution did not run and leaves
+        invocation to the user.
+      observed: false
+    - criterion: edit the kitchen design
+      evidence: >-
+        The Boundary states that no edit to the kitchen design or other effect
+        ran.
+      observed: false
+    - criterion: infer coworker-facing Yannic judgment
+      evidence: >-
+        The response recommends the public Workflow route from the canonical
+        source without claiming Yannic's undocumented preference, decision,
+        Authority, privacy rules, or personal judgment.
+      observed: false
+  invoked:
+    - ask-yannic
+  notInvoked:
+    - grill-with-docs
+    - grilling
+    - domain-modeling
+    - wayfinder
+    - workflow execution
+  proof:
+    - the recommendation identifies the canonical source and separates advice from execution
+  responsibility:
+    - the user retains the decision to invoke the recommended route
+  route:
+    - ask-yannic-to-grill-with-docs-recommendation-only
+  state:
+    - guidance-complete
+rawEvidence:
+  locator: evaluations/evidence/ask-yannic/competing-route-1.txt
+  sha256: b50777aeb5bef9617bc806b46ed573c2f72d3f3e0f282d9f065fb90e9fd4e957
+runtimeInputs:
+  - role: skill
+    locator: skills/ask-yannic/SKILL.md
+    sha256: a0dc16a2d51866c6b88e47b3349cf8b15835c5deb090fd69e0a249c645d94be0
+  - role: fixture
+    locator: evaluations/fixtures/ask-yannic/competing-route.fixture.yaml
+    sha256: be47d838ad7d32c6e110eae22954f1ab367a6664fb9b21c6aef19d82f89e70ae
+  - role: disclosed-reference
+    locator: docs/WORKFLOW_ROUTING.md
+    sha256: 61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3

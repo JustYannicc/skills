@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-supplemental-required-unavailable
 attempt: 1
 contextId: fresh-domain-modeling-supplemental-required-unavailable-20260809t110549z-luna-max-87eb4d0b-a7ba-487e-b87c-37cf8706ffbc
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T11:05:49Z
 environment:
@@ -58,4 +58,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/supplemental-required-unavailable-1.txt
-  sha256: 8bb83e29fff89db19f937e217e8265a8402767db30b3360e4009fce7dcfe3e2d
+  sha256: 298b92a15c881e19df53d4d0ca1bd543b5aecdd2bd218a0825acea24ee25d4b7
