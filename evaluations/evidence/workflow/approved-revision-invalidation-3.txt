@@ -1,2 +1,2 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 I classified the subject edit as an Extension or Constraint change and created result revision E8 with subject “Schedule changed.” The change invalidates the Review and approval bound to exact revision E7; the effect guard rejects that stale approval. E7 remains unsent, and I did not send E8. E8 is now waiting for Review and approval bound to E8. Workflow retains responsibility for the communication Outcome and will send and verify the effect only after that renewed proof and approval.

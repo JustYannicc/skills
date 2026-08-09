@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-indirect-agent-fact
 attempt: 3
 contextId: A15B04AC-B428-48A5-B719-59BF88147373
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:56:14.000Z
 environment:
@@ -40,4 +40,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grilling/indirect-agent-fact-3.txt
-  sha256: 922909767eb85b4acfb15cf5bb493f0507b002895f6d74b27e84b47f3b504077
+  sha256: 5df8e395bd48c0832c0458470ae3fc3d6e4d931207b4cb7f8000f23219f449af

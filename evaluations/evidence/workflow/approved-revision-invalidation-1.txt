@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 The subject edit is an extension or Constraint change to the approved result, so E7's Review and approval cannot carry forward. I recorded successor result revision E8 with subject "Schedule changed" and invalidated the Review and approval bound to E7. The effect guard therefore rejects E7's stale approval for E8.
 
 I have not sent the email. E8 is unsent and waiting for Review and fresh approval bound to exact revision E8. Workflow retains responsibility for the communication Outcome; after that approval, it must send E8 and verify the actual send effect before claiming completion.

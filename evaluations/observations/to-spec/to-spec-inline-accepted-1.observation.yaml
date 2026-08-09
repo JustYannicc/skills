@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-inline-accepted
 attempt: 1
 contextId: fresh-to-spec-inline-accepted-sol-high-20260806-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-inline-accepted-1.txt
-  sha256: 47dc57421b0c41d620e7e0cb4692fa7da8a84292d031ced00b92c1302424eaa3
+  sha256: d19c670d552cf11580783544ab222b420b1963504ff4497bc716a066dbf39054

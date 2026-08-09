@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Classified as an Extension or Constraint change to active Outcome O1. It is not a clarification, replacement, correction, or separate Outcome: Saturday coverage enlarges the rota’s supported conditions, while “leave the contact sheet exactly as approved” constrains the affected slice.
 
 Change proposal — S3 → S4

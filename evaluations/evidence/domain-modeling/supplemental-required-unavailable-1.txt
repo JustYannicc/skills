@@ -9,7 +9,7 @@ without editing.
 
 Candidate and exact runtime-input locator/hash bindings
 
-- Evaluation candidate / suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+- Evaluation candidate / suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 - role: skill
   - locator: skills/domain-modeling/SKILL.md
   - SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf

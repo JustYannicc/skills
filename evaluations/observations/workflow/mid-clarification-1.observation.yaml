@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-clarification
 attempt: 1
 contextId: fresh-workflow-mid-clarification-1db9f1f-sol-high-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:16:58.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-clarification-1.txt
-  sha256: 4da7f4a172ab2189cb6f85bdcf60763d25e597cacea69adf50c33834be30fd35
+  sha256: 0438e81d4068585ea9a782945ecc2a3f11bf4355e75848d69895905621a3ec74

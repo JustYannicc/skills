@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 ## Governance assessment: community workshop equipment checkout
 
 **Route and boundary.** This is a governance assessment for a potentially durable, safety- and access-relevant process; it authorizes no process change. The system of interest is the checkout-to-return lifecycle for workshop equipment. Its containing system is the community workshop's operations and safety program. Likely subsystems are inventory/identity records, eligibility and training verification, checkout and return handoffs, condition maintenance, and incident handling. Upstream systems may include membership, training, access control, maintenance, insurance, and applicable safety rules; dependent systems include members' work, staff/support, and equipment availability. The process boundary and every dependency must be confirmed before a proposed change binds them.

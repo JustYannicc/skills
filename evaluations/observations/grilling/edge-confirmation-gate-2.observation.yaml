@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-edge-confirmation-gate
 attempt: 2
 contextId: fresh-grilling-edge-confirmation-gate-v12-2-b92894e0-38ca-4323-ba38-8aa3d9a093a3
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 contractRevision: git:7e5b067bc0de2b0ded0841a243950717602be535
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:53:58Z
@@ -40,4 +40,4 @@ observed:
   state: [waiting-for-shared-understanding-confirmation]
 rawEvidence:
   locator: evaluations/evidence/grilling/edge-confirmation-gate-2.txt
-  sha256: 840807fc8a639b583444dd3c93a75229c2dcbe2d3cd4e1e619d02e48339d8783
+  sha256: 7a239f6e28b4d032c05fb9e1b407d439606d3e67d4e558cb85c2a41f3fd2c3fb

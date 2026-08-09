@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-negative-no-spec
 attempt: 1
 contextId: final-sol-review-negative-no-spec-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:15.000Z
 environment:
@@ -36,4 +36,4 @@ observed:
     - needs-specification
 rawEvidence:
   locator: evaluations/evidence/review/negative-no-spec-1.txt
-  sha256: 1d4c2d28ac0691c395154a7eafc336c6e7c2100aaf3de41ab5bb4aa665417434
+  sha256: 1a6b54e09068d1a61d429ca82c7a2ff5f25a4b0c991c467e88001cf9b8a7e66b

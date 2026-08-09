@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-prepared-communication
 attempt: 1
 contextId: final-sol-review-prepared-communication-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:18.000Z
 environment:
@@ -47,4 +47,4 @@ observed:
     - in_review-to-complete
 rawEvidence:
   locator: evaluations/evidence/review/prepared-communication-1.txt
-  sha256: 456d5f91bb16512eec09093e87a90d69dabf836fb5e8265aacc4fb469eb6c5cf
+  sha256: 6bf9f9bdf9a303fa6e9ca3411e81a3b2243f6b4a844f67586535ab71ac971373

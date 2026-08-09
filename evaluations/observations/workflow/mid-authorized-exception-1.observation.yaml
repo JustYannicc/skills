@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-authorized-exception
 attempt: 1
 contextId: fresh-workflow-mid-authorized-exception-sol-high-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:11:43.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [active-under-exception]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-authorized-exception-1.txt
-  sha256: ecd6c07ab7fbecd7962ba67c7977b0e37daaf331e9c54e7d46d06a11f8f348b5
+  sha256: 06ec5dcbf9dfcbac07146bc75f03d5e99fe00175d132fffe7df51e668625e85d

@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 I’ve preserved both plausible object–location interpretations, but the requested move remains only a proposed Outcome. Which object should go to which candidate location, and do you authorize that exact move?
 
 No physical effect is available in this environment, so neither object has been moved. After you identify and authorize the move, it still requires an Actor with physical-effect capability and visible confirmation that the intended object reached the intended location.

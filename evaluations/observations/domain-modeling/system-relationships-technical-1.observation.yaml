@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-system-relationships-technical
 attempt: 1
 contextId: fresh-domain-modeling-system-relationships-technical-20260809t110603z-luna-max-8c4e9db2-3b53-4cf3-9701-65f7dea3f957
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T11:06:03Z
 environment:
@@ -62,7 +62,7 @@ observed:
     - system-relationships-recorded
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/system-relationships-technical-1.txt
-  sha256: 6895e13911246b891ef8e26bb3e99b51d695bb50caa4dad7a43aff4c037cd93d
+  sha256: 99921476a2b5a304585cc49089cf831a359a835bd652ab397b319601484294c4
 runtimeInputs:
   - role: skill
     locator: skills/domain-modeling/SKILL.md

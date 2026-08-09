@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Treat this as a bounded System interaction, even though it will occur only once. It needs an inline handoff contract, not a Durable System Record.
 
 **Handoff contract**

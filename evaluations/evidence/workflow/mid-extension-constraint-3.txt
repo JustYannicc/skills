@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Applying Thinking in Systems inside the existing Workflow context, I classify the new message as a material Extension or Constraint change to O1. Adding Saturdays changes the rota’s supported conditions; “leave the contact sheet exactly as approved” fixes the boundary of the change. This is not a clarification, correction, replacement, or unrelated Outcome.
 
 Change proposal — S3 to S4

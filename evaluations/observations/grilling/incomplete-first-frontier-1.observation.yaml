@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-incomplete-first-frontier
 attempt: 1
 contextId: fresh-grilling-incomplete-first-frontier-v12-1-33c9147d-d64b-4e2f-9efb-db4450ec9420
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:47:39Z
 environment:
@@ -34,4 +34,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grilling/incomplete-first-frontier-1.txt
-  sha256: 9cb73ab78b01673ae118e198d6f9a26de347ac59ea550b487b711004f3cc55c1
+  sha256: 70880fff09f641e01bffe0caab1e83ec85d30316932f50b7ba5ae56d65ca94d9

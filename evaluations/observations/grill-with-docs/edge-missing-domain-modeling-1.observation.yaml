@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-edge-missing-domain-modeling
 attempt: 1
 contextId: fresh-gwd-edge-missing-domain-modeling-v12-1-a52479d2-efb1-46d9-b01a-19c2ae55cea7
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:42:06.000Z
 environment:
@@ -41,4 +41,4 @@ observed:
   state: [waiting-for-domain-modeling-capability]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/edge-missing-domain-modeling-1.txt
-  sha256: 2bb9081f5e13af938041d78a6e0f40635a2abd1e2a1d31d49bf7447fc0006e8d
+  sha256: d07b58dc8dc8d58f7c2d59439fc0118fa7989db0ae88d8482e76b21a4ad138fc

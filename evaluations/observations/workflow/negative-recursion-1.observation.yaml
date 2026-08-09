@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-negative-recursion
 attempt: 1
 contextId: workflow-negative-recursion-1db9f1f3-20260806-sol-high-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:05:31.000Z
 environment:
@@ -30,4 +30,4 @@ observed:
   state: [child-result-returned]
 rawEvidence:
   locator: evaluations/evidence/workflow/negative-recursion-1.txt
-  sha256: d515210516eb36862e512df004453b46714c08ce6826d3cd090bfab95ffb46cb
+  sha256: 9f75083e67131db695691428ece50e0b62ca505190537d2128ba79c53f76e2e9

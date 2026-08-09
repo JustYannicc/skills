@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 context: final-sol-review-changed-revision-1
 evaluator: gpt-5.6-sol-high-fresh-context-review
 suite: candidate git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13

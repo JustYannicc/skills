@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-cross-domain-direct
 attempt: 1
 contextId: final-sol-review-cross-domain-direct-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:06.000Z
 environment:
@@ -48,4 +48,4 @@ observed:
     - in_review-to-complete
 rawEvidence:
   locator: evaluations/evidence/review/cross-domain-direct-1.txt
-  sha256: 8d8ae0872db6637c1db52384a953350f441de0f3c4233cfb57bebc5b1bfdaabf
+  sha256: 453deb0428434977558a7eec1871db8fdc3a381c82e5cb83bbb850aad5ba7031

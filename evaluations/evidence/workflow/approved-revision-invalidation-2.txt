@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 This is an extension or Constraint change to the approved email result. I recorded E8 as the successor to E7, with subject "Schedule changed," and invalidated the Review and approval that were bound to E7. The effect guard therefore rejects E7's stale approval for E8.
 
 I have not sent the email. E8 is waiting for Review and fresh approval bound to exact revision E8; after that approval, Workflow remains responsible for sending E8 and verifying the send effect.

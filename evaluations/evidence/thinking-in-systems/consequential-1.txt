@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 ## Governance assessment — proposed intake-classification successor
 
 This is a material change to a Durable system: it changes a classification rule, affects all new intake and existing state, and creates migration, support, recovery, and proof obligations. Reopen the system boundary. Do not apply the new rule next week until an authorized successor System Record and linked Change and Legacy Record are ready.

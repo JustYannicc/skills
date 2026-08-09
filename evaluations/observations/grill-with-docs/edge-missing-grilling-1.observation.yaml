@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-edge-missing-grilling
 attempt: 1
 contextId: fresh-gwd-edge-missing-grilling-1-egxl9qnx
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:41:55Z
 environment:
@@ -50,4 +50,4 @@ observed:
     - waiting-for-grilling-capability
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/edge-missing-grilling-1.txt
-  sha256: 25e12a5aec43df541e491cbc0cb85db396c74c5b1c7bdad4f29229ae3604bfc0
+  sha256: 31f96a8a7c2810f34e75b9435b82e064afb803194fd98f7741a4cbbfcc4d4c6f

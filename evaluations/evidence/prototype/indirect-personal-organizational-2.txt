@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Workflow route: Route one empirical learning question to Prototype. Workflow retains Ownership of the weekly-handoff Outcome, the unresolved routine decision, and parent completion. Prototype is authorized only for this real, one-session, reversible pilot; no Specification, implementation, decomposition, or Review phase is started.
 
 Prototype result

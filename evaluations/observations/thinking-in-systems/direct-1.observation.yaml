@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-direct
 attempt: 1
 contextId: fresh-thinking-in-systems-direct-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-terra-fresh-context-full-standard
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/direct-1.txt
-  sha256: 053d497918cfc5cefd6ad00eb72f5ef3c3b99d03b7c8cb5d2d1b804f066dc119
+  sha256: 873c1f1d0ee1a63bac3700c79b64b49af2b7e5ef7cf00a5696b4e2c995214429

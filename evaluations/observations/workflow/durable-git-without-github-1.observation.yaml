@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-git-without-github
 attempt: 1
 contextId: workflow-durable-git-without-github-fresh-luna-max-20260808-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T13:02:00Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [waiting-or-recovery-with-owned-continuation]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-git-without-github-1.txt
-  sha256: 39b76ee835cfb64214329493a5fa89d2f5fac5186444b6cfee69d00b2bf37e85
+  sha256: a4f9240b05eeea0ffe98d457109ce7a07a5caead446347fea60cae4c92d081ad

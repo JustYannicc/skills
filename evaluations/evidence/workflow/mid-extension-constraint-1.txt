@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 I’m applying Thinking in Systems inside the existing Workflow context. This message is a material extension of O1 plus a constraint on legacy treatment: add Saturday desk coverage, while preserving the accepted contact sheet exactly as approved.
 
 Change proposal (append to O1’s durable history):

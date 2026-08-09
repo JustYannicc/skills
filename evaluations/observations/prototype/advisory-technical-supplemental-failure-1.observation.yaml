@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-advisory-technical-supplemental-failure
 attempt: 1
 contextId: fresh-sol-high-r2-prototype-advisory-technical-supplemental-failure-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:03:22Z
 environment:
@@ -39,4 +39,4 @@ observed:
   state: [core-verdict-ready-with-advisory-failure]
 rawEvidence:
   locator: evaluations/evidence/prototype/advisory-technical-supplemental-failure-1.txt
-  sha256: 68330092b1d00d3316bd5711a7b69dfa0940e5a92fe9e74d7618fe30ffabdcef
+  sha256: c6fe0fc9a4fc61cfaf40107203de02dde9ce36ec3bc3b403ebd334479d8fa357

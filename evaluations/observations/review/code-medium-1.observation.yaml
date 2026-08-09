@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-code-medium
 attempt: 1
 contextId: final-sol-review-code-medium-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:03.000Z
 environment:
@@ -50,4 +50,4 @@ observed:
     - in_review-to-accepted
 rawEvidence:
   locator: evaluations/evidence/review/code-medium-1.txt
-  sha256: 3953ba7b5439738b65c2f1f79ba8bb424f33f94b576afad780aafd6be247c0b7
+  sha256: c29da3c5be5bb1ac3535de5f394533a318ac87b473fbda75404fd0aeef8b96d5

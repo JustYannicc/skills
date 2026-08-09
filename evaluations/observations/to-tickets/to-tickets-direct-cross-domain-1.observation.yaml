@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-direct-cross-domain
 attempt: 1
 contextId: fresh-to-tickets-direct-cross-domain-editorial-20260809-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:50:00.000Z
 environment:
@@ -42,4 +42,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-direct-cross-domain-1.txt
-  sha256: eed2341f1301e46698c3f85df98d491e75731dc220f49082bd2d98da0e8bd48a
+  sha256: 95ca58a8e71168fa9fd62a4a9e9abb785f018c338bd73378b0eda2ff93c7f24d

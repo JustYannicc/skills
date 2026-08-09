@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 This is an authorized informed exception. The stated policy grants the communications owner Authority to waive this optional safeguard, and the message comes from that owner.
 
 Exception record: for O3's current internal-notice draft only, skip the optional second-reader check. The accepted plausible consequence is a wording defect. Immediate Review remains required; if it finds ambiguity, restore the second-reader check before distribution. The waiver ends with this draft's distribution decision and does not alter the policy or any other safeguard.

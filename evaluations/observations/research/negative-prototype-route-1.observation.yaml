@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-negative-prototype-route
 attempt: 1
 contextId: fresh-research-negative-final-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:19:31Z
 environment:
@@ -37,4 +37,4 @@ observed:
     - ready-for-prototype
 rawEvidence:
   locator: evaluations/evidence/research/negative-prototype-route-1.txt
-  sha256: 4c325321d2d77c4a8d8ee4335699b588f517f37e91c2eb4b219937f582f6606a
+  sha256: ca9322d1a6f91b36a597532c1ee4a2dd8cfe8b194c1ddb35d4a29909df15ebba

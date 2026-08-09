@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 ## Governance assessment — no rule change applied
 
 This is a material change to a Durable intake-classification System: it changes the governing rule for all future intake and can re-evaluate existing state. The System boundary must be reopened. The requested cutover date is an input, not authorization to alter classifications.

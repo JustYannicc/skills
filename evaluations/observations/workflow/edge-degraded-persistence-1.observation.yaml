@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-edge-degraded-persistence
 attempt: 1
 contextId: workflow-edge-degraded-persistence-1db9f1f-sol-high-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:06:16Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-durable-continuation]
 rawEvidence:
   locator: evaluations/evidence/workflow/edge-degraded-persistence-1.txt
-  sha256: 239a3c53e610d7e61112b65e9b8cfd018b44f44833c9e1429aed2b1c256da0bf
+  sha256: c8101e6fb5d90a66b1ff9f8751fe7ba96dca2c145e9ce1f5c45e23a0297ed796

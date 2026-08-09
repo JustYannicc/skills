@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-indirect-personal-organizational
 attempt: 2
 contextId: fresh-sol-high-r3-prototype-live-pilot-2
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:23:48Z
 environment:
@@ -38,4 +38,4 @@ observed:
   state: [pilot-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/indirect-personal-organizational-2.txt
-  sha256: d8ca09e1b3612fc07b846a690fcea0c4fc02df0f75265f0744232f342fdd165d
+  sha256: 6706b1b22ba12d9039074861ab68e0bd42bbcd68227956f3c12bd9287a9fbb0e

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-incomplete-scope
 attempt: 1
 contextId: fresh-research-incomplete-final-1
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:18:18.000Z
 environment:
@@ -39,4 +39,4 @@ observed:
     - waiting-for-scope
 rawEvidence:
   locator: evaluations/evidence/research/incomplete-scope-1.txt
-  sha256: c1ad2f783fd2fd6a574dbe44d35ebadf64747f9f38d34a237011de0284059bc7
+  sha256: b7c6ef474b5d5cd61fb3e9828a81f6a89db61f20a1e08ad33ae20f1fd87abeb7

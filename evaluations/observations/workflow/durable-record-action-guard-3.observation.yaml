@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-record-action-guard
 attempt: 3
 contextId: d6a2f9b4-7c18-4e53-8b0d-1a6f3c9e5b72
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T14:20:03Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [blocked-stale-revision-recovery]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-record-action-guard-3.txt
-  sha256: cde7f917b4a0a5aaf2d1d418c4304c8b0e507d5b7568670e333f35c9f4b1a0b9
+  sha256: 662f6208b69822c46caa7851537851f84706ca1ba790832bbb0c140747574c0b

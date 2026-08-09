@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 ## Framing-robustness governance assessment
 
 The System of interest is the rollout-option decision for the same 100 in-scope cases over the same period. The shared reference point is 100 cases. No selection, rollout, or other effect is authorized by this assessment; the Workflow skill retains coordination and the authorized decision.

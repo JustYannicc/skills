@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-negative-fact-only
 attempt: 1
 contextId: fresh-grilling-negative-fact-only-v12-1-788bff0f-88cf-451b-9be6-7f0fd4241ca8
-suiteRevision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:50:37Z
 environment:
@@ -36,4 +36,4 @@ observed:
   state: [answered]
 rawEvidence:
   locator: evaluations/evidence/grilling/negative-fact-only-1.txt
-  sha256: 2eeab3f3ea7401e54aa7de5197aab1e8a6cd42162a15e3994317de7348e103a6
+  sha256: f1481c35a9ffefb3b683cc0f8b1722d502dfba5ba703f746d8064b681c0620ab

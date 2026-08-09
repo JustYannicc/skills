@@ -1,4 +1,4 @@
-Suite revision: git:befffd9a73bd95c3fe2362057c8affaa60031f76
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 I classify this as an authorized override / Informed exception within active Outcome O3. The stated policy gives the communications owner Authority to waive the optional second-reader check for one internal draft, so that Authority is sufficient for this bounded exception.
 
 Informed-exception record:
