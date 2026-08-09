@@ -50,6 +50,9 @@ skills:
   - name: workflow
     provenance:
       strategy: original
+  - name: migrate-system
+    provenance:
+      strategy: original
   - name: to-spec
     provenance:
       strategy: adapted

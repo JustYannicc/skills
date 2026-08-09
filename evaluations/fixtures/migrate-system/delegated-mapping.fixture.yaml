@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: migrate-system-delegated-mapping
+title: Independent mapping delegates while one owner integrates the whole
+shape: edge
+kind: composition
+skill: migrate-system
+domains: [organizational, software]
+severity: Critical
+requiredAttempts: 3
+runtimeReferences: [skills/migrate-system/references/current-state-mapping.md]
+prompt: |
+  Adopt our support operation into Workflow. Customer escalation, on-call tooling, and staffing records can be mapped independently. Delegate those three areas, but make one integrated map and keep conflicting ownership claims visible.
+environment:
+  id: delegated-support-operation
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true, concurrentClaims: true }
+  tools: [selected Adapter, bounded mapping workers, escalation records, tooling records, staffing records]
+expected:
+  actions: [join the active Workflow context, create bounded nonoverlapping child mapping contracts with owners sources proof seams and return routes, dispatch only independent mapping areas concurrently, collect revision-bound child evidence, reconcile duplicates conflicts and gaps, verify one integrated map]
+  artifacts: [three bounded child mapping results, one canonical integrated current-state revision and derived map]
+  effects: [representation and coordination state only]
+  invoked: [thinking-in-systems, workflow, migrate-system]
+  notInvoked: [parent responsibility transfer, child-result aggregation without integration]
+  proof: [every child source and revision remains traceable and conflicting ownership claims remain visible after integration]
+  responsibility: [each child owner owns its bounded result, migration owner integrates and verifies the whole, Workflow retains parent Outcome responsibility]
+  route: [delegated-conformance-migration, integrated-review-return]
+  state: [child-results-integrated, migration-map-verified]
+  forbidden: [treat delegated child completion as migration or parent completion, overwrite one ownership claim to remove a conflict]

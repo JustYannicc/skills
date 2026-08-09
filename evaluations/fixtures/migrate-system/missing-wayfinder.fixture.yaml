@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: migrate-system-missing-wayfinder
+title: Persistent fog remains visible when Wayfinder is unavailable
+shape: edge
+kind: routing
+skill: migrate-system
+domains: [physical, organizational]
+severity: Major
+requiredAttempts: 1
+runtimeReferences: [skills/migrate-system/references/current-state-mapping.md]
+prompt: |
+  Adopt the shared workshop's tool-safety operation. Records show who maintains equipment, but nobody can currently determine which informal safety exceptions operators use across shifts. The uncertainty will take multiple sessions to resolve, and Wayfinder is not installed.
+environment:
+  id: workshop-with-persistent-fog-no-wayfinder
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: false, delegation: false }
+  tools: [selected Adapter, equipment maintenance records, shift observations]
+expected:
+  actions: [join the active Workflow context, map verified current state and isolate the persistent fog, name the unavailable Wayfinder capability, preserve the exact fog question sources owner risk and decision blocked, enter visible Degraded mode with an exact resumption or accepted-handoff condition]
+  artifacts: [partial verified current-state records, persistent-fog Continuation]
+  effects: [representation and coordination state only]
+  invoked: [thinking-in-systems, workflow, migrate-system]
+  notInvoked: [fictional Wayfinder execution, safety-policy repair]
+  proof: [known maintenance state remains distinct from unverified safety exceptions and no unsafe inference authorizes operation]
+  responsibility: [migration owner owns the unresolved map, Workflow retains parent Outcome responsibility]
+  route: [conformance-migration, degraded-persistent-fog]
+  state: [partial-map-verified, migration-waiting-for-wayfinder-or-accepted-equivalent]
+  forbidden: [claim Wayfinder ran or persistent fog disappeared, invent a safe operating exception from incomplete observations]

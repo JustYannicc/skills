@@ -8,8 +8,9 @@ This repository is being built around a simple idea: agents become much more use
 
 No skill has been published yet. Thinking in Systems, Workflow's Inline and
 Durable routes, To Spec, To Tickets, Domain Modeling, Review, and Prototype are
-approved. Suite publication remains gated by the composed-suite and
-clean-install proof in #31 and the immutable-release review in #32.
+approved. Migrate System is an implementation candidate awaiting required human
+review. Suite publication remains gated by the composed-suite and clean-install
+proof in #31 and the immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved
 
@@ -43,6 +44,18 @@ one human-readable Markdown authority with constrained YAML formal fields,
 native Adapter mappings where appropriate, and optional read-only projections.
 Yannic approved the Durable route in issue #14, and PR #45 merged it into
 `main`. This approval does not change private or global configuration.
+
+### [Migrate System](skills/migrate-system) — candidate
+
+Migrate System adopts one existing operating scope by recording and verifying
+its actual current state through ordinary Workflow. It maps sources,
+boundaries, Actors, Responsibility, interfaces, active work, dependencies,
+Evidence, waiting, unknowns, and provenance into the selected canonical
+Adapter, while keeping the navigational Map derived. Independent areas may be
+delegated, but one migration owner integrates and verifies the whole.
+Persistent fog routes to Wayfinder; every discovered repair or redesign returns
+to ordinary Workflow. The candidate for issue #15 remains human-review-required
+and does not change private or global configuration.
 
 ### [To Spec](skills/to-spec) — approved
 
@@ -80,7 +93,7 @@ proof.
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 17 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied. For documented planning and design, Grill With Docs composes Grilling's decision-tree interview with Domain Modeling's shared-language and decision records through the selected Adapter.
 
-The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), and [historical Workflow Durable candidate handoff](docs/handoffs/2026-08-08-workflow-durable-candidate.md).
+The roster and its one-job boundaries are recorded in the [skill suite roster](docs/SUITE_ROSTER.md). Its complete public-safe inputs are preserved in the [source archive](docs/source/README.md), including the full universalized S01 standard, reusable template, skill-design record, supporting research, private-source fingerprints, and the [requirements ledger](docs/requirements/REQUIREMENTS_LEDGER.md). See also the [roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [development setup](docs/DEVELOPMENT.md), the [current Migrate System candidate handoff](docs/handoffs/2026-08-09-migrate-system-candidate.md), and the [historical Workflow Durable candidate handoff](docs/handoffs/2026-08-08-workflow-durable-candidate.md).
 
 Publication evidence, clean-install proof, behavioral evaluation, and the
 separate private-activation gate are defined by the

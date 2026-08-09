@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: migrate-system-incomplete-sources
+title: Missing sources preserve a truthful waiting migration
+shape: incomplete
+kind: invocation
+skill: migrate-system
+domains: [organizational]
+severity: Major
+requiredAttempts: 1
+runtimeReferences: [skills/migrate-system/references/current-state-mapping.md]
+prompt: |
+  Migrate our grant-review process into Workflow. I know it exists, but I cannot provide its records, owners, current applications, approval rules, or waiting cases yet.
+environment:
+  id: inaccessible-grant-review-sources
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
+  tools: [selected Adapter]
+expected:
+  actions: [join the active Workflow context, record the request as provenance without treating it as a complete operational source, identify the smallest material source and actor access needed, preserve known unknowns and prohibited assumptions, create an owned Continuation with unblock condition next check and resumption action]
+  artifacts: [proposed migration scope, waiting Continuation record]
+  effects: [representation and coordination state only]
+  invoked: [thinking-in-systems, workflow, migrate-system]
+  notInvoked: [fabricated current-state map, process redesign]
+  proof: [the migration remains incomplete and every material missing input has an owner or explicit external dependency]
+  responsibility: [migration owner remains responsible while waiting, Workflow retains parent Outcome responsibility]
+  route: [incomplete-conformance-migration, owned-waiting]
+  state: [migration-waiting]
+  forbidden: [infer owners approval rules active applications or waiting state from the request alone, claim the scope is canonically mapped]
