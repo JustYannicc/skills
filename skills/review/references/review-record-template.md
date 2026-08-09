@@ -18,6 +18,16 @@ Use this template for every Review record. Preserve the named fields, but compre
 
 [Explain the Material path in a few sentences: trigger or input → decisive behavior or state transition → visible output or effect. Include the Material degraded or recovery path. For a UI or other human–System interaction, describe the experienced flow and feedback, not merely its implementation.]
 
+## Simplicity challenge
+
+**Core Outcome and good-enough threshold:** [the issue that matters and the minimum acceptable result]
+
+**Best credible 80/20 alternative:** [the cut or consolidation, or why none exists]
+
+**Trade-off:** [value retained · what becomes worse or riskier · reversibility · whether the reduced result still crosses the threshold]
+
+**Disposition:** [keep the current result | optional simplification | finding reference]
+
 ## Evidence
 
 ### Specification
@@ -30,7 +40,7 @@ Use this template for every Review record. Preserve the named fields, but compre
 
 | Governing rule | Observation at the Proof seam | Exact Evidence reference | Status |
 | --- | --- | --- | --- |
-| [standard and exact version] | [including interaction quality, maintainability, or System fit when Material] | [condition, method, result, observer, time, location, exact revision; use `unknown—not supplied` for absent provenance] | [pass | fail | unknown] |
+| [standard and exact version] | [including essentiality and proportionality, interaction quality, maintainability, or System fit when Material] | [condition, method, result, observer, time, location, exact revision; use `unknown—not supplied` for absent provenance] | [pass | fail | unknown] |
 
 ## Findings
 
