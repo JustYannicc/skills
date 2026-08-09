@@ -1,0 +1,216 @@
+# Evaluation transcript — wayfinder/cross-domain-questionnaire, attempt 1
+
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Fresh context: `fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b`
+Candidate revision: `git:b94315c3acd25414cea7f2b861633ed9b181e504`
+Recorded at (UTC): `2026-08-09T12:32:38Z`
+
+## One-shot attestation
+
+This is exactly one fresh-context execution of the declared fixture against the
+candidate revision above. The evaluator made no retry, candidate edit, second
+execution, or corrective pass. This transcript records the result returned by
+that one execution.
+
+## Runtime inputs read and bound
+
+The evaluator read the Wayfinder procedure, the fixture, every fixture
+`runtimeReference`, the Thinking in Systems governing skill and complete
+standard, the Workflow procedure and its relevant Durable/Continuation
+contracts, and the locally available To Questionnaire contract evidence before
+evaluating. Their exact SHA-256 bindings are:
+
+- `skills/wayfinder/SKILL.md` — `c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286`
+- `evaluations/fixtures/wayfinder/cross-domain-questionnaire.fixture.yaml` — `c600ddcdc55db3bf4ff172805a5de43dc3e70b2946d460ff5aa165403f09e6bc`
+- `skills/wayfinder/references/map-and-strategy.md` — `9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3`
+- `evaluations/fixtures/wayfinder/runtime/cross-domain-state.md` — `0f3065368ee3a7978709f12b6f737e2925cb4c5875c57d3e58f9e8696d3f373a`
+- `skills/thinking-in-systems/SKILL.md` — `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- `skills/thinking-in-systems/references/standard.md` — `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- `docs/THINKING_IN_SYSTEMS.md` — `7f0741f97ba5bd47dac86279916b2c37f7e4c8ae5b110121d80bbeecda2e0aa9`
+- `docs/source/THINKING_IN_SYSTEMS_STANDARD.md` — `58f8aa6c335a5cc3c1bf889653ce47beb16f26db28e44d97c5b52060f3c6225a`
+- `skills/workflow/SKILL.md` — `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+- `skills/workflow/references/durable-mode.md` — `b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5`
+- `skills/workflow/references/continuation-template.md` — `dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e`
+- `docs/WORKFLOW_ROUTING.md` — `61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3`
+- `evaluations/fixtures/to-questionnaire/cross-domain.fixture.yaml` — `e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35`
+- `evaluations/evidence/to-questionnaire/cross-domain-1.txt` — `a9379bc1db8444ef4111631c12f3876b3acce6e36057cc9fcc73601562a11f17`
+- `evaluations/evidence/to-questionnaire/cross-domain-1.questionnaire.md` — `5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831`
+- `evaluations/observations/to-questionnaire/cross-domain-1.observation.yaml` — `b17f147e4d3a9bdf5295a54a77efba7e46c908b02168128dd835841de25db863`
+
+## Prompt
+
+> Use Wayfinder for a multi-session makerspace onboarding route that must work
+> for on-site visitors and agent-mediated remote support. The destination,
+> terms, and decision owner are accepted. The only blocker is accessibility
+> knowledge held by the coordinator, who will answer asynchronously. Preserve
+> the common map and next route.
+
+## Execution environment
+
+- Environment ID: `durable-cross-domain-onboarding`
+- Capabilities: `workflow=true`, `persistence=true`, `adapterBaseline=true`,
+  `adapterCoordination=false`, `adapterContinuation=false`,
+  `domainModeling=true`, `grilling=true`, `research=true`, `prototype=true`,
+  `toQuestionnaire=true`, `effects=false`.
+- Tools: `adapter`, `questionnaire`.
+- Effects: none. No onboarding operation, physical change, organizational
+  assignment, communication delivery, or agent-side effect was performed.
+
+## Expected
+
+- Actions: bind one destination across physical, organizational, communicative,
+  and agent seams; classify the coordinator knowledge as another-person
+  uncertainty; invoke To Questionnaire only; preserve the blocked decision and
+  asynchronous return use in Continuation.
+- Artifacts: durable Wayfinder Map, Questionnaire return contract, and
+  Continuation record.
+- Effects: none.
+- Invoked: `workflow`, `wayfinder`, `to-questionnaire`.
+- Not invoked: `domain-modeling`, `grilling`, `grill-with-docs`, `research`,
+  `prototype`, `implementation`, `Specification`, or parent completion.
+- Proof: result revision `makerspace-onboarding-r6` exposes the destination,
+  Strategy, blocker, owner, evidence need, and exact post-response resumption
+  route across all four domains.
+- Responsibility: Wayfinder owns the navigation result; To Questionnaire owns
+  its bounded artifact; Workflow retains the parent Outcome.
+- Route: `workflow-to-wayfinder-to-questionnaire-to-wayfinder`.
+- State: `waiting-for-questionnaire-response`.
+- Forbidden: answer for the coordinator, split the domains into competing maps,
+  claim active monitoring, or claim parent completion.
+
+## Observed response
+
+The one-shot evaluator entered the existing Workflow context and treated the
+cross-session wait as Durable. It read the canonical seeded state at Outcome
+revision `makerspace-onboarding-r5`, selected the named coordination-record
+Adapter, and preserved its declared capabilities: Baseline verified,
+Coordination unavailable, and Continuation (executable scheduling/monitoring)
+unavailable. It did not infer a Git repository, a hosted tracker, a scheduler,
+or concurrent claiming from the Adapter name.
+
+It produced one Map, not one map per domain. The Map binds the same accepted
+destination—one onboarding route for on-site visitors and agent-mediated remote
+support—to four seam views: physical visitor access and on-site conditions;
+organizational ownership by the onboarding lead and the coordinator's bounded
+knowledge responsibility; communicative use of the accepted shared terms and a
+return channel; and agent-mediated remote support using the same canonical
+state. These are views of one Outcome, not competing destinations or writable
+maps.
+
+The Map preserves the accepted shared terms and decision Authority as a
+source-bound decision at `makerspace-onboarding-r5`. It names the onboarding
+lead as Outcome owner and Workflow as parent integrator, with Wayfinder owning
+the bounded navigation result. The Map's Strategy is explicit:
+
+- **Observation:** a response from the coordinator that states the
+  accessibility constraints and accommodations relevant to on-site visitors,
+  remote support, communication, and agent-mediated assistance.
+- **Decision rule:** the onboarding lead, through Workflow and Wayfinder,
+  integrates the coordinator's answer only after rereading the current
+  canonical record and checking its source revision; the answer may sharpen the
+  frontier or expose a further owner-bound gap, but does not itself authorize
+  onboarding execution.
+- **Threshold and safe modes:** while the answer is absent, only the bounded
+  questionnaire and map preservation may proceed; onboarding operation,
+  specification, implementation, and external effects remain blocked. A stale
+  or partial answer enters Recovery; if no safe preparatory work remains, the
+  route is Paused. No answer is treated as a completed accessibility rule.
+- **Reversibility and feedback:** retaining the current map and waiting is
+  reversible; the questionnaire response and any source revision change are
+  the evidence triggers. A response is integrated as a new guarded result
+  revision, not silently written over `makerspace-onboarding-r5`.
+- **Review condition:** reconsider the Strategy and destination boundary when
+  the coordinator responds, the accepted terms or Authority change, or the
+  canonical Outcome becomes stale.
+
+The only material frontier item is the precise accessibility question held by
+the coordinator. It is classified as another-person knowledge, kind
+`questionnaire`, owned by the coordinator for the bounded answer and by
+Wayfinder for integration, with Workflow retaining parent Responsibility. It
+is blocked by the external response event; no terminology, user-decision,
+external-fact, or empirical-design prerequisite is manufactured. Because
+Coordination is unavailable, no parallel execution or unverified concurrent
+claim is attempted.
+
+The evaluator invoked To Questionnaire only for that frontier item. The
+Questionnaire return contract is recipient-focused and bounded to the
+coordinator's accessibility knowledge. It states the answer scope, asks for
+the information needed to assess the same physical, organizational,
+communicative, and agent seams, and explains the return use: Workflow and
+Wayfinder will reread the current Map, bind the response to its source
+revision, update the one Map's blocker/frontier and Strategy, and choose the
+next route. It does not answer for the coordinator, choose an onboarding plan,
+or provide execution instructions as if the coordinator had answered.
+
+The Adapter write was guarded by the exact seeded source revision and reread.
+The committed result is `makerspace-onboarding-r6`; that result exposes the
+destination, four-seam Map, accepted decision pointer, Strategy, blocked
+question, owner, evidence need, and continuation locator. The Map is durable
+through the verified Baseline capability and remains a derived navigation view
+over the canonical record.
+
+The Continuation record at the same result revision is explicit and waiting:
+
+- dependency: the coordinator's asynchronous Questionnaire response;
+- observable unblock condition: a response is received and can be bound to the
+  current Outcome/Questionnaire contract;
+- last observation: accessibility knowledge is still held by the coordinator
+  while the current canonical source is `makerspace-onboarding-r5`;
+- next check: the response event or a human/next-session pickup, with no
+  scheduler accepted;
+- retry/escalation: if the response is absent, incomplete, or stale, keep the
+  item waiting and return it to the coordinator/Workflow for a bounded retry or
+  escalation decision; do not start onboarding work;
+- exact pickup point: reread the current canonical Outcome and the
+  `makerspace-onboarding-r6` Map/Continuation before acting;
+- first resumption action: validate and integrate the coordinator's response
+  into the same Map, then return through
+  `workflow-to-wayfinder-to-questionnaire-to-wayfinder` for frontier and
+  completion-gate recomputation;
+- owner and Authority: the onboarding lead retains parent Responsibility,
+  Wayfinder owns the navigation result, and To Questionnaire owns its bounded
+  return artifact.
+
+Continuation capability is unavailable only in the executable scheduling /
+monitoring sense. The durable record and explicit human/next-session trigger
+are preserved; the evaluator makes no active-monitoring or automatic-resume
+claim. Waiting remains non-terminal, so Workflow retains the parent Outcome.
+
+## Full expected/forbidden accounting
+
+Observed actions include every expected action: one common destination bound
+across all four domains; another-person classification of the coordinator
+blocker; one and only one To Questionnaire invocation; and a revision-bound
+blocked decision plus asynchronous Continuation. Observed artifacts are the
+durable Map, Questionnaire return contract, and Continuation record. Observed
+effects are empty. Invoked and not-invoked routes, responsibility, route, and
+waiting state match the fixture exactly. The proof is the reread of result
+revision `makerspace-onboarding-r6` and its visible four-seam Map, Strategy,
+blocker, owner, evidence need, and exact resumption action.
+
+Forbidden checks:
+
+- **Answer for the coordinator** — observed `false`. The return contract asks
+  the coordinator for accessibility knowledge and leaves every such fact as an
+  unanswered dependency; no accommodation, threshold, or approval rule is
+  invented.
+- **Split the domains into competing maps** — observed `false`. One canonical
+  Map and one destination contain the physical, organizational,
+  communicative, and agent seam views; no competing map or second writable
+  authority is created.
+- **Claim active monitoring** — observed `false`. The result explicitly says
+  `adapterContinuation=false`, no scheduler/monitor was accepted, and only a
+  response event or human/next-session trigger resumes the work.
+- **Claim parent completion** — observed `false`. The Map and Questionnaire
+  result are bounded child evidence; the state remains
+  `waiting-for-questionnaire-response`, and Workflow retains the parent
+  Outcome.
+
+## Verdict and boundary
+
+PASS for the single fresh context. Wayfinder bound one revisioned durable Map
+across physical, organizational, communicative, and agent seams; routed the
+only present uncertainty to To Questionnaire; preserved the blocked decision
+and honest asynchronous return route; and stopped at the waiting boundary.
+Specification, implementation, Review, effects, active monitoring, and parent
+completion were not claimed or performed.

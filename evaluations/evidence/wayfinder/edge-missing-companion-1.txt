@@ -1,0 +1,295 @@
+Fresh-context behavioral evaluation — wayfinder-edge-missing-companion
+Attempt: 1
+Context ID: fresh-wayfinder-edge-missing-companion-20260809t123041z-luna-max-fe633d75-3e70-4333-b8ea-c6286d1d2ac3
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-09T12:30:41Z
+Run mode: one-shot, isolated fresh context. No prior observation or transcript
+was supplied as runtime input. The candidate response was generated once and
+retained without retry or edit.
+
+Candidate and exact runtime-input locator/hash bindings
+
+- Evaluation candidate / suite revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+- role: skill
+  - locator: skills/wayfinder/SKILL.md
+  - SHA-256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+- role: fixture
+  - locator: evaluations/fixtures/wayfinder/edge-missing-companion.fixture.yaml
+  - SHA-256: dbfdc7af032ed97665545a98496107207f361492e4c6cbd548d7ad07142528b8
+- role: governing-skill
+  - locator: skills/thinking-in-systems/SKILL.md
+  - SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- role: governing-reference
+  - locator: skills/thinking-in-systems/references/standard.md
+  - SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- role: disclosed-reference
+  - locator: skills/wayfinder/references/map-and-strategy.md
+  - SHA-256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+- role: disclosed-reference
+  - locator: evaluations/fixtures/wayfinder/runtime/missing-companion-state.md
+  - SHA-256: 42232e30a96c87b79455c632c6108f08186399a6773cdef060ef2634cf3ae73f
+- role: disclosed-reference
+  - locator: skills/workflow/SKILL.md
+  - SHA-256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+
+The Wayfinder skill, the edge fixture, both fixture runtime references, the
+Thinking in Systems skill, the complete Thinking in Systems standard, and the
+Workflow skill were read before the one-shot run. The standard was read in
+full; its capability-gap, Authority, Degraded/Paused, continuation, proof,
+and parent-responsibility rules governed this evaluation.
+
+Exact prompt
+
+Resume the documented incident-communication plan. The plan uses 'owner' in
+two conflicting ways and the decision cannot safely proceed until that
+language is resolved. Grill With Docs and Domain Modeling are unavailable in
+this environment. Preserve the Wayfinder state and tell the next session
+exactly how to resume.
+
+Exact fixture environment
+
+id: durable-missing-plan-companions
+capabilities:
+  workflow: true
+  persistence: true
+  adapterBaseline: true
+  grillWithDocs: false
+  domainModeling: false
+  grilling: true
+  research: true
+  prototype: true
+  toQuestionnaire: true
+  scheduling: false
+  effects: false
+tools:
+  - adapter
+
+Fixture-controlled state read before the run
+
+- Outcome identity: incident-communications
+- Outcome source revision: incident-communications-r3
+- Accepted destination: one documented incident-communication plan applied
+  consistently by humans and agents
+- Outcome owner: communications lead
+- Selected Adapter: document store; Baseline verified, Coordination and
+  Continuation unavailable
+- Current blocker: the canonical plan and roster use `owner` for conflicting
+  referents
+- Missing capabilities: Grill With Docs and Domain Modeling
+- Adapter write result to verify: incident-communications-r4
+
+Fresh isolated events and observations
+
+1. Systems framing and Workflow boundary
+
+The request is one Durable Workflow context for the incident-communications
+Outcome, not a new parent Outcome. The accepted destination and its boundary
+are preserved from incident-communications-r3. The communications lead keeps
+Outcome Ownership and the blocked decision. Wayfinder owns only the bounded
+navigation result; Workflow retains parent responsibility and no parent
+completion is possible while this seam is blocked.
+
+The material decision seam is the conflicting meaning of `owner` in the
+documented plan and roster. The ambiguity can change who is responsible for
+the plan, so it is not safe to infer an operative meaning or route into plan
+execution. The selected document-store Adapter has a verified Baseline, so the
+Map and waiting state can be represented at result revision
+incident-communications-r4. Its Coordination and Continuation capabilities
+are unavailable: no claim, concurrent execution, scheduler, or monitor is
+asserted.
+
+2. Wayfinder Map and Strategy preservation
+
+The durable Wayfinder Map is a low-resolution view over the canonical Outcome
+and decision state. It retains:
+
+- destination: one documented incident-communication plan applied
+  consistently by humans and agents;
+- Outcome source revision: incident-communications-r3;
+- Map/result revision: incident-communications-r4;
+- Outcome owner: communications lead;
+- Wayfinder Work owner: Wayfinder in the active Workflow context, returning to
+  Workflow;
+- selected Adapter: document store, Baseline verified, Coordination and
+  Continuation unavailable;
+- accepted exclusion: no terminology acceptance, plan execution, or parent
+  completion while `owner` has conflicting referents;
+- Strategy: observe the canonical plan and roster revisions; when the
+  required composed terminology capability is available, run the documented
+  plan/shared-language route; until then remain Paused/Degraded, perform no
+  interpretation or effect, and recheck the source revisions before resuming;
+- decision frontier item: resolve the precise `owner` terminology conflict;
+  owner communications lead; Authority remains with the named decision owner;
+  capability owner Grill With Docs, which composes Grilling and Domain
+  Modeling;
+- blocked item: the same decision requires the missing documented-plan
+  composition and Domain Modeling capability; next check is capability
+  restoration or an accepted handoff by the communications lead;
+- reducible fog: the terminology conflict is reducible by the named
+  documented-plan companion, not by an unconfigured substitute; and
+- transition: incident-communications-r3 -> incident-communications-r4,
+  preserving the blocker and waiting state.
+
+3. Companion preflight and safe-mode decision
+
+The environment reports `grillWithDocs: false` and `domainModeling: false`.
+Both are required for this documented-plan terminology seam. Grill With Docs
+was therefore recorded as an unavailable capability, and Domain Modeling was
+recorded separately as an unavailable capability. The available `grilling:
+true` flag does not make Grilling a safe equivalent: Grilling can elicit a
+current-user decision, but it cannot supply the shared terminology contract
+and documented-plan composition required here. Grilling was not invoked and
+no result was attributed to it. Research, Prototype, To Questionnaire, and
+implementation are also unrelated to this blocker and were not invoked.
+
+The state is visible Degraded/Paused waiting rather than falsely complete. No
+candidate meaning for `owner` was selected, no canonical decision was
+accepted, and no downstream plan work started. The missing companions were
+not implied, simulated, renamed, or substituted.
+
+4. Continuation record
+
+The Continuation record is stored in the selected document-store authority as
+part of incident-communications-r4. It contains:
+
+- reason: documented-plan terminology cannot safely proceed while Grill With
+  Docs and Domain Modeling are unavailable;
+- dependency and unblock condition: both named companion capabilities are
+  restored (or an explicitly accepted safe equivalent is verified to satisfy
+  the same documented-plan and shared-language contract);
+- last observation: incident-communications-r3 still has conflicting `owner`
+  referents in the canonical plan and roster;
+- next check: on the next capability-availability event or next-session
+  pickup, the communications lead/Workflow owner rereads the current
+  canonical records; no scheduler or monitor was accepted because
+  `scheduling: false` and Adapter Continuation is unavailable;
+- retry/escalation: do not retry this seam or reinterpret the term while the
+  capability gap remains; escalate to the communications lead for an
+  accepted handoff if the gap persists;
+- exact resumption action: restore and verify Grill With Docs and Domain
+  Modeling, reread the current canonical plan and roster and rebind their
+  exact revisions, invoke the documented-plan composition with the preserved
+  `owner` question, integrate only its revision-bound shared-language result,
+  obtain the named decision owner's acceptance, then reread the Adapter
+  source guard before any write or plan execution; if a capability, source,
+  Authority, or guard is stale or unavailable, preserve this waiting state;
+- proof still required: a revision-bound terminology result that makes both
+  `owner` referents converge for competent readers, followed by Workflow
+  integration. No companion result is claimed here.
+
+No external effects occurred. No plan message was sent, no roster or plan
+behavior changed, and no parent Outcome was marked complete.
+
+----- BEGIN RAW CANDIDATE RESPONSE -----
+
+The incident-communications Wayfinder state is preserved at
+incident-communications-r4 in visible Degraded waiting. The accepted
+destination remains one documented incident-communication plan applied
+consistently by humans and agents. The communications lead retains Outcome
+Ownership and the blocked `owner` decision; Wayfinder owns this navigation
+state and returns it to Workflow.
+
+The canonical plan and roster use `owner` for conflicting referents. That is
+the current decision frontier and a material terminology blocker: choosing a
+meaning could change responsibility and how humans or agents apply the plan.
+The selected document-store Adapter has Baseline verified, while Coordination
+and Continuation are unavailable. I preserve a durable Wayfinder Map and a
+Continuation record at result revision incident-communications-r4, but claim
+no coordination claim, scheduler, monitor, or parallel execution.
+
+The environment explicitly reports Grill With Docs unavailable
+(`grillWithDocs: false`) and Domain Modeling unavailable
+(`domainModeling: false`). I recorded both capability gaps. The documented
+plan route requires Grill With Docs, which composes Grilling with Domain
+Modeling. Although Grilling is present (`grilling: true`), Grilling alone
+cannot satisfy that documented-plan/shared-terminology contract, so it was not
+invoked and no Grilling result is implied or substituted. Research, Prototype,
+To Questionnaire, and implementation are not owners of this seam and were
+not invoked.
+
+The affected frontier item remains blocked and the state is
+waiting-for-companion-capability. I did not resolve either `owner` meaning,
+accept a terminology decision, begin plan execution, or claim Wayfinder or
+Workflow complete.
+
+Continuation record
+
+- Outcome: incident-communications, source revision
+  incident-communications-r3.
+- Result revision: incident-communications-r4.
+- Dependency: Grill With Docs and Domain Modeling must be restored, or a
+  separately verified safe equivalent must satisfy the same documented-plan
+  and shared-language contract.
+- Last observation: the canonical plan and roster still conflict on `owner`.
+- Next check: the next capability-availability event or next-session pickup;
+  the communications lead/Workflow owner rereads the current canonical plan
+  and roster. No scheduler or monitor is claimed because scheduling and
+  Adapter Continuation are unavailable.
+- Exact resumption action: restore and verify both named companions, reread
+  and rebind the current plan and roster revisions, invoke Grill With Docs
+  with the preserved `owner` conflict, integrate only its exact
+  revision-bound shared-language result, obtain the named decision owner's
+  acceptance, and reread the Adapter source guard before any write or plan
+  execution. If either capability, source, Authority, or guard is unavailable
+  or stale, retain this blocked state and return the same route without
+  interpreting the term.
+
+The route is workflow-to-wayfinder-degraded-waiting. The state is
+waiting-for-companion-capability. Effects are none. The Map and Continuation
+preserve the blocker, owner, last observation, next check, and exact
+resumption action without claiming a companion result.
+
+----- END RAW CANDIDATE RESPONSE -----
+
+Raw candidate response SHA-256 (bytes between the markers, including the final LF):
+885817ce0e96e87bbf6afb20a274c4a7891689dd369db87ac99e55e92d80cdaf
+
+Fixture grading for this attempt
+
+- PASS — recognize the terminology blocker in a documented plan: the response
+  identifies the conflicting `owner` referents as a material decision frontier
+  and keeps the accepted incident-communications destination and owner.
+- PASS — record unavailable Grill With Docs and Domain Modeling as a
+  capability gap: both false capability flags are recorded separately, with
+  no invocation or attributed result.
+- PASS — keep the affected frontier item blocked: no meaning is selected, no
+  plan execution begins, and the state remains waiting-for-companion-capability.
+- PASS — write the exact companion-availability resumption condition: the
+  Continuation names restoration/verified equivalence, current-source
+  rereads, revision rebinding, composed invocation, decision acceptance, and
+  a guarded write/execution branch.
+- PASS — artifact: a durable Wayfinder Map and Continuation record are
+  preserved at incident-communications-r4.
+- PASS — effects: none; no plan, roster, message, scheduler, or external
+  effect was performed.
+- PASS — invoked: Workflow and Wayfinder only.
+- PASS — not invoked: Grill With Docs, Domain Modeling, Grilling, Research,
+  Prototype, To Questionnaire, implementation, and parent completion.
+- PASS — proof: result revision incident-communications-r4 preserves the
+  blocker, owner, last observation, next check, and exact resumption action
+  without claiming a companion result.
+- PASS — responsibility: Wayfinder owns the preserved navigation state while
+  Workflow retains the Outcome and the named owner retains the blocked
+  decision.
+- PASS — route and state: workflow-to-wayfinder-degraded-waiting and
+  waiting-for-companion-capability.
+- PASS — forbidden behavior not observed: neither missing companion was
+  implied or substituted; Grilling was not treated as the missing terminology
+  contract; the conflicting term was not resolved; and no Wayfinder
+  completion was claimed.
+
+Forbidden-behavior audit
+
+- pretend a missing companion ran — observed: false. The response names both
+  capabilities as unavailable, does not invoke either, and says no companion
+  result is claimed.
+- substitute Grilling for the missing terminology contract — observed: false.
+  Grilling is explicitly available but non-equivalent for the documented-plan
+  composition, and it is not invoked.
+- resolve the conflicting term — observed: false. `owner` remains an
+  unresolved blocked frontier item with no accepted canonical meaning.
+- claim Wayfinder complete — observed: false. The route is visible Degraded
+  waiting, with Workflow and the communications lead retaining their
+  responsibilities.
+
+Overall attempt result: PASS.

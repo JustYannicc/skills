@@ -1,0 +1,90 @@
+schemaVersion: 1
+fixtureId: wayfinder-edge-operating-delay
+attempt: 1
+contextId: fresh-wayfinder-edge-operating-delay-luna-max-20260809t123134z-60647341-9198-480f-b998-ef8d3d6e5029
+suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:31:34Z
+environment:
+  id: durable-pantry-observation
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: false
+    adapterContinuation: false
+    effects: false
+  tools: [adapter, event-log]
+observed:
+  actions:
+    - "classify arrival bunching as fog reducible only after operating"
+    - "preserve the four-event observation horizon and permitted low-volume route"
+    - "record the queue observations threshold owner Authority safe mode and recovery"
+    - "return the item to the decision frontier when the fourth event evidence is accepted"
+  artifacts:
+    - "durable Wayfinder Map"
+    - "operating Strategy"
+    - "Continuation record"
+  effects: []
+  forbiddenChecks:
+    - criterion: "call arrival bunching irreducible"
+      evidence: "The result explicitly classifies arrival bunching as reducible after four bounded operating events and explains why that differs from irreducible fog."
+      observed: false
+    - criterion: "create a speculative immediate decision Ticket"
+      evidence: "No Ticket is created before the fourth accepted event; the precise timed-pickup item is added or updated only at the explicit frontier trigger."
+      observed: false
+    - criterion: "claim the four events ran"
+      evidence: "The event-log trace is [] and the response records only the future observation protocol; no pantry event was run."
+      observed: false
+    - criterion: "claim active monitoring"
+      evidence: "adapterContinuation=false and effects are disabled; the continuation is explicitly human-triggered and no scheduler, monitor, or ambient operation is claimed."
+      observed: false
+    - criterion: "claim parent completion"
+      evidence: "Workflow retains the parent Outcome and terminal-proof duty; Wayfinder returns only its bounded Map, Strategy, and Continuation result."
+      observed: false
+  invoked:
+    - workflow
+    - wayfinder
+  notInvoked:
+    - research
+    - domain-modeling
+    - grilling
+    - grill-with-docs
+    - prototype
+    - to-questionnaire
+    - event operation
+    - implementation
+    - parent completion
+  proof:
+    - "result revision pantry-pickup-r4 distinguishes operating-delay fog from irreducible fog and binds its horizon evidence protocol decision trigger permitted route safe mode recovery ownership Authority and exact resumption action"
+  responsibility:
+    - "Wayfinder owns the observation strategy while the event lead and Workflow retain operation and the parent Outcome"
+  route:
+    - workflow-to-wayfinder-operating-delay-to-workflow
+  state:
+    - governed-operating-delay
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: disclosed-reference
+    locator: skills/wayfinder/references/map-and-strategy.md
+    sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/edge-operating-delay.fixture.yaml
+    sha256: 213d8eb9ea5b5bb78d15f0547bcf5acd3ff5294b138a4a51a80377027edb7b54
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/operating-delay-state.md
+    sha256: e0828c67173e8afc88674cb1c2be7b5026db03c12465dc18c6f0b78c3fdcecd1
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: governing-skill
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/edge-operating-delay-1.txt
+  sha256: 6f8ba5a4cef1393bcaba53537e72b75b27c3716c4fd28c56d00786ab77dc9f54

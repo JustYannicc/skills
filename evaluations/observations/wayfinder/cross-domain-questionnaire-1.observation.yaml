@@ -1,0 +1,101 @@
+schemaVersion: 1
+fixtureId: wayfinder-cross-domain-questionnaire
+attempt: 1
+contextId: fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b
+suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:32:38Z
+environment:
+  id: durable-cross-domain-onboarding
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: false
+    adapterContinuation: false
+    domainModeling: true
+    grilling: true
+    research: true
+    prototype: true
+    toQuestionnaire: true
+    effects: false
+  tools: [adapter, questionnaire]
+observed:
+  actions:
+    - bind one destination across physical organizational communicative and agent seams
+    - classify the coordinator knowledge as another-person uncertainty
+    - invoke To Questionnaire only
+    - preserve the blocked decision and asynchronous return use in Continuation
+  artifacts: [durable Wayfinder Map, Questionnaire return contract, Continuation record]
+  effects: []
+  forbiddenChecks:
+    - criterion: answer for the coordinator
+      evidence: The Questionnaire return contract leaves accessibility knowledge as an unanswered coordinator dependency and supplies no accommodation, threshold, or approval fact.
+      observed: false
+    - criterion: split the domains into competing maps
+      evidence: One canonical Map and one destination contain physical, organizational, communicative, and agent seam views; no second writable map is created.
+      observed: false
+    - criterion: claim active monitoring
+      evidence: The result records adapterContinuation=false, no scheduler or monitor was accepted, and only a response event or human/next-session trigger resumes the work.
+      observed: false
+    - criterion: claim parent completion
+      evidence: The result remains waiting-for-questionnaire-response; Wayfinder owns only the navigation result, To Questionnaire owns its bounded artifact, and Workflow retains the parent Outcome.
+      observed: false
+  invoked: [workflow, wayfinder, to-questionnaire]
+  notInvoked: [domain-modeling, grilling, grill-with-docs, research, prototype, implementation, Specification, parent completion]
+  proof: [result revision makerspace-onboarding-r6 exposes the destination strategy blocker owner evidence need and exact post-response resumption route across all domains]
+  responsibility: [Wayfinder owns the navigation result To Questionnaire owns its bounded artifact and Workflow retains the parent Outcome]
+  route: [workflow-to-wayfinder-to-questionnaire-to-wayfinder]
+  state: [waiting-for-questionnaire-response]
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/cross-domain-questionnaire.fixture.yaml
+    sha256: c600ddcdc55db3bf4ff172805a5de43dc3e70b2946d460ff5aa165403f09e6bc
+  - role: disclosed-reference
+    locator: skills/wayfinder/references/map-and-strategy.md
+    sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/cross-domain-state.md
+    sha256: 0f3065368ee3a7978709f12b6f737e2925cb4c5875c57d3e58f9e8696d3f373a
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: docs/THINKING_IN_SYSTEMS.md
+    sha256: 7f0741f97ba5bd47dac86279916b2c37f7e4c8ae5b110121d80bbeecda2e0aa9
+  - role: disclosed-reference
+    locator: docs/source/THINKING_IN_SYSTEMS_STANDARD.md
+    sha256: 58f8aa6c335a5cc3c1bf889653ce47beb16f26db28e44d97c5b52060f3c6225a
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+  - role: disclosed-reference
+    locator: skills/workflow/references/durable-mode.md
+    sha256: b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5
+  - role: disclosed-reference
+    locator: skills/workflow/references/continuation-template.md
+    sha256: dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e
+  - role: disclosed-reference
+    locator: docs/WORKFLOW_ROUTING.md
+    sha256: 61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3
+  - role: disclosed-reference
+    locator: evaluations/fixtures/to-questionnaire/cross-domain.fixture.yaml
+    sha256: e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35
+  - role: disclosed-reference
+    locator: evaluations/evidence/to-questionnaire/cross-domain-1.txt
+    sha256: a9379bc1db8444ef4111631c12f3876b3acce6e36057cc9fcc73601562a11f17
+  - role: disclosed-reference
+    locator: evaluations/evidence/to-questionnaire/cross-domain-1.questionnaire.md
+    sha256: 5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831
+  - role: disclosed-reference
+    locator: evaluations/observations/to-questionnaire/cross-domain-1.observation.yaml
+    sha256: b17f147e4d3a9bdf5295a54a77efba7e46c908b02168128dd835841de25db863
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/cross-domain-questionnaire-1.txt
+  sha256: 7c4f3bd970411626a9a39f5bdfab12792d6214314bc718393e8b30cb354418ea

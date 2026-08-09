@@ -1,0 +1,105 @@
+schemaVersion: 1
+fixtureId: wayfinder-indirect-multisession
+attempt: 1
+contextId: fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a
+suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:29:58.300Z
+environment:
+  id: durable-documented-plan
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: true
+    adapterContinuation: false
+    grillWithDocs: true
+    domainModeling: true
+    grilling: true
+    research: true
+    prototype: true
+    toQuestionnaire: true
+    effects: false
+  tools: [adapter, documented-plan]
+observed:
+  actions:
+    - route persistent multi-session fog to Wayfinder
+    - bind the documented plan and exact Adapter revisions
+    - invoke Grill With Docs for the conflicting terms and coordinator decisions
+    - preserve the resulting decisions frontier blockers and next-session resumption action
+  artifacts:
+    - durable Wayfinder Map
+    - operating Strategy
+    - Continuation record
+  effects: []
+  forbiddenChecks:
+    - criterion: invoke every discovery companion
+      evidence: The response invokes only the documented-plan composition required by the two present blockers—Grill With Docs, Grilling, and Domain Modeling—and explicitly leaves Research, Prototype, and To Questionnaire unused.
+      observed: false
+    - criterion: execute the plan
+      evidence: The response records no implementation or destination execution and states that no external effect occurred.
+      observed: false
+    - criterion: treat scheduling as completion
+      evidence: Continuation is explicitly manual because adapterContinuation=false; no scheduler, monitor, or active monitoring is claimed, and waiting is returned to Workflow.
+      observed: false
+    - criterion: duplicate decision detail in the Map
+      evidence: The Map carries one-line gists and canonical pointers; the response keeps the full terminology and escalation reasoning in the Grill With Docs result.
+      observed: false
+  invoked:
+    - workflow
+    - wayfinder
+    - grill-with-docs
+    - grilling
+    - domain-modeling
+  notInvoked:
+    - research
+    - prototype
+    - to-questionnaire
+    - implementation
+    - Specification
+    - parent completion
+  proof:
+    - another coordinator can resume from result revision volunteer-coordination-r9 without reconstructing material context
+  responsibility:
+    - Wayfinder owns the navigation result Grill With Docs owns its bounded composition result and Workflow retains the parent Outcome
+  route:
+    - workflow-to-wayfinder-to-grill-with-docs-to-wayfinder-to-workflow
+  state:
+    - durable-wayfinding-continuation
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml
+    sha256: d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/wayfinder/references/map-and-strategy.md
+    sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md
+    sha256: 2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+  - role: disclosed-reference
+    locator: skills/domain-modeling/SKILL.md
+    sha256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
+  - role: disclosed-reference
+    locator: docs/UNIVERSAL_WORK_CONTRACT.md
+    sha256: f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3
+  - role: disclosed-reference
+    locator: skills/workflow/references/durable-mode.md
+    sha256: b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5
+  - role: disclosed-reference
+    locator: skills/workflow/references/continuation-template.md
+    sha256: dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/indirect-multisession-1.txt
+  sha256: e06c82ce75ade20bb30327b6e0057348cf0ef2d16394adfae41ff8df1b4f4f2f

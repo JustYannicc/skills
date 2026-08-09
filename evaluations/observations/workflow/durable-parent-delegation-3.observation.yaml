@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-parent-delegation
 attempt: 3
 contextId: fresh-workflow-durable-parent-delegation-luna-max-20260808t120003z-3
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T12:00:03Z
 environment:

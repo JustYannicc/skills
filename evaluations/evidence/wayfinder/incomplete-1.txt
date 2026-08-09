@@ -1,0 +1,55 @@
+Fresh-context execution — wayfinder-incomplete fixture attempt 1
+
+Candidate revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+Evaluator: gpt-5.6-luna-max-fresh-context
+Context ID: fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551
+Recorded at (UTC): 2026-08-09T12:29:45Z
+
+One-shot attestation
+
+- This is the only execution for attempt 1 in this fresh context.
+- The response below was generated once and preserved unedited; no retry, repair, or response edit was run.
+- No companion invocation, Adapter write, durable-state write, Map revision, or effect occurred.
+
+Bound runtime inputs (exact SHA-256)
+
+- skills/wayfinder/SKILL.md — c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+- skills/workflow/SKILL.md — fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+- skills/thinking-in-systems/SKILL.md — 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- skills/thinking-in-systems/references/standard.md — daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- evaluations/fixtures/wayfinder/incomplete.fixture.yaml — 0be748eb1d0b9ee516269a21f992bdcd326028de51be1124164c1abe2b4159e2
+
+Exact prompt
+
+Use Wayfinder for this.
+
+Exact environment
+
+- id: conversation-without-wayfinding-context
+- capabilities: workflow=true, persistence=false, effects=false
+- tools: []
+
+Test execution events
+
+[]
+
+Map-reference load
+
+The early missing-destination return completed before Wayfinder step 3, so skills/wayfinder/references/map-and-strategy.md was not loaded. The fixture declares no runtime reference for it.
+
+Response — generated once and preserved unedited
+
+Incomplete Wayfinder result
+
+- State: incomplete-destination.
+- Missing context: no accepted destination and no active Outcome identity, owner, or context were provided. Wayfinder cannot yet bind the destination, scope, Authority, proof need, or return route.
+- Smallest discriminating question: What accepted Outcome/destination should Wayfinder navigate, and which active Outcome identity and owner should it join, if one exists (or who owns a new Outcome)?
+- Non-durable proposal: Until that answer is supplied, any Map or Strategy proposal is explicitly inline and non-durable. I will not create durable state, write an Adapter, or claim a Map revision.
+- Exact resumption condition: Resume Wayfinder orientation when the accepted destination and active Outcome identity/owner are supplied (or a new Outcome owner is explicitly named); if this result must survive the interaction, resume after a Baseline Adapter is available. Then bind scope and exclusions, Authority, proof need, and return route before loading the Map or invoking a companion.
+- Route: wayfinder-waiting-for-destination.
+- Responsibility: Workflow or the caller retains the parent Outcome while Wayfinder waits for an accepted destination; Wayfinder owns only this bounded waiting result.
+- Effects: none.
+
+Evaluation result
+
+Pass. The result identifies both missing destination and active Outcome context, asks one smallest discriminating question, keeps the proposal explicitly non-durable, and states the exact destination/context (and persistence) resumption condition. It returns before loading the Map reference or invoking any companion, creates no durable state or effect, claims no Map revision, and leaves parent responsibility with Workflow or the caller. No retry or edit was run.

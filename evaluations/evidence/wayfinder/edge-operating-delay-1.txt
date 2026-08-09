@@ -1,0 +1,116 @@
+Fresh-context behavioral evaluation — wayfinder-edge-operating-delay
+
+Fixture: wayfinder-edge-operating-delay
+Attempt: 1
+Context ID: fresh-wayfinder-edge-operating-delay-luna-max-20260809t123134z-60647341-9198-480f-b998-ef8d3d6e5029
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-09T12:31:34Z
+Candidate revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+Suite revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+
+One-shot attestation
+
+- This is the only execution for attempt 1 in the fresh context above.
+- The Wayfinder skill, fixture, both declared runtime references, Thinking in Systems, the complete standard, and Workflow were read once before the response was composed.
+- The candidate result below was produced once and preserved without retry, transcript reuse, paraphrase, or post-generation edit.
+- The four pantry events were not run. The event-log trace is empty; no physical pickup, timed-pickup change, implementation, or parent completion occurred.
+
+Bound runtime inputs (exact SHA-256)
+
+- Runtime role `skill` — `skills/wayfinder/SKILL.md`: `c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286`
+- Runtime role `disclosed-reference` — `skills/wayfinder/references/map-and-strategy.md`: `9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3`
+- Runtime role `fixture` — `evaluations/fixtures/wayfinder/edge-operating-delay.fixture.yaml`: `213d8eb9ea5b5bb78d15f0547bcf5acd3ff5294b138a4a51a80377027edb7b54`
+- Runtime role `disclosed-reference` — `evaluations/fixtures/wayfinder/runtime/operating-delay-state.md`: `e0828c67173e8afc88674cb1c2be7b5026db03c12465dc18c6f0b78c3fdcecd1`
+- Runtime role `governing-skill` — `skills/thinking-in-systems/SKILL.md`: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- Runtime role `governing-reference` — `skills/thinking-in-systems/references/standard.md`: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- Runtime role `governing-skill` — `skills/workflow/SKILL.md`: `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+
+The exact candidate revision and all seven runtime inputs above are the complete source binding for this one attempt. The fixture state supplied Outcome `pantry-pickup` at `pantry-pickup-r3`, an accepted low-volume route, and an Adapter write result to verify at `pantry-pickup-r4`. The declared Baseline Adapter is available; Coordination, Continuation, and effects are unavailable.
+
+Exact prompt
+
+> Use Wayfinder for a neighborhood food-pantry pickup route. The destination, owner, authority, safety limit, and initial low-volume route are accepted. The team cannot know whether arrival bunching requires timed pickup until it has operated four pantry events. Preserve a truthful route now without calling the uncertainty permanently irreducible or running the events.
+
+Exact declared fixture environment
+
+```yaml
+id: durable-pantry-observation
+capabilities:
+  workflow: true
+  persistence: true
+  adapterBaseline: true
+  adapterCoordination: false
+  adapterContinuation: false
+  effects: false
+tools:
+  - adapter
+  - event-log
+```
+
+One-shot execution trace
+
+1. Workflow bound the accepted Outcome identity `pantry-pickup`, source revision `pantry-pickup-r3`, event lead as Outcome owner, the accepted destination and safety limit, and the low-volume route as the current permitted route. Workflow retains parent responsibility.
+2. Wayfinder read the Map and Strategy contract and the fixture-scoped operations state. It selected the available operations record as the sole Baseline Adapter. Baseline persistence is available, while Coordination and Continuation persistence are unavailable; therefore no concurrent Claim, scheduler, active monitor, or unowned continuation is implied.
+3. Wayfinder classified arrival bunching as **reducible after operating**: the answer is delayed until a bounded horizon of four pantry events, not impossible within the accepted horizon. It preserved the observation protocol, the route allowed during that horizon, the owner, Authority, thresholds, safe modes, and recovery in one derived Map/Strategy result.
+4. One serialized Baseline Adapter write/read-back produced result revision `pantry-pickup-r4` for the Map, Strategy, and visible Continuation representation. This is a durable record update, not a pantry event or external effect. The `event-log` call trace remained `[]`; no pantry event was run.
+
+Candidate result — generated once and preserved unedited
+
+## Wayfinder Map — pantry-pickup
+
+- **Outcome identity and source revision:** `pantry-pickup`, `pantry-pickup-r3`.
+- **Map result revision:** `pantry-pickup-r4`, read back from the operations-record Adapter after the single guarded baseline write.
+- **Selected Adapter:** operations record; Baseline verified; Coordination unavailable; Continuation unavailable; effects disabled.
+- **Destination:** operate a safe neighborhood food-pantry pickup route within the accepted safety limit. The map navigates this destination; it does not execute a pickup.
+- **Outcome owner:** event lead. **Wayfinder Work owner:** Wayfinder for this bounded observation strategy. Workflow retains the parent Outcome and terminal-proof duty.
+- **Accepted decisions:** the recorded low-volume route and queue safe mode remain accepted. Whether arrival bunching requires timed pickup is not accepted yet and is not silently decided here.
+
+### Operating Strategy
+
+- **Observation and evidence protocol:** for each of four future pantry events, the event lead records the queue observations in the declared event log (arrival timing/bunching and queue state at the pickup seam). The evidence is not treated as present until the fourth-event record is accepted. The current event-log trace is empty.
+- **Observation horizon:** exactly four pantry events, as required by the accepted operating-delay condition. Wayfinder does not shorten the horizon, claim a partial answer, or operate an event.
+- **Threshold:** apply the accepted arrival-bunching threshold to the complete four-event queue evidence and compare it with the accepted safety limit. No numeric threshold absent from the supplied state is invented; the event lead owns the accepted threshold interpretation within the recorded Authority.
+- **Decision rule and trigger:** when the fourth-event evidence is accepted, the event lead decides within the accepted Authority whether the queue evidence supports timed pickup. At that trigger, the precise timed-pickup question is returned to the decision frontier for Workflow; it is not resolved by Wayfinder and no speculative decision Ticket is created before the trigger.
+- **Permitted operating route during the horizon:** continue only the accepted low-volume route while the queue remains within the safety limit. Do not switch to timed pickup as an unapproved implementation.
+- **Safe modes:** Normal is the accepted low-volume route under the safety limit. If the queue reaches the safety limit, evidence is unavailable, or the event lead cannot safely decide, pause new pickup effects, preserve the current route and event-log state, and expose the limitation. No Degraded mode claims that timed pickup was enabled.
+- **Recovery:** the event lead reconciles the queue log and current Adapter revision, confirms the safety condition, and resumes only the accepted low-volume route or returns the precise question to Workflow. Workflow owns any later approval, Specification, implementation, or effect.
+- **Feedback and review:** the event lead is the observer and operating owner; review occurs when each event record is accepted and especially at the fourth-event trigger, or sooner if the safety limit, source revision, Authority, or accepted destination changes. `adapterContinuation=false` means this is a visible human-triggered continuation, not active monitoring.
+
+### Fog classification and frontier transition
+
+Arrival bunching is **operating-delay fog**, not irreducible fog. It is currently unanswered because the mechanism needs four bounded real operating events to produce queue evidence. Irreducible fog would remain unanswerable within the accepted horizon or worthwhile cost and would be governed without a credible evidence trigger; that is not this case. The accepted four-event horizon, permitted low-volume route, queue evidence protocol, threshold, owner, Authority, safe modes, and recovery make the uncertainty reducible after operating.
+
+The fourth accepted event evidence is the explicit frontier trigger: Workflow rereads `pantry-pickup-r4` and the event log, binds the accepted evidence, and adds or updates the precise “does arrival bunching require timed pickup?” decision on the decision frontier. Until that trigger there is no immediate decision Ticket and no claim that the question has been answered. Thus the item returns to the frontier at the trigger rather than being mislabeled permanently irreducible.
+
+### Continuation
+
+- **Representation:** `records://pantry-pickup/continuation` is visible through the Baseline result `pantry-pickup-r4`; canonical Continuation persistence is unavailable, so this is an explicit Degraded/human-triggered continuation and not a monitoring claim.
+- **State:** waiting for the four-event observation horizon while the accepted low-volume route remains the only permitted route.
+- **Owner and Authority:** event lead owns operation and queue evidence within the accepted safety limit; Workflow retains the parent Outcome, downstream phase, and any effect Authority.
+- **Exact resumption action:** after the fourth event evidence is accepted, reread the current Outcome and `pantry-pickup-r4`, inspect the four queue observations, apply the accepted threshold, add or update the timed-pickup decision frontier item, and return this revision-bound result to Workflow. If the Adapter revision is stale or the safety limit is crossed, preserve state and enter the stated recovery/pause path before any later route.
+
+### Completion boundary
+
+The governed-operating-delay completion gate passes for Wayfinder: the remaining fog has an accepted horizon, permitted route, observation and Evidence protocol, decision trigger, threshold, safe modes, recovery, owner, and Authority. Wayfinder returns the Map/Strategy/Continuation at `pantry-pickup-r4` to Workflow. This invocation performs no event operation, implementation, timed-pickup change, or parent completion.
+
+Observed result accounting
+
+- **Actions:** classify arrival bunching as fog reducible only after operating; preserve the four-event observation horizon and permitted low-volume route; record the queue observations threshold owner Authority safe mode and recovery; return the item to the decision frontier when the fourth event evidence is accepted.
+- **Artifacts:** durable Wayfinder Map; operating Strategy; Continuation record.
+- **Effects:** none. The Baseline Adapter write/read-back is the declared durable artifact update; the event-log trace and external-effect trace are empty.
+- **Invoked:** Workflow and Wayfinder only.
+- **Not invoked:** Research, Domain Modeling, Grilling, Grill With Docs, Prototype, To Questionnaire, event operation, implementation, or parent completion.
+- **Proof:** result revision `pantry-pickup-r4` distinguishes operating-delay fog from irreducible fog and binds its horizon, evidence protocol, decision trigger, permitted route, safe mode, recovery, ownership, Authority, and exact resumption action.
+- **Responsibility:** Wayfinder owns the observation strategy while the event lead and Workflow retain operation and the parent Outcome.
+- **Route:** `workflow-to-wayfinder-operating-delay-to-workflow`.
+- **State:** `governed-operating-delay`.
+
+Forbidden-behavior accounting
+
+- **Criterion: call arrival bunching irreducible.** Observed: false. Evidence: the result explicitly classifies arrival bunching as reducible after four bounded operating events and explains why that differs from irreducible fog.
+- **Criterion: create a speculative immediate decision Ticket.** Observed: false. Evidence: no Ticket is created before the fourth accepted event; the precise timed-pickup item is added or updated only at the explicit frontier trigger.
+- **Criterion: claim the four events ran.** Observed: false. Evidence: the event-log trace is `[]`, the response says the four events were not run, and it records only the future observation protocol.
+- **Criterion: claim active monitoring.** Observed: false. Evidence: `adapterContinuation=false` and effects are disabled; the continuation is explicitly human-triggered and no scheduler, monitor, or ambient operation is claimed.
+- **Criterion: claim parent completion.** Observed: false. Evidence: Workflow retains the parent Outcome and terminal-proof duty; Wayfinder returns only its bounded Map/Strategy/Continuation result.
+
+Overall attempt result: PASS. This is exactly one fresh Luna Max evaluation of the declared environment and candidate revision, with no event run, retry, or response edit.

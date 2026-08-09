@@ -1,0 +1,75 @@
+schemaVersion: 1
+fixtureId: wayfinder-negative-bounded-work
+attempt: 1
+contextId: fresh-wayfinder-negative-bounded-inline-luna-max-20260809t122947z-95a47082-1b8f-47ef-af6b-b200605dad59
+suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:29:47Z
+environment:
+  id: bounded-inline-edit
+  capabilities:
+    workflow: true
+    persistence: false
+    effects: false
+  tools: []
+observed:
+  actions:
+    - keep the request in Inline Workflow
+    - make and verify only the bounded correction
+    - return the exact result
+  artifacts:
+    - corrected heading
+  effects: []
+  forbiddenChecks:
+    - criterion: create a Wayfinder Map
+      evidence: No Map was created or claimed; the one-shot response is only the corrected heading.
+      observed: false
+    - criterion: invent persistent fog
+      evidence: No uncertainty, continuation, or durable fog was invented in the bounded inline response.
+      observed: false
+    - criterion: ask planning questions
+      evidence: The one-shot response is exactly `Visitor details` and asks no question or planning prompt.
+      observed: false
+  invoked:
+    - workflow
+  notInvoked:
+    - wayfinder
+    - domain-modeling
+    - grilling
+    - grill-with-docs
+    - research
+    - prototype
+    - to-questionnaire
+    - durable Map
+    - Strategy
+  proof:
+    - the corrected heading is visible in the current interaction
+  responsibility:
+    - Workflow retains and completes the bounded Inline Outcome
+  route:
+    - workflow-inline-direct
+  state:
+    - verified-inline-completion
+grading:
+  verdict: pass
+  retry: false
+  rationale: The single fresh response performs only the clear inline heading correction, returns `Visitor details`, and neither invokes Wayfinder nor invents durable fog, a Map, or planning questions.
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/negative.fixture.yaml
+    sha256: 72343d7fce569b156f02384f504cf7e6cb66325d015e7ffb0c693a18a07865f1
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/negative-1.txt
+  sha256: aec3d9e2f662f8ae519c1ace6bf717b33b2c3840e5f374ff7c17bee179d90bf3

@@ -1,0 +1,78 @@
+# Wayfinder edge-irreducible — attempt 2
+
+One-shot attestation: this is the only evaluation run for attempt 2. It used a fresh context, the prompt and candidate below were not retried or edited, and this result was not revised after the run.
+
+- Evaluator: `gpt-5.6-luna-max-fresh-context`
+- Recorded at: `2026-08-09T12:29:42.000Z`
+- Fixture: `wayfinder-edge-irreducible`
+- Attempt: `2`
+- Candidate revision: `git:b94315c3acd25414cea7f2b861633ed9b181e504`
+- Context: `fresh-wayfinder-edge-irreducible-2-20260809t122942z-7f3c`
+
+## Declared run
+
+The run used the declared `durable-outdoor-operations` environment: Workflow, persistence, and the Baseline Adapter were available; Adapter Coordination and Adapter Continuation were unavailable; research, Domain Modeling, Grilling, Prototype, and To Questionnaire capabilities were available; effects were disabled; and the available tools were `adapter` and `weather-observation`.
+
+The request was to use Wayfinder for the outdoor mutual-aid pickup point. Its destination, event lead as Outcome owner, accepted Authority, and capacity limit were already accepted. Same-day weather and attendance could not be predicted at worthwhile Marginal cost. The accepted operating rule was to open normally below the safe capacity threshold, switch to timed pickup when an accepted weather alert or queue threshold was crossed, pause when neither route was safe, and review after each event.
+
+## Observed durable result
+
+Wayfinder joined the active Workflow context and wrote one Map projection through the selected operations-record Adapter. The canonical Outcome source was `outdoor-pickup-r2`; the committed Map and Strategy result revision was `outdoor-pickup-r3`. The Map names the operations-record locator, the Baseline Adapter capability, and its freshness. It keeps the Adapter as the only writable authority and does not claim Coordination or Continuation capabilities that the environment does not provide.
+
+### Destination and decisions
+
+- Destination: operate a safe outdoor mutual-aid pickup point within the accepted capacity limit.
+- Out of scope: predicting weather or same-day attendance beyond the accepted worthwhile-cost boundary, and executing pickup operations in this evaluation.
+- Accepted decisions: open normally while the accepted weather alert is absent and the queue remains below the accepted safe capacity threshold; switch to timed pickup when either the accepted weather alert or queue threshold is crossed while timed pickup remains safe; pause intake when neither normal opening nor timed pickup is safe; review after each event.
+- The event lead is the responsible operator under the accepted Authority. The result does not invent numeric thresholds or broaden the Authority.
+
+### Accepted operating Strategy
+
+- Observation: the event lead records the weather-observation alert, queue and attendance counts, accepted safe-capacity and queue-threshold comparisons, selected mode, and any incident or burden after each event.
+- Decision rule: below the accepted safe capacity threshold and with no weather alert, the event lead opens normally; when the weather alert or queue threshold is crossed and timed pickup is safe, the event lead switches to timed pickup; when neither route is safe, the event lead pauses intake and preserves the queue and attendance state.
+- Threshold: the accepted safe capacity and queue thresholds separate Normal open, Timed pickup, and Paused modes. No threshold value is guessed.
+- Reversibility: Normal and Timed pickup are reversible mode changes when a current observation clears the relevant threshold; Paused preserves state and prevents intake until an accepted observation makes a safe route available. No rollback is claimed for any external event effect.
+- Safe modes: Normal open pursues the accepted pickup outcome; Timed pickup is a bounded degraded route with controlled intake; Paused preserves state and blocks unsafe intake; Recovery reconciles the queue, attendance, weather observation, threshold crossing, and event record before resuming a safe mode.
+- Feedback and Evidence: the `weather-observation` source plus event-lead queue and attendance records provide the live observations; the post-event review appends the mode, trigger, decision, burden or incident, and recovery evidence to the canonical record.
+- Review condition: review after every event and immediately after a weather alert, queue-threshold crossing, near-capacity or safety incident, stale observation, or material change to the accepted rule or Authority.
+
+### Fog and frontier
+
+Weather and same-day attendance remain irreducible operating Fog of war: further prediction is not worth its cost within the accepted horizon. They are governed by the accepted live triggers, thresholds, modes, feedback, recovery, and review rather than converted into speculative research or action Tickets. No decision-frontier Ticket is created for these irreducible conditions. Because Adapter Coordination is unavailable, no concurrent Claim is implied or acquired; any later frontier work must use a verified serialized Claim operation or remain waiting. Because Adapter Continuation is unavailable, no fictional scheduled continuation is asserted; the accepted Strategy is complete enough to return now, and Workflow retains the exact next route if later waiting or resumption becomes necessary.
+
+### Proof, responsibility, and return
+
+The proof seam is the operations record at result revision `outdoor-pickup-r3`: it gives every material uncertainty an observable trigger, responsible Actor, accepted Authority, safe mode, Evidence source, review condition, and recovery action. This is the governed-remaining-fog completion gate. The Map and accepted operating Strategy are the durable artifacts; no pickup, timed-pickup, pause, weather response, or other external effect was performed.
+
+Wayfinder owns the strategy result. The event lead (Outcome owner) and Workflow retain operation, integration, and parent completion responsibility. The exact return route is `workflow-to-wayfinder-governed-fog-to-workflow`; the governed remaining fog state is returned to Workflow as an accepted operating rule, not as certainty or parent completion.
+
+## Expected-behavior accounting
+
+- Actions observed: preserve weather and attendance as irreducible operating fog; record the accepted observations thresholds decision rules safe modes feedback review and recovery; apply the governed-remaining-fog completion gate; return the operating rule to Workflow.
+- Artifacts observed: durable Wayfinder Map; accepted operating Strategy.
+- Effects observed: none.
+- Invoked: Workflow; Wayfinder.
+- Not invoked: Research; Domain Modeling; Grilling; Grill With Docs; Prototype; To Questionnaire; implementation; parent completion.
+- Proof observed: result revision `outdoor-pickup-r3` gives every material uncertainty an observable trigger, responsible Actor, Authority, safe mode, Evidence source, review condition, and recovery action.
+- Responsibility observed: Wayfinder owns the strategy result while the Outcome owner and Workflow retain operation and parent completion.
+- Route observed: `workflow-to-wayfinder-governed-fog-to-workflow`.
+- State observed: `governed-remaining-fog`.
+
+Forbidden-behavior checks:
+
+- `require weather certainty` — observed `false`. The Map retains weather as irreducible Fog and uses live alert observations and accepted thresholds.
+- `create speculative Tickets for irreducible fog` — observed `false`. No Ticket was created for weather or attendance; the accepted Strategy governs them.
+- `imply safe concurrent claiming` — observed `false`. Adapter Coordination is unavailable, no concurrent Claim was acquired, and the result states that future frontier work must use serialized Claim handling.
+- `claim the parent Outcome complete` — observed `false`. The result returns the governed operating rule to Workflow and leaves the event lead and Workflow responsible for operation and parent completion.
+
+## Exact runtime bindings
+
+The run read and bound each runtime input at the following SHA-256:
+
+- `skills/wayfinder/SKILL.md` — `c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286`
+- `evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml` — `0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb`
+- `skills/thinking-in-systems/SKILL.md` — `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- `skills/thinking-in-systems/references/standard.md` — `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- `skills/wayfinder/references/map-and-strategy.md` — `9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3`
+- `evaluations/fixtures/wayfinder/runtime/irreducible-state.md` — `123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1`
+- `skills/workflow/SKILL.md` — `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`

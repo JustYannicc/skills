@@ -1,0 +1,170 @@
+Fresh-context execution — wayfinder/indirect-multisession, attempt 1
+
+Candidate revision: `git:b94315c3acd25414cea7f2b861633ed9b181e504`
+Fixture: `evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml`
+Fixture SHA-256: `d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be`
+Evaluator: `gpt-5.6-luna-max-fresh-context`
+Context ID: `fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a`
+Recorded at (UTC): `2026-08-09T12:29:58.300Z`
+
+## One-shot attestation
+
+This is one fresh-context execution of the declared prompt against the exact
+candidate revision above. The candidate response below was generated once,
+then recorded verbatim. No retry, alternate candidate response, response
+editing, or averaging was performed. The fixture Adapter observations are
+isolated to this attempt and no external effect was authorized.
+
+## Runtime fingerprints
+
+Repository-bound runtime inputs were read in full and frozen for this attempt:
+
+- Wayfinder `skills/wayfinder/SKILL.md` — `c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286`
+- Fixture `evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml` — `d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be`
+- Map and Strategy `skills/wayfinder/references/map-and-strategy.md` — `9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3`
+- Fixture runtime state `evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md` — `2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b`
+- Governing Thinking in Systems `skills/thinking-in-systems/SKILL.md` — `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- Complete standard `skills/thinking-in-systems/references/standard.md` — `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- Workflow `skills/workflow/SKILL.md` — `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+- Domain Modeling `skills/domain-modeling/SKILL.md` — `00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf`
+- Universal work contract `docs/UNIVERSAL_WORK_CONTRACT.md` — `f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3`
+- Durable mode `skills/workflow/references/durable-mode.md` — `b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5`
+- Continuation template `skills/workflow/references/continuation-template.md` — `dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e`
+
+The declared local composition contracts were also read as installed
+companions (their host paths are not repository runtime inputs):
+
+- Grill With Docs contract — `610d091047bcfb9db0f75c057d15538481a721111579fc5ec7f83ad9131a2165`
+- Grilling contract — `fa5c1e5ee76b1c8f1ae56101f52c9e239de75d5c578adc61227b92d10b7e52ef`
+- Installed Domain Modeling contract — `152e2c97239affb12a60c5f4a7e74ab546a49ae169688c81f4e2ccc42dafa579`
+
+## Prompt (exact fixture text)
+
+Our written volunteer-coordination plan will take several sessions and two coordinators to sharpen. Its destination and scope are accepted, but the documented role terms conflict and the coordinators still hold decisions about escalation. Preserve the route so either coordinator can resume next week.
+
+## Declared environment
+
+`durable-documented-plan`; workflow=true, persistence=true,
+adapterBaseline=true, adapterCoordination=true, adapterContinuation=false,
+grillWithDocs=true, domainModeling=true, grilling=true, research=true,
+prototype=true, toQuestionnaire=true, effects=false; tools=[adapter,
+documented-plan].
+
+## Fixture-sandbox Adapter observations
+
+The fresh document-store sandbox contained the runtime state from the declared
+reference. Events below are sandbox operations, not external effects.
+
+1. Adapter read — canonical Outcome `volunteer-coordination` at source
+   revision `volunteer-coordination-r8`. It returned the accepted destination
+   (one documented coordination route two coordinators can apply alike), scope,
+   lead coordinator as Outcome owner, and the two current blockers: conflicting
+   documented role terms and coordinator-held escalation decisions.
+2. Wayfinder read the documented-plan representation and the Map/Strategy
+   contract. Baseline and Coordination were verified. Continuation was
+   explicitly unavailable, so no scheduler or active monitor was inferred.
+3. Wayfinder routed the documented-plan uncertainty to Grill With Docs. The
+   available composition invoked Grilling for the coordinator-held frontier
+   decisions and Domain Modeling for the conflicting role terms. Research,
+   Prototype, To Questionnaire, and unrelated downstream phases were not
+   invoked because their uncertainties were not present.
+4. Grill With Docs returned a bounded, revision-bound composition result. No
+   role meaning or escalation decision was accepted in this round; both remain
+   owned frontier questions for the coordinators. Dependent plan work remains
+   waiting.
+5. The Adapter performed one guarded document-plan update from `r8` and
+   returned result revision `volunteer-coordination-r9`. The update contains
+   the low-resolution Map, the operating Strategy, named pointers to the
+   composition result, and a visible manual Continuation record. It does not
+   claim an Adapter Continuation capability, scheduler, monitor, or external
+   effect.
+6. Adapter read-back verified `volunteer-coordination-r9`. The Map contains
+   one-line decision gists and canonical pointers only; the full terminology
+   and escalation reasoning remains in the Grill With Docs result. The
+   Continuation records the owner, dependency, last observation, next check,
+   exact pickup point, first resumption action, and proof still required.
+
+## Observed candidate response (verbatim; generated once and not edited)
+
+Workflow’s parent Outcome remains `volunteer-coordination`; I am joining that
+context rather than creating a second Outcome. The accepted destination is one
+documented coordination route that two coordinators can apply alike. Its source
+revision is `volunteer-coordination-r8`; the lead coordinator remains Outcome
+owner, and Workflow retains the parent return route.
+
+I routed the persistent, cross-session Fog of war to Wayfinder. The selected
+document-store Adapter has Baseline and Coordination available and
+Continuation unavailable. I bound the plan and its current canonical state at
+`volunteer-coordination-r8`, and I will not infer a scheduler, active monitor,
+or concurrent claim from the missing Continuation capability.
+
+Because the uncertainty is in a documented plan, Wayfinder invoked Grill With
+Docs. Grill With Docs composed Grilling for the coordinator-held escalation
+decisions and Domain Modeling for the conflicting role terms. The bounded
+composition result is revision-bound to the plan update; it does not resolve a
+term or decision that neither coordinator has accepted.
+
+The resulting durable Wayfinder Map at
+`volunteer-coordination-r9` contains:
+
+- Destination and scope, with the lead coordinator as Outcome owner and the
+  Wayfinder work owner named separately.
+- Accepted source pointers at `volunteer-coordination-r8` and one-line gists
+  for the two unresolved frontier items. Full terminology and escalation
+  reasoning remains at the Grill With Docs result rather than being copied into
+  the Map.
+- An operating Strategy: when either coordinator supplies an accepted
+  terminology meaning or escalation decision, reread the current plan revision,
+  bind the answer to its accepting Actor and exact proposal revision, and
+  recompute blockers. A stale or conflicting write pauses the update and
+  preserves committed versus uncommitted state separately.
+- Decision frontier: (1) reconcile the documented role terms, owned by the
+  coordinators through Domain Modeling; and (2) accept the escalation rule and
+  decision Authority, owned by the coordinators through Grilling. Dependent
+  plan work waits for these answers.
+- Blockers, Evidence pointers, ownership, Authority, safe paused behavior, and
+  the next route back to Workflow.
+
+The result also writes a visible manual Continuation record in the canonical
+document plan at `volunteer-coordination-r9`. It is not a scheduler or active
+monitor. It records:
+
+- dependency: both coordinator decisions and the role-term reconciliation;
+- unblock condition: an accepted answer for each frontier item is recorded at
+  an exact current plan revision;
+- last observation: the plan was read at `volunteer-coordination-r8` and the
+  bounded composition returned unresolved frontier questions;
+- next check: next week, when either coordinator resumes the plan, with the
+  lead coordinator still responsible until an accepted transfer;
+- exact pickup point and first action: reread
+  `volunteer-coordination-r9`, verify freshness, then present both open
+  frontier questions to the coordinators before changing any plan rule;
+- retry/escalation: retry only after a fresh revision read; on stale-write or
+  partial-write conflict, preserve both states and route the exact recovery to
+  Workflow; and
+- proof still required: accepted term and escalation revisions plus a reread
+  showing a coherent Map and Strategy.
+
+No plan execution, implementation, Specification, external effect, scheduling,
+or parent completion occurred. Wayfinder owns the navigation Map and Strategy;
+Grill With Docs owns its bounded composition result; Workflow retains the
+parent Outcome. Another coordinator can resume from
+`volunteer-coordination-r9` without reconstructing material context.
+
+## Truthful grade
+
+Result: pass for attempt 1; no retry was run.
+
+- Route and invocation: the durable, multi-session request enters Workflow,
+  routes to Wayfinder, and invokes only the documented-plan composition needed
+  for the two present blockers: Grill With Docs, Grilling, and Domain Modeling.
+- State and revisions: the accepted destination and owner remain bound at
+  `volunteer-coordination-r8`; the guarded Adapter update is reread at exact
+  result revision `volunteer-coordination-r9`.
+- Frontier and continuation: both unresolved questions remain owned and
+  visible; the operating Strategy, blockers, manual Continuation, and exact
+  next-session action are preserved without fictional scheduling.
+- Boundary and responsibility: no plan execution, Specification, research,
+  prototype, questionnaire, implementation, effect, or parent completion is
+  claimed. The Map keeps one-line pointers instead of duplicating the
+  composition detail, and Workflow retains parent responsibility.

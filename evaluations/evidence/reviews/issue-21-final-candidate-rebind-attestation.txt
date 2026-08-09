@@ -1,0 +1,35 @@
+Issue #21 final candidate rebind attestation
+Attested at: 2026-08-09
+Behavioral candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
+Final candidate: git:b94315c3acd25414cea7f2b861633ed9b181e504
+
+This final rebind exists because the task-local handoff checklist was updated
+after behavioral proof and the resolution check. The only candidate-tracked
+change between these revisions marks the fresh-evidence and review/checklist
+items complete in `docs/handoffs/2026-08-09-wayfinder-candidate.md`.
+
+Runtime equivalence proof
+
+- The 231 observations name 56 unique in-repository runtime-input locators.
+- `git diff --quiet
+  6b809baa082875b45b5895d471d6ab63a499f399..b94315c3acd25414cea7f2b861633ed9b181e504
+  -- <the 56 runtime-input locators>` exited 0.
+- `git diff --name-status` between the revisions reports only the checklist
+  document above. No skill, reference, fixture, seeded state, Adapter contract,
+  companion contract, or governing standard changed.
+
+Mechanical rebind
+
+- All 231 observation `suiteRevision` values were changed to the final
+  candidate.
+- Only exact candidate strings in their 231 referenced raw-evidence files were
+  eligible for replacement; files without the string remained byte-identical.
+- Every observation `rawEvidence.sha256` was recomputed from its referenced
+  evidence after the replacement.
+- Original context IDs, timestamps, one-shot candidate responses, behavioral
+  accounting, fixture bindings, and runtime-input hashes were preserved.
+
+The deterministic report and validation must be rerecorded against the final
+candidate. Any later candidate-tracked change invalidates this attestation.
+This is technical identity evidence, not human approval, publication, merge,
+or closure of issue #21.
