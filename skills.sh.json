@@ -1,0 +1,26 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Start here",
+      "description": "Install the suite or ask which route fits.",
+      "skills": ["setup-system-thinking", "ask-yannic"]
+    },
+    {
+      "title": "Govern and coordinate",
+      "description": "Apply systems judgment and own outcomes to a truthful end.",
+      "skills": ["thinking-in-systems", "workflow"]
+    },
+    {
+      "title": "Understand",
+      "description": "Map current state, language, uncertainty, and design questions.",
+      "skills": ["migrate-system", "domain-modeling", "wayfinder", "prototype"]
+    },
+    {
+      "title": "Deliver",
+      "description": "Specify, decompose, execute, review, and transfer work.",
+      "skills": ["to-spec", "to-tickets", "implement", "review", "handoff"]
+    }
+  ]
+}
