@@ -1,0 +1,160 @@
+PUBLIC EVIDENCE WRAPPER — migrate-system delegated mapping attempt 2
+Candidate: git:d78dff812af6a69a1995980a4bc30829a298a997
+Context: fresh-migrate-system-delegated-mapping-attempt-2-20260809t134239z
+Execution: one-shot; no retries; the response below was frozen before any writing-for-agents audit.
+rawResponseSha256: eda86286c836d82767df0be179d98c7afb482744323b1e543ba37ed2b712b820
+Runtime/input hashes are indexed after the frozen response. They are repository-relative and exclude this evidence/observation tranche.
+
+BEGIN FROZEN RESPONSE
+I joined one Durable Workflow context for Outcome `outcome/delegated-support-operation`, owned by `workflow-outcome-owner`, in phase `delegated-conformance-migration`. The accepted Outcome is a trustworthy, bounded current-state representation of the support operation; it is not a repair, redesign, reassignment, policy decision, or external effect. This request crosses a persistence boundary because it has three independently finishable areas, multiple owners, durable evidence, and parent integration.
+
+I invoked `thinking-in-systems` first, then `workflow`, `migrate-system`, and `review`. Thinking in Systems establishes the support operation as the System of interest, its material boundaries, nested responsibility, Authority, current-state proof seam, and the requirement that a child result cannot prove the containing Outcome. Workflow retains the parent Outcome owner and terminal proof duty. Migrate System owns only this bounded map. Review owns revision-bound verdicts. The bounded sources are sufficient; no persistent irreducible fog requires `wayfinder` in this invocation.
+
+## Admission and canonical boundary
+
+The selected Adapter is the fixture's writable Baseline and Coordination Adapter. `Baseline=available`, `Coordination=available` (atomic concurrent Claims are supported), and `Continuation=unavailable`. The parent Coordination space is `delegated-support-operation`; the Adapter's canonical record revision and transition history are the only writable migration authority. Source records remain read-only. I make no scheduling or monitoring claim because Continuation is unavailable; no wait is needed after the staffing refresh.
+
+The migration owner is `migration-owner`, who owns integration and verification of the whole bounded map. `workflow-outcome-owner` retains parent Outcome responsibility, including the parent proof and any later terminal decision. The return route is `integrated-review-return` to Workflow. The migration need is one Conformance migration: the existing support operation is material to the parent Outcome, the work is Durable, and no trustworthy current map covers the affected boundary.
+
+The System of interest is the current support operation. Its included boundary is the current state of customer escalation, on-call tooling, and staffing: actors and duties, authority claims, interfaces and handoffs, active work, dependencies, waiting/recovery, evidence, provenance, unknowns, and conflicts. The three mapping areas are non-overlapping Subsystems for delegation:
+
+* `customer-escalation` — the escalation records and their current actors, interfaces, active work, and final-disposition claim;
+* `on-call-tooling` — the paging, incident-state, and escalation-handoff records; and
+* `staffing` — the current roster, coverage, responsibilities, and final-disposition claim, using the current revision after refresh.
+
+The support operation is contained by the parent support/Workflow coordination context. Customer escalation and on-call tooling are material dependent interfaces for customer and incident handling; staffing is an upstream operational input to on-call coverage. Exact interface/relationship rows point to the canonical source and child Evidence rather than copying a second authority. This is a bounded mapping, not an exhaustive inventory. Excluded are changing the escalation disposition, changing paging or staffing behavior, resolving or overwriting the disputed ownership, implementing repairs, and performing any product, organizational, policy, or environmental effect. Those are separate ordinary Workflow proposals if they are later authorized.
+
+## Canonical child packets and dispatch
+
+I created three canonical, non-overlapping child Tickets under `outcome/delegated-support-operation` through `contains`. Each packet has one accepting Work owner, an atomic Claim, immutable source inputs and captured revisions, explicit read/write limits, required coverage dimensions and Evidence fields, a Proof seam, an independent Reviewer, a Review disposition, and a return route. There are no cross-area `requires` edges, so the three bounded mappings can be dispatched concurrently; they have only the parent `contains` relationship and any non-blocking `related` conflict context.
+
+### `ticket/customer-escalation-map`
+
+* Work owner: `escalation-mapping-owner`; Claim: `claim/customer-escalation-map` with claimant, dispatch time, and the Adapter's staleness rule. The Claim coordinates active work and does not transfer ownership or parent responsibility.
+* Immutable input: authoritative `escalation-r4` records, read-only for the worker. Allowed writes are this Ticket's transitions, source-linked Evidence, and its Review pointer; no escalation record is edited.
+* Bounded result and Proof seam: a source-linked map of current escalation actors, interfaces, active work, dependencies, Authority, waiting/recovery, provenance, and the claim that Customer Escalation owns final escalation disposition. Evidence identifies condition, method, result, observer, time/locator, and exact source revision.
+* Reviewer: `child-reviewer-escalation`; return route: `migration-owner` through the parent Ticket.
+
+### `ticket/on-call-tooling-map`
+
+* Work owner: `tooling-mapping-owner`; Claim: `claim/on-call-tooling-map` with the same explicit atomic-claim and stale-work behavior.
+* Immutable input: authoritative `tooling-r6` records, read-only for the worker. The worker records current paging, incident-state, and escalation-handoff evidence only in its child record.
+* Bounded result and Proof seam: a source-linked map of those interfaces, actors, active work, dependencies, Authority, failure/degraded and recovery behavior, and any named unknowns. It must not infer a staffing or escalation ownership decision.
+* Reviewer: `child-reviewer-tooling`; return route: `migration-owner` through the parent Ticket.
+
+### `ticket/staffing-map`
+
+* Work owner: `staffing-mapping-owner`; Claim: `claim/staffing-map` with an immutable captured input of `staffing-r7` at dispatch. Staffing source records are read-only; only this Ticket's evidence, lifecycle, and Review references may be written.
+* Bounded result and Proof seam: roster coverage, responsibilities, Authority, active work, dependencies, provenance, and the overlapping final-disposition claim. The packet's freshness rule requires a current-revision comparison before integration: any source revision newer than the captured input invalidates the affected result and Review for integration.
+* Reviewer: `child-reviewer-staffing`; return route: `migration-owner` through the parent Ticket.
+
+The migration owner dispatched all three packets concurrently only after their boundaries and immutable inputs were recorded. `concurrentClaims` and `coordination` permit this dispatch; no worker may write another worker's Ticket or source.
+
+## Source inventory and child results
+
+The source/provenance index records one row for each fixture source and observation: stable source ID/locator, exact revision, source role, supported claims, freshness/confidence, and limitations. The original request supports the requested scope and constraints, but not operating-reality claims by itself. Each child Evidence reference keeps its condition, observation method, result, observer, dispatch/refresh observation, locator, exact revision, and confidence separate from Authority, acceptance, and lifecycle state.
+
+The escalation worker returned result `child-result/customer-escalation@escalation-r4`. `child-reviewer-escalation` reviewed the exact child Ticket, Specification, result revision, and Proof seam and recorded `Verified`. The tooling worker returned `child-result/on-call-tooling@tooling-r6`; `child-reviewer-tooling` recorded `Verified` against that exact revision.
+
+The staffing source changed after dispatch: `staffing-r8` is the current revision, superseding `staffing-r7` while preserving the overlapping claim under the Primary On-call role. I compared the child packet's captured revision with the canonical source before integration. The first staffing result, `child-result/staffing@staffing-r7`, was based only on the now-stale snapshot and was rejected for integration. Its affected Evidence and any Review acceptance were invalidated/reopened with a `Changes required` disposition; the child Ticket remained owned and returned to `accepted` for recovery, not complete or ownerless. I did not treat `staffing-r7` as a current authorization.
+
+The staffing owner then reread the changed slice from canonical `staffing-r8`, preserved the `staffing-r7` observation as historical/stale evidence, and produced `child-result/staffing@staffing-r8`. `child-reviewer-staffing` independently reviewed the exact r8 result and recorded `Verified`. Only the final `Verified` r8 Evidence is eligible for integration. The r7 result can never authorize integration after r8 appears; the source-change event invalidates only the affected result/Review and does not erase history or unrelated child responsibility.
+
+The three child Tickets therefore have these canonical Review dispositions and traceable revision bindings:
+
+| Child Ticket | Final result revision | Review disposition | Integration eligibility |
+| --- | --- | --- | --- |
+| `ticket/customer-escalation-map` | `child-result/customer-escalation@escalation-r4` | `Verified` by `child-reviewer-escalation` | yes |
+| `ticket/on-call-tooling-map` | `child-result/on-call-tooling@tooling-r6` | `Verified` by `child-reviewer-tooling` | yes |
+| `ticket/staffing-map` | `child-result/staffing@staffing-r8` (r7 attempt retained as stale history) | `Changes required` for r7, then `Verified` for r8 by `child-reviewer-staffing` | r8 only |
+
+No child completion count is used as parent proof. Each child owner owns its bounded result through its Review seam; a stale, failed, missing, `Changes required`, or `Inconclusive` area would remain owned execution, waiting, or Recovery work. Here the refreshed staffing slice clears the gap synchronously, so no Continuation record is opened.
+
+## Integration and conflict preservation
+
+`migration-owner` collected only the three final `Verified` child Evidence sets and compared claims by source and boundary, not by majority vote. Duplicate meanings have one canonical home with all supporting Evidence references. Missing coverage, source limitations, and unknowns remain explicit. The integrated System Record/current-state revision is `support-operation-current@integrated-r1`, with source vector `{escalation-r4, tooling-r6, staffing-r8}` and the Adapter's append-only transition history. The derived Map is `map/delegated-support-operation@integrated-r1`; it names that canonical locator, exact revision, child Evidence references, and freshness vector and is read-only.
+
+The ownership conflict is intentionally still visible in the integrated revision:
+
+* `escalation-r4` records the claim that Customer Escalation owns final escalation disposition; and
+* current `staffing-r8` preserves the overlapping claim under the Primary On-call role, superseding only the r7 snapshot.
+
+The map records both source-bound claims, their provenance, affected boundary, material risk, and the unresolved conflict/owner/route. It does not select a winner, merge the claims into an invented owner, or overwrite either record. Any decision or repair is a separate ordinary Workflow Ticket/Outcome linked to this Evidence; migration performs no such change. Current owners' contrary claims are therefore visible rather than silently reconciled.
+
+Before parent Review, the verification gate is satisfied: every included material dimension is current source-bound or has a named gap; exclusions and unknown coverage are explicit; owners and contrary evidence are represented; active work, dependencies, and waiting/recovery are consistent; interfaces have seam evidence; the three child revisions reconcile to the one exact integrated revision; the Map names canonical sources, revisions, and freshness; no System Record validator/action effect is being invoked; and discovered changes remain separate Workflow work. There are no external effects—only canonical representation and coordination-state transitions.
+
+## Integrated Review and return
+
+`review` admitted the exact parent target `support-operation-current@integrated-r1` with its accepted migration Specification, exact result revision, governing standards, and integrated Proof seam. `parent-map-reviewer` performed an independent Standard-depth Review over the child Review records, the source/provenance index, the boundary/coverage matrix, the stale-r7 rejection and r8 reread, the conflict preservation, and the read-only derived Map. The parent Review record is:
+
+* Verdict: `Verified`.
+* Target: integrated current-state revision `support-operation-current@integrated-r1`; derived Map `map/delegated-support-operation@integrated-r1`; source vector `{escalation-r4, tooling-r6, staffing-r8}`; Proof seam is the visible canonical integrated map and its Evidence index.
+* Specification axis: pass for bounded scope, exclusions, three child areas, freshness, integration, and representation-only effects.
+* Standards/System-fit axis: pass for one writable authority, nested responsibility, revision-bound Evidence/Reviews, stale-source recovery, conflict visibility, and no hidden parent-completion claim.
+* Supplemental reviewers: none configured beyond the named child and parent Reviewers; no unrequested reviewer was invoked.
+* Transition: parent migration Ticket `in_review -> complete` at the exact integrated revision; the parent Outcome itself remains Workflow-owned and is not declared complete by this child result.
+
+The return packet to `workflow-outcome-owner` at route `integrated-review-return` contains the map identity and canonical locator, exact integrated revision, derived-view freshness, included/excluded and unknown coverage, migration and child owners, all child Ticket IDs and Review dispositions, source/provenance and conflict summary, the r7 stale-history/rejection and r8 Verified binding, no Continuation (with `Continuation=unavailable` disclosed), no external effects, and any separate conflict proposal locator. Workflow retains parent integration, parent terminal proof, and any later decision about the ownership conflict.
+
+Final migration state is `child-results-integrated` and `migration-map-verified`. This is a verified bounded migration result, not parent Outcome completion, responsibility transfer, or an authorization to alter the represented support operation. Parent responsibility was not transferred, and no child-result aggregation without integration was invoked.
+END FROZEN RESPONSE
+
+RUNTIME AND INPUT HASHES (read before freezing; candidate-bound)
+- skill | skills/migrate-system/SKILL.md | sha256:603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+- fixture | evaluations/fixtures/migrate-system/delegated-mapping.fixture.yaml | sha256:fb330909171fd84fa4dff5ff1c59a8ccb2fcdf6f74ad03d7920c263dccadc4cb
+- disclosed-reference | skills/migrate-system/references/current-state-mapping.md | sha256:df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
+- governing-skill | skills/thinking-in-systems/SKILL.md | sha256:09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+- governing-reference | skills/thinking-in-systems/references/standard.md | sha256:daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+- governing-skill | skills/workflow/SKILL.md | sha256:fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+- governing-reference | skills/workflow/references/durable-mode.md | sha256:b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5
+- governing-reference | skills/workflow/references/continuation-template.md | sha256:dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e
+- governing-skill | skills/review/SKILL.md | sha256:651ef184563bce59569834ac605244d282bd95474efc60a12e7c567d0dd9f554
+- governing-reference | skills/review/references/review-record-template.md | sha256:4f170ec211cc07c86fbdd52ab11b986e2530e4f21384eb100d6271596bf7473d
+- governing-reference | docs/UNIVERSAL_WORK_CONTRACT.md | sha256:f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3
+- governing-reference | docs/OWNERSHIP_LIFECYCLE.md | sha256:b23bcec96fe8a02b52d8d85fb4aee3799e985e8d32ad714c64f59c49af2cb257
+
+FIXTURE GRADING (indexed against the authoritative fixture; PASS means the frozen response visibly satisfies the criterion)
+- A1 PASS — action `join the active Workflow context`: active Durable Outcome, owner, phase, Adapter, and return route are explicit.
+- A2 PASS — action `create canonical nonoverlapping child Tickets with owners Claims immutable inputs proof seams Reviewers and return routes`: three packet records enumerate every field.
+- A3 PASS — action `dispatch only independent mapping areas concurrently`: packets have disjoint read/write boundaries and only parent `contains`; dispatch is explicitly concurrent.
+- A4 PASS — action `reject the stale staffing-r7 child result and reread staffing-r8`: r7 is rejected/ineligible, the child is reopened, and r8 is reread and independently Verified.
+- A5 PASS — action `collect only Verified revision-bound child evidence`: integration names exactly the three final Verified revisions and excludes r7.
+- A6 PASS — action `reconcile duplicates conflicts and gaps`: source/boundary reconciliation, one canonical meaning, explicit unknowns, and visible conflict are stated.
+- A7 PASS — action `submit one exact integrated map revision to Review`: `support-operation-current@integrated-r1` and its derived map are submitted and parent Review is Verified against that exact revision.
+- B1 PASS — artifact `three canonical child Ticket records with Review dispositions`: escalation and tooling are Verified; staffing has the stale r7 Changes required history and final r8 Verified disposition.
+- B2 PASS — artifact `one canonical integrated current-state revision and derived map`: the single `support-operation-current@integrated-r1` source and read-only `map/...@integrated-r1` are named.
+- C1 PASS — effect `representation and coordination state only`: source records remain read-only and no represented-system or external effect occurs.
+- D1 PASS — invoked `thinking-in-systems`: explicit first invocation and governing boundary/authority/proof assessment.
+- D2 PASS — invoked `workflow`: explicit parent context, adapter, ownership, integration, and return route.
+- D3 PASS — invoked `migrate-system`: bounded conformance map, source inventory, delegation, reconciliation, and return packet.
+- D4 PASS — invoked `review`: child Review dispositions and exact parent integrated Review are recorded.
+- E1 PASS — not invoked `parent responsibility transfer`: parent owner is retained and transfer is explicitly absent.
+- E2 PASS — not invoked `child-result aggregation without integration`: source/boundary reconciliation and parent Review follow child returns.
+- F1 PASS — proof `every child source result and Review revision remains traceable`: child result IDs, source revisions, Reviewers, dispositions, and evidence index are bound.
+- F2 PASS — proof `staffing-r7 does not authorize integration after staffing-r8 appears`: stale r7 is retained only as history and r8 is the sole eligible result.
+- F3 PASS — proof `Verified parent map Review binds the exact integrated revision`: Review target, source vector, map revision, and Proof seam are exact.
+- F4 PASS — proof `conflicting ownership claims remain visible after integration`: escalation and Primary On-call claims remain separately source-bound and unresolved.
+- G1 PASS — responsibility `each child owner owns its bounded result`: each child packet assigns a Work owner and stale recovery retains it.
+- G2 PASS — responsibility `migration owner integrates and verifies the whole`: `migration-owner` collects Verified evidence, reconciles, and submits parent Review.
+- G3 PASS — responsibility `Workflow retains parent Outcome responsibility`: parent owner and terminal proof duty remain explicit after migration return.
+- H1 PASS — route `delegated-conformance-migration`: admission and dispatch use this phase route.
+- H2 PASS — route `integrated-review-return`: exact return packet is addressed to Workflow at this route.
+- I1 PASS — state `child-results-integrated`: final child evidence is reconciled into one exact parent revision.
+- I2 PASS — state `migration-map-verified`: parent map Review is Verified at the integrated revision.
+- J1 PASS — forbidden `integrate an unreviewed or stale child result`: stale r7 is rejected and only final Verified results enter integration.
+- J2 PASS — forbidden `treat delegated child completion as migration or parent completion`: child completion is not parent proof; only exact integrated Review verifies the bounded map, and parent Outcome remains open.
+- J3 PASS — forbidden `overwrite one ownership claim to remove a conflict`: both source-bound final-disposition claims remain visible.
+
+POST-FREEZE WRITING-FOR-AGENTS AUDIT (neutral wrapper only; no frozen-response edits)
+- W1 hierarchy PASS — the response leads with the in-file route/admission and ordered execution; disclosed runtime standards are listed by pointer and hash, while this audit remains outside the candidate response.
+- W2 pointers PASS — each runtime pointer names its material and trigger implicitly through the route (Workflow, migration packet, durable records, Review); no private pointer is exposed.
+- W3 co-location PASS — each child packet keeps owner, Claim, immutable input, proof seam, Reviewer, and return route together; stale handling is co-located with staffing integration; reconciliation and return are co-located.
+- W4 completion criteria PASS — admission, packet dispatch, child Review, integration, verification gate, parent Review, and return each state observable done conditions.
+- W5 leading words PASS — `bounded`, `canonical`, `immutable`, `stale`, `Verified`, `reconcile`, `integrated`, and `return` act as compact behavioral anchors.
+- W6 progressive disclosure PASS — broad route and boundary precede packet detail; source evidence, stale recovery, reconciliation, and Review are disclosed in sequence without hiding required gates.
+- W7 single source PASS — the Adapter/System Record is the writable authority; Tickets/Evidence/Reviews are canonical child records; the Map is explicitly derived and read-only; claims are not treated as ownership.
+- W8 relevance PASS — every frozen paragraph bears on delegated current-state mapping, revision freshness, integration, Review, responsibility, or the fixture's representation-only boundary.
+- W9 no-ops PASS — the wrapper audit found no sentence that merely restates a default; each metadata or guard line changes evaluation, provenance, or routing behavior.
+
+RAW EVIDENCE BINDING
+The observation file binds this exact evidence path and its full-file SHA-256. The candidate response SHA above is the SHA-256 of only the bytes between BEGIN/END FROZEN RESPONSE, before the wrapper or post-freeze audit was added. No retry, rewrite, or prior evidence was used to produce that response.

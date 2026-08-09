@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-negative
 attempt: 1
 contextId: fresh-to-spec-negative-sol-high-20260806-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:

@@ -1,0 +1,84 @@
+schemaVersion: 1
+fixtureId: migrate-system-partial-scope
+attempt: 1
+contextId: fresh-migrate-system-partial-scope-20260809t132554z-luna-max-8f1e3b2a
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: '2026-08-09T13:25:54Z'
+environment:
+  id: partial-commerce-adoption
+  capabilities:
+    persistence: true
+    baselineAdapter: true
+    workflow: true
+    migrateSystem: true
+    wayfinder: true
+    delegation: true
+    coordination: true
+    continuation: false
+  tools:
+    - selected Adapter with writable Baseline and Coordination
+    - refund records
+    - export interface documentation
+    - refund owner
+observed:
+  actions:
+    - join the active Workflow context
+    - define the refund export material boundary and explicit exclusions
+    - map affected sources actors responsibility interfaces active work dependencies evidence waits unknowns and provenance
+    - record truthful unknown coverage outside the affected slice
+    - submit the exact bounded map revision to Review without waiting for unrelated inventory
+  artifacts:
+    - verified refund-export current-state slice
+    - broader-scope coverage gap marked nonblocking
+  effects:
+    - representation and coordination state only
+  forbiddenChecks:
+    - criterion: block refund work on unrelated exhaustive mapping
+      evidence: The frozen response proceeds with the refund-export slice while inventory, search, and merchandising remain explicitly excluded and deferred.
+      observed: false
+    - criterion: imply excluded systems were verified
+      evidence: The response states that excluded coverage is unknown and says no claim is made that those systems were inspected or verified.
+      observed: false
+    - criterion: complete on Changes required or Inconclusive Review
+      evidence: The Review section records only a Verified verdict for refund-export-slice@r1 and no non-terminal verdict.
+      observed: false
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - migrate-system
+    - review
+  notInvoked:
+    - exhaustive workspace inventory
+    - refund export implementation
+  proof:
+    - Verified Review verdict binds the affected-slice revision
+    - the affected slice is trustworthy enough for ordinary Workflow and unrelated scope is explicitly excluded
+  responsibility:
+    - migration owner verifies the bounded slice
+    - Workflow retains refund-change responsibility
+  route:
+    - partial-conformance-migration
+    - ordinary-workflow-change
+  state:
+    - affected-scope-verified
+    - broader-map-deferred
+rawEvidence:
+  locator: evaluations/evidence/migrate-system/partial-scope-1.txt
+  sha256: d41bc68964ae775565adbbb883a00031c592df2ba4c70ed5cd43cdb5de7c92c3
+runtimeInputs:
+  - role: skill
+    locator: skills/migrate-system/SKILL.md
+    sha256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+  - role: fixture
+    locator: evaluations/fixtures/migrate-system/partial-scope.fixture.yaml
+    sha256: 5536e61a53aafa1f158e2d113eeca53f853dcf7546e0a84a21af29e28cd80f54
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/migrate-system/references/current-state-mapping.md
+    sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef

@@ -1,0 +1,130 @@
+Fresh isolated runtime evaluation — migrate-system-inconclusive-review
+
+Fixture: `migrate-system-inconclusive-review`
+Attempt: `1`
+Candidate suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+Evaluator: `neutral-public-runtime-wrapper`
+Context: `fresh-migrate-system-inconclusive-review-20260809t133000z-public-attempt-1`
+Recorded at (UTC): `2026-08-09T13:30:00Z`
+
+## Exact fixture and runtime bindings
+
+- Fixture: `evaluations/fixtures/migrate-system/inconclusive-review.fixture.yaml`
+  - SHA-256: `de3e86a0ca42d59aac89795aa8521a50e0d7c6cc43a9b7743da38cd363abd28b`
+- Role `skill`: `skills/migrate-system/SKILL.md`
+  - SHA-256: `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
+- Role `governing-skill`: `skills/thinking-in-systems/SKILL.md`
+  - SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- Role `governing-reference`: `skills/thinking-in-systems/references/standard.md`
+  - SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- Role `disclosed-reference`: `skills/migrate-system/references/current-state-mapping.md`
+  - SHA-256: `df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef`
+
+The fixture, skill, governing material, and disclosed reference were read from
+the candidate revision before one runtime-only response. The fixture's exact
+map and accepted schedule are authoritative. No retry, regeneration, or
+post-generation edit occurred.
+
+## Fixture prompt
+
+> Adopt our emergency phone-tree operation into Workflow. The integrated map is ready for Review, but the Reviewer cannot verify the overnight handoff because the only current observation is unavailable until tomorrow. Submit the exact map revision and preserve what happens next.
+
+## Declared fixture environment
+
+```yaml
+id: phone-tree-inconclusive-review
+capabilities:
+  persistence: true
+  baselineAdapter: true
+  workflow: true
+  migrateSystem: true
+  wayfinder: true
+  delegation: false
+  coordination: true
+  continuation: true
+tools:
+  - selected Adapter with writable Baseline Coordination and Continuation
+  - exact integrated map phone-tree-current-state@r4
+  - Reviewer
+  - accepted scheduled next observation phone-tree-overnight-observation@2026-08-10T09:00:00+02:00
+```
+
+## Frozen runtime response
+
+BEGIN FROZEN RESPONSE
+Join the active Workflow context for this durable adoption. Submit the exact
+integrated map revision `phone-tree-current-state@r4` to Review; the map itself
+is not changed by this invocation.
+
+## Review — `phone-tree-current-state@r4`
+
+- **Verdict:** `Inconclusive`.
+- **Reason:** The Reviewer cannot verify the overnight handoff because its only
+  current observation is unavailable until tomorrow. The missing evidence is
+  the overnight handoff observation, not a reason to infer a passing result.
+- **Binding:** The verdict is against the exact integrated map revision
+  `phone-tree-current-state@r4`.
+- **Transition:** `in_review → waiting`; migration remains active and the map
+  is non-terminal.
+
+## Owned Continuation
+
+- **Current owner:** The migration owner owns resumption and any changes after
+  Review; Workflow retains parent Outcome responsibility.
+- **External dependency and unblock condition:** The exact overnight handoff
+  observation becomes available through the accepted scheduled next
+  observation `phone-tree-overnight-observation@2026-08-10T09:00:00+02:00`.
+- **Next check and responsible Actor:** The migration owner checks that exact
+  observation at the accepted scheduled time and binds it to the map revision
+  under Review.
+- **Exact resumption action:** Re-read `phone-tree-current-state@r4` and the
+  overnight handoff observation, record both as exact evidence, and resume
+  Review against the unchanged map revision. If the map revision has changed,
+  invalidate this verdict and submit the new exact integrated revision instead.
+- **Proof still required:** Evidence for the overnight handoff and a Review
+  verdict bound to the exact map revision.
+
+The selected Adapter records this revision-bound `Inconclusive` Review and the
+accepted Continuation. Effects are representation and coordination state only.
+No verified migration completion, phone-tree redesign, or parent
+Responsibility release is claimed or performed. The migration is in
+`migration-waiting` with `review-inconclusive` state on the
+`conformance-migration-review` → `owned-waiting` route.
+END FROZEN RESPONSE
+
+rawResponseSha256: `c2d02c42981948cbfb7b3e252f9803358fbde9118760de7ba0f32e6064d9b4c0`
+
+## Indexed fixture grade — one response, no retry
+
+- [A1] `join the active Workflow context` — PASS. The response joins the active context before submitting the map.
+- [A2] `submit the exact integrated map revision to Review` — PASS. Review is explicitly bound to `phone-tree-current-state@r4`.
+- [A3] `record an Inconclusive verdict against that revision` — PASS. The Review section records `Inconclusive` for the exact map revision.
+- [A4] `keep migration Responsibility active` — PASS. Migration remains active and non-terminal.
+- [A5] `create a Continuation with missing overnight evidence owner next check and exact resumption action` — PASS. The Continuation names the missing observation, migration owner, accepted schedule, and ordered pickup action.
+- [AR1] `revision-bound Inconclusive Review record` — PASS. The Review verdict and target are revision-bound.
+- [AR2] `accepted Continuation` — PASS. The response records the accepted scheduled observation and Continuation through the selected Adapter.
+- [E1] `representation and coordination state only` — PASS. Only Review and Continuation records are recorded; no represented operation is changed.
+- [I1–I4] Invoked `thinking-in-systems`, `workflow`, `migrate-system`, and `review` — PASS. The response uses their context, mapping, and Review boundaries.
+- [N1–N2] Not invoked `verified migration completion` or `phone-tree redesign` — PASS. Both remain explicitly outside the response.
+- [P1] `the missing evidence and next observation are exact and the map remains non-terminal` — PASS. The overnight observation locator and accepted timestamp are preserved verbatim, and the map remains waiting.
+- [R1–R2] Responsibility — PASS. The migration owner owns resumption and changes after Review; Workflow retains parent Outcome responsibility.
+- [RT1–RT2] Route — PASS. The response states `conformance-migration-review` and `owned-waiting`.
+- [S1–S2] State — PASS. The response states `migration-waiting` and `review-inconclusive`.
+- [F1] Forbidden `treat Inconclusive Review as verified current state` — NOT OBSERVED. The response calls the verdict `Inconclusive`, leaves the map non-terminal, and preserves the missing evidence.
+- [F2] Forbidden `release migration or parent responsibility` — NOT OBSERVED. Migration remains active; Workflow retains parent Outcome responsibility.
+
+Overall attempt result: PASS. One frozen runtime response satisfies every
+fixture criterion; no retry or second generation occurred.
+
+## Authored-prose audit — writing-for-agents and skill mechanics
+
+- [H1] Information hierarchy — PASS. Review verdict and exact revision lead; the Continuation, responsibility, and effects follow in the order needed to resume safely.
+- [P1] Pointers and progressive disclosure — PASS. The runtime response contains only the fixture branch; the disclosed mapping checklist is named in the binding record rather than repeated.
+- [C1] Co-location and single source of truth — PASS. Map revision, verdict, dependency, owner, next check, and resumption action remain co-located without inventing a second authority.
+- [K1] Completion criteria — PASS. The response ends at owned waiting with proof still required and does not claim migration or parent completion.
+- [L1] Leading words and relevance — PASS. `exact`, `revision-bound`, `Inconclusive`, `waiting`, and `resumption` anchor the governing behavior; every sentence serves the fixture.
+- [M1] Mechanics schema — PASS. `migrate-system` retains model invocation through its description, and its metadata keeps `allow_implicit_invocation: true`; no frontmatter or metadata was changed.
+
+Attestation: this is one fresh runtime-only execution against candidate
+`git:d78dff812af6a69a1995980a4bc30829a298a997`; the response was generated once,
+preserved between the literal sentinels, and not retried, copied, or edited.

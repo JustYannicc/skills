@@ -1,0 +1,87 @@
+schemaVersion: 1
+fixtureId: migrate-system-direct-technical
+attempt: 3
+contextId: fresh-migrate-system-direct-technical-attempt-3
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T16:00:00Z
+environment:
+  id: inherited-billing-service
+  capabilities:
+    persistence: true
+    baselineAdapter: true
+    workflow: true
+    migrateSystem: true
+    wayfinder: true
+    delegation: false
+    coordination: true
+    continuation: true
+  tools:
+    - selected Adapter with writable Baseline Coordination and Continuation
+    - versioned runbooks
+    - ticket records
+    - dashboard observations
+    - operator confirmations
+observed:
+  actions:
+    - join the active Workflow context
+    - inventory authoritative and observational sources with exact revisions or observation times
+    - map system boundaries actors responsibilities interfaces active work dependencies evidence waits unknowns and provenance
+    - preserve the ownership conflict instead of guessing
+    - submit the exact integrated current-state revision to Review
+  artifacts:
+    - canonical billing-service current-state records
+    - derived current-state map with visible conflict and confidence
+  effects:
+    - representation and coordination state only
+  forbiddenChecks:
+    - criterion: resolve the failed-payment ownership conflict without Authority or evidence
+      evidence: The map retains the contradictory runbook, ticket, and operator claims, records no accepted Authority to choose an owner, and routes the decision as separate Workflow work.
+      observed: false
+    - criterion: treat Changes required or Inconclusive Review as verified
+      evidence: Review returned Verified for exact map revision billing-map-r12; no Changes required or Inconclusive verdict was represented as verified.
+      observed: false
+    - criterion: change production behavior or work ownership
+      evidence: Effects stop at Baseline, Coordination, Continuation, and the read-only derived Map; production behavior and the disputed recovery duty remain unchanged.
+      observed: false
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - migrate-system
+    - review
+  notInvoked:
+    - service repair
+    - architecture redesign
+    - canonical Adapter migration
+  proof:
+    - source claims and operating observations remain traceable
+    - Verified Review verdict is bound to the exact map revision
+    - ownership conflict is visible and routed without changing production
+  responsibility:
+    - migration owner owns map integration and verification
+    - Workflow retains parent Outcome responsibility
+  route:
+    - direct-conformance-migration
+    - workflow-resumption
+  state:
+    - current-state-verified
+    - ownership-conflict-visible
+rawEvidence:
+  locator: evaluations/evidence/migrate-system/direct-technical-3.txt
+  sha256: c37d4e6220b458fba6636f91d939972cd5f3c1ceeacbb4b9a75a5b3c1f47a7a0
+runtimeInputs:
+  - role: skill
+    locator: skills/migrate-system/SKILL.md
+    sha256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+  - role: fixture
+    locator: evaluations/fixtures/migrate-system/direct-technical.fixture.yaml
+    sha256: a934dddbb110922e9a909bd45a396187db21af3c2536420a227bb496d2be83a0
+  - role: disclosed-reference
+    locator: skills/migrate-system/references/current-state-mapping.md
+    sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-missing-capability
 attempt: 1
 contextId: fresh-research-missing-final-1
-suiteRevision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:18:03Z
 environment:

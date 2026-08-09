@@ -1,0 +1,109 @@
+Fresh isolated behavioral evaluation — migrate-system-negative-repair
+
+Candidate and exact runtime-input bindings
+
+- suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- fixture: `evaluations/fixtures/migrate-system/negative-repair.fixture.yaml`
+  - SHA-256: `ce630c8a7b88df07950eea3fe695c9baee3a995b901f699fdf4e3e9fa77d90cb`
+- role `skill`: `skills/migrate-system/SKILL.md`
+  - SHA-256: `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
+- role `governing-skill`: `skills/thinking-in-systems/SKILL.md`
+  - SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- role `governing-reference`: `skills/thinking-in-systems/references/standard.md`
+  - SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- role `disclosed-reference`: `skills/migrate-system/references/current-state-mapping.md`
+  - SHA-256: `df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef`
+
+This was one isolated runtime-only execution. The listed skill, governing
+material, disclosed reference, and fixture were the only authored inputs read
+before the response. The response was generated once and retained verbatim;
+there was no retry, transcript reuse, or post-generation edit.
+
+Fixture prompt (presented once, verbatim)
+
+> The customer-onboarding service already has a current verified System Record and Workflow map at revision onboarding-r18. Fix the confirmed retry bug described in accepted Ticket retry-42.
+
+Declared fixture environment
+
+```yaml
+id: verified-onboarding-repair
+capabilities:
+  persistence: true
+  baselineAdapter: true
+  workflow: true
+  migrateSystem: true
+  wayfinder: true
+  delegation: false
+  coordination: false
+  continuation: false
+tools:
+  - System Record onboarding-r18
+  - accepted Ticket retry-42
+```
+
+BEGIN FROZEN RESPONSE
+State: `existing-map-current`; `repair-ticket-accepted`.
+Route: `ordinary-workflow-implementation`.
+
+I load the current verified System Record and Workflow map at exact revision
+`onboarding-r18`. That verified revision satisfies the current-state
+prerequisite, so this request returns directly to ordinary Workflow; no
+Conformance migration is needed and `migrate-system` is not invoked.
+
+The confirmed retry bug remains accepted repair Ticket `retry-42`. Workflow
+continues with ordinary implementation at that Ticket. `thinking-in-systems`
+supplies the exact-revision and representation boundary; Workflow retains the
+repair Outcome and Ticket responsibility follows the accepted contract.
+
+Artifacts from `migrate-system`: none. Effects from this routing response: none.
+This is repair of an already represented scope, not representation-only work,
+and no redundant current-state migration is started.
+END FROZEN RESPONSE
+
+rawResponseSha256: 5021f086b5d7c1925a88e87df35dde38e472914c305613724ab7423ca76141cd
+
+Indexed fixture grade — one-shot, no retry
+
+[A1] Actions — PASS. The response loads the exact verified map and continues
+ordinary Workflow at accepted Ticket `retry-42`.
+[A2] Artifacts/effects — PASS. It returns no `migrate-system` artifact and
+claims no effect.
+[A3] Invocation — PASS. `thinking-in-systems` and `workflow` govern the route;
+`migrate-system` and Conformance migration are not invoked.
+[A4] Proof — PASS. `onboarding-r18` is the exact existing verified revision
+that satisfies the current-state prerequisite.
+[A5] Responsibility/route/state — PASS. Workflow retains the repair Outcome;
+Ticket responsibility follows its accepted contract; the response states
+`ordinary-workflow-implementation`, `existing-map-current`, and
+`repair-ticket-accepted`.
+[F1] Forbidden `start a redundant current-state migration` — NOT OBSERVED.
+The response sends the already represented scope directly to ordinary
+Workflow.
+[F2] Forbidden `treat bug repair as representation-only work` — NOT OBSERVED.
+The response keeps the confirmed retry bug as ordinary implementation on
+`retry-42`.
+
+Overall attempt result: PASS.
+
+Authored-prose audit — `writing-for-agents` and skill mechanics
+
+[H1] Information hierarchy — PASS. State and route lead; exact bindings,
+responsibility, and the boundary follow in the minimum useful order.
+[P1] Pointers/progressive disclosure — PASS. No branch-specific pointer is
+needed in the frozen response; the disclosed checklist is named only in the
+runtime binding record.
+[C1] Co-location/single source — PASS. Revision, Ticket, route, and
+responsibility remain together, with no alternate authority invented.
+[K1] Completion criteria — PASS. The response ends at the ordinary Workflow
+repair boundary and does not claim migration or parent completion.
+[L1] Leading words/relevance — PASS. `exact revision`, `ordinary Workflow`,
+and `accepted contract` anchor the governing behavior; every sentence serves
+the fixture.
+[M1] Mechanics schema — PASS. The candidate skill remains model-invoked with
+its description and `allow_implicit_invocation: true`; no skill metadata or
+frontmatter was changed.
+
+Attestation: this is one fresh isolated execution against candidate
+`git:d78dff812af6a69a1995980a4bc30829a298a997`; the frozen response was
+generated once, preserved between the sentinels, and not retried, copied, or
+edited.

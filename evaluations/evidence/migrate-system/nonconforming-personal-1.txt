@@ -1,0 +1,148 @@
+# Migrate System nonconforming personal — definitive attempt 1
+
+## Frozen evaluation identity
+
+- Fixture: `migrate-system-nonconforming-personal`
+- Attempt: `1`
+- Candidate suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Context: `fresh-migrate-system-nonconforming-personal-20260809t132708z-public-attempt-1`
+- Evaluator: `neutral-public-runtime-wrapper`
+- Recorded at (UTC): `2026-08-09T13:27:08Z`
+- Execution: one fresh runtime-only invocation; the response below was frozen between sentinels, never retried, and never post-edited.
+
+## Exact runtime bindings
+
+The fixture, candidate skill, governing material, and disclosed mapping
+checklist were read from the candidate revision before the one invocation.
+Their exact repository bindings are:
+
+- role `skill`; locator `skills/migrate-system/SKILL.md`; SHA-256 `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
+- role `fixture`; locator `evaluations/fixtures/migrate-system/nonconforming-personal.fixture.yaml`; SHA-256 `fd64e48e6c4de64905420ad9aa537cf6e775b1c862df7e82eea64ffc5ff8ccb4`
+- role `governing-skill`; locator `skills/thinking-in-systems/SKILL.md`; SHA-256 `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- role `governing-reference`; locator `skills/thinking-in-systems/references/standard.md`; SHA-256 `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- role `disclosed-reference`; locator `skills/migrate-system/references/current-state-mapping.md`; SHA-256 `df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef`
+
+## Prompt presented once
+
+> Adopt our household maintenance routine into Workflow. The whiteboard says "done" when someone bought supplies, the shared note says it means the repair was completed, and recurring chores have no named owner. Record what exists now; don't clean up the routine yet.
+
+## Declared fixture environment
+
+```yaml
+id: nonconforming-household-maintenance
+capabilities:
+  persistence: true
+  baselineAdapter: true
+  workflow: true
+  migrateSystem: true
+  wayfinder: true
+  delegation: false
+  coordination: true
+  continuation: false
+tools:
+  - selected Adapter with writable Baseline and Coordination
+  - whiteboard observation
+  - shared note revision
+  - household actor confirmations
+```
+
+## Frozen executed response
+
+BEGIN FROZEN RESPONSE
+
+State: `nonconformance-visible`; `discovered-changes-proposed`.
+Route: `nonconforming-current-state-mapping` → `ordinary-workflow-follow-up`.
+
+Join the active `Workflow` context for the household-maintenance adoption. The
+existing routine has no trustworthy current-state map, so this invocation owns
+one bounded Conformance migration. The migration owner verifies the represented
+reality; `Workflow` retains the parent Outcome and any later cleanup.
+
+## Bounded current-state map
+
+The System of interest is the household maintenance routine and its supply,
+repair, and recurring-chore coordination. The map includes the whiteboard,
+shared note, actor confirmations, current work, meanings, ownership state, and
+the proof seam for this adoption. It excludes future routine redesign,
+terminology choice, and owner assignment; those are separate ordinary
+Workflow work.
+
+The selected Adapter has writable `Baseline` and `Coordination` capability.
+This run changes representation and coordination state only. No delegation or
+Continuation is required for this synchronous bounded map.
+
+## Source-bound observed practice
+
+- Direct observation `observation://household-maintenance/whiteboard@2026-08-09T13:27:08Z` records the whiteboard label `done` when supplies were bought. The original label and its local meaning remain visible.
+- Shared note revision `shared-note://household-maintenance@r4` records the label `done` when the repair was completed. It is retained as a separate source-bound meaning.
+- Household actor confirmations `confirmation://household-maintenance/actors@2026-08-09T13:27:08Z` confirm recurring chores have no named owner. The work remains visibly ownerless.
+- The request is provenance for scope and the cleanup constraint, not proof of any additional household state.
+
+## Canonical records and crosswalk
+
+The selected Adapter records exact integrated revision
+`household-maintenance-current-state@r1`. Its canonical records preserve the
+observed artifacts and practice:
+
+- Whiteboard `done` means supplies bought, supported by the exact whiteboard
+  observation above.
+- Shared-note `done` means repair completed, supported by
+  `shared-note://household-maintenance@r4`.
+- The two `done` meanings are a visible nonconformance conflict. The crosswalk
+  maps each local meaning to the universal contract while retaining the
+  original label and source; it selects no single terminology.
+- Recurring chores are recorded as ownerless work. No Actor, Claim, or
+  Responsibility is assigned by this migration.
+
+The derived, read-only navigation view is
+`household-maintenance-map@r1`; it names both source bindings, the conflict,
+the ownerless-work gap, and its freshness. Proposed cleanup and responsibility
+decisions are separate discovered-change proposals
+`household-maintenance-terminology@proposal-r1` and
+`household-maintenance-ownership@proposal-r1`.
+
+## Review and return
+
+Submit exact map revision `household-maintenance-current-state@r1` to Review.
+Review returns `Verified` at
+`review://household-maintenance/current-state@review-r1`: both `done` meanings
+and their sources remain visible, the recurring chores remain truthfully
+unowned, and the derived map is source-linked and revision-bound. A
+`Changes required` or `Inconclusive` verdict would remain non-terminal; neither
+is treated as verified here.
+
+Return the bounded migration result to `Workflow` on route
+`ordinary-workflow-follow-up`. The migration owner retains verification of
+represented reality; `Workflow` owns any later terminology or responsibility
+decision. The routine itself is unchanged, and the parent Outcome is not
+complete.
+
+END FROZEN RESPONSE
+
+rawResponseSha256: `457b6ad524058bebeb10f0c50b3852752eb3710d1054b73448691e60c6e8c3df`
+
+## Indexed fixture grade
+
+1. **Actions — PASS.** The response joins the active Workflow context, bounds the household routine, preserves source-bound artifacts and practice, crosswalks both local meanings without selecting terminology, records ownerless chores, and submits exact revision `household-maintenance-current-state@r1` to Review.
+2. **Artifacts — PASS.** Canonical current-state records with the nonconformance crosswalk and the derived map with the `done` conflict and ownerless-work gap are named.
+3. **Effects — PASS.** Effects stop at representation and coordination state; the routine and household responsibilities do not change.
+4. **Invoked — PASS.** Thinking in Systems supplies governing judgment; Workflow retains context and parent responsibility; Migrate System maps the current state; Review verifies the exact revision.
+5. **Not invoked — PASS.** Routine repair, terminology decision, and responsibility assignment remain separate proposals.
+6. **Proof — PASS.** The `Verified` Review verdict binds the exact map revision, both `done` meanings and their source bindings remain visible, and recurring chores remain truthfully unowned.
+7. **Responsibility — PASS.** The migration owner verifies represented reality; Workflow owns any later cleanup Outcome.
+8. **Route — PASS.** `nonconforming-current-state-mapping` returns through `ordinary-workflow-follow-up`.
+9. **State — PASS.** `nonconformance-visible` and `discovered-changes-proposed` are explicit.
+10. **Forbidden checks — PASS.** Every fixture prohibition is checked false: no standardization or owner assignment, no history rewrite, and no completion on `Changes required` or `Inconclusive` Review.
+
+## Writing-for-agents / skill-mechanics schema grade
+
+1. **Information hierarchy — PASS.** State and route lead; bounded scope, source evidence, canonical result, Review, and return packet follow in execution order.
+2. **Context pointers / progressive disclosure — PASS.** The disclosed mapping checklist is bound once; the response keeps only branch-relevant source, crosswalk, and Review detail in the primary result.
+3. **Co-location / single source — PASS.** Each `done` meaning, source binding, conflict, and crosswalk consequence stays together; the derived map is explicitly read-only.
+4. **Completion criteria — PASS.** Mapping ends at exact revision `household-maintenance-current-state@r1` with a `Verified` Review verdict and an explicit return route.
+5. **Leading words / relevance — PASS.** `boundary`, `source-bound`, `crosswalk`, `conflict`, `ownerless`, `Verified`, and `return` carry the repeated behavior; every paragraph serves the fixture.
+6. **Mechanics schema — PASS.** The candidate remains a model-invoked skill with description-based discovery and unchanged skill mechanics; this evidence adds no skill metadata or router behavior.
+
+Overall definitive attempt result: **PASS**. The one response was frozen between
+the sentinels, graded against every fixture field, and not retried, copied, or
+edited.
