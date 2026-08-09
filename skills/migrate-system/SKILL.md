@@ -12,6 +12,11 @@ Adopt one existing scope by recording and verifying its actual current state
 through ordinary `'Workflow'`. This skill owns one bounded mapping result. The
 Outcome owner retains parent Responsibility, integration, and terminal proof.
 
+When the declared sources, Authority, and Adapter capabilities are sufficient,
+perform the bounded mapping and Review in this invocation. Do not return a plan
+or promise to map later. Use waiting only for a real missing input, Authority,
+capability, or inconclusive proof seam.
+
 Conformance migration changes representation and coordination state. Existing
 artifacts, work, behavior, policy, environment, ownership, and interfaces remain
 as observed. Return every proposed repair or redesign to Workflow as separate
