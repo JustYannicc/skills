@@ -1519,6 +1519,929 @@
     },
     {
       "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-cross-domain-physical-1-20260809t133200z-luna-max",
+        "fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a",
+        "fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-cross-domain-physical-1-20260809t133200z-luna-max",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-1.txt",
+          "sha256": "0f851b646076f1dc1beb7aea8d6fce21dcb2564e85c2c90a78fbaca21555c686",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-2.txt",
+          "sha256": "2a41fc2ec9432665ee656d5498eeeb48c1a7807bd921d6824191b542347d543a",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-3.txt",
+          "sha256": "552d370c690274bd50713109f387c2564ca1702569d8ffa0d3ba88f83cb7e434",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-cross-domain-physical",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564",
+        "fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543",
+        "fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-1.txt",
+          "sha256": "82172bbbdf7705bcf8045550bc452a4d1dd7ae5e5acec47b163d30ffe5c5d4d3",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-2.txt",
+          "sha256": "19a4f8313f70223fdea9f0b9f748d7baecfba22aa87e4596435b86229ad84884",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-3.txt",
+          "sha256": "5b5157b79ca912fef13ceb95bf710872fbd448581fa674c54093e24898cdb594",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-direct-human-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4",
+        "fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e",
+        "fresh-handoff-indirect-agent-transfer-3-luna-max-20260809t133116z-5366777a-d295-44e9-8a7b-15342c7c8a34"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-1.txt",
+          "sha256": "638bd1532f6eb1ce20ff0388ceb2b27b17d73dacfcc8c11c54a46bf0e072b6bc",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-2.txt",
+          "sha256": "399ba3e19e90581d00f5579e8e4ca36ff70f3b1f5933a3852ffaf3af784834c4",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-indirect-agent-transfer-3-luna-max-20260809t133116z-5366777a-d295-44e9-8a7b-15342c7c8a34",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-3.txt",
+          "sha256": "c9c0109d0492219ebe06028a3b65b575040fdb8949049aa8708e6e8d8e151aea",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-indirect-agent-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e",
+          "locator": "evaluations/evidence/handoff/missing-capability-1.txt",
+          "sha256": "4297cfd047123b8af8fbd9304baba17c4df868ed8d60c4ff6a8cb2cd2acdcb1d",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/missing-capability.fixture.yaml",
+              "sha256": "c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf",
+          "locator": "evaluations/evidence/handoff/missing-recipient-route-1.txt",
+          "sha256": "648c241f5a07b6001ee8abf244412cbd2d6f5e349dff02c192b2fd13d99a6759",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/missing-recipient-route.fixture.yaml",
+              "sha256": "f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-missing-recipient-route",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3",
+          "locator": "evaluations/evidence/handoff/negative-summary-1.txt",
+          "sha256": "3c997545eb830ff3e3e360d969ed14fe95b359c904f12283d58fcb81add394fc",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/negative-summary.fixture.yaml",
+              "sha256": "23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-negative-summary",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-rejected-transfer-20260809t133402z-luna-max-fresh-cb8a79a7-c1f5-4c4d-b884-f05298d5971b",
+        "fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c",
+        "fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-rejected-transfer-20260809t133402z-luna-max-fresh-cb8a79a7-c1f5-4c4d-b884-f05298d5971b",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-1.txt",
+          "sha256": "66810e1a332d602e5a5fac2c2b56026732212525e10bc921deb2ff8c0fb01699",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-2.txt",
+          "sha256": "38f8b93e57b7ecd05ca26c78ce8d30606f36c6610bfbe5c2357a5b9b69937534",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-3.txt",
+          "sha256": "1fac2f532b1fa95ac716653596e8c21999a273c6e79b7e92816f4e534ab3eb1c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-rejected-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57",
+        "fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac",
+        "fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57",
+          "locator": "evaluations/evidence/handoff/service-dispatch-1.txt",
+          "sha256": "837ce0560b9ddc11c1acc25c0fd1cd2b7e0b7df0c7a46bfabaecd451e16042bd",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac",
+          "locator": "evaluations/evidence/handoff/service-dispatch-2.txt",
+          "sha256": "3ec31f229d560220917d1f06ddcceb68ce434179795b062ad6795d8828a9de2a",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a",
+          "locator": "evaluations/evidence/handoff/service-dispatch-3.txt",
+          "sha256": "1c4d104ec2c47db118c915d558426bc08ed3a31800f8c48fda839ee91d7920fa",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-service-dispatch",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6",
+          "locator": "evaluations/evidence/handoff/session-continuity-1.txt",
+          "sha256": "55ab350366bd39bfb69d6c9a3a768431c37b77563ac074d3e07829c0bcf5179c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/session-continuity.fixture.yaml",
+              "sha256": "d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-session-continuity",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0",
+        "fresh-handoff-stale-context-attempt-2-20260809t133500z-luna-max-213dbfe8-64a4-4c06-9e5a-cfb608007b7b",
+        "fresh-handoff-stale-context-attempt-3-20260809t133637z-luna-max-c7f34f09-57e0-4b88-a8f7-23e0f4261d2"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0",
+          "locator": "evaluations/evidence/handoff/stale-context-1.txt",
+          "sha256": "1f151542cb2cc39640fddb11ba855d026079705942d28c6e9bb003eb3b2548ab",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-stale-context-attempt-2-20260809t133500z-luna-max-213dbfe8-64a4-4c06-9e5a-cfb608007b7b",
+          "locator": "evaluations/evidence/handoff/stale-context-2.txt",
+          "sha256": "1af61ce09deb0923a187d0e1499e6e26122f7af32bddb56590187c3dab0caecb",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-stale-context-attempt-3-20260809t133637z-luna-max-c7f34f09-57e0-4b88-a8f7-23e0f4261d2",
+          "locator": "evaluations/evidence/handoff/stale-context-3.txt",
+          "sha256": "48361f42b1506f8f1337b96ebd0c7b7b6e3c7d2c15f4cf94cf4c9f63424720b2",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-stale-context",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-waiting-no-scheduler-20260809t133257z-luna-max-9b6d9e77-4a8b-4f14-8b58-199273f6b2bf",
+        "fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402",
+        "fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809t133257z-luna-max-9b6d9e77-4a8b-4f14-8b58-199273f6b2bf",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-1.txt",
+          "sha256": "9f9cb522d0b6c40cc567076d2c49a526082ebee235ea33061844f15241a36525",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-2.txt",
+          "sha256": "d40808e8dc23317a55e85466c7664118161c79fab2842409ba05fca9c9cc2c42",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-3.txt",
+          "sha256": "5b1d85c9582c0acccc664e6d494e8b7fbbb5895c1a05a9dbb82b1ac99287922d",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-waiting-no-scheduler",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe"
+    },
+    {
+      "attempts": [
         1
       ],
       "contextIds": [

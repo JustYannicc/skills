@@ -1,0 +1,77 @@
+schemaVersion: 1
+fixtureId: handoff-session-continuity
+attempt: 1
+contextId: fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T13:41:21Z
+environment:
+  id: handoff-session-same-owner
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    automatic-resumption: false
+  tools:
+    - selected canonical Adapter
+observed:
+  actions:
+    - classify Continuity rather than Transfer
+    - bind canonical revisions and pickup point
+    - persist a manual next-session trigger
+    - require current-state reread on pickup
+    - return continuation evidence
+  artifacts:
+    - Continuity Handoff contract
+  effects: []
+  forbiddenChecks:
+    - criterion: invent a successor
+      evidence: Continuity names only the same current owner; no successor, recipient, transfer offer, or Responsibility transition is introduced.
+      observed: false
+    - criterion: claim automatic resumption
+      evidence: The exact environment declares automatic-resumption false; the Continuation names only manual pickup and claims no scheduler, monitor, polling, alert, or automatic wake-up.
+      observed: false
+    - criterion: infer acceptance from the new session
+      evidence: The new session has not resumed, and Continuity has no acceptance gate or Responsibility transition; pickup remains unverified until the same owner rereads current state.
+      observed: false
+    - criterion: duplicate the draft
+      evidence: draft-r3 remains a canonical reference; the Handoff stores its exact revision and pickup point without copying response content into a second authority.
+      observed: false
+    - criterion: complete the translation update
+      evidence: Two reviewer questions remain, no translation effect is performed, the parent Outcome stays open, and Workflow retains parent terminal proof.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - scheduler
+    - implement
+  proof:
+    - translation-update-r6 and draft-r3 are exact references
+    - reviewer questions and first next action survive
+    - fresh session must reread current state
+  responsibility:
+    - same owner remains responsible across sessions
+    - Workflow retains parent integration
+  route:
+    - workflow-to-handoff-continuity-to-workflow
+  state:
+    - Prepared
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/session-continuity.fixture.yaml
+    sha256: d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+rawEvidence:
+  locator: evaluations/evidence/handoff/session-continuity-1.txt
+  sha256: 55ab350366bd39bfb69d6c9a3a768431c37b77563ac074d3e07829c0bcf5179c

@@ -8,7 +8,8 @@ This repository is being built around a simple idea: agents become much more use
 
 No skill has been published yet. Thinking in Systems, Workflow's Inline and
 Durable routes, To Spec, To Tickets, Domain Modeling, Review, and Prototype are
-approved. Suite publication remains gated by the composed-suite and
+approved. Handoff has an implementation candidate awaiting the issue #26 human
+review gate. Suite publication remains gated by the composed-suite and
 clean-install proof in #31 and the immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved

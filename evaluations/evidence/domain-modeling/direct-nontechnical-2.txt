@@ -1,3 +1,5 @@
+Validation rebind: git:ce2b02e6249d229d7d88b10bec58171b4bac6621. The byte-identity proof for the bound Domain Modeling runtime inputs is authoritative in evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt; the original evaluation context and revision remain recorded in this evidence.
+
 Fresh-context behavioral evaluation — domain-modeling-direct-nontechnical
 Attempt: 2
 Context ID: fresh-domain-modeling-direct-nontechnical-20260809t105625z-luna-max-2-c4659d7d-ab94-419d-9ceb-950442f9134e

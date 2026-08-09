@@ -1,7 +1,8 @@
 # Skill packages
 
 `thinking-in-systems`, `workflow`, `to-spec`, `to-tickets`, `domain-modeling`,
-`review`, and `prototype` are approved. The approved Workflow Durable route and
+`review`, and `prototype` are approved. `handoff` has an implementation
+candidate awaiting required human review. The approved Workflow Durable route and
 To Tickets implementation merged through PR #45 and closed issues #14 and #23.
 `wayfinder` is an implemented candidate awaiting the human review required by
 issue #21.
