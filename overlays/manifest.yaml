@@ -2,6 +2,7 @@ schemaVersion: 1
 suite:
   id: thinking-in-systems
   version: 1
+  skillsCliVersion: 1.5.22
   source:
     id: JustYannicc/skills
     url: https://github.com/JustYannicc/skills
@@ -46,6 +47,7 @@ source:
 skills:
   - name: grill-with-docs
     sourceTarget: skills/engineering/grill-with-docs
+    finalFingerprint: b89fb442f10163be27ccfb99f93cea6ce7104e99f01fd45d4f55f4f13bf4c186
     patches:
       - target: skills/engineering/grill-with-docs/SKILL.md
         file: overlays/grill-with-docs/SKILL.md.patch
@@ -55,18 +57,21 @@ skills:
         sha256: a051ae6dbabc7a5e74dfe2f84b1019472e80906880becc4f130b5f91415a017b
   - name: grilling
     sourceTarget: skills/productivity/grilling
+    finalFingerprint: ed3ac495ff9aa3e0dd0d79757290cfb21041587cc1a08563ae02f50901513b42
     patches:
       - target: skills/productivity/grilling/SKILL.md
         file: overlays/grilling/SKILL.md.patch
         sha256: c64184935d266ddf481c9fed6dc3b84aee641fd3325a8352c7a36e5a7084559b
   - name: research
     sourceTarget: skills/engineering/research
+    finalFingerprint: 8621cd3bb44815e7b998e86d3e175d8ac0f351ff0d541fc5e973fd0792f0e3b0
     patches:
       - target: skills/engineering/research/SKILL.md
         file: overlays/research/SKILL.md.patch
         sha256: 1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a
   - name: to-questionnaire
     sourceTarget: skills/productivity/to-questionnaire
+    finalFingerprint: 66102a600fec1cf1c5db68bfea2c42dc4d2e01ba7f79d2a2dedd94c6b11644c6
     patches:
       - target: skills/productivity/to-questionnaire/SKILL.md
         file: overlays/to-questionnaire/SKILL.md.patch

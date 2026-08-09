@@ -19,6 +19,7 @@ suiteRef: <immutable release tag>
 suiteRevision: <immutable commit>
 scope: project | global
 status: applying | current | failed | removed
+activation: active | inactive
 updatedAt: <ISO-8601 timestamp>
 ---
 ```
@@ -33,6 +34,10 @@ For each selected harness, record its CLI identifier, skill paths, instruction s
 
 For every suite-owned and upstream package, record name, role, source URL, immutable revision, source path, installed path, content fingerprint, target harnesses, prior disposition, and current disposition.
 
+The package fingerprint is lowercase SHA-256 of one deterministic byte stream over every regular file and symbolic link below the resolved package root; exclude nothing. Sort entries by their UTF-8 relative path bytes with `/` separators. For each entry append its type (`file` or `symlink`), a NUL byte, relative path, a NUL byte, byte length in decimal, a NUL byte, exact file bytes or symlink-target bytes, and a final NUL byte. Hash the resulting concatenation. Compare source and installed roots using the same relative inventory; an added, missing, transformed, or unreadable entry is a mismatch.
+
+The suite assumes the pinned skills CLI installs the package subtree verbatim; CLI lock and provenance files live outside the resolved package root. Release certification proves this inventory equality for every supported target and link/copy mode claimed by the release. If a selected target or mode transforms the package, mark it unsupported for that release and either use a certified mode such as `--copy` after preview or abort without mutation; never normalize away an unexplained difference.
+
 ### Overlays
 
 Record the manifest revision and, for each patch, its target, declared hash, observed hash, application result, and installed-package fingerprint.
@@ -43,7 +48,9 @@ Record the selected Adapter, capability evidence, project keys that override glo
 
 ### Managed instructions
 
-For every block, record marker version, logical and resolved file paths, complete-file pre-write hash, block hash, surrounding-file post-write hash, and drift status.
+For active mode, record every block's marker version, logical and resolved file paths, complete-file pre-write hash, block hash, surrounding-file post-write hash, and drift status. For install-only mode, record the declined activation choice and verified preservation hash for each inspected instruction file.
+
+The marker fingerprint is lowercase SHA-256 of the exact UTF-8 bytes between the begin and end marker lines, including the final newline before the end marker and excluding both marker lines. Preserve the instruction file's existing line endings outside the block; generate the managed block with LF line endings.
 
 ### Activation evidence
 
@@ -55,7 +62,9 @@ Record the current and last-known-good revision, sufficient package and file sta
 
 ### History
 
-Append one compact entry per Install, Repair, Update, Reconfigure, Rollback, or Remove transaction. Bind the operation, approved plan, changed-object set, proof, result, and Setup self-removal outcome.
+Append one compact entry per Install, Repair, Update, Reconfigure, or Rollback transaction. Bind the operation, approved plan, changed-object set, proof, result, and Setup self-removal outcome.
+
+Remove is the exception because the effective `installation.md` must be absent when removal succeeds. Before removing it, write a non-effective receipt at `.agents/system-thinking/history/removed-<timestamp>.md` for project scope or beside the global record under `history/removed-<timestamp>.md`. The receipt uses the required frontmatter and sections needed to bind the removed installation, approved plan, removed and preserved objects, proof, recovery commands, and Setup disposal. Start it with `status: applying`; set `status: removed` only after Setup is absent, or `status: failed` when Setup disposal fails. A subsequent Setup inspection checks incomplete receipts before offering a new Install or maintenance branch. A receipt is history and recovery evidence, never effective configuration.
 
 ## Layering
 
@@ -63,4 +72,4 @@ A project record overrides only keys it declares. All other keys inherit from th
 
 ## Atomicity and privacy
 
-Write a candidate beside the current file, verify it, then replace atomically. Preserve permissions. Redact secrets from commands and evidence. A record with `status: applying` or `status: failed` is incomplete and must route the next Setup run to inspection and recovery before ordinary maintenance.
+Write a candidate beside the current file, verify it, then replace atomically. Preserve permissions. Redact secrets from commands and evidence. Remove only the recorded `installation.md` file, never its containing directory. A record or removal receipt with `status: applying` or `status: failed` is incomplete and must route the next Setup run to inspection and recovery before ordinary maintenance.
