@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: handoff-missing-capability
-title: Missing persistence and communication produce an honest portable Handoff
+title: Missing continuation capabilities produce a portable Degraded Handoff
 shape: incomplete
 kind: invocation
 skill: handoff
@@ -10,9 +10,7 @@ requiredAttempts: 1
 prompt: >-
   Preserve my apartment move coordination for another session. The accepted
   checklist is `move-plan-r2`; utility cancellation is waiting on the final
-  meter reading, and box labeling is the next unblocked work. This environment
-  cannot write durable files, message another recipient, schedule, or wake a
-  future session.
+  meter reading, and box labeling is the next unblocked work.
 environment:
   id: handoff-no-persistence-or-continuation-capability
   capabilities: {workflow: true, persistence: false, handoff: true, communication: false, scheduling: false, automatic-resumption: false}
@@ -22,9 +20,9 @@ expected:
   artifacts: [inline portable Handoff package]
   effects: []
   invoked: [workflow, handoff]
-  notInvoked: [file write, message, scheduler, monitor, ownership transfer, parent completion]
-  proof: [meter-reading dependency and box-labeling frontier survive, manual copy or next-session supply is the only return route, no durability or wake-up is claimed]
+  notInvoked: [file write, message, scheduler, monitor]
+  proof: [meter-reading dependency survives, box-labeling remains the next frontier, manual user-carried pickup is the return route, persistence remains unverified, resumption remains manual]
   responsibility: [same owner remains responsible, Workflow receives the degraded continuation]
   route: [workflow-to-handoff-degraded-to-workflow]
-  state: [Degraded, continuation unverified, parent Outcome active]
-  forbidden: [claim a durable write, claim future resumption or monitoring, invent a recipient, drop the waiting dependency, complete the move]
+  state: [Degraded, continuation unverified, parent Outcome open]
+  forbidden: [claim a durable write, claim future resumption, claim monitoring, invent a recipient, transfer Responsibility, drop the waiting dependency, complete the move]

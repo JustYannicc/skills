@@ -14,16 +14,16 @@ prompt: >-
   recovery path.
 environment:
   id: handoff-explicit-rejection
-  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: true}
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-response-route: true}
   tools: [selected canonical Adapter, recipient response record]
 expected:
-  actions: [verify rejection against rotation-r7, record Rejected without ownership transition, preserve outgoing owner and state, expose missing escalation Authority, return retry revision escalation or alternate-successor options to Workflow]
+  actions: [verify rejection against rotation-r7, record Rejected, preserve outgoing owner and state, expose missing escalation Authority, return one owned recovery rule to Workflow, name its responsible Actor, record its observable unblock condition, record its exact next action]
   artifacts: [append-only rejection disposition, recovery continuation]
   effects: []
   invoked: [workflow, handoff]
-  notInvoked: [ownership transfer, authority grant, cancellation, parent completion]
+  notInvoked: []
   proof: [Mina response binds rotation-r7, missing Authority remains visible, current on-call lead and exact recovery action remain explicit]
   responsibility: [current on-call lead remains Outcome owner, Mina accepts no Responsibility, Workflow coordinates recovery]
   route: [workflow-to-handoff-recovery-to-workflow]
-  state: [rejected, Recovery, parent Outcome active]
-  forbidden: [treat rejection as transfer, infer Authority, leave work ownerless, hide the failed offer, complete or cancel the Outcome]
+  state: [Rejected, Recovery, parent Outcome open]
+  forbidden: [treat rejection as transfer, infer Authority, leave work ownerless, hide the failed offer, complete the Outcome, cancel the Outcome]

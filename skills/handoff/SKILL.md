@@ -1,6 +1,6 @@
 ---
 name: handoff
-description: Materialize exact continuation state when work crosses to an identifiable actor, later session, service, waiting period, or operating context, or when a transfer offer is rejected or stale; require exact acceptance for Responsibility Transfer and preserve parent state.
+description: Materialize exact continuation state when work must cross or resume across an actor, session, service, wait, or operating-context boundary, including transfers with a missing recipient or response route and rejected or stale offers.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -39,9 +39,9 @@ sources and name the caller as the Workflow/caller return route. If a material i
 Responsibility, Authority, or source revision is missing, preserve the
 available state and return the smallest owned gap instead of inventing it.
 
-**Done when:** the work identity, current canonical revision, and current owner
-are bound, or the first discovered material gap names its owner, unblock
-condition, and resumption action.
+**Done when:** every field named in this step is either bound and classified or
+recorded as a material gap. Preserve the available state; for each gap, name its
+owner, unblock condition, and resumption action.
 
 ### 2. Classify the boundary and successor
 
@@ -69,18 +69,21 @@ the recipient or route before Transfer can occur. If no reliable return route
 exists for Continuity, expose the package inline and state that resumption is
 manual and unverified.
 
-**Done when:** the Handoff kind, exact boundary, proposed successor or same
-owner, recipient response route, acceptance requirement, and degraded behavior are
-explicit.
+**Done when:** the Handoff kind, exact boundary, and current owner are explicit.
+In Normal mode, bind the proposed successor or same owner, recipient response
+route, and acceptance requirement. In Degraded mode, name the missing successor
+or route, retained owner, unblock condition, and next action.
 
 ### 3. Materialize one exact Handoff revision
 
 Read and use the [core Handoff contract](references/handoff-contract-template.md),
 compressed only when every material field remains explicit. After classifying
-the kind, read only its branch in the
-[Handoff dispositions](references/handoff-dispositions.md). Store the result through
-the selected canonical Adapter after a Persistence boundary. A bounded Inline
-continuation may remain in the response when no material state must survive it.
+the kind, read its branch in the
+[Handoff dispositions](references/handoff-dispositions.md). Also read the
+Recovery extension when the disposition is `Rejected`, `Stale`, `Waiting`, or
+`Degraded`. Store the result through the selected canonical Adapter after a
+Persistence boundary. A bounded Inline continuation may remain in the response
+when no material state must survive it.
 
 Reference canonical Specifications, plans, decisions, records, messages,
 results, and evidence by locator and exact revision. Summarize only the minimum
@@ -100,7 +103,8 @@ or frontier. Earlier delivery or acceptance cannot authorize the changed
 revision.
 
 **Done when:** the contract has one exact revision and locator or Inline
-identity, every canonical reference names its revision, uncertainty is marked,
+identity, every material core-contract field is populated or recorded as `none`
+or a gap, every canonical reference names its revision, uncertainty is marked,
 and the first safe next action is explicit.
 
 ### 4. Deliver or preserve the continuation
@@ -124,9 +128,11 @@ the best authorized medium, name the missing guarantee, and record the unblock
 condition and resumption action. Do not claim a write, delivery, monitor, or
 future wake-up that the environment cannot verify.
 
-**Done when:** the exact locator or Inline package is present, delivery evidence
-or an explicit `not delivered` state is recorded, and the resumption mechanism
-is verified or its missing capability and manual trigger are named.
+**Done when:** the exact locator or Inline package is present; either delivery
+evidence records the verified Authority, channel, privacy-boundary, and effect
+checks, or an explicit unauthorized or `not delivered` state is recorded; and
+the resumption mechanism is verified or its missing capability and manual
+trigger are named.
 
 ### 5. Gate Transfer on exact acceptance
 
@@ -153,11 +159,10 @@ Continuity does not use a Responsibility transition. On pickup, the same owner
 rereads the canonical work, checks the Handoff for staleness, records the
 resumption evidence when Durable, and continues only from the current state.
 
-**Done when:** the current disposition has its required evidence and retained
-owner: Transfer has accepted-transition evidence or a named non-transfer
-disposition and next action; Continuity is Prepared, Waiting, or Degraded with
-its trigger, or Resumed with pickup evidence; Dispatch is Prepared or Degraded
-with its next action, or Delivered or Acknowledged with delivery evidence.
+**Done when:** the selected disposition satisfies its evidence and
+Responsibility requirements in the authoritative branch of
+`handoff-dispositions.md`, the current owner is explicit, and every applicable
+Recovery-extension field is recorded.
 
 ### 6. Return Handoff state to Workflow
 
@@ -167,9 +172,9 @@ staleness result, unresolved gaps, and exact next action. Return only bounded
 Handoff evidence; Workflow owns integration, Review routing, recovery,
 continued execution, and parent terminal proof.
 
-This invocation returns when one exact Handoff revision, its current
-kind-specific disposition, current responsible owner, unresolved gap, and next
-action are recorded and returned to Workflow or the caller. Accepted Transfer
-ends the outgoing owner's Responsibility for the accepted scope without
-completing the Outcome. Every other Transfer disposition retains that
-Responsibility. The parent Outcome stays open in every Handoff disposition.
+This invocation returns when every field named in this step is recorded and
+returned to Workflow or the caller, with absent evidence or gaps stated as
+`none`. Accepted Transfer ends the outgoing owner's Responsibility for the
+accepted scope without completing the Outcome. Every other Transfer disposition
+retains that Responsibility. The parent Outcome stays open in every Handoff
+disposition.

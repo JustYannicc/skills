@@ -1,7 +1,8 @@
 # Handoff dispositions
 
-Read only the branch selected after classifying the boundary. These dispositions
-describe Handoff state, not the linked Outcome or Ticket lifecycle.
+Read the kind branch selected after classifying the boundary. For `Rejected`,
+`Stale`, `Waiting`, or `Degraded`, also read the Recovery extension. These
+dispositions describe Handoff state, not the linked Outcome or Ticket lifecycle.
 
 ## Continuity
 
@@ -13,8 +14,8 @@ describe Handoff state, not the linked Outcome or Ticket lifecycle.
 | `Stale` | Current canonical state differs materially from the prepared revision; refresh before resumption. |
 | `Degraded` | A missing persistence or resumption capability is named with the portable package, current owner, manual trigger, and next action. |
 
-Continuity never creates a Responsibility transition merely because the session,
-tool, location, or operating context changed.
+Continuity retains Responsibility with the same owner across session, tool,
+location, and operating-context changes.
 
 ## Transfer
 
@@ -45,8 +46,8 @@ ownership transition only when the parent Outcome itself is the accepted scope.
 
 Dispatch becomes Transfer only when the governing contract identifies the
 service as a responsible Actor able to accept the exact transferred scope. A
-queue acknowledgment, receipt, or schedule never proves the parent effect or
-Outcome.
+queue acknowledgment, receipt, or schedule proves only receipt or scheduling;
+the parent effect and Outcome require separate evidence.
 
 ## Recovery extension
 
@@ -60,5 +61,9 @@ For every `Rejected`, `Stale`, `Waiting`, or `Degraded` disposition, record:
 - retry, revision, escalation, replacement, expiry, or recovery rule; and
 - exact next action and responsible Actor.
 
-Recovery never silently transfers Responsibility or returns stale work to a
-frontier.
+For `Waiting`, also record the external dependency, unblock condition, last
+observation, next check, verified scheduled action or manual trigger,
+retry/escalation/expiry rule, pickup point, and first resumption action.
+
+Recovery retains current Responsibility and returns work to a frontier only
+after freshness is re-established.

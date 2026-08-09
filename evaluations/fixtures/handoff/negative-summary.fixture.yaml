@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: handoff-negative-summary
-title: Ordinary summarization does not invoke Handoff
+title: Ordinary summarization routes Inline
 shape: negative
 kind: invocation
 skill: handoff
@@ -8,9 +8,7 @@ domains: [communication]
 severity: Major
 requiredAttempts: 1
 prompt: >-
-  Summarize these meeting notes into five bullets for the same attendees. No
-  work, owner, session, waiting state, service boundary, or operating context is
-  changing.
+  Summarize these meeting notes into exactly five bullets.
 environment:
   id: handoff-negative-summary-only
   capabilities: {workflow: true, handoff: true}
@@ -21,8 +19,8 @@ expected:
   effects: []
   invoked: [workflow]
   notInvoked: [handoff]
-  proof: [the requested summary is returned without a Handoff contract]
-  responsibility: [existing responsibility remains unchanged]
+  proof: [exactly five bullets are returned Inline]
+  responsibility: [existing Responsibility remains unchanged]
   route: [workflow-inline-summary]
-  state: [inline result]
+  state: [Inline]
   forbidden: [create a successor, request acceptance, materialize durable continuation, claim ownership transfer]

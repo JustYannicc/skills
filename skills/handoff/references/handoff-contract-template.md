@@ -35,10 +35,8 @@ matching branch in [Handoff dispositions](handoff-dispositions.md).
   or operating rule]
 - **Dependencies:** [`requires` work and external dependencies by canonical
   reference, status, responsible Actor, and unblock condition]
-- **Continuation record:** [canonical identity, locator, and exact revision; if
-  the companion Workflow capability is unavailable, preserve the external
-  dependency, unblock condition, last observation, next check, real scheduled
-  action evidence, retry/escalation/expiry, pickup point, and first action here]
+- **Continuation record:** [canonical identity, locator, and exact revision, or
+  none]
 - **Decision or Work frontier:** [canonical locator and calculation revision]
 - **Recovery queue:** [canonical locator and calculation revision when present]
 - **Suggested capabilities:** [only capabilities the next action needs, with
@@ -64,4 +62,3 @@ matching branch in [Handoff dispositions](handoff-dispositions.md).
   Outcome; otherwise none]
 - **Parent Outcome state after Handoff:** [open state]
 - **Gap, unblock condition, and exact next action with responsible Actor:**
-

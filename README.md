@@ -81,11 +81,10 @@ proof.
 
 Handoff preserves exact state, Responsibility, Authority, rationale, evidence,
 uncertainty, dependencies, Continuation, and next frontier across humans,
-agents, sessions, services, and operating contexts. It references canonical
-sources instead of duplicating them, transfers Responsibility only after an
-identifiable successor accepts the exact fresh revision, degrades honestly when
-recipient, return-route, persistence, or continuation capabilities are missing,
-and never completes the parent Outcome.
+agents, sessions, services, and operating contexts. It keeps canonical sources
+authoritative through revision-bound references, transfers Responsibility after
+exact fresh acceptance, enters Degraded mode when required capabilities are
+unavailable, and leaves the parent Outcome open.
 
 ## Planned suite
 

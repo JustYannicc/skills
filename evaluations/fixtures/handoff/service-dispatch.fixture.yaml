@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: handoff-service-dispatch
-title: Service acknowledgment remains dispatch evidence rather than ownership
+title: Service acknowledgment proves Dispatch only; current owner retains Responsibility
 shape: edge
 kind: invocation
 skill: handoff
@@ -21,9 +21,9 @@ expected:
   artifacts: [Dispatch Handoff contract, service receipt reference]
   effects: [authorized dispatch of notice-r11]
   invoked: [workflow, handoff]
-  notInvoked: [ownership transfer, parent completion]
+  notInvoked: []
   proof: [notice-r11 matches approval-r11, relay receipt proves only accepted dispatch, 240-recipient delivery remains the proof seam]
   responsibility: [current owner retains Outcome Responsibility, relay-prod owns only its contracted dispatch duty, Workflow retains terminal verification]
   route: [workflow-to-handoff-dispatch-to-workflow]
-  state: [dispatch accepted, delivery verification pending, parent Outcome active]
-  forbidden: [treat service receipt as ownership acceptance, treat queued or accepted dispatch as recipient delivery, send a changed revision, complete the parent Outcome]
+  state: [Acknowledged, recipient delivery verification pending, parent Outcome open]
+  forbidden: [treat service receipt as ownership acceptance, treat queued dispatch as recipient delivery, treat accepted dispatch as recipient delivery, send a changed revision, complete the parent Outcome]

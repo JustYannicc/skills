@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: handoff-session-continuity
-title: A fresh session resumes the same owner from current canonical state
+title: Same-owner Continuity preserves current canonical state
 shape: edge
 kind: invocation
 skill: handoff
@@ -11,8 +11,8 @@ prompt: >-
   I am ending this session and will continue the same owned translation update
   in a fresh session tomorrow. The canonical work is `translation-update-r6`,
   two reviewer questions remain, and the exact pickup point is the second
-  paragraph of the response draft at `draft-r3`. Create the continuation. No
-  other actor is taking responsibility.
+  paragraph of the response draft at `draft-r3`. Create same-owner Continuity; I
+  remain responsible.
 environment:
   id: handoff-session-same-owner
   capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, automatic-resumption: false}
@@ -22,9 +22,9 @@ expected:
   artifacts: [Continuity Handoff contract]
   effects: []
   invoked: [workflow, handoff]
-  notInvoked: [ownership transfer, scheduler, implement, parent completion]
+  notInvoked: [scheduler, implement]
   proof: [translation-update-r6 and draft-r3 are exact references, reviewer questions and first next action survive, fresh session must reread current state]
   responsibility: [same owner remains responsible across sessions, Workflow retains parent integration]
   route: [workflow-to-handoff-continuity-to-workflow]
-  state: [continuation preserved, parent Outcome active]
+  state: [Prepared, parent Outcome open]
   forbidden: [invent a successor, claim automatic resumption, infer acceptance from the new session, duplicate the draft, complete the translation update]

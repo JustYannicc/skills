@@ -21,16 +21,16 @@ prompt: >-
   `isolation-r6`.
 environment:
   id: handoff-physical-shift-transfer
-  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: true}
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-response-route: true}
   tools: [signed shift log]
 expected:
   actions: [bind operating and evidence revisions, preserve Bay 3 isolation Authority limit, offer exact Handoff through signed log, transfer only after Elise accepts, retain maintenance Continuation and safe frontier]
   artifacts: [physical shift Handoff contract, signed acceptance transition]
-  effects: [Handoff offer and accepted shift Responsibility]
+  effects: [accepted evening-operations Responsibility transition recorded]
   invoked: [workflow, handoff]
-  notInvoked: [maintenance work, reopen Bay 3, parent completion]
+  notInvoked: [maintenance work]
   proof: [greenhouse-shift-r15 and isolation-r6 remain exact references, Elise accepts the exact restriction and next action, Bay 3 stays isolated]
   responsibility: [Rowan remains responsible before acceptance, Elise owns evening operations after acceptance, maintenance owns only its external duty]
   route: [workflow-to-handoff-to-workflow]
-  state: [accepted transfer, waiting dependency preserved, parent operating Outcome active]
+  state: [Accepted, maintenance dependency waiting, parent Outcome open]
   forbidden: [reopen Bay 3, treat signed delivery as acceptance without response, drop maintenance dependency, widen Elise Authority, complete the operating Outcome]

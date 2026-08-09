@@ -1,6 +1,6 @@
 schemaVersion: 1
 id: handoff-missing-recipient-route
-title: An ambiguous recipient and absent return route block Transfer
+title: Recipient identity and response-route gaps produce a Degraded Transfer proposal
 shape: incomplete
 kind: invocation
 skill: handoff
@@ -8,21 +8,21 @@ domains: [organizational]
 severity: Major
 requiredAttempts: 1
 prompt: >-
-  Hand this procurement Outcome to “the finance team.” I have no named role,
-  stable team queue, or response channel. The canonical state is
-  `procurement-r10`, and I remain the current owner.
+  The only supplied recipient identifier for this procurement Outcome is the
+  broad label “the finance team.” The canonical state is `procurement-r10`, and
+  I remain the current owner.
 environment:
   id: handoff-ambiguous-recipient-no-route
-  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: false}
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-response-route: false}
   tools: [selected canonical Adapter]
 expected:
-  actions: [reject the ambiguous team label as a successor identity, preserve a proposed Handoff and current owner, name recipient identity and return route as gaps, record who must resolve them and the exact resumption action]
+  actions: [reject the ambiguous team label as a successor identity, preserve a proposed Handoff and current owner, name recipient identity and recipient response route as gaps, record who must resolve them and the exact resumption action]
   artifacts: [Degraded proposed Handoff]
   effects: []
   invoked: [workflow, handoff]
-  notInvoked: [message, ownership transfer, parent completion]
+  notInvoked: [message]
   proof: [procurement-r10 remains canonical, no acceptance can be requested, current owner and unblock question remain explicit]
   responsibility: [current owner remains responsible, finance team receives no assigned Responsibility, Workflow owns recovery routing]
   route: [workflow-to-handoff-degraded-to-workflow]
-  state: [proposed, Degraded, parent Outcome active]
-  forbidden: [treat finance team as identifiable successor, invent a response route, infer acceptance, release the current owner, complete the Outcome]
+  state: [Degraded, parent Outcome open]
+  forbidden: [treat finance team as identifiable successor, invent a recipient response route, infer acceptance, release the current owner, complete the Outcome]
