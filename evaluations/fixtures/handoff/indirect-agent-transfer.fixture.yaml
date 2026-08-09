@@ -1,0 +1,32 @@
+schemaVersion: 1
+id: handoff-indirect-agent-transfer
+title: Workflow transfers bounded agent work without transferring the parent
+shape: indirect
+kind: composition
+skill: handoff
+domains: [agent, software]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Workflow owns Outcome `catalog-recovery` at `outcome-r12`. Agent `mapper-7`
+  owns Ticket `inventory-map` and has produced result `map-r4`; its remaining
+  work is to resolve three source conflicts listed in `evidence-index-r9`.
+  Transfer only that Ticket to agent `mapper-9`, whose stable host identity and
+  response route are available. `mapper-9` has read access but no Authority to
+  alter source records. Materialize and offer the exact Handoff. Do not assume
+  the agent accepts merely because the task message is delivered.
+environment:
+  id: handoff-agent-bounded-transfer
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, agent-messaging: true}
+  tools: [selected canonical Adapter, agent message and response route]
+expected:
+  actions: [bind exact parent and Ticket revisions, preserve nested Responsibility, offer one exact Handoff to mapper-9, gate Ticket transfer on explicit acceptance, return transition evidence to Workflow]
+  artifacts: [agent Handoff contract, acceptance or waiting record]
+  effects: [agent Handoff offer]
+  invoked: [workflow, handoff]
+  notInvoked: [implement, review, parent completion]
+  proof: [map-r4 and evidence-index-r9 remain canonical references, mapper-9 accepts the exact bounded Ticket and read-only Authority before transfer, Workflow retains catalog-recovery ownership]
+  responsibility: [mapper-7 remains Work owner before acceptance, mapper-9 owns only inventory-map after acceptance, Workflow retains parent Outcome ownership]
+  route: [workflow-to-handoff-to-workflow]
+  state: [agent transfer proposed or accepted, parent Outcome active]
+  forbidden: [treat message delivery as acceptance, transfer the parent Outcome, grant source-write Authority, duplicate canonical evidence, complete inventory-map or catalog-recovery]

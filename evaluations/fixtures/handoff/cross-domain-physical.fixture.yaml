@@ -1,0 +1,31 @@
+schemaVersion: 1
+id: handoff-cross-domain-physical
+title: Physical operating Handoff preserves safety and next frontier
+shape: direct
+kind: invocation
+skill: handoff
+domains: [physical, organizational]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Transfer greenhouse evening operations from shift lead Rowan to shift lead
+  Elise. The operating record is `greenhouse-shift-r15`. Bay 3 irrigation is
+  isolated after a leak, the isolation photo and valve reading are evidence
+  `isolation-r6`, maintenance arrival is the external dependency, and the next
+  safe frontier is humidity logging in Bays 1 and 2. Elise may operate unaffected
+  bays but cannot reopen Bay 3. A signed shift log can carry her response.
+environment:
+  id: handoff-physical-shift-transfer
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: true}
+  tools: [signed shift log]
+expected:
+  actions: [bind operating and evidence revisions, preserve Bay 3 isolation Authority limit, offer exact Handoff through signed log, transfer only after Elise accepts, retain maintenance Continuation and safe frontier]
+  artifacts: [physical shift Handoff contract, signed acceptance transition]
+  effects: [Handoff offer and accepted shift Responsibility]
+  invoked: [workflow, handoff]
+  notInvoked: [maintenance work, reopen Bay 3, parent completion]
+  proof: [greenhouse-shift-r15 and isolation-r6 remain exact references, Elise accepts the exact restriction and next action, Bay 3 stays isolated]
+  responsibility: [Rowan remains responsible before acceptance, Elise owns evening operations after acceptance, maintenance owns only its external duty]
+  route: [workflow-to-handoff-to-workflow]
+  state: [accepted transfer, waiting dependency preserved, parent operating Outcome active]
+  forbidden: [reopen Bay 3, treat signed delivery as acceptance without response, drop maintenance dependency, widen Elise Authority, complete the operating Outcome]

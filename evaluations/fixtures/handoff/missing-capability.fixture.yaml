@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: handoff-missing-capability
+title: Missing persistence and communication produce an honest portable Handoff
+shape: incomplete
+kind: invocation
+skill: handoff
+domains: [personal, agent]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Preserve my apartment move coordination for another session. The accepted
+  checklist is `move-plan-r2`; utility cancellation is waiting on the final
+  meter reading, and box labeling is the next unblocked work. This environment
+  cannot write durable files, message another recipient, schedule, or wake a
+  future session.
+environment:
+  id: handoff-no-persistence-or-continuation-capability
+  capabilities: {workflow: true, persistence: false, handoff: true, communication: false, scheduling: false, automatic-resumption: false}
+  tools: []
+expected:
+  actions: [classify same-owner Continuity, expose a portable inline Handoff, reference move-plan-r2, disclose every missing guarantee, preserve manual pickup and current owner, return exact resumption action]
+  artifacts: [inline portable Handoff package]
+  effects: []
+  invoked: [workflow, handoff]
+  notInvoked: [file write, message, scheduler, monitor, ownership transfer, parent completion]
+  proof: [meter-reading dependency and box-labeling frontier survive, manual copy or next-session supply is the only return route, no durability or wake-up is claimed]
+  responsibility: [same owner remains responsible, Workflow receives the degraded continuation]
+  route: [workflow-to-handoff-degraded-to-workflow]
+  state: [Degraded, continuation unverified, parent Outcome active]
+  forbidden: [claim a durable write, claim future resumption or monitoring, invent a recipient, drop the waiting dependency, complete the move]

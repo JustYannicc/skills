@@ -1,0 +1,39 @@
+schemaVersion: 1
+id: handoff-direct-human-transfer
+title: Human successor accepts the exact Handoff without completing the parent
+shape: direct
+kind: invocation
+skill: handoff
+domains: [organizational, communication]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Hand off Outcome `community-open-day` from me, the outgoing coordinator, to
+  Priya Shah, the incoming coordinator. The accepted plan is at revision
+  `open-day-plan-r8`; supplier confirmations and the venue approval are linked
+  there. The venue approval remains pending, the accessibility walkthrough is
+  blocked on it, and the next unblocked work is to confirm volunteer arrival
+  windows. I may coordinate and request confirmations but cannot approve venue
+  changes. Priya can accept coordination responsibility but has not accepted
+  this exact handoff yet. Prepare the handoff, obtain or record her explicit
+  response if the available return route supports it, and report the state.
+environment:
+  id: handoff-human-accepted-transfer
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    recipient-return-route: true
+  tools: [selected canonical Adapter, recipient return route]
+expected:
+  actions: [bind active Workflow context and canonical sources, materialize one exact Handoff revision, request successor acceptance, distinguish proposal from acceptance, record accepted ownership transition only after exact acceptance, return transfer evidence to Workflow]
+  artifacts: [revision-bound Handoff contract, append-only acceptance transition]
+  effects: [acceptance request, accepted responsibility transfer when Priya explicitly accepts]
+  invoked: [workflow, handoff]
+  notInvoked: [implement, review, parent completion]
+  proof: [open-day-plan-r8 and canonical evidence are referenced, Priya acceptance names the exact Handoff revision, outgoing responsibility ends only after acceptance, volunteer confirmation remains the next frontier]
+  responsibility: [outgoing coordinator remains responsible before acceptance, Priya becomes Outcome owner only on exact acceptance, Workflow retains parent integration and terminal proof]
+  route: [workflow-to-handoff-to-workflow]
+  state: [proposed Handoff, accepted transfer, parent Outcome active]
+  forbidden: [infer acceptance from delivery or silence, transfer responsibility before exact acceptance, duplicate canonical plan or evidence as new authority, widen either actor Authority, complete or cancel the parent Outcome]
