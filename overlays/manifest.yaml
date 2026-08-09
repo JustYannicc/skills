@@ -1,7 +1,46 @@
 schemaVersion: 1
+suite:
+  id: thinking-in-systems
+  version: 1
+  source:
+    id: JustYannicc/skills
+    url: https://github.com/JustYannicc/skills
+  installationOrder:
+    - setup-system-thinking
+    - thinking-in-systems
+    - workflow
+    - migrate-system
+    - domain-modeling
+    - wayfinder
+    - prototype
+    - to-spec
+    - to-tickets
+    - implement
+    - review
+    - handoff
+    - ask-yannic
+    - grill-with-docs
+    - grilling
+    - research
+    - to-questionnaire
+  managedOverlaps:
+    replaceWithLocal:
+      - domain-modeling
+      - handoff
+      - implement
+      - prototype
+      - to-spec
+      - to-tickets
+      - wayfinder
+    replaceWithPatchedUpstream:
+      - grill-with-docs
+      - grilling
+      - research
+      - to-questionnaire
 source:
   id: matt-pocock-skills
   url: https://github.com/mattpocock/skills
+  ref: v1.2.3
   revision: 6acc160e4e0cd062dbbbd7a1b26ae92855edf07e
   license: MIT
 skills:

@@ -1,6 +1,9 @@
 ---
 name: to-spec
 description: Turn an accepted Outcome contract into a clear Specification artifact for downstream work, revise it after a material change, or surface the material gaps blocking a requested Specification.
+license: MIT
+metadata:
+  homepage: https://github.com/JustYannicc/skills
 ---
 
 # To Spec

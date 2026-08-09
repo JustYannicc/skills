@@ -16,6 +16,8 @@ Thinking in Systems is my method. Matt's workflow gives it structure. This suite
 
 ## Installation
 
+Install Setup by itself first. The skills CLI installs packages into flat, name-based paths, so installing this repository's full roster before inspection can overwrite an existing package with the same name. Setup inventories source and fingerprints first, then replaces only the exact overlaps you approve.
+
 ### 1. Install Setup
 
 For one project:
@@ -49,7 +51,9 @@ Setup will:
 
 - inspect the selected scope, effective instruction chain, installed skills, source fingerprints, repository and remote, available Adapters, authentication, and conflicts;
 - show the proposed installation, inherited and overridden configuration, exact instruction changes, verification plan, and rollback before writing;
-- install the pinned suite and apply the overlays recorded in [`overlays/manifest.yaml`](overlays/manifest.yaml);
+- install the pinned suite through the skills CLI and apply the overlays recorded in [`overlays/manifest.yaml`](overlays/manifest.yaml);
+- detect the exact-name packages already installed from `mattpocock/skills`, preserve every non-overlapping Matt package, and preview targeted replacement of only the overlaps required by this suite;
+- inspect selected global `AGENTS.md`/`CLAUDE.md` surfaces through their effective symlink targets, show the exact marked activation block, and preserve all surrounding user text;
 - recommend an Adapter from the real environment, then configure any explicitly selected providers and Supplemental skills;
 - teach the Inline and Durable modes, responsibility model, migration, Review, waiting, recovery, updates, rollback, and removal;
 - verify fingerprints, configuration precedence, Adapter behavior, every selected agent target, and fresh-context activation;
@@ -69,6 +73,8 @@ npx skills@latest add JustYannicc/skills --list
 ```
 
 You can install a package directly with `--skill <name>`, but that does not compose dependencies, apply the standard overlays, create standing activation, configure an Adapter, or verify the suite. Use Setup for the standard profile.
+
+Installing a same-name package from another source replaces the existing flat install; the skills CLI does not namespace duplicates. Inspect `npx skills@latest list --global --json` or the equivalent project list before direct replacement.
 
 </details>
 
@@ -155,6 +161,12 @@ The standard profile contains 17 skills: the 12 runtime packages in this reposit
 - [`setup-system-thinking`](skills/setup-system-thinking): one scoped, transactional installation and maintenance skill that removes itself after verification.
 
 The exact upstream revision, target paths, patch files, hashes, and installation order live in [`overlays/manifest.yaml`](overlays/manifest.yaml). The overlays adapt invocation and integration behavior without copying the complete upstream packages into this repository.
+
+Setup verifies the manifest's upstream tag and commit, installs missing or approved-replacement Matt packages with `npx skills@latest add <tagged-source> --skill <name>`, and applies only the verified overlay patches. This keeps installation reproducible when Matt's default branch moves without using separate GitHub tooling to copy his skills.
+
+## Distribution
+
+GitHub is the public source of truth. [skills.sh](https://skills.sh) discovers public skill repositories automatically after an install through the skills CLI emits anonymous install telemetry; there is no separate skills.sh publish command. The root [`skills.sh.json`](skills.sh.json) groups the repository page after discovery, and immutable GitHub tags bind reviewed releases.
 
 ## Update, remove, and recover
 
