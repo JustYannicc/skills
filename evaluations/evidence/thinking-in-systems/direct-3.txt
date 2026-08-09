@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 ## Governance assessment — community workshop equipment checkout
 
 **State:** ready for Workflow decision. This is a governance assessment only: no checkout rule, tool, communication, or operational change has been selected or performed. Workflow retains parent responsibility, phase selection, coordination, and terminal proof.

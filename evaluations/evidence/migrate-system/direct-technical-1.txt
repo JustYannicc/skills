@@ -4,7 +4,7 @@ This wrapper records one fresh-context generation and its bounded mapping execut
 
 Exact candidate and fixture identity
 
-- Candidate identity: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Candidate identity: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 - Fixture locator: `evaluations/fixtures/migrate-system/direct-technical.fixture.yaml`
 - Fixture SHA-256 (raw UTF-8 bytes): `a934dddbb110922e9a909bd45a396187db21af3c2536420a227bb496d2be83a0`
 - Prompt SHA-256: `72474a1e2582310ca09dcd381b2278f0847974b2b1988100d8fe5b23aba29cc9`

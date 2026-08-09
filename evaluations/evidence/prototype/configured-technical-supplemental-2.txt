@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Learning question: After an interrupted retry, can an observer tell from the exposed state what failed, what accepting Retry changed, and what action remains available?
 
 Decision informed: Whether Workflow should retain the candidate `interrupted` to `queued` retry transition for later Specification, or revise the transition because it obscures interruption continuity or the next available action.

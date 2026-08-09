@@ -3,7 +3,7 @@ Attempt: 1
 Context ID: fresh-domain-modeling-supplemental-advisory-unavailable-20260809t111935z-luna-max-c2d0c5f2-9ad0-4e10-8d08-595cb21854ad
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T11:19:35Z
-Suite revision: git:d78dff812af6a69a1995980a4bc30829a298a997
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Run mode: one-shot isolated fresh context. The prior observation and transcript were not runtime inputs; the candidate response below was generated once and retained verbatim without retry or post-edit.
 
 Candidate and exact runtime-input bindings

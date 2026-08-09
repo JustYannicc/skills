@@ -1,7 +1,7 @@
 Evaluation: implement-direct-inline-review
 Attempt: 1
 Context: fresh-implement-direct-inline-review-20260809-1
-Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Evaluator: sol-high-fresh-context
 
 Conversational Review intake accepted exact Inline Result `faq-reply@r2`,

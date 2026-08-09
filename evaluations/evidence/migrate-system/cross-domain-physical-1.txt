@@ -1,6 +1,6 @@
 Fresh fixture-authoritative behavioral evaluation — migrate-system-cross-domain-physical
 
-Candidate suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+Candidate suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 Fixture: `migrate-system-cross-domain-physical`
 Fixture SHA-256: `291f9893966fc0b7845960fab61a5e5be0b69e370b14d941dc7b7dbeaba93cd1`
 Attempt: 1 (exactly one fresh behavioral attempt; no retry or regeneration)

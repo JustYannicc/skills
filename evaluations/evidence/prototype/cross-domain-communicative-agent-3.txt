@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Prototype result
 
 Learning question: In one private rehearsal, can a sandboxed assistant help a person explain a difficult caregiving plan more clearly without increasing the person's immediate emotional burden?

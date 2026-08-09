@@ -5,7 +5,7 @@ Attempt: 1
 Context ID: `fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564`
 Evaluator: `gpt-5.6-luna-max-fresh-evaluator`
 Recorded at (UTC): `2026-08-09T13:30:38Z`
-Candidate and suite revision: `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+Candidate and suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 
 Run mode: one-shot, isolated fresh context with no prior observation or transcript.
 The evaluator read the Handoff skill, its core contract, the Transfer disposition

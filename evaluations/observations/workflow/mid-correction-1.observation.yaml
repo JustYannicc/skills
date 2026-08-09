@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-correction
 attempt: 1
 contextId: workflow-mid-correction-1db9f1f-sol-high-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:16:55Z
 environment:
@@ -32,4 +32,4 @@ observed:
   state: [accepted-reopened]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-correction-1.txt
-  sha256: ab2335816a778aba9a6f334799aeae13085331829f84d8592dd3c2160465d67d
+  sha256: 0b896e967395eafe16f9faa9ac94b7335b8eb9fc11945e358762b342ec9b69e4

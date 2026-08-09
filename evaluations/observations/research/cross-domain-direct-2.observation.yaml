@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: research-cross-domain-direct
 attempt: 2
 contextId: fresh-research-cross-domain-direct-final-2
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:18:58.000Z
 environment:
@@ -50,4 +50,4 @@ rawEvidence:
     - locator: evaluations/evidence/research/cross-domain-direct-2.record.md
       sha256: 1e59523f7e5ddcdac16bd81c528052d088d1de547dd24a4c3c55a716ef27973c
   locator: evaluations/evidence/research/cross-domain-direct-2.txt
-  sha256: f7dc235e46e0f2c7f6fa5c25ebce072600bc5d47d1bbdc377f7e522daaf3d92f
+  sha256: 69e10522cc5ac7e94952f1967514ffd62fdd519270b4506492cda8186f1a7189

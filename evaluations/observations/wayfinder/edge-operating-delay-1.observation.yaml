@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-edge-operating-delay
 attempt: 1
 contextId: fresh-wayfinder-edge-operating-delay-luna-max-20260809t132208z-0a19c6ee-cc2c-4bda-a5bc-7c1f86b06ad1
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T13:22:08Z
 environment:
@@ -96,4 +96,4 @@ runtimeInputs:
     sha256: dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e
 rawEvidence:
   locator: evaluations/evidence/wayfinder/edge-operating-delay-1.txt
-  sha256: 4470be1d546d92cba955dce8c847cb23f200cd4fb953c970254d87023d5c3d9f
+  sha256: 087259ca836008a0b5de12461155d7e442f1447dd296761da7c24f2da2a127a0

@@ -1,7 +1,7 @@
 Fresh-context execution — handoff-waiting-no-scheduler, attempt 2
 
 Candidate revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
-Suite revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Fixture: handoff-waiting-no-scheduler
 Attempt: 2 of 3
 Context ID: fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402

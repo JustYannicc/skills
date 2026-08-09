@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-edge-irreducible
 attempt: 3
 contextId: fresh-wayfinder-edge-irreducible-attempt-3-20260809t122940z-dfdd0b9c-5e36-4f0b-908c-3b264a2b85dd
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:40.300Z
 environment:
@@ -87,4 +87,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/wayfinder/edge-irreducible-3.txt
-  sha256: f011077d1e68a03e203052a3e336cb3b4162b839b0a494f3f13f64acc005fbbe
+  sha256: c2ddee0c2304e81cbdac9a5841ec5404131eaeef981ea76d5cdece6fdebf2797

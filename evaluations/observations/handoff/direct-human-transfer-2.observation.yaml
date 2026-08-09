@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-direct-human-transfer
 attempt: 2
 contextId: fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:31:00Z
 environment:
@@ -89,4 +89,4 @@ runtimeInputs:
     sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/direct-human-transfer-2.txt
-  sha256: 19a4f8313f70223fdea9f0b9f748d7baecfba22aa87e4596435b86229ad84884
+  sha256: 998399299cb1baaa45bef4865ec3f188344808399dc9c290d22fecf47fcba28e

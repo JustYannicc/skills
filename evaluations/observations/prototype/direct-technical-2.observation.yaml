@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-direct-technical-logic
 attempt: 2
 contextId: fresh-sol-high-r2-prototype-direct-technical-2
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:00:38Z
 environment:
@@ -36,4 +36,4 @@ observed:
   state: [verdict-ready-for-workflow]
 rawEvidence:
   locator: evaluations/evidence/prototype/direct-technical-2.txt
-  sha256: ba2ed10015b939939e91593fe41758bb0b1df710559369c91bd3ac989121930a
+  sha256: 6c5e561ecfdad0fd388561b500862c872dda46cb14b5a026c20278dd14d6b9c8

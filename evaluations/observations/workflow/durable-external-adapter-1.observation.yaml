@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-external-adapter
 attempt: 1
 contextId: workflow-durable-external-adapter-fresh-luna-max-20260808-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T13:01:00Z
 environment:
@@ -30,4 +30,4 @@ observed:
   state: [canonical-after-conformance-or-degraded]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-external-adapter-1.txt
-  sha256: f8b6a2094ad40d907ea6b9a79ef118f97c6745f35fbdd0c3381e086f654a4049
+  sha256: 3decd565019bc75ac5fb05a9577e6235e5d79fb1379668dc98611ca4461456b7

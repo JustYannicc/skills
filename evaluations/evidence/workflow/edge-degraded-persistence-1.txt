@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 I cannot truthfully keep this work active after the conversation or resume it automatically. The request crosses a Persistence boundary, but this environment has no durable Adapter, scheduler, or monitoring capability. I have not scheduled a check, created a durable record, or claimed completion.
 
 The Workflow is in visible **Degraded mode**, waiting for a durable continuation. Its exact known state is: the relocation plan is awaiting the landlord's reply next month; no plan details or reply are present in this interaction; no relocation action has been advanced. Workflow retains responsibility for the parent Outcome during this interaction. That responsibility may end only through verified completion, authoritative cancellation, or a successor's explicit acceptance of the continuation below.

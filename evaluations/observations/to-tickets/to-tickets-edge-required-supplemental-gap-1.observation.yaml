@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-required-supplemental-gap
 attempt: 1
 contextId: fresh-to-tickets-edge-required-supplemental-gap-20260808-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:36:00.000Z
 environment:
@@ -39,4 +39,4 @@ observed:
   state: [Waiting]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-required-supplemental-gap-1.txt
-  sha256: 8eb289fe625f026ccb8046e09889a1ceede4aa4edeb25bc1cc736d9c2709f79c
+  sha256: 64c96e73d97ea84276c1ee8b641787da399db71f83b5fb20aa66bdcb49f1f610

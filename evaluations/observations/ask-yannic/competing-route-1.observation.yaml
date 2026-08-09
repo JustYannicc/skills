@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-competing-route
 attempt: 1
 contextId: fresh-ask-yannic-competing-route-sol-high-1-247b9739-4c86-45ba-9c51-b2d4963756ca
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:21:24Z
 environment:
@@ -68,7 +68,7 @@ observed:
     - guidance-complete
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/competing-route-1.txt
-  sha256: b50777aeb5bef9617bc806b46ed573c2f72d3f3e0f282d9f065fb90e9fd4e957
+  sha256: b7d33780c4dfbd16c951e7132a4b7a3cdb6f1940b2283a021aabc18749022fe2
 runtimeInputs:
   - role: skill
     locator: skills/ask-yannic/SKILL.md

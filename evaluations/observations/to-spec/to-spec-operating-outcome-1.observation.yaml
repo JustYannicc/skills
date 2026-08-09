@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-operating-outcome
 attempt: 1
 contextId: fresh-to-spec-operating-outcome-sol-high-20260806-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -31,4 +31,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-operating-outcome-1.txt
-  sha256: c237e6c0c8003d2e1beb3c40136a0f706f8557545957a0cc3e8ee64f45652753
+  sha256: 72f4273664102eb8f62fb7ceeea65aab88fef050eaf83ffcbcdc1391862c93a5

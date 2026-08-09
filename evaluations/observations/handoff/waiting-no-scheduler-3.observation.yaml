@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-waiting-no-scheduler
 attempt: 3
 contextId: fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:34:20Z
 environment:
@@ -63,7 +63,7 @@ observed:
     - parent Outcome open
 rawEvidence:
   locator: evaluations/evidence/handoff/waiting-no-scheduler-3.txt
-  sha256: 5b1d85c9582c0acccc664e6d494e8b7fbbb5895c1a05a9dbb82b1ac99287922d
+  sha256: 1a66bb0ea850c0ae23e9f79f42e49d5ec86c3828cfbfcfdd4d7b3f105de59de5
 runtimeInputs:
   - role: skill
     locator: skills/handoff/SKILL.md

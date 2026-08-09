@@ -4,7 +4,7 @@ attempt: 2
 contextId: fresh-migrate-system-delegated-mapping-attempt-2-20260809t134239z
 evaluator: deterministic-migrate-system-attempt-2
 recordedAt: '2026-08-09T13:44:43Z'
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 environment:
   id: delegated-support-operation
   capabilities:
@@ -73,7 +73,7 @@ observed:
     - migration-map-verified
 rawEvidence:
   locator: evaluations/evidence/migrate-system/delegated-mapping-2.txt
-  sha256: 51ff3a6b2ba9b29a147a682c6429ebc0455711622686bc5803fd2a60e9b056a4
+  sha256: 9d9c96162f30e8c861c5115855f47f6d522537642f0bafb54cd67c013c15a448
 runtimeInputs:
   - role: skill
     locator: skills/migrate-system/SKILL.md

@@ -23,7 +23,7 @@ runtimeInputs:
   - role: disclosed-reference
     locator: skills/migrate-system/references/current-state-mapping.md
     sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 
 EVENT 1: loaded the candidate Migrate System skill, complete fixture, governing Thinking in Systems skill and standard, and the named current-state mapping reference; verified every listed SHA-256.
 EVENT 2: submitted the fixture prompt once in a fresh existing-unmapped-volunteer-program context with the declared capabilities and tools. No host capability was substituted for the fixture environment.

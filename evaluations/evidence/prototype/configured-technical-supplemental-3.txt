@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Learning question: After an interrupted retry, does the proposed state transition remain understandable by exposing why the attempt stopped, confirming that Retry was accepted, and showing the next available action?
 
 Decision informed: Whether Workflow should retain the proposed interrupted-to-queued transition as bounded design evidence or revise its state representation before Specification.

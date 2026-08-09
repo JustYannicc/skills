@@ -2,7 +2,7 @@ Fresh isolated behavioral evaluation — migrate-system-negative-repair
 
 Candidate and exact runtime-input bindings
 
-- suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 - fixture: `evaluations/fixtures/migrate-system/negative-repair.fixture.yaml`
   - SHA-256: `ce630c8a7b88df07950eea3fe695c9baee3a995b901f699fdf4e3e9fa77d90cb`
 - role `skill`: `skills/migrate-system/SKILL.md`

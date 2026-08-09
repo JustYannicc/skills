@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-delegated-mapping
 attempt: 1
 contextId: fresh-migrate-system-delegated-mapping-20260809t134924z-luna-max-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T13:49:24Z
 environment:
@@ -73,7 +73,7 @@ observed:
     - migration-map-verified
 rawEvidence:
   locator: evaluations/evidence/migrate-system/delegated-mapping-1.txt
-  sha256: bf031652a74b7395b79dca0a04ac90a315dfaeac9c5c1b0fea4746afc3420127
+  sha256: c22f7b0871573817cabf6f7cb60fa5ba4259fbc0297226747f3ff1387a6c382f
 runtimeInputs:
   - role: skill
     locator: skills/migrate-system/SKILL.md

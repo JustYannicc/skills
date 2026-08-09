@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: migrate-system-automatic-organizational
 attempt: 2
 contextId: fresh-migrate-system-automatic-organizational-20260809t140200z-public-attempt-2
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: neutral-public-runtime-wrapper
 recordedAt: 2026-08-09T14:02:00Z
 environment:
@@ -82,4 +82,4 @@ runtimeInputs:
     sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
 rawEvidence:
   locator: evaluations/evidence/migrate-system/automatic-organizational-2.txt
-  sha256: c76b0f3c3c1afe4b4e3f12643dd0f2c7c6137b400a622cd7ccb3fade33c0cad4
+  sha256: b606861e6421bf2525ee4d2c478146977888918d31ddb9f8bad3fb7a5fa39e46

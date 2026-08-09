@@ -1,7 +1,7 @@
 Evaluation: to-tickets-edge-revision-preservation
 Attempt: 1
 Context: fresh-to-tickets-edge-revision-preservation-20260808-1
-Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Evaluator: deterministic-candidate-observer
 
 Representation and boundary

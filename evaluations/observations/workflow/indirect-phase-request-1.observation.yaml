@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-indirect-phase-request
 attempt: 1
 contextId: fresh-workflow-indirect-phase-request-20260806-sol-high-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:05:51.000Z
 environment:
@@ -29,4 +29,4 @@ observed:
   state: [waiting-for-input]
 rawEvidence:
   locator: evaluations/evidence/workflow/indirect-phase-request-1.txt
-  sha256: f50ad6a3bb49b3e0356ef2eae0343c5e231d635b7b303ee6c35c86c42a3195a1
+  sha256: 0d152323c270289d83e99a54a9292598e101b56280c81e5b9d4133baea8849e9

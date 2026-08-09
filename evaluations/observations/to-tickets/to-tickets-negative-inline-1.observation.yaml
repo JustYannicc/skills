@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-negative-inline
 attempt: 1
 contextId: fresh-to-tickets-negative-inline-20260808-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:33:00.000Z
 environment:
@@ -38,4 +38,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-negative-inline-1.txt
-  sha256: 8a46fc026a26618a99173265dc64c2a8088cc96759e95ac8d8c1326f1ce98cac
+  sha256: a909ee7ab7f399072484a45451f24baa3268c816b353aba043f2d280b7f5f9ee

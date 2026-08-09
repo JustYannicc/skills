@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-indirect-workflow
 attempt: 1
 contextId: fresh-gwd-indirect-workflow-1-5b4d64ba-234e-439e-8406-5516ce5eff62
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:40:12.000Z
 environment:
@@ -45,4 +45,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/indirect-workflow-1.txt
-  sha256: ec930ec2b968e994ad7a60e28be2faca41c96efc3b11b981ea39053c78b9d0bf
+  sha256: 707336875bbffa6b354f8de21e588bc1e6baec4e49e2cd2fd7b70da0451b1811

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-revision-change
 attempt: 1
 contextId: fresh-implement-edge-revision-change-sol-high-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T13:07:01.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-revision-change-1.txt
-  sha256: ce1f12d107cdbc785a16b02c45eb939568d65a721567403838a3fe2b64985f21
+  sha256: d616987d6be49a9a8a5e21aeb8313ed8a578d219bb692a7c3128bb1531d7a0f9

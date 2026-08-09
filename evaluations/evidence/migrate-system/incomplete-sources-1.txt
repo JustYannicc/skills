@@ -8,7 +8,7 @@ Candidate and exact runtime-input identity
 - Runtime role `governing-skill` — locator: `skills/thinking-in-systems/SKILL.md`; SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
 - Runtime role `governing-reference` — locator: `skills/thinking-in-systems/references/standard.md`; SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
 - Runtime role `disclosed-reference` — locator: `skills/migrate-system/references/current-state-mapping.md`; SHA-256: `df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef`
-- Suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 
 Frozen run contract
 

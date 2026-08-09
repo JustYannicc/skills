@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-incomplete-contract
 attempt: 1
 contextId: fresh-implement-incomplete-contract-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:04.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-incomplete-contract-1.txt
-  sha256: 4cf87fa4db3c3f5cdcfd4f145c55226830511bfe24082c1e0f0c0268e04f2c04
+  sha256: 235f92ead128c15f3d6b18c1d657cedfc1887565bdd1b3a86e52abba5f381e72

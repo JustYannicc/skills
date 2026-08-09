@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: thinking-in-systems-consequential
 attempt: 2
 contextId: fresh-thinking-in-systems-consequential-2
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-terra-fresh-context-full-standard
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/consequential-2.txt
-  sha256: 07014d86c4b3e5068e1b0bc0e4619d734a958ce3253ebbc0ecf6fc8895a58c0d
+  sha256: 8d6e6a0afae4fd9738ba0a48d5bfa8744e775f6b0020b2781a4e11097f327292

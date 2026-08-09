@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 ## Governance assessment
 
 The System of interest is the recurring customer-update drafting process, within the active Workflow. Its Outcome is an accurate, approved customer update; the good-enough threshold is a draft that satisfies the applicable update requirements and has exact approval before any send. The Workflow skill retains ownership of integration, phase selection, coordination, and terminal proof.

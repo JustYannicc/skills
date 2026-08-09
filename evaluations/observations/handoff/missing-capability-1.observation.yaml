@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-missing-capability
 attempt: 1
 contextId: fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:42:07Z
 environment:
@@ -89,4 +89,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/handoff/missing-capability-1.txt
-  sha256: 4297cfd047123b8af8fbd9304baba17c4df868ed8d60c4ff6a8cb2cd2acdcb1d
+  sha256: 342857a531f4805de33eb54e4a9c9ee30fd1fe8fe8c1703840aa30997ed6f59b

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-direct-communication
 attempt: 1
 contextId: fresh-implement-direct-communication-20260809-r4-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T13:19:58.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-direct-communication-1.txt
-  sha256: 0800b280eba782c654b66f09e7ade2d2db0a507790da501649529f2e38f85b1f
+  sha256: 003933925201c4801db26da3bc2f88fab2cbee637e1a938b0aa71a87e05be057

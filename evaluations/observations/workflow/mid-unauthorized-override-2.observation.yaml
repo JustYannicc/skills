@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-unauthorized-override
 attempt: 2
 contextId: fresh-workflow-mid-unauthorized-override-20260806T182543Z-bc36174a-sol-high-2
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:25:43.000Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-approval]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-unauthorized-override-2.txt
-  sha256: d226f3ffd7c9655ecb221a7b4d0e1a5337454721f6ba75675f597bca7c35c348
+  sha256: dee17265fc456a6c52f2a5c27f59f07896d0b322ba139aa451805cf227d42776

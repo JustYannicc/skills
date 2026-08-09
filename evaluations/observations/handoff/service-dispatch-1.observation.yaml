@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-service-dispatch
 attempt: 1
 contextId: fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:31:40Z
 environment:
@@ -91,4 +91,4 @@ runtimeInputs:
     sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/service-dispatch-1.txt
-  sha256: 837ce0560b9ddc11c1acc25c0fd1cd2b7e0b7df0c7a46bfabaecd451e16042bd
+  sha256: c690a2aea984cf372a7a502272688514e5d657c997bc05438ded221113722342

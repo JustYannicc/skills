@@ -1,5 +1,5 @@
 Candidate commit: git:d78dff812af6a69a1995980a4bc30829a298a997
-Suite revision: git:d78dff812af6a69a1995980a4bc30829a298a997
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Fixture: migrate-system-missing-wayfinder
 Attempt: 1 (fresh context; no retry)
 Context ID: fresh-migrate-system-missing-wayfinder-final-1

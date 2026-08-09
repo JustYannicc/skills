@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-missing-capability
 attempt: 1
 contextId: fresh-implement-edge-missing-capability-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T13:05:05.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [Accepted, Degraded]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-missing-capability-1.txt
-  sha256: 12b077aa2a3418b3eb41398934615eb7f6bf656cb035ec1f817952dfdc9c5fa4
+  sha256: 2da0f31f49b4090bd8ff09f0eb4989d9506be88c4bde6946b70d0356bd934bac

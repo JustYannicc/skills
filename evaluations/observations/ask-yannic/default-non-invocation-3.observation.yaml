@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-default-non-invocation
 attempt: 3
 contextId: fresh-ask-yannic-default-non-invocation-codex-sol-high-20260809t124617z-b11a6423-7692-4d35-8e6e-c1c06c6c6938
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high-fresh-context
 recordedAt: 2026-08-09T12:46:17Z
 environment:
@@ -39,7 +39,7 @@ observed:
   state: [ordinary-work-request]
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/default-non-invocation-3.txt
-  sha256: 79c81803170d20014e63e1a32d748b7fa21dc37dcd0804dc12aa93a20f152b2e
+  sha256: d6394df0ef7b0604e80087fb2b5f30b698260e3a1687361353c06c76555087c8
 runtimeInputs:
   - role: skill
     locator: skills/ask-yannic/SKILL.md

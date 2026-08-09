@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-edge-pre-effect-review
 attempt: 1
 contextId: fresh-implement-edge-pre-effect-review-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:03.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-edge-pre-effect-review-1.txt
-  sha256: 8e9785303a7cff770c4fa9adc9ec7221e8cb6c8febb1e0c704c80a00dea9721f
+  sha256: 2ecb67a4c731d93542bb4ab038be62fc7199fceee2f89522707e46c46f029b39

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: handoff-negative-summary
 attempt: 1
 contextId: fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3
-suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-evaluator
 recordedAt: 2026-08-09T13:44:22Z
 environment:
@@ -58,4 +58,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/handoff/negative-summary-1.txt
-  sha256: 3c997545eb830ff3e3e360d969ed14fe95b359c904f12283d58fcb81add394fc
+  sha256: c883762a45862baf3a9ae9c9db141b114e6c1adde1cfdf8bac81dc2fe0d486f0

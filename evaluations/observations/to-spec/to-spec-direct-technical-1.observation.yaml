@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-spec-direct-technical
 attempt: 1
 contextId: fresh-to-spec-direct-technical-sol-high-20260806-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T18:04:13.000Z
 environment:
@@ -34,4 +34,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-direct-technical-1.txt
-  sha256: 9ab1f6094572265061bf682c26da304cca0fb0d38a836cc4e949b3aa104685e6
+  sha256: a39b3aa2242ffdd82ded7d344777b99228c218c0505de1c4052db8856a0547c7

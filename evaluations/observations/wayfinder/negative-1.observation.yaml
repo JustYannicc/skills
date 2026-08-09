@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-negative-bounded-work
 attempt: 1
 contextId: fresh-wayfinder-negative-bounded-inline-luna-max-20260809t122947z-95a47082-1b8f-47ef-af6b-b200605dad59
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:47Z
 environment:
@@ -72,4 +72,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/wayfinder/negative-1.txt
-  sha256: 6f3d0aa549b048902e44d05e22ed0e3b63d07ff929d321d5db24a4b777df0935
+  sha256: 67f720217085565939476e92ebd69f2b42aaadf5451afa25683d3689d43f7698

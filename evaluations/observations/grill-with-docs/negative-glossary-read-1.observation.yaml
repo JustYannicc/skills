@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grill-with-docs-negative-glossary-read
 attempt: 1
 contextId: fresh-gwd-negative-glossary-v12-1-febad68b-dd72-490b-b1eb-c69c2bd17ef9
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:41:17Z
 environment:
@@ -38,4 +38,4 @@ observed:
     - answered
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/negative-glossary-read-1.txt
-  sha256: e34e07a5e1fdfc20028da6deaf84776fd1f91ba0f52683b1a37de1b87f2606e6
+  sha256: 671c89c1f5ce36b555ccb379f6ab37f98d7c209e57ba67d6662f5951d808d677

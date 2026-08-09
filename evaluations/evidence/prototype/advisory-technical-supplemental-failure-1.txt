@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Advisory Supplemental failure: The configured `technical-prototype` Supplemental was invoked at its declared Extension point and failed before returning an artifact, Result revision, observation, or evidence. Record `supplemental-failure-record@r1` therefore has status `failed after invocation`, no returned artifact, and no returned or integrated Supplemental evidence. Prototype retained the learning question and completion criterion; Workflow retained parent coordination.
 
 Core-continuation check: The core contract remained safely satisfiable. The available sandbox could expose the complete decision-bearing retry state in a disposable representation, persistence and live effects were disabled, no credential or external effector was needed, and Prototype could dispose of the setup within its Authority. If the representation could not expose the relevant state, or if answering required an unknown prior-effect state, the experiment would stop blocked or inconclusive. The advisory failure alone did not justify stopping.

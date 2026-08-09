@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-changed-revision
 attempt: 1
 contextId: final-sol-review-changed-revision-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:00.000Z
 environment:
@@ -43,4 +43,4 @@ observed:
     - in_review-to-waiting
 rawEvidence:
   locator: evaluations/evidence/review/changed-revision-1.txt
-  sha256: a513b91dd9c95dea7407c2ea9157d8563168a5934377af424484749c7dc3c4c9
+  sha256: ae17136883fe2754bc2667c41f85c69d4886cd5281518c69188fcf0a2748adc0

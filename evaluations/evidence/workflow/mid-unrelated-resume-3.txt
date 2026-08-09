@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Applying Thinking in Systems inside the active Workflow, I classify the new request as an unrelated switch. Before switching, I preserve this Inline continuation:
 
 - Outcome and owner: O6 remains the active household-budget Outcome, and its owner remains responsible throughout the switch.

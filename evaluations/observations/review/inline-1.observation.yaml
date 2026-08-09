@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: review-inline
 attempt: 1
 contextId: final-sol-review-inline-1
-suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: gpt-5.6-sol-high-fresh-context-review
 recordedAt: 2026-08-06T20:15:12.000Z
 environment:
@@ -40,4 +40,4 @@ observed:
     - in_review-to-complete
 rawEvidence:
   locator: evaluations/evidence/review/inline-1.txt
-  sha256: eaae8304b67362104f00846835997b3d97e210758b1b4a08497687ca700c2b30
+  sha256: d52171a5b1a01685b3dff45cd367b4764752637a79c4cf85b15a60315889104b

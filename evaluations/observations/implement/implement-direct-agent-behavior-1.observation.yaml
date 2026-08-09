@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-direct-agent-behavior
 attempt: 1
 contextId: fresh-implement-direct-agent-behavior-20260809-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:10.000Z
 environment:
@@ -28,4 +28,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-direct-agent-behavior-1.txt
-  sha256: e979ca6746fdfd73dabea1bd124c93310259222e2ad60914adb8b92b700b5db0
+  sha256: 2cf1eeac66174b8e0e0f0271b35c89c95076ffd2e6e6edd2dd221a396dfd411f

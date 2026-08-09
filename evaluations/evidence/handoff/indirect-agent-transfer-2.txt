@@ -5,7 +5,7 @@ Attempt: 2
 Context ID: `fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e`
 Evaluator: `gpt-5.6-luna-max-fresh-evaluator`
 Candidate revision: `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
-Suite revision: `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+Suite revision: `git:5bd2224944aaa7129c7d651b1b9925afad0520ce`
 Recorded at (UTC): `2026-08-09T13:30:59Z`
 
 Runtime inputs read before applying Handoff

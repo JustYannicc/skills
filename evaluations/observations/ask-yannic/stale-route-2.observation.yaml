@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-stale-route
 attempt: 2
 contextId: fresh-ask-yannic-stale-route-sol-high-2-e527eb67-1d0a-41d5-b1d9-4ca4bd1b87c3
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:41:37.697Z
 environment:
@@ -78,4 +78,4 @@ runtimeInputs:
     sha256: 61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/stale-route-2.txt
-  sha256: 0c48f1189bf2a393ce890bfac3d0c0fd7e4fc88e32b5d9e250caf3ffa7b6fb5b
+  sha256: b06ca88aadc872b52722f7241cae30e7213598c989ef6efd42103ec013c9fde2

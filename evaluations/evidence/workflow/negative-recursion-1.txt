@@ -1,4 +1,4 @@
-Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Accepted meaning of **ready** for Outcome O-42:
 
 **Ready** means the prerequisites for the next bounded action are present and verified at the current result revision: one operative meaning is accepted, supporting evidence is attached, and no material ambiguity blocks integration. It means this terminology result is ready for the parent Workflow to integrate and Review; it does not mean Outcome O-42 is complete.

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: implement-direct-organizational-physical
 attempt: 1
 contextId: fresh-implement-direct-organizational-physical-20260809-r3-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: sol-high-fresh-context
 recordedAt: 2026-08-09T12:55:01.000Z
 environment:
@@ -27,4 +27,4 @@ observed:
   state: [In review]
 rawEvidence:
   locator: evaluations/evidence/implement/implement-direct-organizational-physical-1.txt
-  sha256: d78502970f459c3cad53bcf545644bccaa0ba9ce0b892d64d93c2b08b0d43bcb
+  sha256: 442ac233b3fa9445cfdae79171e602e094b634019bb9387a4422aa317149c91f

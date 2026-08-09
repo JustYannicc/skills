@@ -1,7 +1,7 @@
 Evaluation: implement-indirect-delegated-software
 Attempt: 1
 Context: fresh-implement-indirect-delegated-software-20260809-r3-1
-Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Suite revision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 Evaluator: sol-high-fresh-context
 
 Workflow bound t4, s8, d2, baseline r1, Complete dependencies, deployment

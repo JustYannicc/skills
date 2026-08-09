@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: ask-yannic-negative-coworker-judgment
 attempt: 1
 contextId: fresh-ask-yannic-negative-coworker-judgment-sol-high-1-5749f55c-b049-406b-ab2a-25191a3772cd
-suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+suiteRevision: git:5bd2224944aaa7129c7d651b1b9925afad0520ce
 evaluator: codex-sol-high
 recordedAt: 2026-08-09T12:22:45Z
 environment:
@@ -54,7 +54,7 @@ observed:
     - guidance-boundary-complete
 rawEvidence:
   locator: evaluations/evidence/ask-yannic/negative-coworker-judgment-1.txt
-  sha256: d06965469619d393d3bfa16cc76026b85d145fa0cd87e52448550286f32e7635
+  sha256: 72d6c415ee1ee4efdd707a1a3c26fd20ea41dc2b39b9aa4be4247baa8e94e9d5
 runtimeInputs:
   - role: skill
     locator: skills/ask-yannic/SKILL.md
