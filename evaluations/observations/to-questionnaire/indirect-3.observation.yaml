@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-questionnaire-indirect
 attempt: 3
 contextId: fresh-questionnaire-indirect-final-3
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-04T18:26:12Z
 environment:

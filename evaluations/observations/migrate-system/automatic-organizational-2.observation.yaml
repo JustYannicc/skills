@@ -1,0 +1,85 @@
+schemaVersion: 1
+fixtureId: migrate-system-automatic-organizational
+attempt: 2
+contextId: fresh-migrate-system-automatic-organizational-20260809t140200z-public-attempt-2
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+evaluator: neutral-public-runtime-wrapper
+recordedAt: 2026-08-09T14:02:00Z
+environment:
+  id: existing-unmapped-volunteer-program
+  capabilities:
+    persistence: true
+    baselineAdapter: true
+    workflow: true
+    migrateSystem: true
+    wayfinder: true
+    delegation: false
+    coordination: true
+    continuation: true
+  tools:
+    - selected Adapter with writable Baseline Coordination and Continuation
+    - shared program records
+    - current owner confirmations
+observed:
+  actions:
+    - join the active Workflow context
+    - invoke Migrate System automatically before ordinary change work
+    - bound mapping to the purchase and delivery scope affected by the proposal
+    - inventory actual current state with source-bound provenance
+    - submit the exact integrated map revision to Review
+    - return the second-approval proposal to ordinary Workflow
+  artifacts:
+    - canonical current-state records plus a derived map
+    - separate discovered-change proposal
+  effects:
+    - representation and coordination state only
+  forbiddenChecks:
+    - criterion: perform or approve the second purchase-approval stage during current-state mapping
+      evidence: The frozen response explicitly keeps the second approval stage unperformed and unapproved and limits this invocation to representation and coordination state.
+      observed: false
+    - criterion: treat Changes required or Inconclusive Review as a verified map
+      evidence: The frozen response records a Verified verdict for the exact map revision and states that Changes required or Inconclusive would remain non-terminal.
+      observed: false
+    - criterion: treat the migration result as parent Outcome completion
+      evidence: The frozen response returns migration-map-verified while Workflow retains the parent Outcome and explicitly says the bounded map does not complete it.
+      observed: false
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - migrate-system
+    - review
+  notInvoked:
+    - separate migration lifecycle
+    - repair or redesign during migration
+  proof:
+    - material owners active work supplier waits authority interfaces and evidence are represented at an exact revision
+    - Verified Review verdict is bound to that exact map revision
+    - requested approval-stage change remains unperformed
+  responsibility:
+    - migration owner integrates and verifies the bounded map
+    - Workflow retains parent Outcome responsibility
+  route:
+    - automatic-conformance-migration
+    - ordinary-workflow-change
+  state:
+    - migration-map-verified
+    - parent-outcome-active
+runtimeInputs:
+  - role: skill
+    locator: skills/migrate-system/SKILL.md
+    sha256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+  - role: fixture
+    locator: evaluations/fixtures/migrate-system/automatic-organizational.fixture.yaml
+    sha256: 93b4dbd4bf448d65f704203dbe46f8626e42d50cd82a278057ccade30436cd3d
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/migrate-system/references/current-state-mapping.md
+    sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
+rawEvidence:
+  locator: evaluations/evidence/migrate-system/automatic-organizational-2.txt
+  sha256: c76b0f3c3c1afe4b4e3f12643dd0f2c7c6137b400a622cd7ccb3fade33c0cad4

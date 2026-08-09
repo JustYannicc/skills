@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: foundation-incomplete
 attempt: 1
 contextId: fresh-incomplete-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
 evaluator: deterministic-foundation
 recordedAt: 2026-08-04T14:30:00.000Z
 environment:

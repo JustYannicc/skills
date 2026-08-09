@@ -1,0 +1,267 @@
+Neutral evaluation wrapper — migrate-system-delegated-mapping fixture, attempt 1
+
+Wrapper metadata and grading outside the marked block are not prompt content and
+are not part of the frozen response.
+
+Identity and input hashes
+
+- Candidate revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Candidate skill SHA-256 (raw UTF-8 bytes): `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
+- Fixture locator: `evaluations/fixtures/migrate-system/delegated-mapping.fixture.yaml`
+- Fixture SHA-256 (raw UTF-8 bytes): `fb330909171fd84fa4dff5ff1c59a8ccb2fcdf6f74ad03d7920c263dccadc4cb`
+- Prompt SHA-256 (parsed fixture `prompt`, including terminal LF): `52502817eb3205d959d4fb5c1646de14d6518c629744a660d1951d39a33c5a93`
+- Environment SHA-256 (`JSON.stringify` of parsed fixture `environment`, preserving object and array order): `774d6fa04d055c8bcd62af331bb2737b4012aed3f723574e1e53010c41f5f1be`
+rawResponseSha256: `e32855b5638a6a6f58fcd55431ca84ebe2423ff61243093ecb1466089d08d1d2`
+
+Exact Phase A runtime inputs (read before freezing)
+
+- `skills/migrate-system/SKILL.md` — role `skill` — SHA-256 `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
+- `evaluations/fixtures/migrate-system/delegated-mapping.fixture.yaml` — role `fixture` — SHA-256 `fb330909171fd84fa4dff5ff1c59a8ccb2fcdf6f74ad03d7920c263dccadc4cb`
+- `skills/migrate-system/references/current-state-mapping.md` — role `disclosed-reference` — SHA-256 `df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef`
+- `docs/UNIVERSAL_WORK_CONTRACT.md` — role `governing-reference` — SHA-256 `f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3`
+- `skills/workflow/references/durable-mode.md` — role `governing-reference` — SHA-256 `b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5`
+- `skills/workflow/references/continuation-template.md` — role `governing-reference` — SHA-256 `dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e`
+- `skills/review/SKILL.md` — role `governing-skill` — SHA-256 `651ef184563bce59569834ac605244d282bd95474efc60a12e7c567d0dd9f554`
+- `skills/review/references/review-record-template.md` — role `governing-reference` — SHA-256 `4f170ec211cc07c86fbdd52ab11b986e2530e4f21384eb100d6271596bf7473d`
+- `docs/handoffs/2026-08-09-migrate-system-candidate.md` — role `governing-reference` — SHA-256 `5a60756b782b547b04ae3a7761550e2297afa852a9164930dfefe0ae4da105dc`
+
+Generation control
+
+- Fresh context: one candidate generation only.
+- One-shot claim: no retry, second generation, or post-freeze candidate edit
+  was made.  Phase B wrapper, grading, and writing audit occurred only after
+  the response was frozen.
+
+BEGIN FROZEN RESPONSE
+## Candidate response
+
+### Workflow admission and bounded migration
+
+- Outcome: `support-operation-adoption`; the active Workflow context retains the
+  parent Outcome owner `support-outcome-owner`.  The migration Work owner is
+  `support-migration-owner`; the return route is back to that Outcome owner and
+  Workflow.  This invocation is one Conformance-migration result, not parent
+  Outcome completion or a transfer of parent Responsibility.
+- Accepted scope: adopt the existing support operation's current state into one
+  canonical coordination space.  Included are Customer Escalation, on-call
+  tooling, and staffing records, their actors, interfaces, active work,
+  responsibilities, evidence, and ownership claims.  Excluded are repairs,
+  redesign, reassignment, policy changes, product or operational effects, and
+  resolving a disputed ownership claim.
+- Selected Adapter: the fixture's selected Adapter with writable `Baseline`
+  and `Coordination`.  `Baseline=available`, `Coordination=available`, and
+  `Continuation=unavailable`; no scheduler or monitoring claim is made.  The
+  Adapter provider revision is not disclosed by the fixture and remains an
+  explicit unknown.  The active Workflow, migrate-system, Wayfinder,
+  delegation, concurrent-claim, and coordination capabilities are available;
+  no unavailable capability is substituted with the host agent.
+- Proof seam: one source-linked, read-only derived Map over a canonical
+  integrated current-state revision, submitted to Review at that exact
+  revision.  Representation and coordination records are the only effects.
+
+### Canonical child contracts and dispatch
+
+The migration owner creates exactly three non-overlapping child Tickets under
+the Outcome's canonical `contains` relationship.  Each Ticket has an accepting
+Work owner, immutable captured input revisions, a live coordination Claim
+separate from ownership, a bounded result and Proof seam, an independent
+Reviewer, and the same return route to the migration owner.  `requires` is not
+introduced between these disjoint areas; `related` links are read-only context.
+
+1. **`ticket-customer-escalation`** — owner `escalation-mapping-worker`;
+   boundary is the escalation records only; excluded are tooling and staffing;
+   immutable input is `escalation-r4`; allowed writes are this Ticket,
+   Evidence, Claim, Review, and the integrated Map; the source remains
+   read-only.  Claim `claim-customer-escalation` is held by its worker while
+   active and has a recorded start and expiry rule.  Reviewer
+   `reviewer-escalation` checks the source-bound result
+   `escalation-map@escalation-r4`; return route is `support-migration-owner`.
+2. **`ticket-on-call-tooling`** — owner `tooling-mapping-worker`; boundary is
+   paging, incident-state, and escalation-handoff records only; excluded are
+   escalation and staffing; immutable input is `tooling-r6`; writes and Claim
+   rules match the first Ticket.  Reviewer `reviewer-tooling` checks
+   `tooling-map@tooling-r6`; return route is `support-migration-owner`.
+3. **`ticket-staffing`** — owner `staffing-mapping-worker`; boundary is the
+   staffing dispatch snapshot, roster coverage, and responsibilities only;
+   excluded are escalation and tooling.  Dispatch captures immutable input
+   `staffing-r7`, with `staffing-r7` recorded in the Ticket history and Claim
+   `claim-staffing`.  Reviewer `reviewer-staffing` will review the current
+   source-bound result after freshness is re-established; return route is
+   `support-migration-owner`.
+
+Because the three boundaries are independent and the fixture declares safe
+concurrent claims, the migration owner dispatches these Tickets concurrently.
+Each worker records source ID/locator, exact revision, source role, supported
+claims, method, observer, time, freshness, confidence, limitations, and its
+bounded coverage dimensions; a child completion count is never used as proof.
+
+### Child returns, freshness, and Review
+
+- The escalation worker returns a result covering current actors, interfaces,
+  active work, and the claim that **Customer Escalation owns final escalation
+  disposition**, bound to `escalation-r4`.  `Review-escalation` admits the
+  immutable tuple `(Specification, escalation-map@escalation-r4,
+  governing-standards@git:d78dff812af6a69a1995980a4bc30829a298a997, child
+  Proof seam)` and returns **Verified**.  Its Evidence reference includes the
+  Adapter read locator and exact `escalation-r4` revision.
+- The tooling worker returns paging, incident-state, and escalation-handoff
+  evidence bound to `tooling-r6`.  `Review-tooling` admits the corresponding
+  immutable tuple with exact `tooling-r6` and returns **Verified**, with its
+  source, method, observer, time, locator, and revision retained.
+- The staffing worker's captured `staffing-r7` input becomes stale after
+  dispatch when the source advances to `staffing-r8`.  The migration owner
+  rejects any result based only on `staffing-r7`; it is not integrated and
+  cannot authorize a Review or parent decision.  The child Ticket preserves
+  the stale event, releases the stale Claim for coordination, and enters
+  owned Recovery without losing the staffing worker's Responsibility.  The
+  Adapter rereads the changed slice at `staffing-r8`, invalidates the affected
+  r7 Evidence/contract, and resumes the same Ticket with a fresh Claim and
+  immutable input `staffing-r8`.  The reread preserves the overlapping claim
+  under the **Primary On-call** role.  `Review-staffing` admits only
+  `(Specification, staffing-map@staffing-r8,
+  governing-standards@git:d78dff812af6a69a1995980a4bc30829a298a997, child
+  Proof seam)` and returns **Verified**.  No r7 Review or evidence is treated
+  as current.
+
+The migration owner collects only these three `Verified`, revision-bound
+results.  Missing, stale, unreviewed, `Changes required`, or `Inconclusive`
+results would remain owned execution, waiting, or Recovery work and would not
+enter the integrated map.
+
+### Owner-led integration and conflict preservation
+
+`support-migration-owner` integrates by source and boundary, not by majority
+vote, into one canonical current-state revision
+`support-map@coordination-r1`.  The integrated revision records all three
+source tuples: `escalation-r4`, `tooling-r6`, and `staffing-r8`, with the stale
+`staffing-r7` event retained as superseded history.  It includes the full
+material boundary, exclusions, Actors and Responsibility, Authority,
+interfaces, active work, dependencies, waiting/Recovery state, provenance,
+unknown coverage, and the read-only Map locator and freshness tuple.
+
+The two contrary final-disposition claims remain visible and source-bound:
+
+- the escalation source says **Customer Escalation owns final escalation
+  disposition** (`escalation-r4`); and
+- the current staffing source says **Primary On-call owns final disposition**
+  (`staffing-r8`, preserving the claim seen at r7).
+
+They are represented as a named unresolved conflict with both Evidence
+references.  Integration does not overwrite, merge, infer, or reassign either
+claim.  Any later resolution is a separate ordinary Workflow Outcome/Ticket
+linked to this evidence; it is not performed by migration.
+
+### Integrated Review and return
+
+The migration owner submits exactly `support-map@coordination-r1` to
+`Review-integrated-map` as a Standard independent review.  The Reviewer checks
+the accepted migration Specification and standards at `git:d78dff812af6a69a1995980a4bc30829a298a997`, reconciles every child result to the
+same integrated revision, confirms the derived Map is read-only and
+source-linked, and verifies that the conflict and superseded r7 history remain
+visible.  The exact target tuple is
+`(Specification, support-map@coordination-r1, governing-standards@git:d78dff812af6a69a1995980a4bc30829a298a997, integrated Proof seam)`;
+the verdict is **Verified** for this bounded representation.  This verdict
+does not resolve the ownership conflict, authorize a repair/effect, complete
+the parent Outcome, or transfer parent Responsibility.
+
+The return packet to Workflow names the integrated Map and canonical locator,
+`support-map@coordination-r1`, derived-view freshness, covered and excluded
+scope, unknown coverage, migration and child owners, parent Outcome owner,
+source/provenance and conflict summary, all three revision-bound child Reviews,
+the preserved stale-r7 Recovery history, capability gap
+`Continuation=unavailable`, and the route for the separate conflict work.
+Workflow resumes with the parent owner retaining integration and terminal
+proof.  No child completion is treated as whole-map or parent completion, no
+parent Responsibility is transferred, and no product or operational behavior
+is changed.
+
+END FROZEN RESPONSE
+
+Indexed fixture grade (one-based, fixture order)
+
+- [A1] `join the active Workflow context` — PASS: one Outcome, migration owner,
+  parent owner, phase, Authority, Adapter, and return route are bound.
+- [A2] `create canonical nonoverlapping child Tickets with owners Claims immutable inputs proof seams Reviewers and return routes` — PASS: exactly three bounded Tickets list all required fields.
+- [A3] `dispatch only independent mapping areas concurrently` — PASS: the three
+  disjoint boundaries are dispatched concurrently under declared Coordination.
+- [A4] `reject the stale staffing-r7 child result and reread staffing-r8` — PASS:
+  r7 is rejected, kept as superseded history/Recovery, and r8 is reread and
+  reviewed.
+- [A5] `collect only Verified revision-bound child evidence` — PASS: only
+  escalation-r4, tooling-r6, and staffing-r8 Verified results are integrated.
+- [A6] `reconcile duplicates conflicts and gaps` — PASS: integration is by
+  source and boundary, retains provenance, and preserves the ownership conflict.
+- [A7] `submit one exact integrated map revision to Review` — PASS:
+  `support-map@coordination-r1` is the sole integrated Review target.
+- [B1] `three canonical child Ticket records with Review dispositions` — PASS:
+  all three Tickets have named owners and exact Verified child Reviews.
+- [B2] `one canonical integrated current-state revision and derived map` — PASS:
+  the canonical revision and read-only source-linked Map are named.
+- [C1] `representation and coordination state only` — PASS: no product,
+  ownership, policy, or operational effect is claimed.
+- [D1] `thinking-in-systems` — PASS: material boundary, relationships, actors,
+  interfaces, evidence, conflicts, and proof seams are mapped.
+- [D2] `workflow` — PASS: Workflow owns context, parent Responsibility, and
+  the return packet.
+- [D3] `migrate-system` — PASS: bounded Conformance migration and integrated
+  current-state map are performed.
+- [D4] `review` — PASS: each child and the parent map receive exact-revision
+  Review dispositions.
+- [E1] `parent responsibility transfer` — PASS (not invoked): parent owner
+  remains responsible.
+- [E2] `child-result aggregation without integration` — PASS (not invoked): the
+  migration owner reconciles every child into one exact parent revision.
+- [F1] `every child source result and Review revision remains traceable` — PASS:
+  source IDs, revisions, Evidence, Claims, and Review tuples are retained.
+- [F2] `staffing-r7 does not authorize integration after staffing-r8 appears` — PASS:
+  stale r7 is rejected and cannot enter the parent evidence set.
+- [F3] `Verified parent map Review binds the exact integrated revision` — PASS:
+  parent Review is bound to `support-map@coordination-r1`.
+- [F4] `conflicting ownership claims remain visible after integration` — PASS:
+  Customer Escalation and Primary On-call claims remain separate and source-bound.
+- [G1] `each child owner owns its bounded result` — PASS: three owners and
+  bounded return routes are explicit.
+- [G2] `migration owner integrates and verifies the whole` — PASS: the owner
+  reconciles and submits the integrated map.
+- [G3] `Workflow retains parent Outcome responsibility` — PASS: no transfer or
+  parent completion is claimed.
+- [H1] `delegated-conformance-migration` — PASS: child delegation returns to the
+  migration owner through this route.
+- [H2] `integrated-review-return` — PASS: exact parent Review returns to Workflow.
+- [I1] `child-results-integrated` — PASS: all and only the three final Verified
+  child revisions are integrated.
+- [I2] `migration-map-verified` — PASS: the bounded representation receives
+  Verified parent Review.
+- [J1] `integrate an unreviewed or stale child result` — PASS (forbidden behavior
+  not observed): stale r7 and any non-Verified result are excluded.
+- [J2] `treat delegated child completion as migration or parent completion` — PASS
+  (forbidden behavior not observed): parent Review and parent Responsibility are
+  kept separate from child completion.
+- [J3] `overwrite one ownership claim to remove a conflict` — PASS (forbidden
+  behavior not observed): both claims remain visible and unresolved.
+
+Overall grade: PASS.  The one frozen response satisfies every expected action,
+artifact, effect, invocation, proof, responsibility, route, state, and
+forbidden check.  No retry or second generation was made.
+
+Post-freeze writing audit (writing-for-agents)
+
+- Hierarchy: execution steps stay in the frozen response; hashes, grade, and
+  audit stay in the neutral wrapper outside it.
+- Pointers: every runtime pointer names an exact repository locator, role, and
+  SHA; no weak or implicit reference is used.
+- Co-location: each child contract, its stale-source path, and its Review are
+  adjacent to the integration rule that consumes them.
+- Completion criteria: dispatch, child Review, integration, and parent Review
+  each have an observable exact-revision criterion.
+- Leading words: `bounded`, `source-bound`, `exact`, `stale`, `conflict`,
+  `owner`, and `Verified` anchor the repeated decisions.
+- Progressive disclosure: the candidate response is one marked block; metadata
+  and audit remain outside the runtime-facing text.
+- Single source of truth: the Adapter's canonical records own meanings; the
+  Map is explicitly derived and read-only; wrapper grading does not duplicate
+  canonical state.
+- Relevance: wrapper content is limited to this fixture, its runtime inputs,
+  hashes, grading, and requested authoring audit.
+- No-ops: generic assurances were omitted; each audit and grade line records a
+  criterion-changing behavior or an exact evidence binding.

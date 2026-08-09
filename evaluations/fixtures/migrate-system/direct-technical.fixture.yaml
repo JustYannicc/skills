@@ -1,0 +1,27 @@
+schemaVersion: 1
+id: migrate-system-direct-technical
+title: Direct technical adoption preserves actual runtime and work state
+shape: direct
+kind: invocation
+skill: migrate-system
+domains: [software]
+severity: Critical
+requiredAttempts: 3
+runtimeReferences: [skills/migrate-system/references/current-state-mapping.md]
+prompt: |
+  Migrate this inherited billing service into Workflow. Production behavior is documented in runbooks, tickets, dashboards, and operator knowledge; the sources disagree about who owns failed-payment recovery. Record and verify what is actually current so the next maintainer can proceed. Do not fix the service.
+environment:
+  id: inherited-billing-service
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, coordination: true, continuation: true }
+  tools: [selected Adapter with writable Baseline Coordination and Continuation, versioned runbooks, ticket records, dashboard observations, operator confirmations]
+expected:
+  actions: [join the active Workflow context, inventory authoritative and observational sources with exact revisions or observation times, map system boundaries actors responsibilities interfaces active work dependencies evidence waits unknowns and provenance, preserve the ownership conflict instead of guessing, submit the exact integrated current-state revision to Review]
+  artifacts: [canonical billing-service current-state records, derived current-state map with visible conflict and confidence]
+  effects: [representation and coordination state only]
+  invoked: [thinking-in-systems, workflow, migrate-system, review]
+  notInvoked: [service repair, architecture redesign, canonical Adapter migration]
+  proof: [source claims and operating observations remain traceable, Verified Review verdict is bound to the exact map revision, ownership conflict is visible and routed without changing production]
+  responsibility: [migration owner owns map integration and verification, Workflow retains parent Outcome responsibility]
+  route: [direct-conformance-migration, workflow-resumption]
+  state: [current-state-verified, ownership-conflict-visible]
+  forbidden: [resolve the failed-payment ownership conflict without Authority or evidence, treat Changes required or Inconclusive Review as verified, change production behavior or work ownership]

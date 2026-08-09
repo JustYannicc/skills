@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-required-supplemental-gap
 attempt: 1
 contextId: fresh-to-tickets-edge-required-supplemental-gap-20260808-1
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:36:00.000Z
 environment:

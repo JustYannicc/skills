@@ -23,8 +23,9 @@ Status: complete when the bootstrap commit and public remote are verified.
 Current state: `thinking-in-systems` and both Workflow routes are approved.
 Issue #14's Durable coordination route extends the same Workflow skill through
 the accepted adapter-neutral work contract and #35 System Record
-representation; PR #45 merged it into `main`. `migrate-system` remains to be
-implemented.
+representation; PR #45 merged it into `main`. `migrate-system` now has an issue
+#15 implementation candidate awaiting required human review; it does not yet
+count as approved.
 
 ## Phase 2 — discovery skills
 

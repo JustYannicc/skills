@@ -1,0 +1,69 @@
+schemaVersion: 1
+fixtureId: migrate-system-negative-repair
+attempt: 1
+contextId: fresh-migrate-system-negative-repair-20260809t133000z-luna-max-1
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T13:30:00Z
+environment:
+  id: verified-onboarding-repair
+  capabilities:
+    persistence: true
+    baselineAdapter: true
+    workflow: true
+    migrateSystem: true
+    wayfinder: true
+    delegation: false
+    coordination: false
+    continuation: false
+  tools:
+    - System Record onboarding-r18
+    - accepted Ticket retry-42
+runtimeInputs:
+  - role: skill
+    locator: skills/migrate-system/SKILL.md
+    sha256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+  - role: fixture
+    locator: evaluations/fixtures/migrate-system/negative-repair.fixture.yaml
+    sha256: ce630c8a7b88df07950eea3fe695c9baee3a995b901f699fdf4e3e9fa77d90cb
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/migrate-system/references/current-state-mapping.md
+    sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
+observed:
+  actions:
+    - load the current verified map
+    - continue ordinary Workflow at the accepted repair Ticket
+  artifacts:
+    - none from migrate-system
+  effects: []
+  forbiddenChecks:
+    - criterion: start a redundant current-state migration
+      evidence: The frozen response routes the current verified revision onboarding-r18 directly to ordinary Workflow and states that no redundant current-state migration is started.
+      observed: false
+    - criterion: treat bug repair as representation-only work
+      evidence: The frozen response keeps the confirmed retry bug as ordinary implementation on accepted Ticket retry-42.
+      observed: false
+  invoked:
+    - thinking-in-systems
+    - workflow
+  notInvoked:
+    - migrate-system
+    - conformance migration
+  proof:
+    - the existing exact verified revision satisfies the current-state prerequisite
+  responsibility:
+    - Workflow retains the repair Outcome and Ticket responsibility follows the accepted contract
+  route:
+    - ordinary-workflow-implementation
+  state:
+    - existing-map-current
+    - repair-ticket-accepted
+rawEvidence:
+  locator: evaluations/evidence/migrate-system/negative-repair-1.txt
+  sha256: 3f84703fe671b6e38689ba67ec152f47fe35a588bdcd411d8b8adc7cfb62178a

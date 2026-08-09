@@ -4,7 +4,7 @@ Fresh isolated behavioral evaluation — domain-modeling-indirect-nontechnical
 
 Evaluation identity
 
-- candidate suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+- candidate suite revision: git:d78dff812af6a69a1995980a4bc30829a298a997
 - verified candidate commit: 4233758023b9d47a92b72311ef945d902d1c9d6d
 - fixture: domain-modeling-indirect-nontechnical
 - attempt: 1

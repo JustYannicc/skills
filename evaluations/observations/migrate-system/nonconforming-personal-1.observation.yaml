@@ -1,0 +1,86 @@
+schemaVersion: 1
+fixtureId: migrate-system-nonconforming-personal
+attempt: 1
+contextId: fresh-migrate-system-nonconforming-personal-20260809t132708z-public-attempt-1
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
+evaluator: neutral-public-runtime-wrapper
+recordedAt: '2026-08-09T13:27:08Z'
+environment:
+  id: nonconforming-household-maintenance
+  capabilities:
+    persistence: true
+    baselineAdapter: true
+    workflow: true
+    migrateSystem: true
+    wayfinder: true
+    delegation: false
+    coordination: true
+    continuation: false
+  tools:
+    - selected Adapter with writable Baseline and Coordination
+    - whiteboard observation
+    - shared note revision
+    - household actor confirmations
+observed:
+  actions:
+    - join the active Workflow context
+    - preserve existing terms artifacts and observed practice
+    - crosswalk meanings to the universal contract without renaming away conflicts
+    - map ownerless recurring work as an actual gap rather than assigning it
+    - submit the exact nonconforming map revision to Review
+  artifacts:
+    - canonical current-state records with nonconformance crosswalk
+    - derived map with done conflict and ownerless-work gap
+  effects:
+    - representation and coordination state only
+  forbiddenChecks:
+    - criterion: standardize done or assign chore owners during migration
+      evidence: The frozen response preserves the two source-bound done meanings, records recurring chores as ownerless, and routes terminology and ownership proposals separately.
+      observed: false
+    - criterion: rewrite historical records to look conforming
+      evidence: The whiteboard and shared-note labels remain unchanged in the canonical record and each original source binding stays visible in the crosswalk.
+      observed: false
+    - criterion: complete on Changes required or Inconclusive Review
+      evidence: Review is Verified for exact map revision household-maintenance-current-state@r1; the response states that Changes required and Inconclusive remain non-terminal.
+      observed: false
+  invoked:
+    - thinking-in-systems
+    - workflow
+    - migrate-system
+    - review
+  notInvoked:
+    - routine repair
+    - terminology decision
+    - responsibility assignment
+  proof:
+    - Verified Review verdict binds the exact map revision
+    - both done meanings and their sources remain visible
+    - recurring chores remain truthfully unowned
+  responsibility:
+    - migration owner verifies represented reality
+    - Workflow owns any later cleanup Outcome
+  route:
+    - nonconforming-current-state-mapping
+    - ordinary-workflow-follow-up
+  state:
+    - nonconformance-visible
+    - discovered-changes-proposed
+rawEvidence:
+  locator: evaluations/evidence/migrate-system/nonconforming-personal-1.txt
+  sha256: 75c8a873ac01afb49d5a2650c15dc8b5bf853618e6d48c8f76a3cb2a4080e349
+runtimeInputs:
+  - role: skill
+    locator: skills/migrate-system/SKILL.md
+    sha256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+  - role: fixture
+    locator: evaluations/fixtures/migrate-system/nonconforming-personal.fixture.yaml
+    sha256: fd64e48e6c4de64905420ad9aa537cf6e775b1c862df7e82eea64ffc5ff8ccb4
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/migrate-system/references/current-state-mapping.md
+    sha256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef

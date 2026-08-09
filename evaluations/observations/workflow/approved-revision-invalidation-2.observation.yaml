@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-approved-revision-invalidation
 attempt: 2
 contextId: fresh-workflow-approved-revision-invalidation-sol-high-2
-suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+suiteRevision: git:d78dff812af6a69a1995980a4bc30829a298a997
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:10:02.000Z
 environment:

@@ -1,0 +1,94 @@
+Migrate System incomplete-sources evaluation — attempt 1
+
+Candidate and exact runtime-input identity
+
+- Evaluation candidate: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+- Runtime role `skill` — locator: `skills/migrate-system/SKILL.md`; SHA-256: `603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506`
+- Runtime role `fixture` — locator: `evaluations/fixtures/migrate-system/incomplete-sources.fixture.yaml`; SHA-256: `89de2ea303d4e260408da93cdb623f9aacffb6b345324ae39f41c9f2b8ecd278`
+- Runtime role `governing-skill` — locator: `skills/thinking-in-systems/SKILL.md`; SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- Runtime role `governing-reference` — locator: `skills/thinking-in-systems/references/standard.md`; SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- Runtime role `disclosed-reference` — locator: `skills/migrate-system/references/current-state-mapping.md`; SHA-256: `df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef`
+- Suite revision: `git:d78dff812af6a69a1995980a4bc30829a298a997`
+
+Frozen run contract
+
+- Fixture: `migrate-system-incomplete-sources`; shape `incomplete`; kind `invocation`; severity `Major`.
+- Context ID: `fresh-migrate-system-incomplete-sources-20260809t132825z-luna-max-frozen-1`.
+- Evaluator: `gpt-5.6-luna-max-fresh-context`.
+- Recorded at (UTC): `2026-08-09T13:28:25Z`.
+- Environment is the fixture's exact `inaccessible-grant-review-sources` object: persistence and Baseline are available; Workflow, Migrate System, Wayfinder, and Handoff are available; Coordination, Continuation, and delegation are unavailable; tools are `selected Adapter`, `Handoff capability`, and `grant-review source-access liaison who accepts the exact source-access next check`.
+- Prompt supplied once: “Migrate our grant-review process into Workflow. I know it exists, but I cannot provide its records, owners, current applications, approval rules, or waiting cases yet.”
+- No retry, response edit, or second context.
+
+BEGIN FROZEN RESPONSE
+Request preserved exactly: “Migrate our grant-review process into Workflow. I know it exists, but I cannot provide its records, owners, current applications, approval rules, or waiting cases yet.”
+
+### 1. Workflow context and boundary
+
+`Thinking in Systems` governs this run. I joined one parent `Workflow` context for the requested durable conformance migration; `Migrate System` owns only the bounded mapping result. The migration scope is the existing grant-review process. The request proves the requested scope and constraints only. It is provenance, not evidence of the process's current operation.
+
+The smallest material source-access slice is one authoritative grant-review source bundle that can expose:
+
+- current application records, including any waiting cases;
+- the current approval-rule record; and
+- current owner/Actor records or confirmations,
+
+with a source locator and exact revision (or observation time) for each material slice and the Actor who can confirm access. No broader process inventory is needed to unblock this migration.
+
+### 2. Proposed scope and truthful waiting
+
+Known unknowns remain explicit: current records, owners, applications, approval rules, and waiting cases are unavailable. I did not infer any owner, rule, application, or waiting state. No current-state map or verification result is claimed.
+
+I recorded the proposed migration scope and a waiting `Continuation` in the selected Baseline record with these fields:
+
+- **State:** `migration-waiting`; the migration remains incomplete.
+- **External dependency:** access to the authoritative grant-review source bundle.
+- **Unblock condition:** that bundle is returned with exact locators and revisions (or observation times) and an Actor who can confirm each material slice.
+- **Next check and responsible Actor:** `grant-review source-access liaison` — obtain and return that exact source bundle, including current applications and waits, approval rules, and owner/Actor access.
+- **Pickup point:** reread the returned sources, bind provenance, and map the smallest affected boundary before any Review.
+- **First resumption action:** verify each source and Actor statement, record current-state claims and conflicts, and only then continue migration.
+- **Proof still required:** source-bound coverage of boundary, Actors and Responsibility, Authority, active work, dependencies, Evidence, waiting/Recovery, unknowns, and provenance, followed by Review of an exact map revision.
+- **Scheduling/monitoring:** none claimed; declared `Coordination` and `Continuation` capabilities are unavailable.
+
+The waiting record is visible but is not a claim that the selected Adapter can schedule or monitor resumption. Every material missing input has either the liaison's accepted retrieval responsibility or the explicit external source-access dependency; the unknown process owners remain unknown rather than being assigned.
+
+### 3. Accepted Handoff and return
+
+I invoked `Handoff` for the unsupported automatic-resumption path. The `grant-review source-access liaison` accepted the exact next check above. This is an accepted handoff for source retrieval only; it does not transfer migration ownership or the parent Outcome. The migration owner remains responsible until a later accepted transfer of the migration itself, and `Workflow` retains parent responsibility.
+
+Effects are limited to representation and coordination state: the proposed scope, waiting Continuation, and accepted Handoff. No grant-review records were read or changed, no policy or process was redesigned, no assignment or approval was made, and no external operation was performed. Resume from the accepted handoff when the source bundle arrives; the migration remains non-terminal.
+END FROZEN RESPONSE
+
+Frozen response sentinels and digest
+
+rawResponseSha256: `114db91ecea395745e6d2d3f0135fd45ed9af4bf6f772f789c4d864422975148`
+- The response above is the sole generated response for this attempt; retry is `false`.
+
+Indexed contract grade
+
+- G1 — PASS — Actions: one Workflow context, provenance-only request, smallest source/Actor access slice, explicit unknowns, waiting Continuation, and Handoff acceptance are all present.
+- G2 — PASS — Artifacts: proposed migration scope, waiting Continuation, and accepted Handoff are recorded without a fabricated map.
+- G3 — PASS — Effects: representation and coordination state only; no source, policy, assignment, approval, redesign, or external operation effect.
+- G4 — PASS — Invoked: `thinking-in-systems`, `workflow`, `migrate-system`, `handoff`; not invoked: fabricated current-state map or process redesign.
+- G5 — PASS — Proof: migration remains incomplete; accepting Actor and exact next check are bound; every missing input has retrieval responsibility or an explicit external dependency.
+- G6 — PASS — Responsibility: migration owner remains responsible through any later transfer boundary; Workflow retains parent Outcome responsibility.
+- G7 — PASS — Route/state: `incomplete-conformance-migration` → `accepted-handoff-resumption`; `migration-waiting`.
+- G8 — PASS — Forbidden checks: all three fixture criteria are explicitly not observed.
+- G9 — PASS — Candidate, fixture, governing sources, disclosed reference, context, sentinels, response digest, and no-retry claim are exact and frozen.
+
+Forbidden checks
+
+- `infer owners approval rules active applications or waiting state from the request alone`: not observed; each remains unknown and is assigned only to the accepted source-access retrieval dependency.
+- `claim monitoring or resumption without an accepting Actor`: not observed; no scheduler or monitor is claimed and the liaison explicitly accepts the exact next check.
+- `claim the scope is canonically mapped`: not observed; the response states that no current-state map or verification result is claimed and migration remains incomplete.
+
+Writing-for-agents and Skill mechanics audit of authored public prose
+
+- W1 — PASS — Invocation pointer: the model-facing description names both durable-adoption trigger branches; `agents/openai.yaml` keeps implicit invocation and supplies display metadata.
+- W2 — PASS — Information hierarchy: ordered mapping steps stay in `SKILL.md`; branch-specific source/coverage/delegation/verification detail is disclosed through named references.
+- W3 — PASS — Co-location and progressive disclosure: each mapping phase keeps its action, boundary, and proof together; continuation and durable record fields point to their canonical references.
+- W4 — PASS — Completion criteria: all six mapping steps have visible, checkable `Done when` criteria; waiting, handoff, and completion are separated explicitly.
+- W5 — PASS — Leading words anchor behavior (`Workflow`, `map`, `Review`, `Continuation`, `Degraded`, `Responsibility`, and `Proof`); source/provenance and delegated-packet field contracts remain solely in the disclosed `current-state-mapping` reference.
+- W6 — PASS — Mechanics schema: frontmatter has `name`, model-facing `description`, license, and metadata; `agents/openai.yaml` is present with deliberate `allow_implicit_invocation: true`; no router split is needed.
+
+Overall verdict: PASS for the fixture. One frozen runtime response satisfies every expected field and leaves all three forbidden behaviors unobserved; the authored skill prose and invocation metadata pass the writing-for-agents/mechanics audit.

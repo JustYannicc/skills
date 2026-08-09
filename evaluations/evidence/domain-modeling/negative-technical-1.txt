@@ -3,11 +3,11 @@ Attempt: 1
 Context ID: fresh-domain-modeling-negative-technical-luna-max-20260809t105739z-9d0eba88-b37a-4aff-b3e4-dc95ef6dc354
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T10:57:39Z
-Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Suite revision: git:d78dff812af6a69a1995980a4bc30829a298a997
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+- Evaluation candidate: git:d78dff812af6a69a1995980a4bc30829a298a997
 - Skill under evaluation: domain-modeling
 - Runtime input locator: skills/domain-modeling/SKILL.md
 - Runtime input SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf

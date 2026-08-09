@@ -1,0 +1,34 @@
+schemaVersion: 1
+id: migrate-system-delegated-mapping
+title: Independent mapping delegates while one owner integrates the whole
+shape: edge
+kind: composition
+skill: migrate-system
+domains: [organizational, software]
+severity: Critical
+requiredAttempts: 3
+runtimeReferences: [skills/migrate-system/references/current-state-mapping.md]
+prompt: |
+  Adopt our support operation into Workflow. Customer escalation, on-call tooling, and staffing records can be mapped independently. Delegate those three areas, but make one integrated map and keep conflicting ownership claims visible.
+  The staffing source advances from staffing-r7 to staffing-r8 after dispatch, so reject any child result based only on r7 and reread that changed slice before integration.
+environment:
+  id: delegated-support-operation
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true, concurrentClaims: true, coordination: true, continuation: false }
+  tools:
+    - selected Adapter with writable Baseline and Coordination
+    - bounded mapping workers
+    - escalation records at escalation-r4 with current actors interfaces active work and a claim that Customer Escalation owns final escalation disposition
+    - tooling records at tooling-r6 with current paging incident-state and escalation-handoff evidence
+    - staffing-r7 dispatch snapshot with roster coverage responsibilities and an overlapping final-disposition ownership claim
+    - staffing-r8 current revision preserving that claim under the Primary On-call role and superseding r7
+expected:
+  actions: [join the active Workflow context, create canonical nonoverlapping child Tickets with owners Claims immutable inputs proof seams Reviewers and return routes, dispatch only independent mapping areas concurrently, reject the stale staffing-r7 child result and reread staffing-r8, collect only Verified revision-bound child evidence, reconcile duplicates conflicts and gaps, submit one exact integrated map revision to Review]
+  artifacts: [three canonical child Ticket records with Review dispositions, one canonical integrated current-state revision and derived map]
+  effects: [representation and coordination state only]
+  invoked: [thinking-in-systems, workflow, migrate-system, review]
+  notInvoked: [parent responsibility transfer, child-result aggregation without integration]
+  proof: [every child source result and Review revision remains traceable, staffing-r7 does not authorize integration after staffing-r8 appears, Verified parent map Review binds the exact integrated revision, conflicting ownership claims remain visible after integration]
+  responsibility: [each child owner owns its bounded result, migration owner integrates and verifies the whole, Workflow retains parent Outcome responsibility]
+  route: [delegated-conformance-migration, integrated-review-return]
+  state: [child-results-integrated, migration-map-verified]
+  forbidden: [integrate an unreviewed or stale child result, treat delegated child completion as migration or parent completion, overwrite one ownership claim to remove a conflict]

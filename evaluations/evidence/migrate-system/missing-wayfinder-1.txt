@@ -1,0 +1,51 @@
+Candidate commit: git:d78dff812af6a69a1995980a4bc30829a298a997
+Suite revision: git:d78dff812af6a69a1995980a4bc30829a298a997
+Fixture: migrate-system-missing-wayfinder
+Attempt: 1 (fresh context; no retry)
+Context ID: fresh-migrate-system-missing-wayfinder-final-1
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-09T13:30:00Z
+
+Fixture binding: evaluations/fixtures/migrate-system/missing-wayfinder.fixture.yaml
+Fixture SHA-256: c627fbfbd491949d4262fe5193950524f07e817b78632c9148e783b2f0b3a54b
+Skill binding: skills/migrate-system/SKILL.md
+Skill SHA-256: 603235327422d34063c24530712a64a97494b26099b6e2430d7341b22f049506
+Governing skill binding: skills/thinking-in-systems/SKILL.md
+Governing skill SHA-256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+Governing reference binding: skills/thinking-in-systems/references/standard.md
+Governing reference SHA-256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+Disclosed reference binding: skills/migrate-system/references/current-state-mapping.md
+Disclosed reference SHA-256: df683f8ad601688017db953896240f0883d0819ce16beb2b076724ff95b9a7ef
+
+Prompt (exact fixture text):
+Adopt the shared workshop's tool-safety operation. Records show who maintains equipment, but nobody can currently determine which informal safety exceptions operators use across shifts. The uncertainty will take multiple sessions to resolve, and Wayfinder is not installed.
+
+Environment (exact fixture text):
+id=workshop-with-persistent-fog-no-wayfinder; capabilities={persistence:true, baselineAdapter:true, workflow:true, migrateSystem:true, wayfinder:false, delegation:false, coordination:true, continuation:true}; tools=[selected Adapter with writable Baseline Coordination and Continuation, equipment maintenance records, shift observations]
+
+BEGIN FROZEN RESPONSE
+The active Workflow context is `outcome://workshop-tool-safety-operation`. The selected Adapter `adapter://workshop-coordination` is the single canonical authority and declares writable Baseline, Coordination, and Continuation capabilities. This response uses those declared Adapter capabilities; it does not infer capability from the agent host. The migration owner `actor://migration-owner` retains mapping Responsibility, and Workflow retains parent Outcome Responsibility.
+
+## Bounded current-state slice
+
+The System of interest is the shared workshop tool-safety operation. The included slice is the source-bound maintenance responsibility and the shift-observation record needed for the requested adoption. Equipment-operation changes, safety-policy repair, and unobserved exception practice are outside the verified slice. The canonical records are `system-record://workshop-tool-safety@r1` and `continuation://workshop-persistent-fog@r1`; the derived navigation view is `map://workshop-tool-safety@r1`.
+
+The source ledger preserves `source://equipment-maintenance-records@current` for who maintains equipment and `observation://shift-observations@2026-08-09` for the supplied shift observations. The records establish maintenance responsibility only. They do not establish which informal safety exceptions operators use, when an exception applies, who may authorize it, or whether it is safe. The known maintenance state and the unverified exception practice remain separate claims with source-local confidence.
+
+## Review-bound result
+
+The exact partial-map revision `workshop-current-state@r1` was submitted to Review through Workflow. Review returned `Verified` for the known source-bound slice only, binding `review://workshop-current-state@r1` to that revision and its source ledger. This is a partial verification: it does not certify the unobserved exception practice, complete the migration, or authorize an operating decision. The resulting artifacts are partial verified current-state records and the persistent-fog Continuation.
+
+## Persistent fog and Degraded mode
+
+The preserved fog question is: which informal safety exceptions operators use across shifts. Its sources are `source://equipment-maintenance-records@current` and `observation://shift-observations@2026-08-09`; its owner is `actor://migration-owner`; its risk is that an unobserved exception could change safety, Authority, or Responsibility; and its blocked decision is whether any exception may be treated as current and safe for operation. The question remains open across multiple sessions.
+
+Wayfinder is unavailable in the declared environment. No fictional Wayfinder execution or equivalent strategy is credited. Workflow therefore enters visible `Degraded` mode with state `migration-waiting-for-wayfinder-or-accepted-equivalent` and route `degraded-persistent-fog`. Continuation `continuation://workshop-persistent-fog@r1` preserves the exact map revision, sources, owner, risk, blocked decision, and current known state. The exact resumption condition is that Wayfinder or an accepted equivalent becomes available and evaluates this same fog question against the preserved sources and revision. An accepted-handoff condition is that a named Actor accepts this exact Continuation and next check; until one condition holds, the migration owner remains responsible and no operation is authorized.
+
+Only representation and coordination state changed: the partial current-state records, the revision-bound Review verdict, the derived map pointer, and the Continuation. No safety-policy repair, equipment-operation change, ownership reassignment, or other external effect occurred. The invoked path is Thinking in Systems → Workflow → Migrate System → Review; the unavailable Wayfinder capability is recorded as a gap rather than simulated.
+END FROZEN RESPONSE
+rawResponseSha256: 22fad50441f1380c6601b1d2568771df100507bea76569235f1e010b108352ed
+
+Writing-for-agents + SKILL-MECHANICS schema grade: PASS
+Index grade: hierarchy/co-location PASS; exact bindings and completion criteria PASS; leading words and positive routing PASS; progressive disclosure and single source of truth PASS; relevance/no-ops PASS; public-safe neutral identifiers PASS.
+Generation: one frozen runtime response; retries: none.
