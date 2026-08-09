@@ -25,4 +25,4 @@ observed:
   state: [original-outcome-resumed]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-unrelated-resume-3.txt
-  sha256: ba42b2345288fa50d128e21158013a0ad8cb99aa30bb7abeb99b0740ad6631e9
+  sha256: 9bbbcc712cbfe9a9f4aa2a1d6a7914b0cf8f09447368073b8dcdedc09942ec98

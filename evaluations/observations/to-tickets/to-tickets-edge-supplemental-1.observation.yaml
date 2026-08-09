@@ -11,11 +11,12 @@ environment:
     workflow: true
     persistence: true
     adapter: true
+    transactional-set-write: true
     to-tickets: true
     supplemental-skills: true
   tools: [selected canonical Adapter, configured risk-audit skill]
 observed:
-  actions: [bind accepted Specification revision, create complete draft Ticket set, invoke configured risk-audit at workflow.decomposition, bind audit-r7 to draft revision, rerun collective coverage and accept the core result]
+  actions: [bind accepted Specification revision, create complete draft Ticket set, invoke configured risk-audit at workflow.decomposition, bind audit-r7 to draft revision, rerun collective coverage, record Outcome-owner acceptance]
   artifacts: [accepted Durable Ticket set, Supplemental evidence record]
   effects: []
   forbiddenChecks:
@@ -23,21 +24,21 @@ observed:
       evidence: Only the configured risk-audit mapping was used.
       observed: false
     - criterion: let risk-audit replace collective coverage
-      evidence: To Tickets reran its own coverage and retained acceptance.
+      evidence: To Tickets reran its own coverage and retained responsibility for the decomposition result.
       observed: false
     - criterion: execute migration
       evidence: Migration remains a later implementation/effect phase.
       observed: false
     - criterion: transfer acceptance
-      evidence: Risk-audit returned evidence only; To Tickets retained acceptance.
+      evidence: Risk-audit returned evidence only; inventory lead explicitly accepted the exact Ticket-set revision through Workflow.
       observed: false
     - criterion: claim parent completion
       evidence: Inventory migration and parent proof remain with Workflow.
       observed: false
   invoked: [to-tickets, risk-audit]
   notInvoked: [implement, migration effect, review]
-  proof: [inventory-cutover-r3 and tickets-d1 are bound, risk-audit inspected the exact draft with warehouse constraints and dependency graph, audit-r7 proposes no change, core Ticket acceptance remains with To Tickets and Workflow]
-  responsibility: [To Tickets retains decomposition and acceptance responsibility, risk-audit owns only advisory evidence, Outcome owner retains parent integration]
+  proof: [inventory-cutover-r3 and tickets-d1 are bound, risk-audit inspected the exact draft with warehouse constraints and dependency graph, audit-r7 proposes no change, inventory lead explicitly accepts the exact Ticket-set revision through Workflow]
+  responsibility: [To Tickets retains decomposition coverage and decision-recording responsibility, risk-audit owns only advisory evidence, Outcome owner retains acceptance and parent integration]
   route: [workflow-to-tickets-supplemental-to-workflow]
   state: [Accepted]
 rawEvidence:

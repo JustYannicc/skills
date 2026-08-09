@@ -1,0 +1,147 @@
+# Fresh-context evaluation — `handoff-direct-human-transfer`, attempt 3
+
+## Evaluation binding
+
+- **Fixture:** `handoff-direct-human-transfer`
+- **Attempt:** `3`
+- **Context ID:** `fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a`
+- **Evaluator:** `gpt-5.6-luna-max-fresh-evaluator`
+- **Candidate and suite revision:** `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+- **Recorded at (UTC):** `2026-08-09T13:30:58Z`
+- **Fixture environment:** `handoff-human-accepted-transfer`; `workflow=true`, `persistence=true`, `adapter=true`, `handoff=true`, `recipient-response-route=true`; tools are `selected canonical Adapter` and `recipient response route`.
+
+The fresh context read the Handoff skill, its core contract, its disposition
+table, and the supplied direct-transfer fixture before applying the prompt. The
+candidate response below uses the supplied revisions and signed response as its
+authoritative inputs.
+
+## Handoff state
+
+### Identity and boundary
+
+- **Handoff identity and exact revision:** `open-day-ho-r1`.
+- **Kind, disposition, and mode:** `Transfer`, `Accepted`, `Normal`.
+- **Created and updated:** `none` supplied; the evaluation record time is not
+  treated as a Handoff timestamp.
+- **Canonical locator and Adapter revision:** the selected canonical Adapter
+  stores Handoff `open-day-ho-r1`; the prompt supplies the identity and revision
+  but no physical Adapter locator, so the identity is the sole Handoff pointer.
+- **Source Outcome and canonical state:** Outcome `community-open-day` uses
+  accepted plan revision `open-day-plan-r8`; an Outcome locator is `none`
+  supplied, so no alternate locator is invented.
+- **Parent Outcome, owner, and state:** `community-open-day` remains
+  `Active/Open` and unfinished. Priya Shah becomes Outcome owner for the
+  accepted coordination scope at the acceptance boundary; Workflow retains
+  parent integration and terminal proof.
+- **Current responsible owner:** Priya Shah owns the accepted bounded
+  coordination Responsibility. The outgoing coordinator held it through the
+  pre-acceptance interval.
+- **Proposed successor:** Priya Shah, the identified incoming coordinator.
+- **Recipient kind and verified response route:** identifiable human; Priya's
+  verified response route.
+- **Boundary and explicit non-ownership:** the transfer covers coordination of
+  `community-open-day`, including confirmation requests and the first
+  volunteer-arrival-window action. Venue-change approval remains outside the
+  available Authority for both coordinators. Workflow's parent integration and
+  terminal-proof Responsibility remain outside the transferred scope.
+- **Workflow context and caller return route:** active Workflow context;
+  `workflow-to-handoff-to-workflow` returns the exact Handoff identity,
+  acceptance evidence, freshness result, owner, open dependency, and next
+  action.
+
+### Continuation spine
+
+- **Canonical current-state reference:** `open-day-plan-r8` remains the
+  canonical reference for its linked supplier confirmations and venue approval;
+  the supplied current-state read returns the same revision.
+- **Failure events and partial effects:** venue approval is `pending`, so the
+  accessibility walkthrough is blocked on that approval. The Handoff effect is
+  limited to preserving this continuation and its accepted transfer evidence.
+- **Responsibility:** the outgoing coordinator remains responsible before exact
+  acceptance. Priya owns the bounded coordination Responsibility after the
+  signed acceptance. Workflow retains parent integration and terminal proof.
+- **Authority:** coordination and confirmation requests are allowed. Venue
+  changes require approval outside the available Authority; acceptance
+  preserves that limit.
+- **Rationale and accepted decisions:** preserve plan `open-day-plan-r8`, keep
+  the pending venue approval and dependent accessibility walkthrough visible,
+  and start with volunteer arrival-window confirmations.
+- **Evidence references:** Handoff `open-day-ho-r1`, its delivery through
+  Priya's verified response route, Priya's signed response, and the current-state
+  read are evidence references. Supplier confirmations and venue approval remain
+  canonical records linked by `open-day-plan-r8`.
+- **Uncertainty:** the approving Actor and approval time for the pending venue
+  approval are not supplied. The accessibility walkthrough therefore remains
+  blocked until an authorized approval is recorded in the canonical plan.
+- **Dependencies:** venue approval is `pending` and is the dependency for the
+  accessibility walkthrough; the linked supplier confirmations remain evidence
+  under `open-day-plan-r8`.
+- **Continuation record:** Handoff revision `open-day-ho-r1` is the exact
+  continuation identity. It carries the pending venue dependency and blocked
+  walkthrough; Priya's first action is volunteer arrival-window confirmation,
+  while Workflow retains the parent proof seam.
+- **Decision or Work frontier:** volunteer arrival-window confirmation is the
+  next unblocked work under `open-day-plan-r8`; a frontier locator and
+  calculation revision are `none` supplied.
+- **Recovery queue:** `none` supplied; the pending approval is represented in
+  the continuation without a separate recovery record.
+- **Suggested capabilities:** Workflow, Handoff, persistence, the selected
+  canonical Adapter, and Priya's verified response route are available for this
+  continuation.
+- **Other canonical references:** supplier confirmations and venue approval are
+  reached through `open-day-plan-r8`; the Handoff contains pointers rather than
+  copies of those records.
+- **Minimal pickup context:** Priya begins by confirming volunteer arrival
+  windows. Venue approval remains pending, so the accessibility walkthrough
+  waits on its canonical approval record.
+- **Sensitive-data disposition:** only the supplied actor and work identifiers
+  are retained; the package contains no credentials, secrets, tokens, or
+  unnecessary personal data.
+
+### Delivery, acceptance, and return
+
+- **Delivery Authority and approved channel:** the supplied delivery evidence
+  authorizes the verified Priya response route as the recipient channel. The
+  package uses public-safe work references and records no changed revision.
+- **Delivered revision, recipient, mechanism, time, and effect:** exact
+  revision `open-day-ho-r1` was delivered to Priya Shah through that route;
+  delivery time is `none` supplied. The delivery effect exposes the exact offer;
+  Responsibility begins at the signed acceptance boundary.
+- **Successor response:** Priya Shah's supplied signed response states: “I,
+  Priya Shah, accept `open-day-ho-r1`, its bounded coordination Responsibility,
+  existing Authority limits, uncertainty, dependencies, Continuation, and first
+  volunteer-confirmation action.”
+- **Freshness check:** passed. The current-state read still returns
+  `open-day-plan-r8`, which matches the offered Handoff and its linked supplier
+  confirmations and venue approval references.
+- **Responsibility transition:** the append-only transition records the outgoing
+  coordinator handing the bounded coordination Responsibility to Priya Shah at
+  the exact signed acceptance, with the existing Authority limits preserved.
+  The outgoing Responsibility ends at that acceptance boundary.
+- **Outcome ownership transition:** the accepted scope is the parent Outcome's
+  coordination Responsibility, so Priya becomes its Outcome owner only at exact
+  acceptance. Workflow continues to own parent integration and terminal proof.
+- **Parent Outcome state after Handoff:** `community-open-day` remains
+  `Active/Open`; its terminal condition is still outstanding.
+- **Gap, unblock condition, and exact next action:** the pending canonical venue
+  approval is the unblock condition for the accessibility walkthrough; its
+  approver is an unresolved supplied-state gap. Priya's exact next action is to
+  confirm volunteer arrival windows.
+
+## Return to Workflow
+
+Return `open-day-ho-r1` at `Transfer/Accepted` in `Normal` mode through
+`workflow-to-handoff-to-workflow`. The selected canonical Adapter is the
+Handoff locator; delivery is evidenced through Priya's verified response route,
+acceptance is evidenced by her signed response, and freshness passed against
+`open-day-plan-r8`. The current responsible owner is Priya Shah for the
+accepted coordination scope; the unresolved gap is the pending venue approval;
+the exact next action is volunteer arrival-window confirmation. The parent
+Outcome stays open, and Workflow retains integration and terminal proof.
+
+## Runtime binding
+
+- `skills/handoff/SKILL.md` — SHA-256 `6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2`
+- `skills/handoff/references/handoff-contract-template.md` — SHA-256 `4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151`
+- `skills/handoff/references/handoff-dispositions.md` — SHA-256 `a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee`
+- `evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml` — SHA-256 `059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2`

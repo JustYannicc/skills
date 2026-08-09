@@ -30,4 +30,4 @@ observed:
   state: [paused-with-continuation]
 rawEvidence:
   locator: evaluations/evidence/workflow/interruption-resume-3.txt
-  sha256: 9c0ce5bc471b4929cece63872b8bca32d7cf0f96981dc7bbcffae4bcef4bd2dc
+  sha256: 3548454d67fa1bf9b1ac6d2bf01b3d4ea810b4f0fb5c16b3ff6fbb5723f42bcd

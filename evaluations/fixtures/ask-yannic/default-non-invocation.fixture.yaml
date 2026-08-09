@@ -1,0 +1,30 @@
+schemaVersion: 1
+id: ask-yannic-default-non-invocation
+title: Ordinary work does not implicitly invoke the explicit route guide
+shape: negative
+kind: invocation
+skill: ask-yannic
+domains: [technical]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Fix the misspelled heading in README.md and verify the exact rendered text.
+environment:
+  id: ask-yannic-ordinary-technical-work
+  capabilities:
+    workflow: true
+    ask-yannic-installed: true
+    ask-yannic-explicitly-invoked: false
+    execution: true
+  tools: [read-file, edit-file]
+expected:
+  actions: [leave Ask Yannic uninvolved by default, route the ordinary request through the normal governing Workflow]
+  artifacts: []
+  effects: []
+  invoked: [workflow]
+  notInvoked: [ask-yannic]
+  proof: [no Ask Yannic guidance or route-guide output appears]
+  responsibility: [Workflow retains the ordinary Outcome]
+  route: [normal-workflow-without-ask-yannic]
+  state: [ordinary-work-request]
+  forbidden: [implicitly invoke ask-yannic, replace execution with route advice, claim the user requested Ask Yannic]

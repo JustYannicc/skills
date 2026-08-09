@@ -44,4 +44,4 @@ observed:
   state: [candidate, machine-action-blocked]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/system-record-representation-1.txt
-  sha256: a854433e37a64554a879e1dee28a045b4fe2c01f2f3ec06934b320b577ea41e6
+  sha256: 460e004d774fa5530c47fce70540574b5f73e3c11886a90b095ee200fa029d19

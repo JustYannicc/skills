@@ -4,9 +4,162 @@ Context: fresh-to-tickets-edge-revision-preservation-20260808-1
 Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 Evaluator: deterministic-candidate-observer
 
-To Tickets compared delivery-window-v1 with change-r4 and created a proposed
-Ticket-set revision. T-NORTH-r2, its dependency and evidence, the removed
-South scope, and the affected coverage row were invalidated or revised. The
-unrelated T-TRAIN-r1 and cold-chain-e2 remained valid. The prior revision was
-not mutated, no delivery occurred, and the regional director remains the
-Approver for the proposed revision.
+Representation and boundary
+
+The bound Specification is `delivery-window-v1@change-r4`, and that revision is
+accepted.  Its material change is to remove the South clinic, move the North
+clinic to Thursday at 14:00, and retain the 2–8 °C requirement.  The predecessor
+decomposition includes the affected Ticket `T-NORTH-r2`, the unrelated Ticket
+`T-TRAIN-r1`, and the unaffected cold-chain evidence record `cold-chain-e2`.
+
+This is Durable decomposition: the revision has independently finishable
+Ticket work, dependency/evidence closure, and a parent relationship that must
+survive re-approval.  No Persistence Adapter is available in this run.  The
+result is therefore the immutable, reviewable successor draft
+`delivery-window-v1/ticket-set-r4-proposed` in `Proposed` state.  It is not an
+accepted set, has no accepted frontier, creates no Claim, starts no execution,
+and writes no canonical record or parent relationship.
+
+Revision reconciliation
+
+- `T-NORTH-r2` is affected by `change-r4`.  It is superseded in the successor
+  draft by `T-NORTH-r3`; the predecessor Ticket, its claims, approvals,
+  reviews, effects, and North-derived evidence are not reused.  The predecessor
+  record remains immutable because no authorized persistence is available.
+- Any predecessor South-clinic Ticket or South-derived dependency, evidence,
+  claim, review, effect, or coverage row is out of scope under `change-r4`.
+  The successor graph contains no South Ticket and no dangling South edge.
+- The North dependency row, North proof/evidence row, and parent coverage row
+  are all affected closure.  Their old references are superseded by the
+  successor rows below; none is silently carried forward under an old revision.
+- `T-TRAIN-r1` is an unrelated Ticket, unaffected by `change-r4`, and remains
+  valid at its exact predecessor revision.  Its Result, owner, Authority,
+  proof seam, terminal condition, relationships, and evidence reference are
+  carried forward unchanged.
+- `cold-chain-e2` is evidence, not a Ticket.  It remains valid at its exact
+  predecessor evidence revision because the temperature constraint remains
+  2–8 °C.  It is attached to the retained cold-chain constraint/proof row and
+  is not a Work owner, parent `contains` member, frontier item, or dependency
+  target in this draft.
+
+Proposed Ticket-set revision
+
+`T-NORTH-r3` (successor of `T-NORTH-r2`)
+
+- Result: the North clinic delivery-window record and its observable proof
+  state Thursday at 14:00 and preserves the required 2–8 °C range; the South
+  clinic is absent from the successor scope.
+- Work owner: the North-clinic work owner bound to `T-NORTH-r2` (the owner is
+  retained, not inferred).  Authority is the predecessor North scheduling
+  Authority, limited to preparing this Result within the accepted
+  `delivery-window-v1@change-r4` scope; it does not authorize execution in
+  this Proposed run.
+- Scope/exclusions: North only; no South implementation, schedule, or effect.
+- Proof seam: an externally readable schedule/configuration or equivalent
+  operational artifact plus `EVID-NORTH-r3`, showing `Thursday 14:00`,
+  `2–8 °C`, and no South entry.  The proof is evaluated against
+  `delivery-window-v1@change-r4`, not against `T-NORTH-r2`; the retained
+  cold-chain evidence `cold-chain-e2` is referenced by the temperature proof
+  row, not treated as a Ticket.
+- Terminal condition: the North artifact and evidence satisfy all three
+  assertions above, every predecessor North dependency has been rebound by
+  exact identity, and no North review or evidence gap remains.
+- Relationships: the affected predecessor `requires` edge is rebound from
+  `T-NORTH-r2` to `T-NORTH-r3` by exact predecessor identity once the
+  dependency record is available.  No dependency target is named by this
+  runtime context, so no new target is invented and `cold-chain-e2` is not a
+  `requires` target.  The parent `contains` edge is proposed in
+  `COV-PARENT-r4` and is not written.  No South relationship is created.
+
+`T-TRAIN-r1` (carried forward unchanged)
+
+- Result: the exact accepted training Result from the predecessor revision.
+- Work owner, Authority, scope, proof seam, terminal condition, and all
+  relationships: unchanged from `T-TRAIN-r1`.
+- State: valid prior accepted work, referenced by the Proposed successor; it
+  is not re-accepted or re-persisted by this run and is unrelated to the North
+  schedule change.
+
+Successor decomposition-envelope rows (not additional Tickets)
+
+- `DEP-NORTH-r3`: successor dependency row.  It rebinds every affected North
+  `requires` edge from `T-NORTH-r2` to `T-NORTH-r3` by exact predecessor
+  identity once the predecessor dependency record is available.  The target
+  is deliberately not guessed from the runtime prompt.  Any South target is
+  removed as out of scope; no dangling South edge is retained.
+- `EVID-NORTH-r3`: successor proof reference for `T-NORTH-r3`, keyed to
+  `delivery-window-v1@change-r4`; it records the Thursday-14:00, 2–8 °C, and
+  South-absent checks.  North evidence keyed only to `T-NORTH-r2` is stale for
+  the successor.
+- `EVID-COLD-CHAIN-r2`: retained evidence attachment.  It references the
+  exact valid evidence record `cold-chain-e2` for the unchanged 2–8 °C
+  constraint; it is not a Ticket and is not included in the parent `contains`
+  set or frontier.
+- `COV-PARENT-r4`: successor parent-coverage view.  Its proposed `contains`
+  set is exactly `[T-NORTH-r3, T-TRAIN-r1]`; `cold-chain-e2` is evidence only
+  and South is an explicit exclusion.  The parent record and its predecessor
+  coverage view are not mutated here.
+
+Collective coverage
+
+| Requirement (source locator, exact revision) | Disposition | Ticket/evidence | Proof or terminal evidence |
+| --- | --- | --- | --- |
+| Accepted behavior `delivery-window-v1.behavior`, `change-r4` | Reconciled | `T-NORTH-r3`, `EVID-NORTH-r3` | North is Thursday 14:00 at 2–8 °C; no South entry |
+| Scope/exclusion `delivery-window-v1.scope`, `change-r4` | Reconciled | `T-NORTH-r3`, `COV-PARENT-r4` | South has no successor Ticket, edge, or effect |
+| Retained temperature constraint `delivery-window-v1.constraint.temperature`, `change-r4` | Preserved | `T-NORTH-r3`, `EVID-COLD-CHAIN-r2` → `cold-chain-e2` | North proof and the unchanged cold-chain evidence both show 2–8 °C |
+| Unrelated training requirement, predecessor exact revision of `T-TRAIN-r1` | Preserved | `T-TRAIN-r1` | Existing accepted training proof remains valid |
+| Dependencies, predecessor North closure | Rebound | `DEP-NORTH-r3` | Affected edges are rebound by exact identity when available; no target is invented or silently dropped |
+| Proof seam/evidence, predecessor North closure | Rebound | `EVID-NORTH-r3` | Evidence is keyed to `change-r4`, not the old North revision |
+| Parent coverage/`contains`, successor envelope `COV-PARENT-r4` | Proposed | `COV-PARENT-r4` | Exactly two Tickets are covered; cold-chain evidence and South exclusion are represented correctly |
+| Parent terminal condition | Deferred to Workflow | parent Outcome owner through Review | No parent completion is inferred from child state or preview frontier |
+
+Graph, frontier, and continuation
+
+The successor graph has the proposed parent `contains` relationship to exactly
+`T-NORTH-r3` and `T-TRAIN-r1`.  `cold-chain-e2` is an evidence attachment only:
+it is not a Ticket, not a Work/frontier item, and not a `requires` target.  The
+affected North `requires` relationship is represented by `DEP-NORTH-r3` and
+will be rebound to the exact predecessor target identity when that dependency
+record is available; no target is inferred from the temperature evidence.
+Retained relationships on `T-TRAIN-r1` are copied by exact identity.  Every
+South edge is superseded in the draft.  `contains` and any rebound `requires`
+edges are typed and must be acyclic; no ownerless external dependency is
+invented.
+
+The draft may be shown with a preview only: `T-TRAIN-r1` is the only retained
+Ticket candidate for a preview frontier; `T-NORTH-r3` remains blocked until
+its exact predecessor dependency closure is rebound and the successor revision
+is accepted.  This is not a Durable frontier: no Claim is live or created,
+and no accepted frontier is reported.  The `cold-chain-e2` evidence record is
+never a frontier member.
+
+No configured Supplemental mapping is supplied in this runtime context, so no
+Supplemental evidence is claimed or dispatched.  If Workflow's bound context
+declares a required mapping, this draft must remain blocked until that mapping
+returns valid evidence; the evidence must then be recorded against
+`delivery-window-v1/ticket-set-r4-proposed`.
+
+Responsibility and re-approval route
+
+To Tickets owns this decomposition and the coverage/reconciliation evidence.
+The parent Outcome owner retains parent Responsibility, acceptance, integration,
+Review, effects, Recovery, and terminal proof.  The named Outcome owner or
+Approver must explicitly accept this exact successor revision; prior component
+acceptance, a parent label, or the retained Ticket's earlier status cannot
+accept it.
+
+Safe work now is review of this draft and its proof obligations only.  The
+missing capability is Baseline Persistence through a Persistence Adapter.
+Unblock requires (1) the Adapter and any required Supplemental evidence to be
+available and (2) explicit acceptance of
+`delivery-window-v1/ticket-set-r4-proposed`.  The exact resumption action is to
+return to To Tickets Step 6, reread the accepted Specification and this exact
+draft revision, resolve the exact predecessor dependency identity, atomically
+persist the Tickets and proposed parent `contains` transition (advancing the
+parent record revision while preserving accepted intent), reread/reconcile all
+canonical records and edges, and only then compute the accepted frontier.
+Until that action succeeds, this result stays Proposed and no prior record is
+changed.
+
+Return: hand the complete Proposed successor Ticket-set revision and this
+reconciliation ledger to Workflow for owner/Approver re-approval.

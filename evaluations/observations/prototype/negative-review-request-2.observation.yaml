@@ -35,4 +35,4 @@ observed:
   state: [review-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/negative-review-request-2.txt
-  sha256: 67c8dddc16e985609747bc8e3e9959cb144248c17fca66ab2da8ce339625919c
+  sha256: d8661e7b4be68a1207bfb24a42dbf2181edea96f06898019788b2910810da006

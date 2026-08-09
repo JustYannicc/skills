@@ -1,0 +1,53 @@
+Issue #27 candidate evidence-rebind attestation
+Date: 2026-08-09
+
+Verdict: PASS — 216 historical observations are honest identity rebinds, not
+fresh behavioral runs.
+
+Exact identities
+
+- Original integrated candidate:
+  `git:4233758023b9d47a92b72311ef945d902d1c9d6d`.
+- Issue #27 candidate:
+  `working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1`.
+- Task fixed point: `e2f92efaa253793c01ec33cd711b27417c0da424`.
+
+Rebind boundary
+
+- Of the 216 observations present at the fixed point, 189 changed only their
+  `suiteRevision` field. The 27 Domain Modeling observations changed only
+  `suiteRevision` and `rawEvidence.sha256`, because their evidence files append
+  the delimited rebind footer described below. Prompts, context IDs, timestamps,
+  evaluators, environments, observed behavior, runtime-input bindings, and
+  raw-evidence locators remain byte-identical to the fixed point.
+- The original bodies of all 110 historical raw transcripts remain
+  byte-identical to the fixed point and preserve the original candidate claim
+  and run time. Twenty-seven runtime-bound Domain Modeling files append a
+  clearly delimited footer naming both candidates and this attestation so the
+  exact-candidate validator can verify the rebind without rewriting run
+  history. The remaining 83 files are wholly byte-identical to the fixed point.
+- This is an integration identity rebind, not a claim that any historical
+  attempt was rerun.
+
+Applicability proof
+
+- Issue #27 adds a new explicit-only Ask Yannic skill, its own fixtures and
+  evidence, public discovery metadata, and a narrow official-validator
+  projection for the repository-validated `disable-model-invocation`
+  extension. It does not change any pre-existing skill, fixture prompt,
+  disclosed reference, or other runtime input bound by the 216 historical
+  observations.
+- Repository validation verifies every retained historical runtime-input hash
+  against the current file and every retained raw-evidence hash against the
+  immutable transcript. Therefore the new candidate cannot conceal a changed
+  evaluated surface in a rebound family.
+- The 15 Ask Yannic attempts are separate fresh Sol High evaluations against
+  the issue #27 candidate; they are not covered by this historical rebind.
+
+Evaluation-only fixtures, observations, evidence, reports, attestations, and
+review records do not alter the repository's non-evaluation candidate identity.
+Any later change to a historically evaluated runtime surface requires new
+fresh proof or another truthful, exact rebind decision.
+
+This attestation is technical evidence. It does not approve, merge, publish,
+or close issue #27.

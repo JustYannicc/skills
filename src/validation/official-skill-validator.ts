@@ -1,12 +1,24 @@
 import { execFile } from "node:child_process";
-import { readdir } from "node:fs/promises";
+import {
+  mkdtemp,
+  mkdir,
+  readFile,
+  readdir,
+  rm,
+  writeFile,
+} from "node:fs/promises";
+import { tmpdir } from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
 
 import type { SuiteFinding } from "./evaluation-suite.ts";
+import { projectSkillFrontmatter } from "./skill-document.ts";
 import { loadSourceInventory } from "./source-inventory.ts";
 
 const execFileAsync = promisify(execFile);
+
+export const projectOfficialSkillFrontmatter = (contents: string): string =>
+  projectSkillFrontmatter(contents, ["disable-model-invocation"]);
 
 export interface OfficialSkillValidation {
   checkedSkills: number;
@@ -48,36 +60,52 @@ export const validateWithOfficialReference = async (
     () => []
   );
   const skillDirectories = entries.filter((entry) => entry.isDirectory());
-  const results = await Promise.all(
-    skillDirectories.map(async (entry): Promise<SuiteFinding | null> => {
-      const skillPath = path.join(skillsRoot, entry.name);
-      try {
-        await execFileAsync(
-          "uvx",
-          [
-            "--from",
-            `git+${referenceSource.url}@${referenceSource.revision}#subdirectory=skills-ref`,
-            "skills-ref",
-            "validate",
-            skillPath,
-          ],
-          { cwd: root, env: { ...process.env, UV_NO_PROGRESS: "1" } }
-        );
-        return null;
-      } catch (error) {
-        return {
-          check: "agent-skills-reference",
-          file: path.relative(root, skillPath),
-          message:
-            errorMessage(error) || "Official Agent Skills validation failed.",
-          severity: "Major",
-        };
-      }
-    })
+  const projectionRoot = await mkdtemp(
+    path.join(tmpdir(), "agent-skills-reference-")
   );
-  const findings = results.filter(
-    (finding): finding is SuiteFinding => finding !== null
-  );
+  try {
+    const results = await Promise.all(
+      skillDirectories.map(async (entry): Promise<SuiteFinding | null> => {
+        const skillPath = path.join(skillsRoot, entry.name);
+        try {
+          let validationPath = skillPath;
+          const skillFile = path.join(skillPath, "SKILL.md");
+          const contents = await readFile(skillFile, "utf-8");
+          const projected = projectOfficialSkillFrontmatter(contents);
+          if (projected !== contents) {
+            validationPath = path.join(projectionRoot, entry.name);
+            await mkdir(validationPath, { recursive: true });
+            await writeFile(path.join(validationPath, "SKILL.md"), projected);
+          }
+          await execFileAsync(
+            "uvx",
+            [
+              "--from",
+              `git+${referenceSource.url}@${referenceSource.revision}#subdirectory=skills-ref`,
+              "skills-ref",
+              "validate",
+              validationPath,
+            ],
+            { cwd: root, env: { ...process.env, UV_NO_PROGRESS: "1" } }
+          );
+          return null;
+        } catch (error) {
+          return {
+            check: "agent-skills-reference",
+            file: path.relative(root, skillPath),
+            message:
+              errorMessage(error) || "Official Agent Skills validation failed.",
+            severity: "Major",
+          };
+        }
+      })
+    );
+    const findings = results.filter(
+      (finding): finding is SuiteFinding => finding !== null
+    );
 
-  return { checkedSkills: skillDirectories.length, findings };
+    return { checkedSkills: skillDirectories.length, findings };
+  } finally {
+    await rm(projectionRoot, { force: true, recursive: true });
+  }
 };

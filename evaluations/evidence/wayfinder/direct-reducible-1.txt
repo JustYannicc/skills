@@ -1,0 +1,217 @@
+Fresh isolated behavioral evaluation — wayfinder-direct-reducible
+Attempt: 1
+Context ID: fresh-wayfinder-direct-reducible-20260809t132205z-luna-max-attempt-1-bafe1981-defe-437d-a4a4-4db86a40dcc2
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-09T13:22:05Z
+
+Executed behavioral candidate: `git:7019eb4323cf1ecae9461428b4205fe344ba3111`
+Rebound suite revision: `git:916aa0e0d5889cf30401823c7d502871da5f0513`
+
+Candidate and exact runtime-input provenance
+
+- Exact candidate commit: `git:7019eb4323cf1ecae9461428b4205fe344ba3111`
+- Repository candidate revision verified before generation: `7019eb4323cf1ecae9461428b4205fe344ba3111`
+- `AGENTS.md` — SHA-256 `6d0af27a5f865d548236c6a86847609d602e679c7d469e8bc04a6d56531135da`
+- `skills/wayfinder/SKILL.md` — SHA-256 `c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286`
+- `skills/wayfinder/references/map-and-strategy.md` — SHA-256 `9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3`
+- `evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml` — SHA-256 `e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db`
+- `evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md` — SHA-256 `ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255`
+- `evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md` — SHA-256 `3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc`
+- `skills/thinking-in-systems/SKILL.md` — SHA-256 `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- `skills/thinking-in-systems/references/standard.md` — SHA-256 `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- `skills/workflow/SKILL.md` — SHA-256 `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+- `skills/workflow/references/durable-mode.md` — SHA-256 `b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5`
+- `skills/workflow/references/continuation-template.md` — SHA-256 `dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e`
+- `docs/UNIVERSAL_WORK_CONTRACT.md` — SHA-256 `f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3`
+- `overlays/research/SKILL.md.patch` — SHA-256 `1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a`
+
+The repository `AGENTS.md`, the complete required Thinking in Systems
+standard, the Wayfinder skill and Map and Strategy contract, the Workflow
+skill and durable/Continuation contracts, the fixture and every runtime
+reference, and the available Research contract were read in this fresh
+context before generation. The Research route is bound to the public overlay
+contract and the fixture's immutable published evidence locator; no private
+installation path is used as a runtime input.
+
+Exact fixture prompt
+
+> Use Wayfinder for a multi-session replacement of a community center sign-in process. The accepted destination is that visitors register once without staff re-entry. The team only knows that some unknown part of moving visitor data between the kiosk and the existing roster may block that destination; it cannot yet state the decision question. The kiosk provider publishes integration documentation that is available to inspect. Find the next decision route and preserve the map; do not implement the replacement.
+
+Exact declared fixture environment
+
+```yaml
+id: durable-center-planning
+capabilities:
+  workflow: true
+  persistence: true
+  adapterBaseline: true
+  adapterCoordination: true
+  adapterContinuation: false
+  research: true
+  domainModeling: true
+  grilling: true
+  prototype: true
+  toQuestionnaire: true
+  effects: false
+tools:
+  - adapter
+  - primary-sources
+```
+
+Runtime state bound for this run
+
+- Outcome identity: `center-signin`
+- Outcome source revision: `center-signin-r4`
+- Accepted destination: visitors register once without staff re-entry
+- Outcome owner: operations coordinator
+- Selected Adapter: records store; Baseline and Coordination verified, Continuation unavailable
+- Accepted decision: the current process will remain live until replacement proof passes
+- Current fog: the team cannot yet state which part of moving visitor data between the kiosk and existing roster may block one-time registration
+- Published Research Evidence: `provider-integration/export-contract@provider-docs-r12`
+- Adapter write result to verify: `center-signin-r5`
+
+--- BEGIN CANDIDATE RESPONSE (verbatim; generated once) ---
+
+I joined the active Workflow context for the durable Outcome `center-signin`. Workflow retains parent Responsibility for the replacement Outcome; Wayfinder owns this bounded Map and Strategy result and returns it to Workflow. The accepted destination is visitors registering once without staff re-entry, while the current sign-in process remains live until replacement proof passes. Implementing or replacing the destination is outside this route.
+
+## Wayfinder Map — community-center sign-in
+
+- Outcome identity: `center-signin`
+- Outcome source revision: `center-signin-r4`
+- Map result revision: `center-signin-r5`
+- Freshness: reread and verified after the Adapter write at `center-signin-r5`; stale if the Outcome, accepted decision, provider Evidence, Ticket, or Map source changes
+- Selected Adapter: records store (`Baseline=available`, `Coordination=available`, `Continuation=unavailable`)
+- Canonical Outcome locator: `records://center-signin/outcome`
+- Canonical Map locator: `records://center-signin/map`
+- Outcome owner: operations coordinator; return route through Workflow
+- Wayfinder Work owner: Wayfinder; return route `workflow-to-wayfinder-to-research-to-wayfinder-to-workflow`
+
+### Destination
+
+Visitors register once through kiosk and roster data that can refer to the same visitor without staff re-entry. The boundary is the community-center sign-in process and its kiosk-to-roster data movement. The Satisficing threshold for this route is one source-bound, revision-checked export-contract decision before any later replacement Specification or effect; this route does not assert that threshold has been met.
+
+### Out of scope
+
+- Implementing or replacing the sign-in process, changing the kiosk or roster, migrating visitor data, or enabling any external effect. The accepted current-process decision remains authoritative at `center-signin-r4`, and the fixture environment has no effect capability.
+
+### Accepted decisions
+
+- Keep the current sign-in process live until replacement proof passes — canonical locator `records://center-signin/outcome`; accepted at Outcome source revision `center-signin-r4`; review when the export-contract Evidence, accepted decision, or replacement proof changes.
+
+### Operating Strategy
+
+- Observation: the provider's published integration documentation exposes export behavior and leaves open whether a stable per-visitor identifier and update semantics are available together.
+- Decision rule: Research inspects the published provider documentation and returns one source-bound result; the operations coordinator decides whether that result is sufficient to proceed to a later Specification. Until that decision is accepted, Workflow keeps the replacement out of execution and Wayfinder keeps the research Ticket on the frontier.
+- Threshold: the coarse data-movement fog graduates only to this precise question: “Does the export contract expose a stable per-visitor identifier and update semantics suitable for one-time roster registration without staff re-entry?” A source that does not answer it leaves the Ticket unresolved; it does not establish implementability.
+- Reversibility: retain the live sign-in process and change only canonical planning records. Research, Map, Strategy, Ticket, Evidence, and Continuation updates are records-only and reversible.
+- Safe modes: Normal permits bounded source inspection and guarded Adapter record updates. Degraded exposes `Continuation=unavailable`, preserves exact revisions, and requires a human-triggered next check. Paused blocks replacement implementation and effects. Recovery rereads `center-signin-r5`, rejects stale continuation, and resumes only after the current Ticket and source revisions are verified.
+- Feedback and Evidence: bind the immutable published Research locator `provider-integration/export-contract@provider-docs-r12`, the returned precise question, the provider source revision, and the committed Adapter result revision; reread the Adapter after the write.
+- Review condition: reopen the route if the provider documentation, Outcome, accepted decision, Adapter capability declaration, research Ticket, Evidence, or result revision changes.
+
+### Decision frontier
+
+- Export-contract research — canonical Ticket locator `records://center-signin/tickets/export-contract-research`; precise question: “Does the export contract expose a stable per-visitor identifier and update semantics suitable for one-time roster registration without staff re-entry?”; kind `research`; Work owner Research; Authority limited to inspecting the published provider contract, composing revision-bound Evidence, and returning the result to Wayfinder; unblocked because the provider documentation is available and Coordination is verified.
+
+### Blocked
+
+- Replacement design and implementation — canonical Ticket locator `records://center-signin/tickets/replacement`; requires `records://center-signin/tickets/export-contract-research` to complete and later replacement proof; owner operations coordinator; unblock condition is accepted Evidence answering the precise stable-identifier and update-semantics question; next check is the operations coordinator's review after Research returns the result at current Map revision `center-signin-r5`.
+
+### Evidence
+
+- Provider export contract — direct inspection of the published kiosk-provider integration documentation; result: the coarse uncertainty is now the precise stable-per-visitor-identifier and update-semantics question, which the documentation leaves unanswered; observed by Research and returned through Wayfinder; immutable locator and source revision `provider-integration/export-contract@provider-docs-r12`; bound into Map result revision `center-signin-r5`.
+- Accepted current-process decision — read from the canonical Outcome at `center-signin-r4`; result: the current sign-in process remains live until replacement proof passes; canonical locator `records://center-signin/outcome`.
+
+### Fog
+
+#### Reducible
+
+- The starting uncertainty about which kiosk-to-roster data movement may block one-time registration remains material, in scope, and reducible by the available Research capability against the published provider documentation. It is now represented by the one precise export-contract question above; Research owns bounded evidence work and the operations coordinator owns the acceptance decision. Revisit when the provider source or question revision changes.
+
+#### Reducible after operating
+
+- None identified. No replacement operation was started, so no uncertainty requires a live operating horizon.
+
+#### Irreducible uncertainty
+
+- None claimed. The remaining question is reducible through the available primary documentation even though that documentation may fail to answer it.
+
+### Continuation
+
+- Canonical Continuation locator: `records://center-signin/continuation` (visible Degraded record because Adapter `Continuation=unavailable`)
+- Exact Continuation revision: `center-signin-r5`
+- State: `ready-for-next-route; degraded-no-scheduler`
+- Exact resumption action: Workflow rereads the canonical Outcome, Map, research Ticket, Evidence, and Continuation at `center-signin-r5`; the operations coordinator verifies the immutable provider locator and source revision; Research acquires a Coordination Claim and answers the precise export-contract question; Research appends revision-bound Evidence and returns it to Wayfinder. No scheduler or active monitor is claimed.
+
+### Transition history
+
+- `2026-08-09T13:22:05Z` — Wayfinder changed the Map from coarse reducible fog to one precise owned Research frontier under Outcome revision `center-signin-r4`, binding Evidence `provider-integration/export-contract@provider-docs-r12`; Adapter result revision `center-signin-r5` was reread after the write.
+
+The Map is a low-resolution navigational view over canonical Outcome, Ticket, Evidence, and Continuation records. Those meanings remain writable only through the selected records-store Adapter; no second writable decision store was created. The exact result revision was reread after the write. No destination implementation, later Specification, external effect, parent completion, or claim that all fog disappeared occurred.
+
+--- END CANDIDATE RESPONSE ---
+
+Observed action accounting
+
+- Action — bind the accepted destination and canonical source revisions: PASS. The candidate binds Outcome `center-signin`, destination, accepted decision, source revision `center-signin-r4`, and the reread result revision `center-signin-r5`.
+- Action — preserve the coarse data-movement uncertainty as reducible fog: PASS. The candidate retains the initial uncertainty under `Fog / Reducible` and keeps it in scope.
+- Action — use Research to sharpen it from published documentation into one precise export-contract question: PASS. The candidate routes only the present missing external fact to Research, binds `provider-integration/export-contract@provider-docs-r12`, and states one stable-identifier/update-semantics question.
+- Action — create or update the resulting owned research Ticket and its blockers: PASS. The candidate records the research Ticket, its Work owner and Authority, the downstream replacement Ticket, its `requires` blocker, and the unblock condition.
+- Action — preserve exact resumption state after the research result: PASS. The candidate records the visible Continuation locator, exact `center-signin-r5` revision, unavailable scheduling capability, and first reread/claim/research action.
+
+Observed artifacts
+
+- Artifact — durable Wayfinder Map: PASS. The candidate renders the Map as a derived view with destination, accepted decisions, Strategy, frontier, blockers, Evidence, fog, ownership, Authority, Continuation, and exact result revision.
+- Artifact — operating Strategy: PASS. The candidate records observation, decision rule, threshold, reversibility, safe modes, feedback/Evidence, and review condition.
+- Artifact — Continuation record: PASS. The candidate exposes the unavailable Continuation capability, preserves the exact revision and pickup action, and makes no unsupported scheduler claim.
+
+Observed effects
+
+- Effects: none. The candidate keeps the current process live and performs no kiosk, roster, sign-in, or other external state change.
+
+Observed invocation accounting
+
+- Invoked — `workflow`: PASS. The candidate joins the active context, preserves parent Responsibility, and returns the bounded result to Workflow.
+- Invoked — `wayfinder`: PASS. The candidate owns and returns the durable Map and operating Strategy.
+- Invoked — `research`: PASS. The candidate routes the available published primary-source uncertainty to Research.
+- Not invoked — `domain-modeling`: PASS. No terminology conflict is present.
+- Not invoked — `grilling`: PASS. No user-held decision is needed to sharpen this external-fact question.
+- Not invoked — `grill-with-docs`: PASS. No documented plan or design decision is being composed.
+- Not invoked — `prototype`: PASS. No empirical design question or live experiment is required.
+- Not invoked — `to-questionnaire`: PASS. The blocker is published provider documentation, not another person's knowledge.
+- Not invoked — `implementation`: PASS. Destination execution is explicitly out of scope.
+- Not invoked — `Specification`: PASS. The export-contract question remains unresolved and is not treated as an accepted replacement Specification.
+- Not invoked — `parent completion`: PASS. Workflow retains parent Responsibility and no terminal parent proof is claimed.
+
+Observed proof accounting
+
+- Proof — the Map shows the coarse fog graduating only after Research binds `provider-integration/export-contract@provider-docs-r12` and sharpens it into the precise stable-per-visitor-identifier and update-semantics question: PASS. The candidate records this source-bound transition and leaves the question unresolved.
+- Proof — the Map then exposes destination, accepted decisions, Strategy, frontier, blockers, Evidence, ownership, and Continuation at exact result revision `center-signin-r5`: PASS. Every required Map section and the exact revision are visible.
+- Responsibility — Wayfinder owns the bounded Map and Strategy result while Workflow retains the parent Outcome: PASS. Both responsibilities are explicit.
+- Route — `workflow-to-wayfinder-to-research-to-wayfinder-to-workflow`: PASS. The candidate records and returns this exact route.
+- State — `reducible-fog-routed`: PASS. Coarse reducible fog becomes one owned Research frontier question and does not become destination execution.
+
+Forbidden-behavior accounting
+
+- Criterion: implement the replacement
+  - Observed: false
+  - Evidence: The candidate keeps the current process live, marks replacement implementation out of scope, and records no external effect.
+- Criterion: invoke companions without their owned uncertainty
+  - Observed: false
+  - Evidence: Only Workflow, Wayfinder, and Research are invoked; Research owns the present missing external fact, while terminology, user-decision, documented-plan, experiment, and questionnaire companions remain uninvoked.
+- Criterion: claim all fog disappeared
+  - Observed: false
+  - Evidence: The candidate leaves the precise export-contract question unresolved on the Decision frontier and explicitly says no certainty or implementability is claimed.
+- Criterion: create a second writable decision store
+  - Observed: false
+  - Evidence: The candidate identifies the Map as a derived view and keeps Outcome, Ticket, Evidence, and Continuation meanings writable only through the selected Adapter.
+
+Response-generation attestation
+
+This is exactly one fresh candidate generation in the unique context above. The
+candidate response is preserved verbatim between the delimiters. There was no
+retry, transcript reuse, second candidate turn, semantic correction, or
+post-generation edit before grading. The single candidate was evaluated once
+against every expected action, artifact, effect, invocation, non-invocation,
+proof, responsibility, route, state, and forbidden criterion.
+
+Overall isolated attempt result: PASS.

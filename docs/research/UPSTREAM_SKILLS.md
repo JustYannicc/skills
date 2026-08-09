@@ -40,4 +40,6 @@ The accepted decision-interview roster replaces the in-progress Batch Grill Me s
 
 The Research source remains at `skills/engineering/research/SKILL.md`. Its existing capability-aware and Adapter-neutral overlay reapplies unchanged to the new pin.
 
+The Wayfinder successor begins from `skills/engineering/wayfinder/SKILL.md` at this pin. It retains destination-first orientation, one low-resolution Map index, decision-versus-fog sharpness, blockers, the unblocked frontier, bounded decision work, and session continuity. It replaces issue-tracker, label, child-issue, assignee, branch, Git, fixed-session, and unconditional-companion assumptions with the selected Adapter, conditional uncertainty routing, exact revisions, ownership, Evidence, Continuation, and an operating Strategy that distinguishes reducible, operating-delay, and irreducible fog.
+
 The upstream authoring authority is now `skills/productivity/writing-for-agents/`. Skill work reads both `SKILL.md` and `SKILL-MECHANICS.md`; the latter owns frontmatter, invocation choice, splitting by invocation, and router mechanics. The authoring profile and repository instructions now install and use that authority instead of Writing Great Skills.

@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Learning question: Can a private rehearsal reveal whether the reminder trigger selects the intended recipients and whether the notice is clear and proportionate, without changing the employee policy or delivering a message?
 
 Blocked status: Prototype was invoked only to test the reversible boundary. The requested organization-wide activation and same-day notices are live effects, so the request stopped before setup. No policy administration or messaging action was taken, and no rehearsal or simulation was run.

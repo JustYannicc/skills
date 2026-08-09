@@ -38,4 +38,4 @@ observed:
   state: [change-proposed-awaiting-authority-or-pilot]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-change-legacy-record-3.txt
-  sha256: fb1e90f57d469a2bda57d01364064d129e83e6f0a5ad47fd3c1d0b255cbe5b96
+  sha256: 20f0f44012fbd5f328170828ecdc86474e105385010866595d1aa64d3e4b4551

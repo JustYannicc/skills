@@ -25,4 +25,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/indirect-1.txt
-  sha256: 9691b740f393cef5e00051192fb90b47f598df431b45d1f8095e005b74f95b5c
+  sha256: e8c8491e7085a88911b33b6259ab7c324dcd2463e4f12d7bf31a7bc624ba5d37

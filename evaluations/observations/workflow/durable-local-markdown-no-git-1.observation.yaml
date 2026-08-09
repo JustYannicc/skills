@@ -34,4 +34,4 @@ observed:
   state: [accepted-tickets-frontier]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-local-markdown-no-git-1.txt
-  sha256: 576b2eb9cbb2d338d81fff387d0f1eaad61dd01b9877b54ca97ef7391898b52b
+  sha256: e22775fa13c7b4b1a4dc4ebbe59c736e831273a9b72d88b43b7a817f0a99f0d2

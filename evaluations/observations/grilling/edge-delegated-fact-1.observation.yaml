@@ -65,4 +65,4 @@ grading:
   rationale: The bounded delegation and current frontier satisfy every expected action and proof requirement without triggering a forbidden behavior.
 rawEvidence:
   locator: evaluations/evidence/grilling/edge-delegated-fact-1.txt
-  sha256: a3120780b35451b91ddd1e014b24f957a1396bc5d101cb6d059888f136e7d4ca
+  sha256: e4d8af378a5ba302d6e38bda5e81076c1ecb97e72d3a46c7c5a82e9f4d98bf1a

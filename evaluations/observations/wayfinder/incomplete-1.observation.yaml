@@ -1,0 +1,76 @@
+schemaVersion: 1
+fixtureId: wayfinder-incomplete
+attempt: 1
+contextId: fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:29:45Z
+environment:
+  id: conversation-without-wayfinding-context
+  capabilities:
+    workflow: true
+    persistence: false
+    effects: false
+  tools: []
+observed:
+  actions:
+    - identify the missing destination and active Outcome context
+    - ask the smallest discriminating question
+    - preserve any proposal as explicitly non-durable
+    - name the exact resumption condition
+  artifacts:
+    - incomplete Wayfinder result
+  effects: []
+  forbiddenChecks:
+    - criterion: invent a destination
+      evidence: The result states that no accepted destination was supplied and asks the caller to provide it; no destination is invented.
+      observed: false
+    - criterion: create durable state without an Adapter
+      evidence: The result explicitly keeps any Map or Strategy proposal inline and non-durable and states that no Adapter or durable state write occurred.
+      observed: false
+    - criterion: invoke companions before classifying uncertainty
+      evidence: The result classifies the missing destination and Outcome context first, returns on the incomplete branch, and invokes no companion.
+      observed: false
+    - criterion: claim a Map revision
+      evidence: The result explicitly says it will not claim a Map revision and reports no Map locator or revision.
+      observed: false
+  invoked:
+    - wayfinder
+  notInvoked:
+    - domain-modeling
+    - grilling
+    - grill-with-docs
+    - research
+    - prototype
+    - to-questionnaire
+    - Adapter write
+    - Specification
+    - implementation
+    - parent completion
+  proof:
+    - the missing destination and exact resumption condition are visible without fabricated map state
+  responsibility:
+    - Workflow or the caller retains the Outcome while Wayfinder waits for an accepted destination
+  route:
+    - wayfinder-waiting-for-destination
+  state:
+    - incomplete-destination
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/incomplete-1.txt
+  sha256: 40260d885c281c85fb4578eb3629cb5416e7ab2023634b482fd3b778fad5a38c
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/incomplete.fixture.yaml
+    sha256: 0be748eb1d0b9ee516269a21f992bdcd326028de51be1124164c1abe2b4159e2
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171

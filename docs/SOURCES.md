@@ -35,6 +35,14 @@ These repository authorities define adapter-neutral meanings and the one
 writable System Record boundary; `skills/workflow/references/durable-mode.md`
 contains only the operational branch and capability matrix needed by Workflow.
 
+## Ask Yannic
+
+The candidate `ask-yannic` skill is an original route guide for issue #27. Its
+only routing authority is the current [Workflow routing contract](WORKFLOW_ROUTING.md)
+at the active suite revision. The skill interprets that source for one request;
+it does not cache its route table or add a source for Yannic's personal
+judgment.
+
 ## Thinking in Systems
 
 The installed [Sources and further reading](../skills/thinking-in-systems/references/sources.md) file is the single public concept-to-source map for the standard. It preserves the useful public reference spine—including systems engineering, decision economics, behavioral evidence, resilience, representation, preparation, and evaluation—beside the concepts those sources inform.

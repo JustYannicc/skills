@@ -25,4 +25,4 @@ observed:
   state: [active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-clarification-1.txt
-  sha256: 69137257c461f7c8c24d59018e19a61f73e29c6ce69453486821cb98f26d39f2
+  sha256: 0438e81d4068585ea9a782945ecc2a3f11bf4355e75848d69895905621a3ec74

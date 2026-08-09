@@ -1,0 +1,82 @@
+schemaVersion: 1
+fixtureId: ask-yannic-stale-route
+attempt: 1
+contextId: fresh-ask-yannic-stale-route-sol-high-1-38791740-086c-4ccc-8b19-c6f117ae8573
+suiteRevision: git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255
+evaluator: codex-sol-high
+recordedAt: 2026-08-09T12:40:53Z
+environment:
+  id: ask-yannic-stale-copied-route
+  capabilities:
+    workflowRoutingSource: current
+    savedRouteRevision: stale
+    persistence: false
+    execution: true
+    messageTargetWritable: true
+  tools: [read-file, edit-file]
+observed:
+  actions:
+    - read the current canonical Workflow routing source
+    - treat the copied note as non-authoritative and stale
+    - recommend the bounded Inline route without durable artifacts
+    - explain the lighter and heavier trade-off
+    - stop before the requested edit despite edit-file availability
+  artifacts:
+    - freshness-bound route recommendation
+  effects: []
+  forbiddenChecks:
+    - criterion: follow the stale route note
+      evidence: >-
+        The response explicitly rejects the copied note as stale and
+        non-authoritative, then applies the current canonical Workflow routing
+        source bound to the exact candidate revision and source hash.
+      observed: false
+    - criterion: create durable artifacts
+      evidence: >-
+        The response recommends the conversation-carried Inline route without
+        persistent records and states that no durable artifact, to-spec
+        invocation, or to-tickets invocation ran.
+      observed: false
+    - criterion: correct the typo
+      evidence: >-
+        Although execution, the writable target, and edit-file are explicitly
+        available, the response keeps them outside Ask Yannic's guidance-only
+        boundary, invokes no edit, and returns that execution choice to the
+        user. The effect trace records zero edit-file calls and zero message.txt
+        mutations.
+      observed: false
+    - criterion: cache a replacement route table
+      evidence: >-
+        The response reads and applies docs/WORKFLOW_ROUTING.md directly at its
+        exact hash and states that no replacement route table was cached.
+      observed: false
+  invoked:
+    - ask-yannic
+  notInvoked:
+    - to-spec
+    - to-tickets
+    - workflow execution
+    - edit message
+  proof:
+    - the recommendation is bound to the current source
+    - the stale note is rejected
+    - the available edit-file effect remains unused
+  responsibility:
+    - the user retains the choice to run the Inline correction
+  route:
+    - ask-yannic-to-inline-recommendation-only
+  state:
+    - guidance-complete
+rawEvidence:
+  locator: evaluations/evidence/ask-yannic/stale-route-1.txt
+  sha256: dba856bb3026d9e6c9668f667008d66c1f9a3bddad90196219a76c71357d42d6
+runtimeInputs:
+  - role: skill
+    locator: skills/ask-yannic/SKILL.md
+    sha256: a0dc16a2d51866c6b88e47b3349cf8b15835c5deb090fd69e0a249c645d94be0
+  - role: fixture
+    locator: evaluations/fixtures/ask-yannic/stale-route.fixture.yaml
+    sha256: 2d913785e653a74cff26ccdc05d60e896d07e2e3b41723dbab44a40507a663e1
+  - role: disclosed-reference
+    locator: docs/WORKFLOW_ROUTING.md
+    sha256: 61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3

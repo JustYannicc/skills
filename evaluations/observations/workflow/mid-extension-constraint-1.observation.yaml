@@ -32,4 +32,4 @@ observed:
   state: [accepted-change-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-extension-constraint-1.txt
-  sha256: 08b58aba14efa973172b62b49fd6b8dde6419a400dfa3e010d1979202c8a5b9a
+  sha256: 2895155d85687d12141a1c6dcd6e0af0f1cedf29f5cd15485e618100f608dddf

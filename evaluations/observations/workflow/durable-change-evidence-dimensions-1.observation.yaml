@@ -37,4 +37,4 @@ observed:
   state: [operating-under-measured-rollout]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-change-evidence-dimensions-1.txt
-  sha256: daa92e9a1c9cbae37993bb9d975820a1e6c714dce8affc11945106038fa7ce2d
+  sha256: 2df19fbf798ac744a4041be0a61248f599c9ecef1aaefdb5b95ffa4893ca9476

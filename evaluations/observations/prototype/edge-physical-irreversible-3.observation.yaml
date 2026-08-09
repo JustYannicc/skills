@@ -32,4 +32,4 @@ observed:
   state: [blocked-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/prototype/edge-physical-irreversible-3.txt
-  sha256: 424267ec4a08e84fe8e1ebce753ccf7144a69dcd53f6a2f6dc3953397699fa42
+  sha256: 5f8726d6499e6ec55fcf0281af60be7bf0675ec6ed9c810e78e3d1741e61b5c9

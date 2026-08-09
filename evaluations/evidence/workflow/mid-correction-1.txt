@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Thinking in Systems is applied within the existing Workflow context. The new message is a Correction: it establishes that M4's earlier customer-delivery claim and O2 completion assertion were false under O2's original contract. It is not a new Outcome, replacement, or extension.
 
 Append durable correction event `O2-correction-M4-1`, linked to result M4 and the source message: M4 was sent only to the internal group, not the customer group. Preserve the earlier M4 report and O2 completion transition in history, but mark the customer-delivery evidence invalid; the actual internal-only send remains historical evidence and does not satisfy O2.

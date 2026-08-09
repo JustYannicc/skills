@@ -38,4 +38,4 @@ observed:
   state: [pilot-verdict-ready]
 rawEvidence:
   locator: evaluations/evidence/prototype/indirect-personal-organizational-2.txt
-  sha256: fff5b28f32e3e851bd3d7eefd232b4d2187b7cc1b1904cfb276ef89ff6f0abeb
+  sha256: 6706b1b22ba12d9039074861ab68e0bd42bbcd68227956f3c12bd9287a9fbb0e

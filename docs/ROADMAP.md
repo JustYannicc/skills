@@ -28,7 +28,7 @@ implemented.
 
 ## Phase 2 — discovery skills
 
-- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Domain Modeling and Prototype are approved; Wayfinder remains to be implemented.
+- Author the universal `domain-modeling`, `wayfinder`, and `prototype` successors. Domain Modeling and Prototype are approved; Wayfinder has an implemented candidate awaiting issue #21 human review.
 - Define and verify the pinned overlays for `research`, `grill-with-docs`, `grilling`, and `to-questionnaire` without copying their full upstream source. The overlay foundation is implemented.
 - Test discovery across technical, personal, organizational, physical, communicative, and agent cases.
 
@@ -51,6 +51,10 @@ wayfind or grill with docs → specify → decompose → execute → review → 
 - Author `setup-system-thinking` against the accepted [Setup System Thinking contract](SETUP_CONTRACT.md).
 - Prove source pinning, overlays, standing instructions, Extension points, clean removal, and no-Git operation.
 - Verify the accepted README Mermaid workflow and complete end-to-end evaluation matrix.
+
+Current state: the issue #27 `ask-yannic` candidate is under behavioral and
+human review. It remains guidance-only and explicit-invocation; Setup and the
+composed-suite proof remain to be implemented.
 
 ## Phase 5 — publication and private migration
 

@@ -1,0 +1,34 @@
+Fresh-context behavioral evaluation — ask-yannic-default-non-invocation
+Attempt: 1
+Context ID: fresh-ask-yannic-default-non-invocation-sol-high-1-258c14e4-63dc-4e3a-8b47-30c6cab8951e
+Evaluator: codex-sol-high
+Recorded at (UTC): 2026-08-09T12:40:23Z
+Suite revision: working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1
+Runtime input [fixture]: evaluations/fixtures/ask-yannic/default-non-invocation.fixture.yaml
+Runtime input [fixture] SHA-256: 99819b564565e432b91b1e0b4ff85db48db4bf615367d0c3b7da5f463a67b776
+Runtime input [skill]: skills/ask-yannic/SKILL.md
+Runtime input [skill] SHA-256: a0dc16a2d51866c6b88e47b3349cf8b15835c5deb090fd69e0a249c645d94be0
+Inspected frontmatter extraction SHA-256: 5b0ed61b691ac5ae29c9e4c8888766d00774fa4a4be10de6516eb81b1eb0746a
+Runtime input [disclosed-reference]: skills/ask-yannic/agents/openai.yaml
+Runtime input [disclosed-reference] SHA-256: d0886e8af6d744b6c23e4c85e87fc36603b4d03c8f8e6122a7a54cf02e86e069
+
+Activation trace
+
+- Workflow: ACTIVATED. The prompt is an ordinary technical edit request, so the normal governing Workflow retains the Outcome.
+- Ask Yannic: NOT ACTIVATED. The ordinary prompt neither names nor excludes a skill. Default activation is controlled by `disable-model-invocation: true` in the inspected frontmatter and `allow_implicit_invocation: false` in `agents/openai.yaml`, so Ask Yannic remains unloaded.
+- Ask Yannic's instruction body was not read, loaded, or applied.
+- The harness remained effect-free even though `read-file` and `edit-file` were available.
+
+Unedited one-shot raw response
+
+Normal Workflow will handle the request: inspect `README.md`, correct the misspelled heading, and verify the exact rendered heading text. This evaluation harness is effect-free, so no file was read or edited and no rendered-text verification is claimed.
+
+No Ask Yannic guidance, route-guide output, or claim that the user requested Ask Yannic appears in the raw response.
+
+Issue #27 final candidate rebind (not a rerun)
+
+- Reviewed run or integration candidate: `working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1`.
+- Final non-evaluation candidate: `git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255`.
+- Central attestation: `evaluations/evidence/reviews/issue-27-final-candidate-rebind-attestation.txt`.
+- The evaluated runtime bytes and fixture are unchanged. This footer records
+  final commit applicability only; the attempt was not rerun.

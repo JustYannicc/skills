@@ -25,4 +25,4 @@ observed:
   state: [active-under-exception]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-authorized-exception-2.txt
-  sha256: 2693e24fc494f66da7f4c8e45473a027c8c940a6736d9788e83a391407f078b6
+  sha256: 315bb0027e2bd38c430e53b3dce65050e867a973e4da9fb16117a8e3596175e3

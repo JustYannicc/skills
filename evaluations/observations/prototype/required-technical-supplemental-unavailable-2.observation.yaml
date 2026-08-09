@@ -39,4 +39,4 @@ observed:
   state: [waiting-for-required-technical-prototype]
 rawEvidence:
   locator: evaluations/evidence/prototype/required-technical-supplemental-unavailable-2.txt
-  sha256: e3b110221cf2cb0d279bd0a1baa16088d7ca936525a2e2d0011dfcdc7835110e
+  sha256: 837df94739c90867785dd19137b052910f7aa628e05b7551953dd3d66bddfb2a

@@ -1,0 +1,80 @@
+schemaVersion: 1
+fixtureId: handoff-service-dispatch
+attempt: 3
+contextId: fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: "2026-08-09T15:42:11Z"
+environment:
+  id: handoff-service-dispatch-boundary
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    service-dispatch: true
+  tools:
+    - selected canonical Adapter
+    - notification service
+observed:
+  actions:
+    - classify Dispatch
+    - bind exact approved revision and service contract
+    - record service acceptance and receipt as execution evidence
+    - retain owner through recipient delivery verification
+    - return dispatch continuation
+  artifacts:
+    - Dispatch Handoff contract
+    - service receipt reference
+  effects:
+    - authorized dispatch of notice-r11
+  forbiddenChecks:
+    - criterion: treat service receipt as ownership acceptance
+      evidence: "Dispatch Handoff contract → Current responsible owner keeps Outcome Responsibility; relay-prod is scoped to contracted dispatch duty; Workflow retains terminal verification. The receipt is execution evidence for that duty."
+      observed: false
+    - criterion: treat queued dispatch as recipient delivery
+      evidence: "Continuation spine → Dependencies and Continuation record keep verified delivery evidence for all 240 recipients as the next proof seam after the accepted relay receipt."
+      observed: false
+    - criterion: treat accepted dispatch as recipient delivery
+      evidence: "Delivery, pickup, and return → Parent Outcome state is Acknowledged and open with recipient delivery verification pending; recipient-level verification is the next frontier."
+      observed: false
+    - criterion: send a changed revision
+      evidence: "Delivery, pickup, and return → Freshness check binds the exact approved pair notice-r11 and approval-r11; the receipt retains that message revision and relay-prod target."
+      observed: false
+    - criterion: complete the parent Outcome
+      evidence: "Dispatch Handoff contract → Parent Outcome stays open; the current owner remains responsible and Workflow must verify all 240 recipients before a terminal decision."
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked: []
+  proof:
+    - notice-r11 matches approval-r11
+    - relay receipt proves only accepted dispatch
+    - 240-recipient delivery remains the proof seam
+  responsibility:
+    - current owner retains Outcome Responsibility
+    - relay-prod owns only its contracted dispatch duty
+    - Workflow retains terminal verification
+  route:
+    - workflow-to-handoff-dispatch-to-workflow
+  state:
+    - Acknowledged
+    - recipient delivery verification pending
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/service-dispatch.fixture.yaml
+    sha256: df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+rawEvidence:
+  locator: evaluations/evidence/handoff/service-dispatch-3.txt
+  sha256: 1c4d104ec2c47db118c915d558426bc08ed3a31800f8c48fda839ee91d7920fa

@@ -31,4 +31,4 @@ observed:
   state: [blocked-stale-revision-recovery]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-record-action-guard-2.txt
-  sha256: fc1dab56f9d619a8f73f4527d9f7b6cbc494f9aad964bcf912461fb6139adf7a
+  sha256: 35b6d200233bfb2813dae37f788c783e121e4f83a36e3ae494c3fb9bc08ceb9d

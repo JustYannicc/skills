@@ -1,0 +1,85 @@
+Issue #21 writing-for-agents acceptance audit
+Audit base: e2f92efaa253793c01ec33cd711b27417c0da424
+Method: writing-for-agents SKILL.md and SKILL-MECHANICS.md, read completely
+
+Scope and manifest
+
+- The manifest contains 306 tracked text paths: 305 paths changed from the
+  audit base through the final candidate and this audit record. Resolve it at
+  the evaluation commit with `git diff --name-only
+  e2f92efaa253793c01ec33cd711b27417c0da424...HEAD`.
+- Partitions account for 10 core/docs/metadata files, 17 fixtures and runtime
+  inputs, 15 Wayfinder transcripts, 5 issue-review records, 27 mechanically
+  rebound pre-existing transcripts, 231 observations, and 1 generated report.
+- Four partitioned Sol High auditors checked core skill/docs/metadata,
+  Wayfinder fixtures/runtime inputs, new Wayfinder evidence/reviews, and the
+  mechanically rebound pre-existing evidence/observations.
+- The coordinator checked each finding, correction, justified disposition,
+  delegated brief, this record, the handoff, and the draft-PR prose.
+- Generated report JSON is tool output. Its authored fixture and observation
+  inputs remain in scope.
+
+Acceptance dimensions
+
+Every authored artifact was checked for information hierarchy, context-pointer
+quality, co-location, checkable completion criteria, leading words,
+progressive disclosure, one source of truth per meaning, relevance, and no-op
+instructions. Skill mechanics additionally covered the model-invoked
+description, frontmatter, metadata, and companion-capability routing.
+
+Material findings and corrections
+
+1. Reducible evidence lacked an immutable Research locator and revision.
+   `direct-reducible-research-evidence.md` now owns the source-bound result;
+   the fixture and seeded state point to
+   `provider-integration/export-contract@provider-docs-r12`.
+2. The operating-delay fixture stated a future fourth-event transition as a
+   completed action. It now requires the Strategy to record the trigger that
+   will return the item after accepted fourth-event Evidence.
+3. Fifteen transcripts had mechanically replaced the executed behavioral
+   candidate with a later rebound suite revision. Corrected evidence preserves
+   the revision actually executed and names the rebound revision separately;
+   affected observations bind the corrected raw bytes.
+4. The adversarial review lacked an exact reviewed-state identity. Its record
+   now names the recovered working-tree fingerprint and discloses that exact
+   fixture hashes were not captured.
+5. Two one-shot transcripts did not clearly delimit the candidate-response
+   byte range. Their preserved responses now have explicit start and end
+   markers.
+
+Justified Minor dispositions
+
+- `Reducible after operating` is the class-table label; `operating-delay fog`
+  is the repeated leading term used by the procedure and contract. The in-step
+  completion gate and disclosed schema serve different hierarchy levels, so
+  both remain.
+- `the uncertainty step below` remains a local pointer into the immediately
+  following numbered sequence; step 4 classifies the uncertainty and step 5
+  names the Grilling branch without adding another disclosed reference.
+- Evaluation `notInvoked` retains the repository-wide negative-accounting
+  schema. Capability and terminal non-events are intentionally co-located for
+  exhaustive grading rather than split across fixture fields.
+- The missing-companion completion prohibition is bounded by the adjacent
+  blocked state and forbidden criteria; it cannot truthfully mean normal
+  return from the invocation.
+- The cross-domain fixture title uses the human-readable artifact name while
+  `to-questionnaire` remains the canonical capability identifier in routing
+  and accounting.
+
+Completion criterion
+
+This audit passes when every manifest path belongs to one partition, all
+material findings are corrected, every justified disposition names the owning
+source of truth, the corrected behavioral attempts pass, deterministic gates
+pass without weakening, and the reviewed draft-PR prose reports executed and
+rebound revisions separately. Human approval remains outside this audit.
+
+Result: PASS
+
+- Final candidate:
+  `git:916aa0e0d5889cf30401823c7d502871da5f0513`.
+- `pnpm evaluations:record` passed.
+- `pnpm validate` passed: 829 files, 8 skills, 143/143 fixtures, zero
+  findings, and 8 test files / 41 tests.
+- Reviewed draft-PR body SHA-256:
+  `d04d3b00a55991babc3cdd5c4dfb4e6014eb8c2a7803cf15af038fbcbb0c1b94`.

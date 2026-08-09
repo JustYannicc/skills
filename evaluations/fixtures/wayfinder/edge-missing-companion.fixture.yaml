@@ -1,0 +1,37 @@
+schemaVersion: 1
+id: wayfinder-edge-missing-companion
+title: Missing documented-plan companions remain a visible capability gap
+shape: edge
+kind: routing
+skill: wayfinder
+domains: [communicative, agent]
+severity: Major
+requiredAttempts: 1
+runtimeReferences: [skills/wayfinder/references/map-and-strategy.md, evaluations/fixtures/wayfinder/runtime/missing-companion-state.md]
+prompt: "Resume the documented incident-communication plan. The plan uses 'owner' in two conflicting ways and the decision cannot safely proceed until that language is resolved. Grill With Docs and Domain Modeling are unavailable in this environment. Preserve the Wayfinder state and tell the next session exactly how to resume."
+environment:
+  id: durable-missing-plan-companions
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    grillWithDocs: false
+    domainModeling: false
+    grilling: true
+    research: true
+    prototype: true
+    toQuestionnaire: true
+    scheduling: false
+    effects: false
+  tools: [adapter]
+expected:
+  actions: [recognize the terminology blocker in a documented plan, record unavailable Grill With Docs and Domain Modeling as a capability gap, keep the affected frontier item blocked, write the exact companion-availability resumption condition]
+  artifacts: [durable Wayfinder Map, Continuation record]
+  effects: []
+  invoked: [workflow, wayfinder]
+  notInvoked: [grill-with-docs, domain-modeling, grilling, research, prototype, to-questionnaire, implementation, parent completion]
+  proof: [result revision incident-communications-r4 preserves the blocker owner last observation next check and exact resumption action without claiming a companion result]
+  responsibility: [Wayfinder owns the preserved navigation state while Workflow retains the Outcome and the named owner retains the blocked decision]
+  route: [workflow-to-wayfinder-degraded-waiting]
+  state: [waiting-for-companion-capability]
+  forbidden: [pretend a missing companion ran, substitute Grilling for the missing terminology contract, resolve the conflicting term, claim Wayfinder complete]

@@ -30,4 +30,4 @@ observed:
   state: [affected-child-revised-unaffected-child-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/delegated-change-propagation-1.txt
-  sha256: 26a1584a05c8e12025ecf6639c62cb9c6493e201da2960f926118f4290d5fb64
+  sha256: 6ae0332b61c34a62b70d5bf9211b2cde97a8b27f5d826c45015cda1f481b572f

@@ -25,4 +25,4 @@ observed:
   state: [waiting-for-input]
 rawEvidence:
   locator: evaluations/evidence/foundation/incomplete-1.txt
-  sha256: f03b477690daf303f8789733a62dc4badfe7e2a56b7832a3f19e5c54af2bbd1b
+  sha256: ccd0769478e64a5abdb5d2968d8020214f391675766095a1fb2d56491919a7f3
