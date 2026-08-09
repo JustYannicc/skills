@@ -14,7 +14,13 @@ prompt: |
 environment:
   id: delegated-support-operation
   capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true, concurrentClaims: true }
-  tools: [selected Adapter, bounded mapping workers, escalation records, tooling records, staffing-r7 dispatch snapshot, staffing-r8 current revision]
+  tools:
+    - selected Adapter
+    - bounded mapping workers
+    - escalation records at escalation-r4 with current actors interfaces active work and a claim that Customer Escalation owns final escalation disposition
+    - tooling records at tooling-r6 with current paging incident-state and escalation-handoff evidence
+    - staffing-r7 dispatch snapshot with roster coverage responsibilities and an overlapping final-disposition ownership claim
+    - staffing-r8 current revision preserving that claim under the Primary On-call role and superseding r7
 expected:
   actions: [join the active Workflow context, create canonical nonoverlapping child Tickets with owners Claims immutable inputs proof seams Reviewers and return routes, dispatch only independent mapping areas concurrently, reject the stale staffing-r7 child result and reread staffing-r8, collect only Verified revision-bound child evidence, reconcile duplicates conflicts and gaps, submit one exact integrated map revision to Review]
   artifacts: [three canonical child Ticket records with Review dispositions, one canonical integrated current-state revision and derived map]
