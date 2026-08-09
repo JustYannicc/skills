@@ -12,8 +12,8 @@ prompt: |
   Migrate this inherited billing service into Workflow. Production behavior is documented in runbooks, tickets, dashboards, and operator knowledge; the sources disagree about who owns failed-payment recovery. Record and verify what is actually current so the next maintainer can proceed. Do not fix the service.
 environment:
   id: inherited-billing-service
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
-  tools: [selected Adapter, versioned runbooks, ticket records, dashboard observations, operator confirmations]
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, coordination: true, continuation: true }
+  tools: [selected Adapter with writable Baseline Coordination and Continuation, versioned runbooks, ticket records, dashboard observations, operator confirmations]
 expected:
   actions: [join the active Workflow context, inventory authoritative and observational sources with exact revisions or observation times, map system boundaries actors responsibilities interfaces active work dependencies evidence waits unknowns and provenance, preserve the ownership conflict instead of guessing, submit the exact integrated current-state revision to Review]
   artifacts: [canonical billing-service current-state records, derived current-state map with visible conflict and confidence]

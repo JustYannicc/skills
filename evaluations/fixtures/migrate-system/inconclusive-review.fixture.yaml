@@ -12,8 +12,8 @@ prompt: |
   Adopt our emergency phone-tree operation into Workflow. The integrated map is ready for Review, but the Reviewer cannot verify the overnight handoff because the only current observation is unavailable until tomorrow. Submit the exact map revision and preserve what happens next.
 environment:
   id: phone-tree-inconclusive-review
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, continuation: true }
-  tools: [selected Adapter, exact integrated map phone-tree-current-state@r4, Reviewer, accepted scheduled next observation phone-tree-overnight-observation@2026-08-10T09:00:00+02:00]
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, coordination: true, continuation: true }
+  tools: [selected Adapter with writable Baseline Coordination and Continuation, exact integrated map phone-tree-current-state@r4, Reviewer, "accepted scheduled next observation phone-tree-overnight-observation@2026-08-10T09:00:00+02:00"]
 expected:
   actions: [join the active Workflow context, submit the exact integrated map revision to Review, record an Inconclusive verdict against that revision, keep migration Responsibility active, create a Continuation with missing overnight evidence owner next check and exact resumption action]
   artifacts: [revision-bound Inconclusive Review record, accepted Continuation]

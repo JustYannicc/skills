@@ -71,12 +71,7 @@ prevent accidental exhaustive inventory or represented-System changes.
 ### 3. Inventory sources and record observed reality
 
 Inspect authoritative records, current operating artifacts, Actor statements,
-and direct observations. For every material claim, retain its source locator,
-captured revision or observation time, source role, freshness, confidence, and
-conflicts. Treat the request as provenance for what was requested, not as proof
-of the complete operating state.
-
-Use the [source and provenance checklist](references/current-state-mapping.md#source-and-provenance-checklist)
+and direct observations. Use the [source and provenance checklist](references/current-state-mapping.md#source-and-provenance-checklist)
 and [coverage checklist](references/current-state-mapping.md#coverage-checklist)
 to inspect and update the ordinary canonical records through the selected
 Adapter. Render only a source-linked derived Map.
@@ -99,20 +94,10 @@ crosswalk has become a second writable authority.
 ### 4. Delegate independent mapping and integrate it
 
 When delegation is useful, create one bounded child mapping contract per
-independent area as a canonical child Ticket using the
-[delegated mapping packet](references/current-state-mapping.md#delegated-mapping-packet).
-The Ticket records its Work owner, lifecycle state and Claim, immutable inputs,
-Authority, Proof seam, Reviewer, Review disposition, exact result revision, and
-return route. Run child work concurrently only when sources, Authority, state,
-and evidence dependencies do not conflict.
-
-The migration owner compares canonical revisions with each dispatch snapshot,
-rereads changed slices, reconciles duplicates and contradictions, exposes
-missing coverage, and integrates only revision-bound child Evidence with a
-`Verified` Review verdict. `Changes required` returns the child Ticket to its
-Work owner; `Inconclusive` enters owned waiting. A child result, failed worker,
-or unreachable worker never completes or transfers the parent mapping
-Responsibility; failures enter Recovery with a next action.
+independent area using the [delegated mapping packet](references/current-state-mapping.md#delegated-mapping-packet).
+Run child work concurrently only when the packet establishes independent
+boundaries. On return, the migration owner applies the packet's freshness,
+Review, reconciliation, and Recovery rules before integrating child Evidence.
 
 **Done when:** every delegated area is integrated, waiting, or in Recovery with
 an owner, and one migration owner can account for the complete affected scope

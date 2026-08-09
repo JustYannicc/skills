@@ -12,8 +12,8 @@ prompt: |
   Adopt our household maintenance routine into Workflow. The whiteboard says "done" when someone bought supplies, the shared note says it means the repair was completed, and recurring chores have no named owner. Record what exists now; don't clean up the routine yet.
 environment:
   id: nonconforming-household-maintenance
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
-  tools: [selected Adapter, whiteboard observation, shared note revision, household actor confirmations]
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, coordination: true, continuation: false }
+  tools: [selected Adapter with writable Baseline and Coordination, whiteboard observation, shared note revision, household actor confirmations]
 expected:
   actions: [join the active Workflow context, preserve existing terms artifacts and observed practice, crosswalk meanings to the universal contract without renaming away conflicts, map ownerless recurring work as an actual gap rather than assigning it, submit the exact nonconforming map revision to Review]
   artifacts: [canonical current-state records with nonconformance crosswalk, derived map with done conflict and ownerless-work gap]

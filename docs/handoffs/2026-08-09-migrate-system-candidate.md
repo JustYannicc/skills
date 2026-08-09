@@ -13,6 +13,7 @@ actual current state through ordinary Workflow.
 - [x] Author `migrate-system`, disclosed references, model-facing metadata, provenance, README, and repository registration.
 - [ ] Add automatic, partial-scope, delegated, nonconforming, negative, missing-capability, and cross-domain behavioral proof.
 - [ ] Record fresh observations, raw evidence, and the revision-bound evaluation report.
+- [ ] Audit every touched authored text artifact with `writing-for-agents` and `SKILL-MECHANICS.md`: hierarchy, pointers, co-location, completion criteria, leading words, progressive disclosure, single source of truth, relevance, and no-ops.
 - [ ] Run focused checks, `pnpm evaluations:record`, and `pnpm validate` without weakening gates.
 - [x] Apply `simplify` once and rerun affected deterministic checks.
 - [x] Run one Sol High adversarial review and resolve every Critical or Major finding.

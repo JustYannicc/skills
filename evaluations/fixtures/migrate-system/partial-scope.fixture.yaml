@@ -12,8 +12,8 @@ prompt: |
   This old commerce workspace has no verified map. I only need to change how refunds are exported; inventory, search, and merchandising are unrelated and can be mapped later. Adopt enough of the existing scope for the refund work to proceed safely.
 environment:
   id: partial-commerce-adoption
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true }
-  tools: [selected Adapter, refund records, export interface documentation, refund owner]
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true, coordination: true, continuation: false }
+  tools: [selected Adapter with writable Baseline and Coordination, refund records, export interface documentation, refund owner]
 expected:
   actions: [join the active Workflow context, define the refund export material boundary and explicit exclusions, map affected sources actors responsibility interfaces active work dependencies evidence waits unknowns and provenance, record truthful unknown coverage outside the affected slice, submit the exact bounded map revision to Review without waiting for unrelated inventory]
   artifacts: [verified refund-export current-state slice, broader-scope coverage gap marked nonblocking]

@@ -12,8 +12,8 @@ prompt: |
   Our volunteer meal program has run for years through shared documents, messages, and people's memory. Several people already own live work, two deliveries are waiting on suppliers, and nobody has a verified current-state map. Add a second approval stage for purchases without disrupting current deliveries.
 environment:
   id: existing-unmapped-volunteer-program
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
-  tools: [selected Adapter, shared program records, current owner confirmations]
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, coordination: true, continuation: true }
+  tools: [selected Adapter with writable Baseline Coordination and Continuation, shared program records, current owner confirmations]
 expected:
   actions: [join the active Workflow context, invoke Migrate System automatically before ordinary change work, bound mapping to the purchase and delivery scope affected by the proposal, inventory actual current state with source-bound provenance, submit the exact integrated map revision to Review, return the second-approval proposal to ordinary Workflow]
   artifacts: [canonical current-state records plus a derived map, separate discovered-change proposal]

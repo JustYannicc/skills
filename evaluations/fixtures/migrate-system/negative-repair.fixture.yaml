@@ -11,7 +11,7 @@ prompt: |
   The customer-onboarding service already has a current verified System Record and Workflow map at revision onboarding-r18. Fix the confirmed retry bug described in accepted Ticket retry-42.
 environment:
   id: verified-onboarding-repair
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false, coordination: false, continuation: false }
   tools: [System Record onboarding-r18, accepted Ticket retry-42]
 expected:
   actions: [load the current verified map, continue ordinary Workflow at the accepted repair Ticket]

@@ -13,9 +13,9 @@ prompt: |
   The staffing source advances from staffing-r7 to staffing-r8 after dispatch, so reject any child result based only on r7 and reread that changed slice before integration.
 environment:
   id: delegated-support-operation
-  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true, concurrentClaims: true }
+  capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true, concurrentClaims: true, coordination: true, continuation: false }
   tools:
-    - selected Adapter
+    - selected Adapter with writable Baseline and Coordination
     - bounded mapping workers
     - escalation records at escalation-r4 with current actors interfaces active work and a claim that Customer Escalation owns final escalation disposition
     - tooling records at tooling-r6 with current paging incident-state and escalation-handoff evidence
