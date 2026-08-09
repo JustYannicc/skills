@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-cross-domain-questionnaire
 attempt: 1
 contextId: fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:32:38Z
 environment:
@@ -95,7 +95,7 @@ runtimeInputs:
     sha256: 5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831
   - role: disclosed-reference
     locator: evaluations/observations/to-questionnaire/cross-domain-1.observation.yaml
-    sha256: b17f147e4d3a9bdf5295a54a77efba7e46c908b02168128dd835841de25db863
+    sha256: d0d5ade94dbb1dec1a40d48bf4c3e7dd0a527e5a5701ca7c42a1969cfd78cced
 rawEvidence:
   locator: evaluations/evidence/wayfinder/cross-domain-questionnaire-1.txt
-  sha256: 7c4f3bd970411626a9a39f5bdfab12792d6214314bc718393e8b30cb354418ea
+  sha256: 61e712269181fbf528e89d2d58c44113d0a6142fa4a12060417ff791db6cd481

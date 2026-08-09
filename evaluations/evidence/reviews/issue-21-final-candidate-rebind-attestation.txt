@@ -1,35 +1,51 @@
-Issue #21 final candidate rebind attestation
+Issue #21 corrected candidate rebind attestation
 Attested at: 2026-08-09
-Behavioral candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
-Final candidate: git:b94315c3acd25414cea7f2b861633ed9b181e504
+Original behavioral candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
+Corrected-input behavioral candidate: git:7019eb4323cf1ecae9461428b4205fe344ba3111
+Final candidate: git:916aa0e0d5889cf30401823c7d502871da5f0513
 
-This final rebind exists because the task-local handoff checklist was updated
-after behavioral proof and the resolution check. The only candidate-tracked
-change between these revisions marks the fresh-evidence and review/checklist
-items complete in `docs/handoffs/2026-08-09-wayfinder-candidate.md`.
+Behavioral coverage
+
+- Three reducible attempts and the operating-delay attempt were rerun in four
+  unique fresh Luna Max contexts against the corrected-input candidate. Their
+  one-shot responses and runtime hashes are preserved in their transcripts.
+- The other eleven Wayfinder transcripts preserve the original behavioral
+  candidate and name the final candidate separately as the rebound suite
+  revision. Their fixture and skill inputs did not receive the correction.
+- The 216 pre-existing observations retain their prior context IDs,
+  timestamps, behavior, and fixture bindings. The earlier candidate-rebind
+  attestation records their first mechanical rebind.
 
 Runtime equivalence proof
 
-- The 231 observations name 56 unique in-repository runtime-input locators.
-- `git diff --quiet
-  6b809baa082875b45b5895d471d6ab63a499f399..b94315c3acd25414cea7f2b861633ed9b181e504
-  -- <the 56 runtime-input locators>` exited 0.
-- `git diff --name-status` between the revisions reports only the checklist
-  document above. No skill, reference, fixture, seeded state, Adapter contract,
-  companion contract, or governing standard changed.
+- The 231 observations name 58 unique in-repository runtime-input locators.
+- The four corrected attempts name 16 locators. All are byte-identical from
+  `7019eb4323cf1ecae9461428b4205fe344ba3111` through the final candidate.
+- The eleven unchanged Wayfinder attempts name 34 locators. Thirty-three are
+  byte-identical from `6b809baa082875b45b5895d471d6ab63a499f399`
+  through the final candidate. The remaining nested To Questionnaire
+  observation changed only its suite revision during the mechanical rebind;
+  its current exact hash is propagated into the cross-domain transcript and
+  observation.
+- The 216 pre-existing observations name 21 locators. All are byte-identical
+  from the original Wayfinder behavioral candidate through the final
+  candidate.
+- The candidate delta from `7019eb4323cf1ecae9461428b4205fe344ba3111`
+  to the final candidate changes only the task-local handoff checklist.
 
 Mechanical rebind
 
-- All 231 observation `suiteRevision` values were changed to the final
-  candidate.
-- Only exact candidate strings in their 231 referenced raw-evidence files were
-  eligible for replacement; files without the string remained byte-identical.
-- Every observation `rawEvidence.sha256` was recomputed from its referenced
-  evidence after the replacement.
-- Original context IDs, timestamps, one-shot candidate responses, behavioral
-  accounting, fixture bindings, and runtime-input hashes were preserved.
+- All 231 observation `suiteRevision` values name the final candidate.
+- All fifteen Wayfinder transcripts distinguish the executed behavioral
+  candidate from the rebound suite revision. Candidate responses, context IDs,
+  timestamps, and behavioral accounting remain intact.
+- Twenty-seven pre-existing Domain Modeling transcripts received only the
+  suite-revision substitution. Their observation raw-evidence hashes were
+  recomputed from the resulting bytes.
+- Every changed raw-evidence hash was recomputed. The nested Questionnaire
+  observation hash was propagated before the cross-domain raw-evidence hash,
+  reaching a stable result.
 
-The deterministic report and validation must be rerecorded against the final
-candidate. Any later candidate-tracked change invalidates this attestation.
-This is technical identity evidence, not human approval, publication, merge,
-or closure of issue #21.
+The deterministic report and validation bind the final candidate. This is
+technical identity evidence, not human approval, publication, merge, or
+closure of issue #21.

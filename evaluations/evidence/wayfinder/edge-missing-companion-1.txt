@@ -9,7 +9,8 @@ retained without retry or edit.
 
 Candidate and exact runtime-input locator/hash bindings
 
-- Evaluation candidate / suite revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+- Executed behavioral candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
+- Rebound suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 - role: skill
   - locator: skills/wayfinder/SKILL.md
   - SHA-256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286

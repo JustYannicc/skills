@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-durable-local-markdown-no-git
 attempt: 1
 contextId: workflow-durable-local-markdown-no-git-fresh-luna-max-20260808-1
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-08T13:04:00Z
 environment:

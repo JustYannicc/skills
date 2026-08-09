@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-edge-missing-companion
 attempt: 1
 contextId: fresh-wayfinder-edge-missing-companion-20260809t123041z-luna-max-fe633d75-3e70-4333-b8ea-c6286d1d2ac3
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:30:41Z
 environment:
@@ -88,4 +88,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/wayfinder/edge-missing-companion-1.txt
-  sha256: 335f829b2790cf4b768582d788c73a634ee342948c6a090225e353d624c68ae3
+  sha256: 0744716cfbf6d52abcf17ce71ef35df6a9a8e78a520986c98cedef64de2eb299

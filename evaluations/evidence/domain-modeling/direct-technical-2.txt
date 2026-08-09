@@ -3,7 +3,7 @@ Attempt: 2 of 3
 Context ID: fresh-domain-modeling-direct-technical-luna-max-2-20260809t105700z-d899b8d0-3a92-46a6-910b-75f62e516164
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T10:57:00Z
-Candidate suite revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+Candidate suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 
 Runtime inputs read for this isolated attempt
 
@@ -118,4 +118,4 @@ Full fixture grading for this one-shot response
 - State `terminology-resolved-or-conflict-visible`: PASS — the accepted meanings are resolved while prior interchangeable usage remains visible as conflict evidence.
 - Forbidden criterion `silently collapse Account, User, and Customer`: NOT OBSERVED — the three entries, exact source bindings, good case, role-overlap near miss, substitutions, avoided labels, and conflict evidence keep Account, User, and Customer distinct.
 
-Overall attempt result: PASS. This is one fresh Luna Max response against candidate `git:b94315c3acd25414cea7f2b861633ed9b181e504`, preserved verbatim, with no retry or response editing.
+Overall attempt result: PASS. This is one fresh Luna Max response against candidate `git:916aa0e0d5889cf30401823c7d502871da5f0513`, preserved verbatim, with no retry or response editing.

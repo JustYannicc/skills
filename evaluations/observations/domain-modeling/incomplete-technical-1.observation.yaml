@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-incomplete-technical
 attempt: 1
 contextId: fresh-domain-modeling-incomplete-technical-20260809t105627z-luna-max-b7293d2f-53b1-4fc6-9687-19483704949a
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T10:56:27Z
 environment:
@@ -56,4 +56,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/incomplete-technical-1.txt
-  sha256: 3b074ff8c8891d29c9e11efa3572c64f2ab35cbb62199e421d98dfefec6f2ce3
+  sha256: 7a3f3c31c148a26c9d11b55925cd866a97a88e3f6186555f2212cca6005c454f

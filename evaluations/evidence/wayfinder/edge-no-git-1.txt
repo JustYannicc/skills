@@ -5,7 +5,8 @@ Attempt: 1
 Context ID: fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T12:29:28Z
-Candidate suite revision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+Executed behavioral candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
+Rebound suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 
 Exact runtime identity
 
@@ -26,8 +27,8 @@ Exact runtime identity
 
 The Wayfinder skill, Workflow skill, Thinking in Systems skill, complete
 governing standard, exact fixture, and both declared runtime references were
-read in this isolated context before evaluation. The candidate identity above
-is the exact Git revision under test. No authoring conversation or prior
+read in this isolated context before evaluation. The executed behavioral
+candidate above is the exact Git revision under test. No authoring conversation or prior
 attempt state was supplied to this context.
 
 Exact prompt
@@ -55,7 +56,9 @@ tools:
   - local-markdown
 ```
 
-One-shot execution trace and candidate result
+One-shot candidate response
+
+<!-- BEGIN ONE-SHOT CANDIDATE RESPONSE -->
 
 1. Thinking in Systems classified the request as a Durable, cross-session
    continuation. Workflow retained the parent Outcome and routed persistent
@@ -114,6 +117,8 @@ reconsider the route when the response, budget decision, or feasibility
 evidence changes. The exact next check and resumption action remain in the
 canonical Continuation record. Wayfinder owns this navigation result; Workflow
 and the named household owner retain the parent Outcome and its terminal proof.
+
+<!-- END ONE-SHOT CANDIDATE RESPONSE -->
 
 Observed result accounting
 

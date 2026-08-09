@@ -1,7 +1,14 @@
 Issue #21 independent adversarial skill-content review
 Reviewer: gpt-5.6-sol, high reasoning
 Scope: task-start e2f92efaa253793c01ec33cd711b27417c0da424 through the pre-evaluation Wayfinder candidate
+Reviewed identity: working-tree:678d20c54383bf087856f3063c064f16fc5fe0b713dd1f5dc5db3b6e257a04a3
 Disposition: one adversarial pass; read-only reviewer
+
+The reviewer did not record complete reviewed-file hashes. The identity binds
+the non-evaluation working tree, but it does not cryptographically bind exact
+fixture bytes. The later writing-for-agents fixture audit independently checks
+the corrected current fixtures; it is an acceptance audit, not another
+adversarial review.
 
 Critical
 

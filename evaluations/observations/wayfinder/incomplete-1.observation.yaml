@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-incomplete
 attempt: 1
 contextId: fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:45Z
 environment:
@@ -57,7 +57,7 @@ observed:
     - incomplete-destination
 rawEvidence:
   locator: evaluations/evidence/wayfinder/incomplete-1.txt
-  sha256: 795f991dbb6489556eb0123fdd3ce247ec58b60a0c95e76a506d5ff6e84c0e6c
+  sha256: 40260d885c281c85fb4578eb3629cb5416e7ab2023634b482fd3b778fad5a38c
 runtimeInputs:
   - role: skill
     locator: skills/wayfinder/SKILL.md

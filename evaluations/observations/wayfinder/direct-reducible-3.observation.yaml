@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: wayfinder-direct-reducible
 attempt: 3
-contextId: fresh-wayfinder-direct-reducible-20260809t123039z-luna-max-attempt-3-cddd58eb-0564-4bc6-80d3-431b798ed3d7
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+contextId: fresh-wayfinder-direct-reducible-20260809t132232z-luna-max-attempt-3-ac57129e-e545-49af-baa0-aee3f917ed09
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-09T12:30:39Z
+recordedAt: 2026-08-09T13:22:32Z
 environment:
   id: durable-center-planning
   capabilities:
@@ -34,16 +34,16 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: implement the replacement
-      evidence: The response performs no implementation or external effect and keeps the current process live.
+      evidence: "The response keeps the current process live, excludes destination execution, and records no external effect."
       observed: false
     - criterion: invoke companions without their owned uncertainty
-      evidence: Only Workflow, Wayfinder, and Research are invoked; Research owns the present missing external fact, while the other companions remain uninvoked.
+      evidence: "Only Workflow, Wayfinder, and Research are invoked; Research owns the present missing external fact and the other companions remain uninvoked."
       observed: false
     - criterion: claim all fog disappeared
-      evidence: The precise export-contract question remains on the frontier and is explicitly not treated as answered certainty.
+      evidence: "The precise export-contract question remains on the frontier and the response explicitly states that the documentation may not answer it."
       observed: false
     - criterion: create a second writable decision store
-      evidence: Canonical Outcome, Ticket, Evidence, and Continuation records remain the sole writable authority; the Map is explicitly only a derived view.
+      evidence: "The Map is explicitly a low-resolution derived view and canonical Outcome, Ticket, Evidence, and Continuation records remain the sole writable authority."
       observed: false
   invoked:
     - workflow
@@ -59,7 +59,7 @@ observed:
     - Specification
     - parent completion
   proof:
-    - the Map shows the coarse fog graduating only after source-bound Research into the precise question of whether the export contract exposes a stable per-visitor identifier and update semantics
+    - the Map shows the coarse fog graduating only after Research binds provider-integration/export-contract@provider-docs-r12 and sharpens it into the precise question of whether the export contract exposes a stable per-visitor identifier and update semantics
     - then exposes destination accepted decisions Strategy frontier blockers Evidence ownership and Continuation at exact result revision center-signin-r5
   responsibility:
     - Wayfinder owns the bounded map and strategy result while Workflow retains the parent Outcome
@@ -67,19 +67,25 @@ observed:
     - workflow-to-wayfinder-to-research-to-wayfinder-to-workflow
   state:
     - reducible-fog-routed
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/direct-reducible-3.txt
+  sha256: 108d7cc95de4e84ab21f31f4bd2b9d506e9f81873d61aaada8b2d795add293f8
 runtimeInputs:
   - role: skill
     locator: skills/wayfinder/SKILL.md
     sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
   - role: fixture
     locator: evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml
-    sha256: d2a66d086e83fa644c17e08d349a81d05f3cfe05821ad483d2fbe763b9ccb2d4
+    sha256: e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db
   - role: disclosed-reference
     locator: skills/wayfinder/references/map-and-strategy.md
     sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
   - role: disclosed-reference
     locator: evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md
-    sha256: 3da2696630b1c54cc7f910ae1823539166653362a8f4058c14122cd099569d91
+    sha256: ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md
+    sha256: 3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc
   - role: governing-skill
     locator: skills/thinking-in-systems/SKILL.md
     sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
@@ -98,6 +104,3 @@ runtimeInputs:
   - role: disclosed-reference
     locator: overlays/research/SKILL.md.patch
     sha256: 1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a
-rawEvidence:
-  locator: evaluations/evidence/wayfinder/direct-reducible-3.txt
-  sha256: eb8012797eeea502f3eb39e122ecbfc80dcab2c63a60b7b396ba3daef2a140de

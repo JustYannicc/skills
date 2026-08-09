@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-extension-constraint
 attempt: 2
 contextId: fresh-workflow-mid-extension-constraint-1db9f1f-20260806T181736Z-sol-high-2
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:17:36.000Z
 environment:

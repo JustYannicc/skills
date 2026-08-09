@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-edge-irreducible
 attempt: 2
 contextId: fresh-wayfinder-edge-irreducible-2-20260809t122942z-7f3c
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:42.000Z
 environment:
@@ -53,7 +53,7 @@ observed:
   state: [governed-remaining-fog]
 rawEvidence:
   locator: evaluations/evidence/wayfinder/edge-irreducible-2.txt
-  sha256: fbc390177655bca9abdee316cd5ef9dc7fd4da5c9aa6203bc7f0c77177db8e3a
+  sha256: 8eed81ea3fb463a99f534881bd31c8c5253b41b4279e69c69ea9fcb86a8c8d93
 runtimeInputs:
   - role: skill
     locator: skills/wayfinder/SKILL.md

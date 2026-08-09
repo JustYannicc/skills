@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: wayfinder-edge-no-git
 attempt: 1
 contextId: fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T12:29:28Z
 environment:
@@ -84,4 +84,4 @@ runtimeInputs:
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/wayfinder/edge-no-git-1.txt
-  sha256: 309370e9bf0c1ca1bc3cad7fe9bae8bf4ba85819a11d03982aae724173214cdf
+  sha256: a1271bd84831524f341271f773008658e51644674c9e2a96480db12954242c1f

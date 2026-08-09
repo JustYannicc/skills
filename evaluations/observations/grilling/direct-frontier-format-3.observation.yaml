@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-direct-frontier-format
 attempt: 3
 contextId: fresh-grilling-direct-frontier-format-sol-high-3-3e166a19-21a6-4c72-9a1d-964aea7862ff
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:51:27Z
 environment:

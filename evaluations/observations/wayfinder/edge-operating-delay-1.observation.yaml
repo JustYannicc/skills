@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: wayfinder-edge-operating-delay
 attempt: 1
-contextId: fresh-wayfinder-edge-operating-delay-luna-max-20260809t123134z-60647341-9198-480f-b998-ef8d3d6e5029
-suiteRevision: git:b94315c3acd25414cea7f2b861633ed9b181e504
+contextId: fresh-wayfinder-edge-operating-delay-luna-max-20260809t132208z-0a19c6ee-cc2c-4bda-a5bc-7c1f86b06ad1
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
 evaluator: gpt-5.6-luna-max-fresh-context
-recordedAt: 2026-08-09T12:31:34Z
+recordedAt: 2026-08-09T13:22:08Z
 environment:
   id: durable-pantry-observation
   capabilities:
@@ -17,30 +17,30 @@ environment:
   tools: [adapter, event-log]
 observed:
   actions:
-    - "classify arrival bunching as fog reducible only after operating"
-    - "preserve the four-event observation horizon and permitted low-volume route"
-    - "record the queue observations threshold owner Authority safe mode and recovery"
-    - "return the item to the decision frontier when the fourth event evidence is accepted"
+    - classify arrival bunching as fog reducible only after operating
+    - preserve the four-event observation horizon and permitted low-volume route
+    - record the queue observations threshold owner Authority safe mode and recovery
+    - record the trigger that will return the item to the decision frontier after fourth-event Evidence is accepted
   artifacts:
-    - "durable Wayfinder Map"
-    - "operating Strategy"
-    - "Continuation record"
+    - durable Wayfinder Map
+    - operating Strategy
+    - Continuation record
   effects: []
   forbiddenChecks:
-    - criterion: "call arrival bunching irreducible"
-      evidence: "The result explicitly classifies arrival bunching as reducible after four bounded operating events and explains why that differs from irreducible fog."
+    - criterion: call arrival bunching irreducible
+      evidence: The candidate classifies arrival bunching as operating-delay fog and ties it to four future events and an accepted Evidence trigger.
       observed: false
-    - criterion: "create a speculative immediate decision Ticket"
-      evidence: "No Ticket is created before the fourth accepted event; the precise timed-pickup item is added or updated only at the explicit frontier trigger."
+    - criterion: create a speculative immediate decision Ticket
+      evidence: No Ticket or frontier transition is claimed before fourth-event Evidence is accepted; creation or update is deferred to that trigger.
       observed: false
-    - criterion: "claim the four events ran"
-      evidence: "The event-log trace is [] and the response records only the future observation protocol; no pantry event was run."
+    - criterion: claim the four events ran
+      evidence: The candidate states that the events are future work and the event-log trace is []; no pantry event was run.
       observed: false
-    - criterion: "claim active monitoring"
-      evidence: "adapterContinuation=false and effects are disabled; the continuation is explicitly human-triggered and no scheduler, monitor, or ambient operation is claimed."
+    - criterion: claim active monitoring
+      evidence: Adapter Continuation is unavailable and the candidate names only a human-triggered check, with no scheduler, monitor, or ambient operation.
       observed: false
-    - criterion: "claim parent completion"
-      evidence: "Workflow retains the parent Outcome and terminal-proof duty; Wayfinder returns only its bounded Map, Strategy, and Continuation result."
+    - criterion: claim parent completion
+      evidence: The candidate returns the Map, Strategy, and Continuation to Workflow and states that parent completion has not occurred.
       observed: false
   invoked:
     - workflow
@@ -56,9 +56,9 @@ observed:
     - implementation
     - parent completion
   proof:
-    - "result revision pantry-pickup-r4 distinguishes operating-delay fog from irreducible fog and binds its horizon evidence protocol decision trigger permitted route safe mode recovery ownership Authority and exact resumption action"
+    - result revision pantry-pickup-r4 distinguishes operating-delay fog from irreducible fog and binds its horizon evidence protocol decision trigger permitted route safe mode recovery ownership Authority and exact resumption action
   responsibility:
-    - "Wayfinder owns the observation strategy while the event lead and Workflow retain operation and the parent Outcome"
+    - Wayfinder owns the observation strategy while the event lead and Workflow retain operation and the parent Outcome
   route:
     - workflow-to-wayfinder-operating-delay-to-workflow
   state:
@@ -72,7 +72,7 @@ runtimeInputs:
     sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
   - role: fixture
     locator: evaluations/fixtures/wayfinder/edge-operating-delay.fixture.yaml
-    sha256: 213d8eb9ea5b5bb78d15f0547bcf5acd3ff5294b138a4a51a80377027edb7b54
+    sha256: ee6a557dfe81ccbca14b58e088a72aa92937751c6d9d991c2a722c444a189cdf
   - role: disclosed-reference
     locator: evaluations/fixtures/wayfinder/runtime/operating-delay-state.md
     sha256: e0828c67173e8afc88674cb1c2be7b5026db03c12465dc18c6f0b78c3fdcecd1
@@ -85,6 +85,15 @@ runtimeInputs:
   - role: governing-skill
     locator: skills/workflow/SKILL.md
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
+  - role: disclosed-reference
+    locator: docs/UNIVERSAL_WORK_CONTRACT.md
+    sha256: f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3
+  - role: disclosed-reference
+    locator: skills/workflow/references/durable-mode.md
+    sha256: b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5
+  - role: disclosed-reference
+    locator: skills/workflow/references/continuation-template.md
+    sha256: dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e
 rawEvidence:
   locator: evaluations/evidence/wayfinder/edge-operating-delay-1.txt
-  sha256: 6f8ba5a4cef1393bcaba53537e72b75b27c3716c4fd28c56d00786ab77dc9f54
+  sha256: 4470be1d546d92cba955dce8c847cb23f200cd4fb953c970254d87023d5c3d9f
