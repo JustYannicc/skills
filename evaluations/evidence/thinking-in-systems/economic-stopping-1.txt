@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 ## Economic governance assessment
 
 **Disposition: accept the current candidate and stop additional feature delivery for now.** It already clears the agreed good-enough threshold. The three observed failure causes are a Pareto concentration hypothesis that should focus attention on the first fix and the remaining two causes; they are not an 80/20 rule, a claim of a Pareto improvement, or a reason to discard protected requirements.

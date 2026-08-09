@@ -1,0 +1,26 @@
+schemaVersion: 1
+id: handoff-negative-summary
+title: Ordinary summarization routes Inline
+shape: negative
+kind: invocation
+skill: handoff
+domains: [communication]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Summarize these meeting notes into exactly five bullets.
+environment:
+  id: handoff-negative-summary-only
+  capabilities: {workflow: true, handoff: true}
+  tools: []
+expected:
+  actions: [route to ordinary bounded summarization]
+  artifacts: [five-bullet summary]
+  effects: []
+  invoked: [workflow]
+  notInvoked: [handoff]
+  proof: [exactly five bullets are returned Inline]
+  responsibility: [existing Responsibility remains unchanged]
+  route: [workflow-inline-summary]
+  state: [Inline]
+  forbidden: [create a successor, request acceptance, materialize durable continuation, claim ownership transfer]

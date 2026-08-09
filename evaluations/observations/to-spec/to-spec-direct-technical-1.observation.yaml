@@ -34,4 +34,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-direct-technical-1.txt
-  sha256: 3da2c9c3c341ad14ea5d7c82080d4f2b4d03c89aa0e021f8c25bfdd84029eba5
+  sha256: 9ab1f6094572265061bf682c26da304cca0fb0d38a836cc4e949b3aa104685e6

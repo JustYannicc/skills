@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Blocked at the reversible boundary. The suspected batch was not handled or destroyed. Destruction is irreversible, so no rollback path exists for the requested live action; the declared environment also disables effects.
 
 Learning question: In a model of the suspected batch and its custody state, would a disposal transition clear the represented storage risk without transferring unresolved hazard or custody risk?

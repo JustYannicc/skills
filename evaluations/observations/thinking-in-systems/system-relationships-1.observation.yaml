@@ -34,4 +34,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/system-relationships-1.txt
-  sha256: d69082831d4dfec89876dac8c304963674b0a0d5cc31e89697d7f3a4dae78eed
+  sha256: 5b021eb8eb8d3bd67447dc20915e06b780f399cbfead19fa631ae8591c72e33f

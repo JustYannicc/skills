@@ -31,4 +31,4 @@ observed:
   state: [Accepted]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-supplemental-1.txt
-  sha256: 94ef4dd1bdd837f6a6d6d080e3a5f03888dfcf5426fc8e0cda2fd17143f457f2
+  sha256: d7f4cc57937724e87a05add37279717e7311f7fb17a6a34434d6177898b25a43

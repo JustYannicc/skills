@@ -31,4 +31,4 @@ observed:
   state: [accepted-reopened]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-correction-2.txt
-  sha256: 70e77cbaf6d0f8cae44cdc1497c6a9bd1b173fe862cd6b6e7a07dc251008d67f
+  sha256: 57bd7df2df8c39541296c706bcbc42b2f943d4ef3f667762f8465b7d8897821b

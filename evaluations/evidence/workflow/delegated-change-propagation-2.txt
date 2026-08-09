@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 C2 is an approved material Constraint change within the active O7 Workflow, not a clarification or a replacement Outcome. Preserve S5 as the baseline and create Specification revision S6. The S5 → S6 change proposal changes only the access-eligibility contract to C2; terminology and help content remain unchanged.
 
 Delegated impact map:

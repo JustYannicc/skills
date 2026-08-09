@@ -37,4 +37,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/framing-effect-1.txt
-  sha256: a7c193dad75d96274824f56a2b138490a77b86a8f06bc36b319f2ef1bca607b9
+  sha256: 85e86bc8cdd6978d92d44f031ec69368fd385ef6ca512ec7dceb9d9b17fcee29

@@ -1,0 +1,31 @@
+schemaVersion: 1
+fixtureId: implement-edge-required-supplemental-unavailable
+attempt: 1
+contextId: fresh-implement-edge-required-supplemental-unavailable-20260809-2
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+evaluator: sol-high-fresh-context
+recordedAt: 2026-08-09T13:07:34.000Z
+environment:
+  id: workflow-implement-required-supplemental-unavailable
+  capabilities: { workflow: true, implement: true, persistence: true, adapter: true, configured-supplemental: false, similar-sender: true, review: true }
+  tools: [selected canonical Adapter, similar installed sender]
+observed:
+  actions: [bind exact Ticket and effective required mapping, preflight exact Supplemental identity and availability, preserve Accepted state without Claim, record required Supplemental admission gap, create complete canonical Continuation]
+  artifacts: [Extension-point mapping record, required Supplemental capability gap, Continuation record]
+  effects: []
+  forbiddenChecks:
+    - { criterion: treat the required mapping as advisory, evidence: "The required mapping blocks admission while exact regulated-delivery@v3 is unavailable.", observed: false }
+    - { criterion: invoke the similar unmapped sender, evidence: "The installed similar sender is unmapped and was not invoked.", observed: false }
+    - { criterion: infer Authority from capability, evidence: "The similar sender's capability grants no Authority.", observed: false }
+    - { criterion: acquire a Claim, evidence: "The Ticket remains Accepted and unclaimed.", observed: false }
+    - { criterion: send or submit the notice, evidence: "No send effect or Review submission occurred.", observed: false }
+    - { criterion: complete the Ticket or parent Outcome, evidence: "Implementation remains incomplete; neither completion boundary was crossed.", observed: false }
+  invoked: [workflow, implement]
+  notInvoked: [unavailable regulated-delivery Supplemental, similar sender, send effect, Review submission, parent completion]
+  proof: [regulated-notice@t11 and regulated-notice@m5 remain exact, regulated-delivery@v3 availability is the observable unblock condition, first resumption action revalidates mapping Ticket Authority and revisions before claiming]
+  responsibility: [notice Work owner retains whole Ticket Responsibility, unavailable Supplemental receives no parent responsibility, Outcome owner retains parent completion]
+  route: [workflow-to-implement-to-required-supplemental-admission-gap]
+  state: [Accepted, Degraded]
+rawEvidence:
+  locator: evaluations/evidence/implement/implement-edge-required-supplemental-unavailable-1.txt
+  sha256: 04fb9581ee118f4eb27e267bd6167ad6766265addc024e6b9ca356363d9215ae

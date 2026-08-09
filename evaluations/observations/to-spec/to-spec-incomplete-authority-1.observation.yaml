@@ -37,4 +37,4 @@ observed:
   state: [Waiting for discovery]
 rawEvidence:
   locator: evaluations/evidence/to-spec/to-spec-incomplete-authority-1.txt
-  sha256: f89560eee576d9c01983fda7bcbb44c1d2889a23743e35e88276af212e0a0e98
+  sha256: ee2b057fbbd9816ef86a9961724b5cfa2df62eb9ec4dc9156078b83a712da407

@@ -17,6 +17,15 @@ The universal `to-spec` successor is an adapted public skill based on Matt Pococ
 
 The universal `to-tickets` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-tickets` at the same pinned revision. It retains complete tracer-bullet decomposition, dependency edges, frontier visibility, and owner acceptance while replacing codebase and tracker assumptions with the adapter-neutral Ticket contract; the full provenance record is in [`validation/repository.yaml`](../validation/repository.yaml).
 
+The universal `implement` successor is an adapted public skill based on Matt
+Pocock's `skills/engineering/implement` at the same pinned revision. It retains
+accepted-work execution, pre-agreed seam proof, Review submission,
+and an intentional exact result revision while replacing software-only tests,
+typechecking, code review, and commit assumptions with the universal Ticket,
+Authority, Evidence, waiting, delegation, effect, and Result-revision contract.
+The full retained-behavior and changed-assumption record is in
+[`validation/repository.yaml`](../validation/repository.yaml).
+
 ## Workflow Durable coordination
 
 The approved issue #14 implementation extends the original `workflow` skill
@@ -25,6 +34,14 @@ and the [System Record representation decision package](SYSTEM_RECORD_REPRESENTA
 These repository authorities define adapter-neutral meanings and the one
 writable System Record boundary; `skills/workflow/references/durable-mode.md`
 contains only the operational branch and capability matrix needed by Workflow.
+
+## Ask Yannic
+
+The candidate `ask-yannic` skill is an original route guide for issue #27. Its
+only routing authority is the current [Workflow routing contract](WORKFLOW_ROUTING.md)
+at the active suite revision. The skill interprets that source for one request;
+it does not cache its route table or add a source for Yannic's personal
+judgment.
 
 ## Thinking in Systems
 

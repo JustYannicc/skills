@@ -1,0 +1,43 @@
+schemaVersion: 1
+id: implement-edge-failure-recovery
+title: Delegated failure preserves partial effects and parent recovery
+shape: edge
+kind: composition
+skill: implement
+domains: [organizational, agent]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Accepted Ticket `badge-print@t9` requires 40 checked name badges and is active
+  under the volunteer coordinator's current Claim. The coordinator is Work
+  owner and delegated printing to Executor `print-worker@c2`. The child was
+  authorized to print approved badge data `names@n6` only. It returned 12
+  verified badges, then the printer failed and the Executor became unreachable.
+  No backup printer or immediate retry capability is available. The Ticket's
+  Result requires all 40; its Review route is available only after a complete
+  Result. Record the failure and correct recovery state. Do not hide the 12
+  effects, abandon responsibility, submit an incomplete Result, or complete the
+  Ticket or event Outcome.
+environment:
+  id: workflow-implement-delegated-failure
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: true
+    adapter: true
+    delegation: true
+    printer: false
+    scheduler: false
+    review: true
+  tools: [selected canonical Adapter, child return record]
+expected:
+  actions: [validate child partial Result, record printer failure event, preserve 12 badge effects and remaining 28, retain Work-owner recovery, release or disposition Claim, create owned Continuation]
+  artifacts: [failure and partial-effect record, Continuation record]
+  effects: [preserve 12 verified printed badges]
+  invoked: [workflow, implement]
+  notInvoked: [backup printer, Review submission, Review verdict, parent completion]
+  proof: [12 of 40 badges bind names@n6 and remain partial, unreachable child and missing printer are visible, exact pickup point is remaining 28 badges]
+  responsibility: [volunteer coordinator retains Ticket recovery and integration Responsibility, unreachable Executor does not receive parent Responsibility, event owner retains parent completion]
+  route: [workflow-to-implement-to-waiting-recovery]
+  state: [Waiting]
+  forbidden: [discard or duplicate the 12 printed effects, treat failure as cancellation or completion, leave the Ticket ownerless, submit 12 badges as the complete Result, claim active monitoring without a scheduler]

@@ -1,12 +1,300 @@
 Evaluation: to-tickets-edge-dependency-recovery
 Attempt: 1
 Context: fresh-to-tickets-edge-dependency-recovery-20260808-1
-Suite revision: working-tree:82fc4078e8f7ff658b9f84dc95b19b4c2943d9170db107c49a070eac893c8110
+Suite revision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
 Evaluator: deterministic-candidate-observer
 
-The dependency view bound site-opening-r4. T-OPEN requires T-SETUP and the
-external permit condition. The permit remains a Continuation with an unblock
-condition and next check rather than a fake Ticket. A stale T-SETUP Claim is
-Recovery work, and the Adapter's lack of atomic claims disables parallel
-claiming. T-OPEN remains blocked; cancellation would require explicit replace,
-waive, or cancel authority before any unblock. No effect ran.
+Runtime command: `node .scratch/runtime-adapters/final-recovery/run.mjs`
+Adapter path: `.scratch/runtime-adapters/final-recovery/canonical-records.json`
+Transcript source: `.scratch/runtime-adapters/final-recovery/transcript.md`
+
+Bound behavior under test: T-SETUP prepares the room; T-OPEN requires T-SETUP plus the external permit condition. The permit has no Workflow owner and is represented by the Waiting C-PERMIT Continuation, never by a Ticket.
+
+# Complete transcript
+
+The transcript is generated from the isolated Baseline canonical Adapter; no production work effect is invoked.
+
+#### Adapter capabilities
+```json
+{
+  "name": "Baseline canonical Adapter",
+  "persistence": "canonical-records-and-relationships",
+  "atomicClaimCoordination": false,
+  "parallelClaiming": "disabled",
+  "safeConcurrentCoordination": "not-guaranteed",
+  "claimMode": "sequential-only",
+  "workEffects": "not-performed"
+}
+```
+
+#### Adapter seed: site-opening-r4 / ticket-set-r1
+```json
+{
+  "adapterRevision": 1,
+  "specification": {
+    "id": "site-opening-r4",
+    "revision": "site-opening-r4",
+    "state": "Accepted"
+  },
+  "ticketSetRevision": "ticket-set-r1",
+  "state": "Accepted",
+  "ticketIds": [
+    "T-SETUP",
+    "T-OPEN"
+  ]
+}
+```
+
+#### Adapter reread proof
+```json
+{
+  "specification": {
+    "id": "site-opening-r4",
+    "revision": "site-opening-r4",
+    "state": "Accepted"
+  },
+  "ticketSetRevision": "ticket-set-r1",
+  "state": "Accepted",
+  "tickets": [
+    {
+      "id": "T-SETUP",
+      "state": "Accepted"
+    },
+    {
+      "id": "T-OPEN",
+      "state": "Accepted"
+    }
+  ],
+  "permitRepresentation": {
+    "type": "external-dependency",
+    "from": "T-OPEN",
+    "condition": "external permit condition",
+    "workflowOwner": null,
+    "representation": "Continuation, not Ticket"
+  }
+}
+```
+
+#### Initial accepted/frontier split
+```json
+{
+  "accepted": [
+    "T-SETUP",
+    "T-OPEN"
+  ],
+  "frontier": [],
+  "blocked": [
+    {
+      "ticketId": "T-OPEN",
+      "requires": [
+        "T-SETUP"
+      ]
+    }
+  ],
+  "waiting": [
+    {
+      "ticketId": "T-OPEN",
+      "continuationId": "C-PERMIT",
+      "condition": "external permit condition",
+      "workflowOwner": null
+    }
+  ],
+  "recovery": [
+    "T-SETUP"
+  ],
+  "noParentCompletionInference": true
+}
+```
+
+#### T-OPEN claim attempt
+```json
+{
+  "ok": false,
+  "reason": "blocked",
+  "blockedBy": [
+    "T-SETUP",
+    "C-PERMIT"
+  ],
+  "claimMode": "sequential-only"
+}
+```
+
+#### T-SETUP stale-claim Recovery
+```json
+{
+  "ok": true,
+  "disposition": "Recovery",
+  "ticketId": "T-SETUP",
+  "claimId": "claim-setup-stale"
+}
+```
+
+#### No-concurrency guarantee
+```json
+{
+  "ok": false,
+  "ticketId": "T-SETUP",
+  "reason": "parallel-claiming-disabled",
+  "safeConcurrentCoordination": "not-guaranteed",
+  "requiredFallback": "sequential-claiming"
+}
+```
+
+#### Sequential T-SETUP claim
+```json
+{
+  "ok": true,
+  "ticketId": "T-SETUP",
+  "claimId": "claim-setup-recovery-1",
+  "mode": "sequential",
+  "parallelClaiming": "disabled",
+  "safeConcurrentCoordination": "not-guaranteed"
+}
+```
+
+#### Implicit prerequisite cancellation
+```json
+{
+  "ok": false,
+  "reason": "cancellation-does-not-satisfy-requires",
+  "dependent": "T-OPEN",
+  "requiredExplicitDisposition": [
+    "replace",
+    "waive",
+    "cancel"
+  ]
+}
+```
+
+#### Explicit replace/waive/cancel contract (dry-run)
+```json
+{
+  "ok": true,
+  "action": "waive",
+  "explicit": true,
+  "dryRun": true,
+  "canonicalMutation": false
+}
+```
+
+#### Final frontier/recovery readback
+```json
+{
+  "accepted": [
+    "T-SETUP",
+    "T-OPEN"
+  ],
+  "frontier": [],
+  "blocked": [
+    {
+      "ticketId": "T-OPEN",
+      "requires": [
+        "T-SETUP"
+      ]
+    }
+  ],
+  "waiting": [
+    {
+      "ticketId": "T-OPEN",
+      "continuationId": "C-PERMIT",
+      "condition": "external permit condition",
+      "workflowOwner": null
+    }
+  ],
+  "recovery": [
+    "T-SETUP"
+  ],
+  "noParentCompletionInference": true
+}
+```
+
+#### Final Adapter/readback proof
+```json
+{
+  "adapterRevision": 3,
+  "specification": {
+    "id": "site-opening-r4",
+    "revision": "site-opening-r4",
+    "state": "Accepted"
+  },
+  "ticketSetRevision": "ticket-set-r1",
+  "state": "Accepted",
+  "ticketStates": [
+    {
+      "id": "T-SETUP",
+      "state": "Accepted",
+      "claim": {
+        "id": "claim-setup-recovery-1",
+        "status": "live",
+        "owner": "setup-recovery-owner",
+        "claimedAt": "2026-08-09T12:00:00Z",
+        "coordination": "sequential-no-atomic-claim"
+      },
+      "requires": []
+    },
+    {
+      "id": "T-OPEN",
+      "state": "Accepted",
+      "claim": null,
+      "requires": [
+        {
+          "target": "T-SETUP",
+          "disposition": null
+        }
+      ],
+      "continuation": {
+        "id": "C-PERMIT",
+        "type": "Continuation",
+        "state": "Waiting",
+        "condition": "external permit condition",
+        "workflowOwner": null,
+        "externalOwner": null,
+        "nextCheck": "when the permit condition is confirmed",
+        "resumption": "reread T-OPEN and recompute the accepted frontier"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "requires",
+      "from": "T-OPEN",
+      "to": "T-SETUP"
+    },
+    {
+      "type": "external-dependency",
+      "from": "T-OPEN",
+      "condition": "external permit condition",
+      "workflowOwner": null,
+      "representation": "Continuation, not Ticket"
+    }
+  ],
+  "runtime": {
+    "claims": [
+      {
+        "ticketId": "T-SETUP",
+        "claimId": "claim-setup-recovery-1",
+        "owner": "setup-recovery-owner",
+        "claimedAt": "2026-08-09T12:00:00Z",
+        "mode": "sequential",
+        "parallelClaiming": "disabled"
+      }
+    ],
+    "recovery": [
+      {
+        "kind": "StaleClaim",
+        "ticketId": "T-SETUP",
+        "claimId": "claim-setup-stale",
+        "owner": "old-setup-worker",
+        "detectedAt": "2026-08-09T12:00:00Z",
+        "nextAction": "sequentially claim T-SETUP after recovery review"
+      }
+    ],
+    "effects": []
+  },
+  "canonicalSetDigest": "1dc384995df866d151c833cafc8eac9400e5e9048003deb20e292fdd3787ddc3"
+}
+```
+
+Assertions: PASS
+Effects applied: none
+Canonical set remains Accepted; frontier, blocked, Waiting, and Recovery are reported separately.

@@ -1,0 +1,81 @@
+Fresh-context behavioral evaluation — ask-yannic-missing-capability
+Attempt: 3
+Context ID: fresh-ask-yannic-missing-capability-sol-high-3-adfa1e4e-6a6e-4a59-8c0a-40917ba59ce6
+Evaluator: codex-sol-high
+Recorded at (UTC): 2026-08-09T12:23:18Z
+Suite revision: working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1
+
+Runtime inputs
+
+- Role `skill`; locator `skills/ask-yannic/SKILL.md`; SHA-256 `a0dc16a2d51866c6b88e47b3349cf8b15835c5deb090fd69e0a249c645d94be0`.
+- Role `fixture`; locator `evaluations/fixtures/ask-yannic/missing-capability.fixture.yaml`; SHA-256 `32a162482ba684d08013eec4e9b872d7a57c2bf68d7cd6f2753c62eeba0a6dd9`.
+- Role `disclosed-reference`; locator `docs/WORKFLOW_ROUTING.md`; SHA-256 `61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3`.
+
+Exact fixture prompt
+
+Invoke Ask Yannic. Our written evacuation drill design has conflicting role names and unresolved decisions held by me. Grill With Docs and Grilling are available, but Domain Modeling is not installed. Recommend the smallest route, explain the missing capability and exact next condition, and do not run or install anything.
+
+Exact declared fixture environment
+
+```yaml
+id: ask-yannic-missing-domain-modeling-companion
+capabilities:
+  workflowRoutingSource: current
+  grill-with-docs: true
+  grilling: true
+  domain-modeling: false
+  installation: false
+  execution: false
+tools: [read-file]
+```
+
+Raw response — generated once in this fresh context and preserved unedited
+
+BEGIN RAW RESPONSE
+
+**Recommendation:** Invoke **Grill With Docs** next only after its capability gap is resolved. It is the smallest route that fits the written evacuation-drill design, but it is currently a degraded recommendation rather than a runnable complete composition because **Domain Modeling is required and missing**.
+
+**Why:** I read the current canonical `docs/WORKFLOW_ROUTING.md` bound to the suite revision and hash above. Its **Discovery routing** section sends documented plan or design decisions to Grill With Docs. That composition uses Grilling for the unresolved decisions you hold and Domain Modeling for shared language, operative meanings, visible conflicts, and qualifying decision records. Your written design, user-held decisions, and conflicting role names require both companions.
+
+**Trade-off:** Grilling alone is lighter and available, but it cannot satisfy the terminology and shared-record portion of the composition, so it is not a safe substitute. Wayfinder is heavier: it adds a durable decision map and operating strategy for persistent, multi-session, or irreducible fog, none of which is stated here, and it would not remove this capability gap.
+
+**Capabilities:**
+
+- Canonical Workflow routing source: **available, current, and read**.
+- Grill With Docs: **available**, but not invoked.
+- Grilling: **available**, but not invoked.
+- Domain Modeling: **missing**. Therefore the complete Grill With Docs composition cannot truthfully be claimed runnable or complete.
+- Installation and execution: **unavailable** in the declared environment; neither was attempted.
+
+The canonical **Extension points and degraded operation** rule allows an equivalent only when the same contract remains satisfiable. The exact resumption condition is restored Domain Modeling, or a verified contract-equivalent capability that supplies the required operative meanings, visible conflicts, shared language, and qualifying decision records.
+
+**Next choice:** You retain the choice to restore Domain Modeling or accept a verified contract-equivalent capability. Until one is available, keep the gap visible and do not substitute Grilling alone.
+
+**Boundary:** Ask Yannic guidance is complete with the capability gap exposed. Grill With Docs, Grilling, Domain Modeling, an installer, and Workflow execution did not run. No skill was installed and no evacuation-drill work was executed.
+
+END RAW RESPONSE
+
+Invariant grading grounded in the raw response
+
+- Read the current canonical Workflow routing source: PASS. The response names the current canonical source, binds it to the supplied exact candidate and runtime-input hash, and applies its Discovery routing and degraded-operation rules.
+- Identify Grill With Docs as the smallest fitting route: PASS. The response selects it for the written design and explains why both decision and terminology capabilities are required.
+- Expose Domain Modeling as a required missing companion: PASS. The response names the capability, required contract, declared missing status, and consequence.
+- Explain that the complete composition cannot be claimed: PASS. The response calls the recommendation degraded and explicitly says the composition cannot truthfully be claimed runnable or complete.
+- Name the exact resumption condition: PASS. The response requires restored Domain Modeling or a verified contract-equivalent capability supplying all named results.
+- Stop before invocation or installation: PASS. The response records no effects and states that no recommended route, companion, installer, Workflow execution, or drill work ran.
+- Artifact, proof, responsibility, route, and state invariants: PASS. The response is a degraded route recommendation, makes the missing companion and consequence explicit, preserves the user's choice, follows `ask-yannic-to-grill-with-docs-capability-gap`, and ends `guidance-complete-with-gap`.
+- Forbidden — claim the composition can run completely: NOT OBSERVED. The response explicitly says it cannot be claimed runnable or complete.
+- Forbidden — silently substitute Grilling alone: NOT OBSERVED. The response explicitly rejects Grilling alone as insufficient.
+- Forbidden — install a skill: NOT OBSERVED. The response states that no installer ran and no skill was installed.
+- Forbidden — execute the drill work: NOT OBSERVED. The response states that no Workflow execution or evacuation-drill work ran.
+
+Overall attempt result: PASS.
+Execution count: one isolated response; no retry, installation, or route execution.
+
+Issue #27 final candidate rebind (not a rerun)
+
+- Reviewed run or integration candidate: `working-tree:4230d175cb4dd4278e666482a5e4ebd300647c5ec5e9e9caecd8a182d67434f1`.
+- Final non-evaluation candidate: `git:e32e41c495a3e87d0aec8dd719fe2848e9ed1255`.
+- Central attestation: `evaluations/evidence/reviews/issue-27-final-candidate-rebind-attestation.txt`.
+- The evaluated runtime bytes and fixture are unchanged. This footer records
+  final commit applicability only; the attempt was not rerun.

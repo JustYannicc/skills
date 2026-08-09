@@ -1,0 +1,36 @@
+Issue #21 candidate evidence-rebind attestation
+Attested at: 2026-08-09
+Prior candidate: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+Wayfinder candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
+
+This is an exact-candidate identity rebind for the 216 pre-existing behavioral
+observations. It is not a claim that those attempts were rerun. Their original
+context IDs, timestamps, observed behavior, and fixture bindings remain intact.
+
+Runtime equivalence proof
+
+- The 216 observations name 21 unique in-repository runtime-input locators.
+- `git diff --quiet
+  4233758023b9d47a92b72311ef945d902d1c9d6d..6b809baa082875b45b5895d471d6ab63a499f399
+  -- <the 21 existing runtime-input locators>` exited 0.
+- The candidate delta under `skills/` and `evaluations/fixtures/` consists only
+  of the new Wayfinder skill, its metadata/reference, its fixtures/runtime
+  states, and the skills index entry. No runtime input used by an existing
+  observation changed.
+
+Mechanical rebind
+
+- All 216 existing observation `suiteRevision` values were changed from the
+  prior candidate to the Wayfinder candidate.
+- Twenty-nine raw evidence files named the prior candidate. Only that exact
+  candidate string was replaced; the corresponding observation
+  `rawEvidence.sha256` values were recomputed from the changed bytes.
+- A repository search found zero remaining references to the prior candidate
+  in observations or their referenced raw evidence after the rebind. Historical
+  review/attestation records for earlier issues retain the exact revisions they
+  originally reviewed.
+
+The fresh Wayfinder attempts are separate evidence generated against the new
+candidate. Any later non-evaluation change invalidates this attestation and
+requires another truthful rebind or fresh behavioral proof. This attestation
+does not approve, publish, merge, or close issue #21.

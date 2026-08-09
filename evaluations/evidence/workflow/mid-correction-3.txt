@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 This is a **Correction** within the active Outcome O2, governed by Thinking in Systems inside the existing Workflow. It is not a new Outcome.
 
 Append this correction event to the durable history, linked to M4:

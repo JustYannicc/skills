@@ -39,4 +39,4 @@ observed:
   state: [core-verdict-ready-with-advisory-failure]
 rawEvidence:
   locator: evaluations/evidence/prototype/advisory-technical-supplemental-failure-1.txt
-  sha256: c6cb56fb5ff8baa928696203e709ce03f16e7a2e0e470fb5d159277c1c390b9f
+  sha256: c6fe0fc9a4fc61cfaf40107203de02dde9ce36ec3bc3b403ebd334479d8fa357

@@ -40,4 +40,4 @@ observed:
   state: [waiting-for-record-access]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/incomplete-adapter-1.txt
-  sha256: 76b048a8d547b8cda1e2ce049647f9a64ca04a7b507fc309a7d89016a65f57d1
+  sha256: d1ce9bf33ff82b5f453a319f290409ceac8aad2910a22122f55ca3b1b533d258

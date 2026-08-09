@@ -25,4 +25,4 @@ observed:
   state: [active-with-successor]
 rawEvidence:
   locator: evaluations/evidence/workflow/accepted-transfer-1.txt
-  sha256: 0844f08d9e19a9c626db0fc234cf47c1a2508020bc9718c7b851a551f7f7b3bf
+  sha256: 7e5d9297d8f9fdc89e7c704119728777db644effe2f56cf46e6dc1b5b23fd4d4

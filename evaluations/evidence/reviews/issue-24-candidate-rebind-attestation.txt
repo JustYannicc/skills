@@ -1,0 +1,45 @@
+Issue #24 candidate evaluation-rebind attestation
+
+Candidate identity: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+Task-start main: e2f92efaa253793c01ec33cd711b27417c0da424
+Prior integrated observation identity: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+Date: 2026-08-09
+
+Verdict: the 216 pre-existing observation attempts remain behaviorally
+applicable to this candidate. The candidate adds the Implement package, its
+public registry and documentation entries, and its evaluation family. A path
+comparison against task-start main reports no change under the seven previously
+implemented skill packages.
+
+Mechanical rebind:
+
+- 169 observation files differ from task-start main by
+  exactly one removed and one added line: `suiteRevision` advances from the
+  prior integrated identity to this candidate. Prompts, context IDs,
+  timestamps, evaluators, observed arrays, forbidden checks, and raw hashes are
+  unchanged.
+- 47 Domain Modeling, To Spec, and To Tickets observation files change
+  `suiteRevision` plus the raw evidence hash. Their 47 raw records change only
+  the candidate identity text
+  required by the deterministic runtime-evidence check. Runtime input locators
+  and hashes, prompts, behavior, evidence claims, contexts, timestamps, and
+  observed arrays are unchanged.
+- All 18 Implement attempts are fresh Sol High contexts produced after the
+  adversarial-review fixes. They cover 16 fixtures: three communication
+  attempts plus organizational, physical, agent, software, failure, waiting,
+  delegation, Inline, pre-effect, revision-change, Claim-expiry,
+  partial-transition, missing-capability, required-Supplemental, incomplete,
+  and negative behavior.
+- The Implement responses evaluated the committed skill, references, fixture
+  prompts, and runtime metadata. Their final bind advances identity text and
+  evidence hashes from checked content identity
+  `working-tree:9753eba503036120e09e1bc4de566dfeebb76e401c0c860989d2e23dde0a5223`
+  to the content-equivalent non-evaluation commit above. No model runtime input
+  changed. Context IDs and evaluator identities remain exact and unique.
+
+This attestation binds historical evidence to an integration candidate; it is
+not a claim that the 216 prior attempts were rerun. A later model-runtime input
+change requires fresh proof. A later non-evaluation documentation-only change
+requires a new truthful identity attestation. This record does not approve,
+merge, publish, close issue #24, complete its Ticket, or complete parent issue
+#1.

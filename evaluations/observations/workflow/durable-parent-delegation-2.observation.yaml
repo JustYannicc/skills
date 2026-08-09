@@ -38,4 +38,4 @@ observed:
   state: [children-complete-parent-verified-or-reopened]
 rawEvidence:
   locator: evaluations/evidence/workflow/durable-parent-delegation-2.txt
-  sha256: 0872a1ef447597f771a91795b713c41ce87ac438611d7de0ce5b4f75fc40955a
+  sha256: 059004f25e9f367a214b56f0b31c061a2d5d2a45055f6d3750271089e26475fb

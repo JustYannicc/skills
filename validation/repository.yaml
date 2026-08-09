@@ -1,5 +1,27 @@
 schemaVersion: 2
 skills:
+  - name: implement
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/engineering/implement/SKILL.md]
+      retainedBehavior:
+        - Execute accepted work from its governing Specification or Tickets rather than improvising a new contract.
+        - Prove the result repeatedly at pre-agreed seams during execution and once at the complete result boundary.
+        - Submit completed execution to Review instead of treating implementation activity as verification.
+        - Preserve intentional versioning rather than handing off an accidental mutable latest state.
+      changedAssumptions:
+        - Replace software-only typechecking, test-suite, code-review, and Git-commit requirements with universal Proof seams, Evidence references, Review, and medium-appropriate exact Result revisions.
+        - Admit only one accepted, unblocked, currently owned Ticket with verified Authority, dependencies, Proof seam, Specification revision, Ticket revision, and baseline Result revision.
+        - Execute communication, organizational, physical, agent, software, and other bounded work through domain-appropriate capabilities without changing the universal Ticket contract.
+        - Permit bounded delegated Executors while the Work owner retains Ticket Responsibility, validates child evidence, integrates one usable Result, and owns recovery.
+        - Invoke only user-selected Supplemental skills configured at the governed `workflow.implementation` Extension point while Implement retains the Ticket Result and completion boundary.
+        - Preserve failure as an event and waiting as owned Continuation state, including honest Degraded behavior when a required execution, proof, persistence, or Review capability is unavailable.
+        - Separate preparation, approval, authorized effects, real-effect evidence, Review submission, Ticket completion, and parent Outcome completion.
+        - Mint the immutable universal Result revision before Review so all proof, effects, and intake bind the same target; upstream performed code review before committing its final software revision.
+        - Enable model invocation so Workflow can route accepted Tickets into Implementation automatically.
   - name: review
     provenance:
       strategy: original
@@ -22,6 +44,25 @@ skills:
         - Universal experiment shapes replace framework, route, terminal, and implementation-specific instructions while preserving question-first branch selection.
         - The configured technical-prototype Supplemental Extension point may own bounded technical construction, while core Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion.
         - Proof seams, Result revisions, Authority, Degraded mode, evidence delays, and live-effect boundaries follow the Thinking in Systems standard.
+  - name: wayfinder
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/engineering/wayfinder/SKILL.md]
+      retainedBehavior:
+        - Name the destination before charting the route and keep out-of-scope work distinct from in-scope fog.
+        - Use a low-resolution Map as an index over canonical decision records rather than duplicating their detail.
+        - Separate precise decision questions from not-yet-specifiable fog, then graduate fog only as the frontier sharpens.
+        - Keep blockers, an unblocked decision frontier, bounded decision work, and cross-session continuation visible while planning remains distinct from destination execution.
+      changedAssumptions:
+        - Replace repository, issue-tracker, label, child-issue, assignee, branch, and fixed-session assumptions with adapter-neutral Outcome, Ticket, Claim, Evidence, and Continuation records.
+        - Make Wayfinder model-invoked for persistent, multi-session, or irreducible fog and invoke companion capabilities only when their owned uncertainty is present.
+        - Treat the Map as a derived navigation view while the selected Adapter preserves one writable canonical source for each decision and work record.
+        - Support reducible, operating-delay, and irreducible fog through an operating Strategy with observation triggers, thresholds, safe modes, feedback, reversibility, recovery, ownership, and Authority.
+        - Complete when the next route is truthfully specifiable or remaining fog is governed, rather than requiring every uncertainty or Ticket to disappear.
+        - Make Git, hosted trackers, safe concurrency, and executable scheduling optional Adapter capabilities with visible Degraded behavior when absent.
   - name: thinking-in-systems
     provenance:
       strategy: adapted

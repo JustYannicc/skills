@@ -1,0 +1,5 @@
+interface:
+  display_name: "Wayfinder"
+  short_description: "Navigate persistent fog with a decision Map and Strategy"
+policy:
+  allow_implicit_invocation: true

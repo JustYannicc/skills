@@ -54,4 +54,4 @@ observed:
     - waiting-for-frontier-answers
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/direct-composition-2.txt
-  sha256: 1a2aab7a6ff18a4de163ae62c74d772419a2287528ee8cb9d37a31ff19829dc8
+  sha256: ae86a5fcc368ede65ff4590d0b3e848b7db5a1991daa4d166898a6322e423094

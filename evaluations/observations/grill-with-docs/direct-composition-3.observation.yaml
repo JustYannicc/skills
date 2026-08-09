@@ -43,4 +43,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/direct-composition-3.txt
-  sha256: 854c26136fa99999203d576d4955fe26fcfa986acd885a99731fb590226809a3
+  sha256: d19997130efcb20c484302ae502f8becbed5ce8b3cf856f5de8151356c53cb01

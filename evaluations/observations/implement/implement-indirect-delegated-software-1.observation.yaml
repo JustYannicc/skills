@@ -1,0 +1,30 @@
+schemaVersion: 1
+fixtureId: implement-indirect-delegated-software
+attempt: 1
+contextId: fresh-implement-indirect-delegated-software-20260809-r3-1
+suiteRevision: git:fd4a6732c00faa703eb563fefe8f08a647ba4804
+evaluator: sol-high-fresh-context
+recordedAt: 2026-08-09T12:55:05.000Z
+environment:
+  id: workflow-implement-delegated-software
+  capabilities: { workflow: true, implement: true, persistence: true, adapter: true, atomic-claims: true, delegation: true, repository: true, test-runner: true, review: true }
+  tools: [selected canonical Adapter, delegated agent executor, repository, test runner, Review submission route]
+observed:
+  actions: [bind accepted Ticket and baseline revision, claim Ticket, delegate bounded child contracts, validate child Result and proof revisions, integrate one repository Result, submit exact revision to Review]
+  artifacts: [bounded Executor contracts, integrated software Result, revision-bound Review submission]
+  effects: [modify named API module and focused tests]
+  forbiddenChecks:
+    - { criterion: delegate an unbounded Ticket, evidence: "Both child contracts fixed revisions, scope, Authority, proof, failure, and return.", observed: false }
+    - { criterion: let child completion transfer Work-owner Responsibility, evidence: "The principal validated and integrated both returns and retained recovery.", observed: false }
+    - { criterion: accept stale child evidence, evidence: "Proof was accepted only for the exact integrated repository Result.", observed: false }
+    - { criterion: deploy the change, evidence: "Deployment remained excluded and unperformed.", observed: false }
+    - { criterion: claim tests are the Review verdict or parent proof, evidence: "Checks were Ticket-seam evidence only; no verdict or parent proof was asserted.", observed: false }
+  invoked: [workflow, implement, delegated Executors]
+  notInvoked: [deployment, Review verdict, parent completion]
+  proof: [public retry-status API preserves action identity and exposes next legal action, focused and affected package checks bind the integrated Result revision]
+  responsibility: [principal agent retains Work-owner integration and recovery Responsibility, Executors own only bounded returns, Outcome owner retains parent completion]
+  route: [workflow-to-implement-to-review]
+  state: [In review]
+rawEvidence:
+  locator: evaluations/evidence/implement/implement-indirect-delegated-software-1.txt
+  sha256: 63e28dd659286b4d2da7db0d03e5320966bc36a62ac9801a7bd663a1b5e3d9cc

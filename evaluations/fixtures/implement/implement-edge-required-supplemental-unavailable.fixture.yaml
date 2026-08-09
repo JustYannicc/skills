@@ -1,0 +1,40 @@
+schemaVersion: 1
+id: implement-edge-required-supplemental-unavailable
+title: Unavailable required implementation Supplemental blocks admission
+shape: edge
+kind: routing
+skill: implement
+domains: [communication, agent]
+severity: Major
+requiredAttempts: 1
+prompt: >-
+  Workflow supplies accepted Ticket `regulated-notice@t11`, exact approved copy
+  `regulated-notice@m5`, complete Authority, dependencies, and Proof seam.
+  Effective configuration requires Supplemental skill
+  `regulated-delivery@v3` at `workflow.implementation` before the notice may be
+  sent, but that exact pinned skill is unavailable. A similar installed sender
+  is not mapped. Persistence is available and the Ticket has no Claim. Preserve
+  the accepted Ticket and exact work honestly without sending, substituting,
+  submitting to Review, or completing anything.
+environment:
+  id: workflow-implement-required-supplemental-unavailable
+  capabilities:
+    workflow: true
+    implement: true
+    persistence: true
+    adapter: true
+    configured-supplemental: false
+    similar-sender: true
+    review: true
+  tools: [selected canonical Adapter, similar installed sender]
+expected:
+  actions: [bind exact Ticket and effective required mapping, preflight exact Supplemental identity and availability, preserve Accepted state without Claim, record required Supplemental admission gap, create complete canonical Continuation]
+  artifacts: [Extension-point mapping record, required Supplemental capability gap, Continuation record]
+  effects: []
+  invoked: [workflow, implement]
+  notInvoked: [unavailable regulated-delivery Supplemental, similar sender, send effect, Review submission, parent completion]
+  proof: [regulated-notice@t11 and regulated-notice@m5 remain exact, regulated-delivery@v3 availability is the observable unblock condition, first resumption action revalidates mapping Ticket Authority and revisions before claiming]
+  responsibility: [notice Work owner retains whole Ticket Responsibility, unavailable Supplemental receives no parent responsibility, Outcome owner retains parent completion]
+  route: [workflow-to-implement-to-required-supplemental-admission-gap]
+  state: [Accepted, Degraded]
+  forbidden: [treat the required mapping as advisory, invoke the similar unmapped sender, infer Authority from capability, acquire a Claim, send or submit the notice, complete the Ticket or parent Outcome]

@@ -34,4 +34,4 @@ observed:
   state: [ready-for-workflow-delegation]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/one-time-handoff-1.txt
-  sha256: ee63dca55e6dd9c76a6a5cc6a460e52d370e4dd59e9ce94dc085c1020fe7e541
+  sha256: 80cf334819599e3b4efbf65f3c4bef5ccb38944f96cad8d7b2e26d2ac9b9a805

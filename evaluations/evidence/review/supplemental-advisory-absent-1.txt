@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 context: final-sol-review-supplemental-advisory-absent-1
 evaluator: final-sol
 suite: git:fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13

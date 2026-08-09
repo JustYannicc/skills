@@ -25,4 +25,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/edge-1.txt
-  sha256: 4c45bff3bb4247daea5f1d4a5fc200d156dd23461ef506c6cacd96d770bca863
+  sha256: 4ed4a7790f10362c65eb0b4a08df61e6382837c796f7d7d365047ce9ef9c16ff

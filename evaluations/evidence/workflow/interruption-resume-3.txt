@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 I classify the new message as an **unrelated switch**. Outcome O8 is now paused with a continuation before I address the other question. I did not perform the door-controller effect.
 
 ## O8 continuation

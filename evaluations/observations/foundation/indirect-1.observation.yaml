@@ -25,4 +25,4 @@ observed:
   state: [ready-for-decision]
 rawEvidence:
   locator: evaluations/evidence/foundation/indirect-1.txt
-  sha256: d6a48ddcd7e10c5c2f7c3945530d1d6da0bb982a7a5b08a263a3a19c5941ad37
+  sha256: f3f9ed970274d54060f5948de780e2e067fddfb518d210ccd6803c55965bcc80

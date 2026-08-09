@@ -32,4 +32,4 @@ observed:
   state: [waiting-for-question]
 rawEvidence:
   locator: evaluations/evidence/prototype/incomplete-1.txt
-  sha256: b6efdf276428d803d5f87b3d9036fb38ddc7943ba57d9d29415d8fdbb1c4a47b
+  sha256: f784550f6a3412c1e4d046ead12588f3d4cce9964ce2aedcd8b5a4eb872c90ef

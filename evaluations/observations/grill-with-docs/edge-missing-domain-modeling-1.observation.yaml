@@ -41,4 +41,4 @@ observed:
   state: [waiting-for-domain-modeling-capability]
 rawEvidence:
   locator: evaluations/evidence/grill-with-docs/edge-missing-domain-modeling-1.txt
-  sha256: 1731461315bd8e62bd6f2fb86ca3b257286f1033a9713b9bcd51436e7efbd344
+  sha256: d07b58dc8dc8d58f7c2d59439fc0118fa7989db0ae88d8482e76b21a4ad138fc

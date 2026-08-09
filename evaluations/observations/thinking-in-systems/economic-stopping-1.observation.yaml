@@ -37,4 +37,4 @@ observed:
   state: [ready-for-workflow-decision]
 rawEvidence:
   locator: evaluations/evidence/thinking-in-systems/economic-stopping-1.txt
-  sha256: 5170c303ca98a20c275bdb7069e96c99bfa75a09538226ee74f6fb25ed601534
+  sha256: d62f5e968125542b9f67a5546f6304471f630de99ddb0d64fd07b9188495fb3c

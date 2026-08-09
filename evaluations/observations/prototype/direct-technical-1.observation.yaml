@@ -36,4 +36,4 @@ observed:
   state: [verdict-ready-for-workflow]
 rawEvidence:
   locator: evaluations/evidence/prototype/direct-technical-1.txt
-  sha256: b98bdbaa08245e9e7919f45ad3e15b7af9622cfb73b7138025f831335a263ca5
+  sha256: ff49e4f2a6ee02bb752963b45f98c281c15615895913fa432c18ec2157f123af

@@ -69,6 +69,18 @@ To Tickets decomposes an accepted Specification into a collectively complete set
 
 Review independently verifies any exact result against its accepted Specification and governing standards at the Proof seam. It shows how the result works, keeps Specification and Standards evidence distinct, checks interaction quality and maintainability across domains, and integrates only configured Supplemental reviewers before returning one revision-bound Verified, Changes required, or Inconclusive verdict. Yannic approved issue #25; publication still depends on the composed-suite release proof.
 
+### [Implement](skills/implement) — candidate; human review required
+
+Implement carries one accepted, unblocked Ticket through authorized execution
+to an exact usable Result and submits that revision with available effect
+evidence to Review. It verifies Authority, dependencies, Proof seam, and
+current revisions before action; permits bounded delegated Executors while the
+Work owner retains integration and recovery Responsibility; integrates only
+Supplemental skills configured at `workflow.implementation`; and preserves
+truthful waiting when a required capability or external dependency is absent.
+Submission moves only the Ticket to In review. Review, Ticket completion,
+parent integration, and parent Outcome completion remain outside this phase.
+
 ### [Prototype](skills/prototype) — approved
 
 Prototype answers one material design question through a reversible experiment.
@@ -88,6 +100,15 @@ unknowns, records accepted decisions through the selected Adapter when they
 must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
+
+### [Ask Yannic](skills/ask-yannic) — candidate
+
+Ask Yannic is an explicit route guide for choosing the smallest applicable
+Workflow route. It reads Workflow's canonical routing source at the active
+suite revision, explains the recommendation and its trade-offs, exposes stale
+sources or missing capabilities, and stops before invoking any route. It does
+not maintain its own routing model or represent Yannic's personal judgment for
+coworkers; that separate capability remains deferred.
 
 ## Planned suite
 
