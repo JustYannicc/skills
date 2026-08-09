@@ -15,13 +15,13 @@ environment:
   capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
   tools: [selected Adapter, shared program records, current owner confirmations]
 expected:
-  actions: [join the active Workflow context, invoke Migrate System automatically before ordinary change work, bound mapping to the purchase and delivery scope affected by the proposal, inventory actual current state with source-bound provenance, verify the integrated map at current operating seams, return the second-approval proposal to ordinary Workflow]
+  actions: [join the active Workflow context, invoke Migrate System automatically before ordinary change work, bound mapping to the purchase and delivery scope affected by the proposal, inventory actual current state with source-bound provenance, submit the exact integrated map revision to Review, return the second-approval proposal to ordinary Workflow]
   artifacts: [canonical current-state records plus a derived map, separate discovered-change proposal]
   effects: [representation and coordination state only]
-  invoked: [thinking-in-systems, workflow, migrate-system]
+  invoked: [thinking-in-systems, workflow, migrate-system, review]
   notInvoked: [separate migration lifecycle, repair or redesign during migration]
-  proof: [material owners active work supplier waits authority interfaces and evidence are represented at an exact revision, requested approval-stage change remains unperformed]
+  proof: [material owners active work supplier waits authority interfaces and evidence are represented at an exact revision, Verified Review verdict is bound to that exact map revision, requested approval-stage change remains unperformed]
   responsibility: [migration owner integrates and verifies the bounded map, Workflow retains parent Outcome responsibility]
   route: [automatic-conformance-migration, ordinary-workflow-change]
   state: [migration-map-verified, parent-outcome-active]
-  forbidden: [perform or approve the second purchase-approval stage during current-state mapping, treat the migration result as parent Outcome completion]
+  forbidden: [perform or approve the second purchase-approval stage during current-state mapping, treat Changes required or Inconclusive Review as a verified map, treat the migration result as parent Outcome completion]

@@ -15,13 +15,13 @@ environment:
   capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
   tools: [selected Adapter, whiteboard observation, shared note revision, household actor confirmations]
 expected:
-  actions: [join the active Workflow context, preserve existing terms artifacts and observed practice, crosswalk meanings to the universal contract without renaming away conflicts, map ownerless recurring work as an actual gap rather than assigning it, verify source provenance and visible uncertainty]
+  actions: [join the active Workflow context, preserve existing terms artifacts and observed practice, crosswalk meanings to the universal contract without renaming away conflicts, map ownerless recurring work as an actual gap rather than assigning it, submit the exact nonconforming map revision to Review]
   artifacts: [canonical current-state records with nonconformance crosswalk, derived map with done conflict and ownerless-work gap]
   effects: [representation and coordination state only]
-  invoked: [thinking-in-systems, workflow, migrate-system]
+  invoked: [thinking-in-systems, workflow, migrate-system, review]
   notInvoked: [routine repair, terminology decision, responsibility assignment]
-  proof: [both done meanings and their sources remain visible, recurring chores remain truthfully unowned]
+  proof: [Verified Review verdict binds the exact map revision, both done meanings and their sources remain visible, recurring chores remain truthfully unowned]
   responsibility: [migration owner verifies represented reality, Workflow owns any later cleanup Outcome]
   route: [nonconforming-current-state-mapping, ordinary-workflow-follow-up]
   state: [nonconformance-visible, discovered-changes-proposed]
-  forbidden: [standardize done or assign chore owners during migration, rewrite historical records to look conforming]
+  forbidden: [standardize done or assign chore owners during migration, rewrite historical records to look conforming, complete on Changes required or Inconclusive Review]

@@ -15,13 +15,13 @@ environment:
   capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: false }
   tools: [selected Adapter, versioned runbooks, ticket records, dashboard observations, operator confirmations]
 expected:
-  actions: [join the active Workflow context, inventory authoritative and observational sources with exact revisions or observation times, map system boundaries actors responsibilities interfaces active work dependencies evidence waits unknowns and provenance, preserve the ownership conflict instead of guessing, verify the integrated current-state revision]
+  actions: [join the active Workflow context, inventory authoritative and observational sources with exact revisions or observation times, map system boundaries actors responsibilities interfaces active work dependencies evidence waits unknowns and provenance, preserve the ownership conflict instead of guessing, submit the exact integrated current-state revision to Review]
   artifacts: [canonical billing-service current-state records, derived current-state map with visible conflict and confidence]
   effects: [representation and coordination state only]
-  invoked: [thinking-in-systems, workflow, migrate-system]
+  invoked: [thinking-in-systems, workflow, migrate-system, review]
   notInvoked: [service repair, architecture redesign, canonical Adapter migration]
-  proof: [source claims and operating observations remain traceable, ownership conflict is visible and routed without changing production]
+  proof: [source claims and operating observations remain traceable, Verified Review verdict is bound to the exact map revision, ownership conflict is visible and routed without changing production]
   responsibility: [migration owner owns map integration and verification, Workflow retains parent Outcome responsibility]
   route: [direct-conformance-migration, workflow-resumption]
   state: [current-state-verified, ownership-conflict-visible]
-  forbidden: [resolve the failed-payment ownership conflict without Authority or evidence, change production behavior or work ownership]
+  forbidden: [resolve the failed-payment ownership conflict without Authority or evidence, treat Changes required or Inconclusive Review as verified, change production behavior or work ownership]

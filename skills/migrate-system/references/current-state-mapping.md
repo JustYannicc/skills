@@ -70,19 +70,23 @@ never substitutes for Authority, acceptance, or proof.
 
 Before dispatch, bind:
 
-- child identity, Work owner, boundary, exclusions, and return route;
+- canonical child Ticket identity, parent `contains` relationship, Work owner,
+  accepted lifecycle state, Claim rule, boundary, exclusions, and return route;
 - immutable source set or read boundary and captured input revisions;
 - allowed coordination writes and every source that remains read-only;
 - required coverage dimensions and Evidence fields;
 - dependency and concurrency assumptions;
-- Proof seam and terminal condition for the bounded child result; and
+- Proof seam, Reviewer, Review dispositions, exact result revision, and
+  terminal condition for the bounded child result; and
 - failure, stale-source, conflict, and Recovery behavior.
 
-On return, preserve the child's exact result revision. Integration compares
-claims by source and boundary, not by majority vote. Duplicates retain one
-canonical meaning with all supporting Evidence references. Contradictions stay
-visible until evidence or an authorized decision resolves them. Missing or
-failed child areas remain owned Recovery work.
+On return, preserve the child's exact result revision and revision-bound Review
+verdict. Integrate only `Verified` child Evidence. Integration compares claims
+by source and boundary, not by majority vote. Duplicates retain one canonical
+meaning with all supporting Evidence references. Contradictions stay visible
+until evidence or an authorized decision resolves them. Missing, stale,
+`Changes required`, `Inconclusive`, or failed child areas remain owned execution,
+waiting, or Recovery work under the ordinary Ticket lifecycle.
 
 ## Verification gate
 

@@ -15,7 +15,8 @@ actual current state through ordinary Workflow.
 - [ ] Record fresh observations, raw evidence, and the revision-bound evaluation report.
 - [ ] Run focused checks, `pnpm evaluations:record`, and `pnpm validate` without weakening gates.
 - [x] Apply `simplify` once and rerun affected deterministic checks.
-- [ ] Resolve one Sol High adversarial review and pass one separate Sol High resolution check.
+- [x] Run one Sol High adversarial review and resolve every Critical or Major finding.
+- [ ] Pass one separate Sol High resolution check; record its exact evidence under `evaluations/evidence/reviews/` without changing the candidate inputs.
 - [ ] Commit intentionally, push the `codex/` branch, and open a draft PR linked to issue #15.
 
 ## Terminal condition

@@ -89,16 +89,20 @@ crosswalk has become a second writable authority.
 ### 4. Delegate independent mapping and integrate it
 
 When delegation is useful, create one bounded child mapping contract per
-independent area using the [delegated mapping packet](references/current-state-mapping.md#delegated-mapping-packet).
-Run child work concurrently only when sources, Authority, state, and evidence
-dependencies do not conflict.
+independent area as a canonical child Ticket using the
+[delegated mapping packet](references/current-state-mapping.md#delegated-mapping-packet).
+The Ticket records its Work owner, lifecycle state and Claim, immutable inputs,
+Authority, Proof seam, Reviewer, Review disposition, exact result revision, and
+return route. Run child work concurrently only when sources, Authority, state,
+and evidence dependencies do not conflict.
 
 The migration owner compares canonical revisions with each dispatch snapshot,
 rereads changed slices, reconciles duplicates and contradictions, exposes
-missing coverage, and integrates every accepted child result into one revision.
-A child result, failed worker, or unreachable worker never completes or
-transfers the parent mapping Responsibility; failures enter Recovery with a
-next action.
+missing coverage, and integrates only revision-bound child Evidence with a
+`Verified` Review verdict. `Changes required` returns the child Ticket to its
+Work owner; `Inconclusive` enters owned waiting. A child result, failed worker,
+or unreachable worker never completes or transfers the parent mapping
+Responsibility; failures enter Recovery with a next action.
 
 **Done when:** every delegated area is integrated, waiting, or in Recovery with
 an owner, and one migration owner can account for the complete affected scope
@@ -116,7 +120,12 @@ unblock condition, next check, and exact resumption or accepted-handoff action.
 If `Baseline` persistence is unavailable, use an authorized conforming fallback
 or preserve the complete proposed state and continuation without claiming a
 canonical or completed migration. Unsupported scheduling never becomes a claim
-of monitoring. Waiting remains owned through a Continuation record.
+of monitoring. A short wait may be observed directly. A longer wait requires
+an accepted scheduler or monitor; when neither is available, invoke the
+`'Handoff'` skill and require an accepting Actor plus the exact next check. If a
+handoff is unavailable or unaccepted, preserve visible Degraded waiting without
+claiming durable resumption. Every waiting route retains its Continuation
+record and current owner.
 
 Record every discovered change to the represented product, organization,
 routine, environment, policy, behavior, ownership, or interface as a separate

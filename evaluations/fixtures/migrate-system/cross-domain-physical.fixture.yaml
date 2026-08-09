@@ -15,13 +15,13 @@ environment:
   capabilities: { persistence: true, baselineAdapter: true, workflow: true, migrateSystem: true, wayfinder: true, delegation: true }
   tools: [selected Adapter, storage observation, cue-sheet revision, radio-call rehearsal observation, volunteer confirmations, repair record]
 expected:
-  actions: [join the active Workflow context, map physical communicative and human boundaries using the same universal contract, record sources actors responsibilities interfaces active work dependencies evidence waiting unknowns and provenance, verify the handoff and cue seams through observation, preserve the waiting repair as a Continuation]
+  actions: [join the active Workflow context, map physical communicative and human boundaries using the same universal contract, record sources actors responsibilities interfaces active work dependencies evidence waiting unknowns and provenance, verify the handoff and cue seams through observation, preserve the waiting repair as a Continuation, submit the exact cross-domain map revision to Review]
   artifacts: [canonical cross-domain current-state records, derived theater operation map]
   effects: [representation and coordination state only]
-  invoked: [thinking-in-systems, workflow, migrate-system]
+  invoked: [thinking-in-systems, workflow, migrate-system, review]
   notInvoked: [software-specific artifact assumptions, stage setup change]
-  proof: [storage cue radio role handoff and repair state are traceable to exact sources or observations]
+  proof: [Verified Review verdict binds the exact map revision, storage cue radio role handoff and repair state are traceable to exact sources or observations]
   responsibility: [migration owner verifies the integrated operation map, Workflow retains parent Outcome responsibility]
   route: [direct-conformance-migration, workflow-resumption]
   state: [cross-domain-current-state-verified]
-  forbidden: [translate the operation into software-only vocabulary, perform the waiting repair or alter the stage setup]
+  forbidden: [translate the operation into software-only vocabulary, perform the waiting repair or alter the stage setup, complete on Changes required or Inconclusive Review]
