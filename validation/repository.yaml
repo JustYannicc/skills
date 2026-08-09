@@ -1,5 +1,27 @@
 schemaVersion: 2
 skills:
+  - name: implement
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/engineering/implement/SKILL.md]
+      retainedBehavior:
+        - Execute accepted work from its governing Specification or Tickets rather than improvising a new contract.
+        - Prove the result repeatedly at pre-agreed seams during execution and once at the complete result boundary.
+        - Submit completed execution to Review instead of treating implementation activity as verification.
+        - Preserve intentional versioning rather than handing off an accidental mutable latest state.
+      changedAssumptions:
+        - Replace software-only typechecking, test-suite, code-review, and Git-commit requirements with universal Proof seams, Evidence references, Review, and medium-appropriate exact Result revisions.
+        - Admit only one accepted, unblocked, currently owned Ticket with verified Authority, dependencies, Proof seam, Specification revision, Ticket revision, and baseline Result revision.
+        - Execute communication, organizational, physical, agent, software, and other bounded work through domain-appropriate capabilities without changing the universal Ticket contract.
+        - Permit bounded delegated Executors while the Work owner retains Ticket Responsibility, validates child evidence, integrates one usable Result, and owns recovery.
+        - Invoke only user-selected Supplemental skills configured at the governed `workflow.implementation` Extension point while Implement retains the Ticket Result and completion boundary.
+        - Preserve failure as an event and waiting as owned Continuation state, including honest Degraded behavior when a required execution, proof, persistence, or Review capability is unavailable.
+        - Separate preparation, approval, authorized effects, real-effect evidence, Review submission, Ticket completion, and parent Outcome completion.
+        - Mint the immutable universal Result revision before Review so all proof, effects, and intake bind the same target; upstream performed code review before committing its final software revision.
+        - Enable model invocation so Workflow can route accepted Tickets into Implementation automatically.
   - name: review
     provenance:
       strategy: original

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Implement"
+  short_description: "Execute one accepted Ticket and submit exact evidence"
+policy:
+  allow_implicit_invocation: true

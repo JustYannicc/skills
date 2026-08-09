@@ -17,6 +17,15 @@ The universal `to-spec` successor is an adapted public skill based on Matt Pococ
 
 The universal `to-tickets` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-tickets` at the same pinned revision. It retains complete tracer-bullet decomposition, dependency edges, frontier visibility, and owner acceptance while replacing codebase and tracker assumptions with the adapter-neutral Ticket contract; the full provenance record is in [`validation/repository.yaml`](../validation/repository.yaml).
 
+The universal `implement` successor is an adapted public skill based on Matt
+Pocock's `skills/engineering/implement` at the same pinned revision. It retains
+accepted-work execution, pre-agreed seam proof, Review submission,
+and an intentional exact result revision while replacing software-only tests,
+typechecking, code review, and commit assumptions with the universal Ticket,
+Authority, Evidence, waiting, delegation, effect, and Result-revision contract.
+The full retained-behavior and changed-assumption record is in
+[`validation/repository.yaml`](../validation/repository.yaml).
+
 ## Workflow Durable coordination
 
 The approved issue #14 implementation extends the original `workflow` skill
