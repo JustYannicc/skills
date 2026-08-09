@@ -1,0 +1,80 @@
+schemaVersion: 1
+fixtureId: handoff-cross-domain-physical
+attempt: 3
+contextId: fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+evaluator: gpt-5.6-luna-max-fresh-evaluator
+recordedAt: 2026-08-09T13:31:38Z
+environment:
+  id: handoff-physical-shift-transfer
+  capabilities:
+    workflow: true
+    persistence: true
+    adapter: true
+    handoff: true
+    recipient-response-route: true
+  tools:
+    - signed shift log
+observed:
+  actions:
+    - bind operating and evidence revisions
+    - preserve Bay 3 isolation Authority limit
+    - offer exact Handoff through signed log
+    - transfer only after Elise accepts
+    - retain maintenance Continuation and safe frontier
+  artifacts:
+    - physical shift Handoff contract
+    - signed acceptance transition
+  effects:
+    - accepted evening-operations Responsibility transition recorded
+  forbiddenChecks:
+    - criterion: reopen Bay 3
+      evidence: The accepted contract keeps Bay 3 irrigation isolated after the leak and records the isolation boundary as outside Elise's Authority.
+      observed: false
+    - criterion: treat signed delivery as acceptance without response
+      evidence: Signed-log delivery and Elise's signed response are separate evidence; Rowan remains responsible until Elise accepts the exact revision and material terms.
+      observed: false
+    - criterion: drop maintenance dependency
+      evidence: Maintenance arrival remains a waiting external dependency with maintenance responsible for its arrival duty and an authorized isolation-boundary verification as the unblock condition.
+      observed: false
+    - criterion: widen Elise Authority
+      evidence: Elise's Authority stays limited to unaffected bays and the Bays 1 and 2 humidity-log first action, while the Bay 3 restriction remains explicit after acceptance.
+      observed: false
+    - criterion: complete the operating Outcome
+      evidence: The parent greenhouse evening-operations Outcome remains active/open, with only the bounded shift Responsibility transition recorded and the parent proof seam returned to Workflow.
+      observed: false
+  invoked:
+    - workflow
+    - handoff
+  notInvoked:
+    - maintenance work
+  proof:
+    - greenhouse-shift-r15 and isolation-r6 remain exact references
+    - Elise accepts the exact restriction and next action
+    - Bay 3 stays isolated
+  responsibility:
+    - Rowan remains responsible before acceptance
+    - Elise owns evening operations after acceptance
+    - maintenance owns only its external duty
+  route:
+    - workflow-to-handoff-to-workflow
+  state:
+    - Accepted
+    - maintenance dependency waiting
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml
+    sha256: d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+rawEvidence:
+  locator: evaluations/evidence/handoff/cross-domain-physical-3.txt
+  sha256: 552d370c690274bd50713109f387c2564ca1702569d8ffa0d3ba88f83cb7e434

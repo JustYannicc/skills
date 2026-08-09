@@ -8,7 +8,8 @@ This repository is being built around a simple idea: agents become much more use
 
 No skill has been published yet. Thinking in Systems, Workflow's Inline and
 Durable routes, To Spec, To Tickets, Domain Modeling, Review, and Prototype are
-approved. Suite publication remains gated by the composed-suite and
+approved. Handoff has an implementation candidate awaiting the issue #26 human
+review gate. Suite publication remains gated by the composed-suite and
 clean-install proof in #31 and the immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved
@@ -75,6 +76,15 @@ unknowns, records accepted decisions through the selected Adapter when they
 must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
+
+### [Handoff](skills/handoff) — candidate; human review required
+
+Handoff preserves exact state, Responsibility, Authority, rationale, evidence,
+uncertainty, dependencies, Continuation, and next frontier across humans,
+agents, sessions, services, and operating contexts. It keeps canonical sources
+authoritative through revision-bound references, transfers Responsibility after
+exact fresh acceptance, enters Degraded mode when required capabilities are
+unavailable, and leaves the parent Outcome open.
 
 ## Planned suite
 

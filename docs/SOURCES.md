@@ -17,6 +17,14 @@ The universal `to-spec` successor is an adapted public skill based on Matt Pococ
 
 The universal `to-tickets` successor is an adapted public skill based on Matt Pocock's `skills/engineering/to-tickets` at the same pinned revision. It retains complete tracer-bullet decomposition, dependency edges, frontier visibility, and owner acceptance while replacing codebase and tracker assumptions with the adapter-neutral Ticket contract; the full provenance record is in [`validation/repository.yaml`](../validation/repository.yaml).
 
+The universal `handoff` successor is adapted from Matt Pocock's
+`skills/productivity/handoff` at the same pinned revision. It retains compact
+fresh-context continuation, canonical artifact references, next-focus tailoring,
+suggested capabilities, and sensitive-data redaction while replacing temporary
+directory, user-invoked, agent-only, and software-artifact assumptions with the
+adapter-neutral exact-acceptance contract. The full retained-behavior and
+changed-assumption record is in [`validation/repository.yaml`](../validation/repository.yaml).
+
 ## Workflow Durable coordination
 
 The approved issue #14 implementation extends the original `workflow` skill

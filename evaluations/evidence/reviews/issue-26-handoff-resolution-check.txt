@@ -1,0 +1,62 @@
+Issue #26 Handoff resolution check
+
+- Checker: gpt-5.6-sol-high independent resolution checker
+- Candidate revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+- Adversarial-review candidate: git:1632fd468173a5720b9acb2155fe30f1a792b78b
+- Adversarial-review fixed point: git:e2f92efaa253793c01ec33cd711b27417c0da424
+- Scope: resolution evidence for the sole completed issue #26 adversarial review; this is not a second adversarial pass
+- Authorship: the checker did not author the candidate, the adversarial review, or the fixes under check
+- Result: PASS — every adversarial Critical, Major, and Minor finding is materially resolved
+- Approval: HUMAN REVIEW REQUIRED; issue #26 remains open with the `human-review-required` label
+
+## Evidence inspected
+
+- Issue #26 contract and the linked suite Specification, repository requirements ledger, architecture, decisions, roadmap, and `docs/handoffs/2026-08-09-handoff-candidate.md`.
+- Exact candidate content at `git:d47a6c37af08be941c0061ea6cab3ebacadbc690`: `skills/handoff/SKILL.md`, `agents/openai.yaml`, both disclosed Handoff references, provenance/source records, and the candidate documentation boundary.
+- `evaluations/evidence/reviews/issue-26-handoff-adversarial-review.txt` and the exact correction diff from `1632fd468173a5720b9acb2155fe30f1a792b78b` to `d47a6c37af08be941c0061ea6cab3ebacadbc690`.
+- All 11 Handoff fixtures, all 25 Handoff observation records, and all 25 linked raw-evidence records.
+- `evaluations/reports/foundation.report.json`, recorded at `2026-08-09T14:40:12Z`, with suite revision `git:d47a6c37af08be941c0061ea6cab3ebacadbc690`, 145/145 repository fixtures passed, and zero Critical, Major, or Minor report findings.
+- `evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt` and the current working-tree evaluation artifacts.
+- Coordinator-reported gates: `pnpm evaluations:record` and `pnpm validate` both passed on the current tree.
+
+Targeted read-only checks independently confirmed that the candidate is the current HEAD; the 25 Handoff observations name the exact candidate revision and 25 unique context IDs; every observation raw-evidence SHA-256 matches the current file; every report raw-evidence locator and SHA-256 matches; every observed forbidden check is false; every fixture has exactly its required attempt set; and all 11 Handoff report entries pass without findings. The earliest Handoff observation was recorded after the candidate commit, and the runtime-input hashes present in the evidence match the current candidate files.
+
+## Per-finding resolution
+
+1. Adversarial Standards Critical — required behavioral evidence absent: resolved. The current tree contains 25 fresh Handoff observations and 25 hash-bound raw-evidence records for all 11 fixtures. Required Critical attempts are complete, the recorded report is bound to the exact candidate, all Handoff entries pass, and the coordinator's record and validation gates pass.
+
+2. Adversarial Standards Minor — exact-acceptance and parent-open rules had multiple authorities: resolved. Step 5 in `SKILL.md` remains the single ordered exact-acceptance and freshness authority. The Transfer disposition table now refers to that gate and owns only branch disposition/evidence. Step 6 remains the one completion boundary that keeps the parent Outcome open for every Handoff disposition.
+
+3. Adversarial Spec Critical — acceptance fixtures required responses their prompts did not supply: resolved. The direct-human, indirect-agent, and cross-domain-physical prompts now provide an identifiable successor's response naming the exact Handoff revision, accepting the bounded material contract, and a current-state freshness read. All nine required fresh attempts pass. Delivery remains separate from acceptance, Authority does not widen, and the transition occurs only after exact response and freshness evidence.
+
+4. Adversarial Spec Major — Step 5 contradicted valid Prepared and Degraded dispositions: resolved. The completion criterion is now disposition-aware: Transfer permits accepted evidence or a named non-transfer disposition; Continuity permits Prepared, Waiting, Degraded, or Resumed with the evidence appropriate to that state; Dispatch permits Prepared, Degraded, Delivered, or Acknowledged with its appropriate next-action or delivery evidence. The Prepared session-continuity attempt and Degraded missing-capability and missing-route attempts demonstrate the corrected branches without invented pickup or delivery evidence.
+
+## Behavioral proof
+
+- 11 fixtures, 25 attempts, 25 unique fresh contexts, 25 matching raw-evidence hashes.
+- 7 Critical fixtures × 3 attempts = 21 Critical attempts: human Transfer, agent Transfer, physical/organizational Transfer, service Dispatch, waiting without scheduler, rejected Transfer, and stale acceptance.
+- 4 Major fixtures × 1 attempt = 4 Major attempts: session Continuity, missing persistence/communication capability, missing recipient route, and negative ordinary summarization.
+- Exact accepted Transfer proof: 9/9 attempts across human, agent, and physical successors record separate delivery and authenticated/signed exact acceptance, pass a current-state read, constrain Authority, and retain the next frontier.
+- Freshness rejection proof: 3/3 stale-context attempts preserve the old response as non-transfer evidence, reject revoked approval, retain the outgoing owner, create a successor draft from the current revision, and require new exact acceptance.
+- Service proof: 3/3 attempts treat the receipt as bounded Dispatch execution evidence only and keep 240-recipient delivery verification open.
+- Waiting proof: 3/3 attempts preserve the grants lead, external dependency, last observation, manual check, and exact resumption action without claiming scheduling, monitoring, or completion.
+- Rejection proof: 3/3 attempts keep the current on-call lead responsible, preserve the exact rejection and Authority gap, and return a recovery action.
+- Session proof: 1/1 attempt uses same-owner Prepared Continuity, exact canonical pickup references, and a manual trigger without acceptance or automatic-resumption claims.
+- Capability and route degradation: 1/1 missing-capability attempt exposes an Inline portable package and missing guarantees; 1/1 missing-recipient-route attempt rejects the ambiguous team label and retains the current owner.
+- Negative routing: 1/1 ordinary-summary attempt stays Inline and does not invoke Handoff.
+- Cross-domain coverage: the physical/organizational greenhouse case passes 3/3 while retaining Bay 3 isolation, the maintenance dependency, and bounded shift Authority.
+- Parent boundary: every 24 positive Handoff attempts records `parent completion` as not invoked, observes its completion-forbidden check as false, and leaves the parent Outcome active/open. The negative attempt creates no Handoff or ownership transition.
+
+## Review independence and legacy rebind
+
+The adversarial record identifies an independent gpt-5.6-sol-high reviewer who did not author or edit the reviewed candidate. The correction is a later revision, and this checker neither authored that revision nor made the fix. The prior interrupted, mistakenly routed agent produced no review result and is not counted. Review independence is therefore intact: one completed adversarial pass followed by this separate resolution check.
+
+The existing-observation rebind attestation is truthful within its stated scope. The current tree contains exactly 241 observations: 25 new Handoff observations and 216 pre-existing non-Handoff observations. It contains exactly 27 Domain Modeling raw-evidence records. The attested `git diff --quiet 4233758023b9d47a92b72311ef945d902d1c9d6d d47a6c37af08be941c0061ea6cab3ebacadbc690 -- skills/domain-modeling skills/thinking-in-systems evaluations/fixtures/domain-modeling` still exits 0. Across runtime skill and fixture inputs, the candidate adds Handoff inputs without changing the pre-existing skills or non-Handoff fixtures; the only other file under `skills/` changed is the package index. Rebinding the unchanged observations to the unified repository candidate does not claim that their behavior was rerun, and the attestation explicitly preserves the original Domain Modeling evaluation revision while naming the validation rebind revision.
+
+## Residual findings and terminal status
+
+- Critical: 0
+- Major: 0
+- Minor: 0
+
+Resolution evidence is sufficient for issue #26's automated and agent-review boundary. The parent suite Outcome is not completed by this check or by any Handoff result. Human approval is still pending and required before issue #26 may close, merge, or be treated as approved.

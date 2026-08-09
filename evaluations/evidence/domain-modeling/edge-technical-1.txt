@@ -4,6 +4,7 @@ Context ID: fresh-domain-modeling-edge-technical-luna-max-1-20260809t105635z-d7e
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T10:56:35.300Z
 Suite revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+Validation rebind: git:ce2b02e6249d229d7d88b10bec58171b4bac6621. The byte-identity proof for the bound Domain Modeling runtime inputs is authoritative in evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt; the original evaluation context and revision remain recorded in this evidence.
 
 Candidate and exact runtime identity
 
