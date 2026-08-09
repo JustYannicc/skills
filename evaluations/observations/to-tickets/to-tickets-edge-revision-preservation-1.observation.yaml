@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: to-tickets-edge-revision-preservation
 attempt: 1
 contextId: fresh-to-tickets-edge-revision-preservation-20260808-1
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: deterministic-candidate-observer
 recordedAt: 2026-08-08T12:38:00.000Z
 environment:

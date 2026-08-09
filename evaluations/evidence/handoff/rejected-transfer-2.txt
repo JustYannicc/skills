@@ -1,41 +1,85 @@
-Handoff evaluation evidence
-
-Fixture: handoff-rejected-transfer
+Evaluation: handoff-rejected-transfer
 Attempt: 2
-Context: fresh-handoff-rejected-transfer-r7-attempt-2-20260809T122039Z-5f821c79
-Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Context: fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c
+Suite revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Evaluator: gpt-5.6-luna-max-fresh-evaluator
 
-Environment (exact fixture environment):
+Fixture source: evaluations/fixtures/handoff/rejected-transfer.fixture.yaml
+Fixture SHA-256: 2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef
+Runtime inputs:
+- skill: skills/handoff/SKILL.md
+  SHA-256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+- disclosed-reference: skills/handoff/references/handoff-contract-template.md
+  SHA-256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+- disclosed-reference: skills/handoff/references/handoff-dispositions.md
+  SHA-256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+
+Environment (copied from the fixture):
   id: handoff-explicit-rejection
-  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-return-route: true}
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, recipient-response-route: true}
   tools: [selected canonical Adapter, recipient response record]
 
-Workflow and Handoff verify the supplied rejection against the exact offer
-`rotation-r7`. Mina's response explicitly rejects that offer because the
-escalation Authority is missing. The Handoff is therefore recorded with the
-Transfer disposition `Rejected` and operational mode `Recovery`; an
-append-only rejection disposition binds Mina's response to `rotation-r7`.
+## Exact Handoff state
 
-No Responsibility or Outcome ownership transition is recorded. The current
-on-call lead remains the Outcome owner and remains responsible; Mina accepts no
-Responsibility. The parent Outcome remains active. The missing escalation
-Authority stays visible and is not inferred or granted. The failed offer is
-preserved rather than hidden, and the allowed work is limited to preserving
-the state and coordinating recovery.
+The prompt supplies the exact Transfer offer `rotation-r7` and Mina's
+recipient response. The response rejects that offer because escalation
+Authority is missing. The Handoff therefore records disposition `Rejected` and
+operational mode `Recovery`. Mina's response is rejection evidence for
+`rotation-r7`; it is not acceptance, an Authority grant, or a parent Outcome
+transition.
 
-The recovery continuation returns to Workflow through
-workflow-to-handoff-recovery-to-workflow. Workflow's exact next action is to
-resolve the escalation-Authority gap and issue a new revision for Mina, or
-select and offer an alternate successor through a verified response route. The
-current on-call lead retains responsibility until an exact successor offer is
-accepted. Cancellation and parent completion are not performed.
+The Handoff contract keeps one source of truth: the linked on-call
+coordination Outcome remains canonical, while `rotation-r7` preserves only the
+interface and recovery state. The prompt supplies neither that Outcome's
+locator nor its current revision, so both remain visible source gaps for the
+fresh read required by recovery. The current on-call lead is the supplied
+owner role; no personal identity is invented. Mina is the proposed successor
+who rejected the exact offer, and accepts no Responsibility.
+
+## Recovery continuation
+
+The append-only rejection disposition records `rotation-r7`, Mina's response,
+and the missing-escalation-Authority reason through the selected canonical
+Adapter. The parent on-call coordination Outcome remains `open` and active.
+
+One owned recovery rule returns to Workflow:
+
+1. **Owner and responsible Actor:** Workflow owns recovery coordination; the
+   current on-call lead remains the responsible Outcome owner and performs the
+   immediate Authority-identification action.
+2. **Safe work:** the current on-call lead may continue on-call coordination
+   within existing Authority while the gap is resolved.
+3. **Blocked effects:** transfer to Mina and any escalation-dependent effect
+   stay blocked until a successor accepts a new exact revision with available
+   Authority.
+4. **Observable unblock condition:** an authorized escalation decision-maker
+   and the exact Authority scope, validity, and limits are recorded against a
+   fresh canonical Outcome revision, making a successor revision ready for
+   exact acceptance.
+5. **Exact next action:** Workflow asks the current on-call lead to identify or
+   obtain that Authority evidence, rereads the current canonical Outcome,
+   materializes one successor Handoff revision for Mina, and requests exact
+   acceptance. The lead remains responsible until that successor revision is
+   accepted.
+
+The rejected offer remains preserved in the recovery queue; it is not silently
+returned to an unowned frontier. The supplied recipient-response record is the
+response route. Channel, delivery time, and an Adapter locator for that record
+are not supplied and remain explicit gaps. A fresh canonical read is required
+before a successor revision; the rejected response cannot authorize changed
+state. Only the necessary Actor labels and role are retained.
+
+## Recorded result
 
 Observed actions:
 - verify rejection against rotation-r7
-- record Rejected without ownership transition
+- record Rejected
 - preserve outgoing owner and state
 - expose missing escalation Authority
-- return retry revision escalation or alternate-successor options to Workflow
+- return one owned recovery rule to Workflow
+- name its responsible Actor
+- record its observable unblock condition
+- record its exact next action
 
 Observed artifacts:
 - append-only rejection disposition
@@ -43,28 +87,35 @@ Observed artifacts:
 
 Observed effects: []
 Invoked: workflow, handoff
-Not invoked:
-- ownership transfer
-- authority grant
-- cancellation
-- parent completion
-
+Not invoked: []
 Proof:
 - Mina response binds rotation-r7
 - missing Authority remains visible
 - current on-call lead and exact recovery action remain explicit
-
 Responsibility:
 - current on-call lead remains Outcome owner
 - Mina accepts no Responsibility
 - Workflow coordinates recovery
-
 Route: workflow-to-handoff-recovery-to-workflow
-State: rejected, Recovery, parent Outcome active
+State: Rejected, Recovery, parent Outcome open
 
-Forbidden-behavior checks (all observed: false):
-- treat rejection as transfer
-- infer Authority
-- leave work ownerless
-- hide the failed offer
-- complete or cancel the Outcome
+## Forbidden-behavior checks
+
+- criterion: treat rejection as transfer
+  evidence: The exact `rotation-r7` disposition is `Rejected`; Mina accepts no Responsibility, and the current on-call lead remains Outcome owner until a successor accepts a new exact revision.
+  observed: false
+- criterion: infer Authority
+  evidence: The recovery continuation records missing escalation Authority as the blocking gap and requires an authorized decision-maker plus exact scope, validity, and limits before a successor revision can be accepted.
+  observed: false
+- criterion: leave work ownerless
+  evidence: The current on-call lead is the named responsible Outcome owner, Workflow owns recovery coordination, and the exact next action identifies the lead as the immediate responsible Actor.
+  observed: false
+- criterion: hide the failed offer
+  evidence: The append-only rejection disposition preserves Mina's response, its binding to exact offer `rotation-r7`, and the missing-Authority reason in the recovery continuation.
+  observed: false
+- criterion: complete the Outcome
+  evidence: The parent on-call coordination Outcome remains explicitly `open` and active; the recovery continuation retains the unresolved Authority gap and first action.
+  observed: false
+- criterion: cancel the Outcome
+  evidence: The Handoff stays in `Recovery` with the parent Outcome open, and the single Workflow recovery rule preserves the owner, unblock condition, and exact next action.
+  observed: false

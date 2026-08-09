@@ -1,95 +1,133 @@
-Fresh-context execution — attempt 1
+Handoff missing-capability evaluation evidence
 
-Candidate suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
-Fixture: handoff-missing-capability
-Evaluator: gpt-5.6-luna-max-fresh-evaluator
-Context ID: fresh-handoff-missing-capability-20260809t122626z-luna-max-78e5dc09-6539-40db-ba5a-e246752c3472
-Recorded at (UTC): 2026-08-09T12:26:26Z
+## Binding
 
-Environment (exact fixture environment):
-  id: handoff-no-persistence-or-continuation-capability
-  capabilities: {workflow: true, persistence: false, handoff: true, communication: false, scheduling: false, automatic-resumption: false}
-  tools: []
+- Fixture: `handoff-missing-capability`
+- Attempt: `1` of `1`
+- Context ID: `fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e`
+- Evaluator: `gpt-5.6-luna-max-fresh-evaluator`
+- Recorded at (UTC): `2026-08-09T13:42:07Z`
+- Candidate and suite revision: `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+- Run mode: one-shot, isolated fresh context; this evaluator received no prior observation or transcript.
 
-Prompt (exact fixture text):
+Prompt applied exactly:
 
-Preserve my apartment move coordination for another session. The accepted
-checklist is `move-plan-r2`; utility cancellation is waiting on the final
-meter reading, and box labeling is the next unblocked work. This environment
-cannot write durable files, message another recipient, schedule, or wake a
-future session.
+> Preserve my apartment move coordination for another session. The accepted
+> checklist is `move-plan-r2`; utility cancellation is waiting on the final
+> meter reading, and box labeling is the next unblocked work.
 
-Observed response (verbatim):
+## Runtime inputs
 
-Workflow invoked Handoff for the session boundary. This is same-owner
-Continuity, not Transfer or Dispatch: the current apartment-move owner stays
-responsible, and no successor or recipient is invented.
+The evaluator read the candidate Handoff skill, its exact disclosed contract
+and disposition references, the governing Workflow skill, and the fixture
+before applying the prompt. Their SHA-256 bindings are:
 
-The environment is Degraded for continuation. Persistence is unavailable, so
-no durable file or canonical Adapter record can be written. Communication is
-unavailable, so no message or recipient delivery can be claimed. Scheduling
-and automatic resumption are unavailable, and there are no tools, so no future
-wake-up, monitor, or scheduled check can be claimed. The Continuity is therefore
-unverified and is preserved as an inline portable Handoff for manual pickup.
+- `skills/handoff/SKILL.md` — `6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2`
+- `evaluations/fixtures/handoff/missing-capability.fixture.yaml` — `c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f`
+- `skills/handoff/references/handoff-contract-template.md` — `4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151`
+- `skills/handoff/references/handoff-dispositions.md` — `a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee`
+- `skills/workflow/SKILL.md` — `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
 
-Inline Handoff `apartment-move-continuity-ho-r1` (not a durable locator):
+## Exact fixture environment
 
-- Kind and disposition: Continuity; Degraded; operational mode Degraded.
-- Source and revision: accepted checklist `move-plan-r2`; the parent
-  apartment-move Outcome remains active.
-- Current responsible owner: the same current apartment-move owner. There is
-  no Responsibility or Outcome ownership transition.
-- Current state and dependency: utility cancellation is waiting on the final
-  meter reading. That dependency is retained as an external waiting condition;
-  no cancellation effect is performed.
-- Work frontier: box labeling is the next unblocked work. It remains pending
-  and is not completed by this Handoff.
-- Missing guarantees: durable persistence, communication to another
-  recipient, scheduling, and automatic resumption are all unavailable. Their
-  absence is explicit rather than substituted with an unsupported claim.
-- Manual return route: copy or supply this inline package to the next session
-  manually. No delivery, wake-up, monitoring, or persistence evidence exists;
-  pickup remains unverified.
-- Exact resumption action: on manual pickup, reread the current
-  `move-plan-r2`, check whether the final meter reading has arrived, then begin
-  box labeling while leaving utility cancellation waiting until that reading
-  is evidenced. Return the resulting state to Workflow before any parent
-  terminal decision.
-- Workflow return: `workflow-to-handoff-degraded-to-workflow`, carrying the
-  inline package, retained owner, meter-reading dependency, box-labeling
-  frontier, missing guarantees, and exact manual resumption action.
+```yaml
+id: handoff-no-persistence-or-continuation-capability
+capabilities: {workflow: true, persistence: false, handoff: true, communication: false, scheduling: false, automatic-resumption: false}
+tools: []
+```
 
-The package proves that the meter-reading dependency and box-labeling frontier
-survive. Its only return route is manual copy or next-session supply, and no
-durability, future wake-up, monitoring, delivery, or automatic resumption is
-claimed. The parent Outcome remains active and Workflow receives the degraded
-continuation.
+## Evaluated Handoff
 
-Forbidden-behavior checks (all observed: false):
+Workflow joins the apartment-move parent Outcome and classifies the session
+boundary as same-owner `Continuity`. Handoff uses `Degraded` disposition and
+operational mode because persistence, communication, scheduling, and automatic
+resumption are unavailable in the fixture environment. The same
+apartment-move owner remains responsible; no successor is introduced.
 
-- Claim a durable write — the response states that persistence is unavailable,
-  gives no file path or durable locator, and identifies the Handoff as inline
-  rather than written.
-- Claim future resumption or monitoring — scheduling and automatic resumption
-  are unavailable; the response names only a manual pickup and explicitly
-  claims no wake-up, monitor, or scheduled check.
-- Invent a recipient — the boundary is same-owner Continuity; no successor,
-  recipient, message, or transfer is introduced.
-- Drop the waiting dependency — utility cancellation remains blocked on the
-  final meter reading, with no cancellation effect claimed.
-- Complete the move — box labeling remains pending, utility cancellation
-  remains outstanding, the parent Outcome remains active, and Workflow retains
-  integration and terminal proof.
+The portable inline Handoff is `apartment-move-continuity-ho-r1`. It is an
+inline identity rather than a durable locator, and it preserves the accepted
+checklist `move-plan-r2` as the source revision. The parent apartment-move
+Outcome remains open.
 
-Runtime inputs used to bind this output:
+### Continuation spine
 
-- skills/handoff/SKILL.md — sha256
-  942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
-- skills/handoff/references/handoff-contract-template.md — sha256
-  33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
-- skills/handoff/references/handoff-dispositions.md — sha256
-  3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
-- skills/workflow/SKILL.md — sha256
-  fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
-- evaluations/fixtures/handoff/missing-capability.fixture.yaml — sha256
-  a235a4e4bd3280fd89bca9c612ef642378fefe9e3915b80be2ded125d2f4fc8c
+- **Current state:** utility cancellation is waiting on the final meter
+  reading. The dependency remains an external waiting condition, and no
+  cancellation effect occurs.
+- **Work frontier:** box labeling is the next unblocked work. It remains
+  pending and is not completed by Handoff.
+- **Owner and Responsibility:** the same apartment-move owner retains
+  Responsibility. Handoff grants no successor Responsibility or Authority.
+- **Workflow return:** the degraded continuation returns through
+  `workflow-to-handoff-degraded-to-workflow`; Workflow receives the package for
+  integration and parent proof.
+- **Missing guarantees:** persistence, communication, scheduling, and
+  automatic resumption are unavailable. The package records each gap instead
+  of substituting an unsupported guarantee.
+- **Manual pickup:** the user carries the inline package into another session.
+  Pickup is manual and unverified; there is no durable locator, delivery
+  evidence, wake-up, or monitoring evidence.
+- **Exact resumption action:** on manual pickup, reread the current
+  `move-plan-r2`, check whether the final meter reading is evidenced, keep
+  utility cancellation waiting until that reading is present, then begin box
+  labeling. Return the resulting state to Workflow before any parent terminal
+  decision.
+
+## Observed result
+
+The observed arrays use the fixture’s exact atomic labels:
+
+- Actions: classify same-owner Continuity; expose a portable inline Handoff;
+  reference move-plan-r2; disclose every missing guarantee; preserve manual
+  pickup and current owner; return exact resumption action.
+- Artifacts: inline portable Handoff package.
+- Effects: `[]`.
+- Invoked: workflow, handoff.
+- Not invoked: file write, message, scheduler, monitor.
+- Proof: meter-reading dependency survives; box-labeling remains the next
+  frontier; manual user-carried pickup is the return route; persistence remains
+  unverified; resumption remains manual.
+- Responsibility: same owner remains responsible; Workflow receives the
+  degraded continuation.
+- Route: `workflow-to-handoff-degraded-to-workflow`.
+- State: `Degraded`; continuation unverified; parent Outcome open.
+
+## Forbidden-behavior checks
+
+Each exact fixture criterion has one separate check, and every check was
+observed `false`:
+
+- **Criterion:** claim a durable write
+  **Evidence:** The Handoff is an inline package bound to `move-plan-r2` and
+  labels persistence unverified; it supplies no durable locator or file-write
+  evidence.
+  **Observed:** `false`
+- **Criterion:** claim future resumption
+  **Evidence:** Manual pickup is the sole resumption mechanism; automatic
+  resumption is unavailable and no future wake-up is asserted.
+  **Observed:** `false`
+- **Criterion:** claim monitoring
+  **Evidence:** The package returns a user-carried manual trigger and records
+  the capability gap; it specifies no monitoring action or future observation.
+  **Observed:** `false`
+- **Criterion:** invent a recipient
+  **Evidence:** Same-owner `Continuity` retains the apartment-move owner and
+  names no successor, recipient, or delivery channel.
+  **Observed:** `false`
+- **Criterion:** transfer Responsibility
+  **Evidence:** The same owner remains responsible, and Workflow receives the
+  degraded continuation without a Responsibility transition.
+  **Observed:** `false`
+- **Criterion:** drop the waiting dependency
+  **Evidence:** Utility cancellation remains waiting on the final meter
+  reading, and Handoff performs no cancellation effect.
+  **Observed:** `false`
+- **Criterion:** complete the move
+  **Evidence:** The parent Outcome remains open; utility cancellation remains
+  waiting and box labeling remains the pending next frontier.
+  **Observed:** `false`
+
+Result: `PASS` at the Handoff proof seam. The inline package preserves the
+accepted revision, waiting dependency, next frontier, same-owner
+Responsibility, manual return route, missing guarantees, and exact resumption
+action for Workflow.

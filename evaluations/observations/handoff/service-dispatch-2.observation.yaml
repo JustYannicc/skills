@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-service-dispatch
 attempt: 2
-contextId: fresh-handoff-service-dispatch-attempt-2-20260809T122054Z-9bb2aad8-f807-4f71-aa87-2c3714bd574d
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:20:54Z
+recordedAt: 2026-08-09T13:32:31Z
 environment:
   id: handoff-service-dispatch-boundary
   capabilities:
@@ -30,23 +30,24 @@ observed:
     - authorized dispatch of notice-r11
   forbiddenChecks:
     - criterion: treat service receipt as ownership acceptance
-      evidence: The raw evidence records relay-prod acceptance and its receipt only as execution evidence for the contracted dispatch duty, with no Responsibility or Outcome ownership transition.
+      evidence: The contract records relay-prod as the dispatch executor, assigns the current owner Outcome Responsibility, and records no Responsibility or Outcome ownership transition from the service receipt.
       observed: false
-    - criterion: treat queued or accepted dispatch as recipient delivery
-      evidence: The raw evidence keeps recipient-level delivery verification for all 240 recipients as the unresolved proof seam and explicitly says an accepted job and receipt are not recipient delivery.
+    - criterion: treat queued dispatch as recipient delivery
+      evidence: The Handoff treats a queued or accepted job as dispatch progress and keeps recipient-level evidence for all 240 recipients as the next proof seam.
+      observed: false
+    - criterion: treat accepted dispatch as recipient delivery
+      evidence: relay-prod/receipt/notice-r11@r2 is recorded as accepted-dispatch evidence only; recipient delivery remains pending until all 240 results are verified.
       observed: false
     - criterion: send a changed revision
-      evidence: The raw evidence binds the exact notice-r11 payload to approval-r11 and prohibits any changed or regenerated message.
+      evidence: approval-r11 authorizes notice-r11, the exact pair is preserved throughout the Handoff, and the response records one unchanged dispatch.
       observed: false
     - criterion: complete the parent Outcome
-      evidence: The raw evidence leaves the parent Outcome open and active, retains the current owner, and requires delivery proof for all 240 recipients before any terminal decision.
+      evidence: The parent Outcome remains open and active, the current owner remains responsible, and Workflow retains terminal verification until all 240 recipients are verified.
       observed: false
   invoked:
     - workflow
     - handoff
-  notInvoked:
-    - ownership transfer
-    - parent completion
+  notInvoked: []
   proof:
     - notice-r11 matches approval-r11
     - relay receipt proves only accepted dispatch
@@ -58,9 +59,22 @@ observed:
   route:
     - workflow-to-handoff-dispatch-to-workflow
   state:
-    - dispatch accepted
-    - delivery verification pending
-    - parent Outcome active
+    - Acknowledged
+    - recipient delivery verification pending
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/service-dispatch.fixture.yaml
+    sha256: df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/service-dispatch-2.txt
-  sha256: 86118287338005a6a9a59a6e4fbf061aca2ac5ef1e9614102af6936cc498e903
+  sha256: 3ec31f229d560220917d1f06ddcceb68ce434179795b062ad6795d8828a9de2a

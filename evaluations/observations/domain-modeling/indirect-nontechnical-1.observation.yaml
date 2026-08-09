@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: domain-modeling-indirect-nontechnical
 attempt: 1
 contextId: fresh-domain-modeling-indirect-nontechnical-20260809t105704z-luna-max-7ac43d2e-11fb-4b8e-9c62-5f09b8e6d1a4
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-context
 recordedAt: 2026-08-09T10:57:04Z
 environment:
@@ -75,4 +75,4 @@ runtimeInputs:
     sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
 rawEvidence:
   locator: evaluations/evidence/domain-modeling/indirect-nontechnical-1.txt
-  sha256: 0978796e7939ce2d5478f9b3eda88e532c6ba8283154495f7d05bed976f8eaeb
+  sha256: 6fafa6b8445cf1887442aced60990c96ae6fb2d908c66a22c1c430eeb984661c

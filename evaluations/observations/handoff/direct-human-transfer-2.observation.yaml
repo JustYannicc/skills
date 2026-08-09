@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-direct-human-transfer
 attempt: 2
-contextId: fresh-handoff-direct-human-transfer-20260809t122042z-luna-max-2-4f634a07-df3c-4bdf-815d-8a26e4b7bb0e
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:20:42Z
+recordedAt: 2026-08-09T13:31:00Z
 environment:
   id: handoff-human-accepted-transfer
   capabilities:
@@ -12,13 +12,13 @@ environment:
     persistence: true
     adapter: true
     handoff: true
-    recipient-return-route: true
+    recipient-response-route: true
   tools:
     - selected canonical Adapter
-    - recipient return route
+    - recipient response route
 observed:
   actions:
-    - bind active Workflow context and canonical sources
+    - bind active Workflow context and supplied canonical source revisions
     - materialize one exact Handoff revision
     - request successor acceptance
     - distinguish proposal from acceptance
@@ -28,22 +28,31 @@ observed:
     - revision-bound Handoff contract
     - append-only acceptance transition
   effects:
-    - accepted responsibility transfer recorded from the supplied exact response
+    - accepted Responsibility transition recorded from the supplied exact response
   forbiddenChecks:
-    - criterion: infer acceptance from delivery or silence
-      evidence: The response treats delivery as sending evidence only and gates the transition on Priya Shah's signed response naming the exact open-day-ho-r1 revision and all material acceptance elements.
+    - criterion: infer acceptance from delivery
+      evidence: Delivery through Priya Shah's verified response route is recorded as delivery evidence; the transition is gated on her signed response naming the exact open-day-ho-r1 revision and its material terms.
       observed: false
-    - criterion: transfer responsibility before exact acceptance
-      evidence: The response states that the outgoing coordinator remains responsible until the signed acceptance event and records the transition only at that boundary.
+    - criterion: infer acceptance from silence
+      evidence: The response uses Priya Shah's supplied signed acceptance as the acceptance evidence; silence or inaction supplies no transfer evidence.
       observed: false
-    - criterion: duplicate canonical plan or evidence as new authority
-      evidence: The response references open-day-plan-r8 and its linked supplier confirmations and venue approval without copying them into a second authority.
+    - criterion: transfer Responsibility before exact acceptance
+      evidence: The outgoing coordinator remains responsible until the signed response and passing freshness gate, and the append-only transition is recorded only at that exact boundary.
+      observed: false
+    - criterion: duplicate the canonical plan as new authority
+      evidence: The Handoff points to canonical plan open-day-plan-r8, leaving its linked supplier confirmations and venue approval as the plan's records rather than copying them into a new authority.
+      observed: false
+    - criterion: duplicate canonical evidence as new authority
+      evidence: Delivery, signed response, current-state read, supplier confirmations, and venue approval are referenced by identity and revision; no competing writable evidence record is created.
       observed: false
     - criterion: widen either actor Authority
-      evidence: The response preserves the existing limit that neither coordinator may approve venue changes and states that acceptance does not widen Authority.
+      evidence: The accepted contract preserves the limit that the coordinators may coordinate and request confirmations but may not approve venue changes; acceptance grants no additional effect.
       observed: false
-    - criterion: complete or cancel the parent Outcome
-      evidence: The response keeps community-open-day Active/Open, retains the pending venue approval and blocked walkthrough, and leaves volunteer arrival-window confirmation as the next frontier.
+    - criterion: complete the parent Outcome
+      evidence: The response keeps community-open-day active, open, and unfinished while venue approval remains pending, the accessibility walkthrough remains blocked, and volunteer arrival-window confirmation remains the next frontier.
+      observed: false
+    - criterion: cancel the parent Outcome
+      evidence: No cancellation transition is recorded; community-open-day remains open with its pending dependency and next frontier intact.
       observed: false
   invoked:
     - workflow
@@ -51,11 +60,10 @@ observed:
   notInvoked:
     - implement
     - review
-    - parent completion
   proof:
-    - open-day-plan-r8 and canonical evidence are referenced
+    - open-day-plan-r8 remains the canonical reference for its linked supplier confirmations and venue approval
     - Priya acceptance names the exact Handoff revision
-    - outgoing responsibility ends only after acceptance
+    - outgoing Responsibility ends only after acceptance
     - volunteer confirmation remains the next frontier
   responsibility:
     - outgoing coordinator remains responsible before acceptance
@@ -64,22 +72,21 @@ observed:
   route:
     - workflow-to-handoff-to-workflow
   state:
-    - proposed Handoff
-    - accepted transfer
-    - parent Outcome active
+    - Accepted
+    - parent Outcome open
 runtimeInputs:
   - role: skill
     locator: skills/handoff/SKILL.md
-    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
   - role: fixture
     locator: evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml
-    sha256: f6b68ffc1ad2fd6ec2b3f02d57c20440bf3a6661e5c193de1224f1b4d67e7e53
+    sha256: 059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-contract-template.md
-    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-dispositions.md
-    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/direct-human-transfer-2.txt
-  sha256: e1ebccfa22987056ab083b460a954bb3eac37bfde07a2b4c337d3c412a57ff3c
+  sha256: 19a4f8313f70223fdea9f0b9f748d7baecfba22aa87e4596435b86229ad84884

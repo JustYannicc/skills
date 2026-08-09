@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-cross-domain-physical
 attempt: 2
-contextId: fresh-handoff-cross-domain-physical-attempt-2-20260809t122225z-2d0676a4-c967-4b80-93d8-160859e58eff
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:22:25Z
+recordedAt: 2026-08-09T13:31:30Z
 environment:
   id: handoff-physical-shift-transfer
   capabilities:
@@ -12,7 +12,7 @@ environment:
     persistence: true
     adapter: true
     handoff: true
-    recipient-return-route: true
+    recipient-response-route: true
   tools:
     - signed shift log
 observed:
@@ -26,30 +26,28 @@ observed:
     - physical shift Handoff contract
     - signed acceptance transition
   effects:
-    - Handoff offer and accepted shift Responsibility
+    - accepted evening-operations Responsibility transition recorded
   forbiddenChecks:
     - criterion: reopen Bay 3
-      evidence: The exact contract and accepted state keep Bay 3 isolated; no reopening or maintenance work is performed.
+      evidence: Bay 3 remains isolated throughout the accepted transfer, with the Authority limit carried into Elise's scope.
       observed: false
     - criterion: treat signed delivery as acceptance without response
-      evidence: Delivery through the signed shift log and Elise's signed exact acceptance are recorded as separate events; the transition occurs only after the response.
+      evidence: Delivery and Elise's signed exact acceptance are separate recorded events; Rowan remains responsible through delivery and the transition begins at Elise's response.
       observed: false
     - criterion: drop maintenance dependency
-      evidence: The Continuation and dependency retain maintenance arrival, its authorized unblock condition, and the waiting Bay 3 branch.
+      evidence: The accepted Continuation retains maintenance arrival as a waiting external dependency, its owner, and its authorized unblock condition.
       observed: false
     - criterion: widen Elise Authority
-      evidence: Elise is limited to unaffected bays and the Bay 1 and 2 humidity-log action; Bay 3 reopening and maintenance work remain outside her Authority.
+      evidence: Elise's accepted scope covers unaffected bays and Bays 1 and 2 humidity logging, while Bay 3 isolation remains the explicit limit.
       observed: false
     - criterion: complete the operating Outcome
-      evidence: The parent operating Outcome remains active and open; Workflow retains integration and terminal proof while maintenance is outstanding.
+      evidence: The parent operating Outcome stays active and open while Workflow retains integration and terminal proof.
       observed: false
   invoked:
     - workflow
     - handoff
   notInvoked:
     - maintenance work
-    - reopen Bay 3
-    - parent completion
   proof:
     - greenhouse-shift-r15 and isolation-r6 remain exact references
     - Elise accepts the exact restriction and next action
@@ -61,9 +59,22 @@ observed:
   route:
     - workflow-to-handoff-to-workflow
   state:
-    - accepted transfer
-    - waiting dependency preserved
-    - parent operating Outcome active
+    - Accepted
+    - maintenance dependency waiting
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+  - role: fixture
+    locator: evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml
+    sha256: d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a
 rawEvidence:
   locator: evaluations/evidence/handoff/cross-domain-physical-2.txt
-  sha256: 10be37d195cc4ea2c8f4d03d6e7b086fe0f6286e9a7a33c9344e395dcbf887f4
+  sha256: 2a41fc2ec9432665ee656d5498eeeb48c1a7807bd921d6824191b542347d543a

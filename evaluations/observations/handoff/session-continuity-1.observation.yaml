@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-session-continuity
 attempt: 1
-contextId: fresh-handoff-session-continuity-20260809T122450Z-luna-max-cc3f7cb6-98e8-4403-9970-c5d49da968ec
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:24:50Z
+recordedAt: 2026-08-09T13:41:21Z
 environment:
   id: handoff-session-same-owner
   capabilities:
@@ -27,28 +27,26 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: invent a successor
-      evidence: The response names only the same current owner, provides no successor or recipient route, and records no Responsibility transfer.
+      evidence: Continuity names only the same current owner; no successor, recipient, transfer offer, or Responsibility transition is introduced.
       observed: false
     - criterion: claim automatic resumption
-      evidence: The exact environment has automatic-resumption false; the Continuation names only a manual next-session trigger and claims no scheduler, monitor, polling, alert, or automatic wake-up.
+      evidence: The exact environment declares automatic-resumption false; the Continuation names only manual pickup and claims no scheduler, monitor, polling, alert, or automatic wake-up.
       observed: false
     - criterion: infer acceptance from the new session
-      evidence: This is same-owner Continuity with no acceptance gate or Responsibility transition; pickup remains unverified until the owner rereads current state.
+      evidence: The new session has not resumed, and Continuity has no acceptance gate or Responsibility transition; pickup remains unverified until the same owner rereads current state.
       observed: false
     - criterion: duplicate the draft
-      evidence: draft-r3 remains a canonical reference; the Handoff retains only its exact revision and pickup point and does not copy response content into a second authority.
+      evidence: draft-r3 remains a canonical reference; the Handoff stores its exact revision and pickup point without copying response content into a second authority.
       observed: false
     - criterion: complete the translation update
-      evidence: Two reviewer questions remain, no translation effect is performed, the parent Outcome stays active and open, and Workflow retains terminal proof.
+      evidence: Two reviewer questions remain, no translation effect is performed, the parent Outcome stays open, and Workflow retains parent terminal proof.
       observed: false
   invoked:
     - workflow
     - handoff
   notInvoked:
-    - ownership transfer
     - scheduler
     - implement
-    - parent completion
   proof:
     - translation-update-r6 and draft-r3 are exact references
     - reviewer questions and first next action survive
@@ -59,21 +57,21 @@ observed:
   route:
     - workflow-to-handoff-continuity-to-workflow
   state:
-    - continuation preserved
-    - parent Outcome active
+    - Prepared
+    - parent Outcome open
 runtimeInputs:
   - role: skill
     locator: skills/handoff/SKILL.md
-    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
   - role: fixture
     locator: evaluations/fixtures/handoff/session-continuity.fixture.yaml
-    sha256: e2f73fb1d912b503122286f57257c72f2a7aaa0894b2a3b6c5ac62ae414a0158
+    sha256: d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-contract-template.md
-    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-dispositions.md
-    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/session-continuity-1.txt
-  sha256: 3e288cb86c33bf14a41c1f70fd2c9f64d72f76a61a4d1544e6948b871047db90
+  sha256: 55ab350366bd39bfb69d6c9a3a768431c37b77563ac074d3e07829c0bcf5179c

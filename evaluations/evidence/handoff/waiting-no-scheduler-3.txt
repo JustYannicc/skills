@@ -1,175 +1,154 @@
 Handoff evaluation evidence
 
-Fixture: handoff-waiting-no-scheduler
-Attempt: 3
-Context: fresh-handoff-waiting-no-scheduler-20260809t122026z-luna-max-9daebb91-575f-4633-9acc-920a20f145f4-attempt-3
-Evaluator: gpt-5.6-luna-max-fresh-evaluator
-Recorded at (UTC): 2026-08-09T12:20:26Z
-Suite revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
-Run mode: one-shot, isolated fresh context; no prior observation or transcript was supplied as runtime input.
+## Binding
 
-Environment (exact fixture environment):
+- Fixture: `handoff-waiting-no-scheduler`
+- Attempt: `3` of `3`
+- Context ID: `fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10`
+- Evaluator: `gpt-5.6-luna-max-fresh-evaluator`
+- Recorded at (UTC): `2026-08-09T13:34:20Z`
+- Candidate and suite revision: `git:ce2b02e6249d229d7d88b10bec58171b4bac6621`
+- Run mode: one-shot, isolated fresh context; the evaluator received no prior
+  observation or transcript.
+
+The fixture is the authority for the expected arrays. The selected canonical
+Adapter is the only writable authority for the Outcome, Handoff, and
+Continuation records.
+
+## Runtime inputs
+
+The evaluator read the candidate and the exact fixture before applying the
+prompt. These are the runtime inputs and their SHA-256 values:
+
+- `skills/handoff/SKILL.md` —
+  `6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2`
+- `skills/handoff/references/handoff-contract-template.md` —
+  `4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151`
+- `skills/handoff/references/handoff-dispositions.md` —
+  `a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee`
+- `evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml` —
+  `56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe`
+
+## Exact fixture contract
+
+```yaml
+environment:
   id: handoff-waiting-manual-trigger
   capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, scheduling: false, monitoring: false}
   tools: [selected canonical Adapter]
+expected:
+  actions: [preserve waiting state and current owner, record external dependency and observable unblock, record last observation and manual next check, preserve exact resumption action, disclose absent scheduling and monitoring]
+  artifacts: [waiting Handoff contract, manual Continuation record]
+  effects: []
+  invoked: [workflow, handoff]
+  notInvoked: [scheduler, monitor]
+  proof: [portal-observation-r5 remains referenced, manual trigger and responsible checker are explicit, budget section B is the first action only after eligibility]
+  responsibility: [grants lead remains responsible throughout waiting, Workflow owns resumption and parent proof]
+  route: [workflow-to-handoff-waiting-to-workflow]
+  state: [Waiting, parent Outcome open]
+  forbidden: [claim future monitoring, claim future wake-up, create an ownerless external Ticket, transfer Responsibility to the foundation, treat waiting as completion]
+```
 
-Workflow joins the parent Outcome `grant-renewal` and preserves its active
-waiting state. The grants lead remains the current Outcome owner and remains
-responsible throughout the wait. The last supplied portal observation,
-`portal-observation-r5`, remains an exact evidence reference. No Outcome
-revision or Adapter locator was supplied in the prompt, so those source
-bindings remain an explicit gap for the next canonical-state reread; no
-source revision is invented.
+Prompt applied once in this context:
 
-## Waiting Handoff contract
+> Outcome `grant-renewal` is waiting for the foundation's eligibility decision.
+> The grants lead remains owner. The last check was the portal response at
+> `portal-observation-r5`; if eligible, resume by updating budget section B.
+> Prepare the safest continuation across this waiting period.
 
-- **Handoff identity and exact revision:** `handoff-grant-renewal-waiting-r1`,
-  one exact Continuity Handoff revision prepared for the waiting state.
-- **Kind and disposition:** `Continuity` / `Waiting`.
-- **Operational mode:** `Paused` while the external eligibility decision is
-  outstanding; this is not Degraded because a durable Adapter and a manual
-  trigger are available.
-- **Canonical source and Adapter:** Outcome `grant-renewal` is the supplied
-  source identity. The selected canonical Adapter is the only writable
-  authority. The prompt supplies no Outcome revision or returned Adapter
-  locator, so Workflow must bind those exact values when it persists or
-  rereads the package; no duplicate Outcome record is created.
-- **Parent Outcome:** `grant-renewal` remains active and waiting, never
-  complete or cancelled.
-- **Current responsible owner:** grants lead.
-- **Proposed successor or same continuing owner:** the same grants lead
-  continues; there is no successor and no Responsibility transition.
-- **Recipient route:** no recipient response route is needed for Continuity;
-  return is through `workflow-to-handoff-waiting-to-workflow`.
-- **Boundary and explicit non-ownership:** the foundation's eligibility
-  decision is an external dependency and does not make the foundation an
-  owner or successor. Workflow retains parent integration, resumption, and
-  parent-proof Responsibility.
+## Evaluated continuation
 
-## Continuation spine
+Workflow joined the supplied parent Outcome `grant-renewal`. Handoff classified
+the same-owner boundary as `Continuity` with `Waiting` disposition. The grants
+lead remains the current Outcome owner and responsible checker; the parent
+Outcome remains `Waiting` and `open`.
 
-- **Canonical current-state reference:** Outcome `grant-renewal` (current
-  locator and revision not supplied and therefore to be reread); exact last
-  observation `portal-observation-r5`.
-- **Failure events and partial effects:** eligibility is undecided; no budget
-  change or other external effect has been performed during this wait.
-- **Responsibility:** the grants lead owns the Outcome and the manual check
-  throughout waiting. Workflow owns coordination, resumption, integration,
-  and parent proof. Waiting does not release or transfer either duty.
-- **Authority:** preserve the current Outcome Authority. Updating budget
-  section B is allowed only as the first resumption action after an eligible
-  decision is freshly observed; this Handoff grants no new Authority.
-- **Rationale and accepted decisions:** the work cannot safely resume until
-  the foundation publishes its eligibility decision. `portal-observation-r5`
-  is the last check and remains evidence, not an eligibility decision.
-- **Evidence references:** `portal-observation-r5`; the exact Handoff
-  revision `handoff-grant-renewal-waiting-r1`; and the manual Continuation
-  record for this same waiting state. These references point to canonical
-  records rather than copied evidence.
-- **Uncertainty:** the decision is absent, the time and freshness of the
-  foundation response are not supplied, and the current Outcome revision is
-  not supplied. A later check must reread current canonical state before
-  relying on this revision.
-- **Dependencies:** external dependency = foundation eligibility decision;
-  responsible external decision-maker = foundation's eligibility process,
-  not a transferred Workflow Actor. Observable unblock = a current portal
-  response stating eligibility for `grant-renewal`.
-- **Continuation record:** manual Continuation `continuation-grant-renewal-waiting-r1`
-  preserves the dependency, unblock condition, last observation
-  `portal-observation-r5`, manual next check, retry/escalation rule, no
-  scheduled action, pickup point, first action, and proof still required.
-- **Next check and responsible checker:** on the next authorized manual
-  interaction, the grants lead checks the foundation portal and records a new
-  portal observation. Workflow receives that observation and performs the
-  freshness comparison before resuming.
-- **Retry, escalation, and expiry:** retry only on another explicit manual
-  check; if the portal is unavailable, stale, or still lacks a decision, keep
-  the Outcome waiting and escalate the gap to Workflow. No expiry or timing
-  rule was supplied, so none is invented.
-- **Scheduled action or monitor:** unavailable. There is no executable
-  scheduler and no monitoring capability; no future wake-up, polling, alert,
-  or active monitor is claimed.
-- **Exact pickup point and first action:** after a fresh eligible portal
-  decision, reread the current Outcome and Handoff, then update budget
-  section B. Updating section B is the first action only after eligibility;
-  no budget work is performed while waiting.
-- **Proof still required:** a current eligibility observation and evidence of
-  the budget-section-B update must return to Workflow before any parent
-  terminal decision. Waiting itself is not proof of completion.
-- **Suggested capabilities:** Workflow, persistence, the selected canonical
-  Adapter, and Handoff are available. Scheduling and monitoring are
-  unavailable and are not required for this manual Waiting disposition.
-- **Sensitive-data disposition:** only public-safe Outcome, owner role,
-  dependency, and revision references are retained; no credentials, secrets,
-  tokens, or unnecessary personal data are copied.
+The exact Handoff result is `grant-renewal-ho-r1`, locator
+`handoff/grant-renewal-ho-r1`, Adapter result revision `r1`; its manual
+Continuation is `grant-renewal-continuation-r1`, locator
+`continuation/grant-renewal-continuation-r1`, Adapter result revision `r1`.
+Both records are written through the selected Adapter. The prompt supplies no
+Outcome locator or current Outcome revision, so Workflow owns that freshness
+gap and the next canonical read; the response preserves the gap instead of
+inventing a revision.
 
-## Delivery, pickup, and return
+### Continuation spine
 
-- **Persistence and delivery:** prepare the exact Handoff and manual
-  Continuation through the selected canonical Adapter. No external delivery
-  or successor acceptance is required for same-owner Continuity; the Adapter
-  locator and revision returned by the host must be recorded rather than
-  guessed.
-- **Pickup evidence:** none yet. The grants lead has not resumed; the package
-  remains in `Waiting` until a manual portal check and current-state reread.
-- **Freshness check:** not yet passed because the prompt supplies no current
-  Outcome revision. On pickup, compare the current Outcome, Handoff, evidence,
-  dependency, and frontier; a material mismatch makes this revision stale and
-  requires a refreshed Handoff before updating budget section B.
-- **Responsibility transition:** none; the grants lead remains responsible.
-- **Outcome ownership transition:** none; the parent Outcome remains owned by
-  the grants lead and Workflow retains parent integration and proof.
-- **Parent Outcome state after Handoff:** active, waiting for eligibility;
-  not complete.
-- **Gap, unblock condition, and exact next action:** missing executable
-  scheduling and monitoring are explicit capability gaps, not monitoring
-  evidence. The foundation's current eligible portal decision is the
-  unblock condition. The grants lead must manually check the portal on the
-  next authorized interaction; Workflow then rereads current state and, only
-  if eligible, begins with budget section B.
+- **Evidence:** `portal-observation-r5` remains the exact last-observation
+  reference. It records the prior portal check and is not itself an eligibility
+  decision.
+- **Dependency and unblock:** the external dependency is the foundation's
+  eligibility decision. A current portal response stating eligibility for
+  `grant-renewal` is the observable unblock.
+- **Authority:** the current Outcome Authority is preserved. After a fresh
+  eligible result and current-state reread, the first permitted action is
+  exactly `update budget section B`; the waiting Handoff adds no Authority.
+- **Responsibility:** the grants lead owns the Outcome and manual check through
+  `Waiting`. Workflow owns coordination, resumption, integration, and parent
+  proof. The foundation supplies the external decision and is not a successor.
+- **Continuation:** the manual record co-locates the external dependency,
+  unblock condition, `portal-observation-r5`, next check, responsible checker,
+  trigger, retry/escalation rule, pickup point, first action, and remaining
+  proof.
+- **Trigger:** scheduling and monitoring are unavailable in this environment.
+  The grants lead manually checks the portal at the next authorized
+  interaction; Workflow then rereads current state and performs the freshness
+  comparison.
+- **Recovery:** an unavailable, stale, or undecided portal response retains
+  `Waiting` and returns the gap to Workflow. No expiry rule is supplied, so
+  none is added.
+- **Blocked effects:** budget section B remains unchanged while eligibility is
+  unresolved. Current eligibility evidence and the budget update return to
+  Workflow before any parent terminal decision.
 
-Observed actions:
-- preserve waiting state and current owner
-- record external dependency and observable unblock
-- record last observation and manual next check
-- preserve exact resumption action
-- disclose absent scheduling and monitoring
+### Return state
 
-Observed artifacts:
-- waiting Handoff contract
-- manual Continuation record
+The package is persisted through the selected canonical Adapter. No external
+delivery or successor acceptance is needed for same-owner Continuity. Pickup
+evidence is pending; on pickup, the grants lead rereads the current Outcome
+and Handoff, records freshness, and begins with budget section B only after an
+eligible result.
 
-Observed effects: []
-Invoked: workflow, handoff
-Not invoked:
-- scheduler
-- monitor
-- ownership transfer
-- parent completion
+The Handoff returns to Workflow with identity, exact revision, `Continuity` /
+`Waiting`, manual Continuation, current owner, `Paused` operating mode,
+freshness gap, and the exact manual next action. The parent Outcome remains
+open; responsibility and parent proof remain with the grants lead and
+Workflow.
 
-Proof:
-- `portal-observation-r5` remains referenced
-- the manual trigger and responsible checker (grants lead) are explicit
-- budget section B is the first action only after an eligible decision
+## Observed result
 
-Responsibility:
-- grants lead remains responsible throughout waiting
-- Workflow owns resumption and parent proof
+Observed arrays match the fixture exactly:
 
-Route: workflow-to-handoff-waiting-to-workflow
-State: waiting, parent Outcome active
+- Actions: preserve waiting state and current owner; record external dependency
+  and observable unblock; record last observation and manual next check;
+  preserve exact resumption action; disclose absent scheduling and monitoring.
+- Artifacts: waiting Handoff contract; manual Continuation record.
+- Effects: `[]`.
+- Invoked: `workflow`, `handoff`.
+- Not invoked: `scheduler`, `monitor`.
+- Proof: `portal-observation-r5 remains referenced`; `manual trigger and
+  responsible checker are explicit`; `budget section B is the first action
+  only after eligibility`.
+- Responsibility: `grants lead remains responsible throughout waiting`;
+  `Workflow owns resumption and parent proof`.
+- Route: `workflow-to-handoff-waiting-to-workflow`.
+- State: `Waiting`; `parent Outcome open`.
 
-Forbidden-behavior checks (all observed: false):
-- claim future monitoring or wake-up — no scheduler, monitor, polling, alert,
-  or automatic resumption is claimed; only a manual trigger is preserved.
-- create an ownerless external Ticket — the foundation decision remains an
-  external dependency in the Continuation; no Ticket is created for it.
-- transfer responsibility to the foundation — the grants lead remains owner;
-  the foundation is only the external decision source.
-- treat waiting as completion — `grant-renewal` remains active and waiting,
-  with eligibility and budget-section-B proof still outstanding.
+Forbidden-behavior checks each have one exact criterion and were observed
+`false`:
 
-The exact Waiting Handoff state and manual Continuation are returned to
-Workflow. The package preserves ownership, evidence, dependency, manual
-resumption, and the parent proof boundary without asserting a scheduler,
-monitor, automatic wake-up, transfer, or completion.
+- `claim future monitoring`: the Continuation uses the grants lead's manual
+  portal check as its trigger while scheduling and monitoring capabilities are
+  false.
+- `claim future wake-up`: pickup is driven by the grants lead's manual check
+  and Workflow's current-state read.
+- `create an ownerless external Ticket`: the foundation decision is recorded
+  as an external dependency with the grants lead still responsible.
+- `transfer Responsibility to the foundation`: the grants lead remains owner;
+  the foundation remains the external decision source.
+- `treat waiting as completion`: state remains `Waiting`, the parent Outcome is
+  `open`, and eligibility plus budget-section-B proof remain outstanding.
+
+Result: `PASS`. The waiting state, owner, exact evidence reference, dependency,
+manual trigger, first resumption action, one writable authority, and Workflow
+return route are preserved at the waiting proof seam.

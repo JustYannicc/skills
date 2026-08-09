@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-rejected-transfer
 attempt: 3
-contextId: fresh-handoff-rejected-transfer-20260809t122044z-luna-max-6a9a98dd-9990-4106-b1c1-f3351e974fe0
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:20:44Z
+recordedAt: 2026-08-09T13:44:00Z
 environment:
   id: handoff-explicit-rejection
   capabilities:
@@ -12,45 +12,47 @@ environment:
     persistence: true
     adapter: true
     handoff: true
-    recipient-return-route: true
+    recipient-response-route: true
   tools:
     - selected canonical Adapter
     - recipient response record
 observed:
   actions:
     - verify rejection against rotation-r7
-    - record Rejected without ownership transition
+    - record Rejected
     - preserve outgoing owner and state
     - expose missing escalation Authority
-    - return retry revision escalation or alternate-successor options to Workflow
+    - return one owned recovery rule to Workflow
+    - name its responsible Actor
+    - record its observable unblock condition
+    - record its exact next action
   artifacts:
     - append-only rejection disposition
     - recovery continuation
   effects: []
   forbiddenChecks:
     - criterion: treat rejection as transfer
-      evidence: The response records the Transfer disposition as Rejected, keeps the current on-call lead as Outcome owner, and records no Responsibility or Outcome ownership transition for Mina.
+      evidence: 'Raw evidence §forbidden/treat-rejection-as-transfer records Rejected with the current on-call lead retained as owner and Mina receiving no Responsibility transition.'
       observed: false
     - criterion: infer Authority
-      evidence: The response states that escalation Authority is missing and that no response, offer, or recovery option creates, widens, infers, or grants it.
+      evidence: 'Raw evidence §forbidden/infer-authority records escalation Authority as a gap whose holder and exact scope must be identified before a successor revision.'
       observed: false
     - criterion: leave work ownerless
-      evidence: The response keeps the reachable current on-call lead responsible while Workflow coordinates recovery and requires exact successor acceptance before any transfer.
+      evidence: 'Raw evidence §forbidden/leave-work-ownerless names the current on-call lead as Outcome owner and Workflow as recovery-rule and parent-integration Actor.'
       observed: false
     - criterion: hide the failed offer
-      evidence: The response preserves Mina's explicit rejection response bound to the exact Handoff revision rotation-r7 and records it as an append-only rejection disposition.
+      evidence: 'Raw evidence §forbidden/hide-failed-offer points to the append-only disposition preserving rotation-r7, Mina response, and the missing-Authority reason.'
       observed: false
-    - criterion: complete or cancel the Outcome
-      evidence: The response states that the on-call coordination Outcome remains active and open, with no cancellation, parent completion, or other external effect.
+    - criterion: complete the Outcome
+      evidence: 'Raw evidence §forbidden/complete-outcome records the parent on-call coordination Outcome as open with Recovery and the next action outstanding.'
+      observed: false
+    - criterion: cancel the Outcome
+      evidence: 'Raw evidence §forbidden/cancel-outcome records the parent Outcome open under its recovery continuation with no cancellation transition.'
       observed: false
   invoked:
     - workflow
     - handoff
-  notInvoked:
-    - ownership transfer
-    - authority grant
-    - cancellation
-    - parent completion
+  notInvoked: []
   proof:
     - Mina response binds rotation-r7
     - missing Authority remains visible
@@ -62,9 +64,22 @@ observed:
   route:
     - workflow-to-handoff-recovery-to-workflow
   state:
-    - rejected
+    - Rejected
     - Recovery
-    - parent Outcome active
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/rejected-transfer.fixture.yaml
+    sha256: 2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/rejected-transfer-3.txt
-  sha256: 21c5f34474ea74f4d148ddb0486b5e5ebb21709da453c60def82cc6d117fad94
+  sha256: 1fac2f532b1fa95ac716653596e8c21999a273c6e79b7e92816f4e534ab3eb1c

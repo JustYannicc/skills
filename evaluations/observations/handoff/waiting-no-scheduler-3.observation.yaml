@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-waiting-no-scheduler
 attempt: 3
-contextId: fresh-handoff-waiting-no-scheduler-20260809t122026z-luna-max-9daebb91-575f-4633-9acc-920a20f145f4-attempt-3
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:20:26Z
+recordedAt: 2026-08-09T13:34:20Z
 environment:
   id: handoff-waiting-manual-trigger
   capabilities:
@@ -28,17 +28,20 @@ observed:
     - manual Continuation record
   effects: []
   forbiddenChecks:
-    - criterion: claim future monitoring or wake-up
-      evidence: The response explicitly records scheduling and monitoring as unavailable and preserves only a manual portal check; it claims no polling, alert, monitor, scheduler, or automatic wake-up.
+    - criterion: claim future monitoring
+      evidence: Scheduling and monitoring capabilities are false; the Continuation names the grants lead's manual portal check as its trigger.
+      observed: false
+    - criterion: claim future wake-up
+      evidence: Pickup is driven by the grants lead's manual check and Workflow's current-state read.
       observed: false
     - criterion: create an ownerless external Ticket
-      evidence: The foundation eligibility decision remains an external dependency in the Continuation, and the response explicitly creates no external Ticket for it.
+      evidence: The foundation decision is recorded as an external dependency with the grants lead still responsible.
       observed: false
-    - criterion: transfer responsibility to the foundation
-      evidence: The grants lead remains the current owner and responsible checker throughout Waiting; the foundation is named only as the external decision source and no Responsibility transition is recorded.
+    - criterion: transfer Responsibility to the foundation
+      evidence: The grants lead remains owner and the foundation remains the external decision source.
       observed: false
     - criterion: treat waiting as completion
-      evidence: The response leaves grant-renewal active and waiting, with a current eligibility observation and budget-section-B proof still required before any parent terminal decision.
+      evidence: State remains Waiting, the parent Outcome is open, and eligibility plus budget-section-B proof remain outstanding.
       observed: false
   invoked:
     - workflow
@@ -46,8 +49,6 @@ observed:
   notInvoked:
     - scheduler
     - monitor
-    - ownership transfer
-    - parent completion
   proof:
     - portal-observation-r5 remains referenced
     - manual trigger and responsible checker are explicit
@@ -58,8 +59,21 @@ observed:
   route:
     - workflow-to-handoff-waiting-to-workflow
   state:
-    - waiting
-    - parent Outcome active
+    - Waiting
+    - parent Outcome open
 rawEvidence:
   locator: evaluations/evidence/handoff/waiting-no-scheduler-3.txt
-  sha256: c878d3109a76eb8fecfa1dc8fddd55d0cd06e676ce4bc79ac073d8953e4c9db9
+  sha256: 5b1d85c9582c0acccc664e6d494e8b7fbbb5895c1a05a9dbb82b1ac99287922d
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml
+    sha256: 56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-unauthorized-override
 attempt: 2
 contextId: fresh-workflow-mid-unauthorized-override-20260806T182543Z-bc36174a-sol-high-2
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:25:43.000Z
 environment:

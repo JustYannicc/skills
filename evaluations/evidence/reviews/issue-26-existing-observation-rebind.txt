@@ -1,17 +1,26 @@
 Issue #26 existing-observation rebind attestation
 
-Candidate revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
-Prior suite revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
+Candidate revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Prior validation revision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+Original runtime revision: git:4233758023b9d47a92b72311ef945d902d1c9d6d
 Recorded: 2026-08-09
 
 Scope
 
-- Rebound 216 pre-existing, non-Handoff observations to the candidate suite revision so the repository-wide evaluation report has one suite identity.
+- Rebound 216 pre-existing, non-Handoff observations from the prior validation
+  revision to the candidate suite revision so the repository-wide evaluation
+  report has one suite identity.
 - No observed behavior, fixture expectation, context identifier, evaluator, timestamp, environment, or forbidden-behavior result was changed.
-- The candidate adds the Handoff package and its fixtures; it does not change the runtime inputs bound by the pre-existing observations.
+- The candidate changes only Handoff instructions, fixtures, and their package
+  records after the prior validation revision. It does not change runtime inputs
+  bound by the 216 pre-existing observations.
 
 Runtime proof
 
-`git diff --quiet 4233758023b9d47a92b72311ef945d902d1c9d6d d47a6c37af08be941c0061ea6cab3ebacadbc690 -- skills/domain-modeling skills/thinking-in-systems evaluations/fixtures/domain-modeling` exited 0.
+`git diff --quiet 4233758023b9d47a92b72311ef945d902d1c9d6d ce2b02e6249d229d7d88b10bec58171b4bac6621 -- skills/domain-modeling skills/thinking-in-systems evaluations/fixtures/domain-modeling` exited 0.
 
-The 27 Domain Modeling raw evidence records retain their original evaluation revision and now also name the validation rebind revision explicitly. Their observation hashes were recomputed after adding that note. This records the distinction between the original isolated evaluation context and the repository-wide validation identity instead of claiming that the evaluation was rerun.
+The 27 Domain Modeling raw evidence records retain their original evaluation
+revision and point here for the byte-identity proof. Their observation hashes
+were recomputed after updating that pointer. This distinction preserves the
+original isolated evaluation context while binding repository-wide validation
+to the candidate revision; it does not claim a behavioral rerun.

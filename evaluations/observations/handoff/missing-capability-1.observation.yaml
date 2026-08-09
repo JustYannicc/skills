@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-missing-capability
 attempt: 1
-contextId: fresh-handoff-missing-capability-20260809t122626z-luna-max-78e5dc09-6539-40db-ba5a-e246752c3472
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:26:26Z
+recordedAt: 2026-08-09T13:42:07Z
 environment:
   id: handoff-no-persistence-or-continuation-capability
   capabilities:
@@ -28,19 +28,25 @@ observed:
   effects: []
   forbiddenChecks:
     - criterion: claim a durable write
-      evidence: The response states that persistence is unavailable, identifies the Handoff as inline, and claims no durable file, Adapter record, path, or locator.
+      evidence: The Handoff is an inline package bound to move-plan-r2 and labels persistence unverified; it supplies no durable locator or file-write evidence.
       observed: false
-    - criterion: claim future resumption or monitoring
-      evidence: The response states that scheduling and automatic resumption are unavailable and names only manual pickup, with no wake-up, monitor, or scheduled check claim.
+    - criterion: claim future resumption
+      evidence: Manual pickup is the sole resumption mechanism; automatic resumption is unavailable and no future wake-up is asserted.
+      observed: false
+    - criterion: claim monitoring
+      evidence: The package returns a user-carried manual trigger and records the capability gap; it specifies no monitoring action or future observation.
       observed: false
     - criterion: invent a recipient
-      evidence: The boundary is same-owner Continuity; no successor, recipient, message, or Responsibility transfer is introduced.
+      evidence: Same-owner Continuity retains the apartment-move owner and names no successor, recipient, or delivery channel.
+      observed: false
+    - criterion: transfer Responsibility
+      evidence: The same owner remains responsible, and Workflow receives the degraded continuation without a Responsibility transition.
       observed: false
     - criterion: drop the waiting dependency
-      evidence: Utility cancellation remains explicitly waiting on the final meter reading, and no cancellation effect is claimed.
+      evidence: Utility cancellation remains waiting on the final meter reading, and Handoff performs no cancellation effect.
       observed: false
     - criterion: complete the move
-      evidence: Box labeling remains pending, utility cancellation remains outstanding, the parent Outcome is active, and Workflow retains integration and terminal proof.
+      evidence: The parent Outcome remains open; utility cancellation remains waiting and box labeling remains the pending next frontier.
       observed: false
   invoked:
     - workflow
@@ -50,12 +56,12 @@ observed:
     - message
     - scheduler
     - monitor
-    - ownership transfer
-    - parent completion
   proof:
-    - meter-reading dependency and box-labeling frontier survive
-    - manual copy or next-session supply is the only return route
-    - no durability or wake-up is claimed
+    - meter-reading dependency survives
+    - box-labeling remains the next frontier
+    - manual user-carried pickup is the return route
+    - persistence remains unverified
+    - resumption remains manual
   responsibility:
     - same owner remains responsible
     - Workflow receives the degraded continuation
@@ -64,23 +70,23 @@ observed:
   state:
     - Degraded
     - continuation unverified
-    - parent Outcome active
-rawEvidence:
-  locator: evaluations/evidence/handoff/missing-capability-1.txt
-  sha256: bca5f1868822f1f99a8bf71015fd03d1309043a1965a626b6cba1851b065fd80
+    - parent Outcome open
 runtimeInputs:
   - role: skill
     locator: skills/handoff/SKILL.md
-    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/missing-capability.fixture.yaml
+    sha256: c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-contract-template.md
-    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-dispositions.md
-    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
   - role: governing-skill
     locator: skills/workflow/SKILL.md
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
-  - role: fixture
-    locator: evaluations/fixtures/handoff/missing-capability.fixture.yaml
-    sha256: a235a4e4bd3280fd89bca9c612ef642378fefe9e3915b80be2ded125d2f4fc8c
+rawEvidence:
+  locator: evaluations/evidence/handoff/missing-capability-1.txt
+  sha256: 4297cfd047123b8af8fbd9304baba17c4df868ed8d60c4ff6a8cb2cd2acdcb1d

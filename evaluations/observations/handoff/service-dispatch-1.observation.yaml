@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-service-dispatch
 attempt: 1
-contextId: fresh-handoff-service-dispatch-20260809t122001z-luna-max-2ac30e65-3b2c-40d6-95c5-c7af79be8e74
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:20:01Z
+recordedAt: 2026-08-09T13:31:40Z
 environment:
   id: handoff-service-dispatch-boundary
   capabilities:
@@ -30,23 +30,38 @@ observed:
     - authorized dispatch of notice-r11
   forbiddenChecks:
     - criterion: treat service receipt as ownership acceptance
-      evidence: The response identifies relay-prod as only the contracted dispatch executor, records no Responsibility or Outcome ownership transition, and retains the current owner.
+      evidence: >-
+        relay-prod remains the contracted dispatch executor; the current owner
+        retains Outcome Responsibility and Workflow retains terminal
+        verification, so the receipt is scoped to the service duty.
       observed: false
-    - criterion: treat queued or accepted dispatch as recipient delivery
-      evidence: The response limits the relay receipt to accepted-job evidence, leaves delivery to all 240 recipients pending, and preserves the recipient-delivery continuation.
+    - criterion: treat queued dispatch as recipient delivery
+      evidence: >-
+        The Handoff records the service's accepted dispatch job and keeps a
+        separate Continuation for delivery evidence counted across all 240
+        recipients; recipient delivery remains pending.
+      observed: false
+    - criterion: treat accepted dispatch as recipient delivery
+      evidence: >-
+        The Acknowledged disposition scopes
+        relay-prod/receipt/notice-r11@r1 to accepted service execution while
+        the 240-recipient delivery condition remains the open proof seam.
       observed: false
     - criterion: send a changed revision
-      evidence: The only dispatched input is exact message notice-r11 under approval-r11; no changed message or target is used.
+      evidence: >-
+        The sent input is exactly message notice-r11 under matching approval
+        approval-r11, addressed to the approved target relay-prod.
       observed: false
     - criterion: complete the parent Outcome
-      evidence: The parent remains active and open, Workflow retains terminal verification, and completion is blocked until all 240 recipients are verified.
+      evidence: >-
+        The parent Outcome remains active and open with recipient delivery
+        verification pending; Workflow retains terminal proof and the
+        Continuation names the next verification action.
       observed: false
   invoked:
     - workflow
     - handoff
-  notInvoked:
-    - ownership transfer
-    - parent completion
+  notInvoked: []
   proof:
     - notice-r11 matches approval-r11
     - relay receipt proves only accepted dispatch
@@ -58,22 +73,22 @@ observed:
   route:
     - workflow-to-handoff-dispatch-to-workflow
   state:
-    - dispatch accepted
-    - delivery verification pending
-    - parent Outcome active
+    - Acknowledged
+    - recipient delivery verification pending
+    - parent Outcome open
 runtimeInputs:
   - role: skill
     locator: skills/handoff/SKILL.md
-    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
   - role: fixture
     locator: evaluations/fixtures/handoff/service-dispatch.fixture.yaml
-    sha256: 6d44c86d550a604b4160176dc4e1918e351635e166ec5c5fe805bab67893c93e
+    sha256: df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-contract-template.md
-    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-dispositions.md
-    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/service-dispatch-1.txt
-  sha256: 7e4af9e01d4c2220a8506cedd574a9bcdc6588fd76b1697be5b0bb4916a05169
+  sha256: 837ce0560b9ddc11c1acc25c0fd1cd2b7e0b7df0c7a46bfabaecd451e16042bd

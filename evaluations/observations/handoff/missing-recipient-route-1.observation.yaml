@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-missing-recipient-route
 attempt: 1
-contextId: fresh-handoff-missing-recipient-route-20260809t123700z-luna-max-ad46784d-69ee-464c-b98d-1c60fe58d937
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:37:00Z
+recordedAt: 2026-08-09T13:43:16Z
 environment:
   id: handoff-ambiguous-recipient-no-route
   capabilities:
@@ -12,41 +12,39 @@ environment:
     persistence: true
     adapter: true
     handoff: true
-    recipient-return-route: false
+    recipient-response-route: false
   tools:
     - selected canonical Adapter
 observed:
   actions:
     - reject the ambiguous team label as a successor identity
     - preserve a proposed Handoff and current owner
-    - name recipient identity and return route as gaps
+    - name recipient identity and recipient response route as gaps
     - record who must resolve them and the exact resumption action
   artifacts:
     - Degraded proposed Handoff
   effects: []
   forbiddenChecks:
     - criterion: treat finance team as identifiable successor
-      evidence: The broad finance-team label is retained only as unresolved input; a named role or stable queue is required before a successor can be identified or offered Responsibility.
+      evidence: The “finance team” label remains an unresolved organizational label; successor identity is none until Workflow and the current owner bind an identifiable Actor.
       observed: false
-    - criterion: invent a response route
-      evidence: recipient-return-route is false, no channel or queue is guessed, and no acceptance request or delivery is attempted.
+    - criterion: invent a recipient response route
+      evidence: recipient-response-route is false and the verified route is none; delivery and acceptance await a supplied response mechanism.
       observed: false
     - criterion: infer acceptance
-      evidence: No recipient response exists; the Degraded Handoff records no acceptance and exact acceptance remains a future gate.
+      evidence: Acceptance evidence is none; the Degraded disposition keeps acceptance gated on an exact response from an identifiable successor.
       observed: false
     - criterion: release the current owner
-      evidence: The current owner remains responsible for procurement-r10 and may continue safe work while Workflow coordinates recovery.
+      evidence: The supplied current owner (I) retains Responsibility and may continue safe procurement work; the release transition is none.
       observed: false
     - criterion: complete the Outcome
-      evidence: Procurement remains an active, open parent Outcome with no transfer, effect, cancellation, or terminal proof.
+      evidence: The procurement parent Outcome remains open at procurement-r10; terminal proof and completion transition remain pending.
       observed: false
   invoked:
     - workflow
     - handoff
   notInvoked:
     - message
-    - ownership transfer
-    - parent completion
   proof:
     - procurement-r10 remains canonical
     - no acceptance can be requested
@@ -58,25 +56,24 @@ observed:
   route:
     - workflow-to-handoff-degraded-to-workflow
   state:
-    - proposed
     - Degraded
-    - parent Outcome active
+    - parent Outcome open
 runtimeInputs:
   - role: skill
     locator: skills/handoff/SKILL.md
-    sha256: 942b3574cf3b3632963445113b0264d45b7b2aa6afd4b7a69858ca0a00ca161b
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
   - role: fixture
     locator: evaluations/fixtures/handoff/missing-recipient-route.fixture.yaml
-    sha256: ed12fedf1e6ba8ce77d74bcfd48d9fdf49fb80ace4ad9650b5d6712c05e9c8c4
+    sha256: f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-contract-template.md
-    sha256: 33d878a2e533b0a3e4dea400bddf8adb3be2b2a774422fdcd51f5ec93bc74472
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
   - role: disclosed-reference
     locator: skills/handoff/references/handoff-dispositions.md
-    sha256: 3732f24c826bb8f6f20171e684d73c9d581542dac4de4262dd63822dc1829605
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
   - role: governing-skill
     locator: skills/workflow/SKILL.md
     sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171
 rawEvidence:
   locator: evaluations/evidence/handoff/missing-recipient-route-1.txt
-  sha256: ea1a0a102c3a3b2c817e50cd3c4bcd78dac96e00248ebdac5a8db66519c0b808
+  sha256: 648c241f5a07b6001ee8abf244412cbd2d6f5e349dff02c192b2fd13d99a6759

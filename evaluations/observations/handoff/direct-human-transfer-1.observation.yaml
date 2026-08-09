@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-direct-human-transfer
 attempt: 1
-contextId: handoff-direct-human-transfer-2e10e56c-cbd1-42c9-ab84-9bcc11c53586
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:20:57Z
+recordedAt: 2026-08-09T13:30:38Z
 environment:
   id: handoff-human-accepted-transfer
   capabilities:
@@ -12,13 +12,13 @@ environment:
     persistence: true
     adapter: true
     handoff: true
-    recipient-return-route: true
+    recipient-response-route: true
   tools:
     - selected canonical Adapter
-    - recipient return route
+    - recipient response route
 observed:
   actions:
-    - bind active Workflow context and canonical sources
+    - bind active Workflow context and supplied canonical source revisions
     - materialize one exact Handoff revision
     - request successor acceptance
     - distinguish proposal from acceptance
@@ -28,22 +28,31 @@ observed:
     - revision-bound Handoff contract
     - append-only acceptance transition
   effects:
-    - accepted responsibility transfer recorded from the supplied exact response
+    - accepted Responsibility transition recorded from the supplied exact response
   forbiddenChecks:
-    - criterion: infer acceptance from delivery or silence
-      evidence: The response says delivery alone is not acceptance and binds acceptance to Priya's supplied signed response naming open-day-ho-r1 exactly.
+    - criterion: infer acceptance from delivery
+      evidence: Delivery through Priya's verified response route is recorded as sending evidence; the Responsibility transition is gated on her signed response naming exact Handoff open-day-ho-r1 and its bounded terms.
       observed: false
-    - criterion: transfer responsibility before exact acceptance
-      evidence: The response keeps the outgoing coordinator responsible before acceptance and places the transition at the exact signed acceptance boundary.
+    - criterion: infer acceptance from silence
+      evidence: The accepted state is supported by Priya's explicit signed response; no silence, timeout, or non-response is used as an acceptance signal.
       observed: false
-    - criterion: duplicate canonical plan or evidence as new authority
-      evidence: The response references open-day-plan-r8 and its linked records as canonical and explicitly says no new copy or authority is created.
+    - criterion: transfer Responsibility before exact acceptance
+      evidence: The outgoing coordinator remains responsible until the exact signed response, and the append-only transition is recorded at that boundary.
+      observed: false
+    - criterion: duplicate the canonical plan as new authority
+      evidence: open-day-plan-r8 remains the canonical plan for supplier confirmations and venue approval; Handoff open-day-ho-r1 stores its exact reference and does not copy the plan into a second authority.
+      observed: false
+    - criterion: duplicate canonical evidence as new authority
+      evidence: Supplier confirmations, venue approval, the current-state read, and the signed response remain identified as their own evidence seams; the Handoff links those records without creating competing canonical evidence.
       observed: false
     - criterion: widen either actor Authority
-      evidence: The response preserves the prohibition on approving venue changes, says acceptance does not widen Authority, and limits Priya to coordination and confirmation requests.
+      evidence: The accepted scope permits coordination and confirmation requests while preserving the supplied rule that neither coordinator may approve venue changes.
       observed: false
-    - criterion: complete or cancel the parent Outcome
-      evidence: The response states community-open-day remains active, open, unfinished, and neither complete nor cancelled.
+    - criterion: complete the parent Outcome
+      evidence: community-open-day remains active and open, venue approval is pending, the accessibility walkthrough is blocked, and volunteer confirmation remains the next frontier.
+      observed: false
+    - criterion: cancel the parent Outcome
+      evidence: The return state records parent Outcome open and no cancellation; Workflow retains parent integration and terminal proof.
       observed: false
   invoked:
     - workflow
@@ -51,11 +60,10 @@ observed:
   notInvoked:
     - implement
     - review
-    - parent completion
   proof:
-    - open-day-plan-r8 and canonical evidence are referenced
+    - open-day-plan-r8 remains the canonical reference for its linked supplier confirmations and venue approval
     - Priya acceptance names the exact Handoff revision
-    - outgoing responsibility ends only after acceptance
+    - outgoing Responsibility ends only after acceptance
     - volunteer confirmation remains the next frontier
   responsibility:
     - outgoing coordinator remains responsible before acceptance
@@ -64,9 +72,21 @@ observed:
   route:
     - workflow-to-handoff-to-workflow
   state:
-    - proposed Handoff
-    - accepted transfer
-    - parent Outcome active
+    - Accepted
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: fixture
+    locator: evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml
+    sha256: 059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
 rawEvidence:
   locator: evaluations/evidence/handoff/direct-human-transfer-1.txt
-  sha256: 871f0ebd05daf907ba788d4f97a111128e1a3cab2503fd8c3ca5d4df17e6ec4b
+  sha256: 82172bbbdf7705bcf8045550bc452a4d1dd7ae5e5acec47b163d30ffe5c5d4d3

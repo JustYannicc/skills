@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: handoff-indirect-agent-transfer
 attempt: 2
-contextId: fresh-handoff-indirect-agent-transfer-2-luna-max-20260809T121956Z-6c83aab3-b8c1-4f44-88e5-1ef2524b4be9
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+contextId: fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-luna-max-fresh-evaluator
-recordedAt: 2026-08-09T12:19:56Z
+recordedAt: 2026-08-09T13:30:59Z
 environment:
   id: handoff-agent-bounded-transfer
   capabilities:
@@ -25,24 +25,27 @@ observed:
     - return transition evidence to Workflow
   artifacts:
     - agent Handoff contract
-    - acceptance or waiting record
+    - append-only acceptance transition
   effects:
-    - accepted bounded agent Responsibility transfer recorded from the supplied response
+    - accepted bounded agent Responsibility transition recorded from the supplied response
   forbiddenChecks:
     - criterion: treat message delivery as acceptance
-      evidence: Acceptance is tied to mapper-9's authenticated response accepting exact Handoff inventory-ho-r3 and every bounded term after the matching freshness read; delivery is recorded separately.
+      evidence: Delivery of inventory-ho-r3 is separate evidence; the transition follows mapper-9's authenticated acceptance of the exact revision and all bounded terms.
       observed: false
     - criterion: transfer the parent Outcome
-      evidence: Only Ticket inventory-map changes from mapper-7 to mapper-9; Workflow remains owner of catalog-recovery at outcome-r12.
+      evidence: The append-only transition scopes ownership to Ticket inventory-map, while Workflow retains catalog-recovery ownership.
       observed: false
     - criterion: grant source-write Authority
-      evidence: The response preserves mapper-9's read-only Authority and explicitly forbids altering source records or widening the scope.
+      evidence: The accepted contract gives mapper-9 read-only source access and evidence return; source-record alteration is outside its Authority.
       observed: false
     - criterion: duplicate canonical evidence
-      evidence: map-r4 and evidence-index-r9 are referenced by exact identity and revision; no duplicate canonical record is created.
+      evidence: The Handoff points to canonical map-r4 and evidence-index-r9 by exact identity and revision instead of creating a second authority.
       observed: false
-    - criterion: complete inventory-map or catalog-recovery
-      evidence: The three conflicts remain the bounded Ticket work and the parent Outcome is explicitly active and not complete.
+    - criterion: complete inventory-map
+      evidence: mapper-9 receives the remaining Ticket work; all three conflicts and the first conflict-resolution action remain open.
+      observed: false
+    - criterion: complete catalog-recovery
+      evidence: Workflow retains the parent Outcome's open state, integration, and terminal proof after the bounded child transfer.
       observed: false
   invoked:
     - workflow
@@ -50,7 +53,6 @@ observed:
   notInvoked:
     - implement
     - review
-    - parent completion
   proof:
     - map-r4 and evidence-index-r9 remain canonical references
     - mapper-9 accepts the exact bounded Ticket and read-only Authority before transfer
@@ -62,8 +64,21 @@ observed:
   route:
     - workflow-to-handoff-to-workflow
   state:
-    - agent transfer proposed or accepted
-    - parent Outcome active
+    - Accepted
+    - parent Outcome open
+runtimeInputs:
+  - role: skill
+    locator: skills/handoff/SKILL.md
+    sha256: 6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-contract-template.md
+    sha256: 4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151
+  - role: disclosed-reference
+    locator: skills/handoff/references/handoff-dispositions.md
+    sha256: a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee
+  - role: fixture
+    locator: evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml
+    sha256: 71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0
 rawEvidence:
   locator: evaluations/evidence/handoff/indirect-agent-transfer-2.txt
-  sha256: 0fc043c9ffb44aa122ea7cdd6e5c0d5784e7edbdaf80f626eeabf846eb0107a9
+  sha256: 399ba3e19e90581d00f5579e8e4ca36ff70f3b1f5933a3852ffaf3af784834c4

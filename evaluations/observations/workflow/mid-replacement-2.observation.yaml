@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-replacement
 attempt: 2
 contextId: workflow-mid-replacement-1db9f1f-c99cdfe5-sol-high-2
-suiteRevision: git:d47a6c37af08be941c0061ea6cab3ebacadbc690
+suiteRevision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:24:58Z
 environment:
