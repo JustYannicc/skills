@@ -1,0 +1,179 @@
+# Issue #26 writing-for-agents audit
+
+Status: PASS — every authored surface is resolved, exact-revision proof passes,
+and draft PR #46 carries the publication map.
+
+Candidate revision: git:ce2b02e6249d229d7d88b10bec58171b4bac6621
+Proof revision: git:9ac07c4d3cf01f13441f1e84c46b8d5e2750ce5d
+Fixed point: git:e2f92efaa253793c01ec33cd711b27417c0da424
+
+## Authority and completion boundary
+
+The installed `writing-for-agents/SKILL.md` and `SKILL-MECHANICS.md` were read
+completely before this audit. Every authored surface must pass information
+hierarchy, context-pointer triggers, co-location, clear and exhaustive
+completion criteria, leading words, progressive disclosure, one source of
+truth, relevance, no-ops, positive phrasing, and model-invocation mechanics.
+
+This audit completes when every inventory category below has a recorded result,
+every finding is resolved or preserved with an explicit historical disposition,
+fresh Handoff observations bind the corrected candidate, deterministic gates
+pass, and draft PR #46 points to the revision-bound proof.
+
+## Inventory
+
+The repository inventory is the 319 changed paths between the fixed point and
+the published audit revision. The count includes this record:
+
+- Core and package text (10): `README.md`, `docs/ROADMAP.md`,
+  `docs/SOURCES.md`, `docs/handoffs/2026-08-09-handoff-candidate.md`,
+  `skills/README.md`, `skills/handoff/SKILL.md`,
+  `skills/handoff/agents/openai.yaml`, both files under
+  `skills/handoff/references/`, and `validation/repository.yaml`.
+- Handoff fixture contracts (11): every
+  `evaluations/fixtures/handoff/*.fixture.yaml` file.
+- Handoff behavioral records (50): 25 files under
+  `evaluations/evidence/handoff/` and their 25 records under
+  `evaluations/observations/handoff/`.
+- Validation rebind records (243): 27 Domain Modeling raw-evidence files and
+  their 27 observations, plus 189 other non-Handoff observations whose only
+  issue #26 change is revision metadata.
+- Review records (4): `issue-26-handoff-adversarial-review.txt`,
+  `issue-26-handoff-resolution-check.txt`, and
+  `issue-26-existing-observation-rebind.txt`, plus this writing audit, under
+  `evaluations/evidence/reviews/`.
+- Generated report (1): `evaluations/reports/foundation.report.json`; generated
+  text is exempt, while every authored input remains in scope.
+- Publication prose: task commits since the fixed point and draft PR #46's
+  title and body.
+
+## Core and package dispositions
+
+- C1 model-invocation pointer — resolved: the description triggers normal,
+  missing-recipient/route, rejected, and stale branches.
+- C2 Step 1 completion — resolved: every named field is bound or recorded as a
+  gap with owner, unblock condition, and resumption action.
+- C3 Step 2 completion — resolved: Normal and Degraded criteria are separate
+  and exhaustive.
+- C4 Recovery pointer — resolved: the selected kind branch and Recovery trigger
+  are explicit in both the process and disposition reference.
+- C5 Step 5 completion — resolved: one authoritative disposition branch owns
+  the evidence criteria.
+- C6 Step 6 completion — resolved: every return field is recorded, including
+  explicit `none` values.
+- C7 Continuation disclosure — resolved: the core contract retains only the
+  identity field; Waiting owns its branch details.
+- C8 positive Responsibility and freshness rules — resolved.
+- C9 public README summary — resolved with `Degraded` and parent-open leading
+  words.
+- C10 checklist pointer — resolved: the three unchecked items in
+  `docs/handoffs/2026-08-09-handoff-candidate.md` preserve candidate-time,
+  pre-audit state. Editing that non-evaluation artifact would change the
+  candidate identity and invalidate the exact-revision proof. The Completion
+  checklist, Exact proof, and Publication map in this record are the sole live
+  completion authority and supersede those three markers. Human review remains
+  open.
+- C11 Waiting Recovery scope — resolved: Waiting alone triggers the additional
+  dependency and resumption fields.
+- C12 Step 3 completion — resolved: every material contract field is populated,
+  `none`, or a gap.
+- C13 Step 4 completion — resolved: delivered and unauthorized/not-delivered
+  branches have distinct checkable evidence.
+- C14 Dispatch evidence phrasing — resolved: receipts prove receipt or
+  scheduling; parent effects require separate evidence.
+
+Zero additional findings: `skills/handoff/agents/openai.yaml`, the Handoff
+provenance in `validation/repository.yaml`, `skills/README.md`,
+`docs/SOURCES.md`, and `docs/ROADMAP.md`.
+
+## Fixture dispositions
+
+- F1 canonical dispositions and parent-open state — resolved across 11/11
+  fixtures.
+- F2 accepted agent Transfer alternatives — resolved with one append-only
+  acceptance transition and `Accepted` state.
+- F3 atomic forbidden checks — resolved; each boolean owns one criterion.
+- F4 `notInvoked` and `forbidden` authority separation — resolved.
+- F5 recipient-response-route and Responsibility vocabulary — resolved.
+- F6 exact canonical references — resolved without duplicating their proof
+  authority in actions.
+- F7 rejected recovery completion — resolved as four atomic fields.
+- F8 positive titles and prompts — resolved.
+- F9 environment capability source — resolved; prompts retain domain facts.
+- F10 atomic effects — resolved.
+- F11 Degraded proof labels — resolved as independent evidence criteria.
+- F12 title leading words and relevance — resolved.
+- F13 Responsibility-transition vocabulary — resolved.
+- F14 Rejected action phrasing — resolved; retained-owner evidence owns the
+  non-transfer rule.
+- F15 negative-summary proof — resolved as a positive Inline result.
+
+The corrected 11 fixtures parse and validate without YAML sequence fragments.
+
+## Evidence and publication dispositions
+
+- E1 accepted agent observation ambiguity — resolved: all three fresh
+  indirect-agent observations use the exact accepted Responsibility-transition
+  and state labels from the corrected fixture.
+- E2 session `Prepared` omission — resolved: the fresh session observation
+  records `Prepared` and `parent Outcome open` as separate canonical states.
+- E3 historical resolution-check pointers — resolved: this record supersedes
+  their pre-correction proof pointers with the candidate and proof revisions
+  above.
+- E4 repeated Domain Modeling rebind notes — resolved: 27 historical records
+  preserve their original evaluation revision and point to
+  `issue-26-existing-observation-rebind.txt` as the sole byte-identity
+  attestation.
+- E5 PR proof pointers — resolved: draft PR #46 links the exact report, review,
+  resolution, rebind, and writing-audit artifacts.
+- E6 commit leading-word scope — resolved: draft PR #46 preserves commit
+  history and provides a commit map for candidate, correction, proof, and audit
+  revisions.
+
+The 216 pre-existing non-Handoff observations received only revision metadata;
+their authored behavioral prose was not edited. Their rebind authority remains
+`issue-26-existing-observation-rebind.txt`.
+
+## Exact proof
+
+- Handoff proof: 25/25 observations, 25 unique fresh contexts, and 25/25
+  raw-evidence SHA-256 bindings target the exact candidate revision.
+- Repository proof: 145/145 fixture reports pass with zero Critical, Major, or
+  Minor findings.
+- Rebind proof: 216 non-Handoff observations target the candidate validation
+  identity; their runtime behavior and fixture expectations remain unchanged.
+- Runtime proof: all Handoff and Domain Modeling runtime-input locators and
+  hashes match the files recorded by the observations.
+- Deterministic gates: `pnpm evaluations:record`, `pnpm check`,
+  `git diff --check`, and `pnpm validate` pass. Validation reports 843 files,
+  8 skills, 145 fixtures, and 41 passing tests.
+
+## Publication map
+
+- Draft PR: https://github.com/JustYannicc/skills/pull/46
+- Candidate commit: https://github.com/JustYannicc/skills/commit/ce2b02e6249d229d7d88b10bec58171b4bac6621
+- Proof commit: https://github.com/JustYannicc/skills/commit/9ac07c4d3cf01f13441f1e84c46b8d5e2750ce5d
+- Generated report: `evaluations/reports/foundation.report.json`
+- Adversarial review: `evaluations/evidence/reviews/issue-26-handoff-adversarial-review.txt`
+- Resolution check: `evaluations/evidence/reviews/issue-26-handoff-resolution-check.txt`
+- Rebind attestation: `evaluations/evidence/reviews/issue-26-existing-observation-rebind.txt`
+- Writing audit: `evaluations/evidence/reviews/issue-26-writing-for-agents-audit.txt`
+
+## Completion checklist
+
+- [x] Information hierarchy and progressive disclosure preserve immediate steps
+  and branch-specific references.
+- [x] Context pointers name every trigger branch and model invocation remains
+  deliberate.
+- [x] Definitions, rules, evidence, and caveats are co-located under one
+  authority per meaning.
+- [x] Every step and fixture has a clear, exhaustive completion criterion.
+- [x] Leading words and positive target phrasing anchor the intended branch.
+- [x] Relevance and no-op review leaves no residual authored-text finding.
+- [x] Fresh proof, deterministic gates, review evidence, and publication
+  pointers bind the exact candidate.
+
+Zero additional findings: core/package text, 11 fixture contracts, 25 fresh
+Handoff evidence records, 25 Handoff observations, 27 Domain Modeling rebind
+pointers, 216 validation-rebound observations, generated-report inputs, review
+records, commit prose, and draft PR prose all pass writing-for-agents.

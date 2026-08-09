@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: handoff-service-dispatch
+title: Service acknowledgment proves Dispatch only; current owner retains Responsibility
+shape: edge
+kind: invocation
+skill: handoff
+domains: [service, communication]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Dispatch approved message `notice-r11` to notification service `relay-prod`
+  under send approval `approval-r11`. The service can accept the delivery job
+  and return a receipt, but its contract does not make it the Outcome owner.
+  Preserve the continuation until delivery to all 240 recipients is verified.
+environment:
+  id: handoff-service-dispatch-boundary
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, service-dispatch: true}
+  tools: [selected canonical Adapter, notification service]
+expected:
+  actions: [classify Dispatch, bind exact approved revision and service contract, record service acceptance and receipt as execution evidence, retain owner through recipient delivery verification, return dispatch continuation]
+  artifacts: [Dispatch Handoff contract, service receipt reference]
+  effects: [authorized dispatch of notice-r11]
+  invoked: [workflow, handoff]
+  notInvoked: []
+  proof: [notice-r11 matches approval-r11, relay receipt proves only accepted dispatch, 240-recipient delivery remains the proof seam]
+  responsibility: [current owner retains Outcome Responsibility, relay-prod owns only its contracted dispatch duty, Workflow retains terminal verification]
+  route: [workflow-to-handoff-dispatch-to-workflow]
+  state: [Acknowledged, recipient delivery verification pending, parent Outcome open]
+  forbidden: [treat service receipt as ownership acceptance, treat queued dispatch as recipient delivery, treat accepted dispatch as recipient delivery, send a changed revision, complete the parent Outcome]

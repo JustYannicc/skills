@@ -1,5 +1,25 @@
 schemaVersion: 2
 skills:
+  - name: handoff
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/productivity/handoff/SKILL.md]
+      retainedBehavior:
+        - Compact the current context so a fresh recipient can continue without reconstructing the conversation.
+        - Reference canonical plans, decisions, issues, commits, diffs, and other existing artifacts instead of duplicating their content.
+        - Tailor the continuation to the next session or operating focus and suggest the capabilities the successor should use.
+        - Redact credentials, secrets, and unnecessary personal information from the Handoff artifact.
+      changedAssumptions:
+        - Replace a user-invoked agent-only conversation summary with a model-invoked cross-domain Handoff for humans, agents, sessions, services, and operating contexts.
+        - Replace mandatory operating-system temporary-directory output with Inline or selected-Adapter representation at the actual Persistence boundary.
+        - Bind exact state, Responsibility, Authority, rationale, evidence, uncertainty, dependencies, Continuation, next frontier, and canonical revisions.
+        - Distinguish Continuity, Transfer, and Dispatch so a session or service boundary cannot silently transfer ownership.
+        - End outgoing Responsibility only after an identifiable successor explicitly accepts the exact fresh Handoff revision and bounded contract.
+        - Preserve parent Outcome state and return bounded Handoff evidence to Workflow without executing continued work, Review, or parent completion.
+        - Degrade visibly when recipient identity, return route, persistence, communication, scheduling, or another required capability is unavailable.
   - name: review
     provenance:
       strategy: original
@@ -22,6 +42,25 @@ skills:
         - Universal experiment shapes replace framework, route, terminal, and implementation-specific instructions while preserving question-first branch selection.
         - The configured technical-prototype Supplemental Extension point may own bounded technical construction, while core Prototype retains the learning question, reversible boundary, evidence integration, verdict, disposition, and completion criterion.
         - Proof seams, Result revisions, Authority, Degraded mode, evidence delays, and live-effect boundaries follow the Thinking in Systems standard.
+  - name: wayfinder
+    provenance:
+      strategy: adapted
+      adaptationMode: universal-successor
+      sources:
+        - sourceId: matt-pocock-skills
+          targets: [skills/engineering/wayfinder/SKILL.md]
+      retainedBehavior:
+        - Name the destination before charting the route and keep out-of-scope work distinct from in-scope fog.
+        - Use a low-resolution Map as an index over canonical decision records rather than duplicating their detail.
+        - Separate precise decision questions from not-yet-specifiable fog, then graduate fog only as the frontier sharpens.
+        - Keep blockers, an unblocked decision frontier, bounded decision work, and cross-session continuation visible while planning remains distinct from destination execution.
+      changedAssumptions:
+        - Replace repository, issue-tracker, label, child-issue, assignee, branch, and fixed-session assumptions with adapter-neutral Outcome, Ticket, Claim, Evidence, and Continuation records.
+        - Make Wayfinder model-invoked for persistent, multi-session, or irreducible fog and invoke companion capabilities only when their owned uncertainty is present.
+        - Treat the Map as a derived navigation view while the selected Adapter preserves one writable canonical source for each decision and work record.
+        - Support reducible, operating-delay, and irreducible fog through an operating Strategy with observation triggers, thresholds, safe modes, feedback, reversibility, recovery, ownership, and Authority.
+        - Complete when the next route is truthfully specifiable or remaining fog is governed, rather than requiring every uncertainty or Ticket to disappear.
+        - Make Git, hosted trackers, safe concurrency, and executable scheduling optional Adapter capabilities with visible Degraded behavior when absent.
   - name: thinking-in-systems
     provenance:
       strategy: adapted

@@ -1,0 +1,161 @@
+Fresh-context behavioral evaluation — wayfinder-edge-no-git
+
+Fixture: wayfinder-edge-no-git
+Attempt: 1
+Context ID: fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21
+Evaluator: gpt-5.6-luna-max-fresh-context
+Recorded at (UTC): 2026-08-09T12:29:28Z
+Executed behavioral candidate: git:6b809baa082875b45b5895d471d6ab63a499f399
+Rebound suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+
+Exact runtime identity
+
+- Runtime input locator: `skills/wayfinder/SKILL.md`
+  - SHA-256: `c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286`
+- Runtime input locator: `evaluations/fixtures/wayfinder/edge-no-git.fixture.yaml`
+  - SHA-256: `b6aa782cb4673df6c94e5304a5147f2f954e92a40a209f7b0e03d8f9a0d621ab`
+- Runtime input locator: `skills/thinking-in-systems/SKILL.md`
+  - SHA-256: `09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d`
+- Runtime input locator: `skills/thinking-in-systems/references/standard.md`
+  - SHA-256: `daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377`
+- Runtime input locator: `skills/wayfinder/references/map-and-strategy.md`
+  - SHA-256: `9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3`
+- Runtime input locator: `evaluations/fixtures/wayfinder/runtime/no-git-state.md`
+  - SHA-256: `19d72c738c528774c599310427039bf09e20e738fbfa0742c9f8c0e2f61cef82`
+- Runtime input locator: `skills/workflow/SKILL.md`
+  - SHA-256: `fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171`
+
+The Wayfinder skill, Workflow skill, Thinking in Systems skill, complete
+governing standard, exact fixture, and both declared runtime references were
+read in this isolated context before evaluation. The executed behavioral
+candidate above is the exact Git revision under test. No authoring conversation or prior
+attempt state was supplied to this context.
+
+Exact prompt
+
+> Continue this household relocation decision next month without Git, GitHub,
+> or any hosted tracker. Use the available Local Markdown Adapter to preserve
+> the accepted destination, budget decision, landlord-response blocker,
+> strategy, owner, and exact next check.
+
+Exact declared environment
+
+```yaml
+id: local-markdown-no-git
+capabilities:
+  workflow: true
+  persistence: true
+  localMarkdown: true
+  git: false
+  github: false
+  adapterCoordination: false
+  adapterContinuation: false
+  scheduling: false
+  effects: false
+tools:
+  - local-markdown
+```
+
+One-shot candidate response
+
+<!-- BEGIN ONE-SHOT CANDIDATE RESPONSE -->
+
+1. Thinking in Systems classified the request as a Durable, cross-session
+   continuation. Workflow retained the parent Outcome and routed persistent
+   fog to Wayfinder; no downstream execution or parent terminal transition was
+   selected.
+2. Wayfinder loaded the fixture-scoped runtime state: Outcome identity
+   `household-relocation` at source revision `household-relocation-r6`, accepted
+   destination “select and complete a feasible relocation within the accepted
+   budget,” fixed budget ceiling, landlord-response blocker, and household
+   coordinator as Outcome owner.
+3. The selected Local Markdown Adapter was bound as the sole Baseline authority.
+   Baseline is verified. Coordination is unavailable, so no concurrent Claim
+   is implied and any later work must be serial and human-coordinated.
+   Continuation and scheduling are unavailable, so the durable Continuation is
+   a human-triggered next check rather than active monitoring.
+4. One fixture-scoped baseline write/read-back preserved the canonical record
+   set at result revision `household-relocation-r7` (updated from
+   `household-relocation-r6`). The write did not initialize a repository,
+   contact a host, schedule a job, or perform an external effect.
+
+The resulting canonical Local Markdown records are:
+
+- **Outcome record** — locator
+  `local-markdown/household-relocation/README.md`; identity
+  `household-relocation`; result revision `household-relocation-r7`; accepted
+  destination and fixed budget decision retained; Outcome owner is the
+  household coordinator.
+- **Ticket record** — locator
+  `local-markdown/household-relocation/tickets/landlord-response.md`; the
+  landlord-response dependency remains blocked and is not treated as complete;
+  its current evidence pointer is in the `household-relocation-r7` record set.
+- **Evidence record** — locator
+  `local-markdown/household-relocation/evidence/household-relocation-r7.md`;
+  it records the accepted destination, budget decision, current blocker, and
+  the adapter read-back at exact result revision `household-relocation-r7`.
+- **Continuation record** — locator
+  `local-markdown/household-relocation/continuation.md`; state `waiting`,
+  dependency landlord response, next check next month by the household
+  coordinator, retry/escalation left to that owner, and exact resumption action:
+  reread the current canonical Outcome/Ticket/Evidence revisions before making
+  any decision or effect. No scheduler or monitor was accepted.
+
+The human-readable **Wayfinder Map** is a derived, read-only view over those
+canonical records, not another writable authority. Its Map result revision is
+`household-relocation-r7`; it names the Outcome source revision, the canonical
+locators above, the selected Adapter capabilities, the destination and
+exclusions, the accepted budget decision, the landlord-response blocker, the
+household coordinator and Wayfinder ownership boundaries, the Strategy, the
+Evidence pointer, and the Continuation locator/revision.
+
+The Map's operating Strategy is explicit: observe the landlord response at the
+human next check next month; the household coordinator decides the bounded
+next route within the fixed budget Authority; remain waiting when the response
+is absent; preserve the current records and do not claim active monitoring; and
+reconsider the route when the response, budget decision, or feasibility
+evidence changes. The exact next check and resumption action remain in the
+canonical Continuation record. Wayfinder owns this navigation result; Workflow
+and the named household owner retain the parent Outcome and its terminal proof.
+
+<!-- END ONE-SHOT CANDIDATE RESPONSE -->
+
+Observed result accounting
+
+- Actions: use Local Markdown as the Baseline Adapter; preserve canonical
+  Outcome Ticket Evidence and Continuation state; render a human-readable
+  derived Map with exact revisions; disclose serial coordination and
+  human-triggered resumption.
+- Artifacts: Local Markdown Outcome record; derived Wayfinder Map; Continuation
+  record.
+- Effects: none.
+- Invoked: Workflow and Wayfinder.
+- Not invoked: Git initialization, GitHub, hosted tracker, scheduler,
+  implementation, or parent completion.
+- Proof: the human-readable canonical records and derived Map are bound to
+  result revision `household-relocation-r7`, and the exact next check survives
+  without Git or network access.
+- Responsibility: Wayfinder owns the navigation result while the named
+  household owner and Workflow retain the Outcome.
+- Route: `workflow-to-wayfinder-local-markdown-to-workflow`.
+- State: `durable-no-git-continuation`.
+
+Forbidden-behavior checks
+
+- Criterion: initialize Git. Observed: false. Evidence: the declared
+  environment has `git: false`; no repository command or initialization was
+  performed.
+- Criterion: require a hosted account. Observed: false. Evidence: GitHub and
+  hosted trackers are unavailable and the Local Markdown Baseline is used
+  without a network or account.
+- Criterion: claim active monitoring. Observed: false. Evidence:
+  `adapterContinuation: false` and `scheduling: false` are disclosed; the
+  Continuation names a human next check and does not claim a monitor.
+- Criterion: create a second writable Map authority. Observed: false.
+  Evidence: the Map is explicitly a read-only derived view whose canonical
+  locators, revisions, and writes remain owned by Local Markdown records.
+
+One-shot attestation: this was one isolated attempt in a new context. The
+candidate result was generated once and preserved unedited. There was no retry,
+paraphrase, second evaluation, tool replay, Git initialization, hosted action,
+scheduler, implementation, parent completion, or external effect.

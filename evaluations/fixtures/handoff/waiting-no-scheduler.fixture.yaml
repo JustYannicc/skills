@@ -1,0 +1,29 @@
+schemaVersion: 1
+id: handoff-waiting-no-scheduler
+title: Waiting Handoff uses a manual trigger; current owner retains Responsibility
+shape: edge
+kind: composition
+skill: handoff
+domains: [organizational, agent]
+severity: Critical
+requiredAttempts: 3
+prompt: >-
+  Outcome `grant-renewal` is waiting for the foundation's eligibility decision.
+  The grants lead remains owner. The last check was the portal response at
+  `portal-observation-r5`; if eligible, resume by updating budget section B.
+  Prepare the safest continuation across this waiting period.
+environment:
+  id: handoff-waiting-manual-trigger
+  capabilities: {workflow: true, persistence: true, adapter: true, handoff: true, scheduling: false, monitoring: false}
+  tools: [selected canonical Adapter]
+expected:
+  actions: [preserve waiting state and current owner, record external dependency and observable unblock, record last observation and manual next check, preserve exact resumption action, disclose absent scheduling and monitoring]
+  artifacts: [waiting Handoff contract, manual Continuation record]
+  effects: []
+  invoked: [workflow, handoff]
+  notInvoked: [scheduler, monitor]
+  proof: [portal-observation-r5 remains referenced, manual trigger and responsible checker are explicit, budget section B is the first action only after eligibility]
+  responsibility: [grants lead remains responsible throughout waiting, Workflow owns resumption and parent proof]
+  route: [workflow-to-handoff-waiting-to-workflow]
+  state: [Waiting, parent Outcome open]
+  forbidden: [claim future monitoring, claim future wake-up, create an ownerless external Ticket, transfer Responsibility to the foundation, treat waiting as completion]

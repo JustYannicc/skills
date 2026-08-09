@@ -1,0 +1,96 @@
+schemaVersion: 1
+fixtureId: wayfinder-edge-irreducible
+attempt: 1
+contextId: fresh-wayfinder-edge-irreducible-20260809t122924z-luna-max-989532be-f088-490d-bd92-9b1022fa35c9
+suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:29:24Z
+environment:
+  id: durable-outdoor-operations
+  capabilities:
+    workflow: true
+    persistence: true
+    adapterBaseline: true
+    adapterCoordination: false
+    adapterContinuation: false
+    research: true
+    domainModeling: true
+    grilling: true
+    prototype: true
+    toQuestionnaire: true
+    effects: false
+  tools:
+    - adapter
+    - weather-observation
+observed:
+  actions:
+    - preserve weather and attendance as irreducible operating fog
+    - record the accepted observations thresholds decision rules safe modes feedback review and recovery
+    - apply the governed-remaining-fog completion gate
+    - return the operating rule to Workflow
+  artifacts:
+    - durable Wayfinder Map
+    - accepted operating Strategy
+  effects: []
+  forbiddenChecks:
+    - criterion: require weather certainty
+      evidence: The response preserves weather and same-day attendance as irreducible fog and explicitly says the governed-remaining-fog gate does not require either uncertainty to be removed.
+      observed: false
+    - criterion: create speculative Tickets for irreducible fog
+      evidence: The response leaves the decision frontier empty for these uncertainties and states that no speculative Ticket was created.
+      observed: false
+    - criterion: imply safe concurrent claiming
+      evidence: The response records adapterCoordination as unavailable, asserts no parallel execution or Claim, and requires a truthful recorded Claim before any future active work.
+      observed: false
+    - criterion: claim the parent Outcome complete
+      evidence: The response explicitly returns operation to Workflow and states that the parent Outcome remains open with no parent completion claimed.
+      observed: false
+  invoked:
+    - workflow
+    - wayfinder
+  notInvoked:
+    - research
+    - domain-modeling
+    - grilling
+    - grill-with-docs
+    - prototype
+    - to-questionnaire
+    - implementation
+    - parent completion
+  proof:
+    - result revision outdoor-pickup-r3 gives every material uncertainty an observable trigger responsible Actor Authority safe mode Evidence source review condition and recovery action
+  responsibility:
+    - Wayfinder owns the strategy result while the Outcome owner and Workflow retain operation and parent completion
+  route:
+    - workflow-to-wayfinder-governed-fog-to-workflow
+  state:
+    - governed-remaining-fog
+grading:
+  verdict: pass
+  retry: false
+  rationale: The one-shot response durably records the accepted weather and queue/attendance operating rules at outdoor-pickup-r3, governs both irreducible uncertainties with observable triggers and safe modes, and returns operation to Workflow without effects or parent completion.
+rawEvidence:
+  locator: evaluations/evidence/wayfinder/edge-irreducible-1.txt
+  sha256: 1a716ae0dae3313263755a1b21edcbdbba0a78c627de36a6bcbbd6cbb29cb107
+runtimeInputs:
+  - role: skill
+    locator: skills/wayfinder/SKILL.md
+    sha256: c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286
+  - role: fixture
+    locator: evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml
+    sha256: 0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb
+  - role: disclosed-reference
+    locator: skills/wayfinder/references/map-and-strategy.md
+    sha256: 9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3
+  - role: disclosed-reference
+    locator: evaluations/fixtures/wayfinder/runtime/irreducible-state.md
+    sha256: 123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1
+  - role: governing-skill
+    locator: skills/thinking-in-systems/SKILL.md
+    sha256: 09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d
+  - role: governing-reference
+    locator: skills/thinking-in-systems/references/standard.md
+    sha256: daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377
+  - role: disclosed-reference
+    locator: skills/workflow/SKILL.md
+    sha256: fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171

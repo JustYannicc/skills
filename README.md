@@ -8,7 +8,8 @@ This repository is being built around a simple idea: agents become much more use
 
 No skill has been published yet. Thinking in Systems, Workflow's Inline and
 Durable routes, To Spec, To Tickets, Domain Modeling, Review, and Prototype are
-approved. Suite publication remains gated by the composed-suite and
+approved. Handoff has an implementation candidate awaiting the issue #26 human
+review gate. Suite publication remains gated by the composed-suite and
 clean-install proof in #31 and the immutable-release review in #32.
 
 ### [Thinking in Systems](skills/thinking-in-systems) — approved
@@ -75,6 +76,16 @@ unknowns, records accepted decisions through the selected Adapter when they
 must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
+
+### [Wayfinder](skills/wayfinder) — candidate
+
+Wayfinder navigates persistent, multi-session, or irreducible fog through a
+durable decision Map and operating Strategy. It preserves the destination,
+accepted decisions, frontier, blockers, Evidence, ownership, and Continuation
+through the selected Adapter, invokes discovery companions only for their owned
+uncertainty, and completes only when the next route is truthfully specifiable or
+remaining fog has accepted operating rules. Issue #21 still requires human
+review; this candidate does not approve or publish the skill.
 
 ## Planned suite
 

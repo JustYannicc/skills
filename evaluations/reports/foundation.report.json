@@ -1519,6 +1519,929 @@
     },
     {
       "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-cross-domain-physical-1-20260809t133200z-luna-max",
+        "fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a",
+        "fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-cross-domain-physical-1-20260809t133200z-luna-max",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-1.txt",
+          "sha256": "0f851b646076f1dc1beb7aea8d6fce21dcb2564e85c2c90a78fbaca21555c686",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-cross-domain-physical-attempt-2-luna-max-20260809t133130z-11c7886a",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-2.txt",
+          "sha256": "2a41fc2ec9432665ee656d5498eeeb48c1a7807bd921d6824191b542347d543a",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-cross-domain-physical-3-luna-max-20260809t133138z-4a0f6b21",
+          "locator": "evaluations/evidence/handoff/cross-domain-physical-3.txt",
+          "sha256": "552d370c690274bd50713109f387c2564ca1702569d8ffa0d3ba88f83cb7e434",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/cross-domain-physical.fixture.yaml",
+              "sha256": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-cross-domain-physical",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "d947edad3268dfb5509a3ae45f10fa941ba8ec8817cd479b28c5f43c27c53e8a"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564",
+        "fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543",
+        "fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133038z-luna-max-fresh-5e1ed46c-c4f7-4d1d-9839-56143f227564",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-1.txt",
+          "sha256": "82172bbbdf7705bcf8045550bc452a4d1dd7ae5e5acec47b163d30ffe5c5d4d3",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133100z-luna-max-fresh-evaluator-2-2fc5e68a-51a8-494c-8743-91b13ed09543",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-2.txt",
+          "sha256": "19a4f8313f70223fdea9f0b9f748d7baecfba22aa87e4596435b86229ad84884",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-direct-human-transfer-20260809t133058z-luna-max-fresh-evaluator-3-eaf5a0a8-ab8e-4a16-8dae-1a7cdb9f836a",
+          "locator": "evaluations/evidence/handoff/direct-human-transfer-3.txt",
+          "sha256": "5b5157b79ca912fef13ceb95bf710872fbd448581fa674c54093e24898cdb594",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/direct-human-transfer.fixture.yaml",
+              "sha256": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-direct-human-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "059a9a459560051210953b8172a88aa24390e397c459b29381f6fee203de22a2"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4",
+        "fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e",
+        "fresh-handoff-indirect-agent-transfer-3-luna-max-20260809t133116z-5366777a-d295-44e9-8a7b-15342c7c8a34"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-indirect-agent-transfer-20260809t133129z-luna-max-fbb1ab12-4c69-445e-b36f-4ba49d5d92d4",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-1.txt",
+          "sha256": "638bd1532f6eb1ce20ff0388ceb2b27b17d73dacfcc8c11c54a46bf0e072b6bc",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-indirect-agent-transfer-attempt-2-20260809t133059z-474e2a2b-45d9-41ca-ac81-e9e4481f947e",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-2.txt",
+          "sha256": "399ba3e19e90581d00f5579e8e4ca36ff70f3b1f5933a3852ffaf3af784834c4",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-indirect-agent-transfer-3-luna-max-20260809t133116z-5366777a-d295-44e9-8a7b-15342c7c8a34",
+          "locator": "evaluations/evidence/handoff/indirect-agent-transfer-3.txt",
+          "sha256": "c9c0109d0492219ebe06028a3b65b575040fdb8949049aa8708e6e8d8e151aea",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/indirect-agent-transfer.fixture.yaml",
+              "sha256": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0",
+              "role": "fixture"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-indirect-agent-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "71cd13625a1719e8f4f0fe5830a0234c79bff1e518cef51b61e31c0c32b1c5c0"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-missing-capability-ce2-attempt-1-20260809t134207z-luna-max-e63408fa-8491-40e1-b67d-ce031fb19e5e",
+          "locator": "evaluations/evidence/handoff/missing-capability-1.txt",
+          "sha256": "4297cfd047123b8af8fbd9304baba17c4df868ed8d60c4ff6a8cb2cd2acdcb1d",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/missing-capability.fixture.yaml",
+              "sha256": "c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-missing-capability",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "c8f9c26b108233714e1f175dcf4e4318c9c9c40765de8edb6749c1a60aebe77f"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-missing-recipient-route-20260809t134316z-luna-max-fresh-99204d3e-f141-49a1-8b39-316fb53ab1cf",
+          "locator": "evaluations/evidence/handoff/missing-recipient-route-1.txt",
+          "sha256": "648c241f5a07b6001ee8abf244412cbd2d6f5e349dff02c192b2fd13d99a6759",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/missing-recipient-route.fixture.yaml",
+              "sha256": "f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-missing-recipient-route",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "f6f7f825bccc72d11096a26e78d213f2a4e2833665e59bbf5e6dc12b52404ebc"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-negative-summary-20260809t134422z-luna-max-e7c4dddf-575c-4148-bf9f-53bb2d4a00d3",
+          "locator": "evaluations/evidence/handoff/negative-summary-1.txt",
+          "sha256": "3c997545eb830ff3e3e360d969ed14fe95b359c904f12283d58fcb81add394fc",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/negative-summary.fixture.yaml",
+              "sha256": "23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-negative-summary",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "23a837e9dc29b64771939dd60212deb6e368a712a7c8c2c83d804c419f726dd1"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-rejected-transfer-20260809t133402z-luna-max-fresh-cb8a79a7-c1f5-4c4d-b884-f05298d5971b",
+        "fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c",
+        "fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-rejected-transfer-20260809t133402z-luna-max-fresh-cb8a79a7-c1f5-4c4d-b884-f05298d5971b",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-1.txt",
+          "sha256": "66810e1a332d602e5a5fac2c2b56026732212525e10bc921deb2ff8c0fb01699",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-rejected-transfer-ce2-attempt-2-20260809T133314Z-7d4f9b2c",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-2.txt",
+          "sha256": "38f8b93e57b7ecd05ca26c78ce8d30606f36c6610bfbe5c2357a5b9b69937534",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-rejected-transfer-3-luna-max-20260809t134400z-8f65d54c",
+          "locator": "evaluations/evidence/handoff/rejected-transfer-3.txt",
+          "sha256": "1fac2f532b1fa95ac716653596e8c21999a273c6e79b7e92816f4e534ab3eb1c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/rejected-transfer.fixture.yaml",
+              "sha256": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-rejected-transfer",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "2467e69c7001d064c2fb4dccf4c34ec5637d1ac0817f2f4dc08347c0117a28ef"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57",
+        "fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac",
+        "fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-service-dispatch-20260809t133140z-luna-max-7c960cc6-5cc9-42ff-ae8a-30c99586ea57",
+          "locator": "evaluations/evidence/handoff/service-dispatch-1.txt",
+          "sha256": "837ce0560b9ddc11c1acc25c0fd1cd2b7e0b7df0c7a46bfabaecd451e16042bd",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-service-dispatch-attempt-2-20260809T133231Z-luna-max-fresh-7e7d5c04-9f9a-47eb-b7e7-7f00dca987ac",
+          "locator": "evaluations/evidence/handoff/service-dispatch-2.txt",
+          "sha256": "3ec31f229d560220917d1f06ddcceb68ce434179795b062ad6795d8828a9de2a",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-service-dispatch-attempt-3-20260809T154211Z-luna-max-fresh-7c4d9e2a",
+          "locator": "evaluations/evidence/handoff/service-dispatch-3.txt",
+          "sha256": "1c4d104ec2c47db118c915d558426bc08ed3a31800f8c48fda839ee91d7920fa",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/service-dispatch.fixture.yaml",
+              "sha256": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-service-dispatch",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "df88404b33cee26bbdf39864bc1f2fc50318841204c742f9a44fb25ed4ed3ad2"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-session-continuity-20260809t134121z-luna-max-fresh-evaluator-1-48f79ef8-1330-4051-a282-6381011542e6",
+          "locator": "evaluations/evidence/handoff/session-continuity-1.txt",
+          "sha256": "55ab350366bd39bfb69d6c9a3a768431c37b77563ac074d3e07829c0bcf5179c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/session-continuity.fixture.yaml",
+              "sha256": "d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-session-continuity",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "d236bb6ed638b638aff03c55bd9ee1654f1a9cc5201dee3748f30f87533433ae"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0",
+        "fresh-handoff-stale-context-attempt-2-20260809t133500z-luna-max-213dbfe8-64a4-4c06-9e5a-cfb608007b7b",
+        "fresh-handoff-stale-context-attempt-3-20260809t133637z-luna-max-c7f34f09-57e0-4b88-a8f7-23e0f4261d2"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-stale-context-20260809t133424z-luna-max-6144fb76-da8b-4cfc-b680-4e76843ff2a0",
+          "locator": "evaluations/evidence/handoff/stale-context-1.txt",
+          "sha256": "1f151542cb2cc39640fddb11ba855d026079705942d28c6e9bb003eb3b2548ab",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-stale-context-attempt-2-20260809t133500z-luna-max-213dbfe8-64a4-4c06-9e5a-cfb608007b7b",
+          "locator": "evaluations/evidence/handoff/stale-context-2.txt",
+          "sha256": "1af61ce09deb0923a187d0e1499e6e26122f7af32bddb56590187c3dab0caecb",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-stale-context-attempt-3-20260809t133637z-luna-max-c7f34f09-57e0-4b88-a8f7-23e0f4261d2",
+          "locator": "evaluations/evidence/handoff/stale-context-3.txt",
+          "sha256": "48361f42b1506f8f1337b96ebd0c7b7b6e3c7d2c15f4cf94cf4c9f63424720b2",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/stale-context.fixture.yaml",
+              "sha256": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-stale-context",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "136dbac83442c98f78b3fdcb55bc78d1dafb84afc38c6d92b6aeb0c14583f3ae"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-handoff-waiting-no-scheduler-20260809t133257z-luna-max-9b6d9e77-4a8b-4f14-8b58-199273f6b2bf",
+        "fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402",
+        "fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809t133257z-luna-max-9b6d9e77-4a8b-4f14-8b58-199273f6b2bf",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-1.txt",
+          "sha256": "9f9cb522d0b6c40cc567076d2c49a526082ebee235ea33061844f15241a36525",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809T161500Z-luna-max-2-5e8a7b47-19c6-4ed0-9c2f-8a6d3b1e7402",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-2.txt",
+          "sha256": "d40808e8dc23317a55e85466c7664118161c79fab2842409ba05fca9c9cc2c42",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-handoff-waiting-no-scheduler-20260809T133420Z-luna-max-3-6d8f1c2a-5b47-4e90-a3c1-7f2d6b8e4a10",
+          "locator": "evaluations/evidence/handoff/waiting-no-scheduler-3.txt",
+          "sha256": "5b1d85c9582c0acccc664e6d494e8b7fbbb5895c1a05a9dbb82b1ac99287922d",
+          "runtimeInputs": [
+            {
+              "locator": "skills/handoff/SKILL.md",
+              "sha256": "6656de9cd10ec33d1cb1bec653363625876422d35f39c38f52980904791092a2",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/handoff/waiting-no-scheduler.fixture.yaml",
+              "sha256": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-contract-template.md",
+              "sha256": "4658aecddbbae5cb4e1cc72a50f6a474c56cfb6deeae3c91f95ba1488b151151",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/handoff/references/handoff-dispositions.md",
+              "sha256": "a80fe35bbd0b1f7ed29555e70f04ea3800deb82ed9633b0ee3c8224d4b48f9ee",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "handoff-waiting-no-scheduler",
+      "status": "passed",
+      "suiteRevision": "git:ce2b02e6249d229d7d88b10bec58171b4bac6621",
+      "fixtureRevision": "56604c9fdd7511611eb30ab9a8f6b21008d9e4bd2b9ab500fb689405b3871fbe"
+    },
+    {
+      "attempts": [
         1
       ],
       "contextIds": [
@@ -3293,6 +4216,1008 @@
         1
       ],
       "contextIds": [
+        "fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-cross-domain-questionnaire-luna-max-20260809t123238z-aea30e3a-307c-4ab0-94cd-60933d782a7b",
+          "locator": "evaluations/evidence/wayfinder/cross-domain-questionnaire-1.txt",
+          "sha256": "61e712269181fbf528e89d2d58c44113d0a6142fa4a12060417ff791db6cd481",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/cross-domain-questionnaire.fixture.yaml",
+              "sha256": "c600ddcdc55db3bf4ff172805a5de43dc3e70b2946d460ff5aa165403f09e6bc",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/cross-domain-state.md",
+              "sha256": "0f3065368ee3a7978709f12b6f737e2925cb4c5875c57d3e58f9e8696d3f373a",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "docs/THINKING_IN_SYSTEMS.md",
+              "sha256": "7f0741f97ba5bd47dac86279916b2c37f7e4c8ae5b110121d80bbeecda2e0aa9",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/source/THINKING_IN_SYSTEMS_STANDARD.md",
+              "sha256": "58f8aa6c335a5cc3c1bf889653ce47beb16f26db28e44d97c5b52060f3c6225a",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/WORKFLOW_ROUTING.md",
+              "sha256": "61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/to-questionnaire/cross-domain.fixture.yaml",
+              "sha256": "e1463a0d0f0ad5e861682f1a811c208a99431bbb131f0b7c53e406ca16170e35",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.txt",
+              "sha256": "a9379bc1db8444ef4111631c12f3876b3acce6e36057cc9fcc73601562a11f17",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/evidence/to-questionnaire/cross-domain-1.questionnaire.md",
+              "sha256": "5be323908555c955af0acb0eb3bf0754e042ca36c843ed52d287e3bf26563831",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/observations/to-questionnaire/cross-domain-1.observation.yaml",
+              "sha256": "d0d5ade94dbb1dec1a40d48bf4c3e7dd0a527e5a5701ca7c42a1969cfd78cced",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-cross-domain-questionnaire",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "c600ddcdc55db3bf4ff172805a5de43dc3e70b2946d460ff5aa165403f09e6bc"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-wayfinder-direct-reducible-20260809t132205z-luna-max-attempt-1-bafe1981-defe-437d-a4a4-4db86a40dcc2",
+        "fresh-wayfinder-direct-reducible-20260809t132159z-luna-max-attempt-2-b5e1cfa3-23a9-462c-99a0-b77e0457477d",
+        "fresh-wayfinder-direct-reducible-20260809t132232z-luna-max-attempt-3-ac57129e-e545-49af-baa0-aee3f917ed09"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-direct-reducible-20260809t132205z-luna-max-attempt-1-bafe1981-defe-437d-a4a4-4db86a40dcc2",
+          "locator": "evaluations/evidence/wayfinder/direct-reducible-1.txt",
+          "sha256": "44ac9a3cdd17e039cc76e8dec28a96abb93928fe8cf27631544d06304f0349f9",
+          "runtimeInputs": [
+            {
+              "locator": "AGENTS.md",
+              "sha256": "6d0af27a5f865d548236c6a86847609d602e679c7d469e8bc04a6d56531135da",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml",
+              "sha256": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db",
+              "role": "fixture"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md",
+              "sha256": "ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md",
+              "sha256": "3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/research/SKILL.md.patch",
+              "sha256": "1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-wayfinder-direct-reducible-20260809t132159z-luna-max-attempt-2-b5e1cfa3-23a9-462c-99a0-b77e0457477d",
+          "locator": "evaluations/evidence/wayfinder/direct-reducible-2.txt",
+          "sha256": "83eca04a308471327e434ec8d71c67446b9df98531f8b7b4d6db18d0c6ef5649",
+          "runtimeInputs": [
+            {
+              "locator": "AGENTS.md",
+              "sha256": "6d0af27a5f865d548236c6a86847609d602e679c7d469e8bc04a6d56531135da",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml",
+              "sha256": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db",
+              "role": "fixture"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md",
+              "sha256": "ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md",
+              "sha256": "3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/WORKFLOW_ROUTING.md",
+              "sha256": "61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/research/SKILL.md.patch",
+              "sha256": "1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-wayfinder-direct-reducible-20260809t132232z-luna-max-attempt-3-ac57129e-e545-49af-baa0-aee3f917ed09",
+          "locator": "evaluations/evidence/wayfinder/direct-reducible-3.txt",
+          "sha256": "108d7cc95de4e84ab21f31f4bd2b9d506e9f81873d61aaada8b2d795add293f8",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/direct-reducible.fixture.yaml",
+              "sha256": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-state.md",
+              "sha256": "ec151925a0659693699d8fc730fc14a1b5c0c10c05a729cda225665883dfd255",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/direct-reducible-research-evidence.md",
+              "sha256": "3cdcc69dbf9b3269d7fb2bf537d660b6a8dd41fcb92c60c55fb4bfaf88ab91bc",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/research/SKILL.md.patch",
+              "sha256": "1b04f188ee42bea932a54569288a99006a20092c703df4b30200ec1d1f79b46a",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-direct-reducible",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "e42a982f1ce3259a515394098968c075e011f85ce9baab22a8d3d11e533f36db"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-irreducible-20260809t122924z-luna-max-989532be-f088-490d-bd92-9b1022fa35c9",
+        "fresh-wayfinder-edge-irreducible-2-20260809t122942z-7f3c",
+        "fresh-wayfinder-edge-irreducible-attempt-3-20260809t122940z-dfdd0b9c-5e36-4f0b-908c-3b264a2b85dd"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-irreducible-20260809t122924z-luna-max-989532be-f088-490d-bd92-9b1022fa35c9",
+          "locator": "evaluations/evidence/wayfinder/edge-irreducible-1.txt",
+          "sha256": "1a716ae0dae3313263755a1b21edcbdbba0a78c627de36a6bcbbd6cbb29cb107",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml",
+              "sha256": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/irreducible-state.md",
+              "sha256": "123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-wayfinder-edge-irreducible-2-20260809t122942z-7f3c",
+          "locator": "evaluations/evidence/wayfinder/edge-irreducible-2.txt",
+          "sha256": "8eed81ea3fb463a99f534881bd31c8c5253b41b4279e69c69ea9fcb86a8c8d93",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml",
+              "sha256": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/irreducible-state.md",
+              "sha256": "123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-wayfinder-edge-irreducible-attempt-3-20260809t122940z-dfdd0b9c-5e36-4f0b-908c-3b264a2b85dd",
+          "locator": "evaluations/evidence/wayfinder/edge-irreducible-3.txt",
+          "sha256": "f011077d1e68a03e203052a3e336cb3b4162b839b0a494f3f13f64acc005fbbe",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-irreducible.fixture.yaml",
+              "sha256": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/irreducible-state.md",
+              "sha256": "123ba78190b53de2f8d131b2267acdc936bc19338487fa0539d87f97b63b29b1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-irreducible",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "0b0456aa33c3fd438d43a1edf099e3b854be02d7bf5cce6b5b212ee56cf8efdb"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-missing-companion-20260809t123041z-luna-max-fe633d75-3e70-4333-b8ea-c6286d1d2ac3"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-missing-companion-20260809t123041z-luna-max-fe633d75-3e70-4333-b8ea-c6286d1d2ac3",
+          "locator": "evaluations/evidence/wayfinder/edge-missing-companion-1.txt",
+          "sha256": "0744716cfbf6d52abcf17ce71ef35df6a9a8e78a520986c98cedef64de2eb299",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-missing-companion.fixture.yaml",
+              "sha256": "dbfdc7af032ed97665545a98496107207f361492e4c6cbd548d7ad07142528b8",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/missing-companion-state.md",
+              "sha256": "42232e30a96c87b79455c632c6108f08186399a6773cdef060ef2634cf3ae73f",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-missing-companion",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "dbfdc7af032ed97665545a98496107207f361492e4c6cbd548d7ad07142528b8"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-no-git-luna-max-20260809t122928z-4f65d6f8-66a4-4bcf-a1e6-5d0bce46dc21",
+          "locator": "evaluations/evidence/wayfinder/edge-no-git-1.txt",
+          "sha256": "a1271bd84831524f341271f773008658e51644674c9e2a96480db12954242c1f",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-no-git.fixture.yaml",
+              "sha256": "b6aa782cb4673df6c94e5304a5147f2f954e92a40a209f7b0e03d8f9a0d621ab",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/no-git-state.md",
+              "sha256": "19d72c738c528774c599310427039bf09e20e738fbfa0742c9f8c0e2f61cef82",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-no-git",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "b6aa782cb4673df6c94e5304a5147f2f954e92a40a209f7b0e03d8f9a0d621ab"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-edge-operating-delay-luna-max-20260809t132208z-0a19c6ee-cc2c-4bda-a5bc-7c1f86b06ad1"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-edge-operating-delay-luna-max-20260809t132208z-0a19c6ee-cc2c-4bda-a5bc-7c1f86b06ad1",
+          "locator": "evaluations/evidence/wayfinder/edge-operating-delay-1.txt",
+          "sha256": "4470be1d546d92cba955dce8c847cb23f200cd4fb953c970254d87023d5c3d9f",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/edge-operating-delay.fixture.yaml",
+              "sha256": "ee6a557dfe81ccbca14b58e088a72aa92937751c6d9d991c2a722c444a189cdf",
+              "role": "fixture"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/operating-delay-state.md",
+              "sha256": "e0828c67173e8afc88674cb1c2be7b5026db03c12465dc18c6f0b78c3fdcecd1",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-edge-operating-delay",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "ee6a557dfe81ccbca14b58e088a72aa92937751c6d9d991c2a722c444a189cdf"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-incomplete-1-8b130638-923c-4c31-9ecf-a350998bc551",
+          "locator": "evaluations/evidence/wayfinder/incomplete-1.txt",
+          "sha256": "40260d885c281c85fb4578eb3629cb5416e7ab2023634b482fd3b778fad5a38c",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/incomplete.fixture.yaml",
+              "sha256": "0be748eb1d0b9ee516269a21f992bdcd326028de51be1124164c1abe2b4159e2",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-incomplete",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "0be748eb1d0b9ee516269a21f992bdcd326028de51be1124164c1abe2b4159e2"
+    },
+    {
+      "attempts": [
+        1,
+        2,
+        3
+      ],
+      "contextIds": [
+        "fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a",
+        "fresh-wayfinder-indirect-multisession-luna-max-20260809t123230z-2-9e9057d0-7ed6-4b64-ad81-1b5bd8bcde9f",
+        "fresh-wayfinder-indirect-multisession-luna-max-3-20260809t122939z-76d164c1-8100-493b-9ce1-f16425850c40"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-indirect-multisession-1-20260809t122958z-luna-max-2f3b3496-894d-4e6c-9810-d41ec5de987a",
+          "locator": "evaluations/evidence/wayfinder/indirect-multisession-1.txt",
+          "sha256": "9157bfafea98000552beb828e30238dec06c464185e7ea6a3864442a546c6857",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml",
+              "sha256": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md",
+              "sha256": "2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/SKILL.md",
+              "sha256": "00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 2,
+          "contextId": "fresh-wayfinder-indirect-multisession-luna-max-20260809t123230z-2-9e9057d0-7ed6-4b64-ad81-1b5bd8bcde9f",
+          "locator": "evaluations/evidence/wayfinder/indirect-multisession-2.txt",
+          "sha256": "887e7ea11d0f1ed3f2399261a22b66e84b9e4492aad1446f2f658f134adcb7e6",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml",
+              "sha256": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md",
+              "sha256": "2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/durable-mode.md",
+              "sha256": "b3509824e6ecf6cee54b226e2da7da852f51de94cfae5fcded61085db3cbcdc5",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/continuation-template.md",
+              "sha256": "dab89d7a6c81a064d502b2ff23452625cf0805c65eb9ba251e1095dc169f4f5e",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/extension-point-template.md",
+              "sha256": "51da2d791afadac8623b848273d255bc50ba59b035897540e726745b72f9e704",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/references/material-change-template.md",
+              "sha256": "70fa21dbcd590add8a75e269a49b2cfe38d873313ce994e990689d79832ddf1a",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/SKILL.md",
+              "sha256": "00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/references/language-record-template.md",
+              "sha256": "42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/UNIVERSAL_WORK_CONTRACT.md",
+              "sha256": "f52952f2b4b9de3ee748b8d4ba9ea5d093a0958bffb2723d0610deb156e1f6e3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "docs/WORKFLOW_ROUTING.md",
+              "sha256": "61dd795d17eb6bca4ea2e102f984b882718af765756ff8a291388176f5c91ae3",
+              "role": "disclosed-reference"
+            }
+          ]
+        },
+        {
+          "attempt": 3,
+          "contextId": "fresh-wayfinder-indirect-multisession-luna-max-3-20260809t122939z-76d164c1-8100-493b-9ce1-f16425850c40",
+          "locator": "evaluations/evidence/wayfinder/indirect-multisession-3.txt",
+          "sha256": "be999540b48710ad60bee13bea7568d59c02475087ed4b2416ec74800c09b555",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/indirect-multisession.fixture.yaml",
+              "sha256": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/wayfinder/references/map-and-strategy.md",
+              "sha256": "9fd358bcccd145149d6a7ea623a5460c20d9a8d556b305c3c25bf6097f6febb3",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/runtime/indirect-multisession-state.md",
+              "sha256": "2fcdfcf4b16d11234814022740f4dacf8f4dea5adcc9412c0ae4d404d3dedc9b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/SKILL.md",
+              "sha256": "00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "skills/domain-modeling/references/language-record-template.md",
+              "sha256": "42b6a0c5790ee6ae66aa8b9d6e0c016555ac0edbe0f9a010ee0c01b2bebbb342",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/grill-with-docs/SKILL.md.patch",
+              "sha256": "a4715db7287b15aea4ed528afb9b78d355d04a8e5dddc3348c89bfc65b20bdd6",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/grill-with-docs/agents-openai.yaml.patch",
+              "sha256": "a051ae6dbabc7a5e74dfe2f84b1019472e80906880becc4f130b5f91415a017b",
+              "role": "disclosed-reference"
+            },
+            {
+              "locator": "overlays/grilling/SKILL.md.patch",
+              "sha256": "c64184935d266ddf481c9fed6dc3b84aee641fd3325a8352c7a36e5a7084559b",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-indirect-multisession",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "d3683f3850bfa71ec3016a995e0c8f5bcca49e4db82a71911c3b1ab1fd62a3be"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
+        "fresh-wayfinder-negative-bounded-inline-luna-max-20260809t122947z-95a47082-1b8f-47ef-af6b-b200605dad59"
+      ],
+      "evidence": [
+        {
+          "attempt": 1,
+          "contextId": "fresh-wayfinder-negative-bounded-inline-luna-max-20260809t122947z-95a47082-1b8f-47ef-af6b-b200605dad59",
+          "locator": "evaluations/evidence/wayfinder/negative-1.txt",
+          "sha256": "6f3d0aa549b048902e44d05e22ed0e3b63d07ff929d321d5db24a4b777df0935",
+          "runtimeInputs": [
+            {
+              "locator": "skills/wayfinder/SKILL.md",
+              "sha256": "c423b5d8683eb381bbe3297c4130e1fc164af15fee9b0322b0a8e4f0327f0286",
+              "role": "skill"
+            },
+            {
+              "locator": "evaluations/fixtures/wayfinder/negative.fixture.yaml",
+              "sha256": "72343d7fce569b156f02384f504cf7e6cb66325d015e7ffb0c693a18a07865f1",
+              "role": "fixture"
+            },
+            {
+              "locator": "skills/thinking-in-systems/SKILL.md",
+              "sha256": "09fcf73748c46cddc6544e470005887ec51b58e298095507c246f74e640d389d",
+              "role": "governing-skill"
+            },
+            {
+              "locator": "skills/thinking-in-systems/references/standard.md",
+              "sha256": "daf425fb72fd49fd0b5c83db955a418125854c70e9a654f3d274220f5a802377",
+              "role": "governing-reference"
+            },
+            {
+              "locator": "skills/workflow/SKILL.md",
+              "sha256": "fce5ac401b692a7cc2e4383892e169ff85eebc7acf32f9e4876c08f24f7b7171",
+              "role": "disclosed-reference"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "fixtureId": "wayfinder-negative-bounded-work",
+      "status": "passed",
+      "suiteRevision": "git:916aa0e0d5889cf30401823c7d502871da5f0513",
+      "fixtureRevision": "72343d7fce569b156f02384f504cf7e6cb66325d015e7ffb0c693a18a07865f1"
+    },
+    {
+      "attempts": [
+        1
+      ],
+      "contextIds": [
         "workflow-accepted-transfer-1db9f1f-sol-high-1"
       ],
       "evidence": [
@@ -4158,7 +6083,7 @@
       "Major": 0,
       "Minor": 0
     },
-    "fixtures": 134,
-    "passed": 134
+    "fixtures": 143,
+    "passed": 143
   }
 }
