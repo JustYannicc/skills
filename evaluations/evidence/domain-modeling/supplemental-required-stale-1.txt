@@ -5,7 +5,7 @@ Attempt: 1
 Context ID: fresh-domain-modeling-supplemental-required-stale-20260809t110610z-luna-max-2350205a-200c-4467-88af-1fcb4ca6021b
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T11:06:10Z
-Candidate suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+Candidate suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Run mode: one-shot isolated fresh context. The prior observation and transcript were not runtime inputs; this candidate response was generated once and retained without editing.
 
 Candidate and exact runtime-input locator/hash bindings
@@ -243,6 +243,6 @@ Forbidden behavior
 Attempt attestation
 
 This is one fresh isolated Luna Max execution against candidate
-`git:916aa0e0d5889cf30401823c7d502871da5f0513` in the unique context named
+`git:d1dc0ee086f56865b8da57a71deae10bacc543e6` in the unique context named
 above. The candidate response was generated once, preserved verbatim between
 the markers, and was not retried, copied from another attempt, or post-edited.

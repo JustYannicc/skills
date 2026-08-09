@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Correction recorded in the active Workflow as a correction event linked to M4: M4 was sent only to the internal group, so the original customer-communication Outcome was not satisfied.
 
 The earlier O2 completion transition remains in history. Its supporting claim that M4 reached the customer group is now explicitly invalid evidence; the actual internal-group delivery remains preserved as the truthful effect record. O2 is reopened at `accepted-reopened`, and the current owner resumes responsibility for it.

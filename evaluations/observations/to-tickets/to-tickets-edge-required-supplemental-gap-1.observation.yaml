@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-edge-required-supplemental-gap
 attempt: 1
-contextId: fresh-to-tickets-edge-required-supplemental-gap-20260808-1
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
-evaluator: deterministic-candidate-observer
-recordedAt: 2026-08-08T12:36:00.000Z
+contextId: fresh-to-tickets-edge-required-supplemental-gap-editorial-20260809-1
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:50:00.000Z
 environment:
   id: workflow-to-tickets-required-supplemental-gap
   capabilities:
@@ -39,4 +39,4 @@ observed:
   state: [Waiting]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-edge-required-supplemental-gap-1.txt
-  sha256: 8404772f14cee6fa00e3f9f23d9899792b23982b696679ed7a84ff51da3840a0
+  sha256: bdcf5313d7425966548dcc9a13a526ba4aba4b988d93a2e69f52bfdde437e9c0

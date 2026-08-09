@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Learning question: Does this state transition remain understandable when a user retries an interrupted action?
 
 Decision informed: Whether Workflow should retain a retry transition that makes the accepted retry and its continuation explicit while preserving the interrupted action's identity and cause, or revise the transition before Specification.

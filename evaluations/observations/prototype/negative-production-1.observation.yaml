@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: prototype-negative-production-execution
 attempt: 1
 contextId: fresh-sol-high-r2-prototype-negative-production-1
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context-prototype
 recordedAt: 2026-08-06T18:00:10Z
 environment:
@@ -35,4 +35,4 @@ observed:
   state: [blocked-at-workflow-effect-gate]
 rawEvidence:
   locator: evaluations/evidence/prototype/negative-production-1.txt
-  sha256: f2bd60d5593ba505d6bc3fc230ea74b17ff3975c66a8d02a701de11b2eaf3eb1
+  sha256: e8580914271938ca8ec099f3ef9d58b3d2b4150715ce255b034dbe30aad2d9dd

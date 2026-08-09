@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-mid-extension-constraint
 attempt: 1
 contextId: fresh-workflow-mid-extension-constraint-1db9f1f-8f0a2d1c-sol-high-1
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:18:32Z
 environment:
@@ -32,4 +32,4 @@ observed:
   state: [accepted-change-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/mid-extension-constraint-1.txt
-  sha256: 08b58aba14efa973172b62b49fd6b8dde6419a400dfa3e010d1979202c8a5b9a
+  sha256: 2895155d85687d12141a1c6dcd6e0af0f1cedf29f5cd15485e618100f608dddf

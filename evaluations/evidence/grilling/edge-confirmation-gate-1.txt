@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Fresh-context execution — grilling-edge-confirmation-gate fixture attempt 1
 
 Candidate revision: git:1543812281d9addbcda2a39fe339ee79cff07ff8

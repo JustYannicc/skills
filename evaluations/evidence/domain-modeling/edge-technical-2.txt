@@ -8,7 +8,7 @@ Recorded at (UTC): 2026-08-09T10:56:29Z
 
 Candidate and exact runtime-input provenance
 
-- Evaluation candidate / suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+- Evaluation candidate / suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 - Runtime role `skill`: skills/domain-modeling/SKILL.md
   - SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
 - Runtime role `fixture`: evaluations/fixtures/domain-modeling/edge-technical.fixture.yaml

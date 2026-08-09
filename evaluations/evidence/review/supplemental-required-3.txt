@@ -1,3 +1,4 @@
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 Context: final-sol-review-supplemental-required-3
 Evaluator: gpt-5.6-sol
 Suite git: fa1e76f6f9ca3ceb4746ac1429e7d6cec2871d13

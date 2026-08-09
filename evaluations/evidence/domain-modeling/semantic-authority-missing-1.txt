@@ -5,7 +5,7 @@ Attempt: 1 of 3
 Context ID: fresh-domain-modeling-semantic-authority-missing-20260809t110205z-luna-max-d5f7224c-1acb-4ae0-bd38-ff6f4494c74c
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T11:02:05Z
-Candidate suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+Candidate suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 
 Runtime inputs read for this isolated attempt
 
@@ -188,6 +188,6 @@ Forbidden behavior
 Attempt attestation
 
 This is one fresh isolated Luna Max execution against candidate
-`git:916aa0e0d5889cf30401823c7d502871da5f0513` in the unique context named
+`git:d1dc0ee086f56865b8da57a71deae10bacc543e6` in the unique context named
 above. The candidate response was generated once, preserved verbatim between
 the markers, and not retried, copied from another attempt, or post-edited.

@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: grilling-direct-frontier-format
 attempt: 1
 contextId: fresh-grilling-direct-frontier-format-v12-1-95e382ed-cd64-486b-946a-dad1d89b255e
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-fresh-context
 recordedAt: 2026-08-06T16:41:22Z
 environment:
@@ -39,4 +39,4 @@ observed:
   state: [waiting-for-frontier-answers]
 rawEvidence:
   locator: evaluations/evidence/grilling/direct-frontier-format-1.txt
-  sha256: 589736cf87925374e291a862587581cbb438750197f298a7ed36c6363c5ebcda
+  sha256: 35002444ad8fe7f03c639d416ce8d9fcf3e5f044895cad39cbeaf3267eb32d05

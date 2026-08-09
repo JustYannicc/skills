@@ -3,11 +3,11 @@ Attempt: 1
 Context ID: fresh-domain-modeling-direct-technical-20260809t105503z-luna-max-e48ba5f6-173b-480b-a2b7-3a1a56f2d198
 Evaluator: gpt-5.6-luna-max-fresh-context
 Recorded at (UTC): 2026-08-09T10:55:03Z
-Suite revision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+Suite revision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 
 Candidate and exact runtime identity
 
-- Evaluation candidate: git:916aa0e0d5889cf30401823c7d502871da5f0513
+- Evaluation candidate: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 - Runtime input locator: skills/domain-modeling/SKILL.md
 - Runtime input SHA-256: 00aadea683d74c9a54c7f528454bfbdc55ee5194c1c49dfbd9e0a301bb45aedf
 - Runtime input locator: evaluations/fixtures/domain-modeling/direct-technical.fixture.yaml

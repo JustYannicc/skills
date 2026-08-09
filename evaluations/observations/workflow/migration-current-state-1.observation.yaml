@@ -2,7 +2,7 @@ schemaVersion: 1
 fixtureId: workflow-migration-current-state
 attempt: 1
 contextId: workflow-migration-current-state-1db9f1f-sol-high-1
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
 evaluator: gpt-5.6-sol-high-independent-evaluator
 recordedAt: 2026-08-06T18:07:25Z
 environment:
@@ -25,4 +25,4 @@ observed:
   state: [mapping-in-review, parent-active]
 rawEvidence:
   locator: evaluations/evidence/workflow/migration-current-state-1.txt
-  sha256: e21fc3f31f32ca80076df69be8b0198ddc4a5bca2529d9a5ee835447d58c1b07
+  sha256: 6b9bca9d819b0712d684e0d07388b7dbac68d05fa8dc9ff2ea9de1838b08ff8c

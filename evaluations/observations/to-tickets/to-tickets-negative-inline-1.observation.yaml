@@ -1,10 +1,10 @@
 schemaVersion: 1
 fixtureId: to-tickets-negative-inline
 attempt: 1
-contextId: fresh-to-tickets-negative-inline-20260808-1
-suiteRevision: git:916aa0e0d5889cf30401823c7d502871da5f0513
-evaluator: deterministic-candidate-observer
-recordedAt: 2026-08-08T12:33:00.000Z
+contextId: fresh-to-tickets-negative-inline-editorial-20260809-1
+suiteRevision: git:d1dc0ee086f56865b8da57a71deae10bacc543e6
+evaluator: gpt-5.6-luna-max-fresh-context
+recordedAt: 2026-08-09T12:50:00.000Z
 environment:
   id: conversation-inline-single-unit
   capabilities:
@@ -38,4 +38,4 @@ observed:
   state: [complete]
 rawEvidence:
   locator: evaluations/evidence/to-tickets/to-tickets-negative-inline-1.txt
-  sha256: 4688d1744755c2cb57c33df9fe033fe608d6377765f6f4e69eb31e63cdfc89e8
+  sha256: cc3fa0ad181b60d068a4f03f828e42477e2f936848f880da765f7c0c6a7105a2

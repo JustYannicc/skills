@@ -17,7 +17,10 @@ prompt: >-
   exact behavior; the access coordinator owns decomposition. Three complete
   Results are needed: facilities prepares and observes the route, communications
   prepares the approved directions, and the event lead integrates the two
-  Results and observes five representative arrivals. Route and material
+  Results and observes five representative arrivals. The event lead explicitly
+  accepts exact Ticket-set revision `community-welcome-r4/ticket-set-r1` with
+  exactly those Results and dependencies and authorizes its canonical Adapter
+  write. Route and material
   constraints are from `venue-access-v3`; every exception must enter recovery
   before the event. The selected Durable Adapter supports atomic claims. Return
   the accepted Ticket set, coverage map, and Work frontier without executing.
