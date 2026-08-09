@@ -1,8 +1,9 @@
 # Skill packages
 
 `thinking-in-systems`, `workflow`, `to-spec`, `to-tickets`, `domain-modeling`,
-`review`, and `prototype` are approved. The approved Workflow Durable route and
-To Tickets implementation merged through PR #45 and closed issues #14 and #23.
+`review`, and `prototype` are approved. `ask-yannic` is an explicit-only route
+guide candidate under issue #27. The approved Workflow Durable route and To
+Tickets implementation merged through PR #45 and closed issues #14 and #23.
 Suite publication remains gated by the composed-suite and clean-install proof
 in #31 and the immutable-release review in #32.
 
@@ -15,3 +16,10 @@ Do not add a placeholder `SKILL.md`: skills.sh and Codex would discover it as if
 Establishes shared terminology through the selected Adapter. Use it when words
 or boundaries block shared understanding; see the [suite roster](../docs/SUITE_ROSTER.md)
 for its completion boundary and Workflow handoff.
+
+## `ask-yannic`
+
+Explains the smallest applicable route from Workflow's canonical routing
+source, including trade-offs and capability gaps, then stops before execution.
+It is invoked only when the user explicitly requests it and does not represent
+Yannic's personal judgment for coworkers.

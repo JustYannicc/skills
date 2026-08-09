@@ -1,5 +1,8 @@
 schemaVersion: 2
 skills:
+  - name: ask-yannic
+    provenance:
+      strategy: original
   - name: review
     provenance:
       strategy: original

@@ -76,6 +76,15 @@ must persist, and returns the bounded language result to Workflow. Yannic
 approved issue #16; publication still depends on the composed-suite release
 proof.
 
+### [Ask Yannic](skills/ask-yannic) — candidate
+
+Ask Yannic is an explicit route guide for choosing the smallest applicable
+Workflow route. It reads Workflow's canonical routing source at the active
+suite revision, explains the recommendation and its trade-offs, exposes stale
+sources or missing capabilities, and stops before invoking any route. It does
+not maintain its own routing model or represent Yannic's personal judgment for
+coworkers; that separate capability remains deferred.
+
 ## Planned suite
 
 Thinking in Systems is the anchor, not a container for every workflow. The accepted first runtime suite contains 17 single-job skills covering automatic coordination, adoption of existing systems, discovery, specification, decomposition, implementation, review, handoff, guidance, and setup. Some are universal successors to Matt Pocock's skills; small universal upstream skills remain installed directly with deterministic overlays instead of being copied. For documented planning and design, Grill With Docs composes Grilling's decision-tree interview with Domain Modeling's shared-language and decision records through the selected Adapter.

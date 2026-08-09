@@ -50,6 +50,10 @@ wayfind or grill with docs → specify → decompose → execute → review → 
 - Prove source pinning, overlays, standing instructions, Extension points, clean removal, and no-Git operation.
 - Verify the accepted README Mermaid workflow and complete end-to-end evaluation matrix.
 
+Current state: the issue #27 `ask-yannic` candidate is under behavioral and
+human review. It remains guidance-only and explicit-invocation; Setup and the
+composed-suite proof remain to be implemented.
+
 ## Phase 5 — publication and private migration
 
 - Execute the accepted [validation and release contract](VALIDATION_AND_RELEASE.md).

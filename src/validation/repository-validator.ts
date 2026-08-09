@@ -12,6 +12,7 @@ import { findPublicBoundaryViolations } from "./public-boundary.ts";
 import type { RepositoryFinding } from "./repository-contracts.ts";
 import { validateRepositoryProvenance } from "./repository-provenance.ts";
 import { relativePathSchema, skillNameSchema } from "./repository-schemas.ts";
+import { parseSkillDocument } from "./skill-document.ts";
 import {
   createPinnedTargetResolver,
   loadPinnedTarget,
@@ -105,19 +106,6 @@ const overlayInventorySchema = z.object({
   schemaVersion: z.literal(1),
 });
 
-const parseFrontmatter = (contents: string): unknown => {
-  const match = contents.match(
-    /^---\r?\n(?<frontmatter>[\s\S]*?)\r?\n---(?:\r?\n|$)/u
-  );
-  if (!match?.groups?.frontmatter) {
-    throw new Error("SKILL.md must begin with YAML frontmatter.");
-  }
-  return parseYaml(match.groups.frontmatter);
-};
-
-const skillBody = (contents: string): string =>
-  contents.replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/u, "").trim();
-
 const validateMarkdown = async (
   root: string,
   files: string[]
@@ -208,7 +196,8 @@ const validateSkill = async (
 
   try {
     const contents = await readFile(skillPath, "utf-8");
-    frontmatter = frontmatterSchema.parse(parseFrontmatter(contents));
+    const skillDocument = parseSkillDocument(contents);
+    frontmatter = frontmatterSchema.parse(skillDocument.frontmatter);
     if (frontmatter.name !== skillName) {
       findings.push({
         check: "skill-metadata",
@@ -217,7 +206,7 @@ const validateSkill = async (
         severity: "Major",
       });
     }
-    const body = skillBody(contents);
+    const body = skillDocument.body.trim();
     if (body.length < 40 || /\b(?:placeholder|tbd|todo)\b/iu.test(body)) {
       findings.push({
         check: "skill-structure",
