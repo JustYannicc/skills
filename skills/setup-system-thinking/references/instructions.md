@@ -46,6 +46,7 @@ Show the full file path, proposed placement, and complete diff before asking to 
 Preserve unrelated instructions. Flag instructions that would prevent or weaken the block, including rules that:
 
 - skip Thinking in Systems or Workflow;
+- invoke phase capabilities outside one parent Workflow context or omit their return to Workflow;
 - force direct implementation before Workflow chooses a route;
 - treat delegation, review, or submission as completion;
 - forbid installed skill use;

@@ -1,6 +1,6 @@
 ---
 name: to-spec
-description: Turn an accepted Outcome contract into a clear Specification artifact for downstream work, revise it after a material change, or surface the material gaps blocking a requested Specification.
+description: Admit an explicit completed Wayfinder handoff, then turn its accepted Outcome contract into a clear Specification artifact or return any missing discovery prerequisite to Workflow.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -15,6 +15,16 @@ Join the active context supplied by `'Workflow'`. The Outcome owner retains pare
 This phase synthesizes accepted decisions. Discovery owns missing knowledge or decisions, `'Workflow'` owns coordination, and downstream skills own decomposition, Implementation, and Review.
 
 ## Process
+
+### 0. Admit the Wayfinder gate
+
+For every Durable or Material Outcome, require one exact `Wayfinder complete` result from the active Workflow context. Bind its Map locator and revision, destination, complete coverage audit, empty-frontier confirmation after the latest breadth-first rechart, user confirmation of shared understanding, accepted decisions, Strategy, remaining governed fog, Authority, and Workflow return route. Admit no handoff marked `Wayfinder incomplete` or lacking any of those fields. A destination answer, one question, one interview round, one resolved frontier item, or a proposed route is discovery evidence rather than Specification admission.
+
+For a bounded Inline request, require Workflow's explicit Wayfinder-gate pass evidence showing that destination, terms, facts, decisions, Constraints, Authority, and Proof seam were already sufficient.
+
+Return a failed admission to Workflow at the Wayfinder gate with every missing field and the exact next breadth-first round, confirmation, or evidence action. Compose no Specification artifact from an unadmitted handoff.
+
+**Done when:** the exact completed Wayfinder result or explicit Inline gate-pass evidence is bound, or the work has returned to Workflow at gate 1 without entering Specification.
 
 ### 1. Bind the accepted Outcome
 

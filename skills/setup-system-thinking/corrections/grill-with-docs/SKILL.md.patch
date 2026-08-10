@@ -6,10 +6,10 @@ diff --git a/skills/engineering/grill-with-docs/SKILL.md b/skills/engineering/gr
  name: grill-with-docs
 -description: A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
 -disable-model-invocation: true
-+description: Sharpen a documented plan or design through a relentless interview while preserving shared language and qualifying decisions. Use when existing records should ground the design and stay current as decisions resolve.
++description: Sharpen a documented plan or design through a relentless interview while preserving shared language and qualifying decisions. In an active Workflow context, Wayfinder owns the route and invokes this skill; use it directly only as a standalone interview without Workflow.
  ---
 
 -Run a `/grilling` session, using the `/domain-modeling` skill.
-+Run a `grilling` interview and use `domain-modeling` throughout it. Read the current records through the selected Adapter, keep the domain glossary and qualifying decision records current there, and return the confirmed shared understanding to the requesting context.
++Run a `grilling` interview and use `domain-modeling` throughout it. Read the current records through the selected Adapter and keep the domain glossary and qualifying decision records current there. Continue across Grilling rounds until its entire design-tree frontier is empty and the user confirms the shared understanding; one question or round is an intermediate result. Then return the confirmed shared understanding to the requesting context. When Wayfinder is the requester, return to that Wayfinder context for Map and frontier integration before Workflow resumes.
 +
 +These are companion capabilities rather than bundled dependencies. When either capability is unavailable, name the gap and preserve the unresolved frontier for resumption.

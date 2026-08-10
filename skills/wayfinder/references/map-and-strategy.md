@@ -36,6 +36,23 @@ Satisficing threshold.>
 - <Decision name> — locator <canonical decision locator>; <one-line relevance>;
   accepted by <Actor> at <exact decision revision>; review when <condition>.
 
+## Coverage audit
+
+- Empty-frontier confirmation: <pending, or confirmed by Actor at source revision
+  after the latest breadth-first rechart>.
+
+- Destination, scope, and threshold: <settled/frontier/blocked/fog/out of scope>;
+  <evidence, named question, or governing rule>.
+- Actors, Ownership, Responsibility, and Authority: <status>; <evidence/question/rule>.
+- Terminology and classifications: <status>; <evidence/question/rule>.
+- Inputs, state, behavior, and transitions: <status>; <evidence/question/rule>.
+- Interfaces, dependencies, and operating conditions: <status>; <evidence/question/rule>.
+- Constraints, incentives, friction, and Externalities: <status>; <evidence/question/rule>.
+- Degraded, Paused, Recovery, retirement, and legacy behavior: <status>;
+  <evidence/question/rule>.
+- Effects, privacy, data use, and retention: <status>; <evidence/question/rule>.
+- Proof, burden, sustainment, and change: <status>; <evidence/question/rule>.
+
 ## Operating Strategy
 
 - Observation: <condition or Evidence that can change the route>
@@ -98,6 +115,12 @@ The canonical record follows the active `'Workflow'` skill's Continuation contra
 - <time> — <Actor> changed <state or rule> under <Authority> because <rationale>;
   Evidence <reference>; result revision <exact revision>.
 ```
+
+The coverage audit is a completion ledger, not a questionnaire template. Populate
+it breadth-first from the active Outcome and full systems standard. A `settled`
+entry links accepted evidence; every other entry links an owned frontier item,
+blocked item, fog rule, or accepted exclusion. After each answer or evidence
+return, refresh every affected entry before selecting the next round.
 
 ## Classification rules
 

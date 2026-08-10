@@ -33,14 +33,15 @@ Setup shows this editable default before writing it to either standard:
 <!-- thinking-in-systems-suite:begin -->
 ## Thinking in Systems workflow
 
-For every request, before doing anything else:
+**ALWAYS START EVERY REQUEST WITH `thinking-in-systems`, THEN `workflow`.**
 
-1. Read and follow the `thinking-in-systems` skill.
-2. Read and follow the `workflow` skill.
-3. Use Thinking in Systems to decide the approach.
-4. Use Workflow to own the request through verified completion, accepted handoff, or authoritative cancellation.
+1. Read and apply the full `thinking-in-systems` skill.
+2. Read and apply the `workflow` skill.
+3. Enter exactly one Workflow context for the request. Workflow owns the parent Outcome and runs these gates in order: `wayfinder` → `to-spec` → `to-tickets` → `implement` → `review`.
+4. Finish each gate before starting the next. For Durable or Material work, invoke every named gate skill. Wayfinder invokes `grill-with-docs` for documented plan or design decisions and keeps working full question rounds until its collective completion gate passes. `to-spec` rejects every incomplete, one-round, unconfirmed, or coverage-incomplete Wayfinder handoff.
+5. Return every bounded result to its invoking capability and ultimately to Workflow. Continue until Workflow verifies completion, records an accepted transfer, or records authoritative cancellation.
 
-Keep simple work proportional. Create durable workflow records only when the work must survive the current conversation.
+A response, plan, Specification, Ticket set, implementation, Review, delegation, or handoff offer is an intermediate result unless Workflow's terminal check passes. Keep bounded work Inline and proportional; cross a Persistence boundary only when state must survive the current conversation.
 <!-- thinking-in-systems-suite:end -->
 ```
 
@@ -121,7 +122,7 @@ Use `--global` only for global scope. Reuse the same target selection that insta
 
 ### 5. Done
 
-Read and run the Packages, Instructions, and Recovery checks in [verification.md](references/verification.md). A successful active setup includes a fresh-context request that uses `thinking-in-systems` before `workflow`. If a check fails, restore the checkpoint and report the failed command or file.
+Read and run the Packages, Instructions, and Recovery checks in [verification.md](references/verification.md). Active setup requires both isolated fresh-context fixtures to pass: the bounded fixture must evaluate the ordered gates inside one Workflow context, and the Durable multi-turn fixture must run Wayfinder's real Grill With Docs rounds, refuse a premature To Spec request, and reach collective completion before continuing through To Spec, To Tickets, Implement, and Review. When isolated execution is unavailable or a behavior fixture fails, keep Setup installed with receipt status `verification_pending` and report the exact next fixture action. Restore the checkpoint only when a package, instruction, correction, receipt-integrity, or recovery check fails. Report every failed check and its retry or restore action.
 
 Setup removes itself only through the skills CLI:
 

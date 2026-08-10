@@ -11,7 +11,7 @@ Show the path before writing it. Store no credentials.
 ---
 suite: thinking-in-systems
 scope: project | global
-status: applying | current | failed
+status: applying | verification_pending | current | failed
 activation: agents | claude | both | inactive
 updatedAt: <ISO-8601 timestamp>
 ---
@@ -28,6 +28,13 @@ updatedAt: <ISO-8601 timestamp>
 - Conflicts: <approved edits or unresolved conflicts>
 - writing-for-agents: <used, installed with approval, or declined>
 
+## Verification
+
+- Configured target and revision: <instruction path and exact revision>
+- Bounded route fixture: <exact prompt; transcript locator; observed trace; pass/fail; verifier>
+- Durable documented-plan fixture: <exact prompt; transcript locator; observed trace; pass/fail; verifier>
+- Pending action: <none, or who must run/return which fresh-context fixture>
+
 ## Recovery
 
 - Backup: <location>
@@ -36,4 +43,4 @@ updatedAt: <ISO-8601 timestamp>
 - Setup removal: <exact command and result>
 ```
 
-Mark only packages added or replaced by Setup as owned. Reused packages remain user-owned. Update the receipt after verification and after Setup removal. A `failed` receipt must name the next safe action.
+Mark only packages added or replaced by Setup as owned. Reused packages remain user-owned. Use `verification_pending` while either isolated fresh-context transcript is unavailable or failing; keep Setup installed and name the exact next fixture action. Use `current` only after both active-mode fixtures pass or install-only verification succeeds. Update the receipt after verification and after Setup removal. A `failed` receipt must name the next safe action.

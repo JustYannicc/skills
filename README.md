@@ -44,14 +44,15 @@ The accepted block is the first substantive instruction section in `AGENTS.md` o
 <!-- thinking-in-systems-suite:begin -->
 ## Thinking in Systems workflow
 
-For every request, before doing anything else:
+**ALWAYS START EVERY REQUEST WITH `thinking-in-systems`, THEN `workflow`.**
 
-1. Read and follow the `thinking-in-systems` skill.
-2. Read and follow the `workflow` skill.
-3. Use Thinking in Systems to decide the approach.
-4. Use Workflow to own the request through verified completion, accepted handoff, or authoritative cancellation.
+1. Read and apply the full `thinking-in-systems` skill.
+2. Read and apply the `workflow` skill.
+3. Enter exactly one Workflow context for the request. Workflow owns the parent Outcome and runs these gates in order: `wayfinder` → `to-spec` → `to-tickets` → `implement` → `review`.
+4. Finish each gate before starting the next. For Durable or Material work, invoke every named gate skill. Wayfinder invokes `grill-with-docs` for documented plan or design decisions and keeps working full question rounds until its collective completion gate passes. `to-spec` rejects every incomplete, one-round, unconfirmed, or coverage-incomplete Wayfinder handoff.
+5. Return every bounded result to its invoking capability and ultimately to Workflow. Continue until Workflow verifies completion, records an accepted transfer, or records authoritative cancellation.
 
-Keep simple work proportional. Create durable workflow records only when the work must survive the current conversation.
+A response, plan, Specification, Ticket set, implementation, Review, delegation, or handoff offer is an intermediate result unless Workflow's terminal check passes. Keep bounded work Inline and proportional; cross a Persistence boundary only when state must survive the current conversation.
 <!-- thinking-in-systems-suite:end -->
 ```
 
@@ -81,7 +82,7 @@ Setup adds `--global` and any selected agent flag when required by the installat
 
 ### 3. Start working
 
-If you accepted the activation block, open a fresh agent context and make an ordinary request. Thinking in Systems loads first; Workflow then chooses the smallest route that can truthfully complete the Outcome. In install-only mode, explicit invocation is the deterministic way to use an installed skill; model-invoked skills may still be selected when their descriptions match.
+If you accepted the activation block, open a fresh agent context and make an ordinary request. Thinking in Systems loads first; the request then enters one Workflow context that owns the ordered `Wayfinder → To Spec → To Tickets → Implement → Review` route until its terminal check passes. For Durable or Material work, Wayfinder invokes Grill With Docs when documented decisions are present and repeats breadth-first question rounds, Map updates, and frontier expansion. It returns `Wayfinder complete` only after a separate empty-frontier confirmation and shared-understanding confirmation; To Spec rejects anything less. In install-only mode, explicit invocation is the deterministic way to use an installed skill; model-invoked skills may still be selected when their descriptions match.
 
 If you only want route advice, invoke `/ask-yannic`. It reads the matching Workflow revision and explains the smallest applicable route without executing it.
 
@@ -125,28 +126,23 @@ That does not mean turning every request into a process. A bounded task can stay
 
 ```mermaid
 flowchart TD
-  R["Request or active Outcome"] --> W
-
-  subgraph TIS["Thinking in Systems applies proportionally throughout"]
-    direction TB
-    W["Workflow owns the Outcome"] --> Q{"How much structure<br/>does this Outcome need?"}
-    Q -- "Need clarity" --> D["Discover only what is missing"]
-    D -- "Route is clear" --> Q
-    Q -- "Inline is enough" --> I["Inline<br/>Keep the contract in the conversation"]
-    Q -- "Durability is needed" --> U["Durable<br/>Map existing state if needed<br/>Persist plans and work through an Adapter"]
-    I --> E["Execute, Review, and verify"]
-    U --> E
-    E --> P{"Parent Outcome proven?"}
-    P -- "New evidence, change, or recovery" --> W
-  end
-
-  P -- "Yes" --> X["Verified completion"]
-  P -- "Transfer" --> H["Accepted handoff"]
-  P -- "Stop" --> C["Authoritative cancellation"]
-  style TIS fill:transparent,stroke:#888,stroke-width:1px
+  R["Request"] --> TIS["Thinking in Systems"]
+  TIS --> W["Workflow owns the parent Outcome"]
+  W --> WAY["1. Wayfinder"]
+  WAY -. "documented plan/design frontier" .-> GWD["Grill With Docs<br/>Grilling + Domain Modeling"]
+  GWD --> WAY
+  WAY -- "collective frontier complete" --> WIR["Workflow integrates<br/>Wayfinder complete"]
+  WIR --> S["2. To Spec"]
+  S --> TK["3. To Tickets"]
+  TK --> I["4. Implement"]
+  I --> RV["5. Review"]
+  RV -- "changes required" --> I
+  RV -- "verified" --> P["Effects + parent Review"]
+  P -- "material change" --> WAY
+  P --> X["Verified completion / accepted transfer / cancellation"]
 ```
 
-Thinking in Systems is the governing lens, not a phase to finish and leave behind. Workflow chooses the route, revisits it when the situation changes, and remains responsible for reaching a truthful terminal condition. The [Workflow skill](skills/workflow) is the canonical source for the complete routing and completion rules.
+Thinking in Systems is the governing lens, not a phase to finish and leave behind. Workflow evaluates the gates in the displayed order and remains responsible for reaching a truthful terminal condition. Durable or Material work invokes every named gate. Bounded Inline work may prove a gate already satisfied, but it preserves the order. Wayfinder keeps cycling through full frontier rounds and returns to Workflow only after its collective completion gate passes. The [Workflow skill](skills/workflow) is the canonical source for the complete routing and completion rules.
 
 ## Skill guide
 

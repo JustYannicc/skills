@@ -48,7 +48,7 @@ Add `--global` only for global scope. Reuse the target selection that installed 
 
 The patch files live under `corrections/` inside Setup:
 
-- `grill-with-docs`: make it model-invoked and integrate `grilling`, `domain-modeling`, and the selected Adapter.
+- `grill-with-docs`: make it model-invoked with Wayfinder-owned routing inside Workflow and direct use only when standalone; integrate the full multi-round `grilling` and `domain-modeling` contracts through the selected Adapter; and return a Wayfinder-owned interview to Wayfinder before Workflow resumes.
 - `grilling`: inspect facts directly; delegation is optional rather than mandatory.
 - `research`: work across domains, use primary evidence, support Inline or Durable results, and return to Workflow when active.
 - `to-questionnaire`: make it model-invoked.

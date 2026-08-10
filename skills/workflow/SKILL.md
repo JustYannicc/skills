@@ -1,6 +1,6 @@
 ---
 name: workflow
-description: Coordinate every request and active Outcome through systems-governed discovery, specification, decomposition, implementation, Review, effects, change, and verified terminal proof across domains.
+description: "Coordinate every request through one ordered parent route: Thinking in Systems, Wayfinder, To Spec, To Tickets, Implement, Review, effects, and verified terminal proof."
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -8,9 +8,9 @@ metadata:
 
 # Workflow
 
-Own one parent Outcome from request to verified completion, accepted transfer, or authoritative cancellation in Inline or Durable mode. Load and apply the `'Thinking in Systems'` skill first. Workflow chooses the smallest truthful route, coordinates bounded phase results, and remains responsible for their integration and the parent terminal condition.
+Own one parent Outcome from request to verified completion, accepted transfer, or authoritative cancellation in Inline or Durable mode. Load and apply the `'Thinking in Systems'` skill first, then enter one Workflow context before any response, phase capability, or effect. Reading Workflow without establishing and retaining that context is incomplete. Workflow evaluates the ordered gates below from left to right, integrates every bounded return, and remains responsible for the parent terminal condition.
 
-## Follow the route
+## Run the ordered gates
 
 ```mermaid
 flowchart TD
@@ -18,27 +18,23 @@ flowchart TD
   TIS --> W["Workflow<br/>own the parent Outcome"]
   W --> C{"Current state represented<br/>well enough to proceed?"}
   C -- "No, Durable existing scope" --> M["Migrate System<br/>map current state only"]
-  M --> F{"Material fog remains?"}
-  C -- "Yes, Inline" --> F
-  C -- "Yes, Durable" --> D["Selected Adapter<br/>canonical Outcome/Ticket state"]
-  D --> F
-  F -- "Yes" --> WAY["Wayfinder<br/>strategy and decision frontier"]
-  WAY --> DOC{"Durable plan or<br/>design records?"}
-  DOC -- "Yes" --> GWD["Grill With Docs"]
+  C -- "Yes, Inline" --> WAY["1. Wayfinder gate"]
+  C -- "Yes, Durable" --> D["Selected Adapter<br/>canonical Outcome state"]
+  M --> D
+  D --> WAY
+  WAY -. "documented plan or design frontier" .-> GWD["Grill With Docs"]
   GWD --> GR["Grilling<br/>design-tree decisions"]
   GWD --> DM["Domain Modeling<br/>shared language"]
-  DOC -- "No" --> GR
-  DOC -- "No" --> DM
-  GR --> SG{"Semantic Specification<br/>already sufficient?"}
-  DM --> SG
-  F -- "No" --> SG
-  SG -- "No" --> S["To Spec<br/>accepted Outcome contract"]
-  SG -- "Yes" --> TG{"Materialized Tickets<br/>needed?"}
-  S --> TG
-  TG -- "Yes" --> TK["To Tickets<br/>bounded work contracts"]
-  TG -- "No" --> I["Implement<br/>execute accepted work"]
-  TK --> I
-  I --> RV["Review<br/>verify the exact result"]
+  GR --> WI["Return to Wayfinder<br/>integrate Map and frontier"]
+  DM --> WI
+  WI --> WAY
+  WAY --> WG{"Wayfinder collective<br/>completion gate passes?"}
+  WG -- "No: next round or frontier item" --> WAY
+  WG -- "Yes" --> WIR["Return Wayfinder complete<br/>Workflow integrates gate 1"]
+  WIR --> S["2. To Spec gate<br/>accepted Outcome contract"]
+  S --> TK["3. To Tickets gate<br/>bounded work contracts"]
+  TK --> I["4. Implement gate<br/>execute accepted Tickets"]
+  I --> RV["5. Review gate<br/>verify exact Results"]
   RV -- "changes required" --> I
   RV -- "inconclusive" --> Q["Wait with owned continuation"]
   Q --> HC{"Transfer or unsupported<br/>automatic resumption?"}
@@ -55,32 +51,43 @@ flowchart TD
   X --> CANCEL["Authoritative cancellation"]
 ```
 
-The diagram shows every capability; follow only the smallest path needed to satisfy unmet contracts. Inline work may carry the Specification, one Ticket, and Review in the conversation; Durable work materializes the same meanings through one selected Adapter. Both modes follow the same systems judgment and completion rules.
+Always evaluate the gates in this order: **Wayfinder → To Spec → To Tickets → Implement → Review**. Finish a gate before entering the next one. A bounded Inline request may pass a gate inside Workflow without invoking its skill only when the gate's complete contract is already present and Workflow records the proof. Durable or Material delivery invokes each named gate skill. A direct request for a later skill first enters Workflow and proves every earlier gate in order. Discovery companions run inside Wayfinder; Supplemental reviewers run inside Review. A child capability returns to its immediate invoker, and the return chain unwinds to Workflow before the next gate starts.
 
-1. **Enter one Workflow context.** Preserve the request. Join a matching open Outcome when one exists; otherwise distinguish new, related, and replacement work before accepting one parent Outcome. Record the Outcome owner, current phase, accepted Authority, result revision, selected Adapter, capability levels, and return route proportionately. Complete this step when exactly one parent context governs the work or the smallest material ambiguity is visible.
-2. **Choose the representation.** Use Inline mode for bounded synchronous work before a Persistence boundary. Use Durable mode when state, responsibility, waiting, approval, assignment, multiple independently finishable units, or meaningful risk must survive the interaction. Complete this step when the representation can preserve the contract or an exact capability gap and resumption condition are visible.
-3. **Materialize Durable state.** At a Persistence boundary, read [Durable mode](references/durable-mode.md), select one canonical Adapter, declare its `Baseline`, `Coordination`, and `Continuation` capabilities, and create or update the canonical Outcome before child execution or an external effect. Record Tickets, Claims, Evidence references, Continuation, transition history, and exact revisions only through that authority. If Baseline is unavailable, enter visible Degraded mode with complete preserved state and an exact resumption or accepted-handoff condition; never claim fictional storage, monitoring, or completion. Complete this step when the parent and every persistent child have a readable canonical locator or the capability gap is durably visible.
-4. **Map existing reality when needed.** If Durable work materially depends on an existing scope without a current verified map, invoke the `'Migrate System'` skill for bounded current-state mapping. Record actual sources, Actors, responsibilities, relationships, active work, evidence, waiting state, and unknowns. Independent areas may be delegated, but the migration owner integrates and verifies them. Route persistent Fog of war to the `'Wayfinder'` skill. Route every discovered change to ordinary Workflow; migration does not repair the represented System. Complete this step when the materially affected current state is trustworthy enough for ordinary work.
-5. **Remove only blocking uncertainty.** Select discovery by the uncertainty table below. The `'Wayfinder'` skill begins with the `'Domain Modeling'` and `'Grilling'` skills when their capabilities are available. When durable plans or design records are in scope, it uses the `'Grill With Docs'` skill, which composes both. Independent discovery may run concurrently; dependent questions wait. Complete this step when the remaining uncertainty either permits a truthful Specification or is an explicit operating rule for irreducible Fog of war.
-6. **Specify and decompose proportionately.** A complete bounded request may remain the semantic Specification for one implicit Inline Ticket. Invoke the `'To Spec'` skill when a Specification must persist, cross an approval or assignment boundary, coordinate multiple phases, govern meaningful risk, or is explicitly requested. Invoke the `'To Tickets'` skill when work has independently finishable units, delegation, dependencies, concurrency, cross-session execution, or another Persistence boundary. A direct request for a later phase enters there only after its minimum contract, owner, Authority, exact revision, Proof seam, and return route are present. Bind each Durable Specification and Ticket to the selected Adapter's exact revision. Complete this step when every executable unit is covered by an accepted contract without invented prerequisites.
-7. **Implement, Review, and integrate.** Each invoked capability joins the active Workflow context, owns its bounded result, and returns revision-bound Evidence. Review every exact result at its accepted Proof seam. Perform only authorized effects through the Adapter's deterministic transition and effect guards, verify the real result, update affected current and legacy state, and run parent Review over the integrated Outcome. Complete this step when all required child dispositions, Continuations, effects, and propagation are integrated at the current revisions.
-8. **Reach a truthful terminal condition.** End parent responsibility only on a verified parent proof bundle, an accepted transfer with exact continuation, or authoritative cancellation with every material disposition. Delegation, submission, approval, scheduling, waiting, failure, child completion, and an unaccepted handoff are non-terminal.
+```text
+enter(gate n + 1) = completion record for gate n exists
+  and its exact revision is current
+  and Workflow has integrated it
+
+enter(To Spec) = Wayfinder status is complete
+  and coverage audit is complete
+  and empty-frontier confirmation is current
+  and user confirmation is recorded
+```
+
+Missing or stale evidence keeps the current gate active. It never becomes permission to start the next skill.
+
+0. **Establish the parent and representation.** Preserve the request and enter exactly one Workflow context before responding, invoking a phase capability, or performing an effect. Join a matching open Outcome or distinguish new, related, and replacement work. Record the owner, Authority, result revision, current gate, and every immediate return route. Use Inline mode only before a Persistence boundary. At a Durable boundary, read [Durable mode](references/durable-mode.md), select one canonical Adapter, declare its capability levels, and materialize the Outcome before child execution or an effect. When a Durable existing scope lacks a trustworthy current-state map, invoke `'Migrate System'` now and integrate its bounded return before gate 1. Complete when exactly one parent context and truthful representation govern the ordered gates.
+1. **Finish Wayfinder.** For every Durable or Material Outcome, invoke `'Wayfinder'` first. Give it the parent context, accepted destination, current evidence, Authority, and immediate return route. Wayfinder owns discovery routing: documented plans or design records invoke `'Grill With Docs'`; Grill With Docs composes Grilling and Domain Modeling and returns to Wayfinder; other present uncertainties invoke their owning companions. Wayfinder integrates those returns and completes only when its collective completion gate proves the whole material decision frontier exhausted or the remaining fog governed. A destination answer, one question, one interview round, one resolved frontier item, or a merely plausible route is non-terminal; keep Workflow at gate 1 and invoke or resume Wayfinder again. Advance to To Spec only after Workflow integrates an explicit `Wayfinder complete` result with its coverage evidence. A bounded Inline request passes this gate without invoking Wayfinder only when its destination, terms, facts, decisions, Constraints, Authority, and Proof seam are already sufficient. Complete when Workflow has integrated the explicit Wayfinder completion result or recorded exact evidence that the Inline gate already passes.
+2. **Finish To Spec.** Enter this gate only after gate 1 returns an explicit `Wayfinder complete` result at one exact Map revision. The handoff must contain the complete coverage audit, empty-frontier confirmation, accepted decisions, remaining governed fog, and the user's confirmation of shared understanding. A `Wayfinder incomplete` result, one question round, missing coverage evidence, or unconfirmed shared understanding keeps Workflow at gate 1. After admission, invoke `'To Spec'` for every Durable or Material Outcome and supply the accepted Outcome, Wayfinder decisions and Strategy, Constraints, Authority, Proof seam, and exact return route. Integrate the accepted Specification revision before continuing. A bounded Inline request may use its complete semantic Specification in the conversation only with Workflow's recorded Wayfinder-gate pass evidence. A blocking Specification gap returns to gate 1 through Workflow. Complete when one accepted Specification governs downstream work.
+3. **Finish To Tickets.** After gate 2 passes, invoke `'To Tickets'` for every Durable or Material Outcome. Supply the accepted Specification revision, dependencies, ownership and Authority boundaries, proof obligations, and exact return route. Integrate the accepted Ticket-set revision and Work frontier before continuing. A bounded Inline request may use one implicit Ticket only when its Result, owner, Authority, Proof seam, and terminal condition are explicit. A decomposition gap returns to gate 2 or gate 1 through Workflow. Complete when every executable unit has an accepted Ticket contract.
+4. **Finish Implement.** After gate 3 passes, invoke `'Implement'` for each accepted unblocked Ticket. Each Implement invocation returns one exact Result revision and Evidence to Workflow for the later Review gate. Dependencies control Ticket order; independent Tickets may run concurrently only after To Tickets records safe ownership, Claims, write boundaries, and return routes. Implementation waiting or failure retains its Work owner and returns an owned Continuation to Workflow, but gate 4 stays active and gate 5 remains closed. Complete only when every required Ticket has an exact Review submission at its current revision.
+5. **Finish Review.** Enter this gate only after gate 4 collectively passes. Invoke `'Review'` for every submitted Result against the accepted Specification, Ticket, standards, Result revision, and Proof seam. For software changes, a configured `'code-review'` capability runs inside this gate and returns its two-axis findings to Review; Review retains the integrated verdict. `Changes required` reopens gate 4 with the exact findings and invalidates the affected collective Implement completion. `Inconclusive` keeps gate 5 active with owned waiting or recovery. `Verified` returns revision-bound Evidence to Workflow. Complete when every required Result is Verified and the parent proof inputs are current.
+6. **Perform effects and close the parent.** After gate 5 passes, perform only authorized effects through deterministic guards, verify the real result, update affected current and legacy state, and run parent Review over the integrated Outcome. New evidence or a Material change returns to the earliest affected gate and replays every later gate. End parent responsibility only on a verified parent proof bundle, an accepted transfer with exact continuation, or authoritative cancellation with every Material disposition. Delegation, submission, approval, scheduling, waiting, failure, child completion, and an unaccepted handoff remain non-terminal.
 
 ## Durable coordination boundary
 
 At a Durable boundary, read [Durable mode](references/durable-mode.md) completely. It is the single authority for record meanings, materialization, Adapter capabilities, transition guards, System Record binding, migration, waiting, Degraded operation, effects, and the parent proof bundle.
 
-## Select discovery by uncertainty
+## Route discovery inside Wayfinder
 
 | Uncertainty | Invoke | Required return |
 | --- | --- | --- |
-| Unclear or conflicting terminology | `'Domain Modeling'` skill | Operative meanings and visible conflicts |
-| Documented plan or design decisions | `'Grill With Docs'` skill | Confirmed decisions, shared language, and qualifying durable records |
-| Decisions held by the current user | `'Grilling'` skill | Accepted decisions and remaining frontier |
-| Persistent, multi-session, or irreducible Fog of war | `'Wayfinder'` skill | Operating strategy and current decision frontier |
-| Missing external facts | `'Research'` skill | Cited findings and remaining uncertainty |
-| One empirical design question | `'Prototype'` skill | Reversible experiment verdict and evidence |
-| Knowledge held by another person | `'To Questionnaire'` skill | Complete asynchronous questionnaire and return use |
+| Documented plan or design decisions | `'Grill With Docs'` skill, invoked by Wayfinder | Confirmed decisions, shared language, and qualifying durable records returned to Wayfinder |
+| Unclear or conflicting terminology | `'Domain Modeling'` skill, invoked by Wayfinder | Operative meanings and visible conflicts returned to Wayfinder |
+| Decisions held by the current user | `'Grilling'` skill, invoked by Wayfinder | Accepted decisions and remaining frontier returned to Wayfinder |
+| Missing external facts | `'Research'` skill, invoked by Wayfinder | Cited findings and remaining uncertainty returned to Wayfinder |
+| One empirical design question | `'Prototype'` skill, invoked by Wayfinder | Reversible experiment verdict and evidence returned to Wayfinder |
+| Knowledge held by another person | `'To Questionnaire'` skill, invoked by Wayfinder | Complete asynchronous questionnaire returned to Wayfinder |
 
 Treat missing companion skills as capability gaps. Act directly only when the same bounded contract remains satisfiable; otherwise enter visible Degraded mode with preserved state and an exact resumption condition.
 
