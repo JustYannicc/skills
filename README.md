@@ -16,39 +16,68 @@ Thinking in Systems is my method. Matt's workflow gives it structure. This suite
 
 ## Installation
 
-Install Setup by itself first. The skills CLI installs packages into flat, name-based paths, so installing this repository's full roster before inspection can overwrite an existing package with the same name. Setup inventories source and fingerprints first, then replaces only the exact overlaps you approve.
+Install Setup by itself first. It checks duplicate names before installing the rest of the suite and replaces only the overlaps you approve.
 
 ### 1. Install Setup
 
 For one project:
 
 ```bash
-npx skills@1.5.22 add https://github.com/JustYannicc/skills/tree/v1.0.0 --skill setup-system-thinking
+npx skills add JustYannicc/skills --skill setup-system-thinking
 ```
 
 Or install it globally:
 
 ```bash
-npx skills@1.5.22 add https://github.com/JustYannicc/skills/tree/v1.0.0 --skill setup-system-thinking --global
+npx skills add JustYannicc/skills --skill setup-system-thinking --global
 ```
 
 One Setup run manages exactly one scope: project or global. Run it once in each scope if you want both. Within that scope, Setup can configure one or more supported agent harnesses.
 
-Initial Setup—and Reconfigure when requested—prepares the exact marked block for that scope's documented native instruction surface (`AGENTS.md` or equivalent) and asks before adding it. Accepting establishes the standing Thinking in Systems → Workflow loading order. Declining leaves the packages installed and discoverable without editing your instructions, but does not guarantee that loading order for every request.
-
 ### 2. Run `/setup-system-thinking`
 
-Invoke it inside your agent. Setup will inspect the environment and show every proposed change. After approval it removes only the verified Matt overlaps, installs all 12 runtime skills from this repository, installs the four required Matt skills through the same pinned skills CLI, applies the corrected overlays, verifies the accepted active or install-only mode, and removes itself when the installation passes. You do not run separate package commands for the rest of the suite.
+Invoke it inside your agent. Setup inspects the selected scope, shows every proposed command and instruction-file edit, and waits for approval. You may edit the proposed instructions before anything is written. Unrelated instructions are preserved; conflicts receive the smallest suggested edit for you to accept or change.
+
+The accepted block is the first substantive instruction section in `AGENTS.md` or `CLAUDE.md`, immediately after any YAML frontmatter and document title:
+
+```markdown
+<!-- thinking-in-systems-suite:begin -->
+## Thinking in Systems workflow
+
+For every request, before doing anything else:
+
+1. Read and follow the `thinking-in-systems` skill.
+2. Read and follow the `workflow` skill.
+3. Use Thinking in Systems to decide the approach.
+4. Use Workflow to own the request through verified completion, accepted handoff, or authoritative cancellation.
+
+Keep simple work proportional. Create durable workflow records only when the work must survive the current conversation.
+<!-- thinking-in-systems-suite:end -->
+```
+
+You can accept, edit, or decline this draft. Declining leaves the packages installed without automatic Thinking in Systems → Workflow activation.
+
+Before editing instructions, Setup uses Matt's `writing-for-agents` skill. If it is missing, Setup offers its normal `npx skills add mattpocock/skills --skill writing-for-agents` command as a separate optional helper.
+
+After approval, Setup removes only overlapping Matt packages, installs the 12 local runtime skills and four required Matt skills with the same `skills` command, applies the bundled Matt corrections, verifies the result, and removes itself with `skills remove`.
 
 The generated transaction uses three explicit operations with the accepted scope and agent flags:
 
 ```text
-npx skills@1.5.22 remove --skill <only verified Matt overlap names> <scope-and-verified-agent-flags> --yes
-npx skills@1.5.22 add https://github.com/JustYannicc/skills/tree/v1.0.0 --skill thinking-in-systems workflow migrate-system domain-modeling wayfinder prototype to-spec to-tickets implement review handoff ask-yannic <scope-and-agent-flags>
-npx skills@1.5.22 add https://github.com/mattpocock/skills/tree/v1.2.3 --skill grill-with-docs grilling research to-questionnaire <scope-and-agent-flags>
+npx skills remove --skill <only verified Matt overlap names> <scope-and-agent-flags> --yes
+npx skills add JustYannicc/skills --skill thinking-in-systems workflow migrate-system domain-modeling wayfinder prototype to-spec to-tickets implement review handoff ask-yannic <scope-and-agent-flags>
+npx skills add mattpocock/skills --skill grill-with-docs grilling research to-questionnaire <scope-and-agent-flags>
 ```
 
-Setup constructs and previews the exact commands; the placeholders above are not a manual-install shortcut. A clean installation uses the full rosters shown, while exact already-matching packages can be reused. The Matt add is followed by the six manifest-pinned overlay patches.
+Setup constructs and previews the exact commands; the placeholders above are not a manual-install shortcut. Existing matching packages can be reused. The Matt installation is followed by six correction patches bundled inside Setup.
+
+After verification, Setup removes itself with the same CLI rather than deleting its directory:
+
+```bash
+npx skills remove --skill setup-system-thinking --yes
+```
+
+Setup adds `--global` and any selected agent flag when required by the installation scope.
 
 ### 3. Start working
 
@@ -61,17 +90,13 @@ If you only want route advice, invoke `/ask-yannic`. It reads the matching Workf
 
 Setup will:
 
-- inspect the selected scope, effective instruction chain, installed skills, source fingerprints, repository and remote, available Adapters, authentication, and conflicts;
-- show the proposed installation, inherited and overridden configuration, exact instruction changes, verification plan, and rollback before writing;
-- install the pinned suite through the skills CLI and apply the overlays recorded in [`overlays/manifest.yaml`](overlays/manifest.yaml);
-- detect the exact-name packages already installed from `mattpocock/skills`, preserve every non-overlapping Matt package, and preview targeted replacement of only the overlaps required by this suite;
-- inspect selected global `AGENTS.md`/`CLAUDE.md` surfaces through their effective symlink targets, show the exact marked activation block, and preserve all surrounding user text;
-- recommend an Adapter from the real environment, then configure any explicitly selected providers and Supplemental skills;
-- teach the Inline and Durable modes, responsibility model, migration, Review, waiting, recovery, updates, rollback, and removal;
-- verify fingerprints, configuration precedence, Adapter behavior, every selected agent target, and fresh-context activation;
-- remove `setup-system-thinking` from the selected scope after every other check passes.
+- inspect the selected scope, installed skill sources, exact-name overlaps, instruction files, and conflicts;
+- show every removal, installation, correction, and editable instruction change before asking for approval;
+- remove only approved Matt overlaps with `skills remove`, preserving every non-overlapping or differently sourced package;
+- install the local and Matt runtime rosters, apply bundled corrections, and verify the accepted activation state;
+- keep a small ownership and recovery receipt, then remove Setup with `skills remove`.
 
-Setup owns only a marked block in each selected agent instruction surface and one human-readable scope configuration record. It preserves surrounding instructions, credentials, unrelated skills, and user data.
+Setup owns only its marked instruction block, the packages it adds or replaces, and one human-readable ownership and recovery receipt. It preserves surrounding instructions, credentials, reused or changed packages, unrelated skills, and user data.
 
 </details>
 
@@ -81,12 +106,12 @@ Setup owns only a marked block in each selected agent instruction surface and on
 Every local package remains independently discoverable:
 
 ```bash
-npx skills@1.5.22 add JustYannicc/skills --list
+npx skills add JustYannicc/skills --list
 ```
 
-You can install a package directly with `--skill <name>`, but that does not compose dependencies, apply the standard overlays, create standing activation, configure an Adapter, or verify the suite. Use Setup for the standard profile.
+You can install a package directly with `--skill <name>`, but that does not compose dependencies, apply the bundled corrections, create standing activation, or verify the suite. Use Setup for the standard profile.
 
-Installing a same-name package from another source replaces the existing flat install; the skills CLI does not namespace duplicates. Inspect `npx skills@latest list --global --json` or the equivalent project list before direct replacement.
+Installing a same-name package from another source replaces the existing flat install; the skills CLI does not namespace duplicates. Inspect `npx skills list --global --json` or the equivalent project list before direct replacement.
 
 </details>
 
@@ -164,7 +189,7 @@ A **Supplemental skill** adds specialist evidence at a declared Extension point.
 
 ## The composed suite
 
-The standard profile contains 17 skills: the 12 runtime packages in this repository, four pinned upstream packages, and disposable Setup.
+The standard profile contains 17 skills: the 12 runtime packages in this repository, four upstream packages, and disposable Setup.
 
 - [`grill-with-docs`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e/skills/engineering/grill-with-docs): user-decision discovery with repository-backed language and decisions;
 - [`grilling`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e/skills/productivity/grilling): the reusable interview frontier;
@@ -172,42 +197,40 @@ The standard profile contains 17 skills: the 12 runtime packages in this reposit
 - [`to-questionnaire`](https://github.com/mattpocock/skills/tree/6acc160e4e0cd062dbbbd7a1b26ae92855edf07e/skills/productivity/to-questionnaire): questions for knowledge held by another person;
 - [`setup-system-thinking`](skills/setup-system-thinking): one scoped, transactional installation and maintenance skill that removes itself after verification.
 
-The exact upstream revision, target paths, patch files, hashes, and installation order live in [`overlays/manifest.yaml`](overlays/manifest.yaml). The overlays adapt invocation and integration behavior without copying the complete upstream packages into this repository.
-
-Setup verifies the manifest's upstream tag and commit, installs missing or approved-replacement Matt packages with `npx skills@<manifest-cli-version> add <tagged-source> --skill <name>`, and applies only the verified overlay patches. This keeps installation reproducible when Matt's default branch moves without using separate GitHub tooling to copy his skills.
+The correction behavior and normal install commands are documented in the Setup package's [corrections reference](skills/setup-system-thinking/references/corrections.md). The patches adapt invocation and integration behavior without copying Matt's complete packages into this repository.
 
 ## Distribution
 
-GitHub is the public source of truth. The official [skills.sh FAQ](https://skills.sh/docs/faq) says public skills appear automatically after an `npx skills add <owner/repo>` install emits anonymous telemetry. During release, that owner/repository-form command installs only Setup in a disposable isolated scope; it is never used as a full-roster shortcut in a personal scope. The root [`skills.sh.json`](skills.sh.json) groups the repository page after discovery, and immutable GitHub tags bind reviewed releases.
+GitHub is the public source of truth. The official [skills.sh FAQ](https://skills.sh/docs/faq) says public skills appear automatically after an `npx skills add <owner/repo>` install emits anonymous telemetry. During release, that owner/repository-form command installs only Setup in a disposable isolated scope; it is never used as a full-roster shortcut in a personal scope. The root [`skills.sh.json`](skills.sh.json) groups the repository page after discovery. Release tags preserve reviewed snapshots; the normal install commands use the repositories' current default branches.
 
 ## Update, remove, and recover
 
 Reinstall Setup in the scope you want to maintain:
 
 ```bash
-npx skills@1.5.22 add https://github.com/JustYannicc/skills/tree/v1.0.0 --skill setup-system-thinking
+npx skills add JustYannicc/skills --skill setup-system-thinking
 ```
 
 Add `--global` for the global scope, then invoke `/setup-system-thinking`. Setup detects the existing installation and offers the maintenance branches:
 
-- **Status** compares installed and effective state with the pinned manifest.
-- **Repair** restores accepted fingerprints and activation while preserving unrelated state.
-- **Update** previews source and overlay changes, preserves the last-known-good manifest, verifies the candidate, and advances pins only after proof.
-- **Reconfigure** changes agent targets, Adapter, providers, or Supplemental mappings through the same inspected transaction.
-- **Rollback** restores the complete last-known-good installation and behavior.
-- **Remove** deletes only installation-owned skills, suite-created provider bindings, managed instruction blocks, and the effective suite configuration file in that scope. It keeps a non-effective removal receipt for recovery. Providers, unrelated configuration, Outcome records, and user data remain in place unless you separately authorize their deletion.
+- **Status** compares installed sources, bundled corrections, instructions, and the receipt without writing.
+- **Repair** restores missing owned packages, corrections, or the accepted activation block while preserving unrelated state.
+- **Update** previews the normal install commands, reapplies compatible corrections to replaced Matt packages, and verifies the result.
+- **Reconfigure** changes the instruction standard or approved activation wording.
+- **Rollback** restores the recorded backup.
+- **Remove** removes only receipt-owned packages whose current source still matches, removes the marked instruction block after approval, and preserves reused or changed packages.
 
 Every successful maintenance run performs its branch-specific proof and removes Setup again.
 
-If the installation is unhealthy, reinstall Setup at the affected scope and choose **Status** first. Its inspection distinguishes source drift, overlay mismatch, configuration precedence, instruction-block drift, missing access, and target activation failures. Choose **Repair** for the accepted manifest or **Rollback** for the last-known-good installation. When a failure occurs before commit, Setup restores the prior files and removes only objects introduced by that run.
+If the installation is unhealthy, reinstall Setup at the affected scope and choose **Status** first. Choose **Repair** for missing or changed suite state, or **Rollback** to restore the recorded backup. A failed write restores only objects changed by that run.
 
 If Setup's final self-removal fails, the verified post-branch state remains in place. Setup reports the exact retry and rollback choices and leaves the maintenance run visibly incomplete rather than undoing a successful install, repair, rollback, or removal.
 
 The raw skills CLI remains available for standalone packages:
 
 ```bash
-npx skills@latest update --project
-npx skills@latest remove
+npx skills update --project
+npx skills remove
 ```
 
 Use `--global` for global packages. The CLI's `remove --all` removes every installed skill in the selected scope and agent target, not only this suite; suite-wide maintenance should go through Setup.
@@ -222,4 +245,4 @@ Thinking in Systems is Yannic's original method, packaged using the skill-design
 
 This README also follows [Matt Pocock](https://x.com/mattpocockuk)'s [example](https://github.com/mattpocock/skills/blob/main/README.md) by putting installation first and explaining the skills in plain language.
 
-The composed suite also installs and patches four MIT-licensed packages by [Matt Pocock](https://x.com/mattpocockuk) directly at the immutable revision recorded in [`overlays/manifest.yaml`](overlays/manifest.yaml): `grill-with-docs`, `grilling`, `research`, and `to-questionnaire`. He is their upstream author. The overlays and this suite are not an endorsement by or official release from him.
+The composed suite also installs and patches four MIT-licensed packages by [Matt Pocock](https://x.com/mattpocockuk): `grill-with-docs`, `grilling`, `research`, and `to-questionnaire`. He is their upstream author. The corrections and this suite are not an endorsement by or official release from him.
