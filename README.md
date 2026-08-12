@@ -199,6 +199,30 @@ The correction behavior and normal install commands are documented in the Setup 
 
 GitHub is the public source of truth. The official [skills.sh FAQ](https://skills.sh/docs/faq) says public skills appear automatically after an `npx skills add <owner/repo>` install emits anonymous telemetry. During release, that owner/repository-form command installs only Setup in a disposable isolated scope; it is never used as a full-roster shortcut in a personal scope. The root [`skills.sh.json`](skills.sh.json) groups the repository page after discovery. Release tags preserve reviewed snapshots; the normal install commands use the repositories' current default branches.
 
+## Open an isolated Codex console
+
+```bash
+./test-env/open.sh
+```
+
+This opens a disposable Docker console with Codex installed. Type `codex` and
+use it normally. The container does not inherit host instructions, skills,
+configuration, or session history. It receives only:
+
+- `test-env/environment/workspace/` as an initially empty writable workspace;
+- this repository's `skills/` directory read-only at the standard project path
+  `/workspace/.agents/skills`;
+  and
+- a disposable snapshot of the current host access token, with the OAuth
+  refresh token removed before it enters the container.
+
+Bundled Codex skills are disabled. The controlled workspace persists on the
+host; every other container change disappears when you exit. The host Codex
+home is never mounted, and the OAuth refresh token never enters the container.
+The snapshot cannot refresh, revoke, or write host credentials; if its access
+token expires, refresh it by using Codex on the host and reopen the console. Set
+`CODEX_CONSOLE_ENVIRONMENT` to use a different workspace root.
+
 ## Update, remove, and recover
 
 Reinstall Setup in the scope you want to maintain:
