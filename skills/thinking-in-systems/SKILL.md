@@ -10,8 +10,6 @@ metadata:
 
 Read the [full standard](references/standard.md) completely before applying this skill. Apply every section on every request. Scale the depth, output, and durable artifacts to consequence; do not decide that a concern is irrelevant before reading it.
 
-This skill supplies governing systems knowledge. Thinking in Systems and the `'Workflow'` skill are capability instructions the same agent may follow, not separate agents and not an implicit delegation. When an active `'Workflow'` context exists, apply this standard inside it; the `'Workflow'` skill retains phase selection, coordination, parent responsibility, and terminal completion. Otherwise the caller owns those duties. Specialist skills own their bounded phase results. Return a bounded governance assessment to the active `'Workflow'` skill or caller.
-
 ## Apply the governing lens
 
 1. Classify the interaction and its persistence need using [Apply systems thinking proportionately](references/standard.md#1-apply-systems-thinking-proportionately). Complete this when the branch is explicit and triviality has changed only the scale—not whether systems thinking applies.
