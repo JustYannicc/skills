@@ -1,38 +1,47 @@
 ---
 name: thinking-in-systems
-description: Apply systems thinking when interpreting, deciding, preparing, or acting; when designing, changing, operating, recovering, or retiring a technical, personal, organizational, physical, communicative, or agent system; or when another skill needs governing judgment about intent, boundaries, authority, incentives, friction, evidence, degradation, recovery, or legacy impact.
+description: Use when a problem recurs, a workaround is requested, circumstances changed, or an action affects more than its immediate target.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
 ---
 
-# Thinking in Systems
+# Thinking in systems
 
-Read the [full standard](references/standard.md) completely before applying this skill. Apply every section on every request. Scale the depth, output, and durable artifacts to consequence; do not decide that a concern is irrelevant before reading it.
+Look beyond what is immediately apparent to understand the interconnected whole producing it. Treat a visible event as evidence of a problem, not necessarily the problem itself.
 
-## Apply the governing lens
+Read and use the [glossary](references/glossary.md) whenever you apply this skill.
 
-1. Classify the interaction and its persistence need using [Apply systems thinking proportionately](references/standard.md#1-apply-systems-thinking-proportionately). Complete this when the branch is explicit and triviality has changed only the scale—not whether systems thinking applies.
-2. Preserve the request and establish intent, accepted Outcome, **Satisficing / good-enough threshold**, hard and soft Constraints, feasible set, affected Actor Preferences, matched truthful Decision frames, boundary, assumptions, Authority, and proof using [Frame the Outcome and decision](references/standard.md#2-frame-the-outcome-and-decision). Complete this when materially different interpretations or frames cannot silently change the authorized result; otherwise return the smallest discriminating question or frame sensitivity as a visible gap.
-3. Compare the intervention and **mise en place** stopping rule using [Choose an intervention](references/standard.md#3-choose-an-intervention). Complete this when the Pareto principle / 80–20 has prioritized the search, **Marginal analysis** has tested whether further work is worthwhile, and the selected path clears the explicit good-enough threshold through bounded **Satisficing** after Opportunity cost, Cost structure and scale where material, substitution effects, Externalities, possible Pareto improvements, reversibility, delay, evidence value, and proportional **mise en place** are considered.
-4. Inspect every material seam using [Design the System](references/standard.md#4-design-the-system) and [Operate under real conditions](references/standard.md#5-operate-under-real-conditions). Complete this when every applicable material seam—including the System of interest, Containing System, Subsystems, Upstream, Dependent, and Peer Systems, Actors, Ownership, Responsibility, Authority, state, interfaces, incentives, friction, operating conditions, LLM judgment, deterministic enforcement, degradation, and recovery—has a governing rule or a visible gap.
-5. Set proof, learning, Assurance cadence, change, and legacy obligations using [Prove and learn](references/standard.md#6-prove-and-learn) and [Govern change, legacy, and retirement](references/standard.md#7-govern-change-legacy-and-retirement). Complete this when the proportionate proof can distinguish correct operation, useful Outcome, burden, and sustainment; post-activation rechecks and the transition to steady operation are explicit; and every affected existing item has a disposition.
-6. Decide whether durable state is required using [Record only what must persist](references/standard.md#8-record-only-what-must-persist), then apply any authorized exception through [Apply informed exceptions](references/standard.md#9-apply-informed-exceptions). Complete this when the caller can proceed or pause without inventing a material rule.
+## Follow the cause
 
-The section links above provide traceability and a fast route back to the governing clause after the required full read. They are not permission to skip the rest of the standard.
+Start with the requested action. Treat it as a proxy only when meaningful evidence suggests it is not the shortest reliable path to the intended outcome. Use this ladder only as far as it changes the decision:
 
-When a named concept needs its original discipline, evidence limits, or deeper explanation, read the linked entry in [Sources and further reading](references/sources.md). The standard remains the governing authority.
+> **Action → Output → Outcome → Goal**
 
-## Scale the result
+Use **Why now?** separately to discover the trigger or changed condition behind the request. The trigger may reveal that the requested action reacts to a symptom rather than addressing the problem.
 
-For a bounded reversible operation with obvious proof, keep the execution contract in the response: preserve the source, state any material interpretation, perform only the accepted operation, and show the exact result. Create no durable ceremony or extra operation.
+Infer until you reach a decision-relevant ambiguity. Ask when context cannot resolve it confidently and guessing wrong has meaningful cost. Never invent a preference or value judgment.
 
-For an accepted Durable system, bind its exact System Record version, surface material assumptions and Authority, apply the whole standard proportionately, and return evidence to the caller.
+## Diagnose the system
 
-For a new Durable system, material change, recovery, or retirement, use the [System Record template](references/system-record-template.md) after reading the standard. Include a conditional field only when a named consumer or material risk requires it.
+Ask:
 
-When a named companion skill is unavailable, identify the missing capability, preserved state, allowed safe work, and exact resumption condition. Apply an equivalent directly only when the same contract remains satisfiable; never imply that a companion skill ran.
+> **Why is the system producing this?**
 
-## Boundary check
+Trace the symptom to the conditions that produce or permit it. Inspect the system's structure and behavior, especially its incentive structure. When actors predictably work against the goal, inspect their incentives before blaming them.
 
-Return governing constraints and evidence, then stop. Routing, interviews, research, prototypes, specifications, decomposition, implementation, review verdicts, handoffs, migration execution, and parent completion remain with their owning skills or the caller.
+Continue until you find a root cause that can be changed, a constraint that must be accepted, or uncertainty that requires evidence. A symptom can have more than one root cause.
+
+## Change what produces the symptom
+
+Intervene at a root cause instead of repeatedly correcting its symptoms. Prefer a leverage point when one is available.
+
+> **A system is what it does. Judge it by what it produces, not its intent.**
+
+Preserve why an intervention exists. When the condition that made it necessary changes, reassess whether to keep, adapt, or remove it.
+
+## Go only as deep as the decision warrants
+
+Assume outcomes may be products of a system. Investigate when the expected cost of leaving the system unchanged exceeds the cost of understanding or changing it. Cost includes any relevant burden, loss, risk, or missed opportunity.
+
+Stop when further investigation would not change the decision.
