@@ -16,9 +16,9 @@ Ask:
 
 > **Who has authority, and who remains responsible for the outcome?**
 
-Authority permits a decision or effect. Responsibility means remaining answerable for its result. Capability does not create either one.
+Authority permits a decision or effect. Responsibility binds an actor to a bounded result. Ownership retains responsibility for the whole system. Capability does not create any of them.
 
-Delegation gives another actor responsibility for a bounded result. The original owner still owns integration unless a successor explicitly accepts the whole responsibility.
+Delegation assigns responsibility without transferring ownership. Ownership transfers only when a successor explicitly accepts it.
 
 ## Make boundaries transferable
 

@@ -8,6 +8,12 @@ Use these terms consistently when thinking in systems.
 
 **Actor:** A component that can initiate or choose actions within a system.
 
+**Authority:** Permission for an actor to make a decision or perform an effect within a defined boundary.
+
+**Responsibility:** An actor's duty to carry a bounded result through completion within its authority.
+
+**Ownership:** Continuing responsibility for the behavior and outcomes of the system as a whole. Delegation does not transfer ownership unless a successor explicitly accepts it.
+
 **Relationship:** A connection between components through which one component affects, constrains, depends on, or provides something to another.
 
 **Interaction:** An occurrence in which components affect one another through a relationship.
@@ -41,6 +47,12 @@ Use these terms consistently when thinking in systems.
 **Intent:** The directed commitment or disposition of an actor to act toward a goal.
 
 **Outcome:** A resulting condition or effect produced by a system's behavior, including the effects of its outputs and interactions.
+
+**System representation:** A view of a system that makes some aspect of it understandable. A representation can describe or guide a system, but it is not the system itself.
+
+**Decision frame:** The form in which an actor evaluates a decision while the underlying alternatives and outcomes remain fixed.
+
+**Framing effect:** A change in judgment caused by changing the decision frame rather than the underlying decision.
 
 **Symptom:** An observable sign or effect that indicates an underlying condition or problem in a system without necessarily being the underlying cause.
 

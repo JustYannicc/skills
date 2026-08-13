@@ -24,8 +24,10 @@ Keep human values with the relevant person. A model can exercise delegated judgm
 
 Define what each model judgment may decide and what happens when it is uncertain. Uncertainty can narrow or pause an action. It cannot widen authority.
 
-Give durable state one writable owner. A failed attempt must preserve enough state to recover without reconstructing what happened.
+Trace each action back to its trigger and forward to its output. Give durable state one writable owner. A failed attempt must preserve enough state to recover without reconstructing what happened.
 
 Test the intended execution path while disabling its real-world effects. A simulation that takes a different path does not prove the automation.
+
+Routine deterministic behavior may recede from attention. Exceptions that require judgment must remain visible.
 
 Stop when the automation behaves reliably without model failure causing an unauthorized effect or destroying recovery state.

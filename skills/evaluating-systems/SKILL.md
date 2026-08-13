@@ -20,18 +20,20 @@ Establish what happens before the intervention. Choose an observation window lon
 
 ## Separate operation from outcome
 
-First determine whether the system behaves as designed. Then determine whether that behavior improves the intended outcome.
+Verification determines whether the system behaves as designed. Validation determines whether that behavior improves the intended outcome.
 
-An apparent improvement can still fail when its burden is unacceptable or it cannot last. Treat those as distinct claims rather than folding them into a single success metric.
+An apparent improvement can still fail when its cost is unacceptable or it cannot be sustained. Treat those as distinct claims rather than folding them into a single success metric.
 
 ## Keep metrics subordinate to outcomes
 
-Ask how a metric could improve while the underlying outcome worsens. Use a counter-signal to expose that failure mode.
+Apply Goodhart's law: ask how a metric could improve while the underlying outcome worsens. Use a counter-signal to expose that failure mode.
 
 A proxy can inform a decision. It cannot become the goal.
 
 ## Decide from the evidence
 
 Set the decision rule before interpreting the result. The evidence should determine what happens to the intervention next.
+
+Re-evaluate when the system that produced the evidence has materially changed.
 
 Stop when the evidence supports a decision or when the next observation and the decision it could change are clear.

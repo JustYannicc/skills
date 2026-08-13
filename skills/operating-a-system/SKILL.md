@@ -22,7 +22,9 @@ Recovery restores the healthy baseline and proves that restoration before normal
 
 ## Make deterioration recoverable
 
-Identify how the system can decay and which evidence would reveal it. Give the responsible actor a practical way to restore the baseline without erasing history.
+Every system decays as its state and environment change. Define the evidence that reveals this decay before it prevents the intended outcome.
+
+Give the responsible actor a practical way to restore the healthy state without erasing history.
 
 Delayed attention must not turn a recoverable problem into an unknowable one. Preserve enough context that the system can resume without reconstructing the past.
 

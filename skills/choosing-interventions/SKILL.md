@@ -18,18 +18,30 @@ Use the Pareto principle as a question, not an assumed ratio:
 
 > **Which few causes or changes account for most of what matters?**
 
-Concentration guides attention. It never overrides an obligation or makes a rare catastrophic case irrelevant.
+The Pareto principle prioritizes investigation. It does not determine what may be ignored. A low-frequency cause can still matter when its outcome has a high cost.
 
 ## Compare the real alternatives
 
-Compare the preferred intervention with the best alternative it displaces. That displacement is its opportunity cost.
+The opportunity cost of an intervention is the value of the next-best alternative forgone by choosing it.
 
-Look beyond the immediate decision for externalities. A local improvement is not an improvement to the whole when it merely transfers the burden elsewhere.
+Evaluate the intervention at the scale where it will operate. Its cost structure may change when the action repeats.
 
-A Pareto improvement helps someone without making anyone materially worse off. When a choice creates losers, state the trade-off instead of hiding it inside an aggregate benefit.
+Ask which behavior becomes more attractive after the intervention. A substitution effect can change behavior without improving the intended outcome.
+
+Prefer a reversible intervention when it can reach the outcome. An irreversible intervention requires stronger evidence and explicit authority.
+
+Trace the intervention's second- and third-order effects through the system's relationships and feedback loops. Account for externalities instead of treating an exported burden as a system improvement.
+
+Prefer a Pareto improvement when one is available. When an intervention makes any affected part of the system worse off, make the trade-off explicit instead of hiding it inside an aggregate benefit.
 
 ## Stop at the margin
 
 Use satisficing to accept an intervention that is good enough. Use marginal analysis to decide whether the next increment is worth its additional cost.
 
-Stop when the intervention is good enough and more work is not worthwhile. If it is still inadequate, change the intervention instead of lowering the standard after the fact.
+Treat preparation and further investigation as increments with costs of their own. Continue only while the next increment can change the decision or improve the expected outcome enough to justify its cost.
+
+Use outcomes from comparable interventions to correct estimates based only on the current plan.
+
+Waiting is a real alternative only when the condition for deciding again is named.
+
+Stop when the intervention reaches the outcome threshold and more work is not worthwhile. If the outcome remains below the threshold, change the intervention instead of lowering the threshold after the fact.

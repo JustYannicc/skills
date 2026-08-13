@@ -1,6 +1,6 @@
 ---
 name: changing-systems
-description: Use when moving an existing system to a different version or ending it.
+description: Use when adopting a system or changing one already in use.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -9,6 +9,8 @@ metadata:
 # Changing systems
 
 Treat change as a transition from an existing system to a successor. Installing new behavior does not complete the change.
+
+Adoption is also a system change. The current arrangement is a system even when nobody designed or documented it.
 
 ## Preserve why the current system exists
 
@@ -25,6 +27,8 @@ When the condition that justified an intervention disappears, reassess whether t
 A new design says what should happen next. A transition must also account for what already exists.
 
 Determine how the successor treats each affected item. Keep anything undiscovered visible as unknown rather than assuming it is unaffected.
+
+Bind the transition to the predecessor and successor versions. Preserve which version governed each existing item so a later change can find and re-evaluate it.
 
 Separate the desired destination from the path that reaches it. The path must remain recoverable if the change stops halfway through.
 

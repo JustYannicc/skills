@@ -18,7 +18,7 @@ Ask:
 
 > **Would the judgment change if the same facts were presented differently?**
 
-Test this with matched truthful frames. Keep the underlying choice fixed and change only how it is expressed.
+Test this with matched truthful decision frames. Keep the underlying choice fixed and change only how it is expressed.
 
 If a new presentation changes what is available or makes one choice easier, it changes the decision itself. Analyze that change rather than calling it a framing effect.
 

@@ -28,7 +28,9 @@ Ask:
 
 > **Why is the system producing this?**
 
-Trace the symptom to the conditions that produce or permit it. Inspect the system's structure and behavior, especially its incentive structure. When actors predictably work against the goal, inspect their incentives before blaming them.
+Trace the symptom to the conditions that produce or permit it. Follow any feedback loop that sustains the behavior.
+
+Inspect the system's structure and behavior, especially its incentive structure. Friction is part of that structure: when the system makes its goal harder than competing behavior, the competing behavior will predictably win.
 
 Continue until you find a root cause that can be changed, a constraint that must be accepted, or uncertainty that requires evidence. A symptom can have more than one root cause.
 
