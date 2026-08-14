@@ -21,6 +21,11 @@
         "changing-systems",
         "governing-systems"
       ]
+    },
+    {
+      "title": "Verification",
+      "description": "Check whether work matches what was requested and the standards it must follow.",
+      "skills": ["review"]
     }
   ]
 }
