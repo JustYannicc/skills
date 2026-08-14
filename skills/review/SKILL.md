@@ -16,7 +16,7 @@ Review one exact target along two independent axes:
 
 Call the exact work under review the target. Pin its state or revision before reviewing it so every claim refers to the same thing.
 
-Apply `thinking-in-systems` to preserve the goal and use its glossary consistently. Let the other focused systems skills load when their descriptions match the target. Keep their guidance in its owning skill; Review records the resulting evidence.
+Apply `thinking-in-systems` to preserve the goal and use the language in its `references/CONTEXT.md`. Let the other focused systems skills load when their descriptions match the target. Keep their guidance in its owning skill; Review records the resulting evidence.
 
 Run both axes as **parallel sub-agents** when available so their findings do not anchor one another. Otherwise, run them as separate passes and keep the first pass out of context until the second is complete.
 

@@ -9,7 +9,7 @@ metadata:
 
 Synthesize established decisions from the current context and any completed Wayfinder map into a specification. A specification is a system representation: it describes the intended system but does not make it real. Do NOT interview the user — just synthesize what is already known.
 
-Apply `thinking-in-systems` to preserve the accepted goal and use its glossary consistently. Let the other focused systems skills load when their descriptions match the work. Keep their guidance in its owning skill; the specification records the resulting decisions.
+Apply `thinking-in-systems` to preserve the accepted goal and use the language in its `references/CONTEXT.md`. Let the other focused systems skills load when their descriptions match the work. Keep their guidance in its owning skill; the specification records the resulting decisions.
 
 When a material decision is missing, return the exact gap to planning instead of inventing an answer.
 

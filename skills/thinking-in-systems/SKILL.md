@@ -10,7 +10,7 @@ metadata:
 
 Look beyond what is immediately apparent to understand the interconnected whole producing it. Treat a visible event as evidence of a problem, not necessarily the problem itself.
 
-Read and use the [glossary](references/glossary.md) whenever you apply this skill.
+Read [CONTEXT.md](references/CONTEXT.md) whenever you apply this skill and use its language throughout.
 
 ## Follow the cause
 

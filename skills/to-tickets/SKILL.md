@@ -11,7 +11,7 @@ metadata:
 
 Break a plan, specification, or conversation into a set of **tickets** — tracer-bullet vertical slices, each declaring the tickets that **block** it. Preserve its established goal throughout. Call this source the decomposition input.
 
-Apply `thinking-in-systems` to preserve the goal and use its glossary consistently. Let the other focused systems skills load when their descriptions match the work. Keep their guidance in its owning skill; the tickets record the resulting work.
+Apply `thinking-in-systems` to preserve the goal and use the language in its `references/CONTEXT.md`. Let the other focused systems skills load when their descriptions match the work. Keep their guidance in its owning skill; the tickets record the resulting work.
 
 If decomposition exposes a material decision the input did not settle, return the exact gap to planning instead of inventing an answer.
 
