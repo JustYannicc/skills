@@ -1,13 +1,13 @@
 ---
 name: wayfinder
-description: Use when planning a goal requires more than one agent session because the route remains unclear.
+description: Use when the route to a goal depends on unresolved decisions whose answers may expose or invalidate later work.
 license: MIT
 disable-model-invocation: false
 metadata:
   homepage: https://github.com/JustYannicc/skills
 ---
 
-A loose idea has arrived — too big for one agent session, and wrapped in fog: the way from here to the **goal** isn't visible yet. Wayfinding is about finding that way, not charging at the goal. This skill charts the way as a **shared map** in the effort's work tracker, then works its **decision tickets** — questions whose resolution is a decision, not slices of a build to execute — one at a time until the route is clear.
+A loose idea has arrived wrapped in fog: the way from here to the **goal** isn't visible yet. Wayfinding is about finding that way, not charging at the goal. This skill charts the way as a **shared map** in the effort's work tracker, then works its **decision tickets** — questions whose resolution is a decision, not slices of a build to execute — one at a time until the route is clear.
 
 The goal varies per effort, and naming it is the first act of charting — it shapes every ticket. It might be a spec to hand off and iterate on, a decision to lock before planning starts, or a change made in place like a data-structure migration. The map is domain-agnostic — engineering work, course content, whatever fits the shape.
 
@@ -25,6 +25,8 @@ The map is a single record in the effort's work tracker, tagged `wayfinder:map` 
 
 The map is an **index**, not a store. It lists the decisions made and points at the tickets that hold their detail; a decision lives in exactly one place — its ticket — so the map never restates it, only gists it and links.
 
+Before working from the map, verify that its state still reflects the records it links. Rechart anything made stale by a changed record.
+
 **Where the map, its child tickets, blocking, and frontier queries physically live is tracker-specific.** Use the effort's existing work tracker and its native operations. If no tracker is available, default to local Markdown.
 
 ### The map body
@@ -32,6 +34,10 @@ The map is an **index**, not a store. It lists the decisions made and points at 
 The whole map at low resolution, loaded once per session. Open tickets are **not** listed — they are open child records, found by query.
 
 ```markdown
+## Map state
+
+<current map revision and the source revisions it reflects>
+
 ## Goal
 
 <what reaching the end of this map looks like — the spec, decision, or change this effort is finding its way to. One or two lines; every session orients to it before choosing a ticket.>
@@ -50,9 +56,17 @@ The whole map at low resolution, loaded once per session. Open tickets are **not
 
 <!-- see "Fog of war": in-scope fog you can't ticket yet; graduates as the frontier advances -->
 
+## Governed uncertainty
+
+<!-- uncertainty that may remain, with its responsible actor and trigger for reconsideration -->
+
 ## Out of scope
 
 <!-- see "Out of scope": work ruled beyond the goal; closed, never graduates -->
+
+## Continuation
+
+<!-- when work is interrupted: the responsible actor and exact next action -->
 ```
 
 ### Tickets
@@ -95,7 +109,9 @@ The map's **Not yet specified** section is where that dim view is written down: 
 - **Ticket when** the question is already sharp — even if it's blocked and you can't act on it yet.
 - **Not yet specified when** you can't yet phrase it that sharply. Don't pre-slice the fog into ticket-sized pieces: it's coarser than a ticket, and one patch may graduate into several tickets, or none, once the frontier reaches it.
 
-**Not yet specified** excludes what's already decided (Decisions so far), what's already a live ticket, and what's out of scope (the next section).
+Apply `choosing-interventions` when the value of further investigation is uncertain. Uncertainty may move to **Governed uncertainty** only with a responsible actor and a trigger that returns it to the frontier.
+
+**Not yet specified** excludes what's already decided, already a live ticket, governed, or out of scope.
 
 ## Out of scope
 
@@ -124,10 +140,12 @@ Begin with a loose idea.
 
 Begin with a map reference. A ticket is **optional** — without one, choose the next decision from the frontier.
 
-1. Load the **map** — the low-res view, not every ticket body.
+1. Load the **map** — the low-res view, not every ticket body. Verify its state and rechart before proceeding when it is stale.
 2. Choose the ticket. If the user named one, use it. Otherwise take the first frontier ticket in order. **Claim it** before any work by recording yourself as its responsible actor.
 3. Resolve it — **zoom as needed**: fetch the full body of any related or closed ticket on demand and apply each skill whose description matches the decision.
 4. Record the answer as the ticket's **resolution**, **close** the ticket, and **append a context pointer** to the map's Decisions-so-far.
-5. Add newly-surfaced tickets (create-then-wire); graduate any fog the answer has made specifiable, clearing each graduated patch from **Not yet specified** so it lives only as its new ticket. If the answer reveals a ticket — this one or another — sits beyond the goal, **rule it out of scope** rather than resolving it on the route. If the decision invalidates other parts of the map, update or delete those tickets.
+5. Rechart the whole map breadth-first. Add newly-surfaced tickets (create-then-wire); graduate any fog the answer has made specifiable, clearing each graduated patch from **Not yet specified** so it lives only as its new ticket. If the answer reveals a ticket — this one or another — sits beyond the goal, **rule it out of scope** rather than resolving it on the route. Mark invalidated tickets superseded, preserve their history, and update anything that depended on them.
+6. Before a session ends with the map unfinished, write the exact next action and responsible actor under **Continuation**.
+7. When the frontier and **Not yet specified** appear empty, run a separate breadth-first confirmation pass. The map clears only when that pass exposes no new ticket or reducible fog. Governed uncertainty does not block completion while its responsible actor and trigger remain current.
 
 The user may run unblocked tickets in parallel, so expect other sessions to be editing the tracker concurrently.
