@@ -7,7 +7,7 @@ metadata:
   homepage: https://github.com/JustYannicc/skills
 ---
 
-A loose idea has arrived wrapped in fog: the way from here to the **goal** isn't visible yet. Wayfinding is about finding that way, not charging at the goal. This skill charts the way as a **shared map** in the effort's work tracker, then works its **decision tickets** — questions whose resolution is a decision, not slices of a build to execute — one at a time until the route is clear.
+A loose idea has arrived — too big for one agent session, and wrapped in fog: the way from here to the **goal** isn't visible yet. Wayfinding is about finding that way, not charging at the goal. This skill charts the way as a **shared map** in the effort's work tracker, then works its **decision tickets** — questions whose resolution is a decision, not slices of a build to execute — one at a time until the route is clear.
 
 The goal varies per effort, and naming it is the first act of charting — it shapes every ticket. It might be a spec to hand off and iterate on, a decision to lock before planning starts, or a change made in place like a data-structure migration. The map is domain-agnostic — engineering work, course content, whatever fits the shape.
 
