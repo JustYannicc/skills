@@ -199,29 +199,71 @@ The correction behavior and normal install commands are documented in the Setup 
 
 GitHub is the public source of truth. The official [skills.sh FAQ](https://skills.sh/docs/faq) says public skills appear automatically after an `npx skills add <owner/repo>` install emits anonymous telemetry. During release, that owner/repository-form command installs only Setup in a disposable isolated scope; it is never used as a full-roster shortcut in a personal scope. The root [`skills.sh.json`](skills.sh.json) groups the repository page after discovery. Release tags preserve reviewed snapshots; the normal install commands use the repositories' current default branches.
 
-## Open an isolated Codex console
+## Develop and test installation
+
+Use development mode while authoring. It removes this repository's consumer-managed global packages and links every active skill directly from this checkout:
 
 ```bash
-./test-env/open.sh
+./scripts/skills-mode dev
 ```
 
-This opens a disposable Docker console with Codex installed. Type `codex` and
-use it normally. The container does not inherit host instructions, skills,
-configuration, or session history. It receives only:
+Changes are available to new Codex tasks immediately. If Codex does not refresh its skill catalog, restart it.
 
-- `test-env/environment/workspace/` as an initially empty writable workspace;
-- this repository's `skills/` directory read-only at the standard project path
-  `/workspace/.agents/skills`;
-  and
+If you intentionally want to return the host itself to consumer mode, run:
+
+```bash
+./scripts/skills-mode consumer
+```
+
+This installs Setup from the public repository first, removes the remaining packages previously managed from `JustYannicc/skills`, and removes the development links. Then open a fresh Codex task and invoke `$setup-system-thinking` for the global scope. Setup owns the rest of the normal installation flow. The switch preserves unrelated skills and refuses to replace a same-name path it cannot identify as belonging to this repository.
+
+Inspect the current mode without changing it:
+
+```bash
+./scripts/skills-mode status
+```
+
+### Open an isolated Codex console
+
+```bash
+./test-env/open.sh dev
+```
+
+Development mode mounts the active `skills/` directory read-only at `/workspace/.agents/skills`.
+
+Use consumer mode to start without repository skills and run the public Setup installation in an isolated environment:
+
+```bash
+./test-env/open.sh consumer
+```
+
+Inside that container, follow the same bootstrap as a consumer:
+
+```bash
+npx skills add JustYannicc/skills \
+  --skill setup-system-thinking \
+  --global \
+  --agent codex \
+  --yes
+codex
+```
+
+Then invoke `$setup-system-thinking` for the global scope.
+
+The consumer environment persists its workspace, global skill installation, Setup receipt, and global Codex instruction file across console runs. It does not inherit host instructions, skills, configuration, or session history.
+
+Both modes receive:
+
+- an initially empty writable workspace under `test-env/environment/`;
 - a disposable snapshot of the current host access token, with the OAuth
   refresh token removed before it enters the container.
 
 Bundled Codex skills are disabled. The controlled workspace persists on the
-host; every other container change disappears when you exit. The host Codex
-home is never mounted, and the OAuth refresh token never enters the container.
-The snapshot cannot refresh, revoke, or write host credentials; if its access
-token expires, refresh it by using Codex on the host and reopen the console. Set
-`CODEX_CONSOLE_ENVIRONMENT` to use a different workspace root.
+host. The host Codex home is never mounted, and the OAuth refresh token never
+enters the container. The snapshot cannot refresh, revoke, or write host
+credentials; if its access token expires, refresh it by using Codex on the host
+and reopen the console. Set `CODEX_CONSOLE_ENVIRONMENT` to use a different
+environment root.
 
 ## Update, remove, and recover
 

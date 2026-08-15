@@ -1,0 +1,276 @@
+#!/bin/sh
+set -eu
+
+usage() {
+  printf '%s\n' \
+    'Usage: scripts/skills-mode <dev|consumer|status>' \
+    '' \
+    "  dev       Replace this repository's consumer installation with live links." \
+    '  consumer  Replace live links with the public Setup skill from skills.sh.' \
+    '  status    Report which mode is active without changing anything.'
+}
+
+die() {
+  printf 'skills-mode: %s\n' "$*" >&2
+  exit 1
+}
+
+command_exists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+script_dir=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)
+repo_root=$(CDPATH='' cd -- "$script_dir/.." && pwd -P)
+active_skills_dir="$repo_root/skills"
+user_root=${SKILLS_MODE_USER_ROOT:-${HOME:?HOME is not set}}
+agents_root="$user_root/.agents"
+canonical_skills_dir="$agents_root/skills"
+codex_skills_dir="$user_root/.codex/skills"
+global_lock="$agents_root/.skill-lock.json"
+source_name='JustYannicc/skills'
+setup_name='setup-system-thinking'
+mode=${1:-status}
+
+[ "$#" -le 1 ] || {
+  usage >&2
+  exit 64
+}
+
+case "$mode" in
+  dev | consumer | status) ;;
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  *)
+    usage >&2
+    exit 64
+    ;;
+esac
+
+command_exists jq || die 'jq is required'
+command_exists realpath || die 'realpath is required'
+
+scratch_dir=$(mktemp -d "${TMPDIR:-/tmp}/skills-mode.XXXXXX")
+current_names="$scratch_dir/current-names"
+managed_names="$scratch_dir/managed-names"
+
+cleanup() {
+  rm -f -- "$current_names" "$managed_names"
+  rmdir -- "$scratch_dir"
+}
+
+trap cleanup EXIT HUP INT TERM
+
+find "$active_skills_dir" -mindepth 1 -maxdepth 1 -type d -exec test -f '{}/SKILL.md' ';' -print \
+  | sed 's#.*/##' \
+  | LC_ALL=C sort > "$current_names"
+
+[ -s "$current_names" ] || die "no active skills found in $active_skills_dir"
+
+refresh_managed_names() {
+  if [ -f "$global_lock" ]; then
+    jq -r --arg source "$source_name" '
+      .skills // {}
+      | to_entries[]
+      | select(
+          .value.source == $source
+          or .value.sourceUrl == ("https://github.com/" + $source + ".git")
+        )
+      | .key
+    ' "$global_lock" | LC_ALL=C sort -u > "$managed_names"
+  else
+    : > "$managed_names"
+  fi
+}
+
+refresh_managed_names
+
+name_is_managed() {
+  grep -F -x -q -- "$1" "$managed_names"
+}
+
+is_repo_link() {
+  candidate=$1
+  [ -L "$candidate" ] || return 1
+  resolved=$(realpath "$candidate" 2>/dev/null) || return 1
+  case "$resolved" in
+    "$active_skills_dir"/*) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+assert_replaceable() {
+  skill_name=$1
+  target=$2
+
+  if [ ! -e "$target" ] && [ ! -L "$target" ]; then
+    return 0
+  fi
+
+  if is_repo_link "$target" || name_is_managed "$skill_name"; then
+    return 0
+  fi
+
+  die "refusing to replace unowned path: $target"
+}
+
+remove_managed_names_except() {
+  keep_name=$1
+  set -- npx --yes skills remove --global --yes
+  removal_count=0
+
+  while IFS= read -r skill_name; do
+    [ -n "$skill_name" ] || continue
+    [ "$skill_name" = "$keep_name" ] && continue
+    set -- "$@" "$skill_name"
+    removal_count=$((removal_count + 1))
+  done < "$managed_names"
+
+  if [ "$removal_count" -gt 0 ]; then
+    "$@"
+  fi
+
+  refresh_managed_names
+  while IFS= read -r skill_name; do
+    [ -n "$skill_name" ] || continue
+    [ "$skill_name" = "$keep_name" ] && continue
+    die "skills CLI left a managed package installed: $skill_name"
+  done < "$managed_names"
+}
+
+remove_repo_links_from() {
+  link_root=$1
+  [ -d "$link_root" ] || return 0
+
+  find "$link_root" -mindepth 1 -maxdepth 1 -type l -print | while IFS= read -r target; do
+    if is_repo_link "$target"; then
+      rm -f -- "$target"
+    fi
+  done
+}
+
+remove_repo_links() {
+  remove_repo_links_from "$canonical_skills_dir"
+  remove_repo_links_from "$codex_skills_dir"
+}
+
+count_repo_links() {
+  count=0
+  for link_root in "$canonical_skills_dir" "$codex_skills_dir"; do
+    [ -d "$link_root" ] || continue
+    while IFS= read -r target; do
+      if is_repo_link "$target"; then
+        count=$((count + 1))
+      fi
+    done <<EOF
+$(find "$link_root" -mindepth 1 -maxdepth 1 -type l -print)
+EOF
+  done
+  printf '%s\n' "$count"
+}
+
+count_current_dev_links() {
+  count=0
+  while IFS= read -r skill_name; do
+    [ -n "$skill_name" ] || continue
+    source_path="$active_skills_dir/$skill_name"
+    target="$canonical_skills_dir/$skill_name"
+    if [ -L "$target" ] && [ "$(realpath "$target" 2>/dev/null || true)" = "$source_path" ]; then
+      count=$((count + 1))
+    fi
+  done < "$current_names"
+  printf '%s\n' "$count"
+}
+
+show_status() {
+  current_count=$(wc -l < "$current_names" | tr -d ' ')
+  dev_count=$(count_current_dev_links)
+  repo_link_count=$(count_repo_links)
+  managed_count=$(wc -l < "$managed_names" | tr -d ' ')
+
+  if [ "$dev_count" -eq "$current_count" ] && [ "$repo_link_count" -eq "$current_count" ] && [ "$managed_count" -eq 0 ]; then
+    state='development'
+  elif [ "$repo_link_count" -eq 0 ] && [ "$managed_count" -gt 0 ]; then
+    if [ "$managed_count" -eq 1 ] && name_is_managed "$setup_name"; then
+      state='consumer bootstrap'
+    else
+      state='consumer managed'
+    fi
+  elif [ "$repo_link_count" -eq 0 ] && [ "$managed_count" -eq 0 ]; then
+    state='unconfigured'
+  else
+    state='mixed'
+  fi
+
+  printf 'Mode: %s\n' "$state"
+  printf 'Development links: %s/%s\n' "$dev_count" "$current_count"
+  printf 'Repository links outside the current roster: %s\n' "$((repo_link_count - dev_count))"
+  printf 'Consumer-managed packages: %s\n' "$managed_count"
+
+  if [ "$managed_count" -gt 0 ]; then
+    sed 's/^/  - /' "$managed_names"
+  fi
+}
+
+enable_dev_mode() {
+  while IFS= read -r skill_name; do
+    [ -n "$skill_name" ] || continue
+    assert_replaceable "$skill_name" "$canonical_skills_dir/$skill_name"
+    assert_replaceable "$skill_name" "$codex_skills_dir/$skill_name"
+  done < "$current_names"
+
+  remove_managed_names_except ''
+  remove_repo_links
+  mkdir -p "$canonical_skills_dir"
+
+  while IFS= read -r skill_name; do
+    [ -n "$skill_name" ] || continue
+    source_path="$active_skills_dir/$skill_name"
+    target="$canonical_skills_dir/$skill_name"
+    [ ! -e "$target" ] && [ ! -L "$target" ] || die "path remained after cleanup: $target"
+    ln -s "$source_path" "$target"
+  done < "$current_names"
+
+  refresh_managed_names
+  [ ! -s "$managed_names" ] || die 'consumer-managed packages remain after enabling development mode'
+
+  current_count=$(wc -l < "$current_names" | tr -d ' ')
+  dev_count=$(count_current_dev_links)
+  [ "$dev_count" -eq "$current_count" ] || die "created $dev_count of $current_count development links"
+
+  show_status
+  printf '%s\n' 'Open a fresh Codex task to reload the skill catalog.'
+}
+
+enable_consumer_mode() {
+  assert_replaceable "$setup_name" "$canonical_skills_dir/$setup_name"
+  assert_replaceable "$setup_name" "$codex_skills_dir/$setup_name"
+
+  npx --yes skills add "$source_name" \
+    --skill "$setup_name" \
+    --global \
+    --agent codex \
+    --yes
+
+  refresh_managed_names
+  name_is_managed "$setup_name" || die 'Setup installed without the expected global source record'
+
+  remove_managed_names_except "$setup_name"
+  remove_repo_links
+  refresh_managed_names
+
+  managed_count=$(wc -l < "$managed_names" | tr -d ' ')
+  [ "$managed_count" -eq 1 ] && name_is_managed "$setup_name" \
+    || die 'consumer bootstrap must contain only setup-system-thinking from JustYannicc/skills'
+  [ "$(count_repo_links)" -eq 0 ] || die 'development links remain after enabling consumer mode'
+
+  show_status
+  printf '%s\n' 'Open a fresh Codex task and invoke $setup-system-thinking for the global scope.'
+}
+
+case "$mode" in
+  dev) enable_dev_mode ;;
+  consumer) enable_consumer_mode ;;
+  status) show_status ;;
+esac

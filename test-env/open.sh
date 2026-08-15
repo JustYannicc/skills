@@ -3,12 +3,39 @@ set -eu
 
 script_dir=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
 repo_root=$(CDPATH='' cd -- "$script_dir/.." && pwd)
-environment_dir=${CODEX_CONSOLE_ENVIRONMENT:-"$script_dir/environment"}
+mode=${1:-dev}
+environment_base=${CODEX_CONSOLE_ENVIRONMENT:-"$script_dir/environment"}
 skills_dir="$repo_root/skills"
 host_uid=$(id -u)
 image=${CODEX_CONSOLE_IMAGE:-"local/codex-console:0.147.0-$host_uid"}
 auth_file=${CODEX_CONSOLE_AUTH_FILE:-"${CODEX_HOME:-$HOME/.codex}/auth.json"}
 auth_snapshot_dir=''
+
+[ "$#" -le 1 ] || {
+  printf '%s\n' 'Usage: test-env/open.sh [dev|consumer]' >&2
+  exit 64
+}
+
+case "$mode" in
+  dev)
+    environment_dir="$environment_base"
+    ;;
+  consumer)
+    environment_dir="$environment_base/consumer"
+    ;;
+  -h | --help)
+    printf '%s\n' \
+      'Usage: test-env/open.sh [dev|consumer]' \
+      '' \
+      '  dev       Mount the active repository skills read-only.' \
+      '  consumer  Start without repository skills and persist global installs.'
+    exit 0
+    ;;
+  *)
+    printf 'Unknown mode: %s\n' "$mode" >&2
+    exit 64
+    ;;
+esac
 
 cleanup() {
   if [ -n "$auth_snapshot_dir" ] && [ -d "$auth_snapshot_dir" ]; then
@@ -93,12 +120,40 @@ jq --exit-status '
   end
 ' "$auth_file" > "$auth_snapshot_dir/auth.json"
 
-docker run --rm --interactive --tty \
-  --hostname codex-sandbox \
-  --cap-drop ALL \
-  --security-opt no-new-privileges \
-  --pids-limit 512 \
-  --mount "type=bind,source=$workspace_dir,target=/workspace" \
-  --mount "type=bind,source=$skills_dir,target=/workspace/.agents/skills,readonly" \
-  --mount "type=bind,source=$auth_snapshot_dir/auth.json,target=/run/codex-auth.json,readonly" \
-  "$image"
+if [ "$mode" = dev ]; then
+  docker run --rm --interactive --tty \
+    --hostname codex-sandbox \
+    --cap-drop ALL \
+    --security-opt no-new-privileges \
+    --pids-limit 512 \
+    --env "CODEX_CONSOLE_MODE=$mode" \
+    --mount "type=bind,source=$workspace_dir,target=/workspace" \
+    --mount "type=bind,source=$skills_dir,target=/workspace/.agents/skills,readonly" \
+    --mount "type=bind,source=$auth_snapshot_dir/auth.json,target=/run/codex-auth.json,readonly" \
+    "$image"
+else
+  consumer_agents_dir="$environment_dir/home/.agents"
+  consumer_codex_skills_dir="$environment_dir/home/.codex/skills"
+  consumer_system_thinking_dir="$environment_dir/home/.config/system-thinking"
+  consumer_codex_agents_file="$environment_dir/home/.codex/AGENTS.md"
+  mkdir -p \
+    "$consumer_agents_dir" \
+    "$consumer_codex_skills_dir" \
+    "$consumer_system_thinking_dir" \
+    "$(dirname -- "$consumer_codex_agents_file")"
+  touch "$consumer_codex_agents_file"
+
+  docker run --rm --interactive --tty \
+    --hostname codex-sandbox \
+    --cap-drop ALL \
+    --security-opt no-new-privileges \
+    --pids-limit 512 \
+    --env "CODEX_CONSOLE_MODE=$mode" \
+    --mount "type=bind,source=$workspace_dir,target=/workspace" \
+    --mount "type=bind,source=$consumer_agents_dir,target=/home/codex/.agents" \
+    --mount "type=bind,source=$consumer_codex_skills_dir,target=/home/codex/.codex/skills" \
+    --mount "type=bind,source=$consumer_system_thinking_dir,target=/home/codex/.config/system-thinking" \
+    --mount "type=bind,source=$consumer_codex_agents_file,target=/home/codex/.codex/AGENTS.md" \
+    --mount "type=bind,source=$auth_snapshot_dir/auth.json,target=/run/codex-auth.json,readonly" \
+    "$image"
+fi

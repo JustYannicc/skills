@@ -11,9 +11,9 @@ if [ ! -f "$CODEX_HOME/config.toml" ]; then
 fi
 
 printf '%s\n' \
-  'Isolated Codex console' \
+  "Isolated Codex console (${CODEX_CONSOLE_MODE:-dev})" \
   '  workspace: /workspace' \
-  '  skills:    /workspace/.agents/skills' \
+  "  skills:    $([ "${CODEX_CONSOLE_MODE:-dev}" = dev ] && printf '/workspace/.agents/skills (repository mount)' || printf 'consumer-managed global directories')" \
   '  bundled skills: disabled' \
   '' \
   "Type 'codex' to start."
