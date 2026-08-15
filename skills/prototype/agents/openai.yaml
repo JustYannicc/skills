@@ -1,0 +1,3 @@
+interface:
+  display_name: "Prototype"
+  short_description: "Use when a proposed change has not demonstrated its behavior or outcome, or when the cause of a problem remains uncertain."

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Representing Systems"
+  short_description: "Use when making a system understandable through a representation."

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Domain Modeling"
+  short_description: "Use when building a domain model, resolving unclear or conflicting terminology, or recording accepted language in CONTEXT.md."

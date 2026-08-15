@@ -1,0 +1,5 @@
+interface:
+  display_name: "Setup System Thinking"
+  short_description: "Use when installing, updating, repairing, or reconfiguring the systems-thinking skill suite."
+policy:
+  allow_implicit_invocation: false

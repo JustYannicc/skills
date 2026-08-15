@@ -1,0 +1,3 @@
+interface:
+  display_name: "Operating a System"
+  short_description: "Use when a recurring system must remain useful when normal operation fails."

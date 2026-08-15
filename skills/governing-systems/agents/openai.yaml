@@ -1,0 +1,3 @@
+interface:
+  display_name: "Governing Systems"
+  short_description: "Use when authority or responsibility within a system must be assigned."

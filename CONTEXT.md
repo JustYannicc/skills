@@ -13,6 +13,9 @@ A skill under `old skills/` retained only as historical reference.
 **Systems skills suite**:
 The focused active skills that share the language and principles established by Thinking in Systems.
 
+**Work tracker**:
+The system that stores and relates records of planned work. It may be a hosted service or local Markdown.
+
 **Language record**:
 A `CONTEXT.md` file containing the accepted language for one context.
 

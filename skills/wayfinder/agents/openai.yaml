@@ -1,0 +1,3 @@
+interface:
+  display_name: "Wayfinder"
+  short_description: "Use when the route to a goal depends on unresolved decisions whose answers may expose or invalidate later work."

@@ -1,0 +1,3 @@
+interface:
+  display_name: "To Spec"
+  short_description: "Use when an established goal and its accepted decisions need to become a specification."
