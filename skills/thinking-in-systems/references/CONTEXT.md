@@ -64,6 +64,12 @@ An event, condition, or state change that initiates an action, behavior, or proc
 **Action**:
 A discrete act performed by an actor, system, or component that can change state, produce an output, or affect another component.
 
+**Decision point**:
+A point in a process where an actor must choose an action before the process can continue, adding friction and another opportunity for behavior to diverge from the actor's goal or intent. For a person, even an obvious choice consumes attention.
+
+**Friction**:
+A condition that increases the cost of an action or transition. Friction can impede the intended path or protect it by making a competing path harder.
+
 **Goal**:
 A desired state or result that an actor or goal-directed system is trying to achieve.
 

@@ -16,5 +16,8 @@ The focused active skills that share the language and principles established by 
 **Language record**:
 A `CONTEXT.md` file containing the accepted language for one context.
 
+**Prototype**:
+A reversible experiment that produces evidence to answer one question by testing one hypothesis.
+
 **ADR**:
 A durable record of an accepted decision and why it was made. An ADR records a decision; it does not make one.

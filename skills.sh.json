@@ -4,8 +4,8 @@
   "groupings": [
     {
       "title": "Planning",
-      "description": "Find a route through work too large and uncertain for one session.",
-      "skills": ["wayfinder", "to-spec", "to-tickets"]
+      "description": "Resolve planning uncertainty and turn accepted decisions into executable work.",
+      "skills": ["wayfinder", "prototype", "to-spec", "to-tickets"]
     },
     {
       "title": "Systems thinking",

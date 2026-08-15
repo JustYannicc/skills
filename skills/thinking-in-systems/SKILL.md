@@ -30,7 +30,15 @@ Ask:
 
 Trace the symptom to the conditions that produce or permit it. Follow any feedback loop that sustains the behavior.
 
-Inspect the system's structure and behavior, especially its incentive structure. Friction is part of that structure: when the system makes its goal harder than competing behavior, the competing behavior will predictably win.
+Inspect the system's structure and behavior, especially its incentive structure.
+
+Trace the intended path through its decision points. For a human actor, an obvious choice is still a choice: it consumes attention and adds friction even when the actor continues along the intended path. Repeated decision points also compound the chance of divergence. A deliberate decision can remove later decision points; preserve them where judgment is actually needed.
+
+> A highway can be faster than a road with the same speed limit because its path contains fewer decision points.
+
+Treat friction as a design material. Evaluate it by which path it obstructs. Friction can undermine intended behavior or protect it by making competing behavior harder.
+
+Friction can also create a necessary decision before commitment. When removing it, preserve that decision function through explicit judgment or validation instead of preserving incidental effort.
 
 Continue until you find a root cause that can be changed, a constraint that must be accepted, or uncertainty that requires evidence. A symptom can have more than one root cause.
 
