@@ -11,16 +11,18 @@ metadata:
 
 Review one exact target along two independent axes:
 
-- **Standards** — does the target follow the rules and constraints that govern it?
-- **Input** — does the target match its originating plan, specification, or established conversation and serve the established goal?
+- **Standards**: does the target follow the rules and constraints that govern it?
+- **Input**: does the target match its originating input and serve the established goal?
 
 Call the exact work under review the target. Pin its state or revision before reviewing it so every claim refers to the same thing.
 
 Apply `thinking-in-systems` to preserve the goal and use the language in its `references/CONTEXT.md`. Let the other focused systems skills load when their descriptions match the target. Keep their guidance in its owning skill; Review records the resulting evidence.
 
+When the target exposes an interface, apply `designing-interfaces` and bind the proof seam. Review observable behavior there; review internal quality only through the Standards axis or when the originating input makes it part of the contract.
+
 Run both axes as **parallel sub-agents** when available so their findings do not anchor one another. Otherwise, run them as separate passes and keep the first pass out of context until the second is complete.
 
-## Process
+## Review the pinned target
 
 ### 1. Pin the target
 
@@ -47,7 +49,7 @@ Continue when the exact originating input is bound or its absence is explicit.
 
 ### 3. Identify the standards sources
 
-Find the authoritative standards that govern the target. Treat them as sources of rules and constraints, not as permission to invent preferences. Bind the version or state of each source when it can change.
+Bind the project's governing standards and their versions. Project instructions choose their location and precedence. Never invent a standard from preference.
 
 If no governing standards exist, skip the **Standards** axis and report `no governing standards available`. If neither axis has a source, report that no review basis exists and stop.
 
@@ -57,15 +59,15 @@ Continue when every applicable standards source is bound and any precedence conf
 
 Give both reviewers the exact target state, available evidence, and applicable system boundary. Give each reviewer only the material for its axis.
 
-**Standards reviewer prompt** — include:
+**Standards reviewer prompt** includes:
 
 - The governing standards.
-- The brief: "Report every rule or constraint the target violates. Cite the exact standard and the observation that demonstrates the violation. Distinguish explicit violations from judgment calls needed to interpret a standard. Use only the bound standards. Stay under 400 words."
+- The brief: “Report every rule or constraint the target violates. Cite the exact standard and the observation that demonstrates the violation. Distinguish explicit violations from judgment calls needed to interpret a standard. Use only the bound standards. Stay under 400 words.”
 
-**Input reviewer prompt** — include:
+**Input reviewer prompt** includes:
 
 - The originating input and its established goal.
-- The brief: "Report anything the input requires that is missing or partial, anything outside the accepted scope, and anything present that does not produce the expected output or outcome. Cite the originating input for each finding. When reviewing a system or component, observe its behavior at the applicable boundary. Stay under 400 words."
+- The brief: “Report anything the input requires that is missing or partial, anything outside the accepted scope, and anything present that does not produce the expected output or outcome. Cite the originating input for each finding. When reviewing a system or component, observe its contract at the proof seam; internal evidence cannot substitute for behavior there. Stay under 400 words.”
 
 Skip an axis whose source is unavailable and preserve that limitation in the report.
 
@@ -78,6 +80,8 @@ Present the reports under `## Standards` and `## Input`, verbatim or lightly cle
 For every finding, preserve the violated rule or unmet input requirement, exact observation, consequence, and smallest corrective action. End with a one-line summary giving the finding count and worst issue within each axis. Do not choose one winner across axes.
 
 Review is complete when every finding points to exact evidence, both axes have an explicit status, and the report remains bound to the pinned target.
+
+A passing review verifies the target revision. It does not promote a system version or prove adoption.
 
 Return the findings to the responsible actor. Correction is separate work.
 

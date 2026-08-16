@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>System name · System registry</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        --background: light-dark(#f0f2ed, #0c0e0c);
+        --surface: light-dark(#ffffff, #151815);
+        --raised: light-dark(#f7f8f5, #1e221e);
+        --strong: light-dark(#e7eae3, #292e29);
+        --text: light-dark(#141711, #f7f8f5);
+        --muted: light-dark(#454b40, #c5cbc0);
+        --border: light-dark(#8d9687, #687164);
+        --accent: light-dark(#17643c, #7ae1a5);
+        --focus: light-dark(#064de3, #9abbff);
+        --port: light-dark(#3857b7, #a9bfff);
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--background); color: var(--text); }
+      a { color: inherit; }
+      main { width: min(1280px, calc(100% - 32px)); margin: auto; padding: 24px 0 64px; }
+      h1, h2, h3, h4, p { margin-top: 0; }
+      .back { display: inline-flex; align-items: center; min-height: 44px; margin-bottom: 24px; color: var(--muted); font-weight: 800; text-decoration: none; }
+      .record-header { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: end; margin-bottom: 32px; }
+      h1 { margin-bottom: 12px; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: .92; letter-spacing: -.04em; }
+      [data-purpose] { max-width: 68ch; margin-bottom: 0; color: var(--muted); line-height: 1.65; }
+      .record-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0 0 32px; padding: 18px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+      .record-fact { min-width: 0; }
+      .record-fact dt { margin-bottom: 5px; color: var(--muted); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+      .record-fact dd { margin: 0; overflow-wrap: anywhere; line-height: 1.5; }
+      .state { padding: 6px 10px; border: 1px solid currentColor; border-radius: 999px; color: var(--accent); font-size: .76rem; font-weight: 800; }
+      .workspace { overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+      .bar { display: flex; gap: 20px; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--border); }
+      .bar h2, .bar p { margin-bottom: 0; font-size: .9rem; }
+      .bar p { color: var(--muted); }
+      #diagram { min-height: 320px; display: grid; place-items: center; overflow: auto; padding: 24px; background: var(--raised); }
+      #diagram svg { max-width: 100%; height: auto; }
+      #diagram .node { cursor: pointer; }
+      #diagram .node:focus-visible, #diagram .node.is-selected { outline: 4px solid var(--focus); outline-offset: 5px; }
+      .fallback { max-width: 65ch; margin: 0; color: var(--muted); line-height: 1.6; text-align: center; }
+      .inspector { border-top: 1px solid var(--border); }
+      .selected { display: flex; gap: 10px; align-items: center; }
+      .kind { padding: 4px 7px; border-radius: 6px; background: var(--strong); color: var(--muted); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+      .io { display: grid; grid-template-columns: 1fr minmax(280px, 1.2fr) 1fr; min-height: 260px; }
+      .column { min-width: 0; padding: 22px; }
+      .component { border-right: 1px solid var(--border); border-left: 1px solid var(--border); background: var(--raised); }
+      .column-label { margin-bottom: 16px; color: var(--muted); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+      .port-list, .facts { display: grid; gap: 12px; }
+      .port { position: relative; padding: 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--raised); }
+      .inputs .port::before, .outputs .port::after { position: absolute; top: 22px; width: 12px; height: 12px; border: 3px solid var(--surface); border-radius: 50%; background: var(--port); content: ""; }
+      .inputs .port::before { left: -7px; }
+      .outputs .port::after { right: -7px; }
+      .port h4 { margin-bottom: 7px; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: .92rem; }
+      .port p { margin-bottom: 10px; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+      .port p:last-child { margin-bottom: 0; }
+      .proof { padding-top: 10px; border-top: 1px solid var(--border); color: var(--text) !important; }
+      .proof strong { display: block; margin-bottom: 3px; color: var(--port); font-size: .7rem; text-transform: uppercase; }
+      .fact { padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+      .fact:last-child { border-bottom: 0; }
+      .fact dt { margin-bottom: 5px; color: var(--muted); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+      .fact dd { margin: 0; line-height: 1.5; }
+      .empty { color: var(--muted); line-height: 1.5; }
+      .system-link { display: inline-flex; min-height: 44px; align-items: center; color: var(--focus); font-weight: 800; }
+      .sources { margin-top: 36px; }
+      .enhanced .sources { display: none; }
+      .sources article { padding: 18px; border: 1px solid var(--border); background: var(--surface); }
+      .sources article + article { margin-top: 12px; }
+      :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+      @media (max-width: 820px) { .record-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .io { grid-template-columns: 1fr; } .component { border: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); } }
+      @media (max-width: 620px) { main { width: calc(100% - 20px); } .record-header, .record-facts { grid-template-columns: 1fr; } .bar { display: grid; } #diagram { min-height: 430px; padding-inline: 10px; } }
+    </style>
+  </head>
+  <body>
+    <main data-system-record data-id="system" data-version="1" data-lifecycle="proposed" data-registry-href="../../index.html">
+      <a class="back" data-registry-link href="../../index.html">← All systems</a>
+      <header class="record-header">
+        <div>
+          <h1>System name</h1>
+          <p data-purpose>State the outcome this representation must make understandable.</p>
+        </div>
+        <span class="state">Proposed · version 1</span>
+      </header>
+
+      <dl class="record-facts" aria-label="Record facts">
+        <div class="record-fact" data-boundary>
+          <dt>Boundary</dt>
+          <dd>Replace with the components and relationships inside this record.</dd>
+        </div>
+        <div class="record-fact" data-provenance>
+          <dt>Provenance</dt>
+          <dd>Replace with the authoritative sources and observation date.</dd>
+        </div>
+        <div class="record-fact" data-change>
+          <dt>Change</dt>
+          <dd>Initial record.</dd>
+        </div>
+        <div class="record-fact" data-material-unknowns>
+          <dt>Material unknowns</dt>
+          <dd>Replace with unresolved facts, or state that none are known.</dd>
+        </div>
+      </dl>
+
+      <section class="workspace" aria-label="System workspace">
+        <header class="bar">
+          <h2>System map</h2>
+          <p>Select a block to inspect its boundary.</p>
+        </header>
+        <section id="diagram" aria-label="System flow">
+          <p class="fallback">Trigger → Component → Outcome.</p>
+        </section>
+
+        <section class="inspector" aria-live="polite">
+          <header class="bar">
+            <div class="selected"><h2 id="title">Trigger</h2><span class="kind" id="kind">Trigger</span></div>
+            <p id="contract-name">Contract trigger · version 1</p>
+          </header>
+          <div class="io">
+            <section class="column inputs"><h3 class="column-label">Inputs</h3><div class="port-list" id="inputs"></div></section>
+            <section class="column component"><h3 class="column-label">Component</h3><dl class="facts" id="facts"></dl></section>
+            <section class="column outputs"><h3 class="column-label">Outputs</h3><div class="port-list" id="outputs"></div></section>
+          </div>
+        </section>
+      </section>
+
+      <section class="sources" aria-label="Canonical block records">
+        <p>JavaScript is unavailable, so the canonical records are shown directly.</p>
+        <article data-component data-id="trigger" data-label="Trigger" data-kind="trigger" data-lifecycle="proposed">
+          <h2>Trigger</h2>
+          <section data-interface-contract data-id="trigger" data-version="1" data-authority="replace_with_authority">
+            <div data-component-info><p data-purpose>Starts the represented behavior.</p><p data-behavior>Emits once when the named condition occurs.</p></div>
+            <div data-output data-port="started"><h3>started</h3><p>The system has started.</p><p data-proof-seam>The trigger event is observable.</p></div>
+          </section>
+        </article>
+        <article data-component data-id="component" data-label="Component" data-kind="component" data-lifecycle="proposed">
+          <h2>Component</h2>
+          <section data-interface-contract data-id="component" data-version="1" data-authority="replace_with_authority">
+            <div data-component-info><p data-purpose>Produces the next material state.</p><p data-behavior>Transforms the accepted input into the promised output.</p><p data-failure>Names the observable failure and recovery.</p></div>
+            <div data-input data-port="started"><h3>started</h3><p>The system has started.</p><p data-proof-seam>The incoming trigger is observable.</p></div>
+            <div data-output data-port="complete"><h3>complete</h3><p>The component completed.</p><p data-proof-seam>The completed output is observable.</p></div>
+            <!-- A system block may add: <a data-system-link target="_blank" rel="noopener" href="../other-system/1.html">Open system</a> -->
+          </section>
+        </article>
+        <article data-component data-id="outcome" data-label="Outcome" data-kind="outcome" data-lifecycle="proposed">
+          <h2>Outcome</h2>
+          <section data-interface-contract data-id="outcome" data-version="1" data-authority="replace_with_authority">
+            <div data-component-info><p data-purpose>Observes the result produced by the system.</p><p data-behavior>Records the terminal result.</p></div>
+            <div data-input data-port="complete"><h3>complete</h3><p>The preceding component completed.</p><p data-proof-seam>The incoming output is observable.</p></div>
+            <div data-output data-port="observed"><h3>observed</h3><p>The outcome is recorded.</p><p data-proof-seam>The result is observable at the system boundary.</p></div>
+          </section>
+        </article>
+      </section>
+
+      <ol data-connections hidden>
+        <li data-connection data-source="trigger" data-source-port="started" data-target="component" data-target-port="started"></li>
+        <li data-connection data-source="component" data-source-port="complete" data-target="outcome" data-target-port="complete"></li>
+      </ol>
+    </main>
+
+    <script type="module">
+      const record = document.querySelector("[data-system-record]");
+      const blocks = [...record.querySelectorAll("[data-component]")];
+      const edges = [...record.querySelectorAll("[data-connection]")];
+      const diagram = document.querySelector("#diagram");
+      const aliases = new Map(blocks.map((block, index) => [block.dataset.id, `n${index}`]));
+      const byAlias = new Map(blocks.map((block) => [aliases.get(block.dataset.id), block]));
+      const text = (element) => element?.textContent.trim() ?? "";
+      const escapeText = (value) => value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+
+      const portView = (port) => {
+        const view = document.createElement("article");
+        view.className = "port";
+        const heading = document.createElement("h4");
+        heading.textContent = port.dataset.port;
+        const description = [...port.children].find((child) => child.matches("p:not([data-proof-seam])"));
+        const proof = document.createElement("p");
+        proof.className = "proof";
+        proof.innerHTML = `<strong>Proof seam</strong>${escapeText(text(port.querySelector("[data-proof-seam]")))}`;
+        view.append(heading);
+        if (description) view.append(description.cloneNode(true));
+        view.append(proof);
+        return view;
+      };
+
+      const portsView = (target, ports, empty) => {
+        target.replaceChildren();
+        if (ports.length) target.append(...ports.map(portView));
+        else {
+          const message = document.createElement("p");
+          message.className = "empty";
+          message.textContent = empty;
+          target.append(message);
+        }
+      };
+
+      const addFact = (target, label, value) => {
+        if (!value) return;
+        const wrapper = document.createElement("div");
+        wrapper.className = "fact";
+        const term = document.createElement("dt");
+        term.textContent = label;
+        const description = document.createElement("dd");
+        description.textContent = value;
+        wrapper.append(term, description);
+        target.append(wrapper);
+      };
+
+      const inspect = (block) => {
+        const contract = block.querySelector("[data-interface-contract]");
+        const info = contract.querySelector("[data-component-info]");
+        document.querySelector("#title").textContent = block.dataset.label;
+        document.querySelector("#kind").textContent = block.dataset.control ?? block.dataset.kind;
+        document.querySelector("#contract-name").textContent = `Contract ${contract.dataset.id} · version ${contract.dataset.version}`;
+        portsView(document.querySelector("#inputs"), [...contract.querySelectorAll("[data-input]")], "No inputs. This block starts the flow.");
+        portsView(document.querySelector("#outputs"), [...contract.querySelectorAll("[data-output]")], "No outputs. This path ends here.");
+        const facts = document.querySelector("#facts");
+        facts.replaceChildren();
+        addFact(facts, "Purpose", text(info.querySelector("[data-purpose]")));
+        addFact(facts, "Behavior", text(info.querySelector("[data-behavior]")));
+        addFact(facts, "Failure", text(info.querySelector("[data-failure]")));
+        addFact(facts, "Lifecycle", block.dataset.lifecycle);
+        addFact(facts, "Authority", contract.dataset.authority);
+        const link = block.querySelector("[data-system-link]");
+        if (link) facts.append(link.cloneNode(true));
+        document.querySelector(".node.is-selected")?.classList.remove("is-selected");
+        document.querySelector(`[data-alias="${aliases.get(block.dataset.id)}"]`)?.classList.add("is-selected");
+      };
+
+      window.inspectBlock = (alias) => inspect(byAlias.get(alias));
+      inspect(blocks[0]);
+
+      const lines = [window.innerWidth < 700 ? "flowchart TB" : "flowchart LR"];
+      for (const block of blocks) {
+        const alias = aliases.get(block.dataset.id);
+        const label = escapeText(block.dataset.label);
+        const node = block.dataset.control === "decision" ? `${alias}{"${label}"}` : block.dataset.kind === "component" ? `${alias}["${label}"]` : `${alias}(["${label}"])`;
+        lines.push(`  ${node}`, `  click ${alias} inspectBlock`);
+      }
+      for (const edge of edges) {
+        const guard = edge.dataset.guard ? `|"${escapeText(edge.dataset.guard)}"|` : "";
+        lines.push(`  ${aliases.get(edge.dataset.source)} -->${guard} ${aliases.get(edge.dataset.target)}`);
+      }
+
+      const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+      const palette = dark ? { surface: "#151815", text: "#f7f8f5", accent: "#7ae1a5", line: "#d7dcd3" } : { surface: "#ffffff", text: "#141711", accent: "#17643c", line: "#353a32" };
+      lines.push(`  classDef default fill:${palette.surface},stroke:${palette.accent},color:${palette.text},stroke-width:3px`);
+
+      try {
+        const { default: mermaid } = await import("https://cdn.jsdelivr.net/npm/mermaid@11.16.1/dist/mermaid.esm.min.mjs");
+        mermaid.initialize({ startOnLoad: false, securityLevel: "loose", theme: "base", themeVariables: { background: palette.surface, edgeLabelBackground: palette.surface, lineColor: palette.line, primaryColor: palette.surface, primaryTextColor: palette.text }, flowchart: { curve: "basis", htmlLabels: true } });
+        const { svg, bindFunctions } = await mermaid.render("system-map", lines.join("\n"));
+        diagram.innerHTML = svg;
+        bindFunctions?.(diagram);
+        document.documentElement.classList.add("enhanced");
+        for (const node of diagram.querySelectorAll(".node")) {
+          const alias = [...byAlias.keys()].find((candidate) => node.id === candidate || node.id.includes(`-${candidate}-`) || node.id.endsWith(`-${candidate}`));
+          const block = alias && byAlias.get(alias);
+          if (!block) continue;
+          node.dataset.alias = alias;
+          node.setAttribute("tabindex", "0");
+          node.setAttribute("role", "button");
+          node.setAttribute("aria-label", `Inspect ${block.dataset.label}`);
+          node.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); window.inspectBlock(alias); } });
+        }
+        document.querySelector('[data-alias="n0"]')?.classList.add("is-selected");
+      } catch (error) {
+        console.warn("Mermaid unavailable; retaining the readable flow.", error);
+      }
+    </script>
+  </body>
+</html>

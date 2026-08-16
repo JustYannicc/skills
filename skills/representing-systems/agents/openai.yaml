@@ -1,3 +1,3 @@
 interface:
   display_name: "Representing Systems"
-  short_description: "Use when making a system understandable through a representation."
+  short_description: "Use when mapping, versioning, or visualizing a system as a node-and-connection model."

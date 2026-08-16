@@ -1,5 +1,0 @@
-interface:
-  display_name: "Domain Modeling"
-  short_description: "Establish and preserve shared terminology"
-policy:
-  allow_implicit_invocation: true

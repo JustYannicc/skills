@@ -32,4 +32,6 @@ Delayed attention must not turn a recoverable problem into an unknowable one. Pr
 
 Monitor only when a signal can change a named decision. Remove the monitor when that decision no longer needs it.
 
+Set the assurance cadence from the lifecycle state and evidence maturity. Taper it only when another check is unlikely to change a decision.
+
 Stop when the system behaves truthfully when impaired and can recover without losing required state. Operational health does not prove that the system achieves its intended outcome.

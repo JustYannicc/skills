@@ -1,5 +1,0 @@
-interface:
-  display_name: "Review"
-  short_description: "Verify exact results with one universal verdict"
-policy:
-  allow_implicit_invocation: true

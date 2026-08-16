@@ -1,6 +1,6 @@
 ---
 name: changing-systems
-description: Use when adopting a system or changing one already in use.
+description: Use when piloting, adopting, rolling out, or changing a system already in use.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -32,8 +32,18 @@ Bind the transition to the predecessor and successor versions. Preserve which ve
 
 Separate the desired destination from the path that reaches it. The path must remain recoverable if the change stops halfway through.
 
+## Promote by evidence
+
+Implementation produces a candidate, not adoption. Assign every version's lifecycle state truthfully.
+
+Lifecycle states are claims, not mandatory gates. Use only the states that change reliance for this system.
+
+Use simulation when verification does not require live effects. Use a pilot when validation requires bounded live use. Promote only when proof satisfies the accepted decision rule.
+
+A rollout expands the version's scope without changing what the evidence proves. Record each lifecycle transition and propagate its change impact through the system context.
+
 ## Finish the predecessor
 
 Retirement ends the predecessor's effects without erasing the history that still matters. Its visible state should match reality.
 
-Stop when the successor works and every discovered existing item has a truthful disposition.
+Stop when the successor's lifecycle state and every discovered existing item have a truthful disposition.

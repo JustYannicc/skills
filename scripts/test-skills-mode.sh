@@ -96,7 +96,8 @@ EOF
 jq -e '.skills.unrelated.source == "someone/else"' "$fixture_user/.agents/.skill-lock.json" >/dev/null
 jq -e '[.skills[] | select(.source == "JustYannicc/skills")] | length == 0' \
   "$fixture_user/.agents/.skill-lock.json" >/dev/null
-run_mode status | grep -F -q 'Mode: development'
+run_mode status > "$fixture_root/status-development.out"
+grep -F -q 'Mode: development' "$fixture_root/status-development.out"
 
 scratch_lock="$fixture_user/.agents/.skill-lock.json.tmp"
 jq '
@@ -117,7 +118,8 @@ jq -e '
   and ([.skills[] | select(.source == "JustYannicc/skills")] | length == 1)
   and .skills.unrelated.source == "someone/else"
 ' "$fixture_user/.agents/.skill-lock.json" >/dev/null
-run_mode status | grep -F -q 'Mode: consumer bootstrap'
+run_mode status > "$fixture_root/status-consumer.out"
+grep -F -q 'Mode: consumer bootstrap' "$fixture_root/status-consumer.out"
 
 first_command=$(sed -n '1p' "$fixture_log")
 case "$first_command" in

@@ -1,6 +1,6 @@
 ---
 name: thinking-in-systems
-description: Use when a problem recurs, a workaround is requested, circumstances changed, or an action affects more than its immediate target.
+description: Use when designing a system, a problem recurs, a workaround is requested, circumstances changed, or an action affects more than its immediate target.
 license: MIT
 metadata:
   homepage: https://github.com/JustYannicc/skills
@@ -31,6 +31,18 @@ Ask:
 Trace the symptom to the conditions that produce or permit it. Follow any feedback loop that sustains the behavior.
 
 Inspect the system's structure and behavior, especially its incentive structure.
+
+## Place the system in context
+
+Name the system of interest and establish its system context.
+
+Trace every material dependency and interface regardless of domain. A local boundary does not exclude the system context it relies on.
+
+Trace each material relationship through its interface contract. System context does not transfer ownership or authority.
+
+Expand the boundary only while added system context remains material. Record material omissions.
+
+Verify every material fact through an authoritative source or direct observation. Apply `research` when decisive evidence lies outside available records. Keep uncertainty visible.
 
 Trace the intended path through its decision points. For a human actor, an obvious choice is still a choice: it consumes attention and adds friction even when the actor continues along the intended path. Repeated decision points also compound the chance of divergence. A deliberate decision can remove later decision points; preserve them where judgment is actually needed.
 

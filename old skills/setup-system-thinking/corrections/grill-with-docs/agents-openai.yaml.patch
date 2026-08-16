@@ -1,9 +1,0 @@
-diff --git a/skills/engineering/grill-with-docs/agents/openai.yaml b/skills/engineering/grill-with-docs/agents/openai.yaml
---- a/skills/engineering/grill-with-docs/agents/openai.yaml
-+++ b/skills/engineering/grill-with-docs/agents/openai.yaml
-@@ -2,4 +2,4 @@
-   display_name: "Grill with Docs"
-   short_description: "Grill a design and write its docs"
- policy:
--  allow_implicit_invocation: false
-+  allow_implicit_invocation: true

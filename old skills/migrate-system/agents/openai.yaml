@@ -1,5 +1,0 @@
-interface:
-  display_name: "Migrate System"
-  short_description: "Map existing reality into Workflow"
-policy:
-  allow_implicit_invocation: true

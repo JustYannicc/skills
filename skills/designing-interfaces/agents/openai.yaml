@@ -1,0 +1,3 @@
+interface:
+  display_name: "Designing Interfaces"
+  short_description: "Use when defining or proving an observable interface contract or proof seam across systems."

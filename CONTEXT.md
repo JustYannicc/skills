@@ -7,9 +7,6 @@ Shared language for authoring and publishing the active skill suite.
 **Active skill**:
 A skill under `skills/` that belongs to the current suite and may be published or invoked.
 
-**Archived skill**:
-A skill under `old skills/` retained only as historical reference.
-
 **Systems skills suite**:
 The focused active skills that share the language and principles established by Thinking in Systems.
 

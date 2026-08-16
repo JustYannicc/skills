@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>System registry</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        --background: light-dark(#f0f2ed, #0c0e0c);
+        --surface: light-dark(#ffffff, #151815);
+        --surface-raised: light-dark(#f7f8f5, #1e221e);
+        --text: light-dark(#141711, #f7f8f5);
+        --muted: light-dark(#454b40, #c5cbc0);
+        --border: light-dark(#aeb5a8, #596156);
+        --adopted: light-dark(#17643c, #7ae1a5);
+        --focus: light-dark(#064de3, #9abbff);
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--background); color: var(--text); }
+      main { width: min(960px, calc(100% - 32px)); margin: auto; padding: 64px 0; }
+      h1, h2, p { margin-top: 0; }
+      h1 { margin-bottom: 16px; font-size: clamp(3rem, 9vw, 6rem); line-height: .9; letter-spacing: -.04em; }
+      .lede { max-width: 65ch; margin-bottom: 48px; color: var(--muted); font-size: 1.05rem; line-height: 1.65; }
+      .registry-heading { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 14px; }
+      .registry-heading h2, .registry-heading p { margin-bottom: 0; font-size: .9rem; }
+      .registry-heading p { color: var(--muted); }
+      .system-list { overflow: hidden; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+      .system-link { display: grid; grid-template-columns: 1fr auto auto; gap: 20px; align-items: center; min-height: 88px; padding: 20px; color: inherit; text-decoration: none; }
+      .system-link:hover { background: var(--surface-raised); }
+      .system-link h2 { margin-bottom: 5px; font-size: 1.05rem; }
+      .system-link p, .meta { margin-bottom: 0; color: var(--muted); font-size: .86rem; }
+      .meta { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; }
+      .state { padding: 6px 10px; border: 1px solid currentColor; border-radius: 999px; color: var(--adopted); font-size: .76rem; font-weight: 800; }
+      :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+      @media (max-width: 620px) { .system-link { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main data-system-registry data-scope="replace_with_scope">
+      <h1>System registry</h1>
+      <p class="lede">The overview for this scope. Each link names the exact record version currently used here.</p>
+
+      <div class="registry-heading">
+        <h2>Systems</h2>
+        <p>1 current record</p>
+      </div>
+      <nav class="system-list" aria-label="Systems">
+        <!-- Duplicate this link for each current record. -->
+        <a class="system-link" data-system-link data-system-id="system" data-version="1" href="records/system/1.html">
+          <span>
+            <h2>System name</h2>
+            <p>Boundary of the represented system.</p>
+          </span>
+          <span class="meta">Version 1</span>
+          <span class="state">Proposed</span>
+        </a>
+      </nav>
+    </main>
+  </body>
+</html>
