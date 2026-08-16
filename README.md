@@ -16,7 +16,7 @@ Thinking in Systems is my method. Matt's skills showed me how focused agent skil
 
 ## Installation
 
-Install Setup by itself. It inspects the selected scope before proposing package or instruction changes.
+Install Setup by itself. It inspects the selected scope before proposing package and instruction changes.
 
 For one project:
 
@@ -30,13 +30,13 @@ For global use:
 npx skills add JustYannicc/skills --skill setup-system-thinking --global
 ```
 
-Invoke `/setup-system-thinking` inside your agent. One run manages one scope. Setup presents the exact package plan and any project-specific instruction configuration before writing.
+Invoke `/setup-system-thinking` inside your agent. One run manages one scope. Setup presents the exact package plan and the always-loaded systems-thinking primer before writing.
 
 The standard profile installs 17 local runtime skills and two upstream dependencies. It preserves unrelated packages and replaces a same-name package only with approval.
 
 ## How the suite works
 
-The suite has no mandatory universal route. Model-invoked skills load when their leading terms match the work. User-invoked skills run only when called.
+The primer in `AGENTS.md` or `CLAUDE.md` teaches the foundational systems-thinking lens. Model-invoked skills load when their leading terms match the work, and each skill owns its detailed methods, records, templates, and completion criteria. The suite has no mandatory universal route. User-invoked skills run only when called.
 
 [Thinking in Systems](skills/thinking-in-systems) supplies the governing method. Its [shared context](skills/thinking-in-systems/references/CONTEXT.md) defines the language used across the suite. Focused skills own the reasoning attached to each term.
 
@@ -127,7 +127,7 @@ Use `./test-env/open.sh dev` for an isolated console with the checkout mounted r
 
 ## Distribution
 
-GitHub is the public source of truth. `skills.sh.json` controls repository-page grouping. The install commands track the default branch. The `v2.0.0` release is the reviewed baseline for this major overhaul, and release tags preserve later reviewed snapshots.
+GitHub is the public source of truth. `skills.sh.json` controls repository-page grouping. The install commands track the default branch. The `v2.0.0` tag marks the major overhaul, and later release tags preserve reviewed corrections.
 
 ## Credits
 
