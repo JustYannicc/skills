@@ -129,12 +129,13 @@ Two modes. Either way, **never resolve more than one ticket per session** — wi
 
 Begin with a loose idea.
 
-1. **Name the goal.** Establish what this map is finding its way to with the actor who has authority to define it. The goal fixes the scope, so it is settled first.
-2. **Map the frontier.** Work **breadth-first** across the whole space rather than deep on any one thread, surfacing the open decisions and the first steps takeable now. **If this surfaces no fog** — the way to the goal is already clear, the whole journey small enough for one session — you don't need a map. Stop and ask the user how they'd like to proceed.
-3. **Create the map** (tag `wayfinder:map`): Goal and Notes filled in, Decisions-so-far empty, the fog sketched into **Not yet specified**.
-4. **Create the tickets you can specify now** as child records of the map — then wire blocking edges in a **second pass** (records need ids before they can reference each other). Wiring sorts them into the frontier and the blocked; everything you can't yet specify stays in the fog — the **Not yet specified** section.
-5. **Fire the research subagents.** For each `research` ticket you just created, spin up a `research` subagent to resolve it in parallel and link its durable findings from the ticket.
-6. Stop — charting is one session's work; it hand-resolves nothing.
+1. **Invoke the decision skills.** Invoke the `grilling` and `domain-modeling` skills before asking the actor a question. Keep both active while naming the goal and mapping the frontier.
+2. **Name the goal.** Establish what this map is finding its way to with the actor who has authority to define it. The goal fixes the scope, so it is settled first.
+3. **Map the frontier.** Work **breadth-first** across the whole space rather than deep on any one thread, surfacing the open decisions and the first steps takeable now. **If this surfaces no fog** — the way to the goal is already clear, the whole journey small enough for one session — you don't need a map. Stop and ask the user how they'd like to proceed.
+4. **Create the map** (tag `wayfinder:map`): Goal and Notes filled in, Decisions-so-far empty, the fog sketched into **Not yet specified**.
+5. **Create the tickets you can specify now** as child records of the map — then wire blocking edges in a **second pass** (records need ids before they can reference each other). Wiring sorts them into the frontier and the blocked; everything you can't yet specify stays in the fog — the **Not yet specified** section.
+6. **Fire the research subagents.** For each `research` ticket you just created, spin up a `research` subagent to resolve it in parallel and link its durable findings from the ticket.
+7. Stop — charting is one session's work; it hand-resolves nothing.
 
 ### Work through the map
 
