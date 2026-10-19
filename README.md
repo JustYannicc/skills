@@ -98,6 +98,8 @@ The local suite replaces Matt's same-name packages where its cross-domain behavi
 
 ## Develop and verify
 
+The optional [Making videos](skills/making-videos) and [Transition handoff](skills/transition-handoff) skills turn a script or a dictated mind dump into a short narrated video. They sit outside the standard systems profile and install their renderer and voice model into a cache on first run.
+
 Enable live development links:
 
 ```bash

@@ -1,0 +1,219 @@
+{
+  "title": "Stripe retries vanish after attempt two",
+  "language": "en",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "frames": 2651,
+  "transition": 20,
+  "captions": true,
+  "scenes": [
+    {
+      "kind": "title",
+      "label": "before lunch · 12:40",
+      "title": "Stripe retries vanish after attempt two",
+      "lines": [
+        {
+          "say": "You were chasing the Stripe webhook retries that vanish after the second attempt.",
+          "start": 0.6,
+          "end": 4.8687499999999995,
+          "markAt": 1.1
+        },
+        {
+          "say": "Attempt one fails. Attempt two fails. And then, nothing. There's no third attempt in the logs at all.",
+          "show": "attempt 1 fails · attempt 2 fails · then nothing",
+          "mark": "then nothing",
+          "start": 5.18875,
+          "end": 11.5959375,
+          "markAt": 5.68875
+        }
+      ],
+      "from": 0.6,
+      "to": 11.5959375,
+      "t0": 0
+    },
+    {
+      "kind": "list",
+      "label": "what you know so far",
+      "lines": [
+        {
+          "say": "First you suspected the backoff math in retry policy. But you checked it. Four seconds, sixteen, sixty-four. It's fine.",
+          "show": "backoff math in retry-policy.ts",
+          "state": "ruled-out",
+          "mark": "It's fine",
+          "sub": "4s → 16s → 64s, correct",
+          "start": 12.6459375,
+          "end": 20.825312500000003,
+          "markAt": 20.13797006302521
+        },
+        {
+          "say": "What's still open is where the retry lives between attempts.",
+          "show": "where the retry lives between attempts",
+          "state": "live",
+          "mark": "lives",
+          "start": 21.145312500000003,
+          "end": 24.41529166666667,
+          "markAt": 23.16179965277778
+        }
+      ],
+      "from": 12.6459375,
+      "to": 24.41529166666667,
+      "t0": 11.879270833333335
+    },
+    {
+      "kind": "flow",
+      "label": "your theory",
+      "lines": [
+        {
+          "say": "Here's what you think is going on. An attempt fails,",
+          "show": "attempt fails",
+          "start": 25.46529166666667,
+          "end": 28.499270833333334,
+          "markAt": 25.96529166666667
+        },
+        {
+          "say": "the worker acks the job first,",
+          "show": "ack()",
+          "sub": "job marked done",
+          "start": 28.819270833333334,
+          "end": 30.469083333333334,
+          "markAt": 29.319270833333334
+        },
+        {
+          "say": "and only then schedules the retry, and only in memory.",
+          "show": "scheduleRetry()",
+          "sub": "in memory",
+          "start": 30.789083333333334,
+          "end": 33.962208333333336,
+          "markAt": 31.289083333333334
+        },
+        {
+          "say": "Then the worker restarts, which it does, because of the memory limit.",
+          "show": "worker restarts",
+          "sub": "memory limit",
+          "start": 34.28220833333334,
+          "end": 37.96160416666667,
+          "markAt": 34.78220833333334
+        },
+        {
+          "say": "And the pending retry dies with it. That's why there's never a third attempt.",
+          "focus": "scheduleRetry()",
+          "note": "the retry dies with the worker",
+          "tone": "warn",
+          "mark": "dies",
+          "start": 38.28160416666667,
+          "end": 42.356854166666665,
+          "markAt": 39.44596130952381,
+          "focusNode": 2
+        }
+      ],
+      "from": 25.46529166666667,
+      "to": 42.356854166666665,
+      "t0": 24.698625
+    },
+    {
+      "kind": "say",
+      "label": "the half-formed idea",
+      "lines": [
+        {
+          "say": "The idea you hadn't finished: schedule the retry in the database, in the same transaction that marks the attempt failed.",
+          "show": "schedule the retry in the database",
+          "mark": "in the database",
+          "sub": "same transaction that marks the attempt failed",
+          "start": 43.40685416666666,
+          "end": 50.5920625,
+          "markAt": 46.34081423611111
+        },
+        {
+          "say": "What you don't know yet is whether the queue library can do delayed jobs on the Postgres adapter.",
+          "show": "delayed jobs on the Postgres adapter?",
+          "mark": "Postgres adapter",
+          "tone": "quiet",
+          "start": 50.9120625,
+          "end": 56.20666666666666,
+          "markAt": 55.27874634879725
+        }
+      ],
+      "from": 43.40685416666666,
+      "to": 56.20666666666666,
+      "t0": 42.640187499999996
+    },
+    {
+      "kind": "say",
+      "label": "careful",
+      "lines": [
+        {
+          "say": "One trap. Don't trust the dashboard count.",
+          "show": "don't trust the dashboard count",
+          "mark": "dashboard count",
+          "tone": "warn",
+          "start": 57.25666666666666,
+          "end": 59.97710416666666,
+          "markAt": 58.94074702380952
+        },
+        {
+          "say": "It dedupes by event ID, so it would hide a third attempt even if one happened.",
+          "show": "it dedupes by event ID",
+          "sub": "a third attempt would be hidden",
+          "start": 60.297104166666664,
+          "end": 64.767375,
+          "markAt": 60.797104166666664
+        }
+      ],
+      "from": 57.25666666666666,
+      "to": 64.767375,
+      "t0": 56.489999999999995
+    },
+    {
+      "kind": "code",
+      "label": "where to look",
+      "file": "worker/handle-webhook.ts · around line 40",
+      "code": "export async function handleWebhook(job: Job) {\n  const event = await loadEvent(job.data.eventId);\n  try {\n    await deliver(event);\n  } catch (err) {\n    await job.ack();\n    await scheduleRetry(event, err);\n  }\n}",
+      "lines": [
+        {
+          "say": "When you sit back down, open handle webhook, around line forty.",
+          "show": "handle-webhook.ts, around line 40",
+          "start": 65.817375,
+          "end": 69.36425,
+          "markAt": 66.317375
+        },
+        {
+          "say": "The question is whether ack gets called before schedule retry.",
+          "highlight": "6-7",
+          "show": "is ack() called before scheduleRetry()?",
+          "mark": "before",
+          "start": 69.68424999999999,
+          "end": 73.07383333333333,
+          "markAt": 71.87107795698924
+        }
+      ],
+      "from": 65.817375,
+      "to": 73.07383333333333,
+      "t0": 65.05070833333333
+    },
+    {
+      "kind": "close",
+      "label": "first move",
+      "lines": [
+        {
+          "say": "So, first move. Add a log line right there, and replay event one Q eight with the replay script.",
+          "show": "Log ack vs. scheduleRetry, replay evt_1Q8",
+          "mark": "replay evt_1Q8",
+          "start": 74.12383333333332,
+          "end": 80.10795833333333,
+          "markAt": 74.62383333333332
+        },
+        {
+          "say": "If no retry shows up after a restart, your theory holds.",
+          "show": "no retry after a restart → theory holds",
+          "start": 80.42795833333332,
+          "end": 83.83752083333331,
+          "markAt": 80.92795833333332
+        }
+      ],
+      "from": 74.12383333333332,
+      "to": 83.83752083333331,
+      "t0": 73.35716666666666
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Transition Handoff"
+  short_description: "Use when someone has to stop mid-flow (lunch, a break, leaving, switching tasks) and wants to save their place, by dictating a mind dump, asking for a handoff or to \"save my place\", or saying they need to stop, go eat, or leave. Not for ordinary summaries or meeting notes."

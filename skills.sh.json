@@ -29,6 +29,11 @@
       "title": "Verification",
       "description": "Check whether work matches what was requested and the standards it must follow.",
       "skills": ["review"]
+    },
+    {
+      "title": "Video",
+      "description": "Make short narrated videos, including a handoff that saves your place before a break.",
+      "skills": ["making-videos", "transition-handoff"]
     }
   ]
 }
