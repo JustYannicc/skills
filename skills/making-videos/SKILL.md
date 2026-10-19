@@ -18,7 +18,7 @@ Let the story set the shape. Open with why it matters, build the idea in the ord
 
 Speech runs at about 150 words a minute. Most explainers fit in 45 to 120 seconds. Cut repetition before you cut substance.
 
-Write `say` for the voice and `show` for the eye. Say "handle webhook, around line forty". Show `handle-webhook.ts:40`.
+Write `say` for the voice and `show` for the eye. In `say`, name things the way a person would say them out loud: "the webhook handler, around line forty". Don't spell out punctuation ("slash", "dot ts"); the captions show `say` as written. The exact path goes in `show`: `handle-webhook.ts:40`.
 
 ## Pair every line with a picture
 
